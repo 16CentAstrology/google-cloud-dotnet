@@ -89,6 +89,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// A ScanConfig resource contains the configurations to launch a scan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanConfig : pb::IMessage<ScanConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -834,6 +835,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Scan authentication configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Authentication : pb::IMessage<Authentication>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1189,6 +1191,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// Describes authentication configuration that uses a Google account.
           /// </summary>
           [global::System.ObsoleteAttribute]
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class GoogleAccount : pb::IMessage<GoogleAccount>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1425,6 +1428,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// <summary>
           /// Describes authentication configuration that uses a custom account.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CustomAccount : pb::IMessage<CustomAccount>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1701,6 +1705,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// <summary>
           /// Describes authentication configuration for Identity-Aware-Proxy (IAP).
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class IapCredential : pb::IMessage<IapCredential>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1944,6 +1949,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
               /// Describes authentication configuration when Web-Security-Scanner
               /// service account is added in Identity-Aware-Proxy (IAP) access policies.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class IapTestServiceAccountInfo : pb::IMessage<IapTestServiceAccountInfo>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -2150,6 +2156,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Scan schedule configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

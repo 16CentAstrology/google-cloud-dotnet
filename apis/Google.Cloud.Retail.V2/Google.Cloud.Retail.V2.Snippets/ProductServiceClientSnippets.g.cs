@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Retail.V2;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -642,6 +643,75 @@ namespace Google.Cloud.Retail.V2.Snippets
             ProductName name = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
             // Make the request
             await productServiceClient.DeleteProductAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeProducts</summary>
+        public void PurgeProductsRequestObject()
+        {
+            // Snippet: PurgeProducts(PurgeProductsRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            PurgeProductsRequest request = new PurgeProductsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> response = productServiceClient.PurgeProducts(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PurgeProductsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> retrievedResponse = productServiceClient.PollOncePurgeProducts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeProductsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeProductsAsync</summary>
+        public async Task PurgeProductsRequestObjectAsync()
+        {
+            // Snippet: PurgeProductsAsync(PurgeProductsRequest, CallSettings)
+            // Additional: PurgeProductsAsync(PurgeProductsRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeProductsRequest request = new PurgeProductsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> response = await productServiceClient.PurgeProductsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PurgeProductsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeProductsResponse, PurgeProductsMetadata> retrievedResponse = await productServiceClient.PollOncePurgeProductsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeProductsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

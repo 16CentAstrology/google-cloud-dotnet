@@ -25,33 +25,43 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvcnVuL3YyL3JldmlzaW9uX3RlbXBsYXRlLnByb3Rv",
-            "EhNnb29nbGUuY2xvdWQucnVuLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2ds",
-            "ZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8i/wUKEFJldmlzaW9uVGVtcGxhdGUS",
-            "MgoIcmV2aXNpb24YASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1Jl",
-            "dmlzaW9uEkEKBmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIu",
-            "UmV2aXNpb25UZW1wbGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgD",
-            "IAMoCzI2Lmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZS5B",
-            "bm5vdGF0aW9uc0VudHJ5EjUKB3NjYWxpbmcYBCABKAsyJC5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlJldmlzaW9uU2NhbGluZxIyCgp2cGNfYWNjZXNzGAYgASgL",
-            "Mh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3MSKgoHdGltZW91dBgI",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2Fj",
-            "Y291bnQYCSABKAkSMgoKY29udGFpbmVycxgKIAMoCzIeLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuQ29udGFpbmVyEiwKB3ZvbHVtZXMYCyADKAsyGy5nb29nbGUu",
-            "Y2xvdWQucnVuLnYyLlZvbHVtZRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQY",
-            "DSABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25t",
-            "ZW50Ej4KDmVuY3J5cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdv",
-            "b2dsZWFwaXMuY29tL0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVz",
-            "dF9jb25jdXJyZW5jeRgPIAEoBRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUJdChdjb20uZ29vZ2xlLmNs",
-            "b3VkLnJ1bi52MkIVUmV2aXNpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "EhNnb29nbGUuY2xvdWQucnVuLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUv",
+            "Y2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2dsZS9jbG91ZC9ydW4v",
+            "djIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
+            "YXRpb24ucHJvdG8imwkKEFJldmlzaW9uVGVtcGxhdGUSNQoIcmV2aXNpb24Y",
+            "ASABKAlCI+BBAfpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkYK",
+            "BmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25U",
+            "ZW1wbGF0ZS5MYWJlbHNFbnRyeUID4EEBElAKC2Fubm90YXRpb25zGAMgAygL",
+            "MjYuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZpc2lvblRlbXBsYXRlLkFubm90",
+            "YXRpb25zRW50cnlCA+BBARI6CgdzY2FsaW5nGAQgASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5SZXZpc2lvblNjYWxpbmdCA+BBARI3Cgp2cGNfYWNjZXNz",
+            "GAYgASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3NCA+BBARIv",
+            "Cgd0aW1lb3V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
+            "QQESHAoPc2VydmljZV9hY2NvdW50GAkgASgJQgPgQQESMgoKY29udGFpbmVy",
+            "cxgKIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29udGFpbmVyEjEKB3Zv",
+            "bHVtZXMYCyADKAsyGy5nb29nbGUuY2xvdWQucnVuLnYyLlZvbHVtZUID4EEB",
+            "Ek0KFWV4ZWN1dGlvbl9lbnZpcm9ubWVudBgNIAEoDjIpLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuRXhlY3V0aW9uRW52aXJvbm1lbnRCA+BBARI+Cg5lbmNyeXB0",
+            "aW9uX2tleRgOIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
+            "cnlwdG9LZXkSLQogbWF4X2luc3RhbmNlX3JlcXVlc3RfY29uY3VycmVuY3kY",
+            "DyABKAVCA+BBARI7CgxzZXJ2aWNlX21lc2gYECABKAsyIC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlNlcnZpY2VNZXNoQgPgQQESYQogZW5jcnlwdGlvbl9rZXlf",
+            "cmV2b2NhdGlvbl9hY3Rpb24YESABKA4yMi5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LkVuY3J5cHRpb25LZXlSZXZvY2F0aW9uQWN0aW9uQgPgQQESSAogZW5jcnlw",
+            "dGlvbl9rZXlfc2h1dGRvd25fZHVyYXRpb24YEiABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBARIdChBzZXNzaW9uX2FmZmluaXR5GBMgASgI",
+            "QgPgQQESIgoVaGVhbHRoX2NoZWNrX2Rpc2FibGVkGBQgASgIQgPgQQESPQoN",
+            "bm9kZV9zZWxlY3RvchgVIAEoCzIhLmdvb2dsZS5jbG91ZC5ydW4udjIuTm9k",
+            "ZVNlbGVjdG9yQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCXQoXY29tLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjJCFVJldmlzaW9uVGVtcGxhdGVQcm90b1ABWiljbG91ZC5nb29nbGUu",
+            "Y29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "SessionAffinity", "HealthCheckDisabled", "NodeSelector" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -62,6 +72,7 @@ namespace Google.Cloud.Run.V2 {
   /// RevisionTemplate describes the data a revision should have when created from
   /// a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RevisionTemplate : pb::IMessage<RevisionTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -108,6 +119,12 @@ namespace Google.Cloud.Run.V2 {
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
       maxInstanceRequestConcurrency_ = other.maxInstanceRequestConcurrency_;
+      serviceMesh_ = other.serviceMesh_ != null ? other.serviceMesh_.Clone() : null;
+      encryptionKeyRevocationAction_ = other.encryptionKeyRevocationAction_;
+      encryptionKeyShutdownDuration_ = other.encryptionKeyShutdownDuration_ != null ? other.encryptionKeyShutdownDuration_.Clone() : null;
+      sessionAffinity_ = other.sessionAffinity_;
+      healthCheckDisabled_ = other.healthCheckDisabled_;
+      nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,8 +138,8 @@ namespace Google.Cloud.Run.V2 {
     public const int RevisionFieldNumber = 1;
     private string revision_ = "";
     /// <summary>
-    /// The unique name for the revision. If this field is omitted, it will be
-    /// automatically generated based on the Service name.
+    /// Optional. The unique name for the revision. If this field is omitted, it
+    /// will be automatically generated based on the Service name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +156,12 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style labels for the resource.
+    /// Optional. Unstructured key value map that can be used to organize and
+    /// categorize objects. User-provided labels are shared with Google's billing
+    /// system, so they can be used to filter, or break down billing charges by
+    /// team, component, environment, state, etc. For more information, visit
+    /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+    /// https://cloud.google.com/run/docs/configuring/labels.
     ///
     /// &lt;p>Cloud Run API v2 does not support labels with `run.googleapis.com`,
     /// `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
@@ -158,12 +180,17 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style annotations for the resource.
+    /// Optional. Unstructured key value map that may be set by external tools to
+    /// store and arbitrary metadata. They are not queryable and should be
+    /// preserved when modifying objects.
     ///
     /// &lt;p>Cloud Run API v2 does not support annotations with `run.googleapis.com`,
     /// `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
     /// namespaces, and they will be rejected. All system annotations in v1 now
     /// have a corresponding field in v2 RevisionTemplate.
+    ///
+    /// &lt;p>This field follows Kubernetes annotations' namespacing, limits, and
+    /// rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -175,7 +202,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ScalingFieldNumber = 4;
     private global::Google.Cloud.Run.V2.RevisionScaling scaling_;
     /// <summary>
-    /// Scaling settings for this Revision.
+    /// Optional. Scaling settings for this Revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -190,8 +217,9 @@ namespace Google.Cloud.Run.V2 {
     public const int VpcAccessFieldNumber = 6;
     private global::Google.Cloud.Run.V2.VpcAccess vpcAccess_;
     /// <summary>
-    /// VPC Access configuration to use for this Revision. For more information,
-    /// visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+    /// Optional. VPC Access configuration to use for this Revision. For more
+    /// information, visit
+    /// https://cloud.google.com/run/docs/configuring/connecting-vpc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,7 +234,7 @@ namespace Google.Cloud.Run.V2 {
     public const int TimeoutFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// Max allowed time for an instance to respond to a request.
+    /// Optional. Max allowed time for an instance to respond to a request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -221,9 +249,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceAccountFieldNumber = 9;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Email address of the IAM service account associated with the revision of
-    /// the service. The service account represents the identity of the running
-    /// revision, and determines what permissions the revision has. If not
+    /// Optional. Email address of the IAM service account associated with the
+    /// revision of the service. The service account represents the identity of the
+    /// running revision, and determines what permissions the revision has. If not
     /// provided, the revision will use the project's default service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -256,7 +284,7 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Run.V2.Volume.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume> volumes_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Volume>();
     /// <summary>
-    /// A list of Volumes to make available to containers.
+    /// Optional. A list of Volumes to make available to containers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -268,7 +296,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ExecutionEnvironmentFieldNumber = 13;
     private global::Google.Cloud.Run.V2.ExecutionEnvironment executionEnvironment_ = global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified;
     /// <summary>
-    /// The sandbox environment to host this Revision.
+    /// Optional. The sandbox environment to host this Revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -300,7 +328,9 @@ namespace Google.Cloud.Run.V2 {
     public const int MaxInstanceRequestConcurrencyFieldNumber = 15;
     private int maxInstanceRequestConcurrency_;
     /// <summary>
-    /// Sets the maximum number of requests that each serving instance can receive.
+    /// Optional. Sets the maximum number of requests that each serving instance
+    /// can receive. If not specified or 0, concurrency defaults to 80 when
+    /// requested `CPU >= 1` and defaults to 1 when requested `CPU &lt; 1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -308,6 +338,97 @@ namespace Google.Cloud.Run.V2 {
       get { return maxInstanceRequestConcurrency_; }
       set {
         maxInstanceRequestConcurrency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_mesh" field.</summary>
+    public const int ServiceMeshFieldNumber = 16;
+    private global::Google.Cloud.Run.V2.ServiceMesh serviceMesh_;
+    /// <summary>
+    /// Optional. Enables service mesh connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.ServiceMesh ServiceMesh {
+      get { return serviceMesh_; }
+      set {
+        serviceMesh_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_key_revocation_action" field.</summary>
+    public const int EncryptionKeyRevocationActionFieldNumber = 17;
+    private global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction encryptionKeyRevocationAction_ = global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified;
+    /// <summary>
+    /// Optional. The action to take if the encryption key is revoked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction EncryptionKeyRevocationAction {
+      get { return encryptionKeyRevocationAction_; }
+      set {
+        encryptionKeyRevocationAction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_key_shutdown_duration" field.</summary>
+    public const int EncryptionKeyShutdownDurationFieldNumber = 18;
+    private global::Google.Protobuf.WellKnownTypes.Duration encryptionKeyShutdownDuration_;
+    /// <summary>
+    /// Optional. If encryption_key_revocation_action is SHUTDOWN, the duration
+    /// before shutting down all instances. The minimum increment is 1 hour.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration EncryptionKeyShutdownDuration {
+      get { return encryptionKeyShutdownDuration_; }
+      set {
+        encryptionKeyShutdownDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "session_affinity" field.</summary>
+    public const int SessionAffinityFieldNumber = 19;
+    private bool sessionAffinity_;
+    /// <summary>
+    /// Optional. Enable session affinity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SessionAffinity {
+      get { return sessionAffinity_; }
+      set {
+        sessionAffinity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "health_check_disabled" field.</summary>
+    public const int HealthCheckDisabledFieldNumber = 20;
+    private bool healthCheckDisabled_;
+    /// <summary>
+    /// Optional. Disables health checking containers during deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HealthCheckDisabled {
+      get { return healthCheckDisabled_; }
+      set {
+        healthCheckDisabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "node_selector" field.</summary>
+    public const int NodeSelectorFieldNumber = 21;
+    private global::Google.Cloud.Run.V2.NodeSelector nodeSelector_;
+    /// <summary>
+    /// Optional. The node selector for the revision template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.NodeSelector NodeSelector {
+      get { return nodeSelector_; }
+      set {
+        nodeSelector_ = value;
       }
     }
 
@@ -338,6 +459,12 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (MaxInstanceRequestConcurrency != other.MaxInstanceRequestConcurrency) return false;
+      if (!object.Equals(ServiceMesh, other.ServiceMesh)) return false;
+      if (EncryptionKeyRevocationAction != other.EncryptionKeyRevocationAction) return false;
+      if (!object.Equals(EncryptionKeyShutdownDuration, other.EncryptionKeyShutdownDuration)) return false;
+      if (SessionAffinity != other.SessionAffinity) return false;
+      if (HealthCheckDisabled != other.HealthCheckDisabled) return false;
+      if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -357,6 +484,12 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (MaxInstanceRequestConcurrency != 0) hash ^= MaxInstanceRequestConcurrency.GetHashCode();
+      if (serviceMesh_ != null) hash ^= ServiceMesh.GetHashCode();
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) hash ^= EncryptionKeyRevocationAction.GetHashCode();
+      if (encryptionKeyShutdownDuration_ != null) hash ^= EncryptionKeyShutdownDuration.GetHashCode();
+      if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
+      if (HealthCheckDisabled != false) hash ^= HealthCheckDisabled.GetHashCode();
+      if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -411,6 +544,30 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ServiceMesh);
+      }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EncryptionKeyShutdownDuration);
+      }
+      if (SessionAffinity != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SessionAffinity);
+      }
+      if (HealthCheckDisabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(HealthCheckDisabled);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NodeSelector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -457,6 +614,30 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ServiceMesh);
+      }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EncryptionKeyShutdownDuration);
+      }
+      if (SessionAffinity != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SessionAffinity);
+      }
+      if (HealthCheckDisabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(HealthCheckDisabled);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NodeSelector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -495,6 +676,24 @@ namespace Google.Cloud.Run.V2 {
       if (MaxInstanceRequestConcurrency != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ServiceMesh);
+      }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKeyShutdownDuration);
+      }
+      if (SessionAffinity != false) {
+        size += 2 + 1;
+      }
+      if (HealthCheckDisabled != false) {
+        size += 2 + 1;
+      }
+      if (nodeSelector_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NodeSelector);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -510,8 +709,8 @@ namespace Google.Cloud.Run.V2 {
       if (other.Revision.Length != 0) {
         Revision = other.Revision;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.scaling_ != null) {
         if (scaling_ == null) {
           Scaling = new global::Google.Cloud.Run.V2.RevisionScaling();
@@ -543,6 +742,33 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.MaxInstanceRequestConcurrency != 0) {
         MaxInstanceRequestConcurrency = other.MaxInstanceRequestConcurrency;
+      }
+      if (other.serviceMesh_ != null) {
+        if (serviceMesh_ == null) {
+          ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+        }
+        ServiceMesh.MergeFrom(other.ServiceMesh);
+      }
+      if (other.EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        EncryptionKeyRevocationAction = other.EncryptionKeyRevocationAction;
+      }
+      if (other.encryptionKeyShutdownDuration_ != null) {
+        if (encryptionKeyShutdownDuration_ == null) {
+          EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        EncryptionKeyShutdownDuration.MergeFrom(other.EncryptionKeyShutdownDuration);
+      }
+      if (other.SessionAffinity != false) {
+        SessionAffinity = other.SessionAffinity;
+      }
+      if (other.HealthCheckDisabled != false) {
+        HealthCheckDisabled = other.HealthCheckDisabled;
+      }
+      if (other.nodeSelector_ != null) {
+        if (nodeSelector_ == null) {
+          NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+        }
+        NodeSelector.MergeFrom(other.NodeSelector);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -616,6 +842,39 @@ namespace Google.Cloud.Run.V2 {
             MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
+          case 130: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
+          case 136: {
+            EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (encryptionKeyShutdownDuration_ == null) {
+              EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EncryptionKeyShutdownDuration);
+            break;
+          }
+          case 152: {
+            SessionAffinity = input.ReadBool();
+            break;
+          }
+          case 160: {
+            HealthCheckDisabled = input.ReadBool();
+            break;
+          }
+          case 170: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
+            break;
+          }
         }
       }
     #endif
@@ -686,6 +945,39 @@ namespace Google.Cloud.Run.V2 {
           }
           case 120: {
             MaxInstanceRequestConcurrency = input.ReadInt32();
+            break;
+          }
+          case 130: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
+          case 136: {
+            EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (encryptionKeyShutdownDuration_ == null) {
+              EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EncryptionKeyShutdownDuration);
+            break;
+          }
+          case 152: {
+            SessionAffinity = input.ReadBool();
+            break;
+          }
+          case 160: {
+            HealthCheckDisabled = input.ReadBool();
+            break;
+          }
+          case 170: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
             break;
           }
         }

@@ -129,6 +129,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// Component Settings for Security Command Center
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComponentSettings : pb::IMessage<ComponentSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -587,7 +588,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       if (other.ProjectServiceAccount.Length != 0) {
         ProjectServiceAccount = other.ProjectServiceAccount;
       }
-      detectorSettings_.Add(other.detectorSettings_);
+      detectorSettings_.MergeFrom(other.detectorSettings_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -793,6 +794,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <summary>
       /// Settings for each detector.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectorSettings : pb::IMessage<DetectorSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -994,6 +996,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// User specified settings for Web Security Scanner
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebSecurityScanner : pb::IMessage<WebSecurityScanner>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1149,6 +1152,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// User specified settings for KTD
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerThreatDetectionSettings : pb::IMessage<ContainerThreatDetectionSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1304,6 +1308,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// User specified settings for ETD
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventThreatDetectionSettings : pb::IMessage<EventThreatDetectionSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1459,6 +1464,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// User specified settings for Security Health Analytics
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecurityHealthAnalyticsSettings : pb::IMessage<SecurityHealthAnalyticsSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1715,6 +1721,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <summary>
       /// Settings for "NON_ORG_IAM_MEMBER" scanner.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NonOrgIamMemberSettings : pb::IMessage<NonOrgIamMemberSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1909,6 +1916,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <summary>
       /// Settings for "ADMIN_SERVICE_ACCOUNT" scanner.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AdminServiceAccountSettings : pb::IMessage<AdminServiceAccountSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

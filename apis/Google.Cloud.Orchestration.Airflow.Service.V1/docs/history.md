@@ -1,5 +1,58 @@
 # Version history
 
+## Version 2.9.0, released 2024-09-16
+
+### New features
+
+- A new method `CheckUpgrade` is added to service `Environments` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new field `satisfies_pzi` is added to message `.google.cloud.orchestration.airflow.service.v1.Environment` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new message `CheckUpgradeRequest` is added ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new field `airflow_metadata_retention_config` is added to message `.google.cloud.orchestration.airflow.service.v1.DataRetentionConfig` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new message `AirflowMetadataRetentionPolicyConfig` is added ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+
+### Documentation improvements
+
+- A comment for field `maintenance_window` in message `.google.cloud.orchestration.airflow.service.v1.EnvironmentConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A comment for message `WorkloadsConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A comment for field `storage_mode` in message `.google.cloud.orchestration.airflow.service.v1.TaskLogsRetentionConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+
+## Version 2.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.6.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 2.5.0, released 2024-02-20
+
+### New features
+
+- Added ListWorkloads RPC ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field data_retention_config to EnvironmentConfig ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field web_server_plugins_mode to SoftwareConfig ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field storage_config to Environment ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+
+## Version 2.4.0, released 2023-06-20
+
+### New features
+
+- Added RPCs StopAirflowCommand, ExecuteAirflowCommand, PollAirflowCommand, DatabaseFailover, FetchDatabaseProperties ([commit 2e644b4](https://github.com/googleapis/google-cloud-dotnet/commit/2e644b42c98e20244cf95921f1ef074a4f469b42))
+
+## Version 2.3.0, released 2023-05-03
+
+### New features
+
+- Add airflow_byoid_uri field to Cloud Composer API ([commit 19e546e](https://github.com/googleapis/google-cloud-dotnet/commit/19e546e093540a297e017b1f9bf1d9e6e4f1e8ec))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features

@@ -174,16 +174,16 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "VklERUQQAiofCghSb2xlVmlldxIJCgVCQVNJQxAAEggKBEZVTEwQATKaKwoD",
             "SUFNEq4BChNMaXN0U2VydmljZUFjY291bnRzEi8uZ29vZ2xlLmlhbS5hZG1p",
             "bi52MS5MaXN0U2VydmljZUFjY291bnRzUmVxdWVzdBowLmdvb2dsZS5pYW0u",
-            "YWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50c1Jlc3BvbnNlIjSC0+STAicS",
-            "JS92MS97bmFtZT1wcm9qZWN0cy8qfS9zZXJ2aWNlQWNjb3VudHPaQQRuYW1l",
+            "YWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50c1Jlc3BvbnNlIjTaQQRuYW1l",
+            "gtPkkwInEiUvdjEve25hbWU9cHJvamVjdHMvKn0vc2VydmljZUFjY291bnRz",
             "Ep8BChFHZXRTZXJ2aWNlQWNjb3VudBItLmdvb2dsZS5pYW0uYWRtaW4udjEu",
             "R2V0U2VydmljZUFjY291bnRSZXF1ZXN0GiMuZ29vZ2xlLmlhbS5hZG1pbi52",
-            "MS5TZXJ2aWNlQWNjb3VudCI2gtPkkwIpEicvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9zZXJ2aWNlQWNjb3VudHMvKn3aQQRuYW1lEsEBChRDcmVhdGVTZXJ2aWNl",
+            "MS5TZXJ2aWNlQWNjb3VudCI22kEEbmFtZYLT5JMCKRInL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovc2VydmljZUFjY291bnRzLyp9EsEBChRDcmVhdGVTZXJ2aWNl",
             "QWNjb3VudBIwLmdvb2dsZS5pYW0uYWRtaW4udjEuQ3JlYXRlU2VydmljZUFj",
             "Y291bnRSZXF1ZXN0GiMuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNj",
-            "b3VudCJSgtPkkwIqIiUvdjEve25hbWU9cHJvamVjdHMvKn0vc2VydmljZUFj",
-            "Y291bnRzOgEq2kEfbmFtZSxhY2NvdW50X2lkLHNlcnZpY2VfYWNjb3VudBKU",
+            "b3VudCJS2kEfbmFtZSxhY2NvdW50X2lkLHNlcnZpY2VfYWNjb3VudILT5JMC",
+            "KiIlL3YxL3tuYW1lPXByb2plY3RzLyp9L3NlcnZpY2VBY2NvdW50czoBKhKU",
             "AQoUVXBkYXRlU2VydmljZUFjY291bnQSIy5nb29nbGUuaWFtLmFkbWluLnYx",
             "LlNlcnZpY2VBY2NvdW50GiMuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNl",
             "QWNjb3VudCIygtPkkwIsGicvdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
@@ -193,8 +193,8 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "djEve3NlcnZpY2VfYWNjb3VudC5uYW1lPXByb2plY3RzLyovc2VydmljZUFj",
             "Y291bnRzLyp9OgEqEpgBChREZWxldGVTZXJ2aWNlQWNjb3VudBIwLmdvb2ds",
             "ZS5pYW0uYWRtaW4udjEuRGVsZXRlU2VydmljZUFjY291bnRSZXF1ZXN0GhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IjaC0+STAikqJy92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfdpBBG5hbWUSvgEKFlVuZGVsZXRl",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IjbaQQRuYW1lgtPkkwIpKicvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudHMvKn0SvgEKFlVuZGVsZXRl",
             "U2VydmljZUFjY291bnQSMi5nb29nbGUuaWFtLmFkbWluLnYxLlVuZGVsZXRl",
             "U2VydmljZUFjY291bnRSZXF1ZXN0GjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5V",
             "bmRlbGV0ZVNlcnZpY2VBY2NvdW50UmVzcG9uc2UiO4LT5JMCNSIwL3YxL3tu",
@@ -209,56 +209,56 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "ZToBKhLIAQoWTGlzdFNlcnZpY2VBY2NvdW50S2V5cxIyLmdvb2dsZS5pYW0u",
             "YWRtaW4udjEuTGlzdFNlcnZpY2VBY2NvdW50S2V5c1JlcXVlc3QaMy5nb29n",
             "bGUuaWFtLmFkbWluLnYxLkxpc3RTZXJ2aWNlQWNjb3VudEtleXNSZXNwb25z",
-            "ZSJFgtPkkwIuEiwvdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3Vu",
-            "dHMvKn0va2V5c9pBDm5hbWUsa2V5X3R5cGVzEr8BChRHZXRTZXJ2aWNlQWNj",
+            "ZSJF2kEObmFtZSxrZXlfdHlwZXOC0+STAi4SLC92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL3NlcnZpY2VBY2NvdW50cy8qfS9rZXlzEr8BChRHZXRTZXJ2aWNlQWNj",
             "b3VudEtleRIwLmdvb2dsZS5pYW0uYWRtaW4udjEuR2V0U2VydmljZUFjY291",
             "bnRLZXlSZXF1ZXN0GiYuZ29vZ2xlLmlhbS5hZG1pbi52MS5TZXJ2aWNlQWNj",
-            "b3VudEtleSJNgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
-            "QWNjb3VudHMvKi9rZXlzLyp92kEUbmFtZSxwdWJsaWNfa2V5X3R5cGUS1QEK",
+            "b3VudEtleSJN2kEUbmFtZSxwdWJsaWNfa2V5X3R5cGWC0+STAjASLi92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qL2tleXMvKn0S1QEK",
             "F0NyZWF0ZVNlcnZpY2VBY2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52",
             "MS5DcmVhdGVTZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QaJi5nb29nbGUuaWFt",
-            "LmFkbWluLnYxLlNlcnZpY2VBY2NvdW50S2V5Il2C0+STAjEiLC92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfS9rZXlzOgEq2kEjbmFt",
-            "ZSxwcml2YXRlX2tleV90eXBlLGtleV9hbGdvcml0aG0StgEKF1VwbG9hZFNl",
+            "LmFkbWluLnYxLlNlcnZpY2VBY2NvdW50S2V5Il3aQSNuYW1lLHByaXZhdGVf",
+            "a2V5X3R5cGUsa2V5X2FsZ29yaXRobYLT5JMCMSIsL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovc2VydmljZUFjY291bnRzLyp9L2tleXM6ASoStgEKF1VwbG9hZFNl",
             "cnZpY2VBY2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5VcGxvYWRT",
             "ZXJ2aWNlQWNjb3VudEtleVJlcXVlc3QaJi5nb29nbGUuaWFtLmFkbWluLnYx",
             "LlNlcnZpY2VBY2NvdW50S2V5Ij6C0+STAjgiMy92MS97bmFtZT1wcm9qZWN0",
             "cy8qL3NlcnZpY2VBY2NvdW50cy8qfS9rZXlzOnVwbG9hZDoBKhKlAQoXRGVs",
             "ZXRlU2VydmljZUFjY291bnRLZXkSMy5nb29nbGUuaWFtLmFkbWluLnYxLkRl",
             "bGV0ZVNlcnZpY2VBY2NvdW50S2V5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSI9gtPkkwIwKi4vdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNl",
-            "QWNjb3VudHMvKi9rZXlzLyp92kEEbmFtZRKyAQoYRGlzYWJsZVNlcnZpY2VB",
+            "Zi5FbXB0eSI92kEEbmFtZYLT5JMCMCouL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "c2VydmljZUFjY291bnRzLyova2V5cy8qfRKyAQoYRGlzYWJsZVNlcnZpY2VB",
             "Y2NvdW50S2V5EjQuZ29vZ2xlLmlhbS5hZG1pbi52MS5EaXNhYmxlU2Vydmlj",
-            "ZUFjY291bnRLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkiC",
-            "0+STAjsiNi92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8q",
-            "L2tleXMvKn06ZGlzYWJsZToBKtpBBG5hbWUSrwEKF0VuYWJsZVNlcnZpY2VB",
+            "ZUFjY291bnRLZXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ikja",
+            "QQRuYW1lgtPkkwI7IjYvdjEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNj",
+            "b3VudHMvKi9rZXlzLyp9OmRpc2FibGU6ASoSrwEKF0VuYWJsZVNlcnZpY2VB",
             "Y2NvdW50S2V5EjMuZ29vZ2xlLmlhbS5hZG1pbi52MS5FbmFibGVTZXJ2aWNl",
-            "QWNjb3VudEtleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiR4LT",
-            "5JMCOiI1L3YxL3tuYW1lPXByb2plY3RzLyovc2VydmljZUFjY291bnRzLyov",
-            "a2V5cy8qfTplbmFibGU6ASraQQRuYW1lEqwBCghTaWduQmxvYhIkLmdvb2ds",
+            "QWNjb3VudEtleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiR9pB",
+            "BG5hbWWC0+STAjoiNS92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2Nv",
+            "dW50cy8qL2tleXMvKn06ZW5hYmxlOgEqEqwBCghTaWduQmxvYhIkLmdvb2ds",
             "ZS5pYW0uYWRtaW4udjEuU2lnbkJsb2JSZXF1ZXN0GiUuZ29vZ2xlLmlhbS5h",
-            "ZG1pbi52MS5TaWduQmxvYlJlc3BvbnNlIlOIAgGC0+STAjUiMC92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpzaWduQmxvYjoBKtpB",
-            "Em5hbWUsYnl0ZXNfdG9fc2lnbhKiAQoHU2lnbkp3dBIjLmdvb2dsZS5pYW0u",
+            "ZG1pbi52MS5TaWduQmxvYlJlc3BvbnNlIlOIAgHaQRJuYW1lLGJ5dGVzX3Rv",
+            "X3NpZ26C0+STAjUiMC92MS97bmFtZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2Nv",
+            "dW50cy8qfTpzaWduQmxvYjoBKhKiAQoHU2lnbkp3dBIjLmdvb2dsZS5pYW0u",
             "YWRtaW4udjEuU2lnbkp3dFJlcXVlc3QaJC5nb29nbGUuaWFtLmFkbWluLnYx",
-            "LlNpZ25Kd3RSZXNwb25zZSJMiAIBgtPkkwI0Ii8vdjEve25hbWU9cHJvamVj",
-            "dHMvKi9zZXJ2aWNlQWNjb3VudHMvKn06c2lnbkp3dDoBKtpBDG5hbWUscGF5",
-            "bG9hZBKWAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Q",
-            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiS4LT5JMCOiI4",
-            "L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpn",
-            "ZXRJYW1Qb2xpY3naQQhyZXNvdXJjZRKgAQoMU2V0SWFtUG9saWN5EiIuZ29v",
+            "LlNpZ25Kd3RSZXNwb25zZSJMiAIB2kEMbmFtZSxwYXlsb2FkgtPkkwI0Ii8v",
+            "djEve25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudHMvKn06c2lnbkp3",
+            "dDoBKhKWAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Q",
+            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiS9pBCHJlc291",
+            "cmNlgtPkkwI6IjgvdjEve3Jlc291cmNlPXByb2plY3RzLyovc2VydmljZUFj",
+            "Y291bnRzLyp9OmdldElhbVBvbGljeRKgAQoMU2V0SWFtUG9saWN5EiIuZ29v",
             "Z2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52",
-            "MS5Qb2xpY3kiVYLT5JMCPSI4L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL3Nl",
-            "cnZpY2VBY2NvdW50cy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxw",
-            "b2xpY3kSywEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEu",
+            "MS5Qb2xpY3kiVdpBD3Jlc291cmNlLHBvbGljeYLT5JMCPSI4L3YxL3tyZXNv",
+            "dXJjZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTpzZXRJYW1Qb2xp",
+            "Y3k6ASoSywEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEu",
             "VGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVz",
-            "dElhbVBlcm1pc3Npb25zUmVzcG9uc2UiYILT5JMCQyI+L3YxL3tyZXNvdXJj",
-            "ZT1wcm9qZWN0cy8qL3NlcnZpY2VBY2NvdW50cy8qfTp0ZXN0SWFtUGVybWlz",
-            "c2lvbnM6ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxK3AQoTUXVlcnlHcmFu",
+            "dElhbVBlcm1pc3Npb25zUmVzcG9uc2UiYNpBFHJlc291cmNlLHBlcm1pc3Np",
+            "b25zgtPkkwJDIj4vdjEve3Jlc291cmNlPXByb2plY3RzLyovc2VydmljZUFj",
+            "Y291bnRzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhK3AQoTUXVlcnlHcmFu",
             "dGFibGVSb2xlcxIvLmdvb2dsZS5pYW0uYWRtaW4udjEuUXVlcnlHcmFudGFi",
             "bGVSb2xlc1JlcXVlc3QaMC5nb29nbGUuaWFtLmFkbWluLnYxLlF1ZXJ5R3Jh",
-            "bnRhYmxlUm9sZXNSZXNwb25zZSI9gtPkkwIiIh0vdjEvcm9sZXM6cXVlcnlH",
-            "cmFudGFibGVSb2xlczoBKtpBEmZ1bGxfcmVzb3VyY2VfbmFtZRK0AQoJTGlz",
+            "bnRhYmxlUm9sZXNSZXNwb25zZSI92kESZnVsbF9yZXNvdXJjZV9uYW1lgtPk",
+            "kwIiIh0vdjEvcm9sZXM6cXVlcnlHcmFudGFibGVSb2xlczoBKhK0AQoJTGlz",
             "dFJvbGVzEiUuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXF1ZXN0",
             "GiYuZ29vZ2xlLmlhbS5hZG1pbi52MS5MaXN0Um9sZXNSZXNwb25zZSJYgtPk",
             "kwJSEgkvdjEvcm9sZXNaJBIiL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8q",
@@ -294,11 +294,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "LnYxLkxpbnRQb2xpY3lSZXF1ZXN0GicuZ29vZ2xlLmlhbS5hZG1pbi52MS5M",
             "aW50UG9saWN5UmVzcG9uc2UiJYLT5JMCHyIaL3YxL2lhbVBvbGljaWVzOmxp",
             "bnRQb2xpY3k6ASoaRspBEmlhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkAEKF2Nv",
-            "bS5nb29nbGUuaWFtLmFkbWluLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvaWFtL2FkbWluL3YxO2FkbWlu+AEBqgIZR29v",
-            "Z2xlLkNsb3VkLklhbS5BZG1pbi5WMcoCGUdvb2dsZVxDbG91ZFxJYW1cQWRt",
-            "aW5cVjFiBnByb3RvMw=="));
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CiwEKF2Nv",
+            "bS5nb29nbGUuaWFtLmFkbWluLnYxUAFaM2Nsb3VkLmdvb2dsZS5jb20vZ28v",
+            "aWFtL2FkbWluL2FwaXYxL2FkbWlucGI7YWRtaW5wYvgBAaoCGUdvb2dsZS5D",
+            "bG91ZC5JYW0uQWRtaW4uVjHKAhlHb29nbGVcQ2xvdWRcSWFtXEFkbWluXFYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyAlgorithm), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPrivateKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPublicKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyOrigin), typeof(global::Google.Cloud.Iam.Admin.V1.RoleView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -455,6 +455,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// IAM uses these values to create an email address that identifies the service
   /// account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccount : pb::IMessage<ServiceAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -996,6 +997,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account create request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServiceAccountRequest : pb::IMessage<CreateServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1286,6 +1288,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account list request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceAccountsRequest : pb::IMessage<ListServiceAccountsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1568,6 +1571,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account list response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceAccountsResponse : pb::IMessage<ListServiceAccountsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1794,6 +1798,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account get request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceAccountRequest : pb::IMessage<GetServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1993,6 +1998,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account delete request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServiceAccountRequest : pb::IMessage<DeleteServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2198,6 +2204,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// Only the fields specified in the request are guaranteed to be returned in
   /// the response. Other fields may be empty in the response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchServiceAccountRequest : pb::IMessage<PatchServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2445,6 +2452,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account undelete request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteServiceAccountRequest : pb::IMessage<UndeleteServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2640,6 +2648,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteServiceAccountResponse : pb::IMessage<UndeleteServiceAccountResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2844,6 +2853,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account enable request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableServiceAccountRequest : pb::IMessage<EnableServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3043,6 +3053,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account disable request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableServiceAccountRequest : pb::IMessage<DisableServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3242,6 +3253,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account keys list request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceAccountKeysRequest : pb::IMessage<ListServiceAccountKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3503,6 +3515,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account keys list response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceAccountKeysResponse : pb::IMessage<ListServiceAccountKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3687,6 +3700,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key get by id request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceAccountKeyRequest : pb::IMessage<GetServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3951,6 +3965,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// Public keys for all service accounts are also published at the OAuth2
   /// Service Account API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccountKey : pb::IMessage<ServiceAccountKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4539,6 +4554,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key create request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServiceAccountKeyRequest : pb::IMessage<CreateServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4822,6 +4838,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key upload request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UploadServiceAccountKeyRequest : pb::IMessage<UploadServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5064,6 +5081,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key delete request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServiceAccountKeyRequest : pb::IMessage<DeleteServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5263,6 +5281,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key disable request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableServiceAccountKeyRequest : pb::IMessage<DisableServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5463,6 +5482,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The service account key enable request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableServiceAccountKeyRequest : pb::IMessage<EnableServiceAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5666,6 +5686,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   ///
   /// The service account sign blob request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignBlobRequest : pb::IMessage<SignBlobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5916,6 +5937,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   ///
   /// The service account sign blob response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignBlobResponse : pb::IMessage<SignBlobResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6162,6 +6184,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   ///
   /// The service account sign JWT request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignJwtRequest : pb::IMessage<SignJwtRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6421,6 +6444,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   ///
   /// The service account sign JWT response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignJwtResponse : pb::IMessage<SignJwtResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6664,6 +6688,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// A role in the Identity and Access Management API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Role : pb::IMessage<Role>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7139,6 +7164,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The grantable role query request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryGrantableRolesRequest : pb::IMessage<QueryGrantableRolesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7458,6 +7484,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The grantable role query response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryGrantableRolesResponse : pb::IMessage<QueryGrantableRolesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7683,6 +7710,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to get all roles defined under a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRolesRequest : pb::IMessage<ListRolesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8072,6 +8100,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The response containing the roles defined under a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRolesResponse : pb::IMessage<ListRolesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8297,6 +8326,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to get the definition of an existing role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRoleRequest : pb::IMessage<GetRoleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8522,6 +8552,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to create a new role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRoleRequest : pb::IMessage<CreateRoleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8832,6 +8863,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to update a role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateRoleRequest : pb::IMessage<UpdateRoleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9147,6 +9179,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to delete an existing role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRoleRequest : pb::IMessage<DeleteRoleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9404,6 +9437,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to undelete an existing role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteRoleRequest : pb::IMessage<UndeleteRoleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9661,6 +9695,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// A permission which can be included by a role.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Permission : pb::IMessage<Permission>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10184,6 +10219,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// A request to get permissions which can be tested on a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTestablePermissionsRequest : pb::IMessage<QueryTestablePermissionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10467,6 +10503,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The response containing permissions which can be tested on a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTestablePermissionsResponse : pb::IMessage<QueryTestablePermissionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10692,6 +10729,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// A request to get the list of auditable services for a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryAuditableServicesRequest : pb::IMessage<QueryAuditableServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10892,6 +10930,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// A response containing a list of auditable services for a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryAuditableServicesResponse : pb::IMessage<QueryAuditableServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11079,6 +11118,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <summary>
       /// Contains information about an auditable service.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AuditableService : pb::IMessage<AuditableService>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -11280,6 +11320,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// The request to lint a Cloud IAM policy object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LintPolicyRequest : pb::IMessage<LintPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11566,6 +11607,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// <summary>
   /// Structured response of a single validation unit.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LintResult : pb::IMessage<LintResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12040,6 +12082,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// The response of a lint operation. An empty response indicates
   /// the operation was able to fully execute and no lint issue was found.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LintPolicyResponse : pb::IMessage<LintPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

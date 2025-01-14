@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Iap.V1
 {
@@ -237,14 +237,14 @@ namespace Google.Cloud.Iap.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings, Logger);
+            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<IdentityAwareProxyAdminServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, Settings, Logger);
+            return IdentityAwareProxyAdminServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -547,13 +547,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroups(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -576,13 +585,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroupsAsync(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -605,13 +623,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroups(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroups(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 ParentAsTunnelLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -634,13 +661,22 @@ namespace Google.Cloud.Iap.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TunnelDestGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTunnelDestGroupsAsync(new ListTunnelDestGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTunnelDestGroupsResponse, TunnelDestGroup> ListTunnelDestGroupsAsync(TunnelLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTunnelDestGroupsRequest request = new ListTunnelDestGroupsRequest
             {
                 ParentAsTunnelLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTunnelDestGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new TunnelDestGroup.
@@ -1184,7 +1220,11 @@ namespace Google.Cloud.Iap.V1
         {
             GrpcClient = grpcClient;
             IdentityAwareProxyAdminServiceSettings effectiveSettings = settings ?? IdentityAwareProxyAdminServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);

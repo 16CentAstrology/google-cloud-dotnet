@@ -35,10 +35,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "LnY0YmV0YTEuQ2xpZW50RXZlbnRCA+BBAjL6AgoMRXZlbnRTZXJ2aWNlEvsB",
             "ChFDcmVhdGVDbGllbnRFdmVudBI1Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
             "ZXRhMS5DcmVhdGVDbGllbnRFdmVudFJlcXVlc3QaKC5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQihAGC0+STAmgiMy92NGJldGEx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NsaWVudEV2ZW50czoB",
-            "KlouIikvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NsaWVudEV2ZW50",
-            "czoBKtpBE3BhcmVudCxjbGllbnRfZXZlbnQabMpBE2pvYnMuZ29vZ2xlYXBp",
+            "dGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQihAHaQRNwYXJlbnQsY2xpZW50",
+            "X2V2ZW50gtPkkwJoIjMvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVu",
+            "YW50cy8qfS9jbGllbnRFdmVudHM6ASpaLiIpL3Y0YmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9jbGllbnRFdmVudHM6ASoabMpBE2pvYnMuZ29vZ2xlYXBp",
             "cy5jb23SQVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9i",
             "c0J1Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhFFdmVudFNl",
@@ -57,6 +57,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The report event request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateClientEventRequest : pb::IMessage<CreateClientEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

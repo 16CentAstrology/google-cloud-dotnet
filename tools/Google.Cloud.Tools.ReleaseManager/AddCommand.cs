@@ -12,15 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using Google.Protobuf;
+using LibGit2Sharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using YamlDotNet.Serialization;
@@ -30,24 +29,50 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// <summary>
     /// Tool to add a new library based on the service config (and protos) for an API.
     /// </summary>
-    public class AddCommand : CommandBase
+    public class AddCommand : ICommand
     {
-        public AddCommand()
-            : base("add", "Adds an API to the API catalog", "id")
-        {
-        }
+        private const string NoPullArgument = "--no-pull";
+        public string Description => "Adds an API to the API catalog";
 
-        protected override void ExecuteImpl(string[] args)
+        public string Command => "add";
+
+        public string ExpectedArguments => $"<id> [{NoPullArgument}]";
+
+        public int Execute(string[] args)
         {
+            if (args.Length == 0 || args.Length > 2 || (args.Length == 2 && args[1] != NoPullArgument))
+            {
+                throw new UserErrorException($"{Command} expected arguments: {ExpectedArguments}");
+            }
             string id = args[0];
+            bool pull = args.Length == 1; // We've already validated that if we've got 2 arguments, the second is NoPullArgument...
 
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             if (catalog.Apis.Any(api => api.Id == id))
             {
                 throw new UserErrorException($"API {id} already exists in the API catalog.");
             }
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapis = Path.Combine(root, "googleapis");
+            var googleapis = rootLayout.Googleapis;
+
+            if (pull)
+            {
+                Console.WriteLine($"Pulling googleapis directory");
+                using var repo = new Repository(googleapis);
+                string oldSha = repo.Head.Tip.Sha;
+
+                // The "merger" signature will never be used, due to requiring fast-forward-only,
+                // but we have to specify something.
+                var merger = new Signature("Ignored", "ignored@google.com", DateTimeOffset.UtcNow);
+                var pullOptions = new PullOptions
+                {
+                    MergeOptions = new MergeOptions { FastForwardStrategy = FastForwardStrategy.FastForwardOnly, FailOnConflict = true }
+                };
+                Commands.Pull(repo, merger, pullOptions);
+                string newSha = repo.Head.Tip.Sha;
+                Console.WriteLine(oldSha == newSha ? "Pull did not make changes" : $"Pull moved from {oldSha} to {newSha}");
+            }
+
             var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
 
             var targetApi = apiIndex.Apis.FirstOrDefault(api => api.DeriveCSharpNamespace() == id);
@@ -61,48 +86,18 @@ namespace Google.Cloud.Tools.ReleaseManager
                     $"No service found for '{id}'.{Environment.NewLine}Similar possibilities (check options?): {string.Join(", ", possibilities)}");
             }
 
-            var serviceConfig = ParseServiceConfigYaml(Path.Combine(googleapis, targetApi.Directory, targetApi.ConfigFile));
+            var api = ConfigureApi(googleapis, catalog, targetApi);
+            AddApiToCatalog(catalog, api);
 
-            var api = new ApiMetadata
-            {
-                Id = id,
-                ProtoPath = targetApi.Directory,
-                ProductName = targetApi.Title.EndsWith(" API") ? targetApi.Title[..^4] : targetApi.Title,
-                ProductUrl = serviceConfig.Publishing?.DocumentationUri,
-                Description = targetApi.Description,
-                Version = "1.0.0-beta00",
-                Type = ApiType.Grpc,
-                Generator = GeneratorType.Micro,
-                // Let's not include test dependencies, which are rarely useful.
-                TestDependencies = null,
-                // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
-                ShortName = targetApi.HostName.Split('.').First(),
-                // The service config file is always populated in the index, so we don't need to translate empty to null here.
-                ServiceConfigFile = targetApi.ConfigFile
-            };
+            // Done. Let's write out the catalog and display what we've done.
+            catalog.Save(rootLayout);
+            Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
+            Console.WriteLine(api.Json.ToString(Formatting.Indented));
+            return 0;
+        }
 
-            // Add dependencies discovered via the proto imports.
-            // This doesn't fail on any dependencies that aren't found - we could tighten this up later
-            // by knowing about common protos, for example.
-            var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
-            foreach (var import in targetApi.ImportDirectories)
-            {
-                if (apisByProtoPath.TryGetValue(import, out var dependency))
-                {
-                    api.Dependencies.Add(dependency.Id, dependency.Version);
-                }
-            }
-
-            // Add mixin dependencies discovered via APIs listed in the service config file.
-            // This *does* fail if we can't find the API, as that would indicate a general issue.
-            foreach (var mixin in targetApi.GetMixinPackages())
-            {
-                api.Dependencies[mixin] = catalog[mixin].Version;
-            }
-
-            // Add any other information from BUILD.bazel
-            new UpdateFromBazelCommand().Update(api);
-
+        internal static void AddApiToCatalog(ApiCatalog catalog, ApiMetadata api)
+        {
             // Now work out what the new API metadata looks like in JSON.
             var serializer = new JsonSerializer
             {
@@ -110,9 +105,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
                 ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
             };
-            api.Json = JToken.FromObject(api, serializer);
+            api.Json = (JObject) JToken.FromObject(api, serializer);
 
-            var followingApi = catalog.Apis.FirstOrDefault(api => string.Compare(api.Id, id, StringComparison.Ordinal) > 0);
+            var followingApi = catalog.Apis.FirstOrDefault(candidate => string.Compare(candidate.Id, api.Id, StringComparison.Ordinal) > 0);
             if (followingApi is object)
             {
                 followingApi.Json.AddBeforeSelf(api.Json);
@@ -122,14 +117,58 @@ namespace Google.Cloud.Tools.ReleaseManager
                 // Looks like this API will be last in the list.
                 catalog.Apis.Last().Json.AddAfterSelf(api.Json);
             }
-
-            // Done. Let's write out the catalog and display what we've done.
-            File.WriteAllText(ApiCatalog.CatalogPath, catalog.FormatJson());
-            Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
-            Console.WriteLine(api.Json.ToString(Formatting.Indented));
         }
 
-        private static Api.Service ParseServiceConfigYaml(string path)
+        internal static ApiMetadata ConfigureApi(string googleapis, ApiCatalog catalog, ApiIndex.V1.Api apiIndexEntry)
+        {
+            var serviceConfig = ParseServiceConfigYaml(Path.Combine(googleapis, apiIndexEntry.Directory, apiIndexEntry.ConfigFile));
+
+            var api = new ApiMetadata
+            {
+                Id = apiIndexEntry.DeriveCSharpNamespace(),
+                ProtoPath = apiIndexEntry.Directory,
+                ProductName = apiIndexEntry.Title.EndsWith(" API") ? apiIndexEntry.Title[..^4] : apiIndexEntry.Title,
+                ProductUrl = serviceConfig.Publishing?.DocumentationUri,
+                Description = apiIndexEntry.Description,
+                Version = "1.0.0-beta00",
+                Type = ApiType.Grpc,
+                Generator = GeneratorType.Micro,
+                // Let's not include test dependencies, which are rarely useful.
+                TestDependencies = null,
+                // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
+                ShortName = apiIndexEntry.HostName.Split('.').First(),
+                // The service config file is always populated in the index, so we don't need to translate empty to null here.
+                ServiceConfigFile = apiIndexEntry.ConfigFile
+            };
+
+            // Add dependencies discovered via the proto imports.
+            // This doesn't fail on any dependencies that aren't found - we could tighten this up later
+            // by knowing about common protos, for example.
+            var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
+            foreach (var import in apiIndexEntry.ImportDirectories)
+            {
+                if (apisByProtoPath.TryGetValue(import, out var dependency))
+                {
+                    api.Dependencies.Add(dependency.Id, dependency.Version);
+                }
+            }
+
+            // Add mixin dependencies discovered via APIs listed in the service config file.
+            // This *does* fail if we can't find the API, as that would indicate a general issue.
+            foreach (var mixin in apiIndexEntry.GetMixinPackages())
+            {
+                api.Dependencies[mixin] = catalog[mixin].Version;
+            }
+
+            // Add any other information from BUILD.bazel
+            UpdateFromBazelCommand.Update(api, googleapis);
+            return api;
+        }
+
+        // This is internal so that it's available to GenerateApisCommand, for unconfigured
+        // APIs. This is somewhat experimental - if we want this long-term, we should probably
+        // move it elsewhere.
+        internal static Api.Service ParseServiceConfigYaml(string path)
         {
             if (path is null)
             {

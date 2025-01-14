@@ -73,44 +73,44 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "bWVzdGFtcDLiDAoIVmVyc2lvbnMSxwEKDExpc3RWZXJzaW9ucxIyLmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RWZXJzaW9uc1JlcXVlc3Qa",
             "My5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0VmVyc2lvbnNS",
-            "ZXNwb25zZSJOgtPkkwI/Ej0vdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9L3ZlcnNpb25z2kEGcGFyZW50ErQB",
+            "ZXNwb25zZSJO2kEGcGFyZW50gtPkkwI/Ej0vdjMve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9L3ZlcnNpb25zErQB",
             "CgpHZXRWZXJzaW9uEjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
             "R2V0VmVyc2lvblJlcXVlc3QaJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5WZXJzaW9uIkyC0+STAj8SPS92My97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyovdmVyc2lvbnMvKn3aQQRuYW1l",
+            "eC52My5WZXJzaW9uIkzaQQRuYW1lgtPkkwI/Ej0vdjMve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qL3ZlcnNpb25zLyp9",
             "EvEBCg1DcmVhdGVWZXJzaW9uEjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
             "Y3gudjMuQ3JlYXRlVmVyc2lvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIosBgtPkkwJIIj0vdjMve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp9L3ZlcnNpb25zOgd2ZXJz",
-            "aW9u2kEOcGFyZW50LHZlcnNpb27KQSkKB1ZlcnNpb24SHkNyZWF0ZVZlcnNp",
-            "b25PcGVyYXRpb25NZXRhZGF0YRLaAQoNVXBkYXRlVmVyc2lvbhIzLmdvb2ds",
+            "bmcuT3BlcmF0aW9uIosBykEpCgdWZXJzaW9uEh5DcmVhdGVWZXJzaW9uT3Bl",
+            "cmF0aW9uTWV0YWRhdGHaQQ5wYXJlbnQsdmVyc2lvboLT5JMCSCI9L3YzL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8q",
+            "fS92ZXJzaW9uczoHdmVyc2lvbhLaAQoNVXBkYXRlVmVyc2lvbhIzLmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0ZVZlcnNpb25SZXF1ZXN0",
-            "GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVmVyc2lvbiJsgtPk",
-            "kwJQMkUvdjMve3ZlcnNpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2FnZW50cy8qL2Zsb3dzLyovdmVyc2lvbnMvKn06B3ZlcnNpb27aQRN2ZXJz",
-            "aW9uLHVwZGF0ZV9tYXNrEqoBCg1EZWxldGVWZXJzaW9uEjMuZ29vZ2xlLmNs",
+            "GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVmVyc2lvbiJs2kET",
+            "dmVyc2lvbix1cGRhdGVfbWFza4LT5JMCUDJFL3YzL3t2ZXJzaW9uLm5hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qL3ZlcnNp",
+            "b25zLyp9Ogd2ZXJzaW9uEqoBCg1EZWxldGVWZXJzaW9uEjMuZ29vZ2xlLmNs",
             "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRGVsZXRlVmVyc2lvblJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiTILT5JMCPyo9L3YzL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKi92ZXJzaW9ucy8q",
-            "fdpBBG5hbWUS6AEKC0xvYWRWZXJzaW9uEjEuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiTNpBBG5hbWWC0+STAj8qPS92My97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyovdmVy",
+            "c2lvbnMvKn0S6AEKC0xvYWRWZXJzaW9uEjEuZ29vZ2xlLmNsb3VkLmRpYWxv",
             "Z2Zsb3cuY3gudjMuTG9hZFZlcnNpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKGAYLT5JMCRyJCL3YzL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKi92ZXJzaW9ucy8qfTps",
-            "b2FkOgEq2kEEbmFtZcpBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZnb29n",
-            "bGUucHJvdG9idWYuU3RydWN0EvEBCg9Db21wYXJlVmVyc2lvbnMSNS5nb29n",
+            "dW5uaW5nLk9wZXJhdGlvbiKGAcpBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "EhZnb29nbGUucHJvdG9idWYuU3RydWN02kEEbmFtZYLT5JMCRyJCL3YzL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKi92",
+            "ZXJzaW9ucy8qfTpsb2FkOgEqEvEBCg9Db21wYXJlVmVyc2lvbnMSNS5nb29n",
             "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5Db21wYXJlVmVyc2lvbnNSZXF1",
             "ZXN0GjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQ29tcGFyZVZl",
-            "cnNpb25zUmVzcG9uc2Uib4LT5JMCWiJVL3YzL3tiYXNlX3ZlcnNpb249cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qL3ZlcnNpb25z",
-            "Lyp9OmNvbXBhcmVWZXJzaW9uczoBKtpBDGJhc2VfdmVyc2lvbhp4ykEZZGlh",
+            "cnNpb25zUmVzcG9uc2Uib9pBDGJhc2VfdmVyc2lvboLT5JMCWiJVL3YzL3ti",
+            "YXNlX3ZlcnNpb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9m",
+            "bG93cy8qL3ZlcnNpb25zLyp9OmNvbXBhcmVWZXJzaW9uczoBKhp4ykEZZGlh",
             "bG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
             "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrIBCiFjb20uZ29vZ2xlLmNsb3Vk",
+            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93Qq8BCiFjb20uZ29vZ2xlLmNsb3Vk",
             "LmRpYWxvZ2Zsb3cuY3gudjNCDFZlcnNpb25Qcm90b1ABWjFjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogIC",
-            "REaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6",
-            "Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "bGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBiogICREaq",
+            "Ah1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xv",
+            "dWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,6 +135,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// Metadata associated with the long running operation for
   /// [Versions.CreateVersion][google.cloud.dialogflow.cx.v3.Versions.CreateVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateVersionOperationMetadata : pb::IMessage<CreateVersionOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -184,8 +185,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string version_ = "";
     /// <summary>
     /// Name of the created version.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -332,6 +333,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
   /// Represents a version of a flow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -385,9 +387,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Format: projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>. Version ID is a self-increasing
-    /// number generated by Dialogflow upon version creation.
+    /// Format:
+    /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>.
+    /// Version ID is a self-increasing number generated by Dialogflow upon version
+    /// creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -780,6 +783,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVersionsRequest : pb::IMessage<ListVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -831,8 +835,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
-    /// versions for. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>`.
+    /// versions for. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1059,6 +1063,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The response message for
   /// [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVersionsResponse : pb::IMessage<ListVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1287,6 +1292,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.GetVersion][google.cloud.dialogflow.cx.v3.Versions.GetVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVersionRequest : pb::IMessage<GetVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1336,8 +1342,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1485,6 +1491,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.CreateVersion][google.cloud.dialogflow.cx.v3.Versions.CreateVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateVersionRequest : pb::IMessage<CreateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1536,8 +1543,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
     /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1733,6 +1739,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.UpdateVersion][google.cloud.dialogflow.cx.v3.Versions.UpdateVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateVersionRequest : pb::IMessage<UpdateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1988,6 +1995,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.DeleteVersion][google.cloud.dialogflow.cx.v3.Versions.DeleteVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVersionRequest : pb::IMessage<DeleteVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2037,8 +2045,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
-    /// to delete. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// to delete. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2186,6 +2194,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.LoadVersion][google.cloud.dialogflow.cx.v3.Versions.LoadVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoadVersionRequest : pb::IMessage<LoadVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2236,8 +2245,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
-    /// to draft flow. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// to draft flow. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2427,6 +2436,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompareVersionsRequest : pb::IMessage<CompareVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2480,8 +2490,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Required. Name of the base flow version to compare with the target version.
     /// Use version ID `0` to indicate the draft version of the specified flow.
     ///
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/
-    /// &lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2498,8 +2508,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. Name of the target flow version to compare with the
     /// base version. Use version ID `0` to indicate the draft version of the
-    /// specified flow. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// specified flow. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VersionID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2716,6 +2726,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The response message for
   /// [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompareVersionsResponse : pb::IMessage<CompareVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

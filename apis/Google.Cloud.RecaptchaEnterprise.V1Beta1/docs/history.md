@@ -1,5 +1,33 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2024-04-29
+
+### New features
+
+- Add Fraud Prevention settings field ([commit d54c222](https://github.com/googleapis/google-cloud-dotnet/commit/d54c22206f0160a5cb1eb98d43b0d2c9740a741b))
+
+## Version 2.0.0-beta06, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta05, released 2024-02-29
+
+### Documentation improvements
+
+- Minor comments updates ([commit 418f496](https://github.com/googleapis/google-cloud-dotnet/commit/418f496915ce5047c5044f0a6ecd43b61316ba6f))
+
+## Version 2.0.0-beta04, released 2023-10-30
+
+### New features
+
+- Added FraudPreventionAssessment.behavioral_trust_verdict ([commit 3173b55](https://github.com/googleapis/google-cloud-dotnet/commit/3173b555a518bf91958a460ad0f5577fe7488595))
+
+### Documentation improvements
+
+- Formatting of resource names ([commit 3173b55](https://github.com/googleapis/google-cloud-dotnet/commit/3173b555a518bf91958a460ad0f5577fe7488595))
+
 ## Version 2.0.0-beta03, released 2023-03-20
 
 ### New features

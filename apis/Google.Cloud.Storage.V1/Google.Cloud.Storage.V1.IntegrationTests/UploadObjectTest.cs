@@ -1,11 +1,11 @@
 // Copyright 2015 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,10 +13,13 @@
 // limitations under the License.
 
 using Google.Apis.Http;
+using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
+using Grpc.Core.Interceptors;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -95,14 +98,24 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var contentType = "application/octet-stream";
             var source = GenerateData(UploadObjectOptions.MinimumChunkSize * chunks);
-            int progressCount = 0;
-            var progress = new Progress<IUploadProgress>(p => progressCount++);
+            IList<IUploadProgress> progresses = new List<IUploadProgress>();
+            var progress = new Progress<IUploadProgress>(p => progresses.Add(p));
             var result = await _fixture.Client.UploadObjectAsync(_fixture.MultiVersionBucket, name, contentType, source,
                 new UploadObjectOptions { ChunkSize = UploadObjectOptions.MinimumChunkSize },
                 CancellationToken.None, progress);
-            Assert.Equal(chunks + 1, progressCount); // Should start with a 0 progress
+
+            Assert.Collection(progresses,
+                first => CheckProgress(first, UploadStatus.Starting),
+                second => CheckProgress(second, UploadStatus.Uploading),
+                third => CheckProgress(third, UploadStatus.Completed));
             Assert.Equal(name, result.Name); // Assume the rest of the properties are okay...
             ValidateData(_fixture.MultiVersionBucket, name, source);
+
+            void CheckProgress(IUploadProgress progress, UploadStatus expectedStatus)
+            {
+                progress.ThrowOnFailure();
+                Assert.Equal(expectedStatus, progress.Status);
+            }
         }
 
         [Fact]
@@ -368,6 +381,57 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
+        [Fact]
+        public async Task InitiateUploadSessionAsync_NegativeLength()
+        {
+            var client = _fixture.Client;
+            var name = IdGenerator.FromGuid();
+            await Assert.ThrowsAsync<ArgumentOutOfRangeException>(
+                () => client.InitiateUploadSessionAsync(_fixture.SingleVersionBucket, name, contentType: null, contentLength: -5));
+        }
+
+        [Fact]
+        public async Task InitiateUploadSessionAsync_ZeroLength()
+        {
+            var client = _fixture.Client;
+            var name = IdGenerator.FromGuid();
+            await Assert.ThrowsAsync<ArgumentOutOfRangeException>(
+                () => client.InitiateUploadSessionAsync(_fixture.SingleVersionBucket, name, contentType: null, contentLength: 0));
+        }
+
+        [Theory]
+        [InlineData(false)] // contentLength = null
+        [InlineData(true)]  // contentLength = correct length
+        public async Task InitiateUploadSessionAsyncThenUpload_NullOrCorrectLength(bool specifyLength)
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.SingleVersionBucket;
+            var name = IdGenerator.FromGuid();
+            var stream = GenerateData(50);
+            long? contentLength = specifyLength ? stream.Length : null;
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, null, contentLength);
+            var upload = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+            var progress = await upload.UploadAsync();
+            Assert.Equal(UploadStatus.Completed, progress.Status);
+            ValidateData(bucket, name, stream);
+        }
+
+        [Theory]
+        [InlineData(1)]  // We specify a larger length than we upload
+        [InlineData(-1)] // We specify a shorter length than we upload
+        public async Task InitiateUploadSessionAsyncThenUpload_IncorrectLength(int lengthDelta)
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.SingleVersionBucket;
+            var name = IdGenerator.FromGuid();
+            var stream = GenerateData(50);
+            long? contentLength = stream.Length + lengthDelta;
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, null, contentLength);
+            var upload = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+            var progress = await upload.UploadAsync();
+            Assert.Equal(UploadStatus.Failed, progress.Status);
+        }
+
         private class BreakUploadInterceptor : IHttpExecuteInterceptor
         {
             internal byte[] UploadedBytes { get; set; }
@@ -392,7 +456,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 foreach (var header in originalContent.Headers)
                 {
                     request.Content.Headers.Add(header.Key, header.Value);
-                }                
+                }
             }
         }
 

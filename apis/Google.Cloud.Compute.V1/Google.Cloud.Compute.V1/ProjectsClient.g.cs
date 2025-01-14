@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -62,6 +62,8 @@ namespace Google.Cloud.Compute.V1
             MoveDiskOperationsSettings = existing.MoveDiskOperationsSettings.Clone();
             MoveInstanceSettings = existing.MoveInstanceSettings;
             MoveInstanceOperationsSettings = existing.MoveInstanceOperationsSettings.Clone();
+            SetCloudArmorTierSettings = existing.SetCloudArmorTierSettings;
+            SetCloudArmorTierOperationsSettings = existing.SetCloudArmorTierOperationsSettings.Clone();
             SetCommonInstanceMetadataSettings = existing.SetCommonInstanceMetadataSettings;
             SetCommonInstanceMetadataOperationsSettings = existing.SetCommonInstanceMetadataOperationsSettings.Clone();
             SetDefaultNetworkTierSettings = existing.SetDefaultNetworkTierSettings;
@@ -330,6 +332,36 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProjectsClient.SetCloudArmorTier</c> and <c>ProjectsClient.SetCloudArmorTierAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetCloudArmorTierSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ProjectsClient.SetCloudArmorTier</c> and
+        /// <c>ProjectsClient.SetCloudArmorTierAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetCloudArmorTierOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ProjectsClient.SetCommonInstanceMetadata</c> and <c>ProjectsClient.SetCommonInstanceMetadataAsync</c>.
         /// </summary>
         /// <remarks>
@@ -460,14 +492,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProjectsClient.Create(callInvoker, Settings, Logger);
+            return ProjectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ProjectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProjectsClient.Create(callInvoker, Settings, Logger);
+            return ProjectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1118,13 +1150,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="XpnResourceId"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetXpnResources(new GetXpnResourcesProjectsRequest
+        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetXpnResourcesProjectsRequest request = new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetXpnResources(request, callSettings);
+        }
 
         /// <summary>
         /// Gets service resources (a.k.a service project) associated with this host project.
@@ -1142,13 +1183,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="XpnResourceId"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            GetXpnResourcesAsync(new GetXpnResourcesProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            GetXpnResourcesProjectsRequest request = new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return GetXpnResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
@@ -1187,14 +1237,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListXpnHosts(new ListXpnHostsProjectsRequest
+        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListXpnHostsProjectsRequest request = new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListXpnHosts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
@@ -1215,14 +1274,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListXpnHostsAsync(new ListXpnHostsProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListXpnHostsProjectsRequest request = new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListXpnHostsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Moves a persistent disk from one zone to another.
@@ -1328,7 +1396,7 @@ namespace Google.Cloud.Compute.V1
             MoveDiskAsync(project, diskMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1337,7 +1405,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1346,7 +1414,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1381,7 +1449,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1399,7 +1467,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1417,7 +1485,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1429,6 +1497,110 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> MoveInstanceAsync(string project, InstanceMoveRequest instanceMoveRequestResource, st::CancellationToken cancellationToken) =>
             MoveInstanceAsync(project, instanceMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetCloudArmorTier(SetCloudArmorTierProjectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCloudArmorTierAsync(SetCloudArmorTierProjectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCloudArmorTierAsync(SetCloudArmorTierProjectRequest request, st::CancellationToken cancellationToken) =>
+            SetCloudArmorTierAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetCloudArmorTier</c>.</summary>
+        public virtual lro::OperationsClient SetCloudArmorTierOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetCloudArmorTier</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetCloudArmorTier(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCloudArmorTierOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetCloudArmorTier</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetCloudArmorTierAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCloudArmorTierOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="projectsSetCloudArmorTierRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetCloudArmorTier(string project, ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetCloudArmorTier(new SetCloudArmorTierProjectRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ProjectsSetCloudArmorTierRequestResource = gax::GaxPreconditions.CheckNotNull(projectsSetCloudArmorTierRequestResource, nameof(projectsSetCloudArmorTierRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="projectsSetCloudArmorTierRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCloudArmorTierAsync(string project, ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetCloudArmorTierAsync(new SetCloudArmorTierProjectRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ProjectsSetCloudArmorTierRequestResource = gax::GaxPreconditions.CheckNotNull(projectsSetCloudArmorTierRequestResource, nameof(projectsSetCloudArmorTierRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="projectsSetCloudArmorTierRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetCloudArmorTierAsync(string project, ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource, st::CancellationToken cancellationToken) =>
+            SetCloudArmorTierAsync(project, projectsSetCloudArmorTierRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets metadata common to all instances within the specified project using the data included in the request.
@@ -1769,6 +1941,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<MoveInstanceProjectRequest, Operation> _callMoveInstance;
 
+        private readonly gaxgrpc::ApiCall<SetCloudArmorTierProjectRequest, Operation> _callSetCloudArmorTier;
+
         private readonly gaxgrpc::ApiCall<SetCommonInstanceMetadataProjectRequest, Operation> _callSetCommonInstanceMetadata;
 
         private readonly gaxgrpc::ApiCall<SetDefaultNetworkTierProjectRequest, Operation> _callSetDefaultNetworkTier;
@@ -1785,13 +1959,18 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DisableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnHostOperationsSettings, logger);
             DisableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnResourceOperationsSettings, logger);
             EnableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnHostOperationsSettings, logger);
             EnableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnResourceOperationsSettings, logger);
             MoveDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveDiskOperationsSettings, logger);
             MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveInstanceOperationsSettings, logger);
+            SetCloudArmorTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCloudArmorTierOperationsSettings, logger);
             SetCommonInstanceMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCommonInstanceMetadataOperationsSettings, logger);
             SetDefaultNetworkTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetDefaultNetworkTierOperationsSettings, logger);
             SetUsageExportBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetUsageExportBucketOperationsSettings, logger);
@@ -1825,6 +2004,9 @@ namespace Google.Cloud.Compute.V1
             _callMoveInstance = clientHelper.BuildApiCall<MoveInstanceProjectRequest, Operation>("MoveInstance", grpcClient.MoveInstanceAsync, grpcClient.MoveInstance, effectiveSettings.MoveInstanceSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callMoveInstance);
             Modify_MoveInstanceApiCall(ref _callMoveInstance);
+            _callSetCloudArmorTier = clientHelper.BuildApiCall<SetCloudArmorTierProjectRequest, Operation>("SetCloudArmorTier", grpcClient.SetCloudArmorTierAsync, grpcClient.SetCloudArmorTier, effectiveSettings.SetCloudArmorTierSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callSetCloudArmorTier);
+            Modify_SetCloudArmorTierApiCall(ref _callSetCloudArmorTier);
             _callSetCommonInstanceMetadata = clientHelper.BuildApiCall<SetCommonInstanceMetadataProjectRequest, Operation>("SetCommonInstanceMetadata", grpcClient.SetCommonInstanceMetadataAsync, grpcClient.SetCommonInstanceMetadata, effectiveSettings.SetCommonInstanceMetadataSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callSetCommonInstanceMetadata);
             Modify_SetCommonInstanceMetadataApiCall(ref _callSetCommonInstanceMetadata);
@@ -1859,6 +2041,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_MoveInstanceApiCall(ref gaxgrpc::ApiCall<MoveInstanceProjectRequest, Operation> call);
 
+        partial void Modify_SetCloudArmorTierApiCall(ref gaxgrpc::ApiCall<SetCloudArmorTierProjectRequest, Operation> call);
+
         partial void Modify_SetCommonInstanceMetadataApiCall(ref gaxgrpc::ApiCall<SetCommonInstanceMetadataProjectRequest, Operation> call);
 
         partial void Modify_SetDefaultNetworkTierApiCall(ref gaxgrpc::ApiCall<SetDefaultNetworkTierProjectRequest, Operation> call);
@@ -1889,6 +2073,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_MoveDiskProjectRequest(ref MoveDiskProjectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MoveInstanceProjectRequest(ref MoveInstanceProjectRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetCloudArmorTierProjectRequest(ref SetCloudArmorTierProjectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetCommonInstanceMetadataProjectRequest(ref SetCommonInstanceMetadataProjectRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2161,7 +2347,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient MoveInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2176,7 +2362,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2188,6 +2374,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetCloudArmorTier</c>.</summary>
+        public override lro::OperationsClient SetCloudArmorTierOperationsClient { get; }
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetCloudArmorTier(SetCloudArmorTierProjectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetCloudArmorTierProjectRequest(ref request, ref callSettings);
+            Operation response = _callSetCloudArmorTier.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCloudArmorTierOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetCloudArmorTierAsync(SetCloudArmorTierProjectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetCloudArmorTierProjectRequest(ref request, ref callSettings);
+            Operation response = await _callSetCloudArmorTier.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCloudArmorTierOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetCommonInstanceMetadata</c>.</summary>

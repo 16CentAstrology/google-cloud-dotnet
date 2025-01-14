@@ -48,6 +48,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Points to a DeployedModel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployedModelRef : pb::IMessage<DeployedModelRef>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

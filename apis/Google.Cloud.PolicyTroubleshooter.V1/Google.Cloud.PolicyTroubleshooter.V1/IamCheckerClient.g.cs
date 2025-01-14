@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.PolicyTroubleshooter.V1
 {
@@ -104,14 +104,14 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IamCheckerClient.Create(callInvoker, Settings, Logger);
+            return IamCheckerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<IamCheckerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IamCheckerClient.Create(callInvoker, Settings, Logger);
+            return IamCheckerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -205,8 +205,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         public virtual IamChecker.IamCheckerClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -215,8 +216,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -225,8 +227,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -255,7 +258,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         {
             GrpcClient = grpcClient;
             IamCheckerSettings effectiveSettings = settings ?? IamCheckerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callTroubleshootIamPolicy = clientHelper.BuildApiCall<TroubleshootIamPolicyRequest, TroubleshootIamPolicyResponse>("TroubleshootIamPolicy", grpcClient.TroubleshootIamPolicyAsync, grpcClient.TroubleshootIamPolicy, effectiveSettings.TroubleshootIamPolicySettings);
             Modify_ApiCall(ref _callTroubleshootIamPolicy);
             Modify_TroubleshootIamPolicyApiCall(ref _callTroubleshootIamPolicy);
@@ -274,8 +281,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         partial void Modify_TroubleshootIamPolicyRequest(ref TroubleshootIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -287,8 +295,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         }
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

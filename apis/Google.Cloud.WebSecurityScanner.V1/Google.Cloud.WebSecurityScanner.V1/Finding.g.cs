@@ -71,6 +71,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// A Finding resource represents a vulnerability instance identified during a
   /// ScanRun.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Finding : pb::IMessage<Finding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

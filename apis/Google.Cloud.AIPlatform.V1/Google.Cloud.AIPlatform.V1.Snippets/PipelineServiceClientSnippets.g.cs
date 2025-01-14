@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1408,6 +1410,213 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchDeletePipelineJobs</summary>
+        public void BatchDeletePipelineJobsRequestObject()
+        {
+            // Snippet: BatchDeletePipelineJobs(BatchDeletePipelineJobsRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeletePipelineJobsRequest request = new BatchDeletePipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJobNames =
+                {
+                    PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                },
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = pipelineServiceClient.BatchDeletePipelineJobs(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchDeletePipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeletePipelineJobsAsync</summary>
+        public async Task BatchDeletePipelineJobsRequestObjectAsync()
+        {
+            // Snippet: BatchDeletePipelineJobsAsync(BatchDeletePipelineJobsRequest, CallSettings)
+            // Additional: BatchDeletePipelineJobsAsync(BatchDeletePipelineJobsRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeletePipelineJobsRequest request = new BatchDeletePipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJobNames =
+                {
+                    PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                },
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = await pipelineServiceClient.BatchDeletePipelineJobsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchDeletePipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeletePipelineJobs</summary>
+        public void BatchDeletePipelineJobs()
+        {
+            // Snippet: BatchDeletePipelineJobs(string, IEnumerable<string>, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]",
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = pipelineServiceClient.BatchDeletePipelineJobs(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchDeletePipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeletePipelineJobsAsync</summary>
+        public async Task BatchDeletePipelineJobsAsync()
+        {
+            // Snippet: BatchDeletePipelineJobsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeletePipelineJobsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]",
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = await pipelineServiceClient.BatchDeletePipelineJobsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchDeletePipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeletePipelineJobs</summary>
+        public void BatchDeletePipelineJobsResourceNames()
+        {
+            // Snippet: BatchDeletePipelineJobs(LocationName, IEnumerable<PipelineJobName>, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<PipelineJobName> names = new PipelineJobName[]
+            {
+                PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = pipelineServiceClient.BatchDeletePipelineJobs(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchDeletePipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeletePipelineJobsAsync</summary>
+        public async Task BatchDeletePipelineJobsResourceNamesAsync()
+        {
+            // Snippet: BatchDeletePipelineJobsAsync(LocationName, IEnumerable<PipelineJobName>, CallSettings)
+            // Additional: BatchDeletePipelineJobsAsync(LocationName, IEnumerable<PipelineJobName>, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<PipelineJobName> names = new PipelineJobName[]
+            {
+                PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> response = await pipelineServiceClient.BatchDeletePipelineJobsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchDeletePipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchDeletePipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeletePipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CancelPipelineJob</summary>
         public void CancelPipelineJobRequestObject()
         {
@@ -1492,6 +1701,213 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
             // Make the request
             await pipelineServiceClient.CancelPipelineJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobs</summary>
+        public void BatchCancelPipelineJobsRequestObject()
+        {
+            // Snippet: BatchCancelPipelineJobs(BatchCancelPipelineJobsRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCancelPipelineJobsRequest request = new BatchCancelPipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJobNames =
+                {
+                    PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                },
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = pipelineServiceClient.BatchCancelPipelineJobs(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchCancelPipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobsAsync</summary>
+        public async Task BatchCancelPipelineJobsRequestObjectAsync()
+        {
+            // Snippet: BatchCancelPipelineJobsAsync(BatchCancelPipelineJobsRequest, CallSettings)
+            // Additional: BatchCancelPipelineJobsAsync(BatchCancelPipelineJobsRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCancelPipelineJobsRequest request = new BatchCancelPipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJobNames =
+                {
+                    PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                },
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = await pipelineServiceClient.BatchCancelPipelineJobsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchCancelPipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobs</summary>
+        public void BatchCancelPipelineJobs()
+        {
+            // Snippet: BatchCancelPipelineJobs(string, IEnumerable<string>, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]",
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = pipelineServiceClient.BatchCancelPipelineJobs(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchCancelPipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobsAsync</summary>
+        public async Task BatchCancelPipelineJobsAsync()
+        {
+            // Snippet: BatchCancelPipelineJobsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchCancelPipelineJobsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]",
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = await pipelineServiceClient.BatchCancelPipelineJobsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchCancelPipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobs</summary>
+        public void BatchCancelPipelineJobsResourceNames()
+        {
+            // Snippet: BatchCancelPipelineJobs(LocationName, IEnumerable<PipelineJobName>, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<PipelineJobName> names = new PipelineJobName[]
+            {
+                PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = pipelineServiceClient.BatchCancelPipelineJobs(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceBatchCancelPipelineJobs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCancelPipelineJobsAsync</summary>
+        public async Task BatchCancelPipelineJobsResourceNamesAsync()
+        {
+            // Snippet: BatchCancelPipelineJobsAsync(LocationName, IEnumerable<PipelineJobName>, CallSettings)
+            // Additional: BatchCancelPipelineJobsAsync(LocationName, IEnumerable<PipelineJobName>, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<PipelineJobName> names = new PipelineJobName[]
+            {
+                PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> response = await pipelineServiceClient.BatchCancelPipelineJobsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCancelPipelineJobsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceBatchCancelPipelineJobsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCancelPipelineJobsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

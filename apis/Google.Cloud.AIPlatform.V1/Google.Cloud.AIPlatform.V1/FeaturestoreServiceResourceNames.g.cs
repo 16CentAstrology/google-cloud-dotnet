@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcav = Google.Cloud.AIPlatform.V1;
 
 namespace Google.Cloud.AIPlatform.V1
@@ -162,6 +163,39 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="FeatureGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureGroupName ParentAsFeatureGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (EntityTypeName.TryParse(Parent, out EntityTypeName entityType))
+                {
+                    return entityType;
+                }
+                if (FeatureGroupName.TryParse(Parent, out FeatureGroupName featureGroup))
+                {
+                    return featureGroup;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class BatchCreateFeaturesRequest
@@ -172,6 +206,39 @@ namespace Google.Cloud.AIPlatform.V1
         public EntityTypeName ParentAsEntityTypeName
         {
             get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FeatureGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureGroupName ParentAsFeatureGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (EntityTypeName.TryParse(Parent, out EntityTypeName entityType))
+                {
+                    return entityType;
+                }
+                if (FeatureGroupName.TryParse(Parent, out FeatureGroupName featureGroup))
+                {
+                    return featureGroup;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -196,6 +263,39 @@ namespace Google.Cloud.AIPlatform.V1
         public EntityTypeName ParentAsEntityTypeName
         {
             get => string.IsNullOrEmpty(Parent) ? null : EntityTypeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FeatureGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureGroupName ParentAsFeatureGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (EntityTypeName.TryParse(Parent, out EntityTypeName entityType))
+                {
+                    return entityType;
+                }
+                if (FeatureGroupName.TryParse(Parent, out FeatureGroupName featureGroup))
+                {
+                    return featureGroup;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

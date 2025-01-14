@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ApigeeConnect.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
     using Google.Rpc;
@@ -31,9 +31,9 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
         {
             // Snippet: Egress(CallSettings, BidirectionalStreamingSettings)
             // Create client
-            TetherClient tetherClient = TetherClient.Create();
+            gcav::TetherClient tetherClient = gcav::TetherClient.Create();
             // Initialize streaming call, retrieving the stream object
-            TetherClient.EgressStream response = tetherClient.Egress();
+            using gcav::TetherClient.EgressStream response = tetherClient.Egress();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -42,10 +42,10 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
             Task responseHandlerTask = Task.Run(async () =>
             {
                 // Note that C# 8 code can use await foreach
-                AsyncResponseStream<EgressRequest> responseStream = response.GetResponseStream();
+                AsyncResponseStream<gcav::EgressRequest> responseStream = response.GetResponseStream();
                 while (await responseStream.MoveNextAsync())
                 {
-                    EgressRequest responseItem = responseStream.Current;
+                    gcav::EgressRequest responseItem = responseStream.Current;
                     // Do something with streamed response
                 }
                 // The response stream has completed
@@ -56,14 +56,14 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
             while (!done)
             {
                 // Initialize a request
-                EgressResponse request = new EgressResponse
+                gcav::EgressResponse request = new gcav::EgressResponse
                 {
                     Id = "",
                     HttpResponse = new gcav::HttpResponse(),
                     Status = new Status(),
                     Project = "",
                     TraceId = "",
-                    Endpoint = TetherEndpoint.Unspecified,
+                    Endpoint = gcav::TetherEndpoint.Unspecified,
                     Name = "",
                 };
                 // Stream a request to the server

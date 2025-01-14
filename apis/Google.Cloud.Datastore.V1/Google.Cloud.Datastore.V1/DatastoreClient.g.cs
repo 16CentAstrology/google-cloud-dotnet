@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Datastore.V1
 {
@@ -232,14 +232,14 @@ namespace Google.Cloud.Datastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DatastoreClient.Create(callInvoker, Settings, Logger);
+            return DatastoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DatastoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatastoreClient.Create(callInvoker, Settings, Logger);
+            return DatastoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1112,7 +1112,11 @@ namespace Google.Cloud.Datastore.V1
         {
             GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<LookupRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callLookup);
             Modify_LookupApiCall(ref _callLookup);

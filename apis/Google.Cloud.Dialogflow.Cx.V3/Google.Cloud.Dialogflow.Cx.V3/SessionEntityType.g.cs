@@ -67,42 +67,42 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "dHlUeXBlcxLDAgoWTGlzdFNlc3Npb25FbnRpdHlUeXBlcxI8Lmdvb2dsZS5j",
             "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RTZXNzaW9uRW50aXR5VHlwZXNS",
             "ZXF1ZXN0Gj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTGlzdFNl",
-            "c3Npb25FbnRpdHlUeXBlc1Jlc3BvbnNlIqsBgtPkkwKbARJDL3YzL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9zZXNzaW9ucy8q",
-            "fS9lbnRpdHlUeXBlc1pUElIvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL3Nlc3Npb25zLyp9L2Vu",
-            "dGl0eVR5cGVz2kEGcGFyZW50ErACChRHZXRTZXNzaW9uRW50aXR5VHlwZRI6",
+            "c3Npb25FbnRpdHlUeXBlc1Jlc3BvbnNlIqsB2kEGcGFyZW50gtPkkwKbARJD",
+            "L3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9z",
+            "ZXNzaW9ucy8qfS9lbnRpdHlUeXBlc1pUElIvdjMve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL3Nlc3Np",
+            "b25zLyp9L2VudGl0eVR5cGVzErACChRHZXRTZXNzaW9uRW50aXR5VHlwZRI6",
             "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkdldFNlc3Npb25FbnRp",
             "dHlUeXBlUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "LlNlc3Npb25FbnRpdHlUeXBlIqkBgtPkkwKbARJDL3YzL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovc2Vzc2lvbnMvKi9lbnRpdHlU",
-            "eXBlcy8qfVpUElIvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudHMvKi9lbnZpcm9ubWVudHMvKi9zZXNzaW9ucy8qL2VudGl0eVR5cGVz",
-            "Lyp92kEEbmFtZRL2AgoXQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGUSPS5nb29n",
+            "LlNlc3Npb25FbnRpdHlUeXBlIqkB2kEEbmFtZYLT5JMCmwESQy92My97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Npb25zLyov",
+            "ZW50aXR5VHlwZXMvKn1aVBJSL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovYWdlbnRzLyovZW52aXJvbm1lbnRzLyovc2Vzc2lvbnMvKi9lbnRp",
+            "dHlUeXBlcy8qfRL2AgoXQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGUSPS5nb29n",
             "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVTZXNzaW9uRW50aXR5",
             "VHlwZVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5T",
-            "ZXNzaW9uRW50aXR5VHlwZSLpAYLT5JMCxQEiQy92My97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovc2Vzc2lvbnMvKn0vZW50aXR5",
-            "VHlwZXM6E3Nlc3Npb25fZW50aXR5X3R5cGVaaSJSL3YzL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKi9z",
-            "ZXNzaW9ucy8qfS9lbnRpdHlUeXBlczoTc2Vzc2lvbl9lbnRpdHlfdHlwZdpB",
-            "GnBhcmVudCxzZXNzaW9uX2VudGl0eV90eXBlEqMDChdVcGRhdGVTZXNzaW9u",
+            "ZXNzaW9uRW50aXR5VHlwZSLpAdpBGnBhcmVudCxzZXNzaW9uX2VudGl0eV90",
+            "eXBlgtPkkwLFASJDL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9hZ2VudHMvKi9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlczoTc2Vzc2lvbl9l",
+            "bnRpdHlfdHlwZVppIlIvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL3Nlc3Npb25zLyp9L2VudGl0",
+            "eVR5cGVzOhNzZXNzaW9uX2VudGl0eV90eXBlEqMDChdVcGRhdGVTZXNzaW9u",
             "RW50aXR5VHlwZRI9Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVw",
             "ZGF0ZVNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzLlNlc3Npb25FbnRpdHlUeXBlIpYCgtPkkwLtATJX",
-            "L3YzL3tzZXNzaW9uX2VudGl0eV90eXBlLm5hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9hZ2VudHMvKi9zZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9OhNz",
-            "ZXNzaW9uX2VudGl0eV90eXBlWn0yZi92My97c2Vzc2lvbl9lbnRpdHlfdHlw",
-            "ZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJv",
-            "bm1lbnRzLyovc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfToTc2Vzc2lvbl9l",
-            "bnRpdHlfdHlwZdpBH3Nlc3Npb25fZW50aXR5X3R5cGUsdXBkYXRlX21hc2sS",
+            "aWFsb2dmbG93LmN4LnYzLlNlc3Npb25FbnRpdHlUeXBlIpYC2kEfc2Vzc2lv",
+            "bl9lbnRpdHlfdHlwZSx1cGRhdGVfbWFza4LT5JMC7QEyVy92My97c2Vzc2lv",
+            "bl9lbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
+            "bnRzLyovc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfToTc2Vzc2lvbl9lbnRp",
+            "dHlfdHlwZVp9MmYvdjMve3Nlc3Npb25fZW50aXR5X3R5cGUubmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL3Nl",
+            "c3Npb25zLyovZW50aXR5VHlwZXMvKn06E3Nlc3Npb25fZW50aXR5X3R5cGUS",
             "nAIKF0RlbGV0ZVNlc3Npb25FbnRpdHlUeXBlEj0uZ29vZ2xlLmNsb3VkLmRp",
             "YWxvZ2Zsb3cuY3gudjMuRGVsZXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IqkBgtPkkwKbASpDL3YzL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovc2Vzc2lvbnMvKi9l",
-            "bnRpdHlUeXBlcy8qfVpUKlIvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKi9zZXNzaW9ucy8qL2VudGl0",
-            "eVR5cGVzLyp92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IqkB2kEEbmFtZYLT5JMCmwEqQy92",
+            "My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Np",
+            "b25zLyovZW50aXR5VHlwZXMvKn1aVCpSL3YzL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJvbm1lbnRzLyovc2Vzc2lvbnMv",
+            "Ki9lbnRpdHlUeXBlcy8qfRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
             "bdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
             "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dm",
             "bG93QrwBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCFlNl",
@@ -141,6 +141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// For more information about entity types, see the [Dialogflow
   /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionEntityType : pb::IMessage<SessionEntityType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -192,11 +193,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The unique identifier of the session entity type.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// ID>` or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,6 +451,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSessionEntityTypesRequest : pb::IMessage<ListSessionEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -501,9 +503,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to list all session entity types from.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
@@ -732,6 +735,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The response message for
   /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSessionEntityTypesResponse : pb::IMessage<ListSessionEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -959,6 +963,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.GetSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSessionEntityTypeRequest : pb::IMessage<GetSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1008,11 +1013,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the session entity type.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1161,6 +1166,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.CreateSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSessionEntityTypeRequest : pb::IMessage<CreateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1211,9 +1217,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to create a session entity type for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
@@ -1411,6 +1418,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.UpdateSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSessionEntityTypeRequest : pb::IMessage<UpdateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1461,12 +1469,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityType sessionEntityType_;
     /// <summary>
     /// Required. The session entity type to update.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
-    /// environment.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified,
+    /// we assume default 'draft' environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1671,6 +1679,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// The request message for
   /// [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.DeleteSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSessionEntityTypeRequest : pb::IMessage<DeleteSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1720,12 +1729,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the session entity type to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
-    /// environment.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified,
+    /// we assume default 'draft' environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
     /// required.
     /// </summary>
     public sealed class SessionPoolManager
-    {        
+    {
         // TODO: Should these be configurable?
         private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
             .WithKeepAliveTime(TimeSpan.FromMinutes(1))
@@ -170,19 +170,6 @@ namespace Google.Cloud.Spanner.Data
             return targetedPool?.SessionPoolOrNull?.GetSegmentStatisticsSnapshot(key);
         }
 
-        // Note: this pragma shouldn't be required, but appears to be a compiler bug when using an interpolated string literal
-        // in ObsoleteAttribute.
-#pragma warning disable CS0618 // Type or member is obsolete
-        [Obsolete($"We still need to call this method for implementing the obsolete SpannerConnection.{nameof(SpannerConnection.GetSessionPoolDatabaseStatistics)}()")]
-        internal SessionPool.DatabaseStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, DatabaseName databaseName)
-        {
-            GaxPreconditions.CheckNotNull(options, nameof(options));
-            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-            _targetedPools.TryGetValue(options, out var targetedPool);
-            return targetedPool?.SessionPoolOrNull?.GetStatisticsSnapshot(databaseName);
-        }
-#pragma warning restore CS0618 // Type or member is obsolete
-
         // TODO: We *may* want a method to get the session pool statistics for a specific database,
         // e.g. GetStatistics(SessionPoolOptions, DatabaseName) but we don't currently have a need for it.
         // It would only be for convenience.
@@ -213,7 +200,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             internal void IncrementConnectionCount() => Interlocked.Increment(ref _activeConnections);
-                
+
             internal void DecrementConnectionCount() => Interlocked.Decrement(ref _activeConnections);
 
             internal int ActiveConnections => Interlocked.CompareExchange(ref _activeConnections, 0, 0);
@@ -319,8 +306,8 @@ namespace Google.Cloud.Spanner.Data
             }
         };
 
-        /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
+        // Internal for testing.
+        internal static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
             var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
 
@@ -338,7 +325,9 @@ namespace Google.Cloud.Spanner.Data
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
-                Settings = spannerSettings
+                Settings = spannerSettings,
+                LeaderRoutingEnabled = clientCreationOptions.LeaderRoutingEnabled,
+                DirectedReadOptions = clientCreationOptions.DirectedReadOptions,
             }.Build();
         }
     }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -259,10 +259,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// <inheritdoc/>
         public bool Equals(LunName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LunName a, LunName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LunName a, LunName b) => !(a == b);
     }
 
@@ -285,6 +297,14 @@ namespace Google.Cloud.BareMetalSolution.V2
             get => string.IsNullOrEmpty(StorageVolume) ? null : VolumeName.Parse(StorageVolume, allowUnparsed: true);
             set => StorageVolume = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instances"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<InstanceName> InstancesAsInstanceNames
+        {
+            get => new gax::ResourceNameList<InstanceName>(Instances, s => string.IsNullOrEmpty(s) ? null : InstanceName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class GetLunRequest
@@ -306,6 +326,18 @@ namespace Google.Cloud.BareMetalSolution.V2
         {
             get => string.IsNullOrEmpty(Parent) ? null : VolumeName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EvictLunRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::LunName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::LunName LunName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::LunName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

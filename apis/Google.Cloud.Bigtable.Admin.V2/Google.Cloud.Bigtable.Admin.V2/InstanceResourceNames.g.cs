@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbav = Google.Cloud.Bigtable.Admin.V2;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using sys = System;
@@ -245,10 +245,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <inheritdoc/>
         public bool Equals(ClusterName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ClusterName a, ClusterName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ClusterName a, ClusterName b) => !(a == b);
     }
 
@@ -484,10 +496,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <inheritdoc/>
         public bool Equals(AppProfileName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AppProfileName a, AppProfileName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AppProfileName a, AppProfileName b) => !(a == b);
     }
 
@@ -741,10 +765,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <inheritdoc/>
         public bool Equals(HotTabletName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(HotTabletName a, HotTabletName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(HotTabletName a, HotTabletName b) => !(a == b);
     }
 
@@ -998,10 +1034,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <inheritdoc/>
         public bool Equals(CryptoKeyName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(CryptoKeyName a, CryptoKeyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(CryptoKeyName a, CryptoKeyName b) => !(a == b);
     }
 
@@ -1035,6 +1083,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
             set => Location = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class EncryptionConfig
+            {
+                /// <summary>
+                /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+                /// </summary>
+                public CryptoKeyName KmsKeyNameAsCryptoKeyName
+                {
+                    get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+                    set => KmsKeyName = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

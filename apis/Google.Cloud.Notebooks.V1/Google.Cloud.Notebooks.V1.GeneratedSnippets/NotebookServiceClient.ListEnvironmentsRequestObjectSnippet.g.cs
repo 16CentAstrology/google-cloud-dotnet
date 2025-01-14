@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Notebooks.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START notebooks_v1_generated_NotebookService_ListEnvironments_sync]
     using Google.Api.Gax;
@@ -36,11 +36,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         public void ListEnvironmentsRequestObject()
         {
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcnv::ListEnvironmentsRequest request = new gcnv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(request);
+            PagedEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcnv::Environment item in response)
@@ -50,7 +50,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

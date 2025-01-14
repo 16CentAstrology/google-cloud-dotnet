@@ -65,6 +65,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// configuration to send notifications for create/update events of findings,
   /// assets and etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -526,6 +527,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       /// The config for streaming-based notifications, which send each event as soon
       /// as it is detected.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StreamingConfig : pb::IMessage<StreamingConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -49,6 +49,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Represents a particular IAM binding, which captures a member's role addition,
   /// removal, or state.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamBinding : pb::IMessage<IamBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -130,8 +131,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int MemberFieldNumber = 3;
     private string member_ = "";
     /// <summary>
-    /// A single identity requesting access for a Cloud Platform resource,
-    /// e.g. "foo@google.com".
+    /// A single identity requesting access for a Cloud Platform resource, for
+    /// example, "foo@google.com".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

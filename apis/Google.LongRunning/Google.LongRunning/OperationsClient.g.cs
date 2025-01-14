@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.LongRunning
 {
@@ -182,14 +182,14 @@ namespace Google.LongRunning
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OperationsClient.Create(callInvoker, Settings, Logger);
+            return OperationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<OperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OperationsClient.Create(callInvoker, Settings, Logger);
+            return OperationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -201,12 +201,12 @@ namespace Google.LongRunning
     /// Manages long-running operations with an API service.
     /// 
     /// When an API method normally takes long time to complete, it can be designed
-    /// to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-    /// interface to receive the real response asynchronously by polling the
-    /// operation resource, or pass the operation resource to another API (such as
-    /// Google Cloud Pub/Sub API) to receive the response.  Any API service that
-    /// returns long-running operations should implement the `Operations` interface
-    /// so developers can have a consistent client experience.
+    /// to return [Operation][google.longrunning.Operation] to the client, and the
+    /// client can use this interface to receive the real response asynchronously by
+    /// polling the operation resource, or pass the operation resource to another API
+    /// (such as Pub/Sub API) to receive the response.  Any API service that returns
+    /// long-running operations should implement the `Operations` interface so
+    /// developers can have a consistent client experience.
     /// </remarks>
     public abstract partial class OperationsClient
     {
@@ -283,14 +283,6 @@ namespace Google.LongRunning
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -301,14 +293,6 @@ namespace Google.LongRunning
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -319,14 +303,6 @@ namespace Google.LongRunning
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="name">
         /// The name of the operation's parent resource.
@@ -344,26 +320,27 @@ namespace Google.LongRunning
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOperations(new ListOperationsRequest
+        public virtual gax::PagedEnumerable<ListOperationsResponse, Operation> ListOperations(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
             {
                 Name = name ?? "",
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="name">
         /// The name of the operation's parent resource.
@@ -381,14 +358,23 @@ namespace Google.LongRunning
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOperationsAsync(new ListOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
             {
                 Name = name ?? "",
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -549,8 +535,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,8 +554,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,8 +573,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -603,8 +592,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -623,8 +613,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -643,8 +634,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -711,12 +703,12 @@ namespace Google.LongRunning
     /// Manages long-running operations with an API service.
     /// 
     /// When an API method normally takes long time to complete, it can be designed
-    /// to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-    /// interface to receive the real response asynchronously by polling the
-    /// operation resource, or pass the operation resource to another API (such as
-    /// Google Cloud Pub/Sub API) to receive the response.  Any API service that
-    /// returns long-running operations should implement the `Operations` interface
-    /// so developers can have a consistent client experience.
+    /// to return [Operation][google.longrunning.Operation] to the client, and the
+    /// client can use this interface to receive the real response asynchronously by
+    /// polling the operation resource, or pass the operation resource to another API
+    /// (such as Pub/Sub API) to receive the response.  Any API service that returns
+    /// long-running operations should implement the `Operations` interface so
+    /// developers can have a consistent client experience.
     /// </remarks>
     public sealed partial class OperationsClientImpl : OperationsClient
     {
@@ -740,7 +732,11 @@ namespace Google.LongRunning
         {
             GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>("ListOperations", grpcClient.ListOperationsAsync, grpcClient.ListOperations, effectiveSettings.ListOperationsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListOperations);
             Modify_ListOperationsApiCall(ref _callListOperations);
@@ -789,14 +785,6 @@ namespace Google.LongRunning
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -810,14 +798,6 @@ namespace Google.LongRunning
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
         /// server doesn't support this method, it returns `UNIMPLEMENTED`.
-        /// 
-        /// NOTE: the `name` binding allows API services to override the binding
-        /// to use different resource name schemes, such as `users/*/operations`. To
-        /// override the binding, API services can add a binding such as
-        /// `"/v1/{name=users/*}/operations"` to their service configuration.
-        /// For backwards compatibility, the default name includes the operations
-        /// collection id, however overriding users must ensure the name binding
-        /// is the parent resource, without the operations collection id.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -895,8 +875,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -916,8 +897,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

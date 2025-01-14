@@ -91,39 +91,39 @@ namespace Google.Cloud.StorageTransfer.V1 {
             "eSIygtPkkwIsIicvdjEve25hbWU9dHJhbnNmZXJPcGVyYXRpb25zLyoqfTpy",
             "ZXN1bWU6ASoSvQEKDlJ1blRyYW5zZmVySm9iEjAuZ29vZ2xlLnN0b3JhZ2V0",
             "cmFuc2Zlci52MS5SdW5UcmFuc2ZlckpvYlJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIlqC0+STAiciIi92MS97am9iX25hbWU9dHJh",
-            "bnNmZXJKb2JzLyoqfTpydW46ASrKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRIRVHJhbnNmZXJPcGVyYXRpb24SiAEKEURlbGV0ZVRyYW5zZmVySm9iEjMu",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIlrKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRIRVHJhbnNmZXJPcGVyYXRpb26C0+STAiciIi92MS97am9iX25hbWU9dHJh",
+            "bnNmZXJKb2JzLyoqfTpydW46ASoSiAEKEURlbGV0ZVRyYW5zZmVySm9iEjMu",
             "Z29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5EZWxldGVUcmFuc2ZlckpvYlJl",
             "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJoLT5JMCICoeL3YxL3tq",
             "b2JfbmFtZT10cmFuc2ZlckpvYnMvKip9EswBCg9DcmVhdGVBZ2VudFBvb2wS",
             "MS5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkNyZWF0ZUFnZW50UG9vbFJl",
             "cXVlc3QaJC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbCJg",
-            "gtPkkwI0IiYvdjEvcHJvamVjdHMve3Byb2plY3RfaWQ9Kn0vYWdlbnRQb29s",
-            "czoKYWdlbnRfcG9vbNpBI3Byb2plY3RfaWQsYWdlbnRfcG9vbCxhZ2VudF9w",
-            "b29sX2lkEsYBCg9VcGRhdGVBZ2VudFBvb2wSMS5nb29nbGUuc3RvcmFnZXRy",
+            "2kEjcHJvamVjdF9pZCxhZ2VudF9wb29sLGFnZW50X3Bvb2xfaWSC0+STAjQi",
+            "Ji92MS9wcm9qZWN0cy97cHJvamVjdF9pZD0qfS9hZ2VudFBvb2xzOgphZ2Vu",
+            "dF9wb29sEsYBCg9VcGRhdGVBZ2VudFBvb2wSMS5nb29nbGUuc3RvcmFnZXRy",
             "YW5zZmVyLnYxLlVwZGF0ZUFnZW50UG9vbFJlcXVlc3QaJC5nb29nbGUuc3Rv",
-            "cmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbCJagtPkkwI7Mi0vdjEve2FnZW50",
-            "X3Bvb2wubmFtZT1wcm9qZWN0cy8qL2FnZW50UG9vbHMvKn06CmFnZW50X3Bv",
-            "b2zaQRZhZ2VudF9wb29sLHVwZGF0ZV9tYXNrEpcBCgxHZXRBZ2VudFBvb2wS",
+            "cmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbCJa2kEWYWdlbnRfcG9vbCx1cGRh",
+            "dGVfbWFza4LT5JMCOzItL3YxL3thZ2VudF9wb29sLm5hbWU9cHJvamVjdHMv",
+            "Ki9hZ2VudFBvb2xzLyp9OgphZ2VudF9wb29sEpcBCgxHZXRBZ2VudFBvb2wS",
             "Li5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkdldEFnZW50UG9vbFJlcXVl",
-            "c3QaJC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbCIxgtPk",
-            "kwIkEiIvdjEve25hbWU9cHJvamVjdHMvKi9hZ2VudFBvb2xzLyp92kEEbmFt",
-            "ZRKyAQoOTGlzdEFnZW50UG9vbHMSMC5nb29nbGUuc3RvcmFnZXRyYW5zZmVy",
+            "c3QaJC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkFnZW50UG9vbCIx2kEE",
+            "bmFtZYLT5JMCJBIiL3YxL3tuYW1lPXByb2plY3RzLyovYWdlbnRQb29scy8q",
+            "fRKyAQoOTGlzdEFnZW50UG9vbHMSMC5nb29nbGUuc3RvcmFnZXRyYW5zZmVy",
             "LnYxLkxpc3RBZ2VudFBvb2xzUmVxdWVzdBoxLmdvb2dsZS5zdG9yYWdldHJh",
-            "bnNmZXIudjEuTGlzdEFnZW50UG9vbHNSZXNwb25zZSI7gtPkkwIoEiYvdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWQ9Kn0vYWdlbnRQb29sc9pBCnByb2plY3Rf",
-            "aWQSjwEKD0RlbGV0ZUFnZW50UG9vbBIxLmdvb2dsZS5zdG9yYWdldHJhbnNm",
+            "bnNmZXIudjEuTGlzdEFnZW50UG9vbHNSZXNwb25zZSI72kEKcHJvamVjdF9p",
+            "ZILT5JMCKBImL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkPSp9L2FnZW50UG9v",
+            "bHMSjwEKD0RlbGV0ZUFnZW50UG9vbBIxLmdvb2dsZS5zdG9yYWdldHJhbnNm",
             "ZXIudjEuRGVsZXRlQWdlbnRQb29sUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIxgtPkkwIkKiIvdjEve25hbWU9cHJvamVjdHMvKi9hZ2VudFBv",
-            "b2xzLyp92kEEbmFtZRpSykEec3RvcmFnZXRyYW5zZmVyLmdvb2dsZWFwaXMu",
+            "Zi5FbXB0eSIx2kEEbmFtZYLT5JMCJCoiL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "YWdlbnRQb29scy8qfRpSykEec3RvcmFnZXRyYW5zZmVyLmdvb2dsZWFwaXMu",
             "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybULvAQojY29tLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEucHJv",
+            "bGF0Zm9ybULsAQojY29tLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEucHJv",
             "dG9CDVRyYW5zZmVyUHJvdG9aTWNsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFn",
             "ZXRyYW5zZmVyL2FwaXYxL3N0b3JhZ2V0cmFuc2ZlcnBiO3N0b3JhZ2V0cmFu",
-            "c2ZlcnBi+AEBqgIfR29vZ2xlLkNsb3VkLlN0b3JhZ2VUcmFuc2Zlci5WMcoC",
-            "H0dvb2dsZVxDbG91ZFxTdG9yYWdlVHJhbnNmZXJcVjHqAiJHb29nbGU6OkNs",
-            "b3VkOjpTdG9yYWdlVHJhbnNmZXI6OlYxYgZwcm90bzM="));
+            "c2ZlcnBiqgIfR29vZ2xlLkNsb3VkLlN0b3JhZ2VUcmFuc2Zlci5WMcoCH0dv",
+            "b2dsZVxDbG91ZFxTdG9yYWdlVHJhbnNmZXJcVjHqAiJHb29nbGU6OkNsb3Vk",
+            "OjpTdG9yYWdlVHJhbnNmZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -152,6 +152,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to GetGoogleServiceAccount.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetGoogleServiceAccountRequest : pb::IMessage<GetGoogleServiceAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -348,6 +349,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to CreateTransferJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransferJobRequest : pb::IMessage<CreateTransferJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -552,6 +554,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to UpdateTransferJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTransferJobRequest : pb::IMessage<UpdateTransferJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -634,15 +637,17 @@ namespace Google.Cloud.StorageTransfer.V1 {
     public const int TransferJobFieldNumber = 3;
     private global::Google.Cloud.StorageTransfer.V1.TransferJob transferJob_;
     /// <summary>
-    /// Required. The job to update. `transferJob` is expected to specify one or more of
-    /// five fields: [description][google.storagetransfer.v1.TransferJob.description],
+    /// Required. The job to update. `transferJob` is expected to specify one or
+    /// more of five fields:
+    /// [description][google.storagetransfer.v1.TransferJob.description],
     /// [transfer_spec][google.storagetransfer.v1.TransferJob.transfer_spec],
     /// [notification_config][google.storagetransfer.v1.TransferJob.notification_config],
     /// [logging_config][google.storagetransfer.v1.TransferJob.logging_config], and
-    /// [status][google.storagetransfer.v1.TransferJob.status].  An `UpdateTransferJobRequest` that specifies
-    /// other fields are rejected with the error
-    /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. Updating a job status
-    /// to [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED] requires
+    /// [status][google.storagetransfer.v1.TransferJob.status].  An
+    /// `UpdateTransferJobRequest` that specifies other fields are rejected with
+    /// the error [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. Updating a
+    /// job status to
+    /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED] requires
     /// `storagetransfer.jobs.delete` permission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -664,9 +669,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [transfer_spec][google.storagetransfer.v1.TransferJob.transfer_spec],
     /// [notification_config][google.storagetransfer.v1.TransferJob.notification_config],
     /// [logging_config][google.storagetransfer.v1.TransferJob.logging_config], and
-    /// [status][google.storagetransfer.v1.TransferJob.status].  To update the `transfer_spec` of the job, a
-    /// complete transfer specification must be provided. An incomplete
-    /// specification missing any required fields is rejected with the error
+    /// [status][google.storagetransfer.v1.TransferJob.status].  To update the
+    /// `transfer_spec` of the job, a complete transfer specification must be
+    /// provided. An incomplete specification missing any required fields is
+    /// rejected with the error
     /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -904,6 +910,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to GetTransferJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransferJobRequest : pb::IMessage<GetTransferJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1140,6 +1147,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to DeleteTransferJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTransferJobRequest : pb::IMessage<DeleteTransferJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1377,6 +1385,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// `projectId`, `jobNames`, and `jobStatuses` are query parameters that can
   /// be specified when listing transfer jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTransferJobsRequest : pb::IMessage<ListTransferJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1428,17 +1437,32 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private string filter_ = "";
     /// <summary>
     /// Required. A list of query parameters specified as JSON text in the form of:
-    /// `{"projectId":"my_project_id",
-    ///  "jobNames":["jobid1","jobid2",...],
-    ///  "jobStatuses":["status1","status2",...]}`
     ///
-    /// Since `jobNames` and `jobStatuses` support multiple values, their values
-    /// must be specified with array notation. `projectId` is required.
-    /// `jobNames` and `jobStatuses` are optional.  The valid values for
-    /// `jobStatuses` are case-insensitive:
-    /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED],
-    /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], and
-    /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+    /// ```
+    /// {
+    ///   "projectId":"my_project_id",
+    ///   "jobNames":["jobid1","jobid2",...],
+    ///   "jobStatuses":["status1","status2",...],
+    ///   "dataBackend":"QUERY_REPLICATION_CONFIGS",
+    ///   "sourceBucket":"source-bucket-name",
+    ///   "sinkBucket":"sink-bucket-name",
+    /// }
+    /// ```
+    ///
+    /// The JSON formatting in the example is for display only; provide the
+    /// query parameters without spaces or line breaks.
+    ///
+    /// * `projectId` is required.
+    /// * Since `jobNames` and `jobStatuses` support multiple values, their values
+    ///   must be specified with array notation. `jobNames` and `jobStatuses` are
+    ///   optional. Valid values are case-insensitive:
+    ///     * [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]
+    ///     * [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED]
+    ///     * [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED]
+    /// * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of
+    ///   cross-bucket replication jobs.
+    /// * Limit the results to jobs from a particular bucket with `sourceBucket`
+    ///   and/or to a particular bucket with `sinkBucket`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1663,6 +1687,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Response from ListTransferJobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTransferJobsResponse : pb::IMessage<ListTransferJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1887,6 +1912,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to PauseTransferOperation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PauseTransferOperationRequest : pb::IMessage<PauseTransferOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2082,6 +2108,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to ResumeTransferOperation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResumeTransferOperationRequest : pb::IMessage<ResumeTransferOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2277,6 +2304,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Request passed to RunTransferJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunTransferJobRequest : pb::IMessage<RunTransferJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2513,6 +2541,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Specifies the request passed to CreateAgentPool.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAgentPoolRequest : pb::IMessage<CreateAgentPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2810,6 +2839,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Specifies the request passed to UpdateAgentPool.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAgentPoolRequest : pb::IMessage<UpdateAgentPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2859,8 +2889,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
     public const int AgentPoolFieldNumber = 1;
     private global::Google.Cloud.StorageTransfer.V1.AgentPool agentPool_;
     /// <summary>
-    /// Required. The agent pool to update. `agent_pool` is expected to specify following
-    /// fields:
+    /// Required. The agent pool to update. `agent_pool` is expected to specify
+    /// following fields:
     ///
     /// *  [name][google.storagetransfer.v1.AgentPool.name]
     ///
@@ -3079,6 +3109,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Specifies the request passed to GetAgentPool.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAgentPoolRequest : pb::IMessage<GetAgentPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3274,6 +3305,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Specifies the request passed to DeleteAgentPool.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAgentPoolRequest : pb::IMessage<DeleteAgentPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3469,6 +3501,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// The request passed to ListAgentPools.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAgentPoolsRequest : pb::IMessage<ListAgentPoolsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3791,6 +3824,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   /// <summary>
   /// Response from ListAgentPools.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAgentPoolsResponse : pb::IMessage<ListAgentPoolsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -78,6 +78,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// EvaluatedAnnotation is only available under ModelEvaluationSlice with slice
   /// of `annotationSpec` dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluatedAnnotation : pb::IMessage<EvaluatedAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -157,7 +158,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     /// For false positive, there is one and only one prediction, which doesn't
     /// match any ground truth annotation of the corresponding
-    /// [data_item_view_id][EvaluatedAnnotation.data_item_view_id].
+    /// [data_item_view_id][google.cloud.aiplatform.v1.EvaluatedAnnotation.evaluated_data_item_view_id].
     ///
     /// For false negative, there are zero or more predictions which are similar to
     /// the only ground truth annotation in
@@ -227,10 +228,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// ModelEvaluation. The EvaluatedDataItemView consists of all ground truths
     /// and predictions on
     /// [data_item_payload][google.cloud.aiplatform.v1.EvaluatedAnnotation.data_item_payload].
-    ///
-    /// Can be passed in
-    /// [GetEvaluatedDataItemView's][ModelService.GetEvaluatedDataItemView][]
-    /// [id][GetEvaluatedDataItemViewRequest.id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -561,6 +558,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Explanation result of the prediction produced by the Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluatedAnnotationExplanation : pb::IMessage<EvaluatedAnnotationExplanation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -810,6 +808,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Model error analysis for each annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorAnalysisAnnotation : pb::IMessage<ErrorAnalysisAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1142,6 +1141,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Attributed items for a given annotation, typically representing neighbors
       /// from the training sets constrained by the query type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AttributedItem : pb::IMessage<AttributedItem>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

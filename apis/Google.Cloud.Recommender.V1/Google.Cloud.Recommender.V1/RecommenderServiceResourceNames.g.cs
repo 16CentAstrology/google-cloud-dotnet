@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,6 +68,18 @@ namespace Google.Cloud.Recommender.V1
     }
 
     public partial class GetRecommendationRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::RecommendationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::RecommendationName RecommendationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MarkRecommendationDismissedRequest
     {
         /// <summary>
         /// <see cref="gcrv::RecommendationName"/>-typed view over the <see cref="Name"/> resource name property.

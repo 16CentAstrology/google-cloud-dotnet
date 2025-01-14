@@ -25,19 +25,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZGF0YWJhc2UucHJv",
-            "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MSJiCghEYXRhYmFz",
+            "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MSJzCghEYXRhYmFz",
             "ZRIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIRCgl1c2Vy",
-            "X25hbWUYAyABKAkSDQoFcXVlcnkYBCABKAkSEAoIZ3JhbnRlZXMYBSADKAlC",
-            "5wEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCDURhdGFi",
-            "YXNlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRl",
-            "ci9hcGl2MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5H",
-            "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRc",
-            "U2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNl",
-            "bnRlcjo6VjFiBnByb3RvMw=="));
+            "X25hbWUYAyABKAkSDQoFcXVlcnkYBCABKAkSEAoIZ3JhbnRlZXMYBSADKAkS",
+            "DwoHdmVyc2lvbhgGIAEoCULnAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MUINRGF0YWJhc2VQcm90b1ABWkpjbG91ZC5nb29nbGUuY29t",
+            "L2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7c2Vj",
+            "dXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
+            "McoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6",
+            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Database), global::Google.Cloud.SecurityCenter.V1.Database.Parser, new[]{ "Name", "DisplayName", "UserName", "Query", "Grantees" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Database), global::Google.Cloud.SecurityCenter.V1.Database.Parser, new[]{ "Name", "DisplayName", "UserName", "Query", "Grantees", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -45,14 +45,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Represents database access information, such as queries.
-  /// A database may be a sub-resource of an instance (as in the case of CloudSQL
-  /// instances or Cloud Spanner instances), or the database instance itself.
-  /// Some database resources may not have the full resource name populated
-  /// because these resource types are not yet supported by Cloud Asset Inventory
-  /// (e.g. CloudSQL databases).  In these cases only the display name will be
-  /// provided.
+  /// Represents database access information, such as queries. A database may be a
+  /// sub-resource of an instance (as in the case of Cloud SQL instances or Cloud
+  /// Spanner instances), or the database instance itself. Some database resources
+  /// might not have the [full resource
+  /// name](https://google.aip.dev/122#full-resource-names) populated because these
+  /// resource types, such as Cloud SQL databases, are not yet supported by Cloud
+  /// Asset Inventory. In these cases only the display name is provided.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Database : pb::IMessage<Database>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -92,6 +93,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       userName_ = other.userName_;
       query_ = other.query_;
       grantees_ = other.grantees_.Clone();
+      version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -105,8 +107,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The full resource name of the database the user connected to, if it is
-    /// supported by CAI. (https://google.aip.dev/122#full-resource-names)
+    /// Some database resources may not have the [full resource
+    /// name](https://google.aip.dev/122#full-resource-names) populated because
+    /// these resource types are not yet supported by Cloud Asset Inventory (e.g.
+    /// Cloud SQL databases). In these cases only the display name will be
+    /// provided.
+    /// The [full resource name](https://google.aip.dev/122#full-resource-names) of
+    /// the database that the user connected to, if it is supported by Cloud Asset
+    /// Inventory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,7 +129,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The human readable name of the database the user connected to.
+    /// The human-readable name of the database that the user connected to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +144,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UserNameFieldNumber = 3;
     private string userName_ = "";
     /// <summary>
-    /// The username used to connect to the DB. This may not necessarily be an IAM
-    /// principal, and has no required format.
+    /// The username used to connect to the database. The username might not be an
+    /// IAM principal and does not have a set format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +160,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int QueryFieldNumber = 4;
     private string query_ = "";
     /// <summary>
-    /// The SQL statement associated with the relevant access.
+    /// The SQL statement that is associated with the database access.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,13 +177,30 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> grantees_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The target usernames/roles/groups of a SQL privilege grant (not an IAM
-    /// policy change).
+    /// The target usernames, roles, or groups of an SQL privilege grant, which is
+    /// not an IAM policy change.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Grantees {
       get { return grantees_; }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 6;
+    private string version_ = "";
+    /// <summary>
+    /// The version of the database, for example, POSTGRES_14.
+    /// See [the complete
+    /// list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -198,6 +223,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (UserName != other.UserName) return false;
       if (Query != other.Query) return false;
       if(!grantees_.Equals(other.grantees_)) return false;
+      if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -210,6 +236,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (UserName.Length != 0) hash ^= UserName.GetHashCode();
       if (Query.Length != 0) hash ^= Query.GetHashCode();
       hash ^= grantees_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -245,6 +272,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(Query);
       }
       grantees_.WriteTo(output, _repeated_grantees_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -272,6 +303,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(Query);
       }
       grantees_.WriteTo(ref output, _repeated_grantees_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -295,6 +330,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
       }
       size += grantees_.CalculateSize(_repeated_grantees_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -320,6 +358,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         Query = other.Query;
       }
       grantees_.Add(other.grantees_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -355,6 +396,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             grantees_.AddEntriesFrom(input, _repeated_grantees_codec);
             break;
           }
+          case 50: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -388,6 +433,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 42: {
             grantees_.AddEntriesFrom(ref input, _repeated_grantees_codec);
+            break;
+          }
+          case 50: {
+            Version = input.ReadString();
             break;
           }
         }

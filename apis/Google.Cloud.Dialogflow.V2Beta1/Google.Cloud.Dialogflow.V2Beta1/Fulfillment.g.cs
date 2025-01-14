@@ -55,17 +55,17 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "Zi5GaWVsZE1hc2tCA+BBAjK5BQoMRnVsZmlsbG1lbnRzEu8BCg5HZXRGdWxm",
             "aWxsbWVudBI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuR2V0",
             "RnVsZmlsbG1lbnRSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djJiZXRhMS5GdWxmaWxsbWVudCJ3gtPkkwJqEiwvdjJiZXRhMS97bmFtZT1w",
-            "cm9qZWN0cy8qL2FnZW50L2Z1bGZpbGxtZW50fVo6EjgvdjJiZXRhMS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2Z1bGZpbGxtZW50fdpB",
-            "BG5hbWUSvAIKEVVwZGF0ZUZ1bGZpbGxtZW50EjkuZ29vZ2xlLmNsb3VkLmRp",
+            "djJiZXRhMS5GdWxmaWxsbWVudCJ32kEEbmFtZYLT5JMCahIsL3YyYmV0YTEv",
+            "e25hbWU9cHJvamVjdHMvKi9hZ2VudC9mdWxmaWxsbWVudH1aOhI4L3YyYmV0",
+            "YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9mdWxmaWxs",
+            "bWVudH0SvAIKEVVwZGF0ZUZ1bGZpbGxtZW50EjkuZ29vZ2xlLmNsb3VkLmRp",
             "YWxvZ2Zsb3cudjJiZXRhMS5VcGRhdGVGdWxmaWxsbWVudFJlcXVlc3QaLC5n",
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkZ1bGZpbGxtZW50Ir0B",
-            "gtPkkwKcATI4L3YyYmV0YTEve2Z1bGZpbGxtZW50Lm5hbWU9cHJvamVjdHMv",
-            "Ki9hZ2VudC9mdWxmaWxsbWVudH06C2Z1bGZpbGxtZW50WlMyRC92MmJldGEx",
-            "L3tmdWxmaWxsbWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
-            "bnQvZnVsZmlsbG1lbnR9OgtmdWxmaWxsbWVudNpBF2Z1bGZpbGxtZW50LHVw",
-            "ZGF0ZV9tYXNrGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0",
+            "2kEXZnVsZmlsbG1lbnQsdXBkYXRlX21hc2uC0+STApwBMjgvdjJiZXRhMS97",
+            "ZnVsZmlsbG1lbnQubmFtZT1wcm9qZWN0cy8qL2FnZW50L2Z1bGZpbGxtZW50",
+            "fToLZnVsZmlsbG1lbnRaUzJEL3YyYmV0YTEve2Z1bGZpbGxtZW50Lm5hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9mdWxmaWxsbWVudH06C2Z1",
+            "bGZpbGxtZW50GnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxo",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCqAEK",
             "I2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQhBGdWxmaWxs",
@@ -97,6 +97,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// For more information, see the [fulfillment
   /// guide](https://cloud.google.com/dialogflow/docs/fulfillment-overview).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Fulfillment : pb::IMessage<Fulfillment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -502,6 +503,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// More information could be found at:
       /// https://cloud.google.com/dialogflow/docs/fulfillment-configure.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GenericWebService : pb::IMessage<GenericWebService>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -768,7 +770,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           if (other.Password.Length != 0) {
             Password = other.Password;
           }
-          requestHeaders_.Add(other.requestHeaders_);
+          requestHeaders_.MergeFrom(other.requestHeaders_);
           if (other.IsCloudFunction != false) {
             IsCloudFunction = other.IsCloudFunction;
           }
@@ -852,6 +854,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// <summary>
       /// Whether fulfillment is enabled for the specific feature.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Feature : pb::IMessage<Feature>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1075,6 +1078,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Fulfillments.GetFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.GetFulfillment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFulfillmentRequest : pb::IMessage<GetFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1275,6 +1279,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Fulfillments.UpdateFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.UpdateFulfillment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFulfillmentRequest : pb::IMessage<UpdateFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

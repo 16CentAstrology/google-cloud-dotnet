@@ -54,23 +54,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "ZGF0aW9uZW5naW5lLnYxYmV0YTEuQ3JlYXRlUHJlZGljdGlvbkFwaUtleVJl",
             "Z2lzdHJhdGlvblJlcXVlc3QaRy5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRp",
             "b25lbmdpbmUudjFiZXRhMS5QcmVkaWN0aW9uQXBpS2V5UmVnaXN0cmF0aW9u",
-            "IpMBgtPkkwJkIl8vdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovY2F0YWxvZ3MvKi9ldmVudFN0b3Jlcy8qfS9wcmVkaWN0aW9uQXBp",
-            "S2V5UmVnaXN0cmF0aW9uczoBKtpBJnBhcmVudCxwcmVkaWN0aW9uX2FwaV9r",
-            "ZXlfcmVnaXN0cmF0aW9uEsACCiFMaXN0UHJlZGljdGlvbkFwaUtleVJlZ2lz",
+            "IpMB2kEmcGFyZW50LHByZWRpY3Rpb25fYXBpX2tleV9yZWdpc3RyYXRpb26C",
+            "0+STAmQiXy92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyp9L3ByZWRpY3Rpb25BcGlLZXlS",
+            "ZWdpc3RyYXRpb25zOgEqEsACCiFMaXN0UHJlZGljdGlvbkFwaUtleVJlZ2lz",
             "dHJhdGlvbnMSUy5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
             "djFiZXRhMS5MaXN0UHJlZGljdGlvbkFwaUtleVJlZ2lzdHJhdGlvbnNSZXF1",
             "ZXN0GlQuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0",
             "YTEuTGlzdFByZWRpY3Rpb25BcGlLZXlSZWdpc3RyYXRpb25zUmVzcG9uc2Ui",
-            "cILT5JMCYRJfL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NhdGFsb2dzLyovZXZlbnRTdG9yZXMvKn0vcHJlZGljdGlvbkFwaUtl",
-            "eVJlZ2lzdHJhdGlvbnPaQQZwYXJlbnQSggIKIkRlbGV0ZVByZWRpY3Rpb25B",
+            "cNpBBnBhcmVudILT5JMCYRJfL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovZXZlbnRTdG9yZXMvKn0vcHJlZGlj",
+            "dGlvbkFwaUtleVJlZ2lzdHJhdGlvbnMSggIKIkRlbGV0ZVByZWRpY3Rpb25B",
             "cGlLZXlSZWdpc3RyYXRpb24SVC5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRp",
             "b25lbmdpbmUudjFiZXRhMS5EZWxldGVQcmVkaWN0aW9uQXBpS2V5UmVnaXN0",
-            "cmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJugtPkkwJh",
-            "Kl8vdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFs",
-            "b2dzLyovZXZlbnRTdG9yZXMvKi9wcmVkaWN0aW9uQXBpS2V5UmVnaXN0cmF0",
-            "aW9ucy8qfdpBBG5hbWUaV8pBI3JlY29tbWVuZGF0aW9uZW5naW5lLmdvb2ds",
+            "cmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJu2kEEbmFt",
+            "ZYLT5JMCYSpfL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyovcHJlZGljdGlvbkFwaUtleVJl",
+            "Z2lzdHJhdGlvbnMvKn0aV8pBI3JlY29tbWVuZGF0aW9uZW5naW5lLmdvb2ds",
             "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
             "bG91ZC1wbGF0Zm9ybUKjAgotY29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRh",
             "dGlvbmVuZ2luZS52MWJldGExUAFaYWNsb3VkLmdvb2dsZS5jb20vZ28vcmVj",
@@ -96,6 +96,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Registered Api Key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictionApiKeyRegistration : pb::IMessage<PredictionApiKeyRegistration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -291,6 +292,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for the `CreatePredictionApiKeyRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePredictionApiKeyRegistrationRequest : pb::IMessage<CreatePredictionApiKeyRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -536,6 +538,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for the `ListPredictionApiKeyRegistrations`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPredictionApiKeyRegistrationsRequest : pb::IMessage<ListPredictionApiKeyRegistrationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -813,6 +816,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Response message for the `ListPredictionApiKeyRegistrations`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPredictionApiKeyRegistrationsResponse : pb::IMessage<ListPredictionApiKeyRegistrationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1038,6 +1042,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for `DeletePredictionApiKeyRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePredictionApiKeyRegistrationRequest : pb::IMessage<DeletePredictionApiKeyRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

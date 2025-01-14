@@ -149,9 +149,9 @@ namespace Google.Cloud.LifeSciences.V2Beta {
             "IAEoDjIQLmdvb2dsZS5ycGMuQ29kZRINCgVjYXVzZRgCIAEoCTKyAgoWV29y",
             "a2Zsb3dzU2VydmljZVYyQmV0YRLGAQoLUnVuUGlwZWxpbmUSNC5nb29nbGUu",
             "Y2xvdWQubGlmZXNjaWVuY2VzLnYyYmV0YS5SdW5QaXBlbGluZVJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImKC0+STAjoiNS92MmJl",
-            "dGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9waXBlbGluZXM6",
-            "cnVuOgEqykEfChNSdW5QaXBlbGluZVJlc3BvbnNlEghNZXRhZGF0YRpPykEb",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImLKQR8KE1J1blBpcGVs",
+            "aW5lUmVzcG9uc2USCE1ldGFkYXRhgtPkkwI6IjUvdjJiZXRhL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcGlwZWxpbmVzOnJ1bjoBKhpPykEb",
             "bGlmZXNjaWVuY2VzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
             "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL1AQokY29tLmdvb2ds",
             "ZS5jbG91ZC5saWZlc2NpZW5jZXMudjJiZXRhQg5Xb3JrZmxvd3NQcm90b1AB",
@@ -202,6 +202,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// the `iam.serviceAccounts.actAs` permission for the Cloud Life Sciences
   /// service account or the request will fail.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunPipelineRequest : pb::IMessage<RunPipelineRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -441,7 +442,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Pipeline.MergeFrom(other.Pipeline);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.PubSubTopic.Length != 0) {
         PubSubTopic = other.PubSubTopic;
       }
@@ -524,6 +525,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// The response to the RunPipeline method, returned in the operation's result
   /// field on success.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunPipelineResponse : pb::IMessage<RunPipelineResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,6 +681,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Specifies a series of actions to execute, expressed as Docker containers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Pipeline : pb::IMessage<Pipeline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -941,7 +944,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Resources.MergeFrom(other.Resources);
       }
-      environment_.Add(other.environment_);
+      environment_.MergeFrom(other.environment_);
       if (other.encryptedEnvironment_ != null) {
         if (encryptedEnvironment_ == null) {
           EncryptedEnvironment = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -1052,6 +1055,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Specifies a single action that runs a Docker container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Action : pb::IMessage<Action>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1813,7 +1817,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.Entrypoint.Length != 0) {
         Entrypoint = other.Entrypoint;
       }
-      environment_.Add(other.environment_);
+      environment_.MergeFrom(other.environment_);
       if (other.encryptedEnvironment_ != null) {
         if (encryptedEnvironment_ == null) {
           EncryptedEnvironment = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -1823,9 +1827,9 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.PidNamespace.Length != 0) {
         PidNamespace = other.PidNamespace;
       }
-      portMappings_.Add(other.portMappings_);
+      portMappings_.MergeFrom(other.portMappings_);
       mounts_.Add(other.mounts_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.credentials_ != null) {
         if (credentials_ == null) {
           Credentials = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -2081,6 +2085,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// Holds encrypted information that is only decrypted and stored in RAM
   /// by the worker VM when running the pipeline.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Secret : pb::IMessage<Secret>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2319,6 +2324,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Carries information about a particular disk mount inside a container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mount : pb::IMessage<Mount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2596,6 +2602,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   ///
   /// At least one zone or region must be specified or the pipeline run will fail.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Resources : pb::IMessage<Resources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2860,6 +2867,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Carries information about a Compute Engine VM resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VirtualMachine : pb::IMessage<VirtualMachine>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3425,7 +3433,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.Preemptible != false) {
         Preemptible = other.Preemptible;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       disks_.Add(other.disks_);
       if (other.network_ != null) {
         if (network_ == null) {
@@ -3632,6 +3640,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Carries information about a Google Cloud service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccount : pb::IMessage<ServiceAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3858,6 +3867,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Carries information about an accelerator that can be attached to a VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Accelerator : pb::IMessage<Accelerator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3907,7 +3917,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     public const int TypeFieldNumber = 1;
     private string type_ = "";
     /// <summary>
-    /// The accelerator type string (for example, "nvidia-tesla-k80").
+    /// The accelerator type string (for example, "nvidia-tesla-t4").
     ///
     /// Only NVIDIA GPU accelerators are currently supported. If an NVIDIA GPU is
     /// attached, the required runtime libraries will be made available to all
@@ -4100,6 +4110,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// VM networking options.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Network : pb::IMessage<Network>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4398,6 +4409,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// Specify either [`Volume`][google.cloud.lifesciences.v2beta.Volume] or
   /// [`Disk`][google.cloud.lifesciences.v2beta.Disk], but not both.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Disk : pb::IMessage<Disk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4724,6 +4736,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// Specify either [`Volume`][google.cloud.lifesciences.v2beta.Volume] or
   /// [`Disk`][google.cloud.lifesciences.v2beta.Disk], but not both.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5120,6 +5133,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// See https://cloud.google.com/compute/docs/disks/performance for more
   /// information about disk type, size, and performance considerations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersistentDisk : pb::IMessage<PersistentDisk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5401,6 +5415,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Configuration for an existing disk to be attached to the VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExistingDisk : pb::IMessage<ExistingDisk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5605,6 +5620,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Configuration for an `NFSMount` to be attached to the VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NFSMount : pb::IMessage<NFSMount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5801,6 +5817,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// Carries information about the pipeline execution that is returned
   /// in the long running operation's metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Metadata : pb::IMessage<Metadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6109,7 +6126,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Pipeline.MergeFrom(other.Pipeline);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       events_.Add(other.events_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -6252,6 +6269,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// Carries information about events that occur during pipeline execution.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Event : pb::IMessage<Event>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7096,6 +7114,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// An event generated whenever a resource limitation or transient error
   /// delays execution of a pipeline that was otherwise ready to run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DelayedEvent : pb::IMessage<DelayedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7326,6 +7345,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// An event generated after a worker VM has been assigned to run the
   /// pipeline.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WorkerAssignedEvent : pb::IMessage<WorkerAssignedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7602,6 +7622,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// An event generated when the worker VM that was assigned to the pipeline
   /// has been released (deleted).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WorkerReleasedEvent : pb::IMessage<WorkerReleasedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7837,6 +7858,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// An event generated when the worker starts pulling an image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PullStartedEvent : pb::IMessage<PullStartedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8032,6 +8054,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// An event generated when the worker stops pulling an image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PullStoppedEvent : pb::IMessage<PullStoppedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8227,6 +8250,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// An event generated when a container starts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerStartedEvent : pb::IMessage<ContainerStartedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8428,7 +8452,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.ActionId != 0) {
         ActionId = other.ActionId;
       }
-      portMappings_.Add(other.portMappings_);
+      portMappings_.MergeFrom(other.portMappings_);
       if (other.IpAddress.Length != 0) {
         IpAddress = other.IpAddress;
       }
@@ -8496,6 +8520,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// <summary>
   /// An event generated when a container exits.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerStoppedEvent : pb::IMessage<ContainerStoppedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8781,6 +8806,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// continue, but only actions that are flagged as `ALWAYS_RUN` will be
   /// executed. Other actions will be skipped.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UnexpectedExitStatusEvent : pb::IMessage<UnexpectedExitStatusEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9018,6 +9044,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// worker. Currently, this only occurs when the container outlives the
   /// timeout specified by the user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerKilledEvent : pb::IMessage<ContainerKilledEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9214,6 +9241,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
   /// An event generated when the execution of a pipeline has failed. Note
   /// that other events can continue to occur after this event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FailedEvent : pb::IMessage<FailedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

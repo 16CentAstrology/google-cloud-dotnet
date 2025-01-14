@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Asset.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Asset.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1289,8 +1290,8 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             AnalyzeMoveRequest request = new AnalyzeMoveRequest
             {
-                Resource = "",
-                DestinationParent = "",
+                ResourceAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DestinationParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
             };
             // Make the request
@@ -1308,8 +1309,8 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             AnalyzeMoveRequest request = new AnalyzeMoveRequest
             {
-                Resource = "",
-                DestinationParent = "",
+                ResourceAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DestinationParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
             };
             // Make the request

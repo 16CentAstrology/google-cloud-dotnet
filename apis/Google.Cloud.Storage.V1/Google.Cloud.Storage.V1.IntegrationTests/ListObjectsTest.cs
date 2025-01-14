@@ -1,11 +1,11 @@
 // Copyright 2015 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -72,13 +72,24 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             await AssertObjects(prefix, options, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
         }
 
+        [Theory]
+        [InlineData("la*", "large.txt")]
+        [InlineData("a/*.txt", "a/o1.txt", "a/o2.txt")]
+        [InlineData("a/x/*.txt", "a/x/o3.txt", "a/x/o4.txt")]
+        public void MatchGlob(string globPattern, params string[] expectedNames)
+        {
+            var options = new ListObjectsOptions { MatchGlob = globPattern };
+            IEnumerable<Object> actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix: null, options);
+            AssertObjectNames(actual, expectedNames);
+        }
+
         [Fact]
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
             var task = _fixture.Client.ListObjectsAsync(_fixture.ReadBucket, null).ToListAsync(cts.Token);
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);            
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(task.AsTask);
         }
 
         [Fact]

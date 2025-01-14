@@ -59,38 +59,38 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "b2tlbhgCIAEoCTLYDAoQVXNlckV2ZW50U2VydmljZRKEAgoOV3JpdGVVc2Vy",
             "RXZlbnQSQC5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFi",
             "ZXRhMS5Xcml0ZVVzZXJFdmVudFJlcXVlc3QaNC5nb29nbGUuY2xvdWQucmVj",
-            "b21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Vc2VyRXZlbnQieoLT5JMCYCJS",
-            "L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFs",
-            "b2dzLyovZXZlbnRTdG9yZXMvKn0vdXNlckV2ZW50czp3cml0ZToKdXNlcl9l",
-            "dmVudNpBEXBhcmVudCx1c2VyX2V2ZW50EuYBChBDb2xsZWN0VXNlckV2ZW50",
+            "b21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Vc2VyRXZlbnQietpBEXBhcmVu",
+            "dCx1c2VyX2V2ZW50gtPkkwJgIlIvdjFiZXRhMS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9ldmVudFN0b3Jlcy8qfS91c2Vy",
+            "RXZlbnRzOndyaXRlOgp1c2VyX2V2ZW50EuYBChBDb2xsZWN0VXNlckV2ZW50",
             "EkIuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEu",
             "Q29sbGVjdFVzZXJFdmVudFJlcXVlc3QaFC5nb29nbGUuYXBpLkh0dHBCb2R5",
-            "IniC0+STAlYSVC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyp9L3VzZXJFdmVudHM6Y29s",
-            "bGVjdNpBGXBhcmVudCx1c2VyX2V2ZW50LHVyaSxldHMS+wEKDkxpc3RVc2Vy",
+            "InjaQRlwYXJlbnQsdXNlcl9ldmVudCx1cmksZXRzgtPkkwJWElQvdjFiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9l",
+            "dmVudFN0b3Jlcy8qfS91c2VyRXZlbnRzOmNvbGxlY3QS+wEKDkxpc3RVc2Vy",
             "RXZlbnRzEkAuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYx",
             "YmV0YTEuTGlzdFVzZXJFdmVudHNSZXF1ZXN0GkEuZ29vZ2xlLmNsb3VkLnJl",
             "Y29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuTGlzdFVzZXJFdmVudHNSZXNw",
-            "b25zZSJkgtPkkwJOEkwvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY2F0YWxvZ3MvKi9ldmVudFN0b3Jlcy8qfS91c2VyRXZlbnRz",
-            "2kENcGFyZW50LGZpbHRlchLzAgoPUHVyZ2VVc2VyRXZlbnRzEkEuZ29vZ2xl",
+            "b25zZSJk2kENcGFyZW50LGZpbHRlcoLT5JMCThJML3YxYmV0YTEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovZXZlbnRTdG9y",
+            "ZXMvKn0vdXNlckV2ZW50cxLzAgoPUHVyZ2VVc2VyRXZlbnRzEkEuZ29vZ2xl",
             "LmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuUHVyZ2VVc2Vy",
             "RXZlbnRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "/QGC0+STAlciUi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyp9L3VzZXJFdmVudHM6cHVy",
-            "Z2U6ASrKQYYBCkFnb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
-            "djFiZXRhMS5QdXJnZVVzZXJFdmVudHNSZXNwb25zZRJBZ29vZ2xlLmNsb3Vk",
-            "LnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuUHVyZ2VVc2VyRXZlbnRz",
-            "TWV0YWRhdGHaQRNwYXJlbnQsZmlsdGVyLGZvcmNlEoYDChBJbXBvcnRVc2Vy",
+            "/QHKQYYBCkFnb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFi",
+            "ZXRhMS5QdXJnZVVzZXJFdmVudHNSZXNwb25zZRJBZ29vZ2xlLmNsb3VkLnJl",
+            "Y29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuUHVyZ2VVc2VyRXZlbnRzTWV0",
+            "YWRhdGHaQRNwYXJlbnQsZmlsdGVyLGZvcmNlgtPkkwJXIlIvdjFiZXRhMS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9ldmVu",
+            "dFN0b3Jlcy8qfS91c2VyRXZlbnRzOnB1cmdlOgEqEoYDChBJbXBvcnRVc2Vy",
             "RXZlbnRzEkIuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYx",
             "YmV0YTEuSW1wb3J0VXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIo4CgtPkkwJYIlMvdjFiZXRhMS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9ldmVudFN0b3Jlcy8q",
-            "fS91c2VyRXZlbnRzOmltcG9ydDoBKspBfgpCZ29vZ2xlLmNsb3VkLnJlY29t",
-            "bWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuSW1wb3J0VXNlckV2ZW50c1Jlc3Bv",
-            "bnNlEjhnb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFiZXRh",
-            "MS5JbXBvcnRNZXRhZGF0YdpBLHBhcmVudCxyZXF1ZXN0X2lkLGlucHV0X2Nv",
-            "bmZpZyxlcnJvcnNfY29uZmlnGlfKQSNyZWNvbW1lbmRhdGlvbmVuZ2luZS5n",
+            "bm5pbmcuT3BlcmF0aW9uIo4CykF+CkJnb29nbGUuY2xvdWQucmVjb21tZW5k",
+            "YXRpb25lbmdpbmUudjFiZXRhMS5JbXBvcnRVc2VyRXZlbnRzUmVzcG9uc2US",
+            "OGdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExLklt",
+            "cG9ydE1ldGFkYXRh2kEscGFyZW50LHJlcXVlc3RfaWQsaW5wdXRfY29uZmln",
+            "LGVycm9yc19jb25maWeC0+STAlgiUy92MWJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2V2ZW50U3RvcmVzLyp9L3Vz",
+            "ZXJFdmVudHM6aW1wb3J0OgEqGlfKQSNyZWNvbW1lbmRhdGlvbmVuZ2luZS5n",
             "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm1CowIKLWNvbS5nb29nbGUuY2xvdWQucmVjb21t",
             "ZW5kYXRpb25lbmdpbmUudjFiZXRhMVABWmFjbG91ZC5nb29nbGUuY29tL2dv",
@@ -119,6 +119,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for PurgeUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeUserEventsRequest : pb::IMessage<PurgeUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -416,6 +417,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// Metadata related to the progress of the PurgeUserEvents operation.
   /// This will be returned by the google.longrunning.Operation.metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeUserEventsMetadata : pb::IMessage<PurgeUserEventsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -662,6 +664,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// successfully done, then this message is returned by the
   /// google.longrunning.Operations.response field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeUserEventsResponse : pb::IMessage<PurgeUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -887,6 +890,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for WriteUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteUserEventRequest : pb::IMessage<WriteUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1132,6 +1136,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for CollectUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CollectUserEventRequest : pb::IMessage<CollectUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1453,6 +1458,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for ListUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListUserEventsRequest : pb::IMessage<ListUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1801,6 +1807,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Response message for ListUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListUserEventsResponse : pb::IMessage<ListUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

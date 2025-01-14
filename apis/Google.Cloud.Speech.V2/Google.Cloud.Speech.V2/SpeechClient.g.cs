@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Speech.V2
 {
@@ -850,14 +850,14 @@ namespace Google.Cloud.Speech.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpeechClient.Create(callInvoker, Settings, Logger);
+            return SpeechClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SpeechClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpeechClient.Create(callInvoker, Settings, Logger);
+            return SpeechClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1190,13 +1190,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizers(new ListRecognizersRequest
+        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1215,13 +1224,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizersAsync(new ListRecognizersRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1240,13 +1258,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizers(new ListRecognizersRequest
+        public virtual gax::PagedEnumerable<ListRecognizersResponse, Recognizer> ListRecognizers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Recognizers.
@@ -1265,13 +1292,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Recognizer"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRecognizersAsync(new ListRecognizersRequest
+        public virtual gax::PagedAsyncEnumerable<ListRecognizersResponse, Recognizer> ListRecognizersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRecognizersRequest request = new ListRecognizersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRecognizersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested
@@ -1838,7 +1874,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1887,7 +1924,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1936,7 +1974,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1979,7 +2018,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2028,7 +2068,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2077,7 +2118,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2120,7 +2162,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2173,7 +2216,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2226,7 +2270,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2273,7 +2318,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2326,7 +2372,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2379,7 +2426,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2502,7 +2550,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2529,7 +2580,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2551,7 +2602,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2578,7 +2632,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2600,7 +2654,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2627,7 +2684,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2640,7 +2697,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2667,7 +2727,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2689,7 +2749,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2716,7 +2779,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2738,7 +2801,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2765,7 +2831,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
-        /// The maximum number of files allowed to be specified is 5.
+        /// The maximum number of files allowed to be specified is 15.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3216,13 +3282,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClasses(new ListCustomClassesRequest
+        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClasses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3241,13 +3316,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClassesAsync(new ListCustomClassesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClassesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3266,13 +3350,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClasses(new ListCustomClassesRequest
+        public virtual gax::PagedEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClasses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClasses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CustomClasses.
@@ -3291,13 +3384,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomClass"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCustomClassesAsync(new ListCustomClassesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCustomClassesResponse, CustomClass> ListCustomClassesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomClassesRequest request = new ListCustomClassesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomClassesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested
@@ -4066,13 +4168,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSets(new ListPhraseSetsRequest
+        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4091,13 +4202,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSetsAsync(new ListPhraseSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4116,13 +4236,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSets(new ListPhraseSetsRequest
+        public virtual gax::PagedEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists PhraseSets.
@@ -4141,13 +4270,22 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseSetsAsync(new ListPhraseSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseSetsResponse, PhraseSet> ListPhraseSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseSetsRequest request = new ListPhraseSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the requested
@@ -4722,7 +4860,11 @@ namespace Google.Cloud.Speech.V2
         {
             GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRecognizerOperationsSettings, logger);
             UpdateRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRecognizerOperationsSettings, logger);
             DeleteRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRecognizerOperationsSettings, logger);

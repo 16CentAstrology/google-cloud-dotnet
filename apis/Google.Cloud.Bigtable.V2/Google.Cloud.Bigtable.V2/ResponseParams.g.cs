@@ -27,11 +27,11 @@ namespace Google.Cloud.Bigtable.V2 {
             "Cihnb29nbGUvYmlndGFibGUvdjIvcmVzcG9uc2VfcGFyYW1zLnByb3RvEhJn",
             "b29nbGUuYmlndGFibGUudjIiWgoOUmVzcG9uc2VQYXJhbXMSFAoHem9uZV9p",
             "ZBgBIAEoCUgAiAEBEhcKCmNsdXN0ZXJfaWQYAiABKAlIAYgBAUIKCghfem9u",
-            "ZV9pZEINCgtfY2x1c3Rlcl9pZEK/AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52",
-            "MkITUmVzcG9uc2VQYXJhbXNQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29v",
-            "Z2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxl",
-            "XFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "ZV9pZEINCgtfY2x1c3Rlcl9pZEK9AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52",
+            "MkITUmVzcG9uc2VQYXJhbXNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2JpZ3RhYmxlL2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoCGEdvb2ds",
+            "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
+            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,6 +48,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// cluster_id from response trailers to tag the metrics. This should not be
   /// used by customers directly
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseParams : pb::IMessage<ResponseParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -95,6 +96,8 @@ namespace Google.Cloud.Bigtable.V2 {
 
     /// <summary>Field number for the "zone_id" field.</summary>
     public const int ZoneIdFieldNumber = 1;
+    private readonly static string ZoneIdDefaultValue = "";
+
     private string zoneId_;
     /// <summary>
     /// The cloud bigtable zone associated with the cluster.
@@ -102,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ZoneId {
-      get { return zoneId_ ?? ""; }
+      get { return zoneId_ ?? ZoneIdDefaultValue; }
       set {
         zoneId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -122,6 +125,8 @@ namespace Google.Cloud.Bigtable.V2 {
 
     /// <summary>Field number for the "cluster_id" field.</summary>
     public const int ClusterIdFieldNumber = 2;
+    private readonly static string ClusterIdDefaultValue = "";
+
     private string clusterId_;
     /// <summary>
     /// Identifier for a cluster that represents set of
@@ -130,7 +135,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterId {
-      get { return clusterId_ ?? ""; }
+      get { return clusterId_ ?? ClusterIdDefaultValue; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }

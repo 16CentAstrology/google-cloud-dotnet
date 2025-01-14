@@ -59,6 +59,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A SavedQuery is a view of the dataset. It references a subset of annotations
   /// by problem type and filters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SavedQuery : pb::IMessage<SavedQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -114,18 +114,12 @@ specified:
   and Grpc.Core
 - "rest" projects always have a dependency on Google.Api.Gax.Rest
 
-The best dependency version to specify depends on the version of the
-project itself:
-
-- For GA versions, every version must be explicitly specified. This
-  prevents us from accidentally upgrading a dependency minor version
-  when creating a patch version of the project itself.
-- For alpha/beta versions, specify as little as possible: allow
-  the "grpc"/"rest" dependencies above to be added automatically,
-  and use the "default" version number where possible. Explicit
-  versions should only be used either for dependencies without
-  default versions, or when the desired version is ahead of the
-  default version, for example to use a GAX prerelease.
+Note that as of 2024-03-18, even GA versions can use default
+dependencies. This means that when creating a patch release (which
+is relatively rare) the previous version's dependencies should be
+checked in NuGet and the same versions (or patch-level only changes)
+should be explicitly listed. This is checked within the project
+generator.
 
 ## Releasing
 
@@ -302,6 +296,27 @@ The release manager tool has a batch release command for this
 purpose. This is a relatively advanced usage scenario, and is
 documented [alongside the source
 code](tools/Google.Cloud.Tools.ReleaseManager/BatchRelease/README.md).
+
+Sample configurations are in [tools/BatchReleaseConfigurations](tools/BatchReleaseConfigurations).
+
+## Turning down a library
+
+When an API has been deprecated, our process for turning down the
+corresponding library is:
+
+- Release a new version with a modified `docs/index.md` file
+  to indicate the deprecation. This should also be indicated in the
+  release notes. See [this PR as an
+  example](https://github.com/googleapis/google-cloud-dotnet/pull/12996).
+- Mark all published versions as deprecated and delisted in NuGet.
+  The deprecation step can easily be done manually as the NuGet web
+  site allows marking all versions as deprecated in one go. For
+  delisting, either delist each version manually, or use the release
+  manager `delist-package` command to delist all versions.
+- Create a PR to remove the API from the API catalog, delete the source
+  code, and regenerate projects (which will update Renovate and the
+  README). See [this PR as an
+  example](https://github.com/googleapis/google-cloud-dotnet/pull/13012).
 
 ## Updating the .NET SDK
 

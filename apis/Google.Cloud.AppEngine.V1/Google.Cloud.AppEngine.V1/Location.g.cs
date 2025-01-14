@@ -47,6 +47,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Metadata for the given [google.cloud.location.Location][google.cloud.location.Location].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

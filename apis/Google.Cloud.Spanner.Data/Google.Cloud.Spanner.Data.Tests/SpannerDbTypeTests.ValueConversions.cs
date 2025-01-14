@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -21,7 +22,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             { "StringField", SpannerDbType.String, "stringValue" },
             { "Int64Field", SpannerDbType.Int64, 2L },
+            { "Float32Field", SpannerDbType.Float32, float.NaN },
             { "Float64Field", SpannerDbType.Float64, double.NaN },
             { "BoolField", SpannerDbType.Bool, true },
             { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
@@ -58,13 +59,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
-            { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" }
+            { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
+            { "PgOidField", SpannerDbType.PgOid, 3L }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -82,7 +84,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return 6;
         }
 
-        private static IEnumerable<double> GetFloatsForArray()
+        private static IEnumerable<float> GetFloats32ForArray()
+        {
+            yield return 1.0f;
+            yield return 2.0f;
+            yield return 3.0f;
+        }
+
+        private static IEnumerable<double> GetFloats64ForArray()
         {
             yield return 1.0;
             yield return 2.0;
@@ -161,6 +170,27 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // Format is:  LocalClrInstance,  SpannerType,  SerializedJsonFromProto, [test one or both ways]
             // Testing can be one way if there is loss of information in the conversion.
+
+            // Spanner type = Float32 tests.
+            yield return new object[] { true, SpannerDbType.Float32, "1" };
+            yield return new object[] { false, SpannerDbType.Float32, "0" };
+            yield return new object[] { (byte) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (sbyte) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1.5M, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { 1.5D, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { 1.5F, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { float.NegativeInfinity, SpannerDbType.Float32, Quote("-Infinity") };
+            yield return new object[] { float.PositiveInfinity, SpannerDbType.Float32, Quote("Infinity") };
+            yield return new object[] { float.NaN, SpannerDbType.Float32, Quote("NaN") };
+            yield return new object[] { 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1U, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1L, SpannerDbType.Float32, "1" };
+            yield return new object[] { (ulong) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (short) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (ushort) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { "1", SpannerDbType.Float32, "1" };
+            yield return new object[] { "1.5", SpannerDbType.Float32, "1.5" };
+            yield return new object[] { DBNull.Value, SpannerDbType.Float32, "null" };
 
             // Spanner type = Float64 tests.
             yield return new object[] { true, SpannerDbType.Float64, "1" };
@@ -291,7 +321,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "1.5", SpannerDbType.PgNumeric, Quote("1.5") };
             yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
 
-            // Note the difference in C# conversions from special doubles.
+            // Note the difference in C# conversions from special floats and doubles.
+            yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
+            yield return new object[] { float.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
+            yield return new object[] { float.NaN, SpannerDbType.String, Quote("NaN") };
             yield return new object[] { double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
             yield return new object[] { double.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
             yield return new object[] { double.NaN, SpannerDbType.String, Quote("NaN") };
@@ -328,12 +361,22 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             yield return new object[]
             {
-                new List<double>(GetFloatsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                new List<float>(GetFloats32ForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float32),
+                "[ 1, 2, 3 ]"
+            };
+            yield return new object[]
+            {
+                new List<double>(GetFloats64ForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float64),
                 "[ 1, 2, 3 ]"
             };
             yield return new object[]
             {
                 new List<int>(GetIntsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Int64),
+                "[ \"4\", \"5\", \"6\" ]"
+            };
+            yield return new object[]
+            {
+                new List<int>(GetIntsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgOid),
                 "[ \"4\", \"5\", \"6\" ]"
             };
             yield return new object[]
@@ -405,6 +448,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             yield return new object[]
             {
+                new float?[] { 5.5f, null, 10.5f }, SpannerDbType.ArrayOf(SpannerDbType.Float32),
+                "[ 5.5, null, 10.5 ]"
+            };
+            yield return new object[]
+            {
                 new double?[] { 5.5, null, 10.5 }, SpannerDbType.ArrayOf(SpannerDbType.Float64),
                 "[ 5.5, null, 10.5 ]"
             };
@@ -441,10 +489,141 @@ namespace Google.Cloud.Spanner.Data.Tests
                 $"[ {s_sampleStructSerialized}, [ \"4\", \"5\", \"6\" ] ]",
                 TestType.ClrToValue
             };
+
+            var duration10s = Duration.FromTimeSpan(TimeSpan.FromSeconds(10));
+            var duration20s = Duration.FromTimeSpan(TimeSpan.FromSeconds(20));
+            var duration10sWire = Value.ForString(Convert.ToBase64String(duration10s.ToByteArray()));
+            var duration20sWire = Value.ForString(Convert.ToBase64String(duration20s.ToByteArray()));
+            var trueValue = Value.ForBool(true);
+            var falseValue = Value.ForBool(false);
+            var trueValueWire = Value.ForString(Convert.ToBase64String(trueValue.ToByteArray()));
+            var falseValueWire = Value.ForString(Convert.ToBase64String(falseValue.ToByteArray()));
+            var testRectangle1 = new Rectangle
+            {
+                TopRight = new Point { X = 1, Y = 1 },
+                Width = 10,
+                Height = 5,
+            };
+            var testRectangle2 = new Rectangle();
+            var testRectangle1Wire = Value.ForString(Convert.ToBase64String(testRectangle1.ToByteArray()));
+            var testRectangle2Wire = Value.ForString(Convert.ToBase64String(testRectangle2.ToByteArray()));
+            var testPerson1 = new Person
+            {
+                Name = "John",
+                Siblings = { new Person { Name = "Jane" } }
+            };
+            var testPerson2 = new Person();
+            var testPerson1Wire = Value.ForString(Convert.ToBase64String(testPerson1.ToByteArray()));
+            var testPerson2Wire = Value.ForString(Convert.ToBase64String(testPerson2.ToByteArray()));
+            var testValueWrapper1 = new ValueWrapper { OneValue = Value.ForString("Hello") };
+            var testValueWrapper2 = new ValueWrapper();
+            var testValueWrapper1Wire = Value.ForString(Convert.ToBase64String(testValueWrapper1.ToByteArray()));
+            var testValueWrapper2Wire = Value.ForString(Convert.ToBase64String(testValueWrapper2.ToByteArray()));
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                duration10s,
+                SpannerDbType.FromClrType(typeof(Duration)),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                duration10sWire,
+                SpannerDbType.ForProtobuf(Duration.Descriptor.FullName),
+                duration10sWire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Duration>{ duration10s, duration20s },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                trueValue,
+                SpannerDbType.FromClrType(typeof(Value)),
+                trueValueWire.ToString(),
+            };
+            yield return new object[]
+            {   // The values is serialized/deserialized by calling code.
+                new List<Value> { duration10sWire, duration20sWire },
+                SpannerDbType.ArrayOf(SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)),
+                $"[ {duration10sWire}, {duration20sWire} ]",
+            };
+            yield return new object[]
+            {   // Value is being itself used as a type.
+                new List<Value> { trueValue, falseValue },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+                $"[ {trueValueWire}, {falseValueWire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testRectangle1,
+                SpannerDbType.FromClrType(typeof(Rectangle)),
+                testRectangle1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testRectangle1,
+                SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName),
+                testRectangle1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Rectangle>{ testRectangle1, testRectangle2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
+                $"[ {testRectangle1Wire}, {testRectangle2Wire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testPerson1,
+                SpannerDbType.FromClrType(typeof(Person)),
+                testPerson1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testPerson1,
+                SpannerDbType.ForProtobuf(Person.Descriptor.FullName),
+                testPerson1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<Person>{ testPerson1, testPerson2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
+                $"[ {testPerson1Wire}, {testPerson2Wire} ]",
+            };
+
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                testValueWrapper1,
+                SpannerDbType.FromClrType(typeof(ValueWrapper)),
+                testValueWrapper1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // The value is serialized/deserialized by calling code.
+                testValueWrapper1,
+                SpannerDbType.ForProtobuf(ValueWrapper.Descriptor.FullName),
+                testValueWrapper1Wire.ToString(),
+            };
+            yield return new object[]
+            {   // We perform automatic serialization/deserialization.
+                new List<ValueWrapper>{ testValueWrapper1, testValueWrapper2 },
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
+                $"[ {testValueWrapper1Wire}, {testValueWrapper2Wire} ]",
+            };
         }
 
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {
+            // Spanner type = Float32 tests.
+            yield return new object[] { (char) 1, SpannerDbType.Float32 };
+            yield return new object[] { s_testDate, SpannerDbType.Float32 };
+            yield return new object[] { new ToStringClass("1.5"), SpannerDbType.Float32 };
+            yield return new object[] { "", SpannerDbType.Float32 };
+
             // Spanner type = Float64 tests.
             yield return new object[] { (char)1, SpannerDbType.Float64 };
             yield return new object[] { s_testDate, SpannerDbType.Float64 };
@@ -542,7 +721,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.True(false, infoAddendum + e.Message);
+                    Assert.Fail(infoAddendum + e.Message);
                     throw;
                 }
             });
@@ -573,7 +752,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.True(false, infoAddendum + e);
+                    Assert.Fail(infoAddendum + e);
                     throw;
                 }
             });

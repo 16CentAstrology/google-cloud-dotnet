@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -784,6 +784,37 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var rows = results.ToList();
             var row = Assert.Single(rows);
             Assert.Equal(DateTime.MinValue, (DateTime) row["x"]);
+        }
+
+        [Fact]
+        public void CacheHit()
+        {
+            var guid = Guid.NewGuid();
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid.ToString()) };
+            var firstResults = client.ExecuteQuery($"SELECT @guid AS x", parameters);
+            var secondResults = client.ExecuteQuery($"SELECT @guid AS x", parameters);
+
+            // The use of a GUID parameter should ensure that we don't hit the cache first time.
+            Assert.False(firstResults.CacheHit);
+            // ... but we really should second time round.
+            Assert.True(secondResults.CacheHit);
+        }
+
+        [Theory]
+        [InlineData(null, true)] // Default to a precise representation
+        [InlineData(true, true)]
+        [InlineData(false, false)]
+        public void TimestampPrecision(bool? setting, bool expectPrecision)
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var options = setting is null ? null : new GetQueryResultsOptions { UseInt64Timestamp = setting };
+            var results = client.ExecuteQuery("SELECT TIMESTAMP '8000-01-01 00:00:00.123456Z' AS x", null, resultsOptions: options);
+            var rows = results.ToList();
+            var row = Assert.Single(rows);
+            var preciseValue = new DateTime(8000, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(123456 * 10); // 10 ticks per microsecond.
+            Assert.Equal(expectPrecision, row["x"].Equals(preciseValue));
         }
 
         private class TitleComparer : IEqualityComparer<BigQueryRow>

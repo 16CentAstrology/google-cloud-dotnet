@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -486,6 +487,72 @@ namespace Google.Cloud.Compute.V1.Snippets
             string backendBucket = "";
             // Make the request
             BackendBucket response = await backendBucketsClient.GetAsync(project, backendBucket);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyBackendBucketRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyBackendBucketRequest request = new GetIamPolicyBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = backendBucketsClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyBackendBucketRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyBackendBucketRequest, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyBackendBucketRequest request = new GetIamPolicyBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await backendBucketsClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = backendBucketsClient.GetIamPolicy(project, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = await backendBucketsClient.GetIamPolicyAsync(project, resource);
             // End snippet
         }
 
@@ -1076,6 +1143,142 @@ namespace Google.Cloud.Compute.V1.Snippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyBackendBucketRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyBackendBucketRequest request = new SetIamPolicyBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = backendBucketsClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyBackendBucketRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyBackendBucketRequest, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyBackendBucketRequest request = new SetIamPolicyBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await backendBucketsClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = backendBucketsClient.SetIamPolicy(project, resource, globalSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = await backendBucketsClient.SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsBackendBucketRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsBackendBucketRequest request = new TestIamPermissionsBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = backendBucketsClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsBackendBucketRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsBackendBucketRequest, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsBackendBucketRequest request = new TestIamPermissionsBackendBucketRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await backendBucketsClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = backendBucketsClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await backendBucketsClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
             // End snippet
         }
 

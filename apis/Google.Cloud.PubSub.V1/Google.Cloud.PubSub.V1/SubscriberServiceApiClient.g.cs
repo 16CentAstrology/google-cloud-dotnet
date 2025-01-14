@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.PubSub.V1
 {
@@ -432,14 +432,14 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SubscriberServiceApiClient.Create(callInvoker, Settings, Logger);
+            return SubscriberServiceApiClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SubscriberServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SubscriberServiceApiClient.Create(callInvoker, Settings, Logger);
+            return SubscriberServiceApiClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -542,16 +542,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -561,16 +561,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -580,16 +580,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -599,16 +599,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -624,15 +624,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -662,16 +662,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -687,15 +687,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -725,16 +725,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -750,15 +750,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -782,16 +782,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -807,15 +807,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -845,16 +845,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -870,15 +870,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -908,16 +908,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the subscription. It must have the format
@@ -933,15 +933,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -1075,8 +1075,9 @@ namespace Google.Cloud.PubSub.V1
             GetSubscriptionAsync(subscription, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1085,8 +1086,9 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1095,8 +1097,9 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1105,8 +1108,9 @@ namespace Google.Cloud.PubSub.V1
             UpdateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1125,8 +1129,9 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1145,8 +1150,9 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1195,13 +1201,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubscriptions(new ListSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1220,13 +1235,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubscriptionsAsync(new ListSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1245,13 +1269,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubscriptions(new ListSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1270,13 +1303,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubscriptionsAsync(new ListSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an existing subscription. All messages retained in the subscription
@@ -1486,7 +1528,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1523,7 +1566,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1560,7 +1604,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1589,7 +1634,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1626,7 +1672,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1663,7 +1710,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2633,13 +2681,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing snapshots. Snapshots are used in [Seek](
@@ -2662,13 +2719,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing snapshots. Snapshots are used in [Seek](
@@ -2691,13 +2757,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing snapshots. Snapshots are used in [Seek](
@@ -2720,13 +2795,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a snapshot from the requested subscription. Snapshots are used in
@@ -2742,7 +2826,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2766,7 +2850,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2790,7 +2874,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2814,7 +2898,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2823,8 +2907,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -2860,7 +2944,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2869,8 +2953,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -2906,7 +2990,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2915,8 +2999,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -2948,7 +3032,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -2957,8 +3041,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -2994,7 +3078,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -3003,8 +3087,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -3040,7 +3124,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -3049,8 +3133,8 @@ namespace Google.Cloud.PubSub.V1
         /// in the request, the server will assign a random name for this snapshot on
         /// the same project as the subscription. Note that for REST API requests, you
         /// must specify a name.  See the [resource name
-        /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-        /// is `projects/{project}/snapshots/{snap}`.
+        /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+        /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
         /// Required. The subscription whose backlog the snapshot retains.
@@ -3069,7 +3153,8 @@ namespace Google.Cloud.PubSub.V1
             CreateSnapshotAsync(name, subscription, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3082,7 +3167,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3095,7 +3181,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3108,7 +3195,8 @@ namespace Google.Cloud.PubSub.V1
             UpdateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3131,7 +3219,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3154,7 +3243,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3452,7 +3542,11 @@ namespace Google.Cloud.PubSub.V1
         {
             GrpcClient = grpcClient;
             SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>("CreateSubscription", grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSubscription);
@@ -3585,16 +3679,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3607,16 +3701,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         /// 
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-        /// name is populated in the returned Subscription object. Note that for REST
-        /// API requests, you must specify a name in the request.
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3652,8 +3746,9 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3665,8 +3760,9 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4003,7 +4099,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -4030,7 +4126,7 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the [resource name format]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The
         /// generated name is populated in the returned Snapshot object. Note that for
         /// REST API requests, you must specify a name in the request.
         /// </summary>
@@ -4044,7 +4140,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -4060,7 +4157,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -4178,7 +4276,7 @@ namespace Google.Cloud.PubSub.V1
 
     public static partial class Subscriber
     {
-       public partial class SubscriberClient
+        public partial class SubscriberClient
         {
             /// <summary>
             /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as

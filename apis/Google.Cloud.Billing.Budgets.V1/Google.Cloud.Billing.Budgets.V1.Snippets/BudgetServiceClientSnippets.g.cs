@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.Budgets.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Billing.Budgets.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -280,6 +281,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgets(request);
@@ -328,6 +330,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgetsAsync(request);

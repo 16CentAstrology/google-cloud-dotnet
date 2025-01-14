@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Video.LiveStream.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Video.LiveStream.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -2711,6 +2712,1721 @@ namespace Google.Cloud.Video.LiveStream.V1.Snippets
             EventName name = EventName.FromProjectLocationChannelEvent("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[EVENT]");
             // Make the request
             await livestreamServiceClient.DeleteEventAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClips</summary>
+        public void ListClipsRequestObject()
+        {
+            // Snippet: ListClips(ListClipsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ListClipsRequest request = new ListClipsRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClips(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Clip item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListClipsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClipsAsync</summary>
+        public async Task ListClipsRequestObjectAsync()
+        {
+            // Snippet: ListClipsAsync(ListClipsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListClipsRequest request = new ListClipsRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClipsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Clip item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListClipsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClips</summary>
+        public void ListClips()
+        {
+            // Snippet: ListClips(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            PagedEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClips(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Clip item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListClipsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClipsAsync</summary>
+        public async Task ListClipsAsync()
+        {
+            // Snippet: ListClipsAsync(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClipsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Clip item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListClipsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClips</summary>
+        public void ListClipsResourceNames()
+        {
+            // Snippet: ListClips(ChannelName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            PagedEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClips(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Clip item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListClipsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClipsAsync</summary>
+        public async Task ListClipsResourceNamesAsync()
+        {
+            // Snippet: ListClipsAsync(ChannelName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListClipsResponse, Clip> response = livestreamServiceClient.ListClipsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Clip item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListClipsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Clip item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Clip> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Clip item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClip</summary>
+        public void GetClipRequestObject()
+        {
+            // Snippet: GetClip(GetClipRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            GetClipRequest request = new GetClipRequest
+            {
+                ClipName = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]"),
+            };
+            // Make the request
+            Clip response = livestreamServiceClient.GetClip(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClipAsync</summary>
+        public async Task GetClipRequestObjectAsync()
+        {
+            // Snippet: GetClipAsync(GetClipRequest, CallSettings)
+            // Additional: GetClipAsync(GetClipRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetClipRequest request = new GetClipRequest
+            {
+                ClipName = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]"),
+            };
+            // Make the request
+            Clip response = await livestreamServiceClient.GetClipAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClip</summary>
+        public void GetClip()
+        {
+            // Snippet: GetClip(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/clips/[CLIP]";
+            // Make the request
+            Clip response = livestreamServiceClient.GetClip(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClipAsync</summary>
+        public async Task GetClipAsync()
+        {
+            // Snippet: GetClipAsync(string, CallSettings)
+            // Additional: GetClipAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/clips/[CLIP]";
+            // Make the request
+            Clip response = await livestreamServiceClient.GetClipAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClip</summary>
+        public void GetClipResourceNames()
+        {
+            // Snippet: GetClip(ClipName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ClipName name = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]");
+            // Make the request
+            Clip response = livestreamServiceClient.GetClip(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetClipAsync</summary>
+        public async Task GetClipResourceNamesAsync()
+        {
+            // Snippet: GetClipAsync(ClipName, CallSettings)
+            // Additional: GetClipAsync(ClipName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ClipName name = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]");
+            // Make the request
+            Clip response = await livestreamServiceClient.GetClipAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClip</summary>
+        public void CreateClipRequestObject()
+        {
+            // Snippet: CreateClip(CreateClipRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            CreateClipRequest request = new CreateClipRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                ClipId = "",
+                Clip = new Clip(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Clip, OperationMetadata> response = livestreamServiceClient.CreateClip(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClipAsync</summary>
+        public async Task CreateClipRequestObjectAsync()
+        {
+            // Snippet: CreateClipAsync(CreateClipRequest, CallSettings)
+            // Additional: CreateClipAsync(CreateClipRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateClipRequest request = new CreateClipRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                ClipId = "",
+                Clip = new Clip(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Clip, OperationMetadata> response = await livestreamServiceClient.CreateClipAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClip</summary>
+        public void CreateClip()
+        {
+            // Snippet: CreateClip(string, Clip, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            Clip clip = new Clip();
+            string clipId = "";
+            // Make the request
+            Operation<Clip, OperationMetadata> response = livestreamServiceClient.CreateClip(parent, clip, clipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClipAsync</summary>
+        public async Task CreateClipAsync()
+        {
+            // Snippet: CreateClipAsync(string, Clip, string, CallSettings)
+            // Additional: CreateClipAsync(string, Clip, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            Clip clip = new Clip();
+            string clipId = "";
+            // Make the request
+            Operation<Clip, OperationMetadata> response = await livestreamServiceClient.CreateClipAsync(parent, clip, clipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClip</summary>
+        public void CreateClipResourceNames()
+        {
+            // Snippet: CreateClip(ChannelName, Clip, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            Clip clip = new Clip();
+            string clipId = "";
+            // Make the request
+            Operation<Clip, OperationMetadata> response = livestreamServiceClient.CreateClip(parent, clip, clipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateClipAsync</summary>
+        public async Task CreateClipResourceNamesAsync()
+        {
+            // Snippet: CreateClipAsync(ChannelName, Clip, string, CallSettings)
+            // Additional: CreateClipAsync(ChannelName, Clip, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            Clip clip = new Clip();
+            string clipId = "";
+            // Make the request
+            Operation<Clip, OperationMetadata> response = await livestreamServiceClient.CreateClipAsync(parent, clip, clipId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Clip, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Clip result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Clip, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Clip retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClip</summary>
+        public void DeleteClipRequestObject()
+        {
+            // Snippet: DeleteClip(DeleteClipRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteClipRequest request = new DeleteClipRequest
+            {
+                ClipName = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteClip(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClipAsync</summary>
+        public async Task DeleteClipRequestObjectAsync()
+        {
+            // Snippet: DeleteClipAsync(DeleteClipRequest, CallSettings)
+            // Additional: DeleteClipAsync(DeleteClipRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteClipRequest request = new DeleteClipRequest
+            {
+                ClipName = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteClipAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClip</summary>
+        public void DeleteClip()
+        {
+            // Snippet: DeleteClip(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/clips/[CLIP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteClip(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClipAsync</summary>
+        public async Task DeleteClipAsync()
+        {
+            // Snippet: DeleteClipAsync(string, CallSettings)
+            // Additional: DeleteClipAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/clips/[CLIP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteClipAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClip</summary>
+        public void DeleteClipResourceNames()
+        {
+            // Snippet: DeleteClip(ClipName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ClipName name = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteClip(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteClip(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteClipAsync</summary>
+        public async Task DeleteClipResourceNamesAsync()
+        {
+            // Snippet: DeleteClipAsync(ClipName, CallSettings)
+            // Additional: DeleteClipAsync(ClipName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ClipName name = ClipName.FromProjectLocationChannelClip("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[CLIP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteClipAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteClipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAsset</summary>
+        public void CreateAssetRequestObject()
+        {
+            // Snippet: CreateAsset(CreateAssetRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAssetRequest request = new CreateAssetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Asset = new Asset(),
+                AssetId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Asset, OperationMetadata> response = livestreamServiceClient.CreateAsset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAssetAsync</summary>
+        public async Task CreateAssetRequestObjectAsync()
+        {
+            // Snippet: CreateAssetAsync(CreateAssetRequest, CallSettings)
+            // Additional: CreateAssetAsync(CreateAssetRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAssetRequest request = new CreateAssetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Asset = new Asset(),
+                AssetId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Asset, OperationMetadata> response = await livestreamServiceClient.CreateAssetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAsset</summary>
+        public void CreateAsset()
+        {
+            // Snippet: CreateAsset(string, Asset, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Asset asset = new Asset();
+            string assetId = "";
+            // Make the request
+            Operation<Asset, OperationMetadata> response = livestreamServiceClient.CreateAsset(parent, asset, assetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAssetAsync</summary>
+        public async Task CreateAssetAsync()
+        {
+            // Snippet: CreateAssetAsync(string, Asset, string, CallSettings)
+            // Additional: CreateAssetAsync(string, Asset, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Asset asset = new Asset();
+            string assetId = "";
+            // Make the request
+            Operation<Asset, OperationMetadata> response = await livestreamServiceClient.CreateAssetAsync(parent, asset, assetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAsset</summary>
+        public void CreateAssetResourceNames()
+        {
+            // Snippet: CreateAsset(LocationName, Asset, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Asset asset = new Asset();
+            string assetId = "";
+            // Make the request
+            Operation<Asset, OperationMetadata> response = livestreamServiceClient.CreateAsset(parent, asset, assetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAssetAsync</summary>
+        public async Task CreateAssetResourceNamesAsync()
+        {
+            // Snippet: CreateAssetAsync(LocationName, Asset, string, CallSettings)
+            // Additional: CreateAssetAsync(LocationName, Asset, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Asset asset = new Asset();
+            string assetId = "";
+            // Make the request
+            Operation<Asset, OperationMetadata> response = await livestreamServiceClient.CreateAssetAsync(parent, asset, assetId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Asset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Asset, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Asset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAsset</summary>
+        public void DeleteAssetRequestObject()
+        {
+            // Snippet: DeleteAsset(DeleteAssetRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAssetRequest request = new DeleteAssetRequest
+            {
+                AssetName = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteAsset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAssetAsync</summary>
+        public async Task DeleteAssetRequestObjectAsync()
+        {
+            // Snippet: DeleteAssetAsync(DeleteAssetRequest, CallSettings)
+            // Additional: DeleteAssetAsync(DeleteAssetRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAssetRequest request = new DeleteAssetRequest
+            {
+                AssetName = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteAssetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAsset</summary>
+        public void DeleteAsset()
+        {
+            // Snippet: DeleteAsset(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/assets/[ASSET]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteAsset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAssetAsync</summary>
+        public async Task DeleteAssetAsync()
+        {
+            // Snippet: DeleteAssetAsync(string, CallSettings)
+            // Additional: DeleteAssetAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/assets/[ASSET]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteAssetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAsset</summary>
+        public void DeleteAssetResourceNames()
+        {
+            // Snippet: DeleteAsset(AssetName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            AssetName name = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteAsset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteAsset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAssetAsync</summary>
+        public async Task DeleteAssetResourceNamesAsync()
+        {
+            // Snippet: DeleteAssetAsync(AssetName, CallSettings)
+            // Additional: DeleteAssetAsync(AssetName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AssetName name = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteAssetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteAssetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAsset</summary>
+        public void GetAssetRequestObject()
+        {
+            // Snippet: GetAsset(GetAssetRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            GetAssetRequest request = new GetAssetRequest
+            {
+                AssetName = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]"),
+            };
+            // Make the request
+            Asset response = livestreamServiceClient.GetAsset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAssetAsync</summary>
+        public async Task GetAssetRequestObjectAsync()
+        {
+            // Snippet: GetAssetAsync(GetAssetRequest, CallSettings)
+            // Additional: GetAssetAsync(GetAssetRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAssetRequest request = new GetAssetRequest
+            {
+                AssetName = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]"),
+            };
+            // Make the request
+            Asset response = await livestreamServiceClient.GetAssetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAsset</summary>
+        public void GetAsset()
+        {
+            // Snippet: GetAsset(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/assets/[ASSET]";
+            // Make the request
+            Asset response = livestreamServiceClient.GetAsset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAssetAsync</summary>
+        public async Task GetAssetAsync()
+        {
+            // Snippet: GetAssetAsync(string, CallSettings)
+            // Additional: GetAssetAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/assets/[ASSET]";
+            // Make the request
+            Asset response = await livestreamServiceClient.GetAssetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAsset</summary>
+        public void GetAssetResourceNames()
+        {
+            // Snippet: GetAsset(AssetName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            AssetName name = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]");
+            // Make the request
+            Asset response = livestreamServiceClient.GetAsset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAssetAsync</summary>
+        public async Task GetAssetResourceNamesAsync()
+        {
+            // Snippet: GetAssetAsync(AssetName, CallSettings)
+            // Additional: GetAssetAsync(AssetName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AssetName name = AssetName.FromProjectLocationAsset("[PROJECT]", "[LOCATION]", "[ASSET]");
+            // Make the request
+            Asset response = await livestreamServiceClient.GetAssetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssets</summary>
+        public void ListAssetsRequestObject()
+        {
+            // Snippet: ListAssets(ListAssetsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ListAssetsRequest request = new ListAssetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Asset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAssetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssetsAsync</summary>
+        public async Task ListAssetsRequestObjectAsync()
+        {
+            // Snippet: ListAssetsAsync(ListAssetsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAssetsRequest request = new ListAssetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Asset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssets</summary>
+        public void ListAssets()
+        {
+            // Snippet: ListAssets(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Asset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAssetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssetsAsync</summary>
+        public async Task ListAssetsAsync()
+        {
+            // Snippet: ListAssetsAsync(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Asset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssets</summary>
+        public void ListAssetsResourceNames()
+        {
+            // Snippet: ListAssets(LocationName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Asset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAssetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAssetsAsync</summary>
+        public async Task ListAssetsResourceNamesAsync()
+        {
+            // Snippet: ListAssetsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = livestreamServiceClient.ListAssetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Asset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Asset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Asset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPool</summary>
+        public void GetPoolRequestObject()
+        {
+            // Snippet: GetPool(GetPoolRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            GetPoolRequest request = new GetPoolRequest
+            {
+                PoolName = PoolName.FromProjectLocationPool("[PROJECT]", "[LOCATION]", "[POOL]"),
+            };
+            // Make the request
+            Pool response = livestreamServiceClient.GetPool(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPoolAsync</summary>
+        public async Task GetPoolRequestObjectAsync()
+        {
+            // Snippet: GetPoolAsync(GetPoolRequest, CallSettings)
+            // Additional: GetPoolAsync(GetPoolRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPoolRequest request = new GetPoolRequest
+            {
+                PoolName = PoolName.FromProjectLocationPool("[PROJECT]", "[LOCATION]", "[POOL]"),
+            };
+            // Make the request
+            Pool response = await livestreamServiceClient.GetPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPool</summary>
+        public void GetPool()
+        {
+            // Snippet: GetPool(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pools/[POOL]";
+            // Make the request
+            Pool response = livestreamServiceClient.GetPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPoolAsync</summary>
+        public async Task GetPoolAsync()
+        {
+            // Snippet: GetPoolAsync(string, CallSettings)
+            // Additional: GetPoolAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pools/[POOL]";
+            // Make the request
+            Pool response = await livestreamServiceClient.GetPoolAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPool</summary>
+        public void GetPoolResourceNames()
+        {
+            // Snippet: GetPool(PoolName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            PoolName name = PoolName.FromProjectLocationPool("[PROJECT]", "[LOCATION]", "[POOL]");
+            // Make the request
+            Pool response = livestreamServiceClient.GetPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPoolAsync</summary>
+        public async Task GetPoolResourceNamesAsync()
+        {
+            // Snippet: GetPoolAsync(PoolName, CallSettings)
+            // Additional: GetPoolAsync(PoolName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PoolName name = PoolName.FromProjectLocationPool("[PROJECT]", "[LOCATION]", "[POOL]");
+            // Make the request
+            Pool response = await livestreamServiceClient.GetPoolAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePool</summary>
+        public void UpdatePoolRequestObject()
+        {
+            // Snippet: UpdatePool(UpdatePoolRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            UpdatePoolRequest request = new UpdatePoolRequest
+            {
+                UpdateMask = new FieldMask(),
+                Pool = new Pool(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Pool, OperationMetadata> response = livestreamServiceClient.UpdatePool(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pool, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceUpdatePool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePoolAsync</summary>
+        public async Task UpdatePoolRequestObjectAsync()
+        {
+            // Snippet: UpdatePoolAsync(UpdatePoolRequest, CallSettings)
+            // Additional: UpdatePoolAsync(UpdatePoolRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePoolRequest request = new UpdatePoolRequest
+            {
+                UpdateMask = new FieldMask(),
+                Pool = new Pool(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Pool, OperationMetadata> response = await livestreamServiceClient.UpdatePoolAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pool, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceUpdatePoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePool</summary>
+        public void UpdatePool()
+        {
+            // Snippet: UpdatePool(Pool, FieldMask, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            Pool pool = new Pool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Pool, OperationMetadata> response = livestreamServiceClient.UpdatePool(pool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pool, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceUpdatePool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePoolAsync</summary>
+        public async Task UpdatePoolAsync()
+        {
+            // Snippet: UpdatePoolAsync(Pool, FieldMask, CallSettings)
+            // Additional: UpdatePoolAsync(Pool, FieldMask, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Pool pool = new Pool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Pool, OperationMetadata> response = await livestreamServiceClient.UpdatePoolAsync(pool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pool, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceUpdatePoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pool retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

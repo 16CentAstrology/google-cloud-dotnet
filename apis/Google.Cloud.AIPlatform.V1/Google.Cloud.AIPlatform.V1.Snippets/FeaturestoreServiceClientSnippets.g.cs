@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -2337,7 +2338,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeature</summary>
-        public void CreateFeature1ResourceNames()
+        public void CreateFeature1ResourceNames1()
         {
             // Snippet: CreateFeature(EntityTypeName, Feature, CallSettings)
             // Create client
@@ -2367,7 +2368,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeatureAsync</summary>
-        public async Task CreateFeature1ResourceNamesAsync()
+        public async Task CreateFeature1ResourceNames1Async()
         {
             // Snippet: CreateFeatureAsync(EntityTypeName, Feature, CallSettings)
             // Additional: CreateFeatureAsync(EntityTypeName, Feature, CancellationToken)
@@ -2375,6 +2376,67 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            Feature feature = new Feature();
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeature</summary>
+        public void CreateFeature1ResourceNames2()
+        {
+            // Snippet: CreateFeature(FeatureGroupName, Feature, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            Feature feature = new Feature();
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = featurestoreServiceClient.CreateFeature(parent, feature);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureAsync</summary>
+        public async Task CreateFeature1ResourceNames2Async()
+        {
+            // Snippet: CreateFeatureAsync(FeatureGroupName, Feature, CallSettings)
+            // Additional: CreateFeatureAsync(FeatureGroupName, Feature, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
             Feature feature = new Feature();
             // Make the request
             Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature);
@@ -2461,7 +2523,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeature</summary>
-        public void CreateFeature2ResourceNames()
+        public void CreateFeature2ResourceNames1()
         {
             // Snippet: CreateFeature(EntityTypeName, Feature, string, CallSettings)
             // Create client
@@ -2492,7 +2554,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeatureAsync</summary>
-        public async Task CreateFeature2ResourceNamesAsync()
+        public async Task CreateFeature2ResourceNames1Async()
         {
             // Snippet: CreateFeatureAsync(EntityTypeName, Feature, string, CallSettings)
             // Additional: CreateFeatureAsync(EntityTypeName, Feature, string, CancellationToken)
@@ -2500,6 +2562,69 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeature</summary>
+        public void CreateFeature2ResourceNames2()
+        {
+            // Snippet: CreateFeature(FeatureGroupName, Feature, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = featurestoreServiceClient.CreateFeature(parent, feature, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureAsync</summary>
+        public async Task CreateFeature2ResourceNames2Async()
+        {
+            // Snippet: CreateFeatureAsync(FeatureGroupName, Feature, string, CallSettings)
+            // Additional: CreateFeatureAsync(FeatureGroupName, Feature, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
             Feature feature = new Feature();
             string featureId = "";
             // Make the request
@@ -2664,7 +2789,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateFeatures</summary>
-        public void BatchCreateFeaturesResourceNames()
+        public void BatchCreateFeaturesResourceNames1()
         {
             // Snippet: BatchCreateFeatures(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
             // Create client
@@ -2697,7 +2822,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
-        public async Task BatchCreateFeaturesResourceNamesAsync()
+        public async Task BatchCreateFeaturesResourceNames1Async()
         {
             // Snippet: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
             // Additional: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CancellationToken)
@@ -2705,6 +2830,73 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featurestoreServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesResourceNames2()
+        {
+            // Snippet: BatchCreateFeatures(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featurestoreServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesResourceNames2Async()
+        {
+            // Snippet: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
             IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
             {
                 new CreateFeatureRequest(),
@@ -3012,7 +3204,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for ListFeatures</summary>
-        public void ListFeaturesResourceNames()
+        public void ListFeaturesResourceNames1()
         {
             // Snippet: ListFeatures(EntityTypeName, string, int?, CallSettings)
             // Create client
@@ -3057,13 +3249,103 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for ListFeaturesAsync</summary>
-        public async Task ListFeaturesResourceNamesAsync()
+        public async Task ListFeaturesResourceNames1Async()
         {
             // Snippet: ListFeaturesAsync(EntityTypeName, string, int?, CallSettings)
             // Create client
             FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
             // Initialize request argument(s)
             EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            // Make the request
+            PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featurestoreServiceClient.ListFeaturesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Feature item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Feature item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Feature> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Feature item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatures</summary>
+        public void ListFeaturesResourceNames2()
+        {
+            // Snippet: ListFeatures(FeatureGroupName, string, int?, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            // Make the request
+            PagedEnumerable<ListFeaturesResponse, Feature> response = featurestoreServiceClient.ListFeatures(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Feature item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeaturesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Feature item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Feature> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Feature item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeaturesAsync</summary>
+        public async Task ListFeaturesResourceNames2Async()
+        {
+            // Snippet: ListFeaturesAsync(FeatureGroupName, string, int?, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
             // Make the request
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = featurestoreServiceClient.ListFeaturesAsync(parent);
 

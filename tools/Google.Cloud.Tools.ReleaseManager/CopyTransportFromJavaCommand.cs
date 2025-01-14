@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,7 +47,7 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string root = args[0];
         int maxModifications = int.Parse(args[1]);
@@ -76,6 +75,7 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
             }
         }
         Console.WriteLine($"Modified files: {count}");
+        return 0;
     }
 
     private static bool MaybeModify(string file)

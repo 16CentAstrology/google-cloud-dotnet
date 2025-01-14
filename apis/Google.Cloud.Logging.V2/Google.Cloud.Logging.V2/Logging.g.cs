@@ -58,10 +58,10 @@ namespace Google.Cloud.Logging.V2 {
             "UmVzcG9uc2USRQoUcmVzb3VyY2VfZGVzY3JpcHRvcnMYASADKAsyJy5nb29n",
             "bGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvchIXCg9uZXh0X3Bh",
             "Z2VfdG9rZW4YAiABKAkisgEKD0xpc3RMb2dzUmVxdWVzdBIyCgZwYXJlbnQY",
-            "ASABKAlCIuBBAvpBHBIabG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2cSFgoJ",
-            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
-            "EjoKDnJlc291cmNlX25hbWVzGAggAygJQiLgQQH6QRwSGmxvZ2dpbmcuZ29v",
-            "Z2xlYXBpcy5jb20vTG9nIj4KEExpc3RMb2dzUmVzcG9uc2USEQoJbG9nX25h",
+            "ASABKAlCIuBBAvpBHBIabG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2cSOgoO",
+            "cmVzb3VyY2VfbmFtZXMYCCADKAlCIuBBAfpBHBIabG9nZ2luZy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2cSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90",
+            "b2tlbhgDIAEoCUID4EEBIj4KEExpc3RMb2dzUmVzcG9uc2USEQoJbG9nX25h",
             "bWVzGAMgAygJEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKAAQoVVGFpbExv",
             "Z0VudHJpZXNSZXF1ZXN0EhsKDnJlc291cmNlX25hbWVzGAEgAygJQgPgQQIS",
             "EwoGZmlsdGVyGAIgASgJQgPgQQESNQoNYnVmZmVyX3dpbmRvdxgDIAEoCzIZ",
@@ -73,45 +73,51 @@ namespace Google.Cloud.Logging.V2 {
             "QC5nb29nbGUubG9nZ2luZy52Mi5UYWlsTG9nRW50cmllc1Jlc3BvbnNlLlN1",
             "cHByZXNzaW9uSW5mby5SZWFzb24SGAoQc3VwcHJlc3NlZF9jb3VudBgCIAEo",
             "BSJCCgZSZWFzb24SFgoSUkVBU09OX1VOU1BFQ0lGSUVEEAASDgoKUkFURV9M",
-            "SU1JVBABEhAKDE5PVF9DT05TVU1FRBACMuYLChBMb2dnaW5nU2VydmljZVYy",
+            "SU1JVBABEhAKDE5PVF9DT05TVU1FRBACMukNChBMb2dnaW5nU2VydmljZVYy",
             "EpMCCglEZWxldGVMb2cSIy5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVMb2dS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IsgBgtPkkwK2ASogL3Yy",
-            "L3tsb2dfbmFtZT1wcm9qZWN0cy8qL2xvZ3MvKn1aGyoZL3YyL3tsb2dfbmFt",
-            "ZT0qLyovbG9ncy8qfVonKiUvdjIve2xvZ19uYW1lPW9yZ2FuaXphdGlvbnMv",
-            "Ki9sb2dzLyp9WiEqHy92Mi97bG9nX25hbWU9Zm9sZGVycy8qL2xvZ3MvKn1a",
-            "KSonL3YyL3tsb2dfbmFtZT1iaWxsaW5nQWNjb3VudHMvKi9sb2dzLyp92kEI",
-            "bG9nX25hbWUSqQEKD1dyaXRlTG9nRW50cmllcxIpLmdvb2dsZS5sb2dnaW5n",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IsgB2kEIbG9nX25hbWWC",
+            "0+STArYBKiAvdjIve2xvZ19uYW1lPXByb2plY3RzLyovbG9ncy8qfVobKhkv",
+            "djIve2xvZ19uYW1lPSovKi9sb2dzLyp9WicqJS92Mi97bG9nX25hbWU9b3Jn",
+            "YW5pemF0aW9ucy8qL2xvZ3MvKn1aISofL3YyL3tsb2dfbmFtZT1mb2xkZXJz",
+            "LyovbG9ncy8qfVopKicvdjIve2xvZ19uYW1lPWJpbGxpbmdBY2NvdW50cy8q",
+            "L2xvZ3MvKn0SqQEKD1dyaXRlTG9nRW50cmllcxIpLmdvb2dsZS5sb2dnaW5n",
             "LnYyLldyaXRlTG9nRW50cmllc1JlcXVlc3QaKi5nb29nbGUubG9nZ2luZy52",
-            "Mi5Xcml0ZUxvZ0VudHJpZXNSZXNwb25zZSI/gtPkkwIWIhEvdjIvZW50cmll",
-            "czp3cml0ZToBKtpBIGxvZ19uYW1lLHJlc291cmNlLGxhYmVscyxlbnRyaWVz",
+            "Mi5Xcml0ZUxvZ0VudHJpZXNSZXNwb25zZSI/2kEgbG9nX25hbWUscmVzb3Vy",
+            "Y2UsbGFiZWxzLGVudHJpZXOC0+STAhYiES92Mi9lbnRyaWVzOndyaXRlOgEq",
             "EqMBCg5MaXN0TG9nRW50cmllcxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RM",
             "b2dFbnRyaWVzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dF",
-            "bnRyaWVzUmVzcG9uc2UiPILT5JMCFSIQL3YyL2VudHJpZXM6bGlzdDoBKtpB",
-            "HnJlc291cmNlX25hbWVzLGZpbHRlcixvcmRlcl9ieRLFAQogTGlzdE1vbml0",
+            "bnRyaWVzUmVzcG9uc2UiPNpBHnJlc291cmNlX25hbWVzLGZpbHRlcixvcmRl",
+            "cl9ieYLT5JMCFSIQL3YyL2VudHJpZXM6bGlzdDoBKhLFAQogTGlzdE1vbml0",
             "b3JlZFJlc291cmNlRGVzY3JpcHRvcnMSOi5nb29nbGUubG9nZ2luZy52Mi5M",
             "aXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yc1JlcXVlc3QaOy5nb29n",
             "bGUubG9nZ2luZy52Mi5MaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9y",
             "c1Jlc3BvbnNlIiiC0+STAiISIC92Mi9tb25pdG9yZWRSZXNvdXJjZURlc2Ny",
-            "aXB0b3JzEogCCghMaXN0TG9ncxIiLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RM",
+            "aXB0b3JzEosECghMaXN0TG9ncxIiLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RM",
             "b2dzUmVxdWVzdBojLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dzUmVzcG9u",
-            "c2UisgGC0+STAqIBEhUvdjIve3BhcmVudD0qLyp9L2xvZ3NaHhIcL3YyL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKn0vbG9nc1ojEiEvdjIve3BhcmVudD1vcmdhbml6",
-            "YXRpb25zLyp9L2xvZ3NaHRIbL3YyL3twYXJlbnQ9Zm9sZGVycy8qfS9sb2dz",
-            "WiUSIy92Mi97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9sb2dz2kEGcGFy",
-            "ZW50EoYBCg5UYWlsTG9nRW50cmllcxIoLmdvb2dsZS5sb2dnaW5nLnYyLlRh",
-            "aWxMb2dFbnRyaWVzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLlRhaWxM",
-            "b2dFbnRyaWVzUmVzcG9uc2UiG4LT5JMCFSIQL3YyL2VudHJpZXM6dGFpbDoB",
-            "KigBMAEajQLKQRZsb2dnaW5nLmdvb2dsZWFwaXMuY29t0kHwAWh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFk",
-            "LW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9sb2dnaW5n",
-            "LmFkbWluLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2lu",
-            "Zy5yZWFkLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2lu",
-            "Zy53cml0ZUKyAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJv",
-            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9sb2dnaW5nL2FwaXYyL2xvZ2dp",
-            "bmdwYjtsb2dnaW5ncGL4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMsoC",
-            "F0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYy6gIaR29vZ2xlOjpDbG91ZDo6TG9n",
-            "Z2luZzo6VjJiBnByb3RvMw=="));
+            "c2UitQPaQQZwYXJlbnSC0+STAqUDEhUvdjIve3BhcmVudD0qLyp9L2xvZ3Na",
+            "HhIcL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vbG9nc1ojEiEvdjIve3BhcmVu",
+            "dD1vcmdhbml6YXRpb25zLyp9L2xvZ3NaHRIbL3YyL3twYXJlbnQ9Zm9sZGVy",
+            "cy8qfS9sb2dzWiUSIy92Mi97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9s",
+            "b2dzWjwSOi92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYnVj",
+            "a2V0cy8qL3ZpZXdzLyp9L2xvZ3NaQRI/L3YyL3twYXJlbnQ9b3JnYW5pemF0",
+            "aW9ucy8qL2xvY2F0aW9ucy8qL2J1Y2tldHMvKi92aWV3cy8qfS9sb2dzWjsS",
+            "OS92Mi97cGFyZW50PWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9idWNrZXRzLyov",
+            "dmlld3MvKn0vbG9nc1pDEkEvdjIve3BhcmVudD1iaWxsaW5nQWNjb3VudHMv",
+            "Ki9sb2NhdGlvbnMvKi9idWNrZXRzLyovdmlld3MvKn0vbG9ncxKGAQoOVGFp",
+            "bExvZ0VudHJpZXMSKC5nb29nbGUubG9nZ2luZy52Mi5UYWlsTG9nRW50cmll",
+            "c1JlcXVlc3QaKS5nb29nbGUubG9nZ2luZy52Mi5UYWlsTG9nRW50cmllc1Jl",
+            "c3BvbnNlIhuC0+STAhUiEC92Mi9lbnRyaWVzOnRhaWw6ASooATABGo0CykEW",
+            "bG9nZ2luZy5nb29nbGVhcGlzLmNvbdJB8AFodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5LGh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbG9nZ2luZy5hZG1pbixodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xvZ2dpbmcucmVhZCxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2xvZ2dpbmcud3JpdGVCsgEK",
+            "FWNvbS5nb29nbGUubG9nZ2luZy52MkIMTG9nZ2luZ1Byb3RvUAFaNWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vbG9nZ2luZy9hcGl2Mi9sb2dnaW5ncGI7bG9nZ2lu",
+            "Z3Bi+AEBqgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjLKAhdHb29nbGVcQ2xv",
+            "dWRcTG9nZ2luZ1xWMuoCGkdvb2dsZTo6Q2xvdWQ6OkxvZ2dpbmc6OlYyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +129,7 @@ namespace Google.Cloud.Logging.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ResourceNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "ResourceNames", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.TailLogEntriesRequest), global::Google.Cloud.Logging.V2.TailLogEntriesRequest.Parser, new[]{ "ResourceNames", "Filter", "BufferWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.TailLogEntriesResponse), global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Parser, new[]{ "Entries", "SuppressionInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Types.SuppressionInfo), global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Types.SuppressionInfo.Parser, new[]{ "Reason", "SuppressedCount" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Types.SuppressionInfo.Types.Reason) }, null, null)})
@@ -136,6 +142,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to DeleteLog.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteLogRequest : pb::IMessage<DeleteLogRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,6 +350,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to WriteLogEntries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteLogEntriesRequest : pb::IMessage<WriteLogEntriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -503,11 +511,13 @@ namespace Google.Cloud.Logging.V2 {
     public const int PartialSuccessFieldNumber = 5;
     private bool partialSuccess_;
     /// <summary>
-    /// Optional. Whether valid entries should be written even if some other
-    /// entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
-    /// entry is not written, then the response status is the error associated
-    /// with one of the failed entries and the response includes error details
-    /// keyed by the entries' zero-based index in the `entries.write` method.
+    /// Optional. Whether a batch's valid entries should be written even if some
+    /// other entry failed due to a permanent error such as INVALID_ARGUMENT or
+    /// PERMISSION_DENIED. If any entry failed, then the response status is the
+    /// response status of one of the failed entries. The response will include
+    /// error details in `WriteLogEntriesPartialErrors.log_entry_errors` keyed by
+    /// the entries' zero-based index in the `entries`. Failed requests for which
+    /// no entries are written will not include per-entry errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -678,7 +688,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         Resource.MergeFrom(other.Resource);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       entries_.Add(other.entries_);
       if (other.PartialSuccess != false) {
         PartialSuccess = other.PartialSuccess;
@@ -780,6 +790,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Result returned from WriteLogEntries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteLogEntriesResponse : pb::IMessage<WriteLogEntriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -935,6 +946,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Error details for WriteLogEntries with partial success.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteLogEntriesPartialErrors : pb::IMessage<WriteLogEntriesPartialErrors>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,7 +1087,7 @@ namespace Google.Cloud.Logging.V2 {
       if (other == null) {
         return;
       }
-      logEntryErrors_.Add(other.logEntryErrors_);
+      logEntryErrors_.MergeFrom(other.logEntryErrors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1124,6 +1136,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to `ListLogEntries`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLogEntriesRequest : pb::IMessage<ListLogEntriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1194,6 +1207,7 @@ namespace Google.Cloud.Logging.V2 {
     ///  * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
     ///
     /// Projects listed in the `project_ids` field are added to this list.
+    /// A maximum of 100 resources may be specified in a single request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1205,13 +1219,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Optional. A filter that chooses which log entries to return.  See [Advanced
-    /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-    /// Only log entries that match the filter are returned.  An empty filter
-    /// matches all log entries in the resources listed in `resource_names`.
+    /// Optional. Only log entries that match the filter are returned.  An empty
+    /// filter matches all log entries in the resources listed in `resource_names`.
     /// Referencing a parent resource that is not listed in `resource_names` will
-    /// cause the filter to return no results. The maximum length of the filter is
-    /// 20000 characters.
+    /// cause the filter to return no results. The maximum length of a filter is
+    /// 20,000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1246,10 +1258,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of results to return from this request. Default is 50.
-    /// If the value is negative or exceeds 1000, the request is rejected. The
-    /// presence of `next_page_token` in the response indicates that more results
-    /// might be available.
+    /// Optional. The maximum number of results to return from this request.
+    /// Default is 50. If the value is negative or exceeds 1000, the request is
+    /// rejected. The presence of `next_page_token` in the response indicates that
+    /// more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1500,6 +1512,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Result returned from `ListLogEntries`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLogEntriesResponse : pb::IMessage<ListLogEntriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1735,6 +1748,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to ListMonitoredResourceDescriptors
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMonitoredResourceDescriptorsRequest : pb::IMessage<ListMonitoredResourceDescriptorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1975,6 +1989,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Result returned from ListMonitoredResourceDescriptors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMonitoredResourceDescriptorsResponse : pb::IMessage<ListMonitoredResourceDescriptorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2201,6 +2216,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to ListLogs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLogsRequest : pb::IMessage<ListLogsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2236,9 +2252,9 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListLogsRequest(ListLogsRequest other) : this() {
       parent_ = other.parent_;
+      resourceNames_ = other.resourceNames_.Clone();
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
-      resourceNames_ = other.resourceNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2252,7 +2268,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name that owns the logs:
+    /// Required. The resource name to list logs for:
     ///
     /// *  `projects/[PROJECT_ID]`
     /// *  `organizations/[ORGANIZATION_ID]`
@@ -2266,6 +2282,34 @@ namespace Google.Cloud.Logging.V2 {
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "resource_names" field.</summary>
+    public const int ResourceNamesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_resourceNames_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. List of resource names to list logs for:
+    ///
+    ///  * `projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
+    ///  * `organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
+    ///  * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
+    ///  * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
+    ///
+    /// To support legacy queries, it could also be:
+    ///
+    /// *  `projects/[PROJECT_ID]`
+    /// *  `organizations/[ORGANIZATION_ID]`
+    /// *  `billingAccounts/[BILLING_ACCOUNT_ID]`
+    /// *  `folders/[FOLDER_ID]`
+    ///
+    /// The resource name in the `parent` field is added to this list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ResourceNames {
+      get { return resourceNames_; }
     }
 
     /// <summary>Field number for the "page_size" field.</summary>
@@ -2303,32 +2347,6 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
-    /// <summary>Field number for the "resource_names" field.</summary>
-    public const int ResourceNamesFieldNumber = 8;
-    private static readonly pb::FieldCodec<string> _repeated_resourceNames_codec
-        = pb::FieldCodec.ForString(66);
-    private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Optional. The resource name that owns the logs:
-    ///
-    ///  * `projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
-    ///  * `organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
-    ///  * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
-    ///  * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
-    ///
-    /// To support legacy queries, it could also be:
-    ///
-    /// *  `projects/[PROJECT_ID]`
-    /// *  `organizations/[ORGANIZATION_ID]`
-    /// *  `billingAccounts/[BILLING_ACCOUNT_ID]`
-    /// *  `folders/[FOLDER_ID]`
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> ResourceNames {
-      get { return resourceNames_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2345,9 +2363,9 @@ namespace Google.Cloud.Logging.V2 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if(!resourceNames_.Equals(other.resourceNames_)) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
-      if(!resourceNames_.Equals(other.resourceNames_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2356,9 +2374,9 @@ namespace Google.Cloud.Logging.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= resourceNames_.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      hash ^= resourceNames_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2426,13 +2444,13 @@ namespace Google.Cloud.Logging.V2 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += resourceNames_.CalculateSize(_repeated_resourceNames_codec);
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
-      size += resourceNames_.CalculateSize(_repeated_resourceNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2448,13 +2466,13 @@ namespace Google.Cloud.Logging.V2 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      resourceNames_.Add(other.resourceNames_);
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      resourceNames_.Add(other.resourceNames_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2527,6 +2545,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Result returned from ListLogs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLogsResponse : pb::IMessage<ListLogsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2755,6 +2774,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// The parameters to `TailLogEntries`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TailLogEntriesRequest : pb::IMessage<TailLogEntriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2831,13 +2851,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Optional. A filter that chooses which log entries to return.  See [Advanced
-    /// Logs Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
-    /// Only log entries that match the filter are returned.  An empty filter
-    /// matches all log entries in the resources listed in `resource_names`.
-    /// Referencing a parent resource that is not in `resource_names` will cause
-    /// the filter to return no results. The maximum length of the filter is 20000
-    /// characters.
+    /// Optional. Only log entries that match the filter are returned.  An empty
+    /// filter matches all log entries in the resources listed in `resource_names`.
+    /// Referencing a parent resource that is not listed in `resource_names` will
+    /// cause the filter to return no results. The maximum length of a filter is
+    /// 20,000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3049,6 +3067,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// Result returned from `TailLogEntries`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TailLogEntriesResponse : pb::IMessage<TailLogEntriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3271,6 +3290,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <summary>
       /// Information about entries that were omitted from the session.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SuppressionInfo : pb::IMessage<SuppressionInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

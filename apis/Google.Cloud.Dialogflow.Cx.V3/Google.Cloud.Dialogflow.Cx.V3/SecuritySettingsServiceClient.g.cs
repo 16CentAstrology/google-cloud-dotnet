@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
@@ -204,14 +204,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SecuritySettingsServiceClient.Create(callInvoker, Settings, Logger);
+            return SecuritySettingsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SecuritySettingsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SecuritySettingsServiceClient.Create(callInvoker, Settings, Logger);
+            return SecuritySettingsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -343,7 +343,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -363,7 +363,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -383,7 +383,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -399,7 +399,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -419,7 +419,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -439,7 +439,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The location to create an
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="securitySettings">
         /// Required. The security settings to create.
@@ -489,8 +489,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -507,8 +507,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -525,8 +525,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -540,8 +540,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -558,8 +558,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -576,8 +576,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;security settings ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;securitysettingsID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -696,7 +696,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -708,20 +708,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SecuritySettings"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecuritySettings(new ListSecuritySettingsRequest
+        public virtual gax::PagedEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecuritySettingsRequest request = new ListSecuritySettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecuritySettings(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all security settings in the specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -733,20 +742,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SecuritySettings"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecuritySettingsAsync(new ListSecuritySettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecuritySettingsRequest request = new ListSecuritySettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecuritySettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all security settings in the specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -758,20 +776,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SecuritySettings"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecuritySettings(new ListSecuritySettingsRequest
+        public virtual gax::PagedEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecuritySettingsRequest request = new ListSecuritySettingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecuritySettings(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all security settings in the specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location to list all security settings for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -783,13 +810,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SecuritySettings"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecuritySettingsAsync(new ListSecuritySettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecuritySettingsResponse, SecuritySettings> ListSecuritySettingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecuritySettingsRequest request = new ListSecuritySettingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecuritySettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified
@@ -828,8 +864,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -846,8 +882,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -864,8 +900,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -879,8 +915,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -897,8 +933,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -915,8 +951,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
+        /// delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/securitySettings/&lt;SecuritySettingsID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -953,7 +989,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             SecuritySettingsServiceSettings effectiveSettings = settings ?? SecuritySettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateSecuritySettings = clientHelper.BuildApiCall<CreateSecuritySettingsRequest, SecuritySettings>("CreateSecuritySettings", grpcClient.CreateSecuritySettingsAsync, grpcClient.CreateSecuritySettings, effectiveSettings.CreateSecuritySettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSecuritySettings);

@@ -112,6 +112,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Common audit log format for Google Cloud Platform API operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditLog : pb::IMessage<AuditLog>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -982,6 +983,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Authentication information for the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthenticationInfo : pb::IMessage<AuthenticationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1393,6 +1395,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Authorization information for the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizationInfo : pb::IMessage<AuthorizationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1728,6 +1731,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Metadata about the request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestMetadata : pb::IMessage<RequestMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2137,6 +2141,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Location information about a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceLocation : pb::IMessage<ResourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2364,6 +2369,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Identity delegation history of an authenticated service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccountDelegationInfo : pb::IMessage<ServiceAccountDelegationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2706,6 +2712,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// First party identity principal.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FirstPartyPrincipal : pb::IMessage<FirstPartyPrincipal>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2950,6 +2957,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Third party identity principal.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThirdPartyPrincipal : pb::IMessage<ThirdPartyPrincipal>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3159,6 +3167,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Information related to policy violations for this request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyViolationInfo : pb::IMessage<PolicyViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3363,6 +3372,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Represents OrgPolicy Violation information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrgPolicyViolationInfo : pb::IMessage<OrgPolicyViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3594,7 +3604,7 @@ namespace Google.Cloud.Audit {
       if (other.ResourceType.Length != 0) {
         ResourceType = other.ResourceType;
       }
-      resourceTags_.Add(other.resourceTags_);
+      resourceTags_.MergeFrom(other.resourceTags_);
       violationInfo_.Add(other.violationInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3674,6 +3684,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Provides information about the Policy violation info for this request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ViolationInfo : pb::IMessage<ViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

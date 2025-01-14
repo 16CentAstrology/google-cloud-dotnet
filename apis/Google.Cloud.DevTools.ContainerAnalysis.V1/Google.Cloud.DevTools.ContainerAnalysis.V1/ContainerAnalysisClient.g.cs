@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,19 +15,19 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 {
@@ -148,14 +148,14 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContainerAnalysisClient.Create(callInvoker, Settings, Logger);
+            return ContainerAnalysisClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ContainerAnalysisClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContainerAnalysisClient.Create(callInvoker, Settings, Logger);
+            return ContainerAnalysisClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1033,7 +1033,11 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         {
             GrpcClient = grpcClient;
             ContainerAnalysisSettings effectiveSettings = settings ?? ContainerAnalysisSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);

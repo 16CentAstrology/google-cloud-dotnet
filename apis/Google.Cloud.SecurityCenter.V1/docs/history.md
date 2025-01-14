@@ -1,5 +1,124 @@
 # Version history
 
+## Version 3.24.0, released 2024-08-13
+
+### New features
+
+- Enable Dynamic Mute ([commit a446d7c](https://github.com/googleapis/google-cloud-dotnet/commit/a446d7c200ab34c0a968868596a56a4905021659))
+- New values `EXPLOITATION_FOR_PRIVILEGE_ESCALATION` corresponding to T1068 and `INDICATOR_REMOVAL_FILE_DELETION` corresponding to T1070.004 are added to enum `Technique` ([commit a446d7c](https://github.com/googleapis/google-cloud-dotnet/commit/a446d7c200ab34c0a968868596a56a4905021659))
+
+### Documentation improvements
+
+- T1068 is added for value `EXPLOITATION_FOR_PRIVILEGE_ESCALATION` and T1070.004 is added for value `INDICATOR_REMOVAL_FILE_DELETION` for enum `Technique ([commit a446d7c](https://github.com/googleapis/google-cloud-dotnet/commit/a446d7c200ab34c0a968868596a56a4905021659))
+
+## Version 3.23.0, released 2024-07-22
+
+### New features
+
+- Added cloud provider field to list findings response ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added ResourceValueConfig protos and API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added etd custom module protos and API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added toxic combination field to finding ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Added attack path API methods ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+
+### Documentation improvements
+
+- Update toxic combinations comments ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+- Update examples in comments to use backticks ([commit d546ea7](https://github.com/googleapis/google-cloud-dotnet/commit/d546ea7efd769ac3ec7bb330854d6634b5f89fe0))
+
+## Version 3.22.0, released 2024-07-08
+
+### New features
+
+- Add toxic_combination and group_memberships fields to finding ([commit 9480e63](https://github.com/googleapis/google-cloud-dotnet/commit/9480e6393b254e262acc37313028d224213688f7))
+
+## Version 3.21.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.20.0, released 2024-04-19
+
+### New features
+
+- Add cloud_armor field to finding's list of attributes ([commit c21e410](https://github.com/googleapis/google-cloud-dotnet/commit/c21e4103c713f0d46c9d730b979f240f7eb4cfaf))
+
+## Version 3.19.0, released 2024-03-28
+
+### New features
+
+- Add Notebook field to finding's list of attributes ([commit 8de6a4d](https://github.com/googleapis/google-cloud-dotnet/commit/8de6a4d61f397fae2ece55650f1ad5ed1d3f65f4))
+
+## Version 3.18.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.17.0, released 2024-03-21
+
+### New features
+
+- Add security_posture, external_system.case_uri, external_system.case_priority, external_system.case_sla, external_system.case_create_time, external_system.case_close_time, and external_system.ticket_info to finding's list of attributes ([commit 3f92c8d](https://github.com/googleapis/google-cloud-dotnet/commit/3f92c8da4a36daf678f4aca62f2fca18269fbb8b))
+
+## Version 3.16.0, released 2024-03-04
+
+### New features
+
+- Add container.create_time, vulnerability.offending_package, vulnerability.fixed_package, vulnerability.security_bulletin, vulnerability.cve.impact, vulnerability.cve.exploitation_activity, vulnerability.cve.observed_in_the_wild, vulnerability.cve.zero_day to finding's list of attributes ([commit bafbb2b](https://github.com/googleapis/google-cloud-dotnet/commit/bafbb2b01675d7b8f13c5d69f6a6bbfd5b1c37fe))
+
+## Version 3.15.0, released 2024-02-27
+
+### New features
+
+- Add load balancer, log entry, org policy, database.version, exfiltration.total_exfiltrated_bytes, file.disk_path, indicator.signature_type, and kubernetes.objects to finding's list of attributes ([commit 2e2659b](https://github.com/googleapis/google-cloud-dotnet/commit/2e2659b8b970ba3e0cf2937f91016f1835fb4c0c))
+- Add Backup DR field to finding's list of attributes ([commit 3a79f3f](https://github.com/googleapis/google-cloud-dotnet/commit/3a79f3f15ddb7445c0da61db768e33ab2c28fc1c))
+
+## Version 3.14.0, released 2024-02-20
+
+### New features
+
+- Add application field to finding's list of attributes ([commit a359c07](https://github.com/googleapis/google-cloud-dotnet/commit/a359c076cf3ac7f795acf940d57eb408a94ffce4))
+
+### Documentation improvements
+
+- Modify documentation of SimulateSecurityHealthAnalyticsCustomModuleRequest ([commit fb09480](https://github.com/googleapis/google-cloud-dotnet/commit/fb094805f2a6b2d56ff3994603fa5d87148570c9))
+
+## Version 3.13.0, released 2023-10-30
+
+### New features
+
+- Add SimulateSecurityHealthAnalyticsCustomModule API for testing SHA custom module ([commit bdb2a81](https://github.com/googleapis/google-cloud-dotnet/commit/bdb2a813c2b0d35f40beeabfd5524ac52d536e01))
+
+## Version 3.12.0, released 2023-06-27
+
+### New features
+
+- Mark the Asset APIs as deprecated in client libraries ([commit a7a6d15](https://github.com/googleapis/google-cloud-dotnet/commit/a7a6d15bfd965daaeca76299040f1013b166f5fd))
+
+## Version 3.11.0, released 2023-06-20
+
+### New features
+
+- Add user agent and DLP parent type fields to finding's list of attributes ([commit da7cc14](https://github.com/googleapis/google-cloud-dotnet/commit/da7cc14f384752089e8389d99659e124414f173e))
+
+## Version 3.10.0, released 2023-05-03
+
+### New features
+
+- Add cloud_dlp_inspection and cloud_dlp_data_profile fields to finding's list of attributes ([commit f4c7a0e](https://github.com/googleapis/google-cloud-dotnet/commit/f4c7a0e6d98452c60f5308448ee703901e7ef670))
+
+### Documentation improvements
+
+- Miscellaneous style improvements ([commit f4c7a0e](https://github.com/googleapis/google-cloud-dotnet/commit/f4c7a0e6d98452c60f5308448ee703901e7ef670))
+
+## Version 3.9.0, released 2023-04-12
+
+### New features
+
+- Released securitycenter/v1 SHA custom modules cloud libraries: Create, Get, List, Update, Delete ([commit 96e3a2e](https://github.com/googleapis/google-cloud-dotnet/commit/96e3a2e51e5cb5daa0ad7c34f4ba94c5825a4559))
+
 ## Version 3.8.0, released 2023-01-19
 
 ### New features

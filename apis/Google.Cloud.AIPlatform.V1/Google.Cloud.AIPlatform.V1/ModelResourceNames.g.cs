@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -243,10 +243,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// <inheritdoc/>
         public bool Equals(ModelName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ModelName a, ModelName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ModelName a, ModelName b) => !(a == b);
     }
 
@@ -269,6 +281,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(TrainingPipeline) ? null : TrainingPipelineName.Parse(TrainingPipeline, allowUnparsed: true);
             set => TrainingPipeline = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PipelineJobName"/>-typed view over the <see cref="PipelineJob"/> resource name property.
+        /// </summary>
+        public PipelineJobName PipelineJobAsPipelineJobName
+        {
+            get => string.IsNullOrEmpty(PipelineJob) ? null : PipelineJobName.Parse(PipelineJob, allowUnparsed: true);
+            set => PipelineJob = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class OriginalModelInfo
+            {
+                /// <summary>
+                /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Model"/> resource name property.
+                /// </summary>
+                public gcav::ModelName ModelAsModelName
+                {
+                    get => string.IsNullOrEmpty(Model) ? null : gcav::ModelName.Parse(Model, allowUnparsed: true);
+                    set => Model = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

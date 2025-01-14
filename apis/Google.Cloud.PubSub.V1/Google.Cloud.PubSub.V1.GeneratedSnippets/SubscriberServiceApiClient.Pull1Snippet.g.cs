@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1]
+    // [START pubsub_v1_generated_Subscriber_Pull_sync_flattened1]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedSubscriberServiceApiClientSnippets
@@ -43,5 +43,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
 #pragma warning restore CS0612
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1]
+    // [END pubsub_v1_generated_Subscriber_Pull_sync_flattened1]
 }

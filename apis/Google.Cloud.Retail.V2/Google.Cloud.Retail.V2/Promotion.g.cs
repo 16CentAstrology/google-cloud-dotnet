@@ -44,6 +44,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Promotion information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Promotion : pb::IMessage<Promotion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -99,8 +100,8 @@ namespace Google.Cloud.Retail.V2 {
     /// id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     ///
-    /// Google Merchant Center property
-    /// [promotion](https://support.google.com/merchants/answer/7050148).
+    /// Corresponds to Google Merchant Center property
+    /// [promotion_id](https://support.google.com/merchants/answer/7050148).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

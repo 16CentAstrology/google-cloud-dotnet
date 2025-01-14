@@ -28,18 +28,18 @@ namespace Google.Cloud.Monitoring.V3 {
             "b25pdG9yaW5nLnYzGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUvbW9uaXRvcmlu",
             "Zy92My9jb21tb24ucHJvdG8ixQIKBlNub296ZRIRCgRuYW1lGAEgASgJQgPg",
-            "QQISPAoIY3JpdGVyaWEYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5T",
+            "QQgSPAoIY3JpdGVyaWEYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5T",
             "bm9vemUuQ3JpdGVyaWFCA+BBAhI5CghpbnRlcnZhbBgEIAEoCzIiLmdvb2ds",
             "ZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbEID4EECEhkKDGRpc3BsYXlf",
             "bmFtZRgFIAEoCUID4EECGkgKCENyaXRlcmlhEjwKCHBvbGljaWVzGAEgAygJ",
             "Qir6QScKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3k6",
             "SupBRwogbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Tbm9vemUSI3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9zbm9vemVzL3tzbm9vemV9QsMBChhjb20uZ29vZ2xl",
-            "Lm1vbml0b3JpbmcudjNCC1Nub296ZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9y",
-            "aW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xv",
-            "dWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6",
-            "OlYzYgZwcm90bzM="));
+            "Y3RzL3twcm9qZWN0fS9zbm9vemVzL3tzbm9vemV9QsYBChhjb20uZ29vZ2xl",
+            "Lm1vbml0b3JpbmcudjNCC1Nub296ZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRv",
+            "cmluZ3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVc",
+            "Q2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jp",
+            "bmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -56,6 +56,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// criteria defined in the `Snooze`. The `Snooze` will be active from
   /// `interval.start_time` through `interval.end_time`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Snooze : pb::IMessage<Snooze>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -107,7 +108,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the `Snooze`. The format is:
+    /// Required. Identifier. The name of the `Snooze`. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
     ///
@@ -404,6 +405,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// `Snooze` will suppress alerts that come from one of the `AlertPolicy`s
       /// whose names are supplied.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Criteria : pb::IMessage<Criteria>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -459,7 +461,7 @@ namespace Google.Cloud.Monitoring.V3 {
         ///
         ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]
         ///
-        /// There is a limit of 10 policies per snooze. This limit is checked during
+        /// There is a limit of 16 policies per snooze. This limit is checked during
         /// snooze creation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

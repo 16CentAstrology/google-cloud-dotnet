@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace Google.Cloud.PubSub.V1;
@@ -27,8 +28,29 @@ public abstract partial class SubscriberClient
     {
         /// <summary>
         /// Flow control settings.
-        /// If <c>null</c>, uses flow control settings from <see cref="DefaultFlowControlSettings"/>. 
+        /// If <c>null</c>, uses flow control settings from <see cref="DefaultFlowControlSettings"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Flow control uses these settings for two purposes: fetching messages to process, and processing them.
+        /// </para>
+        /// <para>
+        /// In terms of fetching messages, a single <see cref="SubscriberClient"/> creates multiple instances of
+        /// <see cref="SubscriberServiceApiClient"/>, and each will observe the flow control settings independently.
+        /// This means there may be more outstanding messages (or bytes) than expected; there is currently no way
+        /// of limiting the total number or size of outstanding messages fetched across all data streams for a single
+        /// <see cref="SubscriberClient"/>.
+        /// </para>
+        /// <para>
+        /// Separately, the number of messages being processed concurrently is limited by these settings, at
+        /// the level of the whole <see cref="SubscriberClient"/>.
+        /// </para>
+        /// <para>
+        /// For example, if <see cref="FlowControlSettings.MaxOutstandingElementCount"/> is set to 10, then a single
+        /// <see cref="SubscriberClient"/> using 4 instances of <see cref="SubscriberServiceApiClient"/> will have up
+        /// to 40 outstanding messages to process, but will only process at most 10 of them concurrently.
+        /// </para>
+        /// </remarks>
         public FlowControlSettings FlowControlSettings { get; set; }
 
         /// <summary>
@@ -38,21 +60,21 @@ public abstract partial class SubscriberClient
         public bool UseLegacyFlowControl { get; set; } = false;
 
         /// <summary>
-        /// The lease time before which a message must either be ACKed
+        /// The lease time before which a message must either be acknowledged
         /// or have its lease extended. This is truncated to the nearest second.
         /// If <c>null</c>, uses the default of <see cref="DefaultAckDeadline"/>.
         /// </summary>
         public TimeSpan? AckDeadline { get; set; }
 
         /// <summary>
-        /// Duration before <see cref="AckDeadline"/> at which the message ACK deadline
+        /// Duration before <see cref="AckDeadline"/> at which the message acknowledgement deadline
         /// is automatically extended.
         /// If <c>null</c>, uses the default of <see cref="DefaultAckExtensionWindow"/>.
         /// </summary>
         public TimeSpan? AckExtensionWindow { get; set; }
 
         /// <summary>
-        /// Maximum duration for which a message ACK deadline will be extended.
+        /// Maximum duration for which a message acknowledgement deadline will be extended.
         /// If <c>null</c>, uses the default of <see cref="DefaultMaxTotalAckExtension"/>.
         /// </summary>
         public TimeSpan? MaxTotalAckExtension { get; set; }
@@ -83,6 +105,13 @@ public abstract partial class SubscriberClient
         public TimeSpan? DisposeTimeout { get; set; }
 
         /// <summary>
+        /// The logger to use in <see cref="SubscriberClient"/>. This is propagated from the
+        /// logger in the <see cref="SubscriberClientBuilder"/> when building the client. This is
+        /// to ensure there's only a single public place to set the logger (i.e. the builder).
+        /// </summary>
+        internal ILogger Logger { get; set; }
+
+        /// <summary>
         /// Create a new instance.
         /// </summary>
         public Settings() { }
@@ -90,12 +119,14 @@ public abstract partial class SubscriberClient
         internal Settings(Settings other)
         {
             FlowControlSettings = other.FlowControlSettings;
+            UseLegacyFlowControl = other.UseLegacyFlowControl;
             AckDeadline = other.AckDeadline;
             AckExtensionWindow = other.AckExtensionWindow;
             Scheduler = other.Scheduler;
             Clock = other.Clock;
             MaxTotalAckExtension = other.MaxTotalAckExtension;
             DisposeTimeout = other.DisposeTimeout;
+            Logger = other.Logger;
         }
 
         internal void Validate()

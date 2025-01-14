@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,12 +33,12 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
+using System.Runtime.CompilerServices;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
-    using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
-    using static TestServerHelpers;
-
     public class TraceTest
     {
         private const string CustromTraceIdHeader = "custom_trace_id";
@@ -306,7 +306,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 // Set the servers on the Controller so it can generate the subsequent requests.
                 // This is needed beacuse we are not making requests against published services but
                 // to services that are only available through the test servers.
-                // Whoever makes requests to those services (as PropagationController does) needs to do so 
+                // Whoever makes requests to those services (as PropagationController does) needs to do so
                 // through an HttpClient generated from the test server.
                 PropagationController.FirstCallServer = firstCallServer;
                 PropagationController.SecondCallServer = secondCallServer;
@@ -351,7 +351,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 
         [Theory]
         [MemberData(nameof(ConfigurationData))]
-        public void Trace_QPS(Action<IWebHostBuilder> testServerConfigurator)
+        public async Task Trace_QPS(Action<IWebHostBuilder> testServerConfigurator)
         {
             var traceUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var traceLabelUri = $"/Trace/{nameof(TraceController.TraceLabels)}/{_testId}";
@@ -361,7 +361,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             // Make two requests, one of the two should be traced as they both occur at nearly the same time.
             var traceTask = client.GetAsync(traceUri);
             var traceLabelsTask = client.GetAsync(traceLabelUri);
-            Task.WaitAll(traceTask, traceLabelsTask);
+            await Task.WhenAll(traceTask, traceLabelsTask);
 
             // We expect exactly one of the two following traces to have been sent to the backend,
             // but we don't know which. By polling but not expecting a trace in both cases we force
@@ -666,7 +666,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             {
                 Credential = GoogleCredential.FromAccessToken("very_fake_token")
             }.Build();
-        
+
     }
 
     /// <summary>
@@ -868,8 +868,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         public static TestServer FirstCallServer;
         public static TestServer SecondCallServer;
 
-        private IManagedTracer _tracer;
-        private DelegatingHandler _propagatingHandler;
+        private readonly IManagedTracer _tracer;
+        private readonly DelegatingHandler _propagatingHandler;
 
         public PropagationController([FromServices] IManagedTracer tracer, [FromServices] IServiceProvider serviceProvider)
         {

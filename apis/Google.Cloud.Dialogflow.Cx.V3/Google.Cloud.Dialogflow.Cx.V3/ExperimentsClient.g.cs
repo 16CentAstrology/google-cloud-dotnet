@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
@@ -233,14 +233,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ExperimentsClient.Create(callInvoker, Settings, Logger);
+            return ExperimentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ExperimentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ExperimentsClient.Create(callInvoker, Settings, Logger);
+            return ExperimentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -362,9 +362,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
-        /// list all environments for. Format: `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
-        /// ID&gt;`.
+        /// list all environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -376,13 +375,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperiments(new ListExperimentsRequest
+        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -390,9 +398,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
-        /// list all environments for. Format: `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
-        /// ID&gt;`.
+        /// list all environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -404,13 +411,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperimentsAsync(new ListExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -418,9 +434,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
-        /// list all environments for. Format: `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
-        /// ID&gt;`.
+        /// list all environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -432,13 +447,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperiments(new ListExperimentsRequest
+        public virtual gax::PagedEnumerable<ListExperimentsResponse, Experiment> ListExperiments(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all experiments in the specified
@@ -446,9 +470,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
-        /// list all environments for. Format: `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
-        /// ID&gt;`.
+        /// list all environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -460,13 +483,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Experiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExperimentsAsync(new ListExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExperimentsResponse, Experiment> ListExperimentsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExperimentsRequest request = new ListExperimentsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified
@@ -505,8 +537,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -523,8 +554,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -541,8 +571,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -556,8 +585,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -574,8 +602,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -592,8 +619,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -637,8 +663,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -659,8 +684,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -681,8 +705,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -699,8 +722,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -721,8 +743,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -743,8 +764,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="experiment">
         /// Required. The experiment to create.
@@ -874,8 +894,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -892,8 +911,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -910,8 +928,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -925,8 +942,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -943,8 +959,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -961,8 +976,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1009,8 +1023,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1027,8 +1041,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1045,8 +1059,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1060,8 +1074,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1078,8 +1092,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1096,8 +1110,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1140,8 +1154,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1157,8 +1171,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1174,8 +1188,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1188,8 +1202,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1205,8 +1219,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1222,8 +1236,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;/experiments/&lt;ExperimentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1261,7 +1275,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             ExperimentsSettings effectiveSettings = settings ?? ExperimentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListExperiments = clientHelper.BuildApiCall<ListExperimentsRequest, ListExperimentsResponse>("ListExperiments", grpcClient.ListExperimentsAsync, grpcClient.ListExperiments, effectiveSettings.ListExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExperiments);

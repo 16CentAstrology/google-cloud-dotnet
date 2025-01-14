@@ -3,7 +3,7 @@
 //     source: google/cloud/recaptchaenterprise/v1/recaptchaenterprise.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -94,9 +94,39 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_MigrateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_RemoveIpOverrideRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_RemoveIpOverrideResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListIpOverridesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListIpOverridesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_CreateFirewallPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> __Marshaller_google_cloud_recaptchaenterprise_v1_FirewallPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListFirewallPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListFirewallPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetFirewallPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_UpdateFirewallPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteFirewallPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -183,12 +213,84 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1_Key);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> __Method_AddIpOverride = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddIpOverride",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse> __Method_RemoveIpOverride = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveIpOverride",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_RemoveIpOverrideRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_RemoveIpOverrideResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse> __Method_ListIpOverrides = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListIpOverrides",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListIpOverridesRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListIpOverridesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Method_GetMetrics = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetMetrics",
         __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> __Method_CreateFirewallPolicy = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateFirewallPolicy",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_CreateFirewallPolicyRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_FirewallPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse> __Method_ListFirewallPolicies = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFirewallPolicies",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListFirewallPoliciesRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListFirewallPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> __Method_GetFirewallPolicy = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFirewallPolicy",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_GetFirewallPolicyRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_FirewallPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> __Method_UpdateFirewallPolicy = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFirewallPolicy",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_UpdateFirewallPolicyRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_FirewallPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFirewallPolicy = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFirewallPolicy",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteFirewallPolicyRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> __Method_ReorderFirewallPolicies = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReorderFirewallPolicies",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> __Method_ListRelatedAccountGroups = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(
@@ -327,7 +429,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
       /// Once a key is migrated, it can be used from either product. SiteVerify
       /// requests are billed as CreateAssessment calls. You must be
-      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// authenticated as one of the current owners of the reCAPTCHA Key, and
       /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
       /// destination project.
       /// </summary>
@@ -341,6 +443,49 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
 
       /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Removes an IP override from a key. The following restrictions hold:
+      /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+      /// is returned.
+      /// * If the IP is found in an existing IP override, but the
+      /// override type does not match, a `NOT_FOUND` error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse> RemoveIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all IP overrides for a key.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse> ListIpOverrides(global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Get some aggregated metrics for a Key. This data can be used to build
       /// dashboards.
       /// </summary>
@@ -349,6 +494,80 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetrics(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+      /// Enterprise actions can be executed.
+      /// A project may have a maximum of 1000 policies.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> CreateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the list of all firewall policies that belong to a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse> ListFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> GetFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> UpdateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -818,7 +1037,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
       /// Once a key is migrated, it can be used from either product. SiteVerify
       /// requests are billed as CreateAssessment calls. You must be
-      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// authenticated as one of the current owners of the reCAPTCHA Key, and
       /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
       /// destination project.
       /// </summary>
@@ -836,7 +1055,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
       /// Once a key is migrated, it can be used from either product. SiteVerify
       /// requests are billed as CreateAssessment calls. You must be
-      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// authenticated as one of the current owners of the reCAPTCHA Key, and
       /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
       /// destination project.
       /// </summary>
@@ -852,7 +1071,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
       /// Once a key is migrated, it can be used from either product. SiteVerify
       /// requests are billed as CreateAssessment calls. You must be
-      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// authenticated as one of the current owners of the reCAPTCHA Key, and
       /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
       /// destination project.
       /// </summary>
@@ -870,7 +1089,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
       /// Once a key is migrated, it can be used from either product. SiteVerify
       /// requests are billed as CreateAssessment calls. You must be
-      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// authenticated as one of the current owners of the reCAPTCHA Key, and
       /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
       /// destination project.
       /// </summary>
@@ -881,6 +1100,178 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Key> MigrateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MigrateKey, null, options, request);
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddIpOverride(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddIpOverride, null, options, request);
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddIpOverrideAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddIpOverride, null, options, request);
+      }
+      /// <summary>
+      /// Removes an IP override from a key. The following restrictions hold:
+      /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+      /// is returned.
+      /// * If the IP is found in an existing IP override, but the
+      /// override type does not match, a `NOT_FOUND` error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse RemoveIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveIpOverride(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes an IP override from a key. The following restrictions hold:
+      /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+      /// is returned.
+      /// * If the IP is found in an existing IP override, but the
+      /// override type does not match, a `NOT_FOUND` error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse RemoveIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveIpOverride, null, options, request);
+      }
+      /// <summary>
+      /// Removes an IP override from a key. The following restrictions hold:
+      /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+      /// is returned.
+      /// * If the IP is found in an existing IP override, but the
+      /// override type does not match, a `NOT_FOUND` error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse> RemoveIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveIpOverrideAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes an IP override from a key. The following restrictions hold:
+      /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+      /// is returned.
+      /// * If the IP is found in an existing IP override, but the
+      /// override type does not match, a `NOT_FOUND` error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse> RemoveIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveIpOverride, null, options, request);
+      }
+      /// <summary>
+      /// Lists all IP overrides for a key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse ListIpOverrides(global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIpOverrides(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all IP overrides for a key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse ListIpOverrides(global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListIpOverrides, null, options, request);
+      }
+      /// <summary>
+      /// Lists all IP overrides for a key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse> ListIpOverridesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIpOverridesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all IP overrides for a key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse> ListIpOverridesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListIpOverrides, null, options, request);
       }
       /// <summary>
       /// Get some aggregated metrics for a Key. This data can be used to build
@@ -933,6 +1324,302 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetricsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+      /// Enterprise actions can be executed.
+      /// A project may have a maximum of 1000 policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy CreateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFirewallPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+      /// Enterprise actions can be executed.
+      /// A project may have a maximum of 1000 policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy CreateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+      /// Enterprise actions can be executed.
+      /// A project may have a maximum of 1000 policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> CreateFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFirewallPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+      /// Enterprise actions can be executed.
+      /// A project may have a maximum of 1000 policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> CreateFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Returns the list of all firewall policies that belong to a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse ListFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFirewallPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the list of all firewall policies that belong to a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse ListFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFirewallPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Returns the list of all firewall policies that belong to a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse> ListFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFirewallPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the list of all firewall policies that belong to a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse> ListFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFirewallPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy GetFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFirewallPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy GetFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> GetFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFirewallPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> GetFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy UpdateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFirewallPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy UpdateFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> UpdateFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFirewallPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy> UpdateFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFirewallPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFirewallPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified firewall policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFirewallPolicyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFirewallPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderFirewallPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReorderFirewallPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderFirewallPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReorderFirewallPolicies, null, options, request);
       }
       /// <summary>
       /// List groups of related accounts.
@@ -1101,7 +1788,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_UpdateKey, serviceImpl.UpdateKey)
           .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey)
           .AddMethod(__Method_MigrateKey, serviceImpl.MigrateKey)
+          .AddMethod(__Method_AddIpOverride, serviceImpl.AddIpOverride)
+          .AddMethod(__Method_RemoveIpOverride, serviceImpl.RemoveIpOverride)
+          .AddMethod(__Method_ListIpOverrides, serviceImpl.ListIpOverrides)
           .AddMethod(__Method_GetMetrics, serviceImpl.GetMetrics)
+          .AddMethod(__Method_CreateFirewallPolicy, serviceImpl.CreateFirewallPolicy)
+          .AddMethod(__Method_ListFirewallPolicies, serviceImpl.ListFirewallPolicies)
+          .AddMethod(__Method_GetFirewallPolicy, serviceImpl.GetFirewallPolicy)
+          .AddMethod(__Method_UpdateFirewallPolicy, serviceImpl.UpdateFirewallPolicy)
+          .AddMethod(__Method_DeleteFirewallPolicy, serviceImpl.DeleteFirewallPolicy)
+          .AddMethod(__Method_ReorderFirewallPolicies, serviceImpl.ReorderFirewallPolicies)
           .AddMethod(__Method_ListRelatedAccountGroups, serviceImpl.ListRelatedAccountGroups)
           .AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl.ListRelatedAccountGroupMemberships)
           .AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl.SearchRelatedAccountGroupMemberships).Build();
@@ -1123,7 +1819,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_UpdateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.UpdateKey));
       serviceBinder.AddMethod(__Method_DeleteKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKey));
       serviceBinder.AddMethod(__Method_MigrateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.MigrateKey));
+      serviceBinder.AddMethod(__Method_AddIpOverride, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>(serviceImpl.AddIpOverride));
+      serviceBinder.AddMethod(__Method_RemoveIpOverride, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.RemoveIpOverrideResponse>(serviceImpl.RemoveIpOverride));
+      serviceBinder.AddMethod(__Method_ListIpOverrides, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListIpOverridesResponse>(serviceImpl.ListIpOverrides));
       serviceBinder.AddMethod(__Method_GetMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(serviceImpl.GetMetrics));
+      serviceBinder.AddMethod(__Method_CreateFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.CreateFirewallPolicy));
+      serviceBinder.AddMethod(__Method_ListFirewallPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse>(serviceImpl.ListFirewallPolicies));
+      serviceBinder.AddMethod(__Method_GetFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.GetFirewallPolicy));
+      serviceBinder.AddMethod(__Method_UpdateFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.UpdateFirewallPolicy));
+      serviceBinder.AddMethod(__Method_DeleteFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFirewallPolicy));
+      serviceBinder.AddMethod(__Method_ReorderFirewallPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse>(serviceImpl.ReorderFirewallPolicies));
       serviceBinder.AddMethod(__Method_ListRelatedAccountGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(serviceImpl.ListRelatedAccountGroups));
       serviceBinder.AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse>(serviceImpl.ListRelatedAccountGroupMemberships));
       serviceBinder.AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse>(serviceImpl.SearchRelatedAccountGroupMemberships));

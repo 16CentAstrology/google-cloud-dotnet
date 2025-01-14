@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -236,14 +236,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionTargetHttpProxiesClient.Create(callInvoker, Settings, Logger);
+            return RegionTargetHttpProxiesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RegionTargetHttpProxiesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionTargetHttpProxiesClient.Create(callInvoker, Settings, Logger);
+            return RegionTargetHttpProxiesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -692,14 +692,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TargetHttpProxy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<TargetHttpProxyList, TargetHttpProxy> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListRegionTargetHttpProxiesRequest
+        public virtual gax::PagedEnumerable<TargetHttpProxyList, TargetHttpProxy> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionTargetHttpProxiesRequest request = new ListRegionTargetHttpProxiesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of TargetHttpProxy resources available to the specified project in the specified region.
@@ -720,14 +729,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TargetHttpProxy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<TargetHttpProxyList, TargetHttpProxy> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListRegionTargetHttpProxiesRequest
+        public virtual gax::PagedAsyncEnumerable<TargetHttpProxyList, TargetHttpProxy> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionTargetHttpProxiesRequest request = new ListRegionTargetHttpProxiesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Changes the URL map for TargetHttpProxy.
@@ -884,7 +902,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             RegionTargetHttpProxiesSettings effectiveSettings = settings ?? RegionTargetHttpProxiesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             SetUrlMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetUrlMapOperationsSettings, logger);

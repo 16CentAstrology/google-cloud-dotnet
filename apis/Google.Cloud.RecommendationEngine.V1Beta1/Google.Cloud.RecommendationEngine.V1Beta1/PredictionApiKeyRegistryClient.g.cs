@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.RecommendationEngine.V1Beta1
 {
@@ -165,14 +165,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PredictionApiKeyRegistryClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -438,13 +438,22 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PredictionApiKeyRegistration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPredictionApiKeyRegistrations(new ListPredictionApiKeyRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPredictionApiKeyRegistrationsRequest request = new ListPredictionApiKeyRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPredictionApiKeyRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// List the registered apiKeys for use with predict method.
@@ -463,13 +472,22 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PredictionApiKeyRegistration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPredictionApiKeyRegistrationsAsync(new ListPredictionApiKeyRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPredictionApiKeyRegistrationsRequest request = new ListPredictionApiKeyRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPredictionApiKeyRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the registered apiKeys for use with predict method.
@@ -488,13 +506,22 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PredictionApiKeyRegistration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrations(EventStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPredictionApiKeyRegistrations(new ListPredictionApiKeyRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrations(EventStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPredictionApiKeyRegistrationsRequest request = new ListPredictionApiKeyRegistrationsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPredictionApiKeyRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// List the registered apiKeys for use with predict method.
@@ -513,13 +540,22 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PredictionApiKeyRegistration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrationsAsync(EventStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPredictionApiKeyRegistrationsAsync(new ListPredictionApiKeyRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPredictionApiKeyRegistrationsResponse, PredictionApiKeyRegistration> ListPredictionApiKeyRegistrationsAsync(EventStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPredictionApiKeyRegistrationsRequest request = new ListPredictionApiKeyRegistrationsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPredictionApiKeyRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Unregister an apiKey from using for predict method.
@@ -662,7 +698,11 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             GrpcClient = grpcClient;
             PredictionApiKeyRegistrySettings effectiveSettings = settings ?? PredictionApiKeyRegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreatePredictionApiKeyRegistration = clientHelper.BuildApiCall<CreatePredictionApiKeyRegistrationRequest, PredictionApiKeyRegistration>("CreatePredictionApiKeyRegistration", grpcClient.CreatePredictionApiKeyRegistrationAsync, grpcClient.CreatePredictionApiKeyRegistration, effectiveSettings.CreatePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePredictionApiKeyRegistration);
             Modify_CreatePredictionApiKeyRegistrationApiCall(ref _callCreatePredictionApiKeyRegistration);

@@ -82,11 +82,11 @@ namespace Google.Cloud.Billing.V1 {
             "b3VkLmJpbGxpbmcudjEuU2t1EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLe",
             "AwoMQ2xvdWRDYXRhbG9nEoQBCgxMaXN0U2VydmljZXMSLC5nb29nbGUuY2xv",
             "dWQuYmlsbGluZy52MS5MaXN0U2VydmljZXNSZXF1ZXN0Gi0uZ29vZ2xlLmNs",
-            "b3VkLmJpbGxpbmcudjEuTGlzdFNlcnZpY2VzUmVzcG9uc2UiF4LT5JMCDhIM",
-            "L3YxL3NlcnZpY2Vz2kEAEo4BCghMaXN0U2t1cxIoLmdvb2dsZS5jbG91ZC5i",
+            "b3VkLmJpbGxpbmcudjEuTGlzdFNlcnZpY2VzUmVzcG9uc2UiF9pBAILT5JMC",
+            "DhIML3YxL3NlcnZpY2VzEo4BCghMaXN0U2t1cxIoLmdvb2dsZS5jbG91ZC5i",
             "aWxsaW5nLnYxLkxpc3RTa3VzUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5iaWxs",
-            "aW5nLnYxLkxpc3RTa3VzUmVzcG9uc2UiLYLT5JMCHhIcL3YxL3twYXJlbnQ9",
-            "c2VydmljZXMvKn0vc2t1c9pBBnBhcmVudBq1AcpBG2Nsb3VkYmlsbGluZy5n",
+            "aW5nLnYxLkxpc3RTa3VzUmVzcG9uc2UiLdpBBnBhcmVudILT5JMCHhIcL3Yx",
+            "L3twYXJlbnQ9c2VydmljZXMvKn0vc2t1cxq1AcpBG2Nsb3VkYmlsbGluZy5n",
             "b29nbGVhcGlzLmNvbdJBkwFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2Nsb3VkLWJpbGxpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
             "YXV0aC9jbG91ZC1iaWxsaW5nLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2ds",
@@ -118,6 +118,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Encapsulates a single service in Google Cloud Platform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -170,7 +171,7 @@ namespace Google.Cloud.Billing.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name for the service.
-    /// Example: "services/DA34-426B-A397"
+    /// Example: "services/6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +187,7 @@ namespace Google.Cloud.Billing.V1 {
     private string serviceId_ = "";
     /// <summary>
     /// The identifier for the service.
-    /// Example: "DA34-426B-A397"
+    /// Example: "6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -434,8 +435,9 @@ namespace Google.Cloud.Billing.V1 {
   }
 
   /// <summary>
-  /// Encapsulates a single SKU in Google Cloud Platform
+  /// Encapsulates a single SKU in Google Cloud
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sku : pb::IMessage<Sku>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -492,7 +494,7 @@ namespace Google.Cloud.Billing.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name for the SKU.
-    /// Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
+    /// Example: "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -508,7 +510,7 @@ namespace Google.Cloud.Billing.V1 {
     private string skuId_ = "";
     /// <summary>
     /// The identifier for the SKU.
-    /// Example: "AA95-CD31-42FE"
+    /// Example: "D041-B8A1-6E0B"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -913,6 +915,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the category hierarchy of a SKU.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Category : pb::IMessage<Category>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1231,6 +1234,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the pricing information for a SKU at a single point of time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PricingInfo : pb::IMessage<PricingInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1633,6 +1637,7 @@ namespace Google.Cloud.Billing.V1 {
   /// next 80GB is priced at $10 per GB followed by $5 per GB for additional
   /// usage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PricingExpression : pb::IMessage<PricingExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2077,6 +2082,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <summary>
       /// The price rate indicating starting usage and its corresponding price.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TierRate : pb::IMessage<TierRate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2329,6 +2335,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the aggregation level and interval for pricing of a single SKU.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationInfo : pb::IMessage<AggregationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2630,6 +2637,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Encapsulates the geographic taxonomy data for a sku.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeoTaxonomy : pb::IMessage<GeoTaxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2887,6 +2895,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Request message for `ListServices`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3124,6 +3133,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Response message for `ListServices`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3350,6 +3360,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Request message for `ListSkus`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSkusRequest : pb::IMessage<ListSkusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3404,7 +3415,7 @@ namespace Google.Cloud.Billing.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the service.
-    /// Example: "services/DA34-426B-A397"
+    /// Example: "services/6F81-5844-456A"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3778,6 +3789,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Response message for `ListSkus`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSkusResponse : pb::IMessage<ListSkusResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

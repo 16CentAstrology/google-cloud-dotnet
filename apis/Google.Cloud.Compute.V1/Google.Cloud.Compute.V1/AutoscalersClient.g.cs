@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -287,14 +287,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AutoscalersClient.Create(callInvoker, Settings, Logger);
+            return AutoscalersClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AutoscalersClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AutoscalersClient.Create(callInvoker, Settings, Logger);
+            return AutoscalersClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -388,7 +388,7 @@ namespace Google.Cloud.Compute.V1
         public virtual Autoscalers.AutoscalersClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -397,7 +397,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -408,7 +408,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -423,16 +423,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListAutoscalersRequest
+        public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListAutoscalersRequest request = new AggregatedListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -449,13 +458,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListAutoscalersRequest
+        public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListAutoscalersRequest request = new AggregatedListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified autoscaler.
@@ -810,14 +828,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Autoscaler"/> resources.</returns>
-        public virtual gax::PagedEnumerable<AutoscalerList, Autoscaler> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListAutoscalersRequest
+        public virtual gax::PagedEnumerable<AutoscalerList, Autoscaler> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalersRequest request = new ListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of autoscalers contained within the specified zone.
@@ -838,14 +865,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Autoscaler"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<AutoscalerList, Autoscaler> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListAutoscalersRequest
+        public virtual gax::PagedAsyncEnumerable<AutoscalerList, Autoscaler> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoscalersRequest request = new ListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -1106,7 +1142,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             AutoscalersSettings effectiveSettings = settings ?? AutoscalersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchOperationsSettings, logger);
@@ -1171,7 +1211,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_UpdateAutoscalerRequest(ref UpdateAutoscalerRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1183,7 +1223,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
+        /// Retrieves an aggregated list of autoscalers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

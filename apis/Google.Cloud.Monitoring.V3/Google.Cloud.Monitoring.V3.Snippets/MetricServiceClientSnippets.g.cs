@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Monitoring.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Monitoring.V3;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -700,6 +701,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             {
                 Filter = "",
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                ActiveOnly = false,
             };
             // Make the request
             PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(request);
@@ -749,6 +751,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             {
                 Filter = "",
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                ActiveOnly = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(request);

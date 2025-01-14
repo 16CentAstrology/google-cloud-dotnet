@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.DataCatalog.V1
 {
@@ -271,14 +271,14 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PolicyTagManagerClient.Create(callInvoker, Settings, Logger);
+            return PolicyTagManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PolicyTagManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PolicyTagManagerClient.Create(callInvoker, Settings, Logger);
+            return PolicyTagManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -763,13 +763,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Taxonomy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTaxonomies(new ListTaxonomiesRequest
+        public virtual gax::PagedEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTaxonomiesRequest request = new ListTaxonomiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTaxonomies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all taxonomies in a project in a particular location that you
@@ -788,13 +797,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Taxonomy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTaxonomiesAsync(new ListTaxonomiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTaxonomiesRequest request = new ListTaxonomiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTaxonomiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all taxonomies in a project in a particular location that you
@@ -813,13 +831,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Taxonomy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTaxonomies(new ListTaxonomiesRequest
+        public virtual gax::PagedEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTaxonomiesRequest request = new ListTaxonomiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTaxonomies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all taxonomies in a project in a particular location that you
@@ -838,13 +865,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Taxonomy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTaxonomiesAsync(new ListTaxonomiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTaxonomiesResponse, Taxonomy> ListTaxonomiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTaxonomiesRequest request = new ListTaxonomiesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTaxonomiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a taxonomy.
@@ -1349,13 +1385,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PolicyTag"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyTags(new ListPolicyTagsRequest
+        public virtual gax::PagedEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyTagsRequest request = new ListPolicyTagsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyTags(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all policy tags in a taxonomy.
@@ -1373,13 +1418,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PolicyTag"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyTagsAsync(new ListPolicyTagsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyTagsRequest request = new ListPolicyTagsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyTagsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all policy tags in a taxonomy.
@@ -1397,13 +1451,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PolicyTag"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTags(TaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyTags(new ListPolicyTagsRequest
+        public virtual gax::PagedEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTags(TaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyTagsRequest request = new ListPolicyTagsRequest
             {
                 ParentAsTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyTags(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all policy tags in a taxonomy.
@@ -1421,13 +1484,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PolicyTag"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTagsAsync(TaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPolicyTagsAsync(new ListPolicyTagsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPolicyTagsResponse, PolicyTag> ListPolicyTagsAsync(TaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPolicyTagsRequest request = new ListPolicyTagsRequest
             {
                 ParentAsTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPolicyTagsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a policy tag.
@@ -1666,7 +1738,11 @@ namespace Google.Cloud.DataCatalog.V1
         {
             GrpcClient = grpcClient;
             PolicyTagManagerSettings effectiveSettings = settings ?? PolicyTagManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTaxonomy = clientHelper.BuildApiCall<CreateTaxonomyRequest, Taxonomy>("CreateTaxonomy", grpcClient.CreateTaxonomyAsync, grpcClient.CreateTaxonomy, effectiveSettings.CreateTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTaxonomy);

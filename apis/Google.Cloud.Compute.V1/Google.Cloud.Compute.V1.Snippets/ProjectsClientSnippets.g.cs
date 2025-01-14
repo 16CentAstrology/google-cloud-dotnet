@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -1286,6 +1287,136 @@ namespace Google.Cloud.Compute.V1.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await projectsClient.PollOnceMoveInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCloudArmorTier</summary>
+        public void SetCloudArmorTierRequestObject()
+        {
+            // Snippet: SetCloudArmorTier(SetCloudArmorTierProjectRequest, CallSettings)
+            // Create client
+            ProjectsClient projectsClient = ProjectsClient.Create();
+            // Initialize request argument(s)
+            SetCloudArmorTierProjectRequest request = new SetCloudArmorTierProjectRequest
+            {
+                RequestId = "",
+                ProjectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = projectsClient.SetCloudArmorTier(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = projectsClient.PollOnceSetCloudArmorTier(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCloudArmorTierAsync</summary>
+        public async Task SetCloudArmorTierRequestObjectAsync()
+        {
+            // Snippet: SetCloudArmorTierAsync(SetCloudArmorTierProjectRequest, CallSettings)
+            // Additional: SetCloudArmorTierAsync(SetCloudArmorTierProjectRequest, CancellationToken)
+            // Create client
+            ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
+            // Initialize request argument(s)
+            SetCloudArmorTierProjectRequest request = new SetCloudArmorTierProjectRequest
+            {
+                RequestId = "",
+                ProjectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await projectsClient.SetCloudArmorTierAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await projectsClient.PollOnceSetCloudArmorTierAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCloudArmorTier</summary>
+        public void SetCloudArmorTier()
+        {
+            // Snippet: SetCloudArmorTier(string, ProjectsSetCloudArmorTierRequest, CallSettings)
+            // Create client
+            ProjectsClient projectsClient = ProjectsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = projectsClient.SetCloudArmorTier(project, projectsSetCloudArmorTierRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = projectsClient.PollOnceSetCloudArmorTier(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetCloudArmorTierAsync</summary>
+        public async Task SetCloudArmorTierAsync()
+        {
+            // Snippet: SetCloudArmorTierAsync(string, ProjectsSetCloudArmorTierRequest, CallSettings)
+            // Additional: SetCloudArmorTierAsync(string, ProjectsSetCloudArmorTierRequest, CancellationToken)
+            // Create client
+            ProjectsClient projectsClient = await ProjectsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            ProjectsSetCloudArmorTierRequest projectsSetCloudArmorTierRequestResource = new ProjectsSetCloudArmorTierRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await projectsClient.SetCloudArmorTierAsync(project, projectsSetCloudArmorTierRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await projectsClient.PollOnceSetCloudArmorTierAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

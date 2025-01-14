@@ -1,11 +1,11 @@
 // Copyright 2015 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -23,9 +23,6 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     public sealed class ListObjectsOptions
     {
-        // TODO: We can't currently return both objects *and* prefixes. Should we have a separate ListPrefixes method?
-        // Something more complex? It's unclear how common this is.
-
         /// <summary>
         /// Used to list in "directory mode". Only objects whose names (aside from the prefix) do not contain the delimiter
         /// will be returned.
@@ -36,6 +33,12 @@ namespace Google.Cloud.Storage.V1
         /// If true, objects that end in exactly one instance of delimiter will have their metadata included in the returned.
         /// </summary>
         public bool? IncludeTrailingDelimiter { get; set; }
+
+        /// <summary>
+        /// If true, will also include folders and managed folders, besides objects, in the returned prefixes.
+        /// Only applicable if delimiter is set to '/'.
+        /// </summary>
+        public bool? IncludeFoldersAsPrefixes { get; set; }
 
         /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;
@@ -52,9 +55,20 @@ namespace Google.Cloud.Storage.V1
         public bool? Versions { get; set; }
 
         /// <summary>
+        /// If true, only soft-deleted object versions will be listed. The default is false.
+        /// </summary>
+        public bool? SoftDeletedOnly { get; set; }
+
+        /// <summary>
         /// The projection to retrieve.
         /// </summary>
         public Projection? Projection { get; set; }
+
+        /// <summary>
+        /// A glob pattern used to filter results. See https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-object-glob
+        /// for more details.
+        /// </summary>
+        public string MatchGlob { get; set; }
 
         /// <summary>
         /// If set, this is the ID of the project which will be billed for the request.
@@ -93,6 +107,11 @@ namespace Google.Cloud.Storage.V1
         public string EndOffset { get; set; }
 
         /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -110,9 +129,17 @@ namespace Google.Cloud.Storage.V1
             {
                 request.IncludeTrailingDelimiter = IncludeTrailingDelimiter;
             }
+            if (IncludeFoldersAsPrefixes != null)
+            {
+                request.IncludeFoldersAsPrefixes = IncludeFoldersAsPrefixes;
+            }
             if (Versions != null)
             {
                 request.Versions = Versions;
+            }
+            if (SoftDeletedOnly != null)
+            {
+                request.SoftDeleted = SoftDeletedOnly;
             }
             if (Projection != null)
             {
@@ -137,6 +164,10 @@ namespace Google.Cloud.Storage.V1
             if (EndOffset != null)
             {
                 request.EndOffset = EndOffset;
+            }
+            if (MatchGlob != null)
+            {
+                request.MatchGlob = MatchGlob;
             }
         }
     }

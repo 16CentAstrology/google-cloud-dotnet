@@ -1,11 +1,11 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+// Copyright 2016 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,12 +25,11 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
+using TraceOptions = Google.Cloud.Diagnostics.Common.TraceOptions;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
-    using static TestServerHelpers;
-    using TraceOptions = TraceOptions;
-
     public class ErrorReportingTest : IClassFixture<LogValidatingFixture>
     {
         private readonly string _testId;
@@ -148,7 +147,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         /// </summary>
         private class ErrorReportingTestApplication : BaseStartup
         {
-            private static string ProjectId = TestEnvironment.GetTestProjectId();
+            private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
             public override void ConfigureServices(IServiceCollection services) =>
                 base.ConfigureServices(services
@@ -176,7 +175,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 
         private class ErrorReportingCustomClientTestApplication : BaseStartup
         {
-            private static string ProjectId = TestEnvironment.GetTestProjectId();
+            private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
             public override void ConfigureServices(IServiceCollection services) =>
                 base.ConfigureServices(services

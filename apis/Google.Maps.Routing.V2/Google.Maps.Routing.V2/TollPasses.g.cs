@@ -25,7 +25,7 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RvbGxfcGFzc2VzLnByb3RvEhZn",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyKpMRCghUb2xsUGFzcxIZChVUT0xMX1BB",
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyKv4RCghUb2xsUGFzcxIZChVUT0xMX1BB",
             "U1NfVU5TUEVDSUZJRUQQABIQCgxBVV9FVE9MTF9UQUcQUhIPCgtBVV9FV0FZ",
             "X1RBRxBTEgwKCEFVX0xJTktUEAISDwoLQVJfVEVMRVBBU0UQAxITCg9CUl9B",
             "VVRPX0VYUFJFU08QURIQCgxCUl9DT05FQ1RDQVIQBxIQCgxCUl9NT1ZFX01B",
@@ -35,50 +35,53 @@ namespace Google.Maps.Routing.V2 {
             "RUFXQVlfVFJBTlNJVF9DQVJEEFUSHgoaQ0FfVVNfQkxVRV9XQVRFUl9FREdF",
             "X1BBU1MQEhITCg9DQV9VU19DT05ORVhJT04QExIUChBDQV9VU19ORVhVU19D",
             "QVJEEBQSDQoJSURfRV9UT0xMEBASDQoJSU5fRkFTVEFHEE4SHAoYSU5fTE9D",
-            "QUxfSFBfUExBVEVfRVhFTVBUEE8SCwoHTVhfSUFWRRBaEgsKB01YX1BBU0UQ",
-            "WxIQCgxNWF9RVUlDS1BBU1MQXRIiCh5NWF9TSVNURU1BX1RFTEVQRUFKRV9D",
-            "SElIVUFIVUEQWRIPCgtNWF9UQUdfSUFWRRAMEhIKDk1YX1RBR19URUxFVklB",
-            "EA0SDgoKTVhfVEVMRVZJQRBcEg4KCk1YX1ZJQVBBU1MQDhIWChJVU19BTF9G",
-            "UkVFRE9NX1BBU1MQFRIyCi5VU19BS19BTlRPTl9BTkRFUlNPTl9UVU5ORUxf",
-            "Qk9PS19PRl8xMF9USUNLRVRTEBYSEQoNVVNfQ0FfRkFTVFJBSxAEEh0KGVVT",
-            "X0NBX0ZBU1RSQUtfQ0FWX1NUSUNLRVIQVhIVChFVU19DT19FWFBSRVNTVE9M",
-            "TBAXEhEKDVVTX0NPX0dPX1BBU1MQGBISCg5VU19ERV9FWlBBU1NERRAZEiQK",
-            "IFVTX0ZMX0JPQl9TSUtFU19UT0xMX0JSSURHRV9QQVNTEEESOgo2VVNfRkxf",
-            "RFVORVNfQ09NTVVOSVRZX0RFVkVMT1BNRU5UX0RJU1RSSUNUX0VYUFJFU1ND",
-            "QVJEEEISDwoLVVNfRkxfRVBBU1MQQxIYChRVU19GTF9HSUJBX1RPTExfUEFT",
-            "UxBEEhAKDFVTX0ZMX0xFRVdBWRBFEhEKDVVTX0ZMX1NVTlBBU1MQRhIVChFV",
-            "U19GTF9TVU5QQVNTX1BSTxBHEhIKDlVTX0lMX0VaUEFTU0lMEEkSDwoLVVNf",
-            "SUxfSVBBU1MQSBISCg5VU19JTl9FWlBBU1NJThAaEhoKFlVTX0tTX0JFU1RQ",
-            "QVNTX0hPUklaT04QGxIOCgpVU19LU19LVEFHEBwSFgoSVVNfS1NfTkFUSU9O",
-            "QUxQQVNTEB0SGwoXVVNfS1NfUFJFUEFTU19FTElURVBBU1MQHhITCg9VU19L",
-            "WV9SSVZFUkxJTksQHxITCg9VU19MQV9HRUFVWFBBU1MQIBISCg5VU19MQV9U",
-            "T0xMX1RBRxAhEhIKDlVTX01BX0VaUEFTU01BEAYSEgoOVVNfTURfRVpQQVNT",
-            "TUQQIhISCg5VU19NRV9FWlBBU1NNRRAjEjEKLVVTX01JX0FNQkFTU0FET1Jf",
-            "QlJJREdFX1BSRU1JRVJfQ09NTVVURVJfQ0FSRBAkEhAKDFVTX01JX0JDUEFT",
-            "UxBeEikKJVVTX01JX0dST1NTRV9JTEVfVE9MTF9CUklER0VfUEFTU19UQUcQ",
-            "JRIWChJVU19NSV9JUV9QUk9YX0NBUkQQJhIiCh5VU19NSV9NQUNLSU5BQ19C",
-            "UklER0VfTUFDX1BBU1MQJxIXChNVU19NSV9ORVhQUkVTU19UT0xMECgSEgoO",
-            "VVNfTU5fRVpQQVNTTU4QKRISCg5VU19OQ19FWlBBU1NOQxAqEhQKEFVTX05D",
-            "X1BFQUNIX1BBU1MQVxIUChBVU19OQ19RVUlDS19QQVNTECsSEgoOVVNfTkhf",
-            "RVpQQVNTTkgQUBIgChxVU19OSl9ET1dOQkVBQ0hfRVhQUkVTU19QQVNTEEsS",
-            "EgoOVVNfTkpfRVpQQVNTTkoQShIVChFVU19OWV9FWFBSRVNTUEFTUxBMEhIK",
-            "DlVTX05ZX0VaUEFTU05ZEE0SEgoOVVNfT0hfRVpQQVNTT0gQLBISCg5VU19Q",
-            "QV9FWlBBU1NQQRAtEhIKDlVTX1JJX0VaUEFTU1JJEC4SEQoNVVNfU0NfUEFM",
-            "UEFTUxAvEhIKDlVTX1RYX0JBTkNQQVNTEDASFgoSVVNfVFhfREVMX1JJT19Q",
-            "QVNTEDESFAoQVVNfVFhfRUZBU1RfUEFTUxAyEiEKHVVTX1RYX0VBR0xFX1BB",
-            "U1NfRVhQUkVTU19DQVJEEDMSEAoMVVNfVFhfRVBUT0xMEDQSEgoOVVNfVFhf",
-            "RVpfQ1JPU1MQNRIPCgtVU19UWF9FWlRBRxA2EhoKFlVTX1RYX0xBUkVET19U",
-            "UkFERV9UQUcQNxISCg5VU19UWF9QTFVTUEFTUxA4EhEKDVVTX1RYX1RPTExU",
-            "QUcQORIPCgtVU19UWF9UWFRBRxA6EhUKEVVTX1RYX1hQUkVTU19DQVJEEDsS",
-            "JwojVVNfVVRfQURBTVNfQVZFX1BBUktXQVlfRVhQUkVTU0NBUkQQPBISCg5V",
-            "U19WQV9FWlBBU1NWQRA9EhIKDlVTX1dBX0JSRUVaRUJZEBESFAoQVVNfV0Ff",
-            "R09PRF9UT19HTxABEhIKDlVTX1dWX0VaUEFTU1dWED4SIQodVVNfV1ZfTUVN",
-            "T1JJQUxfQlJJREdFX1RJQ0tFVFMQPxIjCh9VU19XVl9ORVdFTExfVE9MTF9C",
-            "UklER0VfVElDS0VUEEBCxAEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "Qg9Ub2xsUGFzc2VzUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBz",
-            "L3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYy",
-            "qgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRp",
-            "bmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "QUxfSFBfUExBVEVfRVhFTVBUEE8SCgoGSlBfRVRDEGISCwoHSlBfRVRDMhBj",
+            "EgsKB01YX0lBVkUQWhILCgdNWF9QQVNFEFsSEAoMTVhfUVVJQ0tQQVNTEF0S",
+            "IgoeTVhfU0lTVEVNQV9URUxFUEVBSkVfQ0hJSFVBSFVBEFkSDwoLTVhfVEFH",
+            "X0lBVkUQDBISCg5NWF9UQUdfVEVMRVZJQRANEg4KCk1YX1RFTEVWSUEQXBIO",
+            "CgpNWF9WSUFQQVNTEA4SFgoSVVNfQUxfRlJFRURPTV9QQVNTEBUSMgouVVNf",
+            "QUtfQU5UT05fQU5ERVJTT05fVFVOTkVMX0JPT0tfT0ZfMTBfVElDS0VUUxAW",
+            "EhEKDVVTX0NBX0ZBU1RSQUsQBBIdChlVU19DQV9GQVNUUkFLX0NBVl9TVElD",
+            "S0VSEFYSFQoRVVNfQ09fRVhQUkVTU1RPTEwQFxIRCg1VU19DT19HT19QQVNT",
+            "EBgSEgoOVVNfREVfRVpQQVNTREUQGRIkCiBVU19GTF9CT0JfU0lLRVNfVE9M",
+            "TF9CUklER0VfUEFTUxBBEjoKNlVTX0ZMX0RVTkVTX0NPTU1VTklUWV9ERVZF",
+            "TE9QTUVOVF9ESVNUUklDVF9FWFBSRVNTQ0FSRBBCEg8KC1VTX0ZMX0VQQVNT",
+            "EEMSGAoUVVNfRkxfR0lCQV9UT0xMX1BBU1MQRBIQCgxVU19GTF9MRUVXQVkQ",
+            "RRIRCg1VU19GTF9TVU5QQVNTEEYSFQoRVVNfRkxfU1VOUEFTU19QUk8QRxIS",
+            "Cg5VU19JTF9FWlBBU1NJTBBJEg8KC1VTX0lMX0lQQVNTEEgSEgoOVVNfSU5f",
+            "RVpQQVNTSU4QGhIaChZVU19LU19CRVNUUEFTU19IT1JJWk9OEBsSDgoKVVNf",
+            "S1NfS1RBRxAcEhYKElVTX0tTX05BVElPTkFMUEFTUxAdEhsKF1VTX0tTX1BS",
+            "RVBBU1NfRUxJVEVQQVNTEB4SEwoPVVNfS1lfUklWRVJMSU5LEB8SEwoPVVNf",
+            "TEFfR0VBVVhQQVNTECASEgoOVVNfTEFfVE9MTF9UQUcQIRISCg5VU19NQV9F",
+            "WlBBU1NNQRAGEhIKDlVTX01EX0VaUEFTU01EECISEgoOVVNfTUVfRVpQQVNT",
+            "TUUQIxIxCi1VU19NSV9BTUJBU1NBRE9SX0JSSURHRV9QUkVNSUVSX0NPTU1V",
+            "VEVSX0NBUkQQJBIQCgxVU19NSV9CQ1BBU1MQXhIpCiVVU19NSV9HUk9TU0Vf",
+            "SUxFX1RPTExfQlJJREdFX1BBU1NfVEFHECUSGgoSVVNfTUlfSVFfUFJPWF9D",
+            "QVJEECYaAggBEhAKDFVTX01JX0lRX1RBRxBfEiIKHlVTX01JX01BQ0tJTkFD",
+            "X0JSSURHRV9NQUNfUEFTUxAnEhcKE1VTX01JX05FWFBSRVNTX1RPTEwQKBIS",
+            "Cg5VU19NTl9FWlBBU1NNThApEhIKDlVTX05DX0VaUEFTU05DECoSFAoQVVNf",
+            "TkNfUEVBQ0hfUEFTUxBXEhQKEFVTX05DX1FVSUNLX1BBU1MQKxISCg5VU19O",
+            "SF9FWlBBU1NOSBBQEiAKHFVTX05KX0RPV05CRUFDSF9FWFBSRVNTX1BBU1MQ",
+            "SxISCg5VU19OSl9FWlBBU1NOShBKEhUKEVVTX05ZX0VYUFJFU1NQQVNTEEwS",
+            "EgoOVVNfTllfRVpQQVNTTlkQTRISCg5VU19PSF9FWlBBU1NPSBAsEhIKDlVT",
+            "X1BBX0VaUEFTU1BBEC0SEgoOVVNfUklfRVpQQVNTUkkQLhIRCg1VU19TQ19Q",
+            "QUxQQVNTEC8SEQoNVVNfVFhfQVZJX1RBRxBhEhIKDlVTX1RYX0JBTkNQQVNT",
+            "EDASFgoSVVNfVFhfREVMX1JJT19QQVNTEDESFAoQVVNfVFhfRUZBU1RfUEFT",
+            "UxAyEiEKHVVTX1RYX0VBR0xFX1BBU1NfRVhQUkVTU19DQVJEEDMSEAoMVVNf",
+            "VFhfRVBUT0xMEDQSEgoOVVNfVFhfRVpfQ1JPU1MQNRIPCgtVU19UWF9FWlRB",
+            "RxA2EhMKD1VTX1RYX0ZVRUdPX1RBRxBgEhoKFlVTX1RYX0xBUkVET19UUkFE",
+            "RV9UQUcQNxISCg5VU19UWF9QTFVTUEFTUxA4EhEKDVVTX1RYX1RPTExUQUcQ",
+            "ORIPCgtVU19UWF9UWFRBRxA6EhUKEVVTX1RYX1hQUkVTU19DQVJEEDsSJwoj",
+            "VVNfVVRfQURBTVNfQVZFX1BBUktXQVlfRVhQUkVTU0NBUkQQPBISCg5VU19W",
+            "QV9FWlBBU1NWQRA9EhIKDlVTX1dBX0JSRUVaRUJZEBESFAoQVVNfV0FfR09P",
+            "RF9UT19HTxABEhIKDlVTX1dWX0VaUEFTU1dWED4SIQodVVNfV1ZfTUVNT1JJ",
+            "QUxfQlJJREdFX1RJQ0tFVFMQPxISCg5VU19XVl9NT1ZfUEFTUxBkEiMKH1VT",
+            "X1dWX05FV0VMTF9UT0xMX0JSSURHRV9USUNLRVQQQELBAQoaY29tLmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjJCD1RvbGxQYXNzZXNQcm90b1ABWjpjbG91ZC5n",
+            "b29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91",
+            "dGluZ3BiogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29v",
+            "Z2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.TollPass), }, null, null));
@@ -96,7 +99,8 @@ namespace Google.Maps.Routing.V2 {
     /// </summary>
     [pbr::OriginalName("TOLL_PASS_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Sydney toll pass. See additional details at https://www.myetoll.com.au.
+    /// Sydney toll pass. See additional details at
+    /// https://www.myetoll.com.au.
     /// </summary>
     [pbr::OriginalName("AU_ETOLL_TAG")] AuEtollTag = 82,
     /// <summary>
@@ -178,6 +182,19 @@ namespace Google.Maps.Routing.V2 {
     /// India, HP state plate exemption.
     /// </summary>
     [pbr::OriginalName("IN_LOCAL_HP_PLATE_EXEMPT")] InLocalHpPlateExempt = 79,
+    /// <summary>
+    /// Japan
+    /// ETC. Electronic wireless system to collect tolls.
+    /// https://www.go-etc.jp/
+    /// </summary>
+    [pbr::OriginalName("JP_ETC")] JpEtc = 98,
+    /// <summary>
+    /// Japan
+    /// ETC2.0. New version of ETC with further discount and bidirectional
+    /// communication between devices on vehicles and antennas on the road.
+    /// https://www.go-etc.jp/etc2/index.html
+    /// </summary>
+    [pbr::OriginalName("JP_ETC2")] JpEtc2 = 99,
     /// <summary>
     /// Mexico toll pass.
     /// https://iave.capufe.gob.mx/#/
@@ -340,8 +357,14 @@ namespace Google.Maps.Routing.V2 {
     [pbr::OriginalName("US_MI_GROSSE_ILE_TOLL_BRIDGE_PASS_TAG")] UsMiGrosseIleTollBridgePassTag = 37,
     /// <summary>
     /// MI, USA.
+    /// Deprecated as this pass type no longer exists.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("US_MI_IQ_PROX_CARD")] UsMiIqProxCard = 38,
+    /// <summary>
+    /// MI, USA.
+    /// </summary>
+    [pbr::OriginalName("US_MI_IQ_TAG")] UsMiIqTag = 95,
     /// <summary>
     /// MI, USA.
     /// </summary>
@@ -405,6 +428,10 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// TX, USA.
     /// </summary>
+    [pbr::OriginalName("US_TX_AVI_TAG")] UsTxAviTag = 97,
+    /// <summary>
+    /// TX, USA.
+    /// </summary>
     [pbr::OriginalName("US_TX_BANCPASS")] UsTxBancpass = 48,
     /// <summary>
     /// TX, USA.
@@ -430,6 +457,10 @@ namespace Google.Maps.Routing.V2 {
     /// TX, USA.
     /// </summary>
     [pbr::OriginalName("US_TX_EZTAG")] UsTxEztag = 54,
+    /// <summary>
+    /// TX, USA.
+    /// </summary>
+    [pbr::OriginalName("US_TX_FUEGO_TAG")] UsTxFuegoTag = 96,
     /// <summary>
     /// TX, USA.
     /// </summary>
@@ -474,6 +505,10 @@ namespace Google.Maps.Routing.V2 {
     /// WV, USA.
     /// </summary>
     [pbr::OriginalName("US_WV_MEMORIAL_BRIDGE_TICKETS")] UsWvMemorialBridgeTickets = 63,
+    /// <summary>
+    /// WV, USA
+    /// </summary>
+    [pbr::OriginalName("US_WV_MOV_PASS")] UsWvMovPass = 100,
     /// <summary>
     /// WV, USA.
     /// </summary>

@@ -126,6 +126,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// a single Google Cloud project may belong to multiple Service Perimeter
   /// Bridges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServicePerimeter : pb::IMessage<ServicePerimeter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -737,6 +738,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// `ServicePerimeterConfig` specifies a set of Google Cloud resources that
   /// describe specific Service Perimeter configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServicePerimeterConfig : pb::IMessage<ServicePerimeterConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1142,6 +1144,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// Specifies how APIs are allowed to communicate within the Service
       /// Perimeter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VpcAccessibleServices : pb::IMessage<VpcAccessibleServices>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1371,6 +1374,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// An allowed method or permission of a service specified in [ApiOperation]
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MethodSelector : pb::IMessage<MethodSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1435,10 +1439,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Method {
-          get { return kindCase_ == KindOneofCase.Method ? (string) kind_ : ""; }
+          get { return HasMethod ? (string) kind_ : ""; }
           set {
             kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             kindCase_ = KindOneofCase.Method;
+          }
+        }
+        /// <summary>Gets whether the "method" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMethod {
+          get { return kindCase_ == KindOneofCase.Method; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "method" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMethod() {
+          if (HasMethod) {
+            ClearKind();
           }
         }
 
@@ -1452,10 +1470,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Permission {
-          get { return kindCase_ == KindOneofCase.Permission ? (string) kind_ : ""; }
+          get { return HasPermission ? (string) kind_ : ""; }
           set {
             kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             kindCase_ = KindOneofCase.Permission;
+          }
+        }
+        /// <summary>Gets whether the "permission" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPermission {
+          get { return kindCase_ == KindOneofCase.Permission; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "permission" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPermission() {
+          if (HasPermission) {
+            ClearKind();
           }
         }
 
@@ -1505,8 +1537,8 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (kindCase_ == KindOneofCase.Method) hash ^= Method.GetHashCode();
-          if (kindCase_ == KindOneofCase.Permission) hash ^= Permission.GetHashCode();
+          if (HasMethod) hash ^= Method.GetHashCode();
+          if (HasPermission) hash ^= Permission.GetHashCode();
           hash ^= (int) kindCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1526,11 +1558,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             output.WriteRawTag(10);
             output.WriteString(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -1544,11 +1576,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             output.WriteRawTag(10);
             output.WriteString(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -1562,10 +1594,10 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Permission);
           }
           if (_unknownFields != null) {
@@ -1645,6 +1677,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// <summary>
       /// Identification for an API Operation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ApiOperation : pb::IMessage<ApiOperation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1882,6 +1915,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
       /// authorizes access from.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressSource : pb::IMessage<IngressSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1959,10 +1993,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AccessLevel {
-          get { return sourceCase_ == SourceOneofCase.AccessLevel ? (string) source_ : ""; }
+          get { return HasAccessLevel ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.AccessLevel;
+          }
+        }
+        /// <summary>Gets whether the "access_level" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAccessLevel {
+          get { return sourceCase_ == SourceOneofCase.AccessLevel; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "access_level" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAccessLevel() {
+          if (HasAccessLevel) {
+            ClearSource();
           }
         }
 
@@ -1980,10 +2028,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Resource {
-          get { return sourceCase_ == SourceOneofCase.Resource ? (string) source_ : ""; }
+          get { return HasResource ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Resource;
+          }
+        }
+        /// <summary>Gets whether the "resource" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResource {
+          get { return sourceCase_ == SourceOneofCase.Resource; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "resource" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResource() {
+          if (HasResource) {
+            ClearSource();
           }
         }
 
@@ -2033,8 +2095,8 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (sourceCase_ == SourceOneofCase.AccessLevel) hash ^= AccessLevel.GetHashCode();
-          if (sourceCase_ == SourceOneofCase.Resource) hash ^= Resource.GetHashCode();
+          if (HasAccessLevel) hash ^= AccessLevel.GetHashCode();
+          if (HasResource) hash ^= Resource.GetHashCode();
           hash ^= (int) sourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2054,11 +2116,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             output.WriteRawTag(10);
             output.WriteString(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             output.WriteRawTag(18);
             output.WriteString(Resource);
           }
@@ -2072,11 +2134,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             output.WriteRawTag(10);
             output.WriteString(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             output.WriteRawTag(18);
             output.WriteString(Resource);
           }
@@ -2090,10 +2152,10 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
           }
           if (_unknownFields != null) {
@@ -2177,6 +2239,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// the request. The request must satisfy what is defined in `sources` AND
       /// identity related fields in order to match.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressFrom : pb::IMessage<IngressFrom>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2443,6 +2506,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// must satisfy what is defined in `operations` AND `resources` in order to
       /// match.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressTo : pb::IMessage<IngressTo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2688,6 +2752,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// Individual ingress policies can be limited by restricting which
       /// services and/or actions they match using the `ingress_to` field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressPolicy : pb::IMessage<IngressPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2958,6 +3023,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
       /// which allows access in order for this request to succeed.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressFrom : pb::IMessage<EgressFrom>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3200,6 +3266,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// match `operations` AND `resources` fields in order to be allowed egress out
       /// of the perimeter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressTo : pb::IMessage<EgressTo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3486,6 +3553,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// and [EgressTo]
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressTo].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressPolicy : pb::IMessage<EgressPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

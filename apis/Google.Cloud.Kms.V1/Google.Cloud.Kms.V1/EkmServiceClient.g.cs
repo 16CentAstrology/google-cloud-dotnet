@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Kms.V1
 {
@@ -55,6 +55,7 @@ namespace Google.Cloud.Kms.V1
             UpdateEkmConnectionSettings = existing.UpdateEkmConnectionSettings;
             GetEkmConfigSettings = existing.GetEkmConfigSettings;
             UpdateEkmConfigSettings = existing.UpdateEkmConfigSettings;
+            VerifyConnectivitySettings = existing.VerifyConnectivitySettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -171,6 +172,18 @@ namespace Google.Cloud.Kms.V1
         public gaxgrpc::CallSettings UpdateEkmConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EkmServiceClient.VerifyConnectivity</c> and <c>EkmServiceClient.VerifyConnectivityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyConnectivitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -222,14 +235,14 @@ namespace Google.Cloud.Kms.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EkmServiceClient.Create(callInvoker, Settings, Logger);
+            return EkmServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<EkmServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EkmServiceClient.Create(callInvoker, Settings, Logger);
+            return EkmServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -368,13 +381,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnections(new ListEkmConnectionsRequest
+        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -394,13 +416,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnectionsAsync(new ListEkmConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -420,13 +451,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnections(new ListEkmConnectionsRequest
+        public virtual gax::PagedEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -446,13 +486,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EkmConnection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEkmConnectionsAsync(new ListEkmConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEkmConnectionsResponse, EkmConnection> ListEkmConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEkmConnectionsRequest request = new ListEkmConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEkmConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata for a given
@@ -1038,6 +1087,153 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<EkmConfig> UpdateEkmConfigAsync(EkmConfig ekmConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateEkmConfigAsync(ekmConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyConnectivityResponse VerifyConnectivity(VerifyConnectivityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(VerifyConnectivityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(VerifyConnectivityRequest request, st::CancellationToken cancellationToken) =>
+            VerifyConnectivityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyConnectivityResponse VerifyConnectivity(string name, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyConnectivity(new VerifyConnectivityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyConnectivityAsync(new VerifyConnectivityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(string name, st::CancellationToken cancellationToken) =>
+            VerifyConnectivityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyConnectivityResponse VerifyConnectivity(EkmConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyConnectivity(new VerifyConnectivityRequest
+            {
+                EkmConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(EkmConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyConnectivityAsync(new VerifyConnectivityRequest
+            {
+                EkmConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(EkmConnectionName name, st::CancellationToken cancellationToken) =>
+            VerifyConnectivityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EkmService client wrapper implementation, for convenient use.</summary>
@@ -1062,6 +1258,8 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<UpdateEkmConfigRequest, EkmConfig> _callUpdateEkmConfig;
 
+        private readonly gaxgrpc::ApiCall<VerifyConnectivityRequest, VerifyConnectivityResponse> _callVerifyConnectivity;
+
         /// <summary>
         /// Constructs a client wrapper for the EkmService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1072,7 +1270,11 @@ namespace Google.Cloud.Kms.V1
         {
             GrpcClient = grpcClient;
             EkmServiceSettings effectiveSettings = settings ?? EkmServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListEkmConnections = clientHelper.BuildApiCall<ListEkmConnectionsRequest, ListEkmConnectionsResponse>("ListEkmConnections", grpcClient.ListEkmConnectionsAsync, grpcClient.ListEkmConnections, effectiveSettings.ListEkmConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1093,6 +1295,9 @@ namespace Google.Cloud.Kms.V1
             _callUpdateEkmConfig = clientHelper.BuildApiCall<UpdateEkmConfigRequest, EkmConfig>("UpdateEkmConfig", grpcClient.UpdateEkmConfigAsync, grpcClient.UpdateEkmConfig, effectiveSettings.UpdateEkmConfigSettings).WithGoogleRequestParam("ekm_config.name", request => request.EkmConfig?.Name);
             Modify_ApiCall(ref _callUpdateEkmConfig);
             Modify_UpdateEkmConfigApiCall(ref _callUpdateEkmConfig);
+            _callVerifyConnectivity = clientHelper.BuildApiCall<VerifyConnectivityRequest, VerifyConnectivityResponse>("VerifyConnectivity", grpcClient.VerifyConnectivityAsync, grpcClient.VerifyConnectivity, effectiveSettings.VerifyConnectivitySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callVerifyConnectivity);
+            Modify_VerifyConnectivityApiCall(ref _callVerifyConnectivity);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1109,6 +1314,8 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_GetEkmConfigApiCall(ref gaxgrpc::ApiCall<GetEkmConfigRequest, EkmConfig> call);
 
         partial void Modify_UpdateEkmConfigApiCall(ref gaxgrpc::ApiCall<UpdateEkmConfigRequest, EkmConfig> call);
+
+        partial void Modify_VerifyConnectivityApiCall(ref gaxgrpc::ApiCall<VerifyConnectivityRequest, VerifyConnectivityResponse> call);
 
         partial void OnConstruction(EkmService.EkmServiceClient grpcClient, EkmServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1132,6 +1339,8 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_GetEkmConfigRequest(ref GetEkmConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateEkmConfigRequest(ref UpdateEkmConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifyConnectivityRequest(ref VerifyConnectivityRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -1283,6 +1492,38 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_UpdateEkmConfigRequest(ref request, ref callSettings);
             return _callUpdateEkmConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VerifyConnectivityResponse VerifyConnectivity(VerifyConnectivityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConnectivityRequest(ref request, ref callSettings);
+            return _callVerifyConnectivity.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies that Cloud KMS can successfully connect to the external key
+        /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+        /// If there is an error connecting to the EKM, this method returns a
+        /// FAILED_PRECONDITION status containing structured information as described
+        /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VerifyConnectivityResponse> VerifyConnectivityAsync(VerifyConnectivityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConnectivityRequest(ref request, ref callSettings);
+            return _callVerifyConnectivity.Async(request, callSettings);
         }
     }
 

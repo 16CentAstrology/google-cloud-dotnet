@@ -145,6 +145,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A collection of tests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TestFile : pb::IMessage<TestFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -326,6 +327,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A Test describes a single client method call and its expected result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Test : pb::IMessage<Test>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1012,6 +1014,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// Call to the DocumentRef.Get method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTest : pb::IMessage<GetTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1256,6 +1259,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// Call to DocumentRef.Create.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTest : pb::IMessage<CreateTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1583,6 +1587,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A call to DocumentRef.Set.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetTest : pb::IMessage<SetTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1957,6 +1962,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a map
   /// or dictionary.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTest : pb::IMessage<UpdateTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2331,6 +2337,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a list
   /// of field paths and their values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePathsTest : pb::IMessage<UpdatePathsTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2722,6 +2729,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A call to DocmentRef.Delete
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTest : pb::IMessage<DeleteTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3052,6 +3060,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// An option to the DocumentRef.Set call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetOption : pb::IMessage<SetOption>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3273,6 +3282,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTest : pb::IMessage<QueryTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3574,6 +3584,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Clause : pb::IMessage<Clause>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3688,10 +3699,24 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Offset {
-      get { return clauseCase_ == ClauseOneofCase.Offset ? (int) clause_ : 0; }
+      get { return HasOffset ? (int) clause_ : 0; }
       set {
         clause_ = value;
         clauseCase_ = ClauseOneofCase.Offset;
+      }
+    }
+    /// <summary>Gets whether the "offset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOffset {
+      get { return clauseCase_ == ClauseOneofCase.Offset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "offset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOffset() {
+      if (HasOffset) {
+        ClearClause();
       }
     }
 
@@ -3700,10 +3725,24 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Limit {
-      get { return clauseCase_ == ClauseOneofCase.Limit ? (int) clause_ : 0; }
+      get { return HasLimit ? (int) clause_ : 0; }
       set {
         clause_ = value;
         clauseCase_ = ClauseOneofCase.Limit;
+      }
+    }
+    /// <summary>Gets whether the "limit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLimit {
+      get { return clauseCase_ == ClauseOneofCase.Limit; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "limit" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLimit() {
+      if (HasLimit) {
+        ClearClause();
       }
     }
 
@@ -3818,8 +3857,8 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (clauseCase_ == ClauseOneofCase.Select) hash ^= Select.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.Where) hash ^= Where.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.OrderBy) hash ^= OrderBy.GetHashCode();
-      if (clauseCase_ == ClauseOneofCase.Offset) hash ^= Offset.GetHashCode();
-      if (clauseCase_ == ClauseOneofCase.Limit) hash ^= Limit.GetHashCode();
+      if (HasOffset) hash ^= Offset.GetHashCode();
+      if (HasLimit) hash ^= Limit.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.StartAt) hash ^= StartAt.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.StartAfter) hash ^= StartAfter.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.EndAt) hash ^= EndAt.GetHashCode();
@@ -3855,11 +3894,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         output.WriteRawTag(32);
         output.WriteInt32(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         output.WriteRawTag(40);
         output.WriteInt32(Limit);
       }
@@ -3901,11 +3940,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         output.WriteRawTag(32);
         output.WriteInt32(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         output.WriteRawTag(40);
         output.WriteInt32(Limit);
       }
@@ -3944,10 +3983,10 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (clauseCase_ == ClauseOneofCase.OrderBy) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
       }
       if (clauseCase_ == ClauseOneofCase.StartAt) {
@@ -4204,6 +4243,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Select : pb::IMessage<Select>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4382,6 +4422,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Where : pb::IMessage<Where>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4654,6 +4695,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrderBy : pb::IMessage<OrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4892,6 +4934,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cursor : pb::IMessage<Cursor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5119,6 +5162,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocSnapshot : pb::IMessage<DocSnapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5345,6 +5389,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldPath : pb::IMessage<FieldPath>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5536,6 +5581,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// should either change their client's ID for testing,
   /// or change the ID in the tests before running them.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListenTest : pb::IMessage<ListenTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5777,6 +5823,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Snapshot : pb::IMessage<Snapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6027,6 +6074,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocChange : pb::IMessage<DocChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

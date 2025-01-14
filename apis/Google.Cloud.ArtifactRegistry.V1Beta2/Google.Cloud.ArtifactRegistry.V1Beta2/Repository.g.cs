@@ -95,6 +95,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// A Repository for storing artifacts with a specific format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Repository : pb::IMessage<Repository>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -478,7 +479,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -668,6 +669,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
       /// Provides additional configuration details for repositories of the maven
       /// format type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MavenRepositoryConfig : pb::IMessage<MavenRepositoryConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -937,6 +939,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to list repositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRepositoriesRequest : pb::IMessage<ListRepositoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1212,6 +1215,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The response from listing repositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRepositoriesResponse : pb::IMessage<ListRepositoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1437,6 +1441,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to retrieve a repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRepositoryRequest : pb::IMessage<GetRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1632,6 +1637,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to create a new repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRepositoryRequest : pb::IMessage<CreateRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1916,6 +1922,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to update a repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateRepositoryRequest : pb::IMessage<UpdateRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2171,6 +2178,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to delete a repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRepositoryRequest : pb::IMessage<DeleteRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

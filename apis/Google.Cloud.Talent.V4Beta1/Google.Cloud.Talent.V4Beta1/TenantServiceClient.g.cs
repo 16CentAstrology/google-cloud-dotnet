@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Talent.V4Beta1
 {
@@ -187,14 +187,14 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TenantServiceClient.Create(callInvoker, Settings, Logger);
+            return TenantServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TenantServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TenantServiceClient.Create(callInvoker, Settings, Logger);
+            return TenantServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -784,13 +784,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tenant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTenantsResponse, Tenant> ListTenants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTenants(new ListTenantsRequest
+        public virtual gax::PagedEnumerable<ListTenantsResponse, Tenant> ListTenants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTenantsRequest request = new ListTenantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTenants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tenants associated with the project.
@@ -811,13 +820,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tenant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTenantsResponse, Tenant> ListTenantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTenantsAsync(new ListTenantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTenantsResponse, Tenant> ListTenantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTenantsRequest request = new ListTenantsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTenantsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tenants associated with the project.
@@ -838,13 +856,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tenant"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTenantsResponse, Tenant> ListTenants(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTenants(new ListTenantsRequest
+        public virtual gax::PagedEnumerable<ListTenantsResponse, Tenant> ListTenants(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTenantsRequest request = new ListTenantsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTenants(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tenants associated with the project.
@@ -865,13 +892,22 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tenant"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTenantsResponse, Tenant> ListTenantsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTenantsAsync(new ListTenantsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTenantsResponse, Tenant> ListTenantsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTenantsRequest request = new ListTenantsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTenantsAsync(request, callSettings);
+        }
     }
 
     /// <summary>TenantService client wrapper implementation, for convenient use.</summary>
@@ -900,7 +936,11 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             GrpcClient = grpcClient;
             TenantServiceSettings effectiveSettings = settings ?? TenantServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateTenant = clientHelper.BuildApiCall<CreateTenantRequest, Tenant>("CreateTenant", grpcClient.CreateTenantAsync, grpcClient.CreateTenant, effectiveSettings.CreateTenantSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTenant);
             Modify_CreateTenantApiCall(ref _callCreateTenant);

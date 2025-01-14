@@ -1,5 +1,45 @@
 # Version history
 
+## Version 3.0.0-beta09, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.0.0-beta08, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 7707366](https://github.com/googleapis/google-cloud-dotnet/commit/77073662b153c73c7f9a869ede1376f4c7a12661))
+
+## Version 3.0.0-beta07, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.0.0-beta06, released 2024-01-16
+
+### New features
+
+- Added field `ImportSshPublicKeyRequest.regions` ([commit 6d6fe74](https://github.com/googleapis/google-cloud-dotnet/commit/6d6fe7487ba6998ad5749ef1b52bb43961647be0))
+
+## Version 3.0.0-beta05, released 2023-10-30
+
+### New features
+
+- Location-based HTTP binding for SignSshPublicKey ([commit ff031f2](https://github.com/googleapis/google-cloud-dotnet/commit/ff031f2f1d40c147ad8c078f09b3fe09c7a23615))
+
+## Version 3.0.0-beta04, released 2023-10-02
+
+### New features
+
+- Added SecurityKey.device_nickname ([commit 37ff7f1](https://github.com/googleapis/google-cloud-dotnet/commit/37ff7f1392bd794af3bd44281df320f8ff4c0e91))
+
+## Version 3.0.0-beta03, released 2023-08-16
+
+### New features
+
+- Launch signSshPublicKey in beta ([commit 19c34de](https://github.com/googleapis/google-cloud-dotnet/commit/19c34de1802c255a1e87a7f3a136ce07aaab2ec0))
+
 ## Version 3.0.0-beta02, released 2023-02-08
 
 ### New features

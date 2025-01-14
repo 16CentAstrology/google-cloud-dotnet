@@ -47,6 +47,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Defines flags that are used to run the diagnostic tool
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiagnosticConfig : pb::IMessage<DiagnosticConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

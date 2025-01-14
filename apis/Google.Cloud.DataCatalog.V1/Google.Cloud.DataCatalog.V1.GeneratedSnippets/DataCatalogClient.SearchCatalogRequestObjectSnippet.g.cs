@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_SearchCatalog_sync]
     using Google.Api.Gax;
@@ -41,6 +41,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
                 Query = "",
                 OrderBy = "",
                 Scope = new SearchCatalogRequest.Types.Scope(),
+                AdminSearch = false,
             };
             // Make the request
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(request);

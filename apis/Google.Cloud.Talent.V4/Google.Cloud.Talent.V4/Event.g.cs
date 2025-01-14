@@ -63,6 +63,7 @@ namespace Google.Cloud.Talent.V4 {
   /// service to perform optimally. The number of events sent must be consistent
   /// with other calls, such as job searches, issued to the service by the client.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientEvent : pb::IMessage<ClientEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -476,6 +477,7 @@ namespace Google.Cloud.Talent.V4 {
   /// An event issued when a job seeker interacts with the application that
   /// implements Cloud Talent Solution.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobEvent : pb::IMessage<JobEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

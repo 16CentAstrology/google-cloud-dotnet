@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
@@ -65,6 +65,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return AgentReflection.Descriptor;
             yield return AudioConfigReflection.Descriptor;
             yield return ChangelogReflection.Descriptor;
+            yield return DataStoreConnectionReflection.Descriptor;
             yield return DeploymentReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
@@ -72,9 +73,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return FlowReflection.Descriptor;
             yield return FulfillmentReflection.Descriptor;
             yield return GcsReflection.Descriptor;
+            yield return GenerativeSettingsReflection.Descriptor;
+            yield return GeneratorReflection.Descriptor;
+            yield return ImportStrategyReflection.Descriptor;
+            yield return InlineReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return PageReflection.Descriptor;
             yield return ResponseMessageReflection.Descriptor;
+            yield return SafetySettingsReflection.Descriptor;
             yield return SecuritySettingsReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SessionEntityTypeReflection.Descriptor;

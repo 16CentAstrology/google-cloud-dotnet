@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Jobs_GetJob_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetJobRequestObjectAsync()
         {
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcrv::GetJobRequest request = new gcrv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
-            Job response = await jobsClient.GetJobAsync(request);
+            gcrv::Job response = await jobsClient.GetJobAsync(request);
         }
     }
     // [END run_v2_generated_Jobs_GetJob_async]

@@ -169,13 +169,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             "dXRfbWVzc2FnZRgEIAEoCTKCBQoGU3BlZWNoEqUBCglSZWNvZ25pemUSLy5n",
             "b29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5SZWNvZ25pemVSZXF1ZXN0",
             "GjAuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuUmVjb2duaXplUmVz",
-            "cG9uc2UiNYLT5JMCICIbL3YxcDFiZXRhMS9zcGVlY2g6cmVjb2duaXplOgEq",
-            "2kEMY29uZmlnLGF1ZGlvEvIBChRMb25nUnVubmluZ1JlY29nbml6ZRI6Lmdv",
+            "cG9uc2UiNdpBDGNvbmZpZyxhdWRpb4LT5JMCICIbL3YxcDFiZXRhMS9zcGVl",
+            "Y2g6cmVjb2duaXplOgEqEvIBChRMb25nUnVubmluZ1JlY29nbml6ZRI6Lmdv",
             "b2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLkxvbmdSdW5uaW5nUmVjb2du",
-            "aXplUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24if4LT",
-            "5JMCKyImL3YxcDFiZXRhMS9zcGVlY2g6bG9uZ3J1bm5pbmdyZWNvZ25pemU6",
-            "ASraQQxjb25maWcsYXVkaW/KQTwKHExvbmdSdW5uaW5nUmVjb2duaXplUmVz",
-            "cG9uc2USHExvbmdSdW5uaW5nUmVjb2duaXplTWV0YWRhdGESjwEKElN0cmVh",
+            "aXplUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24if8pB",
+            "PAocTG9uZ1J1bm5pbmdSZWNvZ25pemVSZXNwb25zZRIcTG9uZ1J1bm5pbmdS",
+            "ZWNvZ25pemVNZXRhZGF0YdpBDGNvbmZpZyxhdWRpb4LT5JMCKyImL3YxcDFi",
+            "ZXRhMS9zcGVlY2g6bG9uZ3J1bm5pbmdyZWNvZ25pemU6ASoSjwEKElN0cmVh",
             "bWluZ1JlY29nbml6ZRI4Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGEx",
             "LlN0cmVhbWluZ1JlY29nbml6ZVJlcXVlc3QaOS5nb29nbGUuY2xvdWQuc3Bl",
             "ZWNoLnYxcDFiZXRhMS5TdHJlYW1pbmdSZWNvZ25pemVSZXNwb25zZSIAKAEw",
@@ -215,6 +215,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// The top-level message sent by the client for the `Recognize` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecognizeRequest : pb::IMessage<RecognizeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -470,6 +471,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// The top-level message sent by the client for the `LongRunningRecognize`
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LongRunningRecognizeRequest : pb::IMessage<LongRunningRecognizeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -773,6 +775,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Specifies an optional destination for the recognition results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscriptOutputConfig : pb::IMessage<TranscriptOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -832,10 +835,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsUri {
-      get { return outputTypeCase_ == OutputTypeOneofCase.GcsUri ? (string) outputType_ : ""; }
+      get { return HasGcsUri ? (string) outputType_ : ""; }
       set {
         outputType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         outputTypeCase_ = OutputTypeOneofCase.GcsUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsUri {
+      get { return outputTypeCase_ == OutputTypeOneofCase.GcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsUri() {
+      if (HasGcsUri) {
+        ClearOutputType();
       }
     }
 
@@ -883,7 +900,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) hash ^= GcsUri.GetHashCode();
+      if (HasGcsUri) hash ^= GcsUri.GetHashCode();
       hash ^= (int) outputTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -903,7 +920,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
@@ -917,7 +934,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
@@ -931,7 +948,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
       }
       if (_unknownFields != null) {
@@ -1004,6 +1021,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// `audio_content`. All subsequent messages must contain `audio_content` and
   /// must not contain a `streaming_config` message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingRecognizeRequest : pb::IMessage<StreamingRecognizeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1088,10 +1106,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AudioContent {
-      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
+      get { return HasAudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
       set {
         streamingRequest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         streamingRequestCase_ = StreamingRequestOneofCase.AudioContent;
+      }
+    }
+    /// <summary>Gets whether the "audio_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudioContent {
+      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "audio_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudioContent() {
+      if (HasAudioContent) {
+        ClearStreamingRequest();
       }
     }
 
@@ -1142,7 +1174,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) hash ^= AudioContent.GetHashCode();
+      if (HasAudioContent) hash ^= AudioContent.GetHashCode();
       hash ^= (int) streamingRequestCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1166,7 +1198,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -1184,7 +1216,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -1201,7 +1233,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AudioContent);
       }
       if (_unknownFields != null) {
@@ -1295,6 +1327,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides information to the recognizer that specifies how to process the
   /// request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingRecognitionConfig : pb::IMessage<StreamingRecognitionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1698,6 +1731,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <summary>
       /// Events that a timeout can be set on for voice activity.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VoiceActivityTimeout : pb::IMessage<VoiceActivityTimeout>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1957,6 +1991,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides information to the recognizer that specifies how to process the
   /// request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecognitionConfig : pb::IMessage<RecognitionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3270,6 +3305,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Config to enable speaker diarization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeakerDiarizationConfig : pb::IMessage<SpeakerDiarizationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3593,6 +3629,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Description of audio data to be recognized.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecognitionMetadata : pb::IMessage<RecognitionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4254,6 +4291,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides "hints" to the speech recognizer to favor specific words and phrases
   /// in the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechContext : pb::IMessage<SpeechContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4499,6 +4537,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
   /// See [content limits](https://cloud.google.com/speech-to-text/quotas#content).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4561,10 +4600,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Content ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearAudioSource();
       }
     }
 
@@ -4583,10 +4636,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Uri ? (string) audioSource_ : ""; }
+      get { return HasUri ? (string) audioSource_ : ""; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearAudioSource();
       }
     }
 
@@ -4636,8 +4703,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       hash ^= (int) audioSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4657,11 +4724,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
@@ -4675,11 +4742,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
@@ -4693,10 +4760,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (_unknownFields != null) {
@@ -4778,6 +4845,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// contains the result as zero or more sequential `SpeechRecognitionResult`
   /// messages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecognizeResponse : pb::IMessage<RecognizeResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5106,6 +5174,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// returned by the `GetOperation` call of the `google::longrunning::Operations`
   /// service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LongRunningRecognizeResponse : pb::IMessage<LongRunningRecognizeResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5530,6 +5599,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// included in the `metadata` field of the `Operation` returned by the
   /// `GetOperation` call of the `google::longrunning::Operations` service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LongRunningRecognizeMetadata : pb::IMessage<LongRunningRecognizeMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5963,6 +6033,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   ///     `speech_event_type`, or
   ///     one or more (repeated) `results`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingRecognizeResponse : pb::IMessage<StreamingRecognizeResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6478,6 +6549,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// A streaming speech recognition result corresponding to a portion of the audio
   /// that is currently being processed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6887,6 +6959,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// A speech recognition result corresponding to a portion of the audio.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechRecognitionResult : pb::IMessage<SpeechRecognitionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7208,6 +7281,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Alternative hypotheses (a.k.a. n-best list).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7483,6 +7557,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Word-specific information for recognized words.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WordInfo : pb::IMessage<WordInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7876,6 +7951,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Information on speech adaptation use in results
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechAdaptationInfo : pb::IMessage<SpeechAdaptationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

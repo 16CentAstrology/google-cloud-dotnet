@@ -33,11 +33,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "TkZPEAESCwoHV0FSTklORxACEgkKBUVSUk9SEAMSDAoIQ1JJVElDQUwQBCJf",
             "ChBWYWxpZGF0aW9uUmVzdWx0EksKEXZhbGlkYXRpb25fZXJyb3JzGAEgAygL",
             "MjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5WYWxpZGF0aW9u",
-            "RXJyb3JCrQEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGEx",
+            "RXJyb3JCqgEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGEx",
             "QhVWYWxpZGF0aW9uUmVzdWx0UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
             "by9kaWFsb2dmbG93L2FwaXYyYmV0YTEvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zs",
-            "b3dwYvgBAaICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRh",
-            "MWIGcHJvdG8z"));
+            "b3dwYqICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +52,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Represents a single validation error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationError : pb::IMessage<ValidationError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -122,16 +123,16 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// The names of the entries that the error is associated with.
     /// Format:
     ///
-    /// - "projects/&lt;Project ID>/agent", if the error is associated with the entire
+    /// - `projects/&lt;Project ID>/agent`, if the error is associated with the entire
     /// agent.
-    /// - "projects/&lt;Project ID>/agent/intents/&lt;Intent ID>", if the error is
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`, if the error is
     /// associated with certain intents.
-    /// - "projects/&lt;Project
-    /// ID>/agent/intents/&lt;Intent Id>/trainingPhrases/&lt;Training Phrase ID>", if the
-    /// error is associated with certain intent training phrases.
-    /// - "projects/&lt;Project ID>/agent/intents/&lt;Intent Id>/parameters/&lt;Parameter
-    /// ID>", if the error is associated with certain intent parameters.
-    /// - "projects/&lt;Project ID>/agent/entities/&lt;Entity ID>", if the error is
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent
+    /// Id>/trainingPhrases/&lt;Training Phrase ID>`, if the error is associated with
+    /// certain intent training phrases.
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent Id>/parameters/&lt;Parameter
+    /// ID>`, if the error is associated with certain intent parameters.
+    /// - `projects/&lt;Project ID>/agent/entities/&lt;Entity ID>`, if the error is
     /// associated with certain entities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -363,6 +364,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Represents the output of agent validation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationResult : pb::IMessage<ValidationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

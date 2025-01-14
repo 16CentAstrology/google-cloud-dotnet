@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcscv = Google.Cloud.Spanner.Common.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1
 {
@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigSettings = existing.DeleteInstanceConfigSettings;
             ListInstanceConfigOperationsSettings = existing.ListInstanceConfigOperationsSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
+            ListInstancePartitionsSettings = existing.ListInstancePartitionsSettings;
             GetInstanceSettings = existing.GetInstanceSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
@@ -68,6 +69,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            GetInstancePartitionSettings = existing.GetInstancePartitionSettings;
+            CreateInstancePartitionSettings = existing.CreateInstancePartitionSettings;
+            CreateInstancePartitionOperationsSettings = existing.CreateInstancePartitionOperationsSettings.Clone();
+            DeleteInstancePartitionSettings = existing.DeleteInstancePartitionSettings;
+            UpdateInstancePartitionSettings = existing.UpdateInstancePartitionSettings;
+            UpdateInstancePartitionOperationsSettings = existing.UpdateInstancePartitionOperationsSettings.Clone();
+            ListInstancePartitionOperationsSettings = existing.ListInstancePartitionOperationsSettings;
+            MoveInstanceSettings = existing.MoveInstanceSettings;
+            MoveInstanceOperationsSettings = existing.MoveInstanceOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -223,6 +233,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.ListInstancePartitions</c> and <c>InstanceAdminClient.ListInstancePartitionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInstancePartitionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.GetInstance</c> and <c>InstanceAdminClient.GetInstanceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -368,6 +391,136 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.GetInstancePartition</c> and <c>InstanceAdminClient.GetInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.CreateInstancePartition</c> and <c>InstanceAdminClient.CreateInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.CreateInstancePartition</c> and
+        /// <c>InstanceAdminClient.CreateInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateInstancePartitionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.DeleteInstancePartition</c> and <c>InstanceAdminClient.DeleteInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.UpdateInstancePartition</c> and <c>InstanceAdminClient.UpdateInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.UpdateInstancePartition</c> and
+        /// <c>InstanceAdminClient.UpdateInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateInstancePartitionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.ListInstancePartitionOperations</c> and
+        /// <c>InstanceAdminClient.ListInstancePartitionOperationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInstancePartitionOperationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.MoveInstance</c> and <c>InstanceAdminClient.MoveInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.MoveInstance</c> and
+        /// <c>InstanceAdminClient.MoveInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="InstanceAdminSettings"/> object.</returns>
         public InstanceAdminSettings Clone() => new InstanceAdminSettings(this);
@@ -411,14 +564,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return InstanceAdminClient.Create(callInvoker, Settings, Logger);
+            return InstanceAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<InstanceAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return InstanceAdminClient.Create(callInvoker, Settings, Logger);
+            return InstanceAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -533,6 +686,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,6 +698,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -551,6 +710,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -567,16 +729,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigs(new ListInstanceConfigsRequest
+        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -593,16 +767,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigsAsync(new ListInstanceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -619,16 +805,28 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigs(new ListInstanceConfigsRequest
+        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -645,13 +843,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigsAsync(new ListInstanceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information about a particular instance configuration.
@@ -765,41 +972,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             GetInstanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -814,41 +1021,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -863,41 +1070,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -939,41 +1146,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             lro::Operation<InstanceConfig, CreateInstanceConfigMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstanceConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -982,21 +1189,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1009,41 +1216,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1052,21 +1259,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1079,41 +1286,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1122,21 +1329,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1144,41 +1351,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CreateInstanceConfigAsync(parent, instanceConfig, instanceConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1187,21 +1394,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1214,41 +1421,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1257,21 +1464,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1284,41 +1491,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1327,21 +1534,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [parent][google.spanner.admin.instance.v1.CreateInstanceConfigRequest.parent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which to create the instance config.
-        /// Values are of the form `projects/&lt;project&gt;`.
+        /// Required. The name of the project in which to create the instance
+        /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
-        /// Required. The ID of the instance config to create.  Valid identifiers are
-        /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// Required. The ID of the instance configuration to create. Valid identifiers
+        /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
         /// characters in length. The `custom-` prefix is required to avoid name
-        /// conflicts with Google managed configurations.
+        /// conflicts with Google-managed configurations.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1349,16 +1556,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CreateInstanceConfigAsync(parent, instanceConfig, instanceConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1368,26 +1575,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1401,16 +1608,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1420,26 +1627,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1453,16 +1660,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1472,26 +1679,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1532,16 +1739,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             lro::Operation<InstanceConfig, UpdateInstanceConfigMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstanceConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1551,26 +1758,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1578,8 +1785,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
         /// </summary>
         /// <param name="instanceConfig">
-        /// Required. The user instance config to update, which must always include the
-        /// instance config name. Otherwise, only fields mentioned in
+        /// Required. The user instance configuration to update, which must always
+        /// include the instance configuration name. Otherwise, only fields mentioned
+        /// in
         /// [update_mask][google.spanner.admin.instance.v1.UpdateInstanceConfigRequest.update_mask]
         /// need be included. To prevent conflicts of concurrent updates,
         /// [etag][google.spanner.admin.instance.v1.InstanceConfig.reconciling] can
@@ -1603,16 +1811,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1622,26 +1830,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1649,8 +1857,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
         /// </summary>
         /// <param name="instanceConfig">
-        /// Required. The user instance config to update, which must always include the
-        /// instance config name. Otherwise, only fields mentioned in
+        /// Required. The user instance configuration to update, which must always
+        /// include the instance configuration name. Otherwise, only fields mentioned
+        /// in
         /// [update_mask][google.spanner.admin.instance.v1.UpdateInstanceConfigRequest.update_mask]
         /// need be included. To prevent conflicts of concurrent updates,
         /// [etag][google.spanner.admin.instance.v1.InstanceConfig.reconciling] can
@@ -1674,16 +1883,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -1693,26 +1902,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1720,8 +1929,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
         /// </summary>
         /// <param name="instanceConfig">
-        /// Required. The user instance config to update, which must always include the
-        /// instance config name. Otherwise, only fields mentioned in
+        /// Required. The user instance configuration to update, which must always
+        /// include the instance configuration name. Otherwise, only fields mentioned
+        /// in
         /// [update_mask][google.spanner.admin.instance.v1.UpdateInstanceConfigRequest.update_mask]
         /// need be included. To prevent conflicts of concurrent updates,
         /// [etag][google.spanner.admin.instance.v1.InstanceConfig.reconciling] can
@@ -1741,11 +1951,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             UpdateInstanceConfigAsync(instanceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1757,11 +1967,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1773,11 +1983,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1789,11 +1999,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1812,11 +2022,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1835,11 +2045,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1855,11 +2065,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1878,11 +2088,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1901,11 +2111,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1921,12 +2131,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -1940,12 +2150,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -1959,12 +2169,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -1972,7 +2182,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// from the most recently started operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of the instance config operations.
+        /// Required. The project of the instance configuration operations.
         /// Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -1985,21 +2195,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigOperations(new ListInstanceConfigOperationsRequest
+        public virtual gax::PagedEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigOperations(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2007,7 +2226,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// from the most recently started operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of the instance config operations.
+        /// Required. The project of the instance configuration operations.
         /// Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -2020,21 +2239,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigOperationsAsync(new ListInstanceConfigOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2042,7 +2270,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// from the most recently started operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of the instance config operations.
+        /// Required. The project of the instance configuration operations.
         /// Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -2055,21 +2283,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperations(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigOperations(new ListInstanceConfigOperationsRequest
+        public virtual gax::PagedEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperations(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigOperations(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2077,7 +2314,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// from the most recently started operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of the instance config operations.
+        /// Required. The project of the instance configuration operations.
         /// Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
@@ -2090,13 +2327,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperationsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstanceConfigOperationsAsync(new ListInstanceConfigOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigOperationsResponse, lro::Operation> ListInstanceConfigOperationsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstanceConfigOperationsRequest request = new ListInstanceConfigOperationsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstanceConfigOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in the given project.
@@ -2133,13 +2379,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in the given project.
@@ -2158,13 +2413,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in the given project.
@@ -2183,13 +2447,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in the given project.
@@ -2208,13 +2481,184 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information about a particular instance.
@@ -2329,7 +2773,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2355,12 +2799,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2371,7 +2815,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2397,12 +2841,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2413,7 +2857,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2439,12 +2883,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2481,7 +2925,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2507,12 +2951,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2540,7 +2984,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2566,12 +3010,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2599,7 +3043,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2625,12 +3069,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2653,7 +3097,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2679,12 +3123,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2712,7 +3156,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2738,12 +3182,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2771,7 +3215,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2797,12 +3241,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2825,8 +3269,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -2854,12 +3297,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -2873,8 +3316,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -2902,12 +3344,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -2921,8 +3363,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -2950,12 +3391,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -2995,8 +3436,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3024,12 +3464,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3059,8 +3499,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3088,12 +3527,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3123,8 +3562,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3152,12 +3590,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3923,6 +4361,1675 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartition(new GetInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartitionAsync(new GetInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartition(new GetInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartitionAsync(new GetInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(InstancePartitionName name, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateInstancePartition</c>.</summary>
+        public virtual lro::OperationsClient CreateInstancePartitionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> PollOnceCreateInstancePartition(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, CreateInstancePartitionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> PollOnceCreateInstancePartitionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, CreateInstancePartitionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(string parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartition(new CreateInstancePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(string parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartitionAsync(new CreateInstancePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(string parent, InstancePartition instancePartition, string instancePartitionId, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartition(new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartitionAsync(new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartition(new DeleteInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartitionAsync(new DeleteInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartition(new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartitionAsync(new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(InstancePartitionName name, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateInstancePartition</c>.</summary>
+        public virtual lro::OperationsClient UpdateInstancePartitionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> PollOnceUpdateInstancePartition(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> PollOnceUpdateInstancePartitionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(InstancePartition instancePartition, wkt::FieldMask fieldMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstancePartition(new UpdateInstancePartitionRequest
+            {
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+                FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(InstancePartition instancePartition, wkt::FieldMask fieldMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstancePartitionAsync(new UpdateInstancePartitionRequest
+            {
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+                FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(InstancePartition instancePartition, wkt::FieldMask fieldMask, st::CancellationToken cancellationToken) =>
+            UpdateInstancePartitionAsync(instancePartition, fieldMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionOperations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionOperationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionOperations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancePartitionOperationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves an instance to the target instance configuration. You can use the
+        /// returned long-running operation to track
+        /// the progress of moving the instance.
+        /// 
+        /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+        /// the following criteria:
+        /// 
+        /// * Is undergoing a move to a different instance configuration
+        /// * Has backups
+        /// * Has an ongoing update
+        /// * Contains any CMEK-enabled databases
+        /// * Is a free trial instance
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * All other attempts to modify the instance, including changes to its
+        /// compute capacity, are rejected.
+        /// * The following database and backup admin operations are rejected:
+        /// 
+        /// * `DatabaseAdmin.CreateDatabase`
+        /// * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+        /// specified in the request.)
+        /// * `DatabaseAdmin.RestoreDatabase`
+        /// * `DatabaseAdmin.CreateBackup`
+        /// * `DatabaseAdmin.CopyBackup`
+        /// 
+        /// * Both the source and target instance configurations are subject to
+        /// hourly compute and storage charges.
+        /// * The instance might experience higher read-write latencies and a higher
+        /// transaction abort rate. However, moving an instance doesn't cause any
+        /// downtime.
+        /// 
+        /// The returned long-running operation has
+        /// a name of the format
+        /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
+        /// the move instance operation. The
+        /// metadata field type is
+        /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+        /// The response field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance],
+        /// if successful.
+        /// Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+        /// Cancellation is not immediate because it involves moving any data
+        /// previously moved to the target instance configuration back to the original
+        /// instance configuration. You can use this operation to track the progress of
+        /// the cancellation. Upon successful completion of the cancellation, the
+        /// operation terminates with `CANCELLED` status.
+        /// 
+        /// If not cancelled, upon completion of the returned operation:
+        /// 
+        /// * The instance successfully moves to the target instance
+        /// configuration.
+        /// * You are billed for compute and storage in target instance
+        /// configuration.
+        /// 
+        /// Authorization requires the `spanner.instances.update` permission on
+        /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+        /// 
+        /// For more details, see
+        /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MoveInstanceResponse, MoveInstanceMetadata> MoveInstance(MoveInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves an instance to the target instance configuration. You can use the
+        /// returned long-running operation to track
+        /// the progress of moving the instance.
+        /// 
+        /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+        /// the following criteria:
+        /// 
+        /// * Is undergoing a move to a different instance configuration
+        /// * Has backups
+        /// * Has an ongoing update
+        /// * Contains any CMEK-enabled databases
+        /// * Is a free trial instance
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * All other attempts to modify the instance, including changes to its
+        /// compute capacity, are rejected.
+        /// * The following database and backup admin operations are rejected:
+        /// 
+        /// * `DatabaseAdmin.CreateDatabase`
+        /// * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+        /// specified in the request.)
+        /// * `DatabaseAdmin.RestoreDatabase`
+        /// * `DatabaseAdmin.CreateBackup`
+        /// * `DatabaseAdmin.CopyBackup`
+        /// 
+        /// * Both the source and target instance configurations are subject to
+        /// hourly compute and storage charges.
+        /// * The instance might experience higher read-write latencies and a higher
+        /// transaction abort rate. However, moving an instance doesn't cause any
+        /// downtime.
+        /// 
+        /// The returned long-running operation has
+        /// a name of the format
+        /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
+        /// the move instance operation. The
+        /// metadata field type is
+        /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+        /// The response field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance],
+        /// if successful.
+        /// Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+        /// Cancellation is not immediate because it involves moving any data
+        /// previously moved to the target instance configuration back to the original
+        /// instance configuration. You can use this operation to track the progress of
+        /// the cancellation. Upon successful completion of the cancellation, the
+        /// operation terminates with `CANCELLED` status.
+        /// 
+        /// If not cancelled, upon completion of the returned operation:
+        /// 
+        /// * The instance successfully moves to the target instance
+        /// configuration.
+        /// * You are billed for compute and storage in target instance
+        /// configuration.
+        /// 
+        /// Authorization requires the `spanner.instances.update` permission on
+        /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+        /// 
+        /// For more details, see
+        /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>> MoveInstanceAsync(MoveInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves an instance to the target instance configuration. You can use the
+        /// returned long-running operation to track
+        /// the progress of moving the instance.
+        /// 
+        /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+        /// the following criteria:
+        /// 
+        /// * Is undergoing a move to a different instance configuration
+        /// * Has backups
+        /// * Has an ongoing update
+        /// * Contains any CMEK-enabled databases
+        /// * Is a free trial instance
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * All other attempts to modify the instance, including changes to its
+        /// compute capacity, are rejected.
+        /// * The following database and backup admin operations are rejected:
+        /// 
+        /// * `DatabaseAdmin.CreateDatabase`
+        /// * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+        /// specified in the request.)
+        /// * `DatabaseAdmin.RestoreDatabase`
+        /// * `DatabaseAdmin.CreateBackup`
+        /// * `DatabaseAdmin.CopyBackup`
+        /// 
+        /// * Both the source and target instance configurations are subject to
+        /// hourly compute and storage charges.
+        /// * The instance might experience higher read-write latencies and a higher
+        /// transaction abort rate. However, moving an instance doesn't cause any
+        /// downtime.
+        /// 
+        /// The returned long-running operation has
+        /// a name of the format
+        /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
+        /// the move instance operation. The
+        /// metadata field type is
+        /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+        /// The response field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance],
+        /// if successful.
+        /// Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+        /// Cancellation is not immediate because it involves moving any data
+        /// previously moved to the target instance configuration back to the original
+        /// instance configuration. You can use this operation to track the progress of
+        /// the cancellation. Upon successful completion of the cancellation, the
+        /// operation terminates with `CANCELLED` status.
+        /// 
+        /// If not cancelled, upon completion of the returned operation:
+        /// 
+        /// * The instance successfully moves to the target instance
+        /// configuration.
+        /// * You are billed for compute and storage in target instance
+        /// configuration.
+        /// 
+        /// Authorization requires the `spanner.instances.update` permission on
+        /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+        /// 
+        /// For more details, see
+        /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>> MoveInstanceAsync(MoveInstanceRequest request, st::CancellationToken cancellationToken) =>
+            MoveInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MoveInstance</c>.</summary>
+        public virtual lro::OperationsClient MoveInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MoveInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MoveInstanceResponse, MoveInstanceMetadata> PollOnceMoveInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MoveInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>> PollOnceMoveInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveInstanceOperationsClient, callSettings);
     }
 
     /// <summary>InstanceAdmin client wrapper implementation, for convenient use.</summary>
@@ -3965,6 +6072,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
 
+        private readonly gaxgrpc::ApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse> _callListInstancePartitions;
+
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
 
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
@@ -3979,6 +6088,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<GetInstancePartitionRequest, InstancePartition> _callGetInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<CreateInstancePartitionRequest, lro::Operation> _callCreateInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<DeleteInstancePartitionRequest, wkt::Empty> _callDeleteInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<UpdateInstancePartitionRequest, lro::Operation> _callUpdateInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse> _callListInstancePartitionOperations;
+
+        private readonly gaxgrpc::ApiCall<MoveInstanceRequest, lro::Operation> _callMoveInstance;
+
         /// <summary>
         /// Constructs a client wrapper for the InstanceAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -3989,11 +6110,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             GrpcClient = grpcClient;
             InstanceAdminSettings effectiveSettings = settings ?? InstanceAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceConfigOperationsSettings, logger);
             UpdateInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceConfigOperationsSettings, logger);
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
+            CreateInstancePartitionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstancePartitionOperationsSettings, logger);
+            UpdateInstancePartitionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstancePartitionOperationsSettings, logger);
+            MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveInstanceOperationsSettings, logger);
             _callListInstanceConfigs = clientHelper.BuildApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse>("ListInstanceConfigs", grpcClient.ListInstanceConfigsAsync, grpcClient.ListInstanceConfigs, effectiveSettings.ListInstanceConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstanceConfigs);
             Modify_ListInstanceConfigsApiCall(ref _callListInstanceConfigs);
@@ -4015,6 +6143,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
+            _callListInstancePartitions = clientHelper.BuildApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse>("ListInstancePartitions", grpcClient.ListInstancePartitionsAsync, grpcClient.ListInstancePartitions, effectiveSettings.ListInstancePartitionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListInstancePartitions);
+            Modify_ListInstancePartitionsApiCall(ref _callListInstancePartitions);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("GetInstance", grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
@@ -4036,6 +6167,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callGetInstancePartition = clientHelper.BuildApiCall<GetInstancePartitionRequest, InstancePartition>("GetInstancePartition", grpcClient.GetInstancePartitionAsync, grpcClient.GetInstancePartition, effectiveSettings.GetInstancePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInstancePartition);
+            Modify_GetInstancePartitionApiCall(ref _callGetInstancePartition);
+            _callCreateInstancePartition = clientHelper.BuildApiCall<CreateInstancePartitionRequest, lro::Operation>("CreateInstancePartition", grpcClient.CreateInstancePartitionAsync, grpcClient.CreateInstancePartition, effectiveSettings.CreateInstancePartitionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateInstancePartition);
+            Modify_CreateInstancePartitionApiCall(ref _callCreateInstancePartition);
+            _callDeleteInstancePartition = clientHelper.BuildApiCall<DeleteInstancePartitionRequest, wkt::Empty>("DeleteInstancePartition", grpcClient.DeleteInstancePartitionAsync, grpcClient.DeleteInstancePartition, effectiveSettings.DeleteInstancePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteInstancePartition);
+            Modify_DeleteInstancePartitionApiCall(ref _callDeleteInstancePartition);
+            _callUpdateInstancePartition = clientHelper.BuildApiCall<UpdateInstancePartitionRequest, lro::Operation>("UpdateInstancePartition", grpcClient.UpdateInstancePartitionAsync, grpcClient.UpdateInstancePartition, effectiveSettings.UpdateInstancePartitionSettings).WithGoogleRequestParam("instance_partition.name", request => request.InstancePartition?.Name);
+            Modify_ApiCall(ref _callUpdateInstancePartition);
+            Modify_UpdateInstancePartitionApiCall(ref _callUpdateInstancePartition);
+            _callListInstancePartitionOperations = clientHelper.BuildApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse>("ListInstancePartitionOperations", grpcClient.ListInstancePartitionOperationsAsync, grpcClient.ListInstancePartitionOperations, effectiveSettings.ListInstancePartitionOperationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListInstancePartitionOperations);
+            Modify_ListInstancePartitionOperationsApiCall(ref _callListInstancePartitionOperations);
+            _callMoveInstance = clientHelper.BuildApiCall<MoveInstanceRequest, lro::Operation>("MoveInstance", grpcClient.MoveInstanceAsync, grpcClient.MoveInstance, effectiveSettings.MoveInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMoveInstance);
+            Modify_MoveInstanceApiCall(ref _callMoveInstance);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4055,6 +6204,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
 
+        partial void Modify_ListInstancePartitionsApiCall(ref gaxgrpc::ApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse> call);
+
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
 
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
@@ -4068,6 +6219,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_GetInstancePartitionApiCall(ref gaxgrpc::ApiCall<GetInstancePartitionRequest, InstancePartition> call);
+
+        partial void Modify_CreateInstancePartitionApiCall(ref gaxgrpc::ApiCall<CreateInstancePartitionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteInstancePartitionApiCall(ref gaxgrpc::ApiCall<DeleteInstancePartitionRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateInstancePartitionApiCall(ref gaxgrpc::ApiCall<UpdateInstancePartitionRequest, lro::Operation> call);
+
+        partial void Modify_ListInstancePartitionOperationsApiCall(ref gaxgrpc::ApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse> call);
+
+        partial void Modify_MoveInstanceApiCall(ref gaxgrpc::ApiCall<MoveInstanceRequest, lro::Operation> call);
 
         partial void OnConstruction(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4088,6 +6251,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListInstancePartitionsRequest(ref ListInstancePartitionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -4102,8 +6267,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetInstancePartitionRequest(ref GetInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateInstancePartitionRequest(ref CreateInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteInstancePartitionRequest(ref DeleteInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateInstancePartitionRequest(ref UpdateInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListInstancePartitionOperationsRequest(ref ListInstancePartitionOperationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveInstanceRequest(ref MoveInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4116,6 +6296,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4154,41 +6337,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public override lro::OperationsClient CreateInstanceConfigOperationsClient { get; }
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -4206,41 +6389,41 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Creates an instance config and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// Creates an instance configuration and begins preparing it to be used. The
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
-        /// instance config. The instance config name is assigned by the caller. If the
-        /// named instance config already exists, `CreateInstanceConfig` returns
-        /// `ALREADY_EXISTS`.
+        /// instance configuration. The instance configuration name is assigned by the
+        /// caller. If the named instance configuration already exists,
+        /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config is readable via the API, with all requested
-        /// attributes. The instance config's
+        /// * The instance configuration is readable via the API, with all requested
+        /// attributes. The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true. Its state is `CREATING`.
         /// 
         /// While the operation is pending:
         /// 
-        /// * Cancelling the operation renders the instance config immediately
+        /// * Cancelling the operation renders the instance configuration immediately
         /// unreadable via the API.
         /// * Except for deleting the creating resource, all other attempts to modify
-        /// the instance config are rejected.
+        /// the instance configuration are rejected.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Instances can be created using the instance configuration.
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// creation of the instance config. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// creation of the instance configuration. The
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -4261,16 +6444,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public override lro::OperationsClient UpdateInstanceConfigOperationsClient { get; }
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -4280,26 +6463,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -4316,16 +6499,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Updates an instance config. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
-        /// the progress of updating the instance. If the named instance config does
-        /// not exist, returns `NOT_FOUND`.
+        /// Updates an instance configuration. The returned
+        /// long-running operation can be used to track
+        /// the progress of updating the instance. If the named instance configuration
+        /// does not exist, returns `NOT_FOUND`.
         /// 
-        /// Only user managed configurations can be updated.
+        /// Only user-managed configurations can be updated.
         /// 
         /// Immediately after the request returns:
         /// 
-        /// * The instance config's
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field is set to true.
         /// 
@@ -4335,26 +6518,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
         /// The operation is guaranteed to succeed at undoing all changes, after
         /// which point it terminates with a `CANCELLED` status.
-        /// * All other attempts to modify the instance config are rejected.
-        /// * Reading the instance config via the API continues to give the
+        /// * All other attempts to modify the instance configuration are rejected.
+        /// * Reading the instance configuration via the API continues to give the
         /// pre-request values.
         /// 
         /// Upon completion of the returned operation:
         /// 
         /// * Creating instances using the instance configuration uses the new
         /// values.
-        /// * The instance config's new values are readable via the API.
-        /// * The instance config's
+        /// * The new values of the instance configuration are readable via the API.
+        /// * The instance configuration's
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
-        /// the instance config modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// the instance configuration modification.  The
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -4371,11 +6554,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -4390,11 +6573,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Deletes the instance config. Deletion is only allowed when no
+        /// Deletes the instance configuration. Deletion is only allowed when no
         /// instances are using the configuration. If any instances are using
-        /// the config, returns `FAILED_PRECONDITION`.
+        /// the configuration, returns `FAILED_PRECONDITION`.
         /// 
-        /// Only user managed configurations can be deleted.
+        /// Only user-managed configurations can be deleted.
         /// 
         /// Authorization requires `spanner.instanceConfigs.delete` permission on
         /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -4409,12 +6592,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -4431,12 +6614,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance config [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
-        /// config operation has a name of the form
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
+        /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -4477,6 +6660,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancePartitionsRequest, ListInstancePartitionsResponse, InstancePartition>(_callListInstancePartitions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancePartitionsRequest, ListInstancePartitionsResponse, InstancePartition>(_callListInstancePartitions, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets information about a particular instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4505,7 +6712,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -4531,12 +6738,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4550,7 +6757,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -4576,12 +6783,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4598,8 +6805,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -4627,12 +6833,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -4649,8 +6855,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -4678,12 +6883,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -4839,6 +7044,473 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InstancePartition GetInstancePartition(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstancePartitionRequest(ref request, ref callSettings);
+            return _callGetInstancePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstancePartitionRequest(ref request, ref callSettings);
+            return _callGetInstancePartition.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateInstancePartition</c>.</summary>
+        public override lro::OperationsClient CreateInstancePartitionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, CreateInstancePartitionMetadata>(_callCreateInstancePartition.Sync(request, callSettings), CreateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned long-running operation
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// metadata field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, CreateInstancePartitionMetadata>(await _callCreateInstancePartition.Async(request, callSettings).ConfigureAwait(false), CreateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteInstancePartition(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteInstancePartitionRequest(ref request, ref callSettings);
+            _callDeleteInstancePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteInstancePartitionRequest(ref request, ref callSettings);
+            return _callDeleteInstancePartition.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateInstancePartition</c>.</summary>
+        public override lro::OperationsClient UpdateInstancePartitionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>(_callUpdateInstancePartition.Sync(request, callSettings), UpdateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned long-running operation can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned long-running operation will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// metadata field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The response field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>(await _callUpdateInstancePartition.Async(request, callSettings).ConfigureAwait(false), UpdateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse, lro::Operation>(_callListInstancePartitionOperations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists instance partition long-running operations in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// metadata field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse, lro::Operation>(_callListInstancePartitionOperations, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>MoveInstance</c>.</summary>
+        public override lro::OperationsClient MoveInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Moves an instance to the target instance configuration. You can use the
+        /// returned long-running operation to track
+        /// the progress of moving the instance.
+        /// 
+        /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+        /// the following criteria:
+        /// 
+        /// * Is undergoing a move to a different instance configuration
+        /// * Has backups
+        /// * Has an ongoing update
+        /// * Contains any CMEK-enabled databases
+        /// * Is a free trial instance
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * All other attempts to modify the instance, including changes to its
+        /// compute capacity, are rejected.
+        /// * The following database and backup admin operations are rejected:
+        /// 
+        /// * `DatabaseAdmin.CreateDatabase`
+        /// * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+        /// specified in the request.)
+        /// * `DatabaseAdmin.RestoreDatabase`
+        /// * `DatabaseAdmin.CreateBackup`
+        /// * `DatabaseAdmin.CopyBackup`
+        /// 
+        /// * Both the source and target instance configurations are subject to
+        /// hourly compute and storage charges.
+        /// * The instance might experience higher read-write latencies and a higher
+        /// transaction abort rate. However, moving an instance doesn't cause any
+        /// downtime.
+        /// 
+        /// The returned long-running operation has
+        /// a name of the format
+        /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
+        /// the move instance operation. The
+        /// metadata field type is
+        /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+        /// The response field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance],
+        /// if successful.
+        /// Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+        /// Cancellation is not immediate because it involves moving any data
+        /// previously moved to the target instance configuration back to the original
+        /// instance configuration. You can use this operation to track the progress of
+        /// the cancellation. Upon successful completion of the cancellation, the
+        /// operation terminates with `CANCELLED` status.
+        /// 
+        /// If not cancelled, upon completion of the returned operation:
+        /// 
+        /// * The instance successfully moves to the target instance
+        /// configuration.
+        /// * You are billed for compute and storage in target instance
+        /// configuration.
+        /// 
+        /// Authorization requires the `spanner.instances.update` permission on
+        /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+        /// 
+        /// For more details, see
+        /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MoveInstanceResponse, MoveInstanceMetadata> MoveInstance(MoveInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>(_callMoveInstance.Sync(request, callSettings), MoveInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Moves an instance to the target instance configuration. You can use the
+        /// returned long-running operation to track
+        /// the progress of moving the instance.
+        /// 
+        /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+        /// the following criteria:
+        /// 
+        /// * Is undergoing a move to a different instance configuration
+        /// * Has backups
+        /// * Has an ongoing update
+        /// * Contains any CMEK-enabled databases
+        /// * Is a free trial instance
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * All other attempts to modify the instance, including changes to its
+        /// compute capacity, are rejected.
+        /// * The following database and backup admin operations are rejected:
+        /// 
+        /// * `DatabaseAdmin.CreateDatabase`
+        /// * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+        /// specified in the request.)
+        /// * `DatabaseAdmin.RestoreDatabase`
+        /// * `DatabaseAdmin.CreateBackup`
+        /// * `DatabaseAdmin.CopyBackup`
+        /// 
+        /// * Both the source and target instance configurations are subject to
+        /// hourly compute and storage charges.
+        /// * The instance might experience higher read-write latencies and a higher
+        /// transaction abort rate. However, moving an instance doesn't cause any
+        /// downtime.
+        /// 
+        /// The returned long-running operation has
+        /// a name of the format
+        /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
+        /// the move instance operation. The
+        /// metadata field type is
+        /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+        /// The response field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance],
+        /// if successful.
+        /// Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+        /// Cancellation is not immediate because it involves moving any data
+        /// previously moved to the target instance configuration back to the original
+        /// instance configuration. You can use this operation to track the progress of
+        /// the cancellation. Upon successful completion of the cancellation, the
+        /// operation terminates with `CANCELLED` status.
+        /// 
+        /// If not cancelled, upon completion of the returned operation:
+        /// 
+        /// * The instance successfully moves to the target instance
+        /// configuration.
+        /// * You are billed for compute and storage in target instance
+        /// configuration.
+        /// 
+        /// Authorization requires the `spanner.instances.update` permission on
+        /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+        /// 
+        /// For more details, see
+        /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>> MoveInstanceAsync(MoveInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveInstanceResponse, MoveInstanceMetadata>(await _callMoveInstance.Async(request, callSettings).ConfigureAwait(false), MoveInstanceOperationsClient);
+        }
     }
 
     public partial class ListInstanceConfigsRequest : gaxgrpc::IPageRequest
@@ -4850,6 +7522,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListInstancePartitionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListInstancePartitionOperationsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4873,6 +7553,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListInstancePartitionsResponse : gaxgrpc::IPageResponse<InstancePartition>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstancePartition> GetEnumerator() => InstancePartitions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListInstancePartitionOperationsResponse : gaxgrpc::IPageResponse<lro::Operation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<lro::Operation> GetEnumerator() => Operations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -14,7 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using Google.Protobuf.Collections;
+using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
@@ -44,6 +46,11 @@ namespace Google.Cloud.Spanner.Data
         /// 64 bit signed integer.
         /// </summary>
         public static SpannerDbType Int64 { get; } = new SpannerDbType(TypeCode.Int64);
+
+        /// <summary>
+        /// 32 bit floating point number.
+        /// </summary>
+        public static SpannerDbType Float32 { get; } = new SpannerDbType(TypeCode.Float32);
 
         /// <summary>
         /// 64 bit floating point number. This is equivalent to Float8 in the PostgreSQL dialect.
@@ -86,10 +93,15 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType Numeric { get; } = new SpannerDbType(TypeCode.Numeric);
 
         /// <summary>
-        /// Representation of PostgreSQL numeric type. 
+        /// Representation of PostgreSQL numeric type.
         /// The PostgreSQL numeric type has max precision of 147,455 and a max scale of 16383.
         /// </summary>
         public static SpannerDbType PgNumeric { get; } = new SpannerDbType(TypeCode.Numeric, TypeAnnotationCode.PgNumeric);
+
+        /// <summary>
+        /// Representation of PostgreSQL OID type.
+        /// </summary>
+        public static SpannerDbType PgOid { get; } = new SpannerDbType(TypeCode.Int64, TypeAnnotationCode.PgOid);
 
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
@@ -97,6 +109,7 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Unspecified } , Unspecified },
                 { new V1.Type { Code = TypeCode.Bool }, Bool },
                 { new V1.Type { Code = TypeCode.Int64 }, Int64 },
+                { new V1.Type { Code = TypeCode.Float32 }, Float32 },
                 { new V1.Type { Code = TypeCode.Float64 }, Float64 },
                 { new V1.Type { Code = TypeCode.Timestamp }, Timestamp },
                 { new V1.Type { Code = TypeCode.Date }, Date },
@@ -105,7 +118,8 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Json }, Json },
                 { new V1.Type { Code = TypeCode.Json, TypeAnnotation = TypeAnnotationCode.PgJsonb }, PgJsonb },
                 { new V1.Type { Code = TypeCode.Numeric }, Numeric },
-                { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric }
+                { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric },
+                { new V1.Type { Code = TypeCode.Int64, TypeAnnotation = TypeAnnotationCode.PgOid }, PgOid }
             };
 
         internal static SpannerDbType FromType(V1.Type type) =>
@@ -117,16 +131,21 @@ namespace Google.Cloud.Spanner.Data
         internal TypeAnnotationCode TypeAnnotationCode { get; }
 
         /// <summary>
-        /// When TypeCode is Array, this is the array element type. (Null for non-arrays.)
+        /// When TypeCode is Array, this is the array element type. Null for non-arrays.
         /// </summary>
         private SpannerDbType ArrayElementType { get; }
 
         /// <summary>
-        /// The field names and types within a struct. (Null for non-structs.) This is of type
-        /// List rather than IList so we can use the protobuf-supplied Lists class for equality
+        /// The field names and types within a struct. Null for non-structs.
+        /// This is of type List rather than IList so we can use the protobuf-supplied Lists class for equality
         /// and hash codes.
         /// </summary>
         private List<StructField> StructFields { get; }
+
+        /// <summary>
+        /// The fully qualified protobuf message type name if this is a protobuf type. Null for non-protobufs
+        /// </summary>
+        private string ProtobufTypeName { get; }
 
         private SpannerDbType(TypeCode typeCode, TypeAnnotationCode typeAnnotationCode = TypeAnnotationCode.Unspecified,
             int? size = null)
@@ -142,12 +161,25 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int? Size { get; }
 
-        private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
-            : this(typeCode) => ArrayElementType = arrayElementType;
+        /// <summary>
+        /// Builds an instance of <see cref="SpannerDbType"/> that represents an array type
+        /// whose elements are of type <paramref name="arrayElementType"/>.
+        /// </summary>
+        private SpannerDbType(SpannerDbType arrayElementType)
+            : this(TypeCode.Array) => ArrayElementType = arrayElementType;
 
-        // Note: the list reference is copied directly; callers are expected to be careful.
-        private SpannerDbType(TypeCode typeCode, List<StructField> structFields)
-            : this(typeCode) => StructFields = structFields;
+        /// <summary>
+        /// Builds an instance of <see cref="SpannerDbType"/> that represents a struct type
+        /// whose fields are <paramref name="structFields"/>.
+        /// </summary>
+        /// <remark>
+        /// The list reference is copied directly; callers are expected to be careful.
+        /// </remark>
+        private SpannerDbType(List<StructField> structFields)
+            : this(TypeCode.Struct) => StructFields = structFields;
+
+        private SpannerDbType(string protobufTypeName)
+            : this(TypeCode.Proto) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -161,7 +193,10 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Bool:
                         return DbType.Boolean;
                     case TypeCode.Int64:
+                        // This handles PG.OID as well.
                         return DbType.Int64;
+                    case TypeCode.Float32:
+                        return DbType.Single;
                     case TypeCode.Float64:
                         return DbType.Double;
                     case TypeCode.Numeric:
@@ -197,6 +232,8 @@ namespace Google.Cloud.Spanner.Data
                     return typeof(bool);
                 case TypeCode.Int64:
                     return typeof(long);
+                case TypeCode.Float32:
+                    return typeof(float);
                 case TypeCode.Float64:
                     return typeof(double);
                 case TypeCode.Timestamp:
@@ -220,7 +257,11 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Json:
                     return typeof(string);
                 default:
-                    // If we don't recognize it (or it's a struct), we use the protobuf Value well-known type.
+                    // If we don't recognize it, we use the protobuf Value well-known type.
+                    // But since, as of June 2024, we support protobuf, we need to handle Value
+                    // as a special case, as it may be used explicitly as a column type.
+                    // We don't do that here though, we do that when we use the CLR value
+                    // for conversions.
                     return typeof(Value);
             }
         }
@@ -239,6 +280,7 @@ namespace Google.Cloud.Spanner.Data
             DbType.Boolean => Bool,
             DbType.Date => Date,
             DbType.DateTime => Timestamp,
+            DbType.Single => Float32,
             DbType.Double => Float64,
             DbType.Int64 => Int64,
             DbType.VarNumeric => Numeric,
@@ -252,12 +294,11 @@ namespace Google.Cloud.Spanner.Data
             switch (type.Code)
             {
                 case TypeCode.Array:
-                    return new SpannerDbType(
-                        TypeCode.Array,
-                        FromProtobufType(type.ArrayElementType));
+                    return new SpannerDbType(FromProtobufType(type.ArrayElementType));
                 case TypeCode.Struct:
-                    return new SpannerDbType(TypeCode.Struct,
-                        type.StructType.Fields.Select(f => new StructField(f.Name, SpannerDbType.FromProtobufType(f.Type))).ToList());
+                    return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
+                case TypeCode.Proto:
+                    return new SpannerDbType(type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -283,6 +324,12 @@ namespace Google.Cloud.Spanner.Data
                                 Fields = { StructFields.Select(f => f.ToFieldType()) }
                             }
                     };
+                case TypeCode.Proto:
+                    return new V1.Type
+                    {
+                        Code = TypeCode,
+                        ProtoTypeFqn = ProtobufTypeName
+                    };
                 default: return new V1.Type { Code = TypeCode, TypeAnnotation = TypeAnnotationCode };
             }
         }
@@ -297,7 +344,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="elementType">The type of each item in the array.</param>
         public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
-            new SpannerDbType(TypeCode.Array, elementType);
+            new SpannerDbType(elementType);
 
 
         /// <summary>
@@ -305,7 +352,11 @@ namespace Google.Cloud.Spanner.Data
         /// method; making this internal allows us to avoid exposing constructors even internally.
         /// </summary>
         internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
-            new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+            new SpannerDbType(spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+
+        // Internal for testing, and to continue with the practice of not exposing constructors even internally.
+        internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
+            new SpannerDbType(protobufTypeName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -331,7 +382,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Timestamp;
             }
-            if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
+            if (type == typeof(float))
+            {
+                return Float32;
+            }
+            if (type == typeof(double))
             {
                 return Float64;
             }
@@ -340,7 +395,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Int64;
             }
-            if (type == typeof(SpannerNumeric))
+            if (type == typeof(SpannerNumeric) || type == typeof(decimal))
             {
                 return Numeric;
             }
@@ -351,6 +406,10 @@ namespace Google.Cloud.Spanner.Data
             if (type == typeof(string))
             {
                 return String;
+            }
+            if (ProtobufCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
+            {
+                return new SpannerDbType(descriptor.FullName);
             }
             return Unspecified;
         }
@@ -380,11 +439,12 @@ namespace Google.Cloud.Spanner.Data
             && TypeCode == other.TypeCode
             && TypeAnnotationCode == other.TypeAnnotationCode
             && Size == other.Size
-            && Equals(ArrayElementType, other.ArrayElementType);
+            && Equals(ArrayElementType, other.ArrayElementType)
+            && ProtobufTypeName == other.ProtobufTypeName;
 
         /// <inheritdoc />
         public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Lists.GetHashCode(StructFields), Size.GetValueOrDefault(0).GetHashCode(),
-            TypeCode.GetHashCode(), TypeAnnotationCode.GetHashCode(), ArrayElementType?.GetHashCode() ?? 0);
+            TypeCode.GetHashCode(), TypeAnnotationCode.GetHashCode(), ArrayElementType?.GetHashCode() ?? 0, ProtobufTypeName?.GetHashCode() ?? 0);
 
         /// <summary>
         /// Value type representing the name and type of a field within a struct. This is like SpannerStruct.Field

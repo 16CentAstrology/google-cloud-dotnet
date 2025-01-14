@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Video.Transcoder.V1
 {
@@ -199,14 +199,14 @@ namespace Google.Cloud.Video.Transcoder.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TranscoderServiceClient.Create(callInvoker, Settings, Logger);
+            return TranscoderServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TranscoderServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TranscoderServiceClient.Create(callInvoker, Settings, Logger);
+            return TranscoderServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -469,13 +469,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs in the specified region.
@@ -493,13 +502,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs in the specified region.
@@ -517,13 +535,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs in the specified region.
@@ -541,13 +568,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the job data.
@@ -985,13 +1021,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="JobTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTemplates(new ListJobTemplatesRequest
+        public virtual gax::PagedEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTemplatesRequest request = new ListJobTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job templates in the specified region.
@@ -1010,13 +1055,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="JobTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTemplatesAsync(new ListJobTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTemplatesRequest request = new ListJobTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job templates in the specified region.
@@ -1035,13 +1089,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="JobTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTemplates(new ListJobTemplatesRequest
+        public virtual gax::PagedEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTemplatesRequest request = new ListJobTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists job templates in the specified region.
@@ -1060,13 +1123,22 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="JobTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobTemplatesAsync(new ListJobTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobTemplatesResponse, JobTemplate> ListJobTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobTemplatesRequest request = new ListJobTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the job template data.
@@ -1334,7 +1406,11 @@ namespace Google.Cloud.Video.Transcoder.V1
         {
             GrpcClient = grpcClient;
             TranscoderServiceSettings effectiveSettings = settings ?? TranscoderServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);

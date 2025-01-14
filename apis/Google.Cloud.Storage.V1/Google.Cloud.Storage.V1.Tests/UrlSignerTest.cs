@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -20,12 +21,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Storage.V1.UrlSigner;
-
-#if NET461
-using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
-#else
-using RsaKey = System.Security.Cryptography.RSA;
-#endif
 
 namespace Google.Cloud.Storage.V1.Tests
 {
@@ -54,6 +49,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ComputeCredential) null));
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ServiceAccountCredential) null));
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ImpersonatedCredential) null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((IHttpExecuteInterceptor) null));
         }
 
         [Fact]
@@ -81,7 +77,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", TimeSpan.FromDays(1)));
             await Assert.ThrowsAsync<ArgumentException>(() => signer.SignAsync("BUCKETNAME", "objectName", TimeSpan.FromDays(1)));
 
-            // Make sure exceptions are not thrown for things which may be null or uppercase.	
+            // Make sure exceptions are not thrown for things which may be null or uppercase.
             signer.Sign("bucketname", null, TimeSpan.FromDays(1), null, null);
             await signer.SignAsync("bucketname", null, TimeSpan.FromDays(1), null, null);
         }
@@ -104,7 +100,7 @@ namespace Google.Cloud.Storage.V1.Tests
         private static ServiceAccountCredential CreateFakeServiceAccountCredential(string id = "test") =>
             new ServiceAccountCredential(new ServiceAccountCredential.Initializer(id)
             {
-                Key = (RsaKey) RSA.Create()
+                Key = RSA.Create()
             });
     }
 }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Vision.V1
 {
@@ -221,14 +221,14 @@ namespace Google.Cloud.Vision.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ImageAnnotatorClient.Create(callInvoker, Settings, Logger);
+            return ImageAnnotatorClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ImageAnnotatorClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ImageAnnotatorClient.Create(callInvoker, Settings, Logger);
+            return ImageAnnotatorClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -450,8 +450,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only one
-        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only
+        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -474,8 +474,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only one
-        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only
+        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -498,8 +498,8 @@ namespace Google.Cloud.Vision.V1
         /// extracted.
         /// </summary>
         /// <param name="requests">
-        /// Required. The list of file annotation requests. Right now we support only one
-        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// Required. The list of file annotation requests. Right now we support only
+        /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -820,7 +820,11 @@ namespace Google.Cloud.Vision.V1
         {
             GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AsyncBatchAnnotateImagesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateImagesOperationsSettings, logger);
             AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings, logger);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>("BatchAnnotateImages", grpcClient.BatchAnnotateImagesAsync, grpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Logging.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START logging_v2_generated_LoggingServiceV2_TailLogEntries_sync]
     using Google.Api.Gax.Grpc;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize streaming call, retrieving the stream object
-            LoggingServiceV2Client.TailLogEntriesStream response = loggingServiceV2Client.TailLogEntries();
+            using LoggingServiceV2Client.TailLogEntriesStream response = loggingServiceV2Client.TailLogEntries();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

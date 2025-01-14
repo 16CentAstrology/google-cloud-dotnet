@@ -71,25 +71,25 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
             "YXRld2F5cxJELmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmNsaWVudGdhdGV3",
             "YXlzLnYxLkxpc3RDbGllbnRHYXRld2F5c1JlcXVlc3QaRS5nb29nbGUuY2xv",
             "dWQuYmV5b25kY29ycC5jbGllbnRnYXRld2F5cy52MS5MaXN0Q2xpZW50R2F0",
-            "ZXdheXNSZXNwb25zZSJDgtPkkwI0EjIvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9jbGllbnRHYXRld2F5c9pBBnBhcmVudBLTAQoQR2V0",
+            "ZXdheXNSZXNwb25zZSJD2kEGcGFyZW50gtPkkwI0EjIvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jbGllbnRHYXRld2F5cxLTAQoQR2V0",
             "Q2xpZW50R2F0ZXdheRJCLmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmNsaWVu",
             "dGdhdGV3YXlzLnYxLkdldENsaWVudEdhdGV3YXlSZXF1ZXN0GjguZ29vZ2xl",
             "LmNsb3VkLmJleW9uZGNvcnAuY2xpZW50Z2F0ZXdheXMudjEuQ2xpZW50R2F0",
-            "ZXdheSJBgtPkkwI0EjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9jbGllbnRHYXRld2F5cy8qfdpBBG5hbWUSpAIKE0NyZWF0ZUNsaWVudEdh",
+            "ZXdheSJB2kEEbmFtZYLT5JMCNBIyL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2xpZW50R2F0ZXdheXMvKn0SpAIKE0NyZWF0ZUNsaWVudEdh",
             "dGV3YXkSRS5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5jbGllbnRnYXRld2F5",
             "cy52MS5DcmVhdGVDbGllbnRHYXRld2F5UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ipgGC0+STAkQiMi92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2NsaWVudEdhdGV3YXlzOg5jbGllbnRfZ2F0",
-            "ZXdhedpBJ3BhcmVudCxjbGllbnRfZ2F0ZXdheSxjbGllbnRfZ2F0ZXdheV9p",
-            "ZMpBLwoNQ2xpZW50R2F0ZXdheRIeQ2xpZW50R2F0ZXdheU9wZXJhdGlvbk1l",
-            "dGFkYXRhEvgBChNEZWxldGVDbGllbnRHYXRld2F5EkUuZ29vZ2xlLmNsb3Vk",
+            "cnVubmluZy5PcGVyYXRpb24ipgHKQS8KDUNsaWVudEdhdGV3YXkSHkNsaWVu",
+            "dEdhdGV3YXlPcGVyYXRpb25NZXRhZGF0YdpBJ3BhcmVudCxjbGllbnRfZ2F0",
+            "ZXdheSxjbGllbnRfZ2F0ZXdheV9pZILT5JMCRCIyL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vY2xpZW50R2F0ZXdheXM6DmNsaWVudF9n",
+            "YXRld2F5EvgBChNEZWxldGVDbGllbnRHYXRld2F5EkUuZ29vZ2xlLmNsb3Vk",
             "LmJleW9uZGNvcnAuY2xpZW50Z2F0ZXdheXMudjEuRGVsZXRlQ2xpZW50R2F0",
-            "ZXdheVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInuC",
-            "0+STAjQqMi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsaWVu",
-            "dEdhdGV3YXlzLyp92kEEbmFtZcpBNwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "Eh5DbGllbnRHYXRld2F5T3BlcmF0aW9uTWV0YWRhdGEaTcpBGWJleW9uZGNv",
+            "ZXdheVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInvK",
+            "QTcKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIeQ2xpZW50R2F0ZXdheU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCNCoyL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY2xpZW50R2F0ZXdheXMvKn0aTcpBGWJleW9uZGNv",
             "cnAuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqwCCi1jb20uZ29vZ2xlLmNsb3VkLmJl",
             "eW9uZGNvcnAuY2xpZW50Z2F0ZXdheXMudjFCGkNsaWVudEdhdGV3YXlzU2Vy",
@@ -118,6 +118,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message describing ClientGateway object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientGateway : pb::IMessage<ClientGateway>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -576,6 +577,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message for requesting list of ClientGateways.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListClientGatewaysRequest : pb::IMessage<ListClientGatewaysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -932,6 +934,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message for response to listing ClientGateways.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListClientGatewaysResponse : pb::IMessage<ListClientGatewaysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1185,6 +1188,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message for getting a ClientGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetClientGatewayRequest : pb::IMessage<GetClientGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1380,6 +1384,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message for creating a ClientGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateClientGatewayRequest : pb::IMessage<CreateClientGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1760,6 +1765,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Message for deleting a ClientGateway
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteClientGatewayRequest : pb::IMessage<DeleteClientGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2048,6 +2054,7 @@ namespace Google.Cloud.BeyondCorp.ClientGateways.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientGatewayOperationMetadata : pb::IMessage<ClientGatewayOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -27,86 +27,109 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "CjBnb29nbGUvY2xvdWQvYmFyZW1ldGFsc29sdXRpb24vdjIvaW5zdGFuY2Uu",
             "cHJvdG8SIWdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52MhofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxorZ29vZ2xlL2Nsb3VkL2JhcmVtZXRhbHNvbHV0aW9uL3Yy",
-            "L2x1bi5wcm90bxovZ29vZ2xlL2Nsb3VkL2JhcmVtZXRhbHNvbHV0aW9uL3Yy",
-            "L25ldHdvcmsucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqsHCghJbnN0",
-            "YW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSCgoCaWQYCyABKAkSNAoLY3JlYXRl",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSFAoMbWFjaGluZV90eXBlGAQgASgJEkAKBXN0YXRlGAUgASgO",
-            "MjEuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLkluc3RhbmNl",
-            "LlN0YXRlEh4KFmh5cGVydGhyZWFkaW5nX2VuYWJsZWQYBiABKAgSRwoGbGFi",
-            "ZWxzGAcgAygLMjcuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYy",
-            "Lkluc3RhbmNlLkxhYmVsc0VudHJ5EjQKBGx1bnMYCCADKAsyJi5nb29nbGUu",
-            "Y2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuTHVuEjwKCG5ldHdvcmtzGAkg",
-            "AygLMiouZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5ldHdv",
-            "cmsSKgoiaW50ZXJhY3RpdmVfc2VyaWFsX2NvbnNvbGVfZW5hYmxlZBgKIAEo",
-            "CBIQCghvc19pbWFnZRgMIAEoCRIQCgNwb2QYDSABKAlCA+BBBRJVChBuZXR3",
-            "b3JrX3RlbXBsYXRlGA4gASgJQjv6QTgKNmJhcmVtZXRhbHNvbHV0aW9uLmdv",
-            "b2dsZWFwaXMuY29tL1NlcnZlck5ldHdvcmtUZW1wbGF0ZRJPChJsb2dpY2Fs",
-            "X2ludGVyZmFjZXMYDyADKAsyMy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29s",
-            "dXRpb24udjIuTG9naWNhbEludGVyZmFjZRotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIkoKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoHUlVOTklORxAC",
-            "EgsKB0RFTEVURUQQAzps6kFpCiliYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVh",
-            "cGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9IlUKEkdldEluc3Rh",
-            "bmNlUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6QSsKKWJhcmVtZXRhbHNv",
-            "bHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlIogBChRMaXN0SW5zdGFu",
-            "Y2VzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
-            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCSKFAQoVTGlzdElu",
-            "c3RhbmNlc1Jlc3BvbnNlEj4KCWluc3RhbmNlcxgBIAMoCzIrLmdvb2dsZS5j",
-            "bG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5JbnN0YW5jZRIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkijAEKFVVwZGF0",
-            "ZUluc3RhbmNlUmVxdWVzdBJCCghpbnN0YW5jZRgBIAEoCzIrLmdvb2dsZS5j",
-            "bG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5JbnN0YW5jZUID4EECEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJX",
-            "ChRSZXNldEluc3RhbmNlUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6QSsK",
-            "KWJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlIlcK",
-            "FFN0YXJ0SW5zdGFuY2VSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwop",
-            "YmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiVgoT",
-            "U3RvcEluc3RhbmNlUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6QSsKKWJh",
-            "cmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlIpIBChBE",
-            "ZXRhY2hMdW5SZXF1ZXN0EkMKCGluc3RhbmNlGAEgASgJQjHgQQL6QSsKKWJh",
-            "cmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjkKA2x1",
-            "bhgCIAEoCUIs4EEC+kEmCiRiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlz",
-            "LmNvbS9MdW4irAQKFVNlcnZlck5ldHdvcmtUZW1wbGF0ZRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQMSIQoZYXBwbGljYWJsZV9pbnN0YW5jZV90eXBlcxgCIAMoCRJl",
-            "ChJsb2dpY2FsX2ludGVyZmFjZXMYAyADKAsySS5nb29nbGUuY2xvdWQuYmFy",
-            "ZW1ldGFsc29sdXRpb24udjIuU2VydmVyTmV0d29ya1RlbXBsYXRlLkxvZ2lj",
-            "YWxJbnRlcmZhY2Ua3QEKEExvZ2ljYWxJbnRlcmZhY2USDAoEbmFtZRgBIAEo",
-            "CRJlCgR0eXBlGAIgASgOMlcuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0",
-            "aW9uLnYyLlNlcnZlck5ldHdvcmtUZW1wbGF0ZS5Mb2dpY2FsSW50ZXJmYWNl",
-            "LkludGVyZmFjZVR5cGUSEAoIcmVxdWlyZWQYAyABKAgiQgoNSW50ZXJmYWNl",
-            "VHlwZRIeChpJTlRFUkZBQ0VfVFlQRV9VTlNQRUNJRklFRBAAEggKBEJPTkQQ",
-            "ARIHCgNOSUMQAjqVAepBkQEKNmJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL1NlcnZlck5ldHdvcmtUZW1wbGF0ZRJXcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZlck5ldHdvcmtUZW1wbGF0",
-            "ZS97c2VydmVyX25ldHdvcmtfdGVtcGxhdGV9IhcKFVN0YXJ0SW5zdGFuY2VS",
-            "ZXNwb25zZSIWChRTdG9wSW5zdGFuY2VSZXNwb25zZUL8AQolY29tLmdvb2ds",
-            "ZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52MkINSW5zdGFuY2VQcm90b1AB",
-            "WlNjbG91ZC5nb29nbGUuY29tL2dvL2JhcmVtZXRhbHNvbHV0aW9uL2FwaXYy",
-            "L2JhcmVtZXRhbHNvbHV0aW9ucGI7YmFyZW1ldGFsc29sdXRpb25wYqoCIUdv",
-            "b2dsZS5DbG91ZC5CYXJlTWV0YWxTb2x1dGlvbi5WMsoCIUdvb2dsZVxDbG91",
-            "ZFxCYXJlTWV0YWxTb2x1dGlvblxWMuoCJEdvb2dsZTo6Q2xvdWQ6OkJhcmVN",
-            "ZXRhbFNvbHV0aW9uOjpWMmIGcHJvdG8z"));
+            "dXJjZS5wcm90bxouZ29vZ2xlL2Nsb3VkL2JhcmVtZXRhbHNvbHV0aW9uL3Yy",
+            "L2NvbW1vbi5wcm90bxorZ29vZ2xlL2Nsb3VkL2JhcmVtZXRhbHNvbHV0aW9u",
+            "L3YyL2x1bi5wcm90bxovZ29vZ2xlL2Nsb3VkL2JhcmVtZXRhbHNvbHV0aW9u",
+            "L3YyL25ldHdvcmsucHJvdG8aLmdvb2dsZS9jbG91ZC9iYXJlbWV0YWxzb2x1",
+            "dGlvbi92Mi92b2x1bWUucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9t",
+            "YXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIskJ",
+            "CghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQUSDwoCaWQYCyABKAlCA+BB",
+            "AxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxtYWNoaW5lX3R5cGUYBCABKAlCA+BB",
+            "BRJFCgVzdGF0ZRgFIAEoDjIxLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1",
+            "dGlvbi52Mi5JbnN0YW5jZS5TdGF0ZUID4EEDEh4KFmh5cGVydGhyZWFkaW5n",
+            "X2VuYWJsZWQYBiABKAgSRwoGbGFiZWxzGAcgAygLMjcuZ29vZ2xlLmNsb3Vk",
+            "LmJhcmVtZXRhbHNvbHV0aW9uLnYyLkluc3RhbmNlLkxhYmVsc0VudHJ5EjkK",
+            "BGx1bnMYCCADKAsyJi5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
+            "djIuTHVuQgPgQQUSPwoHdm9sdW1lcxgQIAMoCzIpLmdvb2dsZS5jbG91ZC5i",
+            "YXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1bWVCA+BBBBJBCghuZXR3b3JrcxgJ",
+            "IAMoCzIqLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5OZXR3",
+            "b3JrQgPgQQMSLwoiaW50ZXJhY3RpdmVfc2VyaWFsX2NvbnNvbGVfZW5hYmxl",
+            "ZBgKIAEoCEID4EEDEhAKCG9zX2ltYWdlGAwgASgJEhAKA3BvZBgNIAEoCUID",
+            "4EEFElUKEG5ldHdvcmtfdGVtcGxhdGUYDiABKAlCO/pBOAo2YmFyZW1ldGFs",
+            "c29sdXRpb24uZ29vZ2xlYXBpcy5jb20vU2VydmVyTmV0d29ya1RlbXBsYXRl",
+            "Ek8KEmxvZ2ljYWxfaW50ZXJmYWNlcxgPIAMoCzIzLmdvb2dsZS5jbG91ZC5i",
+            "YXJlbWV0YWxzb2x1dGlvbi52Mi5Mb2dpY2FsSW50ZXJmYWNlEhcKCmxvZ2lu",
+            "X2luZm8YESABKAlCA+BBAxJMChB3b3JrbG9hZF9wcm9maWxlGBIgASgOMjIu",
+            "Z29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLldvcmtsb2FkUHJv",
+            "ZmlsZRIdChBmaXJtd2FyZV92ZXJzaW9uGBMgASgJQgPgQQMaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKCAQoFU3Rh",
+            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARIL",
+            "CgdSVU5OSU5HEAISCwoHREVMRVRFRBADEgwKCFVQREFUSU5HEAQSDAoIU1RB",
+            "UlRJTkcQBRIMCghTVE9QUElORxAGEgwKCFNIVVRET1dOEAc6bOpBaQopYmFy",
+            "ZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USPHByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnN0YW5jZXMv",
+            "e2luc3RhbmNlfSJVChJHZXRJbnN0YW5jZVJlcXVlc3QSPwoEbmFtZRgBIAEo",
+            "CUIx4EEC+kErCiliYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9J",
+            "bnN0YW5jZSKIAQoUTGlzdEluc3RhbmNlc1JlcXVlc3QSOQoGcGFyZW50GAEg",
+            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
+            "bhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZm",
+            "aWx0ZXIYBCABKAkihQEKFUxpc3RJbnN0YW5jZXNSZXNwb25zZRI+CglpbnN0",
+            "YW5jZXMYASADKAsyKy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
+            "djIuSW5zdGFuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
+            "Y2hhYmxlGAMgAygJIowBChVVcGRhdGVJbnN0YW5jZVJlcXVlc3QSQgoIaW5z",
+            "dGFuY2UYASABKAsyKy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
+            "djIuSW5zdGFuY2VCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2sidgoVUmVuYW1lSW5zdGFuY2VSZXF1ZXN0",
+            "Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmFyZW1ldGFsc29sdXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vSW5zdGFuY2USHAoPbmV3X2luc3RhbmNlX2lkGAIgASgJ",
+            "QgPgQQIiVwoUUmVzZXRJbnN0YW5jZVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx",
+            "4EEC+kErCiliYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZSJXChRTdGFydEluc3RhbmNlUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHg",
+            "QQL6QSsKKWJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3Rh",
+            "bmNlIhcKFVN0YXJ0SW5zdGFuY2VSZXNwb25zZSJWChNTdG9wSW5zdGFuY2VS",
+            "ZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmFyZW1ldGFsc29sdXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiFgoUU3RvcEluc3RhbmNlUmVz",
+            "cG9uc2UiaAolRW5hYmxlSW50ZXJhY3RpdmVTZXJpYWxDb25zb2xlUmVxdWVz",
+            "dBI/CgRuYW1lGAEgASgJQjHgQQL6QSsKKWJhcmVtZXRhbHNvbHV0aW9uLmdv",
+            "b2dsZWFwaXMuY29tL0luc3RhbmNlIigKJkVuYWJsZUludGVyYWN0aXZlU2Vy",
+            "aWFsQ29uc29sZVJlc3BvbnNlImkKJkRpc2FibGVJbnRlcmFjdGl2ZVNlcmlh",
+            "bENvbnNvbGVSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmFyZW1l",
+            "dGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2UiKQonRGlzYWJs",
+            "ZUludGVyYWN0aXZlU2VyaWFsQ29uc29sZVJlc3BvbnNlIqcBChBEZXRhY2hM",
+            "dW5SZXF1ZXN0EkMKCGluc3RhbmNlGAEgASgJQjHgQQL6QSsKKWJhcmVtZXRh",
+            "bHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjkKA2x1bhgCIAEo",
+            "CUIs4EEC+kEmCiRiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9M",
+            "dW4SEwoLc2tpcF9yZWJvb3QYAyABKAgirAQKFVNlcnZlck5ldHdvcmtUZW1w",
+            "bGF0ZRIRCgRuYW1lGAEgASgJQgPgQQMSIQoZYXBwbGljYWJsZV9pbnN0YW5j",
+            "ZV90eXBlcxgCIAMoCRJlChJsb2dpY2FsX2ludGVyZmFjZXMYAyADKAsySS5n",
+            "b29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuU2VydmVyTmV0d29y",
+            "a1RlbXBsYXRlLkxvZ2ljYWxJbnRlcmZhY2Ua3QEKEExvZ2ljYWxJbnRlcmZh",
+            "Y2USDAoEbmFtZRgBIAEoCRJlCgR0eXBlGAIgASgOMlcuZ29vZ2xlLmNsb3Vk",
+            "LmJhcmVtZXRhbHNvbHV0aW9uLnYyLlNlcnZlck5ldHdvcmtUZW1wbGF0ZS5M",
+            "b2dpY2FsSW50ZXJmYWNlLkludGVyZmFjZVR5cGUSEAoIcmVxdWlyZWQYAyAB",
+            "KAgiQgoNSW50ZXJmYWNlVHlwZRIeChpJTlRFUkZBQ0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEggKBEJPTkQQARIHCgNOSUMQAjqVAepBkQEKNmJhcmVtZXRhbHNv",
+            "bHV0aW9uLmdvb2dsZWFwaXMuY29tL1NlcnZlck5ldHdvcmtUZW1wbGF0ZRJX",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZl",
+            "ck5ldHdvcmtUZW1wbGF0ZS97c2VydmVyX25ldHdvcmtfdGVtcGxhdGV9QvwB",
+            "CiVjb20uZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyQg1JbnN0",
+            "YW5jZVByb3RvUAFaU2Nsb3VkLmdvb2dsZS5jb20vZ28vYmFyZW1ldGFsc29s",
+            "dXRpb24vYXBpdjIvYmFyZW1ldGFsc29sdXRpb25wYjtiYXJlbWV0YWxzb2x1",
+            "dGlvbnBiqgIhR29vZ2xlLkNsb3VkLkJhcmVNZXRhbFNvbHV0aW9uLlYyygIh",
+            "R29vZ2xlXENsb3VkXEJhcmVNZXRhbFNvbHV0aW9uXFYy6gIkR29vZ2xlOjpD",
+            "bG91ZDo6QmFyZU1ldGFsU29sdXRpb246OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.LunReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.NetworkReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.CommonReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.LunReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.NetworkReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Instance), global::Google.Cloud.BareMetalSolution.V2.Instance.Parser, new[]{ "Name", "Id", "CreateTime", "UpdateTime", "MachineType", "State", "HyperthreadingEnabled", "Labels", "Luns", "Networks", "InteractiveSerialConsoleEnabled", "OsImage", "Pod", "NetworkTemplate", "LogicalInterfaces" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Instance), global::Google.Cloud.BareMetalSolution.V2.Instance.Parser, new[]{ "Name", "Id", "CreateTime", "UpdateTime", "MachineType", "State", "HyperthreadingEnabled", "Labels", "Luns", "Volumes", "Networks", "InteractiveSerialConsoleEnabled", "OsImage", "Pod", "NetworkTemplate", "LogicalInterfaces", "LoginInfo", "WorkloadProfile", "FirmwareVersion" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.GetInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListInstancesRequest), global::Google.Cloud.BareMetalSolution.V2.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListInstancesResponse), global::Google.Cloud.BareMetalSolution.V2.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.UpdateInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.UpdateInstanceRequest.Parser, new[]{ "Instance", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest.Parser, new[]{ "Name", "NewInstanceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StartInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.StartInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest), global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest.Parser, new[]{ "Instance", "Lun" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate), global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Parser, new[]{ "Name", "ApplicableInstanceTypes", "LogicalInterfaces" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface), global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface.Parser, new[]{ "Name", "Type", "Required" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface.Types.InterfaceType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StartInstanceResponse), global::Google.Cloud.BareMetalSolution.V2.StartInstanceResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StopInstanceResponse), global::Google.Cloud.BareMetalSolution.V2.StopInstanceResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest), global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.StopInstanceResponse), global::Google.Cloud.BareMetalSolution.V2.StopInstanceResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest), global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleResponse), global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest), global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleResponse), global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest), global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest.Parser, new[]{ "Instance", "Lun", "SkipReboot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate), global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Parser, new[]{ "Name", "ApplicableInstanceTypes", "LogicalInterfaces" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface), global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface.Parser, new[]{ "Name", "Type", "Required" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.ServerNetworkTemplate.Types.LogicalInterface.Types.InterfaceType) }, null, null)})
           }));
     }
     #endregion
@@ -116,6 +139,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// A server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -159,12 +183,16 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       hyperthreadingEnabled_ = other.hyperthreadingEnabled_;
       labels_ = other.labels_.Clone();
       luns_ = other.luns_.Clone();
+      volumes_ = other.volumes_.Clone();
       networks_ = other.networks_.Clone();
       interactiveSerialConsoleEnabled_ = other.interactiveSerialConsoleEnabled_;
       osImage_ = other.osImage_;
       pod_ = other.pod_;
       networkTemplate_ = other.networkTemplate_;
       logicalInterfaces_ = other.logicalInterfaces_.Clone();
+      loginInfo_ = other.loginInfo_;
+      workloadProfile_ = other.workloadProfile_;
+      firmwareVersion_ = other.firmwareVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -178,7 +206,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of this `Instance`.
+    /// Immutable. The resource name of this `Instance`.
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// Format:
@@ -197,7 +225,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int IdFieldNumber = 11;
     private string id_ = "";
     /// <summary>
-    /// An identifier for the `Instance`, generated by the backend.
+    /// Output only. An identifier for the `Instance`, generated by the backend.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -242,7 +270,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int MachineTypeFieldNumber = 4;
     private string machineType_ = "";
     /// <summary>
-    /// The server type.
+    /// Immutable. The server type.
     /// [Available server
     /// types](https://cloud.google.com/bare-metal/docs/bms-planning#server_configurations)
     /// </summary>
@@ -259,7 +287,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int StateFieldNumber = 5;
     private global::Google.Cloud.BareMetalSolution.V2.Instance.Types.State state_ = global::Google.Cloud.BareMetalSolution.V2.Instance.Types.State.Unspecified;
     /// <summary>
-    /// The state of the server.
+    /// Output only. The state of the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -306,12 +334,27 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.BareMetalSolution.V2.Lun.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Lun> luns_ = new pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Lun>();
     /// <summary>
-    /// List of LUNs associated with this server.
+    /// Immutable. List of LUNs associated with this server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Lun> Luns {
       get { return luns_; }
+    }
+
+    /// <summary>Field number for the "volumes" field.</summary>
+    public const int VolumesFieldNumber = 16;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BareMetalSolution.V2.Volume> _repeated_volumes_codec
+        = pb::FieldCodec.ForMessage(130, global::Google.Cloud.BareMetalSolution.V2.Volume.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Volume> volumes_ = new pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Volume>();
+    /// <summary>
+    /// Input only. List of Volumes to attach to this Instance on creation.
+    /// This field won't be populated in Get/List responses.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Volume> Volumes {
+      get { return volumes_; }
     }
 
     /// <summary>Field number for the "networks" field.</summary>
@@ -320,7 +363,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.BareMetalSolution.V2.Network.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Network> networks_ = new pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.Network>();
     /// <summary>
-    /// List of networks associated with this server.
+    /// Output only. List of networks associated with this server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -332,9 +375,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int InteractiveSerialConsoleEnabledFieldNumber = 10;
     private bool interactiveSerialConsoleEnabled_;
     /// <summary>
-    /// True if the interactive serial console feature is enabled for the instance,
-    /// false otherwise.
-    /// The default value is false.
+    /// Output only. True if the interactive serial console feature is enabled for
+    /// the instance, false otherwise. The default value is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -415,6 +457,51 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       get { return logicalInterfaces_; }
     }
 
+    /// <summary>Field number for the "login_info" field.</summary>
+    public const int LoginInfoFieldNumber = 17;
+    private string loginInfo_ = "";
+    /// <summary>
+    /// Output only. Text field about info for logging in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LoginInfo {
+      get { return loginInfo_; }
+      set {
+        loginInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "workload_profile" field.</summary>
+    public const int WorkloadProfileFieldNumber = 18;
+    private global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile workloadProfile_ = global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified;
+    /// <summary>
+    /// The workload profile for the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile WorkloadProfile {
+      get { return workloadProfile_; }
+      set {
+        workloadProfile_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "firmware_version" field.</summary>
+    public const int FirmwareVersionFieldNumber = 19;
+    private string firmwareVersion_ = "";
+    /// <summary>
+    /// Output only. The firmware version for the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FirmwareVersion {
+      get { return firmwareVersion_; }
+      set {
+        firmwareVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -439,12 +526,16 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (HyperthreadingEnabled != other.HyperthreadingEnabled) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if(!luns_.Equals(other.luns_)) return false;
+      if(!volumes_.Equals(other.volumes_)) return false;
       if(!networks_.Equals(other.networks_)) return false;
       if (InteractiveSerialConsoleEnabled != other.InteractiveSerialConsoleEnabled) return false;
       if (OsImage != other.OsImage) return false;
       if (Pod != other.Pod) return false;
       if (NetworkTemplate != other.NetworkTemplate) return false;
       if(!logicalInterfaces_.Equals(other.logicalInterfaces_)) return false;
+      if (LoginInfo != other.LoginInfo) return false;
+      if (WorkloadProfile != other.WorkloadProfile) return false;
+      if (FirmwareVersion != other.FirmwareVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -461,12 +552,16 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (HyperthreadingEnabled != false) hash ^= HyperthreadingEnabled.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= luns_.GetHashCode();
+      hash ^= volumes_.GetHashCode();
       hash ^= networks_.GetHashCode();
       if (InteractiveSerialConsoleEnabled != false) hash ^= InteractiveSerialConsoleEnabled.GetHashCode();
       if (OsImage.Length != 0) hash ^= OsImage.GetHashCode();
       if (Pod.Length != 0) hash ^= Pod.GetHashCode();
       if (NetworkTemplate.Length != 0) hash ^= NetworkTemplate.GetHashCode();
       hash ^= logicalInterfaces_.GetHashCode();
+      if (LoginInfo.Length != 0) hash ^= LoginInfo.GetHashCode();
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified) hash ^= WorkloadProfile.GetHashCode();
+      if (FirmwareVersion.Length != 0) hash ^= FirmwareVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -533,6 +628,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteString(NetworkTemplate);
       }
       logicalInterfaces_.WriteTo(output, _repeated_logicalInterfaces_codec);
+      volumes_.WriteTo(output, _repeated_volumes_codec);
+      if (LoginInfo.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(LoginInfo);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) WorkloadProfile);
+      }
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(FirmwareVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -591,6 +699,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteString(NetworkTemplate);
       }
       logicalInterfaces_.WriteTo(ref output, _repeated_logicalInterfaces_codec);
+      volumes_.WriteTo(ref output, _repeated_volumes_codec);
+      if (LoginInfo.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(LoginInfo);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) WorkloadProfile);
+      }
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(FirmwareVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -624,6 +745,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += luns_.CalculateSize(_repeated_luns_codec);
+      size += volumes_.CalculateSize(_repeated_volumes_codec);
       size += networks_.CalculateSize(_repeated_networks_codec);
       if (InteractiveSerialConsoleEnabled != false) {
         size += 1 + 1;
@@ -638,6 +760,15 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkTemplate);
       }
       size += logicalInterfaces_.CalculateSize(_repeated_logicalInterfaces_codec);
+      if (LoginInfo.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LoginInfo);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) WorkloadProfile);
+      }
+      if (FirmwareVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(FirmwareVersion);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -677,8 +808,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.HyperthreadingEnabled != false) {
         HyperthreadingEnabled = other.HyperthreadingEnabled;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       luns_.Add(other.luns_);
+      volumes_.Add(other.volumes_);
       networks_.Add(other.networks_);
       if (other.InteractiveSerialConsoleEnabled != false) {
         InteractiveSerialConsoleEnabled = other.InteractiveSerialConsoleEnabled;
@@ -693,6 +825,15 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         NetworkTemplate = other.NetworkTemplate;
       }
       logicalInterfaces_.Add(other.logicalInterfaces_);
+      if (other.LoginInfo.Length != 0) {
+        LoginInfo = other.LoginInfo;
+      }
+      if (other.WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile.Unspecified) {
+        WorkloadProfile = other.WorkloadProfile;
+      }
+      if (other.FirmwareVersion.Length != 0) {
+        FirmwareVersion = other.FirmwareVersion;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -772,6 +913,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 122: {
             logicalInterfaces_.AddEntriesFrom(input, _repeated_logicalInterfaces_codec);
+            break;
+          }
+          case 130: {
+            volumes_.AddEntriesFrom(input, _repeated_volumes_codec);
+            break;
+          }
+          case 138: {
+            LoginInfo = input.ReadString();
+            break;
+          }
+          case 144: {
+            WorkloadProfile = (global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile) input.ReadEnum();
+            break;
+          }
+          case 154: {
+            FirmwareVersion = input.ReadString();
             break;
           }
         }
@@ -855,6 +1012,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             logicalInterfaces_.AddEntriesFrom(ref input, _repeated_logicalInterfaces_codec);
             break;
           }
+          case 130: {
+            volumes_.AddEntriesFrom(ref input, _repeated_volumes_codec);
+            break;
+          }
+          case 138: {
+            LoginInfo = input.ReadString();
+            break;
+          }
+          case 144: {
+            WorkloadProfile = (global::Google.Cloud.BareMetalSolution.V2.WorkloadProfile) input.ReadEnum();
+            break;
+          }
+          case 154: {
+            FirmwareVersion = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -885,6 +1058,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// The server has been deleted.
         /// </summary>
         [pbr::OriginalName("DELETED")] Deleted = 3,
+        /// <summary>
+        /// The server is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 4,
+        /// <summary>
+        /// The server is starting.
+        /// </summary>
+        [pbr::OriginalName("STARTING")] Starting = 5,
+        /// <summary>
+        /// The server is stopping.
+        /// </summary>
+        [pbr::OriginalName("STOPPING")] Stopping = 6,
+        /// <summary>
+        /// The server is shutdown.
+        /// </summary>
+        [pbr::OriginalName("SHUTDOWN")] Shutdown = 7,
       }
 
     }
@@ -895,6 +1084,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for requesting server information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1090,6 +1280,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for requesting the list of servers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1406,6 +1597,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Response message for the list of servers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1659,6 +1851,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message requesting to updating a server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1917,8 +2110,246 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   }
 
   /// <summary>
+  /// Message requesting rename of a server.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RenameInstanceRequest : pb::IMessage<RenameInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RenameInstanceRequest> _parser = new pb::MessageParser<RenameInstanceRequest>(() => new RenameInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RenameInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameInstanceRequest(RenameInstanceRequest other) : this() {
+      name_ = other.name_;
+      newInstanceId_ = other.newInstanceId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameInstanceRequest Clone() {
+      return new RenameInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The `name` field is used to identify the instance.
+    /// Format: projects/{project}/locations/{location}/instances/{instance}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_instance_id" field.</summary>
+    public const int NewInstanceIdFieldNumber = 2;
+    private string newInstanceId_ = "";
+    /// <summary>
+    /// Required. The new `id` of the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NewInstanceId {
+      get { return newInstanceId_; }
+      set {
+        newInstanceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RenameInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RenameInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (NewInstanceId != other.NewInstanceId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (NewInstanceId.Length != 0) hash ^= NewInstanceId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewInstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewInstanceId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewInstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewInstanceId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (NewInstanceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NewInstanceId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RenameInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.NewInstanceId.Length != 0) {
+        NewInstanceId = other.NewInstanceId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewInstanceId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewInstanceId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message requesting to reset a server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResetInstanceRequest : pb::IMessage<ResetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1933,7 +2364,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2114,6 +2545,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message requesting to start a server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartInstanceRequest : pb::IMessage<StartInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2128,7 +2560,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2307,8 +2739,165 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   }
 
   /// <summary>
+  /// Response message from starting a server.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StartInstanceResponse : pb::IMessage<StartInstanceResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StartInstanceResponse> _parser = new pb::MessageParser<StartInstanceResponse>(() => new StartInstanceResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StartInstanceResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstanceResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstanceResponse(StartInstanceResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstanceResponse Clone() {
+      return new StartInstanceResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StartInstanceResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StartInstanceResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StartInstanceResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message requesting to stop a server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StopInstanceRequest : pb::IMessage<StopInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2323,7 +2912,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2502,8 +3091,869 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   }
 
   /// <summary>
+  /// Response message from stopping a server.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StopInstanceResponse : pb::IMessage<StopInstanceResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StopInstanceResponse> _parser = new pb::MessageParser<StopInstanceResponse>(() => new StopInstanceResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StopInstanceResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StopInstanceResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StopInstanceResponse(StopInstanceResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StopInstanceResponse Clone() {
+      return new StopInstanceResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StopInstanceResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StopInstanceResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StopInstanceResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for enabling the interactive serial console on an instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EnableInteractiveSerialConsoleRequest : pb::IMessage<EnableInteractiveSerialConsoleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnableInteractiveSerialConsoleRequest> _parser = new pb::MessageParser<EnableInteractiveSerialConsoleRequest>(() => new EnableInteractiveSerialConsoleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnableInteractiveSerialConsoleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleRequest(EnableInteractiveSerialConsoleRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleRequest Clone() {
+      return new EnableInteractiveSerialConsoleRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnableInteractiveSerialConsoleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnableInteractiveSerialConsoleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnableInteractiveSerialConsoleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for response of EnableInteractiveSerialConsole.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EnableInteractiveSerialConsoleResponse : pb::IMessage<EnableInteractiveSerialConsoleResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnableInteractiveSerialConsoleResponse> _parser = new pb::MessageParser<EnableInteractiveSerialConsoleResponse>(() => new EnableInteractiveSerialConsoleResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnableInteractiveSerialConsoleResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleResponse(EnableInteractiveSerialConsoleResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnableInteractiveSerialConsoleResponse Clone() {
+      return new EnableInteractiveSerialConsoleResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnableInteractiveSerialConsoleResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnableInteractiveSerialConsoleResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnableInteractiveSerialConsoleResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for disabling the interactive serial console on an instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DisableInteractiveSerialConsoleRequest : pb::IMessage<DisableInteractiveSerialConsoleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DisableInteractiveSerialConsoleRequest> _parser = new pb::MessageParser<DisableInteractiveSerialConsoleRequest>(() => new DisableInteractiveSerialConsoleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DisableInteractiveSerialConsoleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleRequest(DisableInteractiveSerialConsoleRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleRequest Clone() {
+      return new DisableInteractiveSerialConsoleRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DisableInteractiveSerialConsoleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DisableInteractiveSerialConsoleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DisableInteractiveSerialConsoleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for response of DisableInteractiveSerialConsole.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DisableInteractiveSerialConsoleResponse : pb::IMessage<DisableInteractiveSerialConsoleResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DisableInteractiveSerialConsoleResponse> _parser = new pb::MessageParser<DisableInteractiveSerialConsoleResponse>(() => new DisableInteractiveSerialConsoleResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DisableInteractiveSerialConsoleResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleResponse(DisableInteractiveSerialConsoleResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisableInteractiveSerialConsoleResponse Clone() {
+      return new DisableInteractiveSerialConsoleResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DisableInteractiveSerialConsoleResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DisableInteractiveSerialConsoleResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DisableInteractiveSerialConsoleResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message for detach specific LUN from an Instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DetachLunRequest : pb::IMessage<DetachLunRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2518,7 +3968,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2540,6 +3990,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public DetachLunRequest(DetachLunRequest other) : this() {
       instance_ = other.instance_;
       lun_ = other.lun_;
+      skipReboot_ = other.skipReboot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2579,6 +4030,21 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
     }
 
+    /// <summary>Field number for the "skip_reboot" field.</summary>
+    public const int SkipRebootFieldNumber = 3;
+    private bool skipReboot_;
+    /// <summary>
+    /// If true, performs lun unmapping without instance reboot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SkipReboot {
+      get { return skipReboot_; }
+      set {
+        skipReboot_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2596,6 +4062,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (Instance != other.Instance) return false;
       if (Lun != other.Lun) return false;
+      if (SkipReboot != other.SkipReboot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2605,6 +4072,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       int hash = 1;
       if (Instance.Length != 0) hash ^= Instance.GetHashCode();
       if (Lun.Length != 0) hash ^= Lun.GetHashCode();
+      if (SkipReboot != false) hash ^= SkipReboot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2631,6 +4099,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(18);
         output.WriteString(Lun);
       }
+      if (SkipReboot != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(SkipReboot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2649,6 +4121,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(18);
         output.WriteString(Lun);
       }
+      if (SkipReboot != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(SkipReboot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2664,6 +4140,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (Lun.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Lun);
+      }
+      if (SkipReboot != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2682,6 +4161,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (other.Lun.Length != 0) {
         Lun = other.Lun;
+      }
+      if (other.SkipReboot != false) {
+        SkipReboot = other.SkipReboot;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2704,6 +4186,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 18: {
             Lun = input.ReadString();
+            break;
+          }
+          case 24: {
+            SkipReboot = input.ReadBool();
             break;
           }
         }
@@ -2729,6 +4215,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             Lun = input.ReadString();
             break;
           }
+          case 24: {
+            SkipReboot = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2739,6 +4229,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Network template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServerNetworkTemplate : pb::IMessage<ServerNetworkTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2753,7 +4244,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2789,7 +4280,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Template's unique name. The full resource name follows the pattern:
+    /// Output only. Template's unique name. The full resource name follows the
+    /// pattern:
     /// `projects/{project}/locations/{location}/serverNetworkTemplate/{server_network_template}`
     /// Generally, the {server_network_template} follows the syntax of
     /// "bond&lt;interface_type_index>&lt;bond_mode>" or "nic&lt;interface_type_index>".
@@ -2998,6 +4490,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       /// <summary>
       /// Logical interface.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LogicalInterface : pb::IMessage<LogicalInterface>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3302,316 +4795,6 @@ namespace Google.Cloud.BareMetalSolution.V2 {
 
     }
     #endregion
-
-  }
-
-  /// <summary>
-  /// Response message from starting a server.
-  /// </summary>
-  public sealed partial class StartInstanceResponse : pb::IMessage<StartInstanceResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<StartInstanceResponse> _parser = new pb::MessageParser<StartInstanceResponse>(() => new StartInstanceResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StartInstanceResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstanceResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstanceResponse(StartInstanceResponse other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstanceResponse Clone() {
-      return new StartInstanceResponse(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as StartInstanceResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StartInstanceResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StartInstanceResponse other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Response message from stopping a server.
-  /// </summary>
-  public sealed partial class StopInstanceResponse : pb::IMessage<StopInstanceResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<StopInstanceResponse> _parser = new pb::MessageParser<StopInstanceResponse>(() => new StopInstanceResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StopInstanceResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.InstanceReflection.Descriptor.MessageTypes[11]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StopInstanceResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StopInstanceResponse(StopInstanceResponse other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StopInstanceResponse Clone() {
-      return new StopInstanceResponse(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as StopInstanceResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StopInstanceResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StopInstanceResponse other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-        }
-      }
-    }
-    #endif
 
   }
 

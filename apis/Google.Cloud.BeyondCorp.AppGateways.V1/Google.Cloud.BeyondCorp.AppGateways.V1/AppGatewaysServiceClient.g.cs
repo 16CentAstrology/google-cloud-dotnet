@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.BeyondCorp.AppGateways.V1
 {
@@ -200,14 +200,14 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AppGatewaysServiceClient.Create(callInvoker, Settings, Logger);
+            return AppGatewaysServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AppGatewaysServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AppGatewaysServiceClient.Create(callInvoker, Settings, Logger);
+            return AppGatewaysServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -355,13 +355,22 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppGateways(new ListAppGatewaysRequest
+        public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppGatewaysRequest request = new ListAppGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppGateways in a given project and location.
@@ -380,13 +389,22 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppGatewaysAsync(new ListAppGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppGatewaysRequest request = new ListAppGatewaysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppGateways in a given project and location.
@@ -405,13 +423,22 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppGateways(new ListAppGatewaysRequest
+        public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppGatewaysRequest request = new ListAppGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppGateways(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AppGateways in a given project and location.
@@ -430,13 +457,22 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppGatewaysAsync(new ListAppGatewaysRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppGatewaysRequest request = new ListAppGatewaysRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppGatewaysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single AppGateway.
@@ -923,7 +959,11 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         {
             GrpcClient = grpcClient;
             AppGatewaysServiceSettings effectiveSettings = settings ?? AppGatewaysServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAppGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAppGatewayOperationsSettings, logger);
             DeleteAppGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAppGatewayOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);

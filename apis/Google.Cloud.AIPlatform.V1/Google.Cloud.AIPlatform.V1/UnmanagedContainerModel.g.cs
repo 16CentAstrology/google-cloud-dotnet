@@ -52,6 +52,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Contains model information necessary to perform batch prediction without
   /// requiring a full model import.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UnmanagedContainerModel : pb::IMessage<UnmanagedContainerModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

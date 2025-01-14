@@ -75,52 +75,52 @@ namespace Google.Cloud.ManagedIdentities.V1 {
             "YW5hZ2VkSWRlbnRpdGllc1NlcnZpY2US8AEKF0NyZWF0ZU1pY3Jvc29mdEFk",
             "RG9tYWluEkEuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxLkNy",
             "ZWF0ZU1pY3Jvc29mdEFkRG9tYWluUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24ic4LT5JMCOiIwL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvZ2xvYmFsfS9kb21haW5zOgZkb21haW7aQRlwYXJlbnQs",
-            "ZG9tYWluX25hbWUsZG9tYWluykEUCgZEb21haW4SCk9wTWV0YWRhdGES6AEK",
+            "bmluZy5PcGVyYXRpb24ic8pBFAoGRG9tYWluEgpPcE1ldGFkYXRh2kEZcGFy",
+            "ZW50LGRvbWFpbl9uYW1lLGRvbWFpboLT5JMCOiIwL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsfS9kb21haW5zOgZkb21haW4S6AEK",
             "ElJlc2V0QWRtaW5QYXNzd29yZBI8Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRl",
             "bnRpdGllcy52MS5SZXNldEFkbWluUGFzc3dvcmRSZXF1ZXN0Gj0uZ29vZ2xl",
             "LmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxLlJlc2V0QWRtaW5QYXNzd29y",
-            "ZFJlc3BvbnNlIlWC0+STAkgiQy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy9nbG9iYWwvZG9tYWlucy8qfTpyZXNldEFkbWluUGFzc3dvcmQ6ASra",
-            "QQRuYW1lEr8BCgtMaXN0RG9tYWlucxI1Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vk",
+            "ZFJlc3BvbnNlIlXaQQRuYW1lgtPkkwJIIkMvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvZ2xvYmFsL2RvbWFpbnMvKn06cmVzZXRBZG1pblBhc3N3",
+            "b3JkOgEqEr8BCgtMaXN0RG9tYWlucxI1Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vk",
             "aWRlbnRpdGllcy52MS5MaXN0RG9tYWluc1JlcXVlc3QaNi5nb29nbGUuY2xv",
             "dWQubWFuYWdlZGlkZW50aXRpZXMudjEuTGlzdERvbWFpbnNSZXNwb25zZSJB",
-            "gtPkkwIyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9i",
-            "YWx9L2RvbWFpbnPaQQZwYXJlbnQSrAEKCUdldERvbWFpbhIzLmdvb2dsZS5j",
+            "2kEGcGFyZW50gtPkkwIyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy9nbG9iYWx9L2RvbWFpbnMSrAEKCUdldERvbWFpbhIzLmdvb2dsZS5j",
             "bG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MS5HZXREb21haW5SZXF1ZXN0Giku",
-            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxLkRvbWFpbiI/gtPk",
-            "kwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2Rv",
-            "bWFpbnMvKn3aQQRuYW1lEtoBCgxVcGRhdGVEb21haW4SNi5nb29nbGUuY2xv",
+            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxLkRvbWFpbiI/2kEE",
+            "bmFtZYLT5JMCMhIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2ds",
+            "b2JhbC9kb21haW5zLyp9EtoBCgxVcGRhdGVEb21haW4SNi5nb29nbGUuY2xv",
             "dWQubWFuYWdlZGlkZW50aXRpZXMudjEuVXBkYXRlRG9tYWluUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ic4LT5JMCQTI3L3YxL3tk",
-            "b21haW4ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvZG9tYWlu",
-            "cy8qfToGZG9tYWlu2kESZG9tYWluLHVwZGF0ZV9tYXNrykEUCgZEb21haW4S",
-            "Ck9wTWV0YWRhdGESzAEKDERlbGV0ZURvbWFpbhI2Lmdvb2dsZS5jbG91ZC5t",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ic8pBFAoGRG9tYWluEgpP",
+            "cE1ldGFkYXRh2kESZG9tYWluLHVwZGF0ZV9tYXNrgtPkkwJBMjcvdjEve2Rv",
+            "bWFpbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9kb21haW5z",
+            "Lyp9OgZkb21haW4SzAEKDERlbGV0ZURvbWFpbhI2Lmdvb2dsZS5jbG91ZC5t",
             "YW5hZ2VkaWRlbnRpdGllcy52MS5EZWxldGVEb21haW5SZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJlgtPkkwIyKjAvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2RvbWFpbnMvKn3aQQRuYW1l",
-            "ykEjChVnb29nbGUucHJvdG9idWYuRW1wdHkSCk9wTWV0YWRhdGES0AEKC0F0",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJlykEjChVnb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkSCk9wTWV0YWRhdGHaQQRuYW1lgtPkkwIyKjAvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2RvbWFpbnMvKn0S0AEKC0F0",
             "dGFjaFRydXN0EjUuZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYx",
             "LkF0dGFjaFRydXN0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ia4LT5JMCQSI8L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "L2dsb2JhbC9kb21haW5zLyp9OmF0dGFjaFRydXN0OgEq2kEKbmFtZSx0cnVz",
-            "dMpBFAoGRG9tYWluEgpPcE1ldGFkYXRhEoUCChBSZWNvbmZpZ3VyZVRydXN0",
+            "YXRpb24ia8pBFAoGRG9tYWluEgpPcE1ldGFkYXRh2kEKbmFtZSx0cnVzdILT",
+            "5JMCQSI8L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9k",
+            "b21haW5zLyp9OmF0dGFjaFRydXN0OgEqEoUCChBSZWNvbmZpZ3VyZVRydXN0",
             "EjouZ29vZ2xlLmNsb3VkLm1hbmFnZWRpZGVudGl0aWVzLnYxLlJlY29uZmln",
             "dXJlVHJ1c3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKVAYLT5JMCRiJBL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2ds",
-            "b2JhbC9kb21haW5zLyp9OnJlY29uZmlndXJlVHJ1c3Q6ASraQS9uYW1lLHRh",
-            "cmdldF9kb21haW5fbmFtZSx0YXJnZXRfZG5zX2lwX2FkZHJlc3Nlc8pBFAoG",
-            "RG9tYWluEgpPcE1ldGFkYXRhEtABCgtEZXRhY2hUcnVzdBI1Lmdvb2dsZS5j",
+            "biKVAcpBFAoGRG9tYWluEgpPcE1ldGFkYXRh2kEvbmFtZSx0YXJnZXRfZG9t",
+            "YWluX25hbWUsdGFyZ2V0X2Ruc19pcF9hZGRyZXNzZXOC0+STAkYiQS92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvZG9tYWlucy8qfTpy",
+            "ZWNvbmZpZ3VyZVRydXN0OgEqEtABCgtEZXRhY2hUcnVzdBI1Lmdvb2dsZS5j",
             "bG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MS5EZXRhY2hUcnVzdFJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImuC0+STAkEiPC92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvZG9tYWlucy8qfTpk",
-            "ZXRhY2hUcnVzdDoBKtpBCm5hbWUsdHJ1c3TKQRQKBkRvbWFpbhIKT3BNZXRh",
-            "ZGF0YRLWAQoNVmFsaWRhdGVUcnVzdBI3Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vk",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImvKQRQKBkRvbWFpbhIK",
+            "T3BNZXRhZGF0YdpBCm5hbWUsdHJ1c3SC0+STAkEiPC92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvZG9tYWlucy8qfTpkZXRhY2hUcnVz",
+            "dDoBKhLWAQoNVmFsaWRhdGVUcnVzdBI3Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vk",
             "aWRlbnRpdGllcy52MS5WYWxpZGF0ZVRydXN0UmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ibYLT5JMCQyI+L3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zL2dsb2JhbC9kb21haW5zLyp9OnZhbGlkYXRlVHJ1",
-            "c3Q6ASraQQpuYW1lLHRydXN0ykEUCgZEb21haW4SCk9wTWV0YWRhdGEaVMpB",
+            "b25ncnVubmluZy5PcGVyYXRpb24ibcpBFAoGRG9tYWluEgpPcE1ldGFkYXRh",
+            "2kEKbmFtZSx0cnVzdILT5JMCQyI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zL2dsb2JhbC9kb21haW5zLyp9OnZhbGlkYXRlVHJ1c3Q6ASoaVMpB",
             "IG1hbmFnZWRpZGVudGl0aWVzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
             "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKTAgolY29t",
             "Lmdvb2dsZS5jbG91ZC5tYW5hZ2VkaWRlbnRpdGllcy52MUIdTWFuYWdlZElk",
@@ -155,6 +155,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OpMetadata : pb::IMessage<OpMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -572,6 +573,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [CreateMicrosoftAdDomain][google.cloud.managedidentities.v1.CreateMicrosoftAdDomain]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateMicrosoftAdDomainRequest : pb::IMessage<CreateMicrosoftAdDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -869,6 +871,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [ResetAdminPassword][google.cloud.managedidentities.v1.ResetAdminPassword]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResetAdminPasswordRequest : pb::IMessage<ResetAdminPasswordRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1066,6 +1069,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Response message for
   /// [ResetAdminPassword][google.cloud.managedidentities.v1.ResetAdminPassword]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResetAdminPasswordResponse : pb::IMessage<ResetAdminPasswordResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1262,6 +1266,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [ListDomains][google.cloud.managedidentities.v1.ListDomains]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDomainsRequest : pb::IMessage<ListDomainsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1629,6 +1634,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Response message for
   /// [ListDomains][google.cloud.managedidentities.v1.ListDomains]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDomainsResponse : pb::IMessage<ListDomainsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1883,6 +1889,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// <summary>
   /// Request message for [GetDomain][google.cloud.managedidentities.v1.GetDomain]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDomainRequest : pb::IMessage<GetDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2080,6 +2087,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [UpdateDomain][google.cloud.managedidentities.v1.UpdateDomain]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDomainRequest : pb::IMessage<UpdateDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2340,6 +2348,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [DeleteDomain][google.cloud.managedidentities.v1.DeleteDomain]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDomainRequest : pb::IMessage<DeleteDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2537,6 +2546,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [AttachTrust][google.cloud.managedidentities.v1.AttachTrust]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttachTrustRequest : pb::IMessage<AttachTrustRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2783,6 +2793,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [ReconfigureTrust][google.cloud.managedidentities.v1.ReconfigureTrust]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReconfigureTrustRequest : pb::IMessage<ReconfigureTrustRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3051,6 +3062,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [DetachTrust][google.cloud.managedidentities.v1.DetachTrust]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DetachTrustRequest : pb::IMessage<DetachTrustRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3297,6 +3309,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Request message for
   /// [ValidateTrust][google.cloud.managedidentities.v1.ValidateTrust]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateTrustRequest : pb::IMessage<ValidateTrustRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
@@ -97,7 +97,18 @@ public class ServiceCollectionExtensionsTest
         IServiceCollection serviceCollection = new ServiceCollection();
 
         // Act and assert.
-        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: null));
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: (Action<PublisherClientBuilder>) null));
+    }
+
+    [Fact]
+    public void AddPublisherClient_WithNullAction2()
+    {
+        // Arrange.
+        // Passing null action to AddPublisherClient should throw ArgumentNullException.
+        IServiceCollection serviceCollection = new ServiceCollection();
+
+        // Act and assert.
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: (Action<IServiceProvider, PublisherClientBuilder>) null));
     }
 
     [Fact]
@@ -172,7 +183,18 @@ public class ServiceCollectionExtensionsTest
         IServiceCollection serviceCollection = new ServiceCollection();
 
         // Act and assert.
-        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: null));
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: (Action<SubscriberClientBuilder>) null));
+    }
+
+    [Fact]
+    public void AddSubscriberClient_WithNullAction2()
+    {
+        // Arrange.
+        // Passing null action to AddPublisherClient should throw ArgumentNullException.
+        IServiceCollection serviceCollection = new ServiceCollection();
+
+        // Act and assert.
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: (Action<IServiceProvider, SubscriberClientBuilder>) null));
     }
 
     // Fake credential used just to ensure that we don't fetch the application default credentials

@@ -2,24 +2,26 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0 
+//     http://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2.Requests;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
@@ -49,7 +51,7 @@ namespace Google.Cloud.Firestore
         // We should never allow a new query to be created for a different root,
         // as that might have different serialization rules.
         private readonly QueryRoot _root;
-        
+
         private bool IsLimitToLast => _limit?.type == LimitType.Last;
 
         /// <summary>
@@ -422,7 +424,35 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <returns>An instance of <see cref="AggregateQuery"/> with count(*) aggregation applied.</returns>
         public AggregateQuery Count() =>
-            new AggregateQuery(this).WithAggregation(Aggregates.CreateCountAggregate());
+            new AggregateQuery(this, new[] { AggregateField.Count() });
+
+        /// <summary>
+        /// Calculates the specified aggregations to return the aggregate query. Multiple aggregations can be performed in a single query.
+        /// </summary>
+        /// <param name="aggregateField">Specifies the <see cref="AggregateField"/> to be calculated. Must not be null.</param>
+        /// <param name="aggregateFields">Additional aggregations to be included in the query, if any. Must not be null, but may be empty.</param>
+        /// <returns>Returns an <see cref="AggregateQuery" /> that performs aggregations on the documents in the result set of this query.</returns>
+        public AggregateQuery Aggregate(AggregateField aggregateField, params AggregateField[] aggregateFields)
+        {
+            GaxPreconditions.CheckNotNull(aggregateField, nameof(aggregateField));
+            GaxPreconditions.CheckNotNull(aggregateFields, nameof(aggregateFields));
+            var combined = new List<AggregateField> { aggregateField };
+            combined.AddRange(aggregateFields);
+            return new AggregateQuery(this, combined);
+        }
+
+        /// <summary>
+        /// Calculates the specified aggregations to return the aggregate query. Multiple aggregations can be performed in a single query.
+        /// </summary>
+        /// <param name="aggregateFields">Aggregations to be included in the query. Must not be null, or empty.</param>
+        /// <returns>Returns an <see cref="AggregateQuery" /> that performs aggregations on the documents in the result set of this query.</returns>
+        public AggregateQuery Aggregate(IEnumerable<AggregateField> aggregateFields)
+        {
+            GaxPreconditions.CheckNotNull(aggregateFields, nameof(aggregateFields));
+            var list = aggregateFields.ToList();
+            GaxPreconditions.CheckArgument(list.Count > 0, nameof(aggregateFields), "At least one aggregatation must be provided");
+            return new AggregateQuery(this, list);
+        }
 
         /// <summary>
         /// Add the given filter to this query.
@@ -727,7 +757,10 @@ namespace Google.Cloud.Firestore
                 .Where(resp => resp.Document != null)
                 .Select(resp => DocumentSnapshot.ForDocument(Database, resp.Document, Timestamp.FromProto(resp.ReadTime)));
 
-        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, CancellationToken cancellationToken, bool allowLimitToLast)
+        // Implementation note: this uses an iterator block so that we can dispose of the gRPC call
+        // appropriately. The code will only execute when GetEnumerator() is called on the returned value,
+        // so the gRPC call *will* be disposed so long as the caller disposes of the iterator (or completes it).
+        private async IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, [EnumeratorCancellation] CancellationToken cancellationToken, bool allowLimitToLast)
         {
             if (IsLimitToLast && !allowLimitToLast)
             {
@@ -739,7 +772,12 @@ namespace Google.Cloud.Firestore
                 request.Transaction = transactionId;
             }
             var settings = CallSettings.FromCancellationToken(cancellationToken);
-            return Database.Client.RunQuery(request, settings).GetResponseStream();
+            using var response = Database.Client.RunQuery(request, settings);
+            IAsyncEnumerable<RunQueryResponse> stream = response.GetResponseStream();
+            await foreach (var result in stream.ConfigureAwait(false))
+            {
+                yield return result;
+            }
         }
 
         // Helper methods for cursor-related functionality

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Retail.V2
 {
@@ -53,6 +53,8 @@ namespace Google.Cloud.Retail.V2
             ListProductsSettings = existing.ListProductsSettings;
             UpdateProductSettings = existing.UpdateProductSettings;
             DeleteProductSettings = existing.DeleteProductSettings;
+            PurgeProductsSettings = existing.PurgeProductsSettings;
+            PurgeProductsOperationsSettings = existing.PurgeProductsOperationsSettings.Clone();
             ImportProductsSettings = existing.ImportProductsSettings;
             ImportProductsOperationsSettings = existing.ImportProductsOperationsSettings.Clone();
             SetInventorySettings = existing.SetInventorySettings;
@@ -175,6 +177,45 @@ namespace Google.Cloud.Retail.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteProductSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductServiceClient.PurgeProducts</c> and <c>ProductServiceClient.PurgeProductsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 30000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeProductsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ProductServiceClient.PurgeProducts</c> and
+        /// <c>ProductServiceClient.PurgeProductsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeProductsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -460,14 +501,14 @@ namespace Google.Cloud.Retail.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProductServiceClient.Create(callInvoker, Settings, Logger);
+            return ProductServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ProductServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProductServiceClient.Create(callInvoker, Settings, Logger);
+            return ProductServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1001,13 +1042,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of [Product][google.cloud.retail.v2.Product]s.
@@ -1032,13 +1082,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of [Product][google.cloud.retail.v2.Product]s.
@@ -1063,13 +1122,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(BranchName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(BranchName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsBranchName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of [Product][google.cloud.retail.v2.Product]s.
@@ -1094,13 +1162,22 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(BranchName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(BranchName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsBranchName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a [Product][google.cloud.retail.v2.Product].
@@ -1463,6 +1540,107 @@ namespace Google.Cloud.Retail.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteProductAsync(ProductName name, st::CancellationToken cancellationToken) =>
             DeleteProductAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes all selected [Product][google.cloud.retail.v2.Product]s
+        /// under a branch.
+        /// 
+        /// This process is asynchronous. If the request is valid, the removal will be
+        /// enqueued and processed offline. Depending on the number of
+        /// [Product][google.cloud.retail.v2.Product]s, this operation could take hours
+        /// to complete. Before the operation completes, some
+        /// [Product][google.cloud.retail.v2.Product]s may still be returned by
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// or
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// 
+        /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
+        /// operation could take hours to complete. To get a sample of
+        /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
+        /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeProductsResponse, PurgeProductsMetadata> PurgeProducts(PurgeProductsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all selected [Product][google.cloud.retail.v2.Product]s
+        /// under a branch.
+        /// 
+        /// This process is asynchronous. If the request is valid, the removal will be
+        /// enqueued and processed offline. Depending on the number of
+        /// [Product][google.cloud.retail.v2.Product]s, this operation could take hours
+        /// to complete. Before the operation completes, some
+        /// [Product][google.cloud.retail.v2.Product]s may still be returned by
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// or
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// 
+        /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
+        /// operation could take hours to complete. To get a sample of
+        /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
+        /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>> PurgeProductsAsync(PurgeProductsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all selected [Product][google.cloud.retail.v2.Product]s
+        /// under a branch.
+        /// 
+        /// This process is asynchronous. If the request is valid, the removal will be
+        /// enqueued and processed offline. Depending on the number of
+        /// [Product][google.cloud.retail.v2.Product]s, this operation could take hours
+        /// to complete. Before the operation completes, some
+        /// [Product][google.cloud.retail.v2.Product]s may still be returned by
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// or
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// 
+        /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
+        /// operation could take hours to complete. To get a sample of
+        /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
+        /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>> PurgeProductsAsync(PurgeProductsRequest request, st::CancellationToken cancellationToken) =>
+            PurgeProductsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PurgeProducts</c>.</summary>
+        public virtual lro::OperationsClient PurgeProductsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeProducts</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PurgeProductsResponse, PurgeProductsMetadata> PollOncePurgeProducts(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeProductsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeProducts</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>> PollOncePurgeProductsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeProductsOperationsClient, callSettings);
 
         /// <summary>
         /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
@@ -2116,10 +2294,11 @@ namespace Google.Cloud.Retail.V2
             SetInventoryAsync(inventory, setMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2153,10 +2332,11 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2190,10 +2370,11 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2254,10 +2435,11 @@ namespace Google.Cloud.Retail.V2
             lro::Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddFulfillmentPlacesOperationsClient, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2302,10 +2484,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2350,10 +2533,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2395,10 +2579,11 @@ namespace Google.Cloud.Retail.V2
             AddFulfillmentPlacesAsync(product, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2443,10 +2628,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2491,10 +2677,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2536,10 +2723,11 @@ namespace Google.Cloud.Retail.V2
             AddFulfillmentPlacesAsync(product, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2573,10 +2761,11 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2610,10 +2799,11 @@ namespace Google.Cloud.Retail.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2674,10 +2864,11 @@ namespace Google.Cloud.Retail.V2
             lro::Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveFulfillmentPlacesOperationsClient, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2722,10 +2913,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2770,10 +2962,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2815,10 +3008,11 @@ namespace Google.Cloud.Retail.V2
             RemoveFulfillmentPlacesAsync(product, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2863,10 +3057,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -2911,10 +3106,11 @@ namespace Google.Cloud.Retail.V2
             }, callSettings);
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -3777,6 +3973,8 @@ namespace Google.Cloud.Retail.V2
 
         private readonly gaxgrpc::ApiCall<DeleteProductRequest, wkt::Empty> _callDeleteProduct;
 
+        private readonly gaxgrpc::ApiCall<PurgeProductsRequest, lro::Operation> _callPurgeProducts;
+
         private readonly gaxgrpc::ApiCall<ImportProductsRequest, lro::Operation> _callImportProducts;
 
         private readonly gaxgrpc::ApiCall<SetInventoryRequest, lro::Operation> _callSetInventory;
@@ -3799,7 +3997,12 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             ProductServiceSettings effectiveSettings = settings ?? ProductServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
+            PurgeProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings, logger);
             ImportProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductsOperationsSettings, logger);
             SetInventoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInventoryOperationsSettings, logger);
             AddFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddFulfillmentPlacesOperationsSettings, logger);
@@ -3822,6 +4025,9 @@ namespace Google.Cloud.Retail.V2
             _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, wkt::Empty>("DeleteProduct", grpcClient.DeleteProductAsync, grpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProduct);
             Modify_DeleteProductApiCall(ref _callDeleteProduct);
+            _callPurgeProducts = clientHelper.BuildApiCall<PurgeProductsRequest, lro::Operation>("PurgeProducts", grpcClient.PurgeProductsAsync, grpcClient.PurgeProducts, effectiveSettings.PurgeProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPurgeProducts);
+            Modify_PurgeProductsApiCall(ref _callPurgeProducts);
             _callImportProducts = clientHelper.BuildApiCall<ImportProductsRequest, lro::Operation>("ImportProducts", grpcClient.ImportProductsAsync, grpcClient.ImportProducts, effectiveSettings.ImportProductsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportProducts);
             Modify_ImportProductsApiCall(ref _callImportProducts);
@@ -3855,6 +4061,8 @@ namespace Google.Cloud.Retail.V2
 
         partial void Modify_DeleteProductApiCall(ref gaxgrpc::ApiCall<DeleteProductRequest, wkt::Empty> call);
 
+        partial void Modify_PurgeProductsApiCall(ref gaxgrpc::ApiCall<PurgeProductsRequest, lro::Operation> call);
+
         partial void Modify_ImportProductsApiCall(ref gaxgrpc::ApiCall<ImportProductsRequest, lro::Operation> call);
 
         partial void Modify_SetInventoryApiCall(ref gaxgrpc::ApiCall<SetInventoryRequest, lro::Operation> call);
@@ -3884,6 +4092,8 @@ namespace Google.Cloud.Retail.V2
         partial void Modify_UpdateProductRequest(ref UpdateProductRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteProductRequest(ref DeleteProductRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PurgeProductsRequest(ref PurgeProductsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportProductsRequest(ref ImportProductsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4015,6 +4225,65 @@ namespace Google.Cloud.Retail.V2
         {
             Modify_DeleteProductRequest(ref request, ref callSettings);
             return _callDeleteProduct.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>PurgeProducts</c>.</summary>
+        public override lro::OperationsClient PurgeProductsOperationsClient { get; }
+
+        /// <summary>
+        /// Permanently deletes all selected [Product][google.cloud.retail.v2.Product]s
+        /// under a branch.
+        /// 
+        /// This process is asynchronous. If the request is valid, the removal will be
+        /// enqueued and processed offline. Depending on the number of
+        /// [Product][google.cloud.retail.v2.Product]s, this operation could take hours
+        /// to complete. Before the operation completes, some
+        /// [Product][google.cloud.retail.v2.Product]s may still be returned by
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// or
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// 
+        /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
+        /// operation could take hours to complete. To get a sample of
+        /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
+        /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PurgeProductsResponse, PurgeProductsMetadata> PurgeProducts(PurgeProductsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeProductsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>(_callPurgeProducts.Sync(request, callSettings), PurgeProductsOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes all selected [Product][google.cloud.retail.v2.Product]s
+        /// under a branch.
+        /// 
+        /// This process is asynchronous. If the request is valid, the removal will be
+        /// enqueued and processed offline. Depending on the number of
+        /// [Product][google.cloud.retail.v2.Product]s, this operation could take hours
+        /// to complete. Before the operation completes, some
+        /// [Product][google.cloud.retail.v2.Product]s may still be returned by
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// or
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// 
+        /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
+        /// operation could take hours to complete. To get a sample of
+        /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
+        /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>> PurgeProductsAsync(PurgeProductsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeProductsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeProductsResponse, PurgeProductsMetadata>(await _callPurgeProducts.Async(request, callSettings).ConfigureAwait(false), PurgeProductsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>ImportProducts</c>.</summary>
@@ -4183,10 +4452,11 @@ namespace Google.Cloud.Retail.V2
         public override lro::OperationsClient AddFulfillmentPlacesOperationsClient { get; }
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -4223,10 +4493,11 @@ namespace Google.Cloud.Retail.V2
         }
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
-        /// method instead of
-        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.AddFulfillmentPlaces][google.cloud.retail.v2.ProductService.AddFulfillmentPlaces]
+        /// method.
         /// [ProductService.AddLocalInventories][google.cloud.retail.v2.ProductService.AddLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -4266,10 +4537,11 @@ namespace Google.Cloud.Retail.V2
         public override lro::OperationsClient RemoveFulfillmentPlacesOperationsClient { get; }
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.
@@ -4306,10 +4578,11 @@ namespace Google.Cloud.Retail.V2
         }
 
         /// <summary>
-        /// It is recommended to use the
+        /// We recommend that you use the
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
-        /// method instead of
-        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces].
+        /// method instead of the
+        /// [ProductService.RemoveFulfillmentPlaces][google.cloud.retail.v2.ProductService.RemoveFulfillmentPlaces]
+        /// method.
         /// [ProductService.RemoveLocalInventories][google.cloud.retail.v2.ProductService.RemoveLocalInventories]
         /// achieves the same results but provides more fine-grained control over
         /// ingesting local inventory data.

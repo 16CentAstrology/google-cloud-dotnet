@@ -18,6 +18,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -29,31 +30,29 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTestCommand : CommandBase
     {
-        private const string PublishTargetFramework = "netstandard2.1";
-
         public SmokeTestCommand()
             : base("smoke-test", "Runs smoke tests for a package", "id")
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             var smokeTests = LoadSmokeTests(id);
             if (smokeTests.Count == 0)
             {
                 Console.WriteLine($"No smoke tests defined for {id}");
-                return;
+                return 0;
             }
 
             var assembly = PublishAndLoadAssembly(id);
             var templateVariables = CreateTemplateVariables();
-            RunTests(smokeTests, assembly, templateVariables);
+            return RunTests(smokeTests, assembly, templateVariables);
         }
 
         private List<SmokeTest> LoadSmokeTests(string id)
         {
-            var smokeTestsFile = Path.Combine(DirectoryLayout.ForApi(id).SourceDirectory, "smoketests.json");
+            var smokeTestsFile = Path.Combine(RootLayout.CreateRepositoryApiLayout(id).SourceDirectory, "smoketests.json");
             return File.Exists(smokeTestsFile)
                 ? JsonConvert.DeserializeObject<List<SmokeTest>>(File.ReadAllText(smokeTestsFile))
                 : new List<SmokeTest>();
@@ -62,22 +61,58 @@ namespace Google.Cloud.Tools.ReleaseManager
         private Assembly PublishAndLoadAssembly(string id)
         {
             Console.WriteLine($"Publishing release version of library");
-            var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", PublishTargetFramework);
 
-            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
-            return Assembly.LoadFrom(assemblyFile);
+            string tfm = CreateClientsCommand.GetTargetForReflectionLoad(RootLayout, id);
+            // Publish the assembly.
+            var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
+            Processes.RunDotnet(apiLayout.ProductionDirectory, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "-f", tfm);
+
+            // Load it with reflection.
+            return Assembly.LoadFrom(apiLayout.GetPublishedAssembly(tfm));
         }
 
-        private void RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
+        private int RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var testOrTests = tests.Count == 1 ? "test" : "tests";
             Console.WriteLine($"Running {tests.Count} smoke {testOrTests}");
 
+            var skipped = new List<string>();
+            var failed = new List<string>();
+
             foreach (var test in tests)
             {
-                test.Execute(assembly, templateVariables);
+                try
+                {
+                    test.Execute(assembly, templateVariables);
+                    if (test.Skip is string)
+                    {
+                        skipped.Add($"{test.Client}.{test.Method}");
+                    }
+                }
+                catch (Exception e)
+                {
+                    // For list RPCs, we get the "real" exception because by the time it fails we're
+                    // no longer using exceptions. For other RPCs, the exception is wrapped in TargetInvocationException,
+                    // so we unwrap it here for consistency.
+                    if (e is TargetInvocationException)
+                    {
+                        e = e.InnerException;
+                    }
+                    failed.Add($"{test.Client}.{test.Method}");
+                    Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message} {e}");
+                }
             }
+            Console.WriteLine($"Passed: {tests.Count - skipped.Count - failed.Count}");
+            if (skipped.Any())
+            {
+                Console.WriteLine($"Skipped: {skipped.Count} ({string.Join(", ", skipped)})");
+            }
+            if (failed.Any())
+            {
+                Console.WriteLine($"Failed: {failed.Count} ({string.Join(", ", failed)})");
+                return 1;
+            }
+            return 0;
         }
 
         private static IReadOnlyDictionary<string, string> CreateTemplateVariables()
@@ -95,7 +130,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             void MaybeAddEnvironmentVariable(string environmentVariableId, string templateVariableId)
             {
-                var value = Environment.GetEnvironmentVariable(environmentVariableId);                
+                var value = Environment.GetEnvironmentVariable(environmentVariableId);
                 if (!string.IsNullOrEmpty(value))
                 {
                     ret[templateVariableId] = value;

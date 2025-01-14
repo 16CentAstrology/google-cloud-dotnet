@@ -154,46 +154,46 @@ namespace Google.Cloud.Notebooks.V1 {
             "UEdSQURFX0NVREEQAxIPCgtVUEdSQURFX0FMTBAEMro3Cg9Ob3RlYm9va1Nl",
             "cnZpY2USsgEKDUxpc3RJbnN0YW5jZXMSLy5nb29nbGUuY2xvdWQubm90ZWJv",
             "b2tzLnYxLkxpc3RJbnN0YW5jZXNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLm5v",
-            "dGVib29rcy52MS5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiPoLT5JMCLxItL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2Vz2kEG",
-            "cGFyZW50Ep8BCgtHZXRJbnN0YW5jZRItLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
+            "dGVib29rcy52MS5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiPtpBBnBhcmVudILT",
+            "5JMCLxItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5z",
+            "dGFuY2VzEp8BCgtHZXRJbnN0YW5jZRItLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
             "a3MudjEuR2V0SW5zdGFuY2VSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLm5vdGVi",
-            "b29rcy52MS5JbnN0YW5jZSI8gtPkkwIvEi0vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lEuABCg5DcmVhdGVJ",
+            "b29rcy52MS5JbnN0YW5jZSI82kEEbmFtZYLT5JMCLxItL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9EuABCg5DcmVhdGVJ",
             "bnN0YW5jZRIwLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuQ3JlYXRlSW5z",
             "dGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ9",
-            "gtPkkwI5Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9p",
-            "bnN0YW5jZXM6CGluc3RhbmNl2kEbcGFyZW50LGluc3RhbmNlLGluc3RhbmNl",
-            "X2lkykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGESyAEKEFJlZ2lz",
+            "ykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGHaQRtwYXJlbnQsaW5z",
+            "dGFuY2UsaW5zdGFuY2VfaWSC0+STAjkiLS92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2luc3RhbmNlczoIaW5zdGFuY2USyAEKEFJlZ2lz",
             "dGVySW5zdGFuY2USMi5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlJlZ2lz",
             "dGVySW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJhgtPkkwI7IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9pbnN0YW5jZXM6cmVnaXN0ZXI6ASrKQR0KCEluc3RhbmNlEhFPcGVy",
-            "YXRpb25NZXRhZGF0YRLaAQoWU2V0SW5zdGFuY2VBY2NlbGVyYXRvchI4Lmdv",
+            "dGlvbiJhykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGGC0+STAjsi",
+            "Ni92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNl",
+            "czpyZWdpc3RlcjoBKhLaAQoWU2V0SW5zdGFuY2VBY2NlbGVyYXRvchI4Lmdv",
             "b2dsZS5jbG91ZC5ub3RlYm9va3MudjEuU2V0SW5zdGFuY2VBY2NlbGVyYXRv",
-            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImeC0+ST",
-            "AkEyPC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNl",
-            "cy8qfTpzZXRBY2NlbGVyYXRvcjoBKspBHQoISW5zdGFuY2USEU9wZXJhdGlv",
-            "bk1ldGFkYXRhEtoBChZTZXRJbnN0YW5jZU1hY2hpbmVUeXBlEjguZ29vZ2xl",
+            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImfKQR0K",
+            "CEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMCQTI8L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnNldEFjY2Vs",
+            "ZXJhdG9yOgEqEtoBChZTZXRJbnN0YW5jZU1hY2hpbmVUeXBlEjguZ29vZ2xl",
             "LmNsb3VkLm5vdGVib29rcy52MS5TZXRJbnN0YW5jZU1hY2hpbmVUeXBlUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZ4LT5JMCQTI8",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9",
-            "OnNldE1hY2hpbmVUeXBlOgEqykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGES1AEKFFVwZGF0ZUluc3RhbmNlQ29uZmlnEjYuZ29vZ2xlLmNsb3Vk",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZ8pBHQoISW5z",
+            "dGFuY2USEU9wZXJhdGlvbk1ldGFkYXRhgtPkkwJBMjwvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06c2V0TWFjaGluZVR5",
+            "cGU6ASoS1AEKFFVwZGF0ZUluc3RhbmNlQ29uZmlnEjYuZ29vZ2xlLmNsb3Vk",
             "Lm5vdGVib29rcy52MS5VcGRhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImWC0+STAj8yOi92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTp1cGRhdGVD",
-            "b25maWc6ASrKQR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YRL0AQoc",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImXKQR0KCEluc3RhbmNlEhFP",
+            "cGVyYXRpb25NZXRhZGF0YYLT5JMCPzI6L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnVwZGF0ZUNvbmZpZzoBKhL0AQoc",
             "VXBkYXRlU2hpZWxkZWRJbnN0YW5jZUNvbmZpZxI+Lmdvb2dsZS5jbG91ZC5u",
             "b3RlYm9va3MudjEuVXBkYXRlU2hpZWxkZWRJbnN0YW5jZUNvbmZpZ1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInWC0+STAk8ySi92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTp1",
-            "cGRhdGVTaGllbGRlZEluc3RhbmNlQ29uZmlnOgEqykEdCghJbnN0YW5jZRIR",
-            "T3BlcmF0aW9uTWV0YWRhdGESywEKEVNldEluc3RhbmNlTGFiZWxzEjMuZ29v",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInXKQR0KCEluc3Rh",
+            "bmNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMCTzJKL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnVwZGF0ZVNoaWVsZGVk",
+            "SW5zdGFuY2VDb25maWc6ASoSywEKEVNldEluc3RhbmNlTGFiZWxzEjMuZ29v",
             "Z2xlLmNsb3VkLm5vdGVib29rcy52MS5TZXRJbnN0YW5jZUxhYmVsc1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImKC0+STAjwyNy92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpz",
-            "ZXRMYWJlbHM6ASrKQR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YRLq",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImLKQR0KCEluc3Rh",
+            "bmNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMCPDI3L3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnNldExhYmVsczoBKhLq",
             "AQobVXBkYXRlSW5zdGFuY2VNZXRhZGF0YUl0ZW1zEj0uZ29vZ2xlLmNsb3Vk",
             "Lm5vdGVib29rcy52MS5VcGRhdGVJbnN0YW5jZU1ldGFkYXRhSXRlbXNSZXF1",
             "ZXN0Gj4uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5VcGRhdGVJbnN0YW5j",
@@ -201,27 +201,27 @@ namespace Google.Cloud.Notebooks.V1 {
             "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06dXBkYXRlTWV0YWRh",
             "dGFJdGVtczoBKhLMAQoORGVsZXRlSW5zdGFuY2USMC5nb29nbGUuY2xvdWQu",
             "bm90ZWJvb2tzLnYxLkRlbGV0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24iaYLT5JMCLyotL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp92kEEbmFtZcpBKgoVZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRK/AQoNU3Rh",
+            "b25ncnVubmluZy5PcGVyYXRpb24iacpBKgoVZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAi8qLS92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRK/AQoNU3Rh",
             "cnRJbnN0YW5jZRIvLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuU3RhcnRJ",
             "bnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "Il6C0+STAjgiMy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lu",
-            "c3RhbmNlcy8qfTpzdGFydDoBKspBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1l",
-            "dGFkYXRhErwBCgxTdG9wSW5zdGFuY2USLi5nb29nbGUuY2xvdWQubm90ZWJv",
+            "Il7KQR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMCOCIzL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnN0",
+            "YXJ0OgEqErwBCgxTdG9wSW5zdGFuY2USLi5nb29nbGUuY2xvdWQubm90ZWJv",
             "b2tzLnYxLlN0b3BJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIl2C0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2luc3RhbmNlcy8qfTpzdG9wOgEqykEdCghJbnN0YW5jZRIR",
-            "T3BlcmF0aW9uTWV0YWRhdGESvwEKDVJlc2V0SW5zdGFuY2USLy5nb29nbGUu",
+            "bmcuT3BlcmF0aW9uIl3KQR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0",
+            "YYLT5JMCNyIyL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5z",
+            "dGFuY2VzLyp9OnN0b3A6ASoSvwEKDVJlc2V0SW5zdGFuY2USLy5nb29nbGUu",
             "Y2xvdWQubm90ZWJvb2tzLnYxLlJlc2V0SW5zdGFuY2VSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJegtPkkwI4IjMvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06cmVzZXQ6ASrK",
-            "QR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YRLKAQoSUmVwb3J0SW5z",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJeykEdCghJbnN0YW5jZRIRT3Bl",
+            "cmF0aW9uTWV0YWRhdGGC0+STAjgiMy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2luc3RhbmNlcy8qfTpyZXNldDoBKhLKAQoSUmVwb3J0SW5z",
             "dGFuY2VJbmZvEjQuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5SZXBvcnRJ",
             "bnN0YW5jZUluZm9SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJfgtPkkwI5IjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9pbnN0YW5jZXMvKn06cmVwb3J0OgEqykEdCghJbnN0YW5jZRIRT3BlcmF0",
-            "aW9uTWV0YWRhdGES3AEKFUlzSW5zdGFuY2VVcGdyYWRlYWJsZRI3Lmdvb2ds",
+            "dGlvbiJfykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGGC0+STAjki",
+            "NC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8q",
+            "fTpyZXBvcnQ6ASoS3AEKFUlzSW5zdGFuY2VVcGdyYWRlYWJsZRI3Lmdvb2ds",
             "ZS5jbG91ZC5ub3RlYm9va3MudjEuSXNJbnN0YW5jZVVwZ3JhZGVhYmxlUmVx",
             "dWVzdBo4Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuSXNJbnN0YW5jZVVw",
             "Z3JhZGVhYmxlUmVzcG9uc2UiUILT5JMCShJIL3YxL3tub3RlYm9va19pbnN0",
@@ -229,85 +229,85 @@ namespace Google.Cloud.Notebooks.V1 {
             "Z3JhZGVhYmxlEs4BChFHZXRJbnN0YW5jZUhlYWx0aBIzLmdvb2dsZS5jbG91",
             "ZC5ub3RlYm9va3MudjEuR2V0SW5zdGFuY2VIZWFsdGhSZXF1ZXN0GjQuZ29v",
             "Z2xlLmNsb3VkLm5vdGVib29rcy52MS5HZXRJbnN0YW5jZUhlYWx0aFJlc3Bv",
-            "bnNlIk6C0+STAkESPy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2luc3RhbmNlcy8qfTpnZXRJbnN0YW5jZUhlYWx0aNpBBG5hbWUSxQEKD1Vw",
+            "bnNlIk7aQQRuYW1lgtPkkwJBEj8vdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9pbnN0YW5jZXMvKn06Z2V0SW5zdGFuY2VIZWFsdGgSxQEKD1Vw",
             "Z3JhZGVJbnN0YW5jZRIxLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuVXBn",
             "cmFkZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24iYILT5JMCOiI1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovaW5zdGFuY2VzLyp9OnVwZ3JhZGU6ASrKQR0KCEluc3RhbmNlEhFPcGVy",
-            "YXRpb25NZXRhZGF0YRLIAQoQUm9sbGJhY2tJbnN0YW5jZRIyLmdvb2dsZS5j",
+            "YXRpb24iYMpBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRhgtPkkwI6",
+            "IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMv",
+            "Kn06dXBncmFkZToBKhLIAQoQUm9sbGJhY2tJbnN0YW5jZRIyLmdvb2dsZS5j",
             "bG91ZC5ub3RlYm9va3MudjEuUm9sbGJhY2tJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImGC0+STAjsiNi92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpyb2xsYmFj",
-            "azoBKspBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRhEuEBChBEaWFn",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImHKQR0KCEluc3RhbmNlEhFP",
+            "cGVyYXRpb25NZXRhZGF0YYLT5JMCOyI2L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnJvbGxiYWNrOgEqEuEBChBEaWFn",
             "bm9zZUluc3RhbmNlEjIuZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MS5EaWFn",
             "bm9zZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ieoLT5JMCOyI2L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovaW5zdGFuY2VzLyp9OmRpYWdub3NlOgEq2kEWbmFtZSxkaWFnbm9zdGlj",
-            "X2NvbmZpZ8pBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRhEt0BChdV",
+            "YXRpb24iespBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRh2kEWbmFt",
+            "ZSxkaWFnbm9zdGljX2NvbmZpZ4LT5JMCOyI2L3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OmRpYWdub3NlOgEqEt0BChdV",
             "cGdyYWRlSW5zdGFuY2VJbnRlcm5hbBI5Lmdvb2dsZS5jbG91ZC5ub3RlYm9v",
             "a3MudjEuVXBncmFkZUluc3RhbmNlSW50ZXJuYWxSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJogtPkkwJCIj0vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06dXBncmFkZUludGVy",
-            "bmFsOgEqykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGESvgEKEExp",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJoykEdCghJbnN0YW5jZRIRT3BlcmF0",
+            "aW9uTWV0YWRhdGGC0+STAkIiPS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2luc3RhbmNlcy8qfTp1cGdyYWRlSW50ZXJuYWw6ASoSvgEKEExp",
             "c3RFbnZpcm9ubWVudHMSMi5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkxp",
             "c3RFbnZpcm9ubWVudHNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLm5vdGVib29r",
-            "cy52MS5MaXN0RW52aXJvbm1lbnRzUmVzcG9uc2UiQYLT5JMCMhIwL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW52aXJvbm1lbnRz2kEG",
-            "cGFyZW50EqsBCg5HZXRFbnZpcm9ubWVudBIwLmdvb2dsZS5jbG91ZC5ub3Rl",
+            "cy52MS5MaXN0RW52aXJvbm1lbnRzUmVzcG9uc2UiQdpBBnBhcmVudILT5JMC",
+            "MhIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW52aXJv",
+            "bm1lbnRzEqsBCg5HZXRFbnZpcm9ubWVudBIwLmdvb2dsZS5jbG91ZC5ub3Rl",
             "Ym9va3MudjEuR2V0RW52aXJvbm1lbnRSZXF1ZXN0GiYuZ29vZ2xlLmNsb3Vk",
-            "Lm5vdGVib29rcy52MS5FbnZpcm9ubWVudCI/gtPkkwIyEjAvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnZpcm9ubWVudHMvKn3aQQRuYW1l",
+            "Lm5vdGVib29rcy52MS5FbnZpcm9ubWVudCI/2kEEbmFtZYLT5JMCMhIwL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZW52aXJvbm1lbnRzLyp9",
             "EvYBChFDcmVhdGVFbnZpcm9ubWVudBIzLmdvb2dsZS5jbG91ZC5ub3RlYm9v",
             "a3MudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKMAYLT5JMCPyIwL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vZW52aXJvbm1lbnRzOgtlbnZpcm9ubWVudNpB",
-            "IXBhcmVudCxlbnZpcm9ubWVudCxlbnZpcm9ubWVudF9pZMpBIAoLRW52aXJv",
-            "bm1lbnQSEU9wZXJhdGlvbk1ldGFkYXRhEtUBChFEZWxldGVFbnZpcm9ubWVu",
+            "dW5uaW5nLk9wZXJhdGlvbiKMAcpBIAoLRW52aXJvbm1lbnQSEU9wZXJhdGlv",
+            "bk1ldGFkYXRh2kEhcGFyZW50LGVudmlyb25tZW50LGVudmlyb25tZW50X2lk",
+            "gtPkkwI/IjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9l",
+            "bnZpcm9ubWVudHM6C2Vudmlyb25tZW50EtUBChFEZWxldGVFbnZpcm9ubWVu",
             "dBIzLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRGVsZXRlRW52aXJvbm1l",
-            "bnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJsgtPk",
-            "kwIyKjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnZpcm9u",
-            "bWVudHMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9w",
-            "ZXJhdGlvbk1ldGFkYXRhErIBCg1MaXN0U2NoZWR1bGVzEi8uZ29vZ2xlLmNs",
+            "bnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJsykEq",
+            "ChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh2kEE",
+            "bmFtZYLT5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "ZW52aXJvbm1lbnRzLyp9ErIBCg1MaXN0U2NoZWR1bGVzEi8uZ29vZ2xlLmNs",
             "b3VkLm5vdGVib29rcy52MS5MaXN0U2NoZWR1bGVzUmVxdWVzdBowLmdvb2ds",
-            "ZS5jbG91ZC5ub3RlYm9va3MudjEuTGlzdFNjaGVkdWxlc1Jlc3BvbnNlIj6C",
-            "0+STAi8SLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Nj",
-            "aGVkdWxlc9pBBnBhcmVudBKfAQoLR2V0U2NoZWR1bGUSLS5nb29nbGUuY2xv",
+            "ZS5jbG91ZC5ub3RlYm9va3MudjEuTGlzdFNjaGVkdWxlc1Jlc3BvbnNlIj7a",
+            "QQZwYXJlbnSC0+STAi8SLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L3NjaGVkdWxlcxKfAQoLR2V0U2NoZWR1bGUSLS5nb29nbGUuY2xv",
             "dWQubm90ZWJvb2tzLnYxLkdldFNjaGVkdWxlUmVxdWVzdBojLmdvb2dsZS5j",
-            "bG91ZC5ub3RlYm9va3MudjEuU2NoZWR1bGUiPILT5JMCLxItL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc2NoZWR1bGVzLyp92kEEbmFtZRLM",
+            "bG91ZC5ub3RlYm9va3MudjEuU2NoZWR1bGUiPNpBBG5hbWWC0+STAi8SLS92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NjaGVkdWxlcy8qfRLM",
             "AQoORGVsZXRlU2NoZWR1bGUSMC5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
             "LkRlbGV0ZVNjaGVkdWxlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iaYLT5JMCLyotL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovc2NoZWR1bGVzLyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRLgAQoOQ3JlYXRlU2NoZWR1bGUS",
+            "cGVyYXRpb24iacpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRp",
+            "b25NZXRhZGF0YdpBBG5hbWWC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3NjaGVkdWxlcy8qfRLgAQoOQ3JlYXRlU2NoZWR1bGUS",
             "MC5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkNyZWF0ZVNjaGVkdWxlUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ifYLT5JMCOSIt",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2NoZWR1bGVz",
-            "OghzY2hlZHVsZdpBG3BhcmVudCxzY2hlZHVsZSxzY2hlZHVsZV9pZMpBHQoI",
-            "U2NoZWR1bGUSEU9wZXJhdGlvbk1ldGFkYXRhEsUBCg9UcmlnZ2VyU2NoZWR1",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ifcpBHQoIU2No",
+            "ZWR1bGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEbcGFyZW50LHNjaGVkdWxlLHNj",
+            "aGVkdWxlX2lkgtPkkwI5Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9zY2hlZHVsZXM6CHNjaGVkdWxlEsUBCg9UcmlnZ2VyU2NoZWR1",
             "bGUSMS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLlRyaWdnZXJTY2hlZHVs",
-            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImCC0+ST",
-            "AjoiNS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NjaGVkdWxl",
-            "cy8qfTp0cmlnZ2VyOgEqykEdCghTY2hlZHVsZRIRT3BlcmF0aW9uTWV0YWRh",
-            "dGEStgEKDkxpc3RFeGVjdXRpb25zEjAuZ29vZ2xlLmNsb3VkLm5vdGVib29r",
+            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImDKQR0K",
+            "CFNjaGVkdWxlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMCOiI1L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc2NoZWR1bGVzLyp9OnRyaWdnZXI6",
+            "ASoStgEKDkxpc3RFeGVjdXRpb25zEjAuZ29vZ2xlLmNsb3VkLm5vdGVib29r",
             "cy52MS5MaXN0RXhlY3V0aW9uc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQubm90",
-            "ZWJvb2tzLnYxLkxpc3RFeGVjdXRpb25zUmVzcG9uc2UiP4LT5JMCMBIuL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZXhlY3V0aW9uc9pB",
-            "BnBhcmVudBKjAQoMR2V0RXhlY3V0aW9uEi4uZ29vZ2xlLmNsb3VkLm5vdGVi",
+            "ZWJvb2tzLnYxLkxpc3RFeGVjdXRpb25zUmVzcG9uc2UiP9pBBnBhcmVudILT",
+            "5JMCMBIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZXhl",
+            "Y3V0aW9ucxKjAQoMR2V0RXhlY3V0aW9uEi4uZ29vZ2xlLmNsb3VkLm5vdGVi",
             "b29rcy52MS5HZXRFeGVjdXRpb25SZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLm5v",
-            "dGVib29rcy52MS5FeGVjdXRpb24iPYLT5JMCMBIuL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovZXhlY3V0aW9ucy8qfdpBBG5hbWUSzwEKD0Rl",
+            "dGVib29rcy52MS5FeGVjdXRpb24iPdpBBG5hbWWC0+STAjASLi92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2V4ZWN1dGlvbnMvKn0SzwEKD0Rl",
             "bGV0ZUV4ZWN1dGlvbhIxLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuRGVs",
             "ZXRlRXhlY3V0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24iaoLT5JMCMCouL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZXhlY3V0aW9ucy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES6AEKD0NyZWF0ZUV4ZWN1dGlvbhIx",
+            "YXRpb24iaspBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBBG5hbWWC0+STAjAqLi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2V4ZWN1dGlvbnMvKn0S6AEKD0NyZWF0ZUV4ZWN1dGlvbhIx",
             "Lmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjEuQ3JlYXRlRXhlY3V0aW9uUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iggGC0+STAjsi",
-            "Li92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2V4ZWN1dGlv",
-            "bnM6CWV4ZWN1dGlvbtpBHXBhcmVudCxleGVjdXRpb24sZXhlY3V0aW9uX2lk",
-            "ykEeCglFeGVjdXRpb24SEU9wZXJhdGlvbk1ldGFkYXRhGkzKQRhub3RlYm9v",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iggHKQR4KCUV4",
+            "ZWN1dGlvbhIRT3BlcmF0aW9uTWV0YWRhdGHaQR1wYXJlbnQsZXhlY3V0aW9u",
+            "LGV4ZWN1dGlvbl9pZILT5JMCOyIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vZXhlY3V0aW9uczoJZXhlY3V0aW9uGkzKQRhub3RlYm9v",
             "a3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsUBCh1jb20uZ29vZ2xlLmNsb3VkLm5v",
             "dGVib29rcy52MUIOTm90ZWJvb2tzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNv",
@@ -399,6 +399,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -895,6 +896,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for listing notebook instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1172,6 +1174,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for listing notebook instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1428,6 +1431,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for getting a notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1624,6 +1628,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for creating a notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1909,6 +1914,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for registering a notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegisterInstanceRequest : pb::IMessage<RegisterInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2148,6 +2154,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for setting instance accelerator.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetInstanceAcceleratorRequest : pb::IMessage<SetInstanceAcceleratorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2427,6 +2434,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for setting instance machine type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetInstanceMachineTypeRequest : pb::IMessage<SetInstanceMachineTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2664,6 +2672,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for updating instance configurations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceConfigRequest : pb::IMessage<UpdateInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2909,6 +2918,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for setting instance labels.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetInstanceLabelsRequest : pb::IMessage<SetInstanceLabelsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3078,7 +3088,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3135,6 +3145,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for adding/changing metadata items  for an instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceMetadataItemsRequest : pb::IMessage<UpdateInstanceMetadataItemsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3303,7 +3314,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3360,6 +3371,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for adding/changing metadata items for an instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceMetadataItemsResponse : pb::IMessage<UpdateInstanceMetadataItemsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3495,7 +3507,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other == null) {
         return;
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3545,6 +3557,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// Request for updating the Shielded Instance config for a notebook instance.
   /// You can only use this method on a stopped instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateShieldedInstanceConfigRequest : pb::IMessage<UpdateShieldedInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3790,6 +3803,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for deleting a notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3986,6 +4000,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for starting a notebook instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartInstanceRequest : pb::IMessage<StartInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4182,6 +4197,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for stopping a notebook instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StopInstanceRequest : pb::IMessage<StopInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4378,6 +4394,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for resetting a notebook instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResetInstanceRequest : pb::IMessage<ResetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4574,6 +4591,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for notebook instances to report information to Notebooks API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportInstanceInfoRequest : pb::IMessage<ReportInstanceInfoRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4776,7 +4794,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.VmId.Length != 0) {
         VmId = other.VmId;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4841,6 +4859,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for checking if a notebook instance is upgradeable.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IsInstanceUpgradeableRequest : pb::IMessage<IsInstanceUpgradeableRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5078,6 +5097,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for checking if a notebook instance is upgradeable.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IsInstanceUpgradeableResponse : pb::IMessage<IsInstanceUpgradeableResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5396,6 +5416,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for checking if a notebook instance is healthy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceHealthRequest : pb::IMessage<GetInstanceHealthRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5592,6 +5613,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for checking if a notebook instance is healthy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceHealthResponse : pb::IMessage<GetInstanceHealthResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5767,7 +5789,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.HealthState != global::Google.Cloud.Notebooks.V1.GetInstanceHealthResponse.Types.HealthState.Unspecified) {
         HealthState = other.HealthState;
       }
-      healthInfo_.Add(other.healthInfo_);
+      healthInfo_.MergeFrom(other.healthInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5864,6 +5886,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for upgrading a notebook instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeInstanceRequest : pb::IMessage<UpgradeInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6101,6 +6124,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for rollbacking a notebook instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollbackInstanceRequest : pb::IMessage<RollbackInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6338,6 +6362,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for upgrading a notebook instance from within the VM
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeInstanceInternalRequest : pb::IMessage<UpgradeInstanceInternalRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6616,6 +6641,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for listing environments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsRequest : pb::IMessage<ListEnvironmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6892,6 +6918,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for creating a notebook instance diagnostic file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiagnoseInstanceRequest : pb::IMessage<DiagnoseInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7137,6 +7164,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for listing environments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsResponse : pb::IMessage<ListEnvironmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7391,6 +7419,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for getting a notebook environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7587,6 +7616,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for creating a notebook environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEnvironmentRequest : pb::IMessage<CreateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7874,6 +7904,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for deleting a notebook environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEnvironmentRequest : pb::IMessage<DeleteEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8070,6 +8101,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for listing scheduled notebook job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchedulesRequest : pb::IMessage<ListSchedulesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8427,6 +8459,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for listing scheduled notebook job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchedulesResponse : pb::IMessage<ListSchedulesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8684,6 +8717,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for getting scheduled notebook.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetScheduleRequest : pb::IMessage<GetScheduleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8880,6 +8914,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for deleting an Schedule
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteScheduleRequest : pb::IMessage<DeleteScheduleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9076,6 +9111,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for created scheduled notebooks
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateScheduleRequest : pb::IMessage<CreateScheduleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9361,6 +9397,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for created scheduled notebooks
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TriggerScheduleRequest : pb::IMessage<TriggerScheduleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9557,6 +9594,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for listing scheduled notebook executions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListExecutionsRequest : pb::IMessage<ListExecutionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9916,6 +9954,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Response for listing scheduled notebook executions
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListExecutionsResponse : pb::IMessage<ListExecutionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10173,6 +10212,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for getting scheduled notebook execution
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetExecutionRequest : pb::IMessage<GetExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10369,6 +10409,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request for deleting a scheduled notebook execution
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteExecutionRequest : pb::IMessage<DeleteExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10565,6 +10606,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Request to create notebook execution
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateExecutionRequest : pb::IMessage<CreateExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Language.V1
 {
@@ -49,6 +49,7 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitySentimentSettings = existing.AnalyzeEntitySentimentSettings;
             AnalyzeSyntaxSettings = existing.AnalyzeSyntaxSettings;
             ClassifyTextSettings = existing.ClassifyTextSettings;
+            ModerateTextSettings = existing.ModerateTextSettings;
             AnnotateTextSettings = existing.AnnotateTextSettings;
             OnCopy(existing);
         }
@@ -163,6 +164,18 @@ namespace Google.Cloud.Language.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LanguageServiceClient.ModerateText</c> and <c>LanguageServiceClient.ModerateTextAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModerateTextSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LanguageServiceClient.AnnotateText</c> and <c>LanguageServiceClient.AnnotateTextAsync</c>.
         /// </summary>
         /// <remarks>
@@ -225,14 +238,14 @@ namespace Google.Cloud.Language.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LanguageServiceClient.Create(callInvoker, Settings, Logger);
+            return LanguageServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<LanguageServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LanguageServiceClient.Create(callInvoker, Settings, Logger);
+            return LanguageServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -532,8 +545,10 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitiesAsync(document, encodingType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,8 +557,10 @@ namespace Google.Cloud.Language.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,8 +569,10 @@ namespace Google.Cloud.Language.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -562,8 +581,10 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitySentimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
         /// Required. Input document.
@@ -581,8 +602,10 @@ namespace Google.Cloud.Language.V1
             }, callSettings);
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
         /// Required. Input document.
@@ -600,8 +623,10 @@ namespace Google.Cloud.Language.V1
             }, callSettings);
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="document">
         /// Required. Input document.
@@ -770,6 +795,72 @@ namespace Google.Cloud.Language.V1
             ClassifyTextAsync(document, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModerateTextResponse ModerateText(ModerateTextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModerateTextResponse> ModerateTextAsync(ModerateTextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModerateTextResponse> ModerateTextAsync(ModerateTextRequest request, st::CancellationToken cancellationToken) =>
+            ModerateTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="document">
+        /// Required. Input document.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModerateTextResponse ModerateText(Document document, gaxgrpc::CallSettings callSettings = null) =>
+            ModerateText(new ModerateTextRequest
+            {
+                Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="document">
+        /// Required. Input document.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModerateTextResponse> ModerateTextAsync(Document document, gaxgrpc::CallSettings callSettings = null) =>
+            ModerateTextAsync(new ModerateTextRequest
+            {
+                Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="document">
+        /// Required. Input document.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModerateTextResponse> ModerateTextAsync(Document document, st::CancellationToken cancellationToken) =>
+            ModerateTextAsync(document, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
@@ -881,6 +972,8 @@ namespace Google.Cloud.Language.V1
 
         private readonly gaxgrpc::ApiCall<ClassifyTextRequest, ClassifyTextResponse> _callClassifyText;
 
+        private readonly gaxgrpc::ApiCall<ModerateTextRequest, ModerateTextResponse> _callModerateText;
+
         private readonly gaxgrpc::ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
 
         /// <summary>
@@ -893,7 +986,11 @@ namespace Google.Cloud.Language.V1
         {
             GrpcClient = grpcClient;
             LanguageServiceSettings effectiveSettings = settings ?? LanguageServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>("AnalyzeSentiment", grpcClient.AnalyzeSentimentAsync, grpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
             Modify_ApiCall(ref _callAnalyzeSentiment);
             Modify_AnalyzeSentimentApiCall(ref _callAnalyzeSentiment);
@@ -909,6 +1006,9 @@ namespace Google.Cloud.Language.V1
             _callClassifyText = clientHelper.BuildApiCall<ClassifyTextRequest, ClassifyTextResponse>("ClassifyText", grpcClient.ClassifyTextAsync, grpcClient.ClassifyText, effectiveSettings.ClassifyTextSettings);
             Modify_ApiCall(ref _callClassifyText);
             Modify_ClassifyTextApiCall(ref _callClassifyText);
+            _callModerateText = clientHelper.BuildApiCall<ModerateTextRequest, ModerateTextResponse>("ModerateText", grpcClient.ModerateTextAsync, grpcClient.ModerateText, effectiveSettings.ModerateTextSettings);
+            Modify_ApiCall(ref _callModerateText);
+            Modify_ModerateTextApiCall(ref _callModerateText);
             _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>("AnnotateText", grpcClient.AnnotateTextAsync, grpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
             Modify_ApiCall(ref _callAnnotateText);
             Modify_AnnotateTextApiCall(ref _callAnnotateText);
@@ -927,6 +1027,8 @@ namespace Google.Cloud.Language.V1
 
         partial void Modify_ClassifyTextApiCall(ref gaxgrpc::ApiCall<ClassifyTextRequest, ClassifyTextResponse> call);
 
+        partial void Modify_ModerateTextApiCall(ref gaxgrpc::ApiCall<ModerateTextRequest, ModerateTextResponse> call);
+
         partial void Modify_AnnotateTextApiCall(ref gaxgrpc::ApiCall<AnnotateTextRequest, AnnotateTextResponse> call);
 
         partial void OnConstruction(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -943,6 +1045,8 @@ namespace Google.Cloud.Language.V1
         partial void Modify_AnalyzeSyntaxRequest(ref AnalyzeSyntaxRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ClassifyTextRequest(ref ClassifyTextRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ModerateTextRequest(ref ModerateTextRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -999,8 +1103,10 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1012,8 +1118,10 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
-        /// sentiment associated with each entity and its mentions.
+        /// Finds entities, similar to
+        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
+        /// in the text and analyzes sentiment associated with each entity and its
+        /// mentions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1074,6 +1182,30 @@ namespace Google.Cloud.Language.V1
         {
             Modify_ClassifyTextRequest(ref request, ref callSettings);
             return _callClassifyText.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ModerateTextResponse ModerateText(ModerateTextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModerateTextRequest(ref request, ref callSettings);
+            return _callModerateText.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moderates a document for harmful and sensitive categories.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ModerateTextResponse> ModerateTextAsync(ModerateTextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModerateTextRequest(ref request, ref callSettings);
+            return _callModerateText.Async(request, callSettings);
         }
 
         /// <summary>

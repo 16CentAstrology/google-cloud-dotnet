@@ -108,6 +108,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// not change the configuration unless it's attached to a target https
   /// proxy or endpoint config selector resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizationPolicy : pb::IMessage<AuthorizationPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -433,7 +434,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Action != global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Action.Unspecified) {
         Action = other.Action;
       }
@@ -569,6 +570,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
       /// <summary>
       /// Specification of rules.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Rule : pb::IMessage<Rule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -792,6 +794,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
           /// <summary>
           /// Specification of traffic source attributes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Source : pb::IMessage<Source>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1014,6 +1017,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
           /// <summary>
           /// Specification of traffic destination attributes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Destination : pb::IMessage<Destination>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1319,6 +1323,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
               /// <summary>
               /// Specification of HTTP header match attributes.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class HttpHeaderMatch : pb::IMessage<HttpHeaderMatch>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1383,10 +1388,24 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string RegexMatch {
-                  get { return typeCase_ == TypeOneofCase.RegexMatch ? (string) type_ : ""; }
+                  get { return HasRegexMatch ? (string) type_ : ""; }
                   set {
                     type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                     typeCase_ = TypeOneofCase.RegexMatch;
+                  }
+                }
+                /// <summary>Gets whether the "regex_match" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasRegexMatch {
+                  get { return typeCase_ == TypeOneofCase.RegexMatch; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "regex_match" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearRegexMatch() {
+                  if (HasRegexMatch) {
+                    ClearType();
                   }
                 }
 
@@ -1453,7 +1472,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
-                  if (typeCase_ == TypeOneofCase.RegexMatch) hash ^= RegexMatch.GetHashCode();
+                  if (HasRegexMatch) hash ^= RegexMatch.GetHashCode();
                   if (HeaderName.Length != 0) hash ^= HeaderName.GetHashCode();
                   hash ^= (int) typeCase_;
                   if (_unknownFields != null) {
@@ -1478,7 +1497,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                     output.WriteRawTag(10);
                     output.WriteString(HeaderName);
                   }
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     output.WriteRawTag(18);
                     output.WriteString(RegexMatch);
                   }
@@ -1496,7 +1515,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                     output.WriteRawTag(10);
                     output.WriteString(HeaderName);
                   }
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     output.WriteRawTag(18);
                     output.WriteString(RegexMatch);
                   }
@@ -1510,7 +1529,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(RegexMatch);
                   }
                   if (HeaderName.Length != 0) {
@@ -1608,6 +1627,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used with the ListAuthorizationPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAuthorizationPoliciesRequest : pb::IMessage<ListAuthorizationPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1888,6 +1908,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Response returned by the ListAuthorizationPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAuthorizationPoliciesResponse : pb::IMessage<ListAuthorizationPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2114,6 +2135,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the GetAuthorizationPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAuthorizationPolicyRequest : pb::IMessage<GetAuthorizationPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2310,6 +2332,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the CreateAuthorizationPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAuthorizationPolicyRequest : pb::IMessage<CreateAuthorizationPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2598,6 +2621,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the UpdateAuthorizationPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAuthorizationPolicyRequest : pb::IMessage<UpdateAuthorizationPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2855,6 +2879,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the DeleteAuthorizationPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAuthorizationPolicyRequest : pb::IMessage<DeleteAuthorizationPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

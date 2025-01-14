@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1beta_generated_AnalyticsAdminService_GetConversionEvent_sync_flattened_resourceNames]
     using Google.Analytics.Admin.V1Beta;
@@ -36,7 +36,9 @@ namespace Google.Analytics.Admin.V1Beta.Snippets
             // Initialize request argument(s)
             ConversionEventName name = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]");
             // Make the request
+#pragma warning disable CS0612
             ConversionEvent response = analyticsAdminServiceClient.GetConversionEvent(name);
+#pragma warning restore CS0612
         }
     }
     // [END analyticsadmin_v1beta_generated_AnalyticsAdminService_GetConversionEvent_sync_flattened_resourceNames]

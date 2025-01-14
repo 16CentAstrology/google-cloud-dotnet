@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.WebRisk.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.WebRisk.V1;
+    using Google.LongRunning;
     using Google.Protobuf;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -334,6 +336,77 @@ namespace Google.Cloud.WebRisk.V1.Snippets
             Submission submission = new Submission();
             // Make the request
             Submission response = await webRiskServiceClient.CreateSubmissionAsync(parent, submission);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUri</summary>
+        public void SubmitUriRequestObject()
+        {
+            // Snippet: SubmitUri(SubmitUriRequest, CallSettings)
+            // Create client
+            WebRiskServiceClient webRiskServiceClient = WebRiskServiceClient.Create();
+            // Initialize request argument(s)
+            SubmitUriRequest request = new SubmitUriRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Submission = new Submission(),
+                ThreatInfo = new ThreatInfo(),
+                ThreatDiscovery = new ThreatDiscovery(),
+            };
+            // Make the request
+            Operation<Submission, SubmitUriMetadata> response = webRiskServiceClient.SubmitUri(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Submission, SubmitUriMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Submission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Submission, SubmitUriMetadata> retrievedResponse = webRiskServiceClient.PollOnceSubmitUri(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Submission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUriAsync</summary>
+        public async Task SubmitUriRequestObjectAsync()
+        {
+            // Snippet: SubmitUriAsync(SubmitUriRequest, CallSettings)
+            // Additional: SubmitUriAsync(SubmitUriRequest, CancellationToken)
+            // Create client
+            WebRiskServiceClient webRiskServiceClient = await WebRiskServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitUriRequest request = new SubmitUriRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Submission = new Submission(),
+                ThreatInfo = new ThreatInfo(),
+                ThreatDiscovery = new ThreatDiscovery(),
+            };
+            // Make the request
+            Operation<Submission, SubmitUriMetadata> response = await webRiskServiceClient.SubmitUriAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Submission, SubmitUriMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Submission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Submission, SubmitUriMetadata> retrievedResponse = await webRiskServiceClient.PollOnceSubmitUriAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Submission retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

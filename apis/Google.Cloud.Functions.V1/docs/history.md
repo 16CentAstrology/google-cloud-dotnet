@@ -1,5 +1,57 @@
 # Version history
 
+## Version 2.7.0, released 2024-08-13
+
+### New features
+
+- Added `build_service_account` field to CloudFunction ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+
+### Documentation improvements
+
+- A comment for field `runtime_version` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `docker_repository` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `automatic_update_policy` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `on_deploy_update_policy` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `url` in message `.google.cloud.functions.v1.SourceRepository` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `url` in message `.google.cloud.functions.v1.HttpsTrigger` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2024-02-09
+
+### New features
+
+- Updated description for `docker_registry` to reflect transition to Artifact Registry ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Fields for automatic runtime updates ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Additional optional parameter `version_id` added to `GetFunctionRequest` ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Reflects deprecation of `network` field ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Minor updates in comments throughout ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+
+## Version 2.2.0, released 2023-05-11
+
+### New features
+
+- Added mix-ins for long running operations, IAM, and locations ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+
+### Documentation improvements
+
+- Clarified that vpcConnector shortname is only returned if the connector is in the same project as the function ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+- Applied general style guide updates to descriptions ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features

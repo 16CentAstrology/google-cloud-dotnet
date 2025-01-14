@@ -3,7 +3,7 @@
 //     source: google/cloud/osconfig/v1alpha/osconfig_zonal_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -353,6 +353,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::ServerCallContext context)
       {
@@ -366,6 +367,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::ServerCallContext context)
       {
@@ -906,6 +908,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -918,6 +921,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::CallOptions options)
       {
@@ -932,6 +936,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -944,6 +949,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::CallOptions options)
       {
@@ -958,6 +964,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -970,6 +977,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::CallOptions options)
       {
@@ -984,6 +992,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliancesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -996,6 +1005,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliancesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::CallOptions options)
       {

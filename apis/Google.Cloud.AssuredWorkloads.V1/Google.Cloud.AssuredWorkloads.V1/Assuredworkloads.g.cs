@@ -181,15 +181,15 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
             "a25vd2xlZGdlbWVudF90aW1lMoYOChdBc3N1cmVkV29ya2xvYWRzU2Vydmlj",
             "ZRLvAQoOQ3JlYXRlV29ya2xvYWQSNy5nb29nbGUuY2xvdWQuYXNzdXJlZHdv",
             "cmtsb2Fkcy52MS5DcmVhdGVXb3JrbG9hZFJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIoQBgtPkkwI+IjIvdjEve3BhcmVudD1vcmdh",
-            "bml6YXRpb25zLyovbG9jYXRpb25zLyp9L3dvcmtsb2FkczoId29ya2xvYWTa",
-            "QQ9wYXJlbnQsd29ya2xvYWTKQSsKCFdvcmtsb2FkEh9DcmVhdGVXb3JrbG9h",
-            "ZE9wZXJhdGlvbk1ldGFkYXRhEtsBCg5VcGRhdGVXb3JrbG9hZBI3Lmdvb2ds",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIoQBykErCghXb3JrbG9hZBIfQ3JlYXRlV29y",
+            "a2xvYWRPcGVyYXRpb25NZXRhZGF0YdpBD3BhcmVudCx3b3JrbG9hZILT5JMC",
+            "PiIyL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS93",
+            "b3JrbG9hZHM6CHdvcmtsb2FkEtsBCg5VcGRhdGVXb3JrbG9hZBI3Lmdvb2ds",
             "ZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxLlVwZGF0ZVdvcmtsb2FkUmVx",
             "dWVzdBoqLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxLldvcmts",
-            "b2FkImSC0+STAkcyOy92MS97d29ya2xvYWQubmFtZT1vcmdhbml6YXRpb25z",
-            "LyovbG9jYXRpb25zLyovd29ya2xvYWRzLyp9Ogh3b3JrbG9hZNpBFHdvcmts",
-            "b2FkLHVwZGF0ZV9tYXNrEvkBChhSZXN0cmljdEFsbG93ZWRSZXNvdXJjZXMS",
+            "b2FkImTaQRR3b3JrbG9hZCx1cGRhdGVfbWFza4LT5JMCRzI7L3YxL3t3b3Jr",
+            "bG9hZC5uYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi93b3JrbG9h",
+            "ZHMvKn06CHdvcmtsb2FkEvkBChhSZXN0cmljdEFsbG93ZWRSZXNvdXJjZXMS",
             "QS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MS5SZXN0cmljdEFs",
             "bG93ZWRSZXNvdXJjZXNSZXF1ZXN0GkIuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3",
             "b3JrbG9hZHMudjEuUmVzdHJpY3RBbGxvd2VkUmVzb3VyY2VzUmVzcG9uc2Ui",
@@ -197,17 +197,17 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
             "Ki93b3JrbG9hZHMvKn06cmVzdHJpY3RBbGxvd2VkUmVzb3VyY2VzOgEqEqQB",
             "Cg5EZWxldGVXb3JrbG9hZBI3Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xv",
             "YWRzLnYxLkRlbGV0ZVdvcmtsb2FkUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSJBgtPkkwI0KjIvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xv",
-            "Y2F0aW9ucy8qL3dvcmtsb2Fkcy8qfdpBBG5hbWUSsgEKC0dldFdvcmtsb2Fk",
+            "Zi5FbXB0eSJB2kEEbmFtZYLT5JMCNCoyL3YxL3tuYW1lPW9yZ2FuaXphdGlv",
+            "bnMvKi9sb2NhdGlvbnMvKi93b3JrbG9hZHMvKn0SsgEKC0dldFdvcmtsb2Fk",
             "EjQuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjEuR2V0V29ya2xv",
             "YWRSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjEu",
-            "V29ya2xvYWQiQYLT5JMCNBIyL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9s",
-            "b2NhdGlvbnMvKi93b3JrbG9hZHMvKn3aQQRuYW1lEsUBCg1MaXN0V29ya2xv",
+            "V29ya2xvYWQiQdpBBG5hbWWC0+STAjQSMi92MS97bmFtZT1vcmdhbml6YXRp",
+            "b25zLyovbG9jYXRpb25zLyovd29ya2xvYWRzLyp9EsUBCg1MaXN0V29ya2xv",
             "YWRzEjYuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjEuTGlzdFdv",
             "cmtsb2Fkc1JlcXVlc3QaNy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
-            "cy52MS5MaXN0V29ya2xvYWRzUmVzcG9uc2UiQ4LT5JMCNBIyL3YxL3twYXJl",
-            "bnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS93b3JrbG9hZHPaQQZw",
-            "YXJlbnQSjgEKDkxpc3RWaW9sYXRpb25zEjcuZ29vZ2xlLmNsb3VkLmFzc3Vy",
+            "cy52MS5MaXN0V29ya2xvYWRzUmVzcG9uc2UiQ9pBBnBhcmVudILT5JMCNBIy",
+            "L3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS93b3Jr",
+            "bG9hZHMSjgEKDkxpc3RWaW9sYXRpb25zEjcuZ29vZ2xlLmNsb3VkLmFzc3Vy",
             "ZWR3b3JrbG9hZHMudjEuTGlzdFZpb2xhdGlvbnNSZXF1ZXN0GjguZ29vZ2xl",
             "LmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjEuTGlzdFZpb2xhdGlvbnNSZXNw",
             "b25zZSIJ2kEGcGFyZW50EnsKDEdldFZpb2xhdGlvbhI1Lmdvb2dsZS5jbG91",
@@ -261,6 +261,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for creating a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateWorkloadRequest : pb::IMessage<CreateWorkloadRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -549,6 +550,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for Updating a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateWorkloadRequest : pb::IMessage<UpdateWorkloadRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -805,6 +807,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for deleting a Workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteWorkloadRequest : pb::IMessage<DeleteWorkloadRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1043,6 +1046,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for fetching a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetWorkloadRequest : pb::IMessage<GetWorkloadRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1242,6 +1246,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for fetching workloads in an organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkloadsRequest : pb::IMessage<ListWorkloadsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1561,6 +1566,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Response of ListWorkloads endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkloadsResponse : pb::IMessage<ListWorkloadsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1786,6 +1792,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// A Workload object for managing highly regulated workloads of cloud
   /// customers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Workload : pb::IMessage<Workload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2389,7 +2396,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ProvisionedResourcesParent.Length != 0) {
         ProvisionedResourcesParent = other.ProvisionedResourcesParent;
       }
@@ -2697,6 +2704,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// <summary>
       /// Represent the resources that are children of this Workload.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceInfo : pb::IMessage<ResourceInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2948,6 +2956,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
             /// will continue to provide projects information.
             /// Use CONSUMER_FOLDER instead.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("CONSUMER_PROJECT")] ConsumerProject = 1,
             /// <summary>
             /// Consumer Folder.
@@ -2975,6 +2984,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field.
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class KMSSettings : pb::IMessage<KMSSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3231,6 +3241,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// <summary>
       /// Represent the custom settings for the resources to be created.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceSettings : pb::IMessage<ResourceSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3514,6 +3525,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// <summary>
       /// Signed Access Approvals (SAA) enrollment response.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SaaEnrollmentResponse : pb::IMessage<SaaEnrollmentResponse>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3563,6 +3575,8 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
 
         /// <summary>Field number for the "setup_status" field.</summary>
         public const int SetupStatusFieldNumber = 1;
+        private readonly static global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatusDefaultValue = global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified;
+
         private global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState setupStatus_;
         /// <summary>
         /// Indicates SAA enrollment status of a given workload.
@@ -3570,7 +3584,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatus {
-          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified; } }
+          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return SetupStatusDefaultValue; } }
           set {
             _hasBits0 |= 1;
             setupStatus_ = value;
@@ -3815,6 +3829,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Operation metadata to give request details of CreateWorkload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateWorkloadOperationMetadata : pb::IMessage<CreateWorkloadOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4140,6 +4155,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for restricting list of available resources in Workload environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestrictAllowedResourcesRequest : pb::IMessage<RestrictAllowedResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4409,6 +4425,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Response for restricting the list of allowed resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestrictAllowedResourcesResponse : pb::IMessage<RestrictAllowedResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4565,6 +4582,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// Request for acknowledging the violation
   /// Next Id: 4
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AcknowledgeViolationRequest : pb::IMessage<AcknowledgeViolationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4849,6 +4867,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Response for violation acknowledgement
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AcknowledgeViolationResponse : pb::IMessage<AcknowledgeViolationResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5004,6 +5023,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Interval defining a time window.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5257,6 +5277,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for fetching violations in an organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListViolationsRequest : pb::IMessage<ListViolationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5624,6 +5645,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Response of ListViolations endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListViolationsResponse : pb::IMessage<ListViolationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5848,6 +5870,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Request for fetching a Workload Violation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetViolationRequest : pb::IMessage<GetViolationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6045,6 +6068,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
   /// <summary>
   /// Workload monitoring Violation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Violation : pb::IMessage<Violation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6847,6 +6871,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       /// Represents remediation guidance to resolve compliance violation for
       /// AssuredWorkload
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Remediation : pb::IMessage<Remediation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7156,6 +7181,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
           /// <summary>
           /// Instructions to remediate violation
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Instructions : pb::IMessage<Instructions>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -7412,6 +7438,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
               /// <summary>
               /// Remediation instructions to resolve violation via gcloud cli
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Gcloud : pb::IMessage<Gcloud>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -7654,6 +7681,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
               /// <summary>
               /// Remediation instructions to resolve violation via cloud console
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Console : pb::IMessage<Console>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage

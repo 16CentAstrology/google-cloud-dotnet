@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Testing;
 using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
@@ -60,47 +61,47 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void InsertBucket_RetryOnce() => RetryOnceHelper(
-            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"), 
+            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"),
             client => client.CreateBucket("project", "bucket"));
 
         [Fact]
         public void InsertBucket_RetryThenFail() => RetryThenFailHelper(
-            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"), 
+            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"),
             client => client.CreateBucket("project", "bucket"));
 
         [Fact]
         public void InsertBucket_NoRetry() => NoRetryHelper(
-            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"), 
+            service => service.Buckets.Insert(new Bucket { Name = "bucket" }, "project"),
             client => client.CreateBucket("project", "bucket"));
 
         [Fact]
         public void UpdateBucket_WithMetageneration_RetryOnce() => RetryOnceHelper(
-            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.UpdateBucket(new Bucket { Name = "bucket" }, new UpdateBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
         public void UpdateBucket_WithoutMetageneration_NoRetry() => NoRetryHelper(
-            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.UpdateBucket(new Bucket { Name = "bucket" }, new UpdateBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
         public void UpdateBucket_RetryThenFail() => RetryThenFailHelper(
-            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.UpdateRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.UpdateBucket(new Bucket { Name = "bucket" }, new UpdateBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
         public void PatchBucket_WithMetageneration_RetryOnce() => RetryOnceHelper(
-            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.PatchBucket(new Bucket { Name = "bucket" }, new PatchBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
         public void PatchBucket_WithoutMetageneration_NoRetry() => NoRetryHelper(
-            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.PatchBucket(new Bucket { Name = "bucket" }, new PatchBucketOptions() { IfMetagenerationMatch = 70 }));
 
         [Fact]
         public void PatchBucket_RetryThenFail() => RetryThenFailHelper(
-            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 }, 
+            service => new BucketsResource.PatchRequest(service, new Bucket { Name = "bucket" }, "bucket") { IfMetagenerationMatch = 70 },
             client => client.PatchBucket(new Bucket { Name = "bucket" }, new PatchBucketOptions() { IfMetagenerationMatch = 70 }));
 
         #endregion
@@ -120,7 +121,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void SetBucketIamPolicy_NoRetry_NonRetriableCode() => NoRetryHelper(
-            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), 
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"),
             client => client.SetBucketIamPolicy("bucket", s_policy));
 
         [Fact]
@@ -131,42 +132,42 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void SetBucketIamPolicy_RetryOnce() => RetryOnceHelper(
-            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), 
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"),
             client => client.SetBucketIamPolicy("bucket", s_policy));
 
         [Fact]
         public void SetBucketIamPolicy_RetryThenFail() => RetryThenFailHelper(
-            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), client => 
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), client =>
             client.SetBucketIamPolicy("bucket", s_policy));
 
         [Fact]
         public void TestBucketIamPolicy_NoRetry() => NoRetryHelper(
-            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })), 
+            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })),
             client => client.TestBucketIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })));
 
         [Fact]
         public void TestBucketIamPolicy_RetryOnce() => RetryOnceHelper(
-            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })), 
+            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })),
             client => client.TestBucketIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })));
 
         [Fact]
         public void TestBucketIamPolicy_RetryThenFail() => RetryThenFailHelper(
-            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })), 
+            service => service.Buckets.TestIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })),
             client => client.TestBucketIamPermissions("bucket", new Repeatable<string>(new[] { "permission" })));
 
         [Fact]
         public void LockRetentionPolicy_NoRetry() => NoRetryHelper(
-            service => service.Buckets.LockRetentionPolicy("bucket", 70), 
+            service => service.Buckets.LockRetentionPolicy("bucket", 70),
             client => client.LockBucketRetentionPolicy("bucket", 70));
 
         [Fact]
         public void LockRetentionPolicy_RetryOnce() => RetryOnceHelper(
-            service => service.Buckets.LockRetentionPolicy("bucket", 70), 
+            service => service.Buckets.LockRetentionPolicy("bucket", 70),
             client => client.LockBucketRetentionPolicy("bucket", 70));
 
         [Fact]
         public void LockRetentionPolicy_RetryThenFail() => RetryThenFailHelper(
-            service => service.Buckets.LockRetentionPolicy("bucket", 70), 
+            service => service.Buckets.LockRetentionPolicy("bucket", 70),
             client => client.LockBucketRetentionPolicy("bucket", 70));
 
         #endregion
@@ -184,19 +185,19 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void CopyObject_NoRetry() => NoRetryHelper(
-            service => service.Objects.Rewrite(new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"), 
+            service => service.Objects.Rewrite(new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject"),
             client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject"));
 
         [Fact]
         public void CopyObject_RetryOnce() => RetryOnce(
             service => new ObjectsResource.RewriteRequest(service, new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject") { IfGenerationMatch = 70 },
-            client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject", 
-            new CopyObjectOptions() { IfGenerationMatch = 70 }), 
+            client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject",
+            new CopyObjectOptions() { IfGenerationMatch = 70 }),
             new RewriteResponse { Done = true });
 
         [Fact]
         public void CopyObject_RetryThenFail() => RetryThenFailHelper(
-            service => new ObjectsResource.RewriteRequest(service, new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject") { IfGenerationMatch = 70 }, 
+            service => new ObjectsResource.RewriteRequest(service, new Object(), "sourceBucket", "sourceObject", "destinationBucket", "destinationObject") { IfGenerationMatch = 70 },
             client => client.CopyObject("sourceBucket", "sourceObject", "destinationBucket", "destinationObject", new CopyObjectOptions() { IfGenerationMatch = 70 }));
 
         [Fact]
@@ -218,7 +219,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void DeleteObject_RetryThenFail() =>
-            RetryThenFail(service => new ObjectsResource.DeleteRequest(service, "bucket", "objectName") { Generation = 70 }, 
+            RetryThenFail(service => new ObjectsResource.DeleteRequest(service, "bucket", "objectName") { Generation = 70 },
                 client => client.DeleteObject("bucket", "objectName", new DeleteObjectOptions { Generation = 70 }), "check");
 
         [Fact]
@@ -262,17 +263,17 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void GetStorageServiceAccountEmail_NoRetry() => NoRetryHelper(
-            service => new ServiceAccountResource.GetRequest(service, "project"), 
+            service => new ServiceAccountResource.GetRequest(service, "project"),
             client => client.GetStorageServiceAccountEmail("project"));
 
         [Fact]
         public void GetStorageServiceAccountEmail_RetryOnce() => RetryOnceHelper(
-            service => new ServiceAccountResource.GetRequest(service, "project"), 
+            service => new ServiceAccountResource.GetRequest(service, "project"),
             client => client.GetStorageServiceAccountEmail("project"));
 
         [Fact]
         public void GetStorageServiceAccountEmail_RetryThenFail() => RetryThenFailHelper(
-            service => new ServiceAccountResource.GetRequest(service, "project"), 
+            service => new ServiceAccountResource.GetRequest(service, "project"),
             client => client.GetStorageServiceAccountEmail("project"));
 
         #endregion
@@ -299,39 +300,39 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Fact]
         public void DeleteHmacKey_NoRetry() => NoRetryHelper(
-            service => service.Projects.HmacKeys.Delete("project", "access"), 
+            service => service.Projects.HmacKeys.Delete("project", "access"),
             client => client.DeleteHmacKey("project", "access"));
 
         [Fact]
         public void DeleteHmacKey_RetryOnce() => RetryOnce(
-            service => service.Projects.HmacKeys.Delete("project", "access"), 
-            client => client.DeleteHmacKey("project", "access"), 
+            service => service.Projects.HmacKeys.Delete("project", "access"),
+            client => client.DeleteHmacKey("project", "access"),
             "check");
 
         [Fact]
         public void DeleteHmacKey_RetryThenFail() => RetryThenFail(
-            service => service.Projects.HmacKeys.Delete("project", "access"), 
-            client => client.DeleteHmacKey("project", "access"), 
+            service => service.Projects.HmacKeys.Delete("project", "access"),
+            client => client.DeleteHmacKey("project", "access"),
             "check");
 
         [Fact]
         public void UpdateHmacKey_WithoutMetageneration_NoRetry() => NoRetryHelper(
-            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" }, "project", "access"), 
+            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" }, "project", "access"),
             client => client.UpdateHmacKey(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" }));
 
         [Fact]
         public void UpdateHmacKey_WithMetageneration_RetryOnce() => RetryOnceHelper(
-            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access", ETag = "check" }, "project", "access"), 
+            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access", ETag = "check" }, "project", "access"),
             client => client.UpdateHmacKey(new HmacKeyMetadata { ProjectId = "project", AccessId = "access", ETag = "check" }));
 
         [Fact]
         public void UpdateHmacKey_RetryThenFail() => RetryThenFailHelper(
-            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access", ETag="check" }, "project", "access"), 
+            service => service.Projects.HmacKeys.Update(new HmacKeyMetadata { ProjectId = "project", AccessId = "access", ETag="check" }, "project", "access"),
             client => client.UpdateHmacKey(new HmacKeyMetadata { ProjectId = "project", AccessId = "access" , ETag = "check"}));
 
         #endregion
 
-        #region Notifications test cases 
+        #region Notifications test cases
 
         [Fact]
         public void ListNotifications_NoRetry() =>
@@ -390,19 +391,23 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         /// <summary>
-        /// Helper method to check if the operation is retrying in case of retriable error codes with a return response 
+        /// Helper method to check if the operation is retrying in case of retriable error codes with a return response
         /// </summary>
         private static void RetryOnce<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
         {
+            var scheduler = new FakeScheduler();
             var service = new FakeStorageService();
-            var client = new StorageClientImpl(service);
+            var client = new StorageClientImpl(service, null, scheduler);
             var request = requestProvider(service);
 
-            service.ExpectRequest(request, firstStatusCode);
-            service.ExpectRequest(request, response);
-            clientAction(client);
-            service.Verify();
+            scheduler.Run(() =>
+            {
+                service.ExpectRequest(request, firstStatusCode);
+                service.ExpectRequest(request, response);
+                clientAction(client);
+                service.Verify();
+            });
         }
 
         /// <summary>
@@ -418,16 +423,20 @@ namespace Google.Cloud.Storage.V1.Tests
         private static void RetryThenFail<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode errorCode = HttpStatusCode.BadGateway, int retryCount = 3)
         {
+            var scheduler = new FakeScheduler();
             var service = new FakeStorageService();
-            var client = new StorageClientImpl(service);
+            var client = new StorageClientImpl(service, null, scheduler);
             var request = requestProvider(service);
 
-            for (int i = 1; i <= retryCount; i++)
+            scheduler.Run(() =>
             {
-                service.ExpectRequest(request, errorCode);
-            }
-            Assert.Throws<GoogleApiException>(() => clientAction(client));
-            service.Verify();
+                for (int i = 1; i <= retryCount; i++)
+                {
+                    service.ExpectRequest(request, errorCode);
+                }
+                Assert.Throws<GoogleApiException>(() => clientAction(client));
+                service.Verify();
+            });
         }
 
         /// <summary>
@@ -447,7 +456,7 @@ namespace Google.Cloud.Storage.V1.Tests
             var replayingMessageHandler = new ReplayingMessageHandler(VersionHeaderBuilder.HeaderName);
             var service = new FakeStorageService(replayingMessageHandler);
             service.HttpClient.MessageHandler.GoogleApiClientHeader = "test/fake";
-            
+
             var request = service.Buckets.Get("bucket");
             service.ExpectRequest(request, HttpStatusCode.BadGateway);
             service.ExpectRequest(request, HttpStatusCode.BadGateway);

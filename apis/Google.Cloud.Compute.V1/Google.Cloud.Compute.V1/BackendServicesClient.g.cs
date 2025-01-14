@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -59,6 +59,7 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            ListUsableSettings = existing.ListUsableSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             SetEdgeSecurityPolicySettings = existing.SetEdgeSecurityPolicySettings;
@@ -66,6 +67,7 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetSecurityPolicySettings = existing.SetSecurityPolicySettings;
             SetSecurityPolicyOperationsSettings = existing.SetSecurityPolicyOperationsSettings.Clone();
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
             OnCopy(existing);
@@ -290,6 +292,27 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendServicesClient.ListUsable</c> and <c>BackendServicesClient.ListUsableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUsableSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>BackendServicesClient.Patch</c>
         ///  and <c>BackendServicesClient.PatchAsync</c>.
         /// </summary>
@@ -394,6 +417,18 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendServicesClient.TestIamPermissions</c> and <c>BackendServicesClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BackendServicesClient.Update</c> and <c>BackendServicesClient.UpdateAsync</c>.
         /// </summary>
         /// <remarks>
@@ -465,14 +500,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BackendServicesClient.Create(callInvoker, Settings, Logger);
+            return BackendServicesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BackendServicesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BackendServicesClient.Create(callInvoker, Settings, Logger);
+            return BackendServicesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -680,7 +715,7 @@ namespace Google.Cloud.Compute.V1
             AddSignedUrlKeyAsync(project, backendService, signedUrlKeyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -689,7 +724,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -700,7 +735,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -715,16 +750,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListBackendServicesRequest
+        public virtual gax::PagedEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListBackendServicesRequest request = new AggregatedListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -741,13 +785,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListBackendServicesRequest
+        public virtual gax::PagedAsyncEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListBackendServicesRequest request = new AggregatedListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified BackendService resource.
@@ -1343,13 +1396,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
-        public virtual gax::PagedEnumerable<BackendServiceList, BackendService> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListBackendServicesRequest
+        public virtual gax::PagedEnumerable<BackendServiceList, BackendService> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackendServicesRequest request = new ListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of BackendService resources available to the specified project.
@@ -1367,13 +1429,106 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<BackendServiceList, BackendService> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListBackendServicesRequest
+        public virtual gax::PagedAsyncEnumerable<BackendServiceList, BackendService> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackendServicesRequest request = new ListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceListUsable, BackendService> ListUsable(ListUsableBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceListUsable, BackendService> ListUsableAsync(ListUsableBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceListUsable, BackendService> ListUsable(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableBackendServicesRequest request = new ListUsableBackendServicesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsable(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceListUsable, BackendService> ListUsableAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableBackendServicesRequest request = new ListUsableBackendServicesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -1808,6 +1963,94 @@ namespace Google.Cloud.Compute.V1
             SetSecurityPolicyAsync(project, backendService, securityPolicyReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(TestIamPermissionsBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsBackendServiceRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(string project, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissions(new TestIamPermissionsBackendServiceRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissionsAsync(new TestIamPermissionsBackendServiceRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string resource, TestPermissionsRequest testPermissionsRequestResource, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(project, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1946,6 +2189,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListBackendServicesRequest, BackendServiceList> _callList;
 
+        private readonly gaxgrpc::ApiCall<ListUsableBackendServicesRequest, BackendServiceListUsable> _callListUsable;
+
         private readonly gaxgrpc::ApiCall<PatchBackendServiceRequest, Operation> _callPatch;
 
         private readonly gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendServiceRequest, Operation> _callSetEdgeSecurityPolicy;
@@ -1953,6 +2198,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<SetIamPolicyBackendServiceRequest, Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<SetSecurityPolicyBackendServiceRequest, Operation> _callSetSecurityPolicy;
+
+        private readonly gaxgrpc::ApiCall<TestIamPermissionsBackendServiceRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         private readonly gaxgrpc::ApiCall<UpdateBackendServiceRequest, Operation> _callUpdate;
 
@@ -1966,7 +2213,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             BackendServicesSettings effectiveSettings = settings ?? BackendServicesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AddSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddSignedUrlKeyOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             DeleteSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteSignedUrlKeyOperationsSettings, logger);
@@ -2002,6 +2253,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListBackendServicesRequest, BackendServiceList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callListUsable = clientHelper.BuildApiCall<ListUsableBackendServicesRequest, BackendServiceListUsable>("ListUsable", grpcClient.ListUsableAsync, grpcClient.ListUsable, effectiveSettings.ListUsableSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callListUsable);
+            Modify_ListUsableApiCall(ref _callListUsable);
             _callPatch = clientHelper.BuildApiCall<PatchBackendServiceRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
@@ -2014,6 +2268,9 @@ namespace Google.Cloud.Compute.V1
             _callSetSecurityPolicy = clientHelper.BuildApiCall<SetSecurityPolicyBackendServiceRequest, Operation>("SetSecurityPolicy", grpcClient.SetSecurityPolicyAsync, grpcClient.SetSecurityPolicy, effectiveSettings.SetSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callSetSecurityPolicy);
             Modify_SetSecurityPolicyApiCall(ref _callSetSecurityPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsBackendServiceRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             _callUpdate = clientHelper.BuildApiCall<UpdateBackendServiceRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
@@ -2040,6 +2297,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListBackendServicesRequest, BackendServiceList> call);
 
+        partial void Modify_ListUsableApiCall(ref gaxgrpc::ApiCall<ListUsableBackendServicesRequest, BackendServiceListUsable> call);
+
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchBackendServiceRequest, Operation> call);
 
         partial void Modify_SetEdgeSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetEdgeSecurityPolicyBackendServiceRequest, Operation> call);
@@ -2047,6 +2306,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyBackendServiceRequest, Policy> call);
 
         partial void Modify_SetSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetSecurityPolicyBackendServiceRequest, Operation> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsBackendServiceRequest, TestPermissionsResponse> call);
 
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateBackendServiceRequest, Operation> call);
 
@@ -2073,6 +2334,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListBackendServicesRequest(ref ListBackendServicesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListUsableBackendServicesRequest(ref ListUsableBackendServicesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_PatchBackendServiceRequest(ref PatchBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetEdgeSecurityPolicyBackendServiceRequest(ref SetEdgeSecurityPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
@@ -2080,6 +2343,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetIamPolicyBackendServiceRequest(ref SetIamPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetSecurityPolicyBackendServiceRequest(ref SetSecurityPolicyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsBackendServiceRequest(ref TestIamPermissionsBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBackendServiceRequest(ref UpdateBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2117,7 +2382,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2129,7 +2394,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
+        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2337,6 +2602,30 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackendServicesRequest, BackendServiceList, BackendService>(_callList, request, callSettings);
         }
 
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public override gax::PagedEnumerable<BackendServiceListUsable, BackendService> ListUsable(ListUsableBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableBackendServicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUsableBackendServicesRequest, BackendServiceListUsable, BackendService>(_callListUsable, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all usable backend services in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<BackendServiceListUsable, BackendService> ListUsableAsync(ListUsableBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableBackendServicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsableBackendServicesRequest, BackendServiceListUsable, BackendService>(_callListUsable, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>Patch</c>.</summary>
         public override lro::OperationsClient PatchOperationsClient { get; }
 
@@ -2460,6 +2749,30 @@ namespace Google.Cloud.Compute.V1
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
         }
 
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestPermissionsResponse TestIamPermissions(TestIamPermissionsBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsBackendServiceRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsBackendServiceRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>Update</c>.</summary>
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
@@ -2514,6 +2827,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ListUsableBackendServicesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class BackendServiceAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, BackendServicesScopedList>>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -2524,6 +2847,14 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class BackendServiceList : gaxgrpc::IPageResponse<BackendService>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackendService> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class BackendServiceListUsable : gaxgrpc::IPageResponse<BackendService>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackendService> GetEnumerator() => Items.GetEnumerator();

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Run.V2
 {
@@ -51,6 +51,8 @@ namespace Google.Cloud.Run.V2
             ListExecutionsSettings = existing.ListExecutionsSettings;
             DeleteExecutionSettings = existing.DeleteExecutionSettings;
             DeleteExecutionOperationsSettings = existing.DeleteExecutionOperationsSettings.Clone();
+            CancelExecutionSettings = existing.CancelExecutionSettings;
+            CancelExecutionOperationsSettings = existing.CancelExecutionOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -112,6 +114,36 @@ namespace Google.Cloud.Run.V2
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ExecutionsClient.CancelExecution</c> and <c>ExecutionsClient.CancelExecutionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelExecutionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ExecutionsClient.CancelExecution</c> and
+        /// <c>ExecutionsClient.CancelExecutionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelExecutionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -158,14 +190,14 @@ namespace Google.Cloud.Run.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ExecutionsClient.Create(callInvoker, Settings, Logger);
+            return ExecutionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ExecutionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ExecutionsClient.Create(callInvoker, Settings, Logger);
+            return ExecutionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -291,8 +323,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -308,8 +340,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -325,8 +357,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -339,8 +371,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -356,8 +388,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -373,8 +405,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The full name of the Execution.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -382,7 +414,8 @@ namespace Google.Cloud.Run.V2
             GetExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -391,7 +424,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -400,13 +434,14 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
-        /// can be project id or number.
+        /// Format: `projects/{project}/locations/{location}/jobs/{job}`, where
+        /// `{project}` can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -418,22 +453,32 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutions(new ListExecutionsRequest
+        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutions(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
-        /// can be project id or number.
+        /// Format: `projects/{project}/locations/{location}/jobs/{job}`, where
+        /// `{project}` can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -445,22 +490,32 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutionsAsync(new ListExecutionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutionsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
-        /// can be project id or number.
+        /// Format: `projects/{project}/locations/{location}/jobs/{job}`, where
+        /// `{project}` can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -472,22 +527,32 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutions(new ListExecutionsRequest
+        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutions(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Execution from which the Executions should be listed.
         /// To list all Executions across Jobs, use "-" instead of Job name.
-        /// Format: projects/{project}/locations/{location}/jobs/{job}, where {project}
-        /// can be project id or number.
+        /// Format: `projects/{project}/locations/{location}/jobs/{job}`, where
+        /// `{project}` can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -499,13 +564,22 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExecutionsAsync(new ListExecutionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(JobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExecutionsRequest request = new ListExecutionsRequest
             {
                 ParentAsJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExecutionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an Execution.
@@ -566,8 +640,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -583,8 +657,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -600,8 +674,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -614,8 +688,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -631,8 +705,8 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -648,13 +722,162 @@ namespace Google.Cloud.Run.V2
         /// <param name="name">
         /// Required. The name of the Execution to delete.
         /// Format:
-        /// projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
-        /// where {project} can be project id or number.
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Execution, Execution>> DeleteExecutionAsync(ExecutionName name, st::CancellationToken cancellationToken) =>
             DeleteExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Execution, Execution> CancelExecution(CancelExecutionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(CancelExecutionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(CancelExecutionRequest request, st::CancellationToken cancellationToken) =>
+            CancelExecutionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelExecution</c>.</summary>
+        public virtual lro::OperationsClient CancelExecutionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CancelExecution</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Execution, Execution> PollOnceCancelExecution(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Execution, Execution>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelExecutionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelExecution</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> PollOnceCancelExecutionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Execution, Execution>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelExecutionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Execution, Execution> CancelExecution(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelExecution(new CancelExecutionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelExecutionAsync(new CancelExecutionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Execution, Execution> CancelExecution(ExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelExecution(new CancelExecutionRequest
+            {
+                ExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(ExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelExecutionAsync(new CancelExecutionRequest
+            {
+                ExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Execution to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/jobs/{job}/executions/{execution}`,
+        /// where `{project}` can be project id or number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(ExecutionName name, st::CancellationToken cancellationToken) =>
+            CancelExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Executions client wrapper implementation, for convenient use.</summary>
@@ -669,6 +892,8 @@ namespace Google.Cloud.Run.V2
 
         private readonly gaxgrpc::ApiCall<DeleteExecutionRequest, lro::Operation> _callDeleteExecution;
 
+        private readonly gaxgrpc::ApiCall<CancelExecutionRequest, lro::Operation> _callCancelExecution;
+
         /// <summary>
         /// Constructs a client wrapper for the Executions service, with the specified gRPC client and settings.
         /// </summary>
@@ -679,8 +904,13 @@ namespace Google.Cloud.Run.V2
         {
             GrpcClient = grpcClient;
             ExecutionsSettings effectiveSettings = settings ?? ExecutionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExecutionOperationsSettings, logger);
+            CancelExecutionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelExecutionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetExecution = clientHelper.BuildApiCall<GetExecutionRequest, Execution>("GetExecution", grpcClient.GetExecutionAsync, grpcClient.GetExecution, effectiveSettings.GetExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetExecution);
@@ -691,6 +921,9 @@ namespace Google.Cloud.Run.V2
             _callDeleteExecution = clientHelper.BuildApiCall<DeleteExecutionRequest, lro::Operation>("DeleteExecution", grpcClient.DeleteExecutionAsync, grpcClient.DeleteExecution, effectiveSettings.DeleteExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExecution);
             Modify_DeleteExecutionApiCall(ref _callDeleteExecution);
+            _callCancelExecution = clientHelper.BuildApiCall<CancelExecutionRequest, lro::Operation>("CancelExecution", grpcClient.CancelExecutionAsync, grpcClient.CancelExecution, effectiveSettings.CancelExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelExecution);
+            Modify_CancelExecutionApiCall(ref _callCancelExecution);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -701,6 +934,8 @@ namespace Google.Cloud.Run.V2
         partial void Modify_ListExecutionsApiCall(ref gaxgrpc::ApiCall<ListExecutionsRequest, ListExecutionsResponse> call);
 
         partial void Modify_DeleteExecutionApiCall(ref gaxgrpc::ApiCall<DeleteExecutionRequest, lro::Operation> call);
+
+        partial void Modify_CancelExecutionApiCall(ref gaxgrpc::ApiCall<CancelExecutionRequest, lro::Operation> call);
 
         partial void OnConstruction(Executions.ExecutionsClient grpcClient, ExecutionsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -715,6 +950,8 @@ namespace Google.Cloud.Run.V2
         partial void Modify_ListExecutionsRequest(ref ListExecutionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteExecutionRequest(ref DeleteExecutionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelExecutionRequest(ref CancelExecutionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets information about an Execution.
@@ -741,7 +978,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -753,7 +991,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Executions from a Job.
+        /// Lists Executions from a Job. Results are sorted by creation time,
+        /// descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -789,6 +1028,33 @@ namespace Google.Cloud.Run.V2
         {
             Modify_DeleteExecutionRequest(ref request, ref callSettings);
             return new lro::Operation<Execution, Execution>(await _callDeleteExecution.Async(request, callSettings).ConfigureAwait(false), DeleteExecutionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelExecution</c>.</summary>
+        public override lro::OperationsClient CancelExecutionOperationsClient { get; }
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Execution, Execution> CancelExecution(CancelExecutionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelExecutionRequest(ref request, ref callSettings);
+            return new lro::Operation<Execution, Execution>(_callCancelExecution.Sync(request, callSettings), CancelExecutionOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels an Execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Execution, Execution>> CancelExecutionAsync(CancelExecutionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelExecutionRequest(ref request, ref callSettings);
+            return new lro::Operation<Execution, Execution>(await _callCancelExecution.Async(request, callSettings).ConfigureAwait(false), CancelExecutionOperationsClient);
         }
     }
 

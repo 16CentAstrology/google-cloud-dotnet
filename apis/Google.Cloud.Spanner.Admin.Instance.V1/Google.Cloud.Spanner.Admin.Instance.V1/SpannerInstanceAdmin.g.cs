@@ -38,8 +38,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "AiABKA4yOS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5SZXBs",
             "aWNhSW5mby5SZXBsaWNhVHlwZRIfChdkZWZhdWx0X2xlYWRlcl9sb2NhdGlv",
             "bhgDIAEoCCJPCgtSZXBsaWNhVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "DgoKUkVBRF9XUklURRABEg0KCVJFQURfT05MWRACEgsKB1dJVE5FU1MQAyK+",
-            "BgoOSW5zdGFuY2VDb25maWcSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25h",
+            "DgoKUkVBRF9XUklURRABEg0KCVJFQURfT05MWRACEgsKB1dJVE5FU1MQAyLA",
+            "CgoOSW5zdGFuY2VDb25maWcSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25h",
             "bWUYAiABKAkSTwoLY29uZmlnX3R5cGUYBSABKA4yNS5nb29nbGUuc3Bhbm5l",
             "ci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZy5UeXBlQgPgQQMS",
             "PwoIcmVwbGljYXMYAyADKAsyLS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0",
@@ -51,175 +51,357 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "bmZpZy5MYWJlbHNFbnRyeRIMCgRldGFnGAkgASgJEhYKDmxlYWRlcl9vcHRp",
             "b25zGAQgAygJEhgKC3JlY29uY2lsaW5nGAogASgIQgPgQQMSSgoFc3RhdGUY",
             "CyABKA4yNi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0",
-            "YW5jZUNvbmZpZy5TdGF0ZUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiQgoEVHlwZRIUChBUWVBFX1VOU1BF",
-            "Q0lGSUVEEAASEgoOR09PR0xFX01BTkFHRUQQARIQCgxVU0VSX01BTkFHRUQQ",
-            "AiI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
-            "EAESCQoFUkVBRFkQAjpg6kFdCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0lu",
-            "c3RhbmNlQ29uZmlnEjRwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VDb25m",
-            "aWdzL3tpbnN0YW5jZV9jb25maWd9Iu0ECghJbnN0YW5jZRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQISPQoGY29uZmlnGAIgASgJQi3gQQL6QScKJXNwYW5uZXIuZ29v",
-            "Z2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWcSGQoMZGlzcGxheV9uYW1lGAMg",
-            "ASgJQgPgQQISEgoKbm9kZV9jb3VudBgFIAEoBRIYChBwcm9jZXNzaW5nX3Vu",
-            "aXRzGAkgASgFEkQKBXN0YXRlGAYgASgOMjAuZ29vZ2xlLnNwYW5uZXIuYWRt",
-            "aW4uaW5zdGFuY2UudjEuSW5zdGFuY2UuU3RhdGVCA+BBAxJGCgZsYWJlbHMY",
-            "ByADKAsyNi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0",
-            "YW5jZS5MYWJlbHNFbnRyeRIVCg1lbmRwb2ludF91cmlzGAggAygJEjQKC2Ny",
-            "ZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjQKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6TepBSgofc3Bhbm5lci5nb29n",
-            "bGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2luc3Rh",
-            "bmNlcy97aW5zdGFuY2V9IogBChpMaXN0SW5zdGFuY2VDb25maWdzUmVxdWVz",
-            "dBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglwYWdlX3NpemUYAiABKAUS",
-            "EgoKcGFnZV90b2tlbhgDIAEoCSKCAQobTGlzdEluc3RhbmNlQ29uZmlnc1Jl",
-            "c3BvbnNlEkoKEGluc3RhbmNlX2NvbmZpZ3MYASADKAsyMC5nb29nbGUuc3Bh",
-            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAkiVwoYR2V0SW5zdGFuY2VDb25maWdSZXF1ZXN0",
-            "EjsKBG5hbWUYASABKAlCLeBBAvpBJwolc3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bS9JbnN0YW5jZUNvbmZpZyLqAQobQ3JlYXRlSW5zdGFuY2VDb25maWdSZXF1",
-            "ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0Eh8KEmluc3RhbmNlX2NvbmZp",
-            "Z19pZBgCIAEoCUID4EECEk4KD2luc3RhbmNlX2NvbmZpZxgDIAEoCzIwLmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmln",
-            "QgPgQQISFQoNdmFsaWRhdGVfb25seRgEIAEoCCK6AQobVXBkYXRlSW5zdGFu",
-            "Y2VDb25maWdSZXF1ZXN0Ek4KD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIwLmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmln",
-            "QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrQgPgQQISFQoNdmFsaWRhdGVfb25seRgDIAEoCCJ/ChtEZWxl",
-            "dGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEn",
-            "CiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEgwKBGV0",
-            "YWcYAiABKAkSFQoNdmFsaWRhdGVfb25seRgDIAEoCCKhAQojTGlzdEluc3Rh",
-            "bmNlQ29uZmlnT3BlcmF0aW9uc1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPg",
-            "QQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1By",
-            "b2plY3QSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAQgASgJInIKJExpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlv",
-            "bnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiewoS",
-            "R2V0SW5zdGFuY2VSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIuCgpmaWVsZF9tYXNrGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK5AQoVQ3JlYXRlSW5z",
-            "dGFuY2VSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJl",
-            "c291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhgKC2luc3Rh",
-            "bmNlX2lkGAIgASgJQgPgQQISQQoIaW5zdGFuY2UYAyABKAsyKi5nb29nbGUu",
-            "c3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUID4EECIpIBChRM",
-            "aXN0SW5zdGFuY2VzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQor",
-            "Y2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0",
-            "ZXIYBCABKAkibwoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEj0KCWluc3RhbmNl",
-            "cxgBIAMoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLklu",
-            "c3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKPAQoVVXBkYXRlSW5z",
-            "dGFuY2VSZXF1ZXN0EkEKCGluc3RhbmNlGAEgASgLMiouZ29vZ2xlLnNwYW5u",
-            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VCA+BBAhIzCgpmaWVsZF9t",
-            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIk4K",
-            "FURlbGV0ZUluc3RhbmNlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEK",
-            "H3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2Ui5QEKFkNyZWF0ZUlu",
-            "c3RhbmNlTWV0YWRhdGESPAoIaW5zdGFuY2UYASABKAsyKi5nb29nbGUuc3Bh",
-            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZRIuCgpzdGFydF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjYW5jZWxf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIuUBChZV",
-            "cGRhdGVJbnN0YW5jZU1ldGFkYXRhEjwKCGluc3RhbmNlGAEgASgLMiouZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2USLgoKc3Rh",
-            "cnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
-            "Y2FuY2VsX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EiwKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cCLhAQocQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9pbnN0YW5j",
-            "ZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5j",
-            "ZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIzLmdvb2ds",
-            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dyZXNz",
-            "Ei8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCLhAQocVXBkYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9pbnN0",
-            "YW5jZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0",
-            "YW5jZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIzLmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dy",
-            "ZXNzEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcDLyGAoNSW5zdGFuY2VBZG1pbhLMAQoTTGlzdEluc3RhbmNlQ29u",
-            "ZmlncxI8Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxpc3RJ",
-            "bnN0YW5jZUNvbmZpZ3NSZXF1ZXN0Gj0uZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "aW5zdGFuY2UudjEuTGlzdEluc3RhbmNlQ29uZmlnc1Jlc3BvbnNlIjiC0+ST",
-            "AikSJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmlnc9pB",
-            "BnBhcmVudBK5AQoRR2V0SW5zdGFuY2VDb25maWcSOi5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZUNvbmZpZ1JlcXVlc3Qa",
-            "MC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNv",
-            "bmZpZyI2gtPkkwIpEicvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNv",
-            "bmZpZ3MvKn3aQQRuYW1lEsgCChRDcmVhdGVJbnN0YW5jZUNvbmZpZxI9Lmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0ZUluc3RhbmNl",
-            "Q29uZmlnUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "0QGC0+STAiwiJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29u",
-            "ZmlnczoBKtpBKXBhcmVudCxpbnN0YW5jZV9jb25maWcsaW5zdGFuY2VfY29u",
-            "ZmlnX2lkykFwCi9nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5J",
-            "bnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
-            "djEuQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRLKAgoUVXBkYXRlSW5z",
-            "dGFuY2VDb25maWcSPS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52",
-            "MS5VcGRhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uItMBgtPkkwI8MjcvdjEve2luc3RhbmNlX2NvbmZp",
-            "Zy5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp9OgEq2kEbaW5z",
-            "dGFuY2VfY29uZmlnLHVwZGF0ZV9tYXNrykFwCi9nb29nbGUuc3Bhbm5lci5h",
-            "ZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5u",
-            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VDb25maWdNZXRh",
-            "ZGF0YRKlAQoURGVsZXRlSW5zdGFuY2VDb25maWcSPS5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5EZWxldGVJbnN0YW5jZUNvbmZpZ1JlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNoLT5JMCKSonL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp92kEEbmFtZRLwAQocTGlz",
-            "dEluc3RhbmNlQ29uZmlnT3BlcmF0aW9ucxJFLmdvb2dsZS5zcGFubmVyLmFk",
-            "bWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlvbnNS",
-            "ZXF1ZXN0GkYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTGlz",
-            "dEluc3RhbmNlQ29uZmlnT3BlcmF0aW9uc1Jlc3BvbnNlIkGC0+STAjISMC92",
-            "MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmlnT3BlcmF0aW9u",
-            "c9pBBnBhcmVudBK0AQoNTGlzdEluc3RhbmNlcxI2Lmdvb2dsZS5zcGFubmVy",
-            "LmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZXNSZXF1ZXN0GjcuZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTGlzdEluc3RhbmNlc1Jl",
-            "c3BvbnNlIjKC0+STAiMSIS92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3Rh",
-            "bmNlc9pBBnBhcmVudBKhAQoLR2V0SW5zdGFuY2USNC5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZVJlcXVlc3QaKi5nb29n",
-            "bGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZSIwgtPkkwIj",
-            "EiEvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lEpwC",
-            "Cg5DcmVhdGVJbnN0YW5jZRI3Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
-            "bmNlLnYxLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24isQGC0+STAiYiIS92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2luc3RhbmNlczoBKtpBG3BhcmVudCxpbnN0YW5jZV9pZCxpbnN0YW5j",
-            "ZcpBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFu",
-            "Y2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0ZUlu",
-            "c3RhbmNlTWV0YWRhdGESnQIKDlVwZGF0ZUluc3RhbmNlEjcuZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKyAYLT5JMCLzIqL3Yx",
-            "L3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OgEq2kET",
-            "aW5zdGFuY2UsZmllbGRfbWFza8pBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "aW5zdGFuY2UudjEuSW5zdGFuY2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmlu",
-            "c3RhbmNlLnYxLlVwZGF0ZUluc3RhbmNlTWV0YWRhdGESkwEKDkRlbGV0ZUlu",
-            "c3RhbmNlEjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuRGVs",
-            "ZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjCC",
-            "0+STAiMqIS92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfdpBBG5h",
-            "bWUSmgEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9s",
-            "aWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ik+C0+STAjciMi92",
-            "MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFtUG9s",
-            "aWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EpMBCgxHZXRJYW1Qb2xpY3kSIi5n",
-            "b29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFt",
-            "LnYxLlBvbGljeSJIgtPkkwI3IjIvdjEve3Jlc291cmNlPXByb2plY3RzLyov",
-            "aW5zdGFuY2VzLyp9OmdldElhbVBvbGljeToBKtpBCHJlc291cmNlEsUBChJU",
-            "ZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJt",
-            "aXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNz",
-            "aW9uc1Jlc3BvbnNlIlqC0+STAj0iOC92MS97cmVzb3VyY2U9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3Vy",
-            "Y2UscGVybWlzc2lvbnMaeMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1p",
-            "bkKLAgokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxQhlT",
-            "cGFubmVySW5zdGFuY2VBZG1pblByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc3Bhbm5lci9hZG1pbi9pbnN0YW5jZS9hcGl2MS9pbnN0YW5jZXBiO2lu",
-            "c3RhbmNlcGKqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5JbnN0YW5j",
-            "ZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXEluc3RhbmNlXFYx",
-            "6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46Okluc3RhbmNlOjpW",
-            "MWIGcHJvdG8z"));
+            "YW5jZUNvbmZpZy5TdGF0ZUID4EEDEnIKGmZyZWVfaW5zdGFuY2VfYXZhaWxh",
+            "YmlsaXR5GAwgASgOMkkuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
+            "djEuSW5zdGFuY2VDb25maWcuRnJlZUluc3RhbmNlQXZhaWxhYmlsaXR5QgPg",
+            "QQMSVQoLcXVvcnVtX3R5cGUYEiABKA4yOy5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZy5RdW9ydW1UeXBlQgPgQQMS",
+            "Lgohc3RvcmFnZV9saW1pdF9wZXJfcHJvY2Vzc2luZ191bml0GBMgASgDQgPg",
+            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASJCCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABISCg5HT09HTEVf",
+            "TUFOQUdFRBABEhAKDFVTRVJfTUFOQUdFRBACIjcKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACIogBChhG",
+            "cmVlSW5zdGFuY2VBdmFpbGFiaWxpdHkSKgomRlJFRV9JTlNUQU5DRV9BVkFJ",
+            "TEFCSUxJVFlfVU5TUEVDSUZJRUQQABINCglBVkFJTEFCTEUQARIPCgtVTlNV",
+            "UFBPUlRFRBACEgwKCERJU0FCTEVEEAMSEgoOUVVPVEFfRVhDRUVERUQQBCJY",
+            "CgpRdW9ydW1UeXBlEhsKF1FVT1JVTV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "UkVHSU9OEAESDwoLRFVBTF9SRUdJT04QAhIQCgxNVUxUSV9SRUdJT04QAzqB",
+            "AepBfgolc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZUNvbmZpZxI0",
+            "cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlQ29uZmlncy97aW5zdGFuY2Vf",
+            "Y29uZmlnfSoPaW5zdGFuY2VDb25maWdzMg5pbnN0YW5jZUNvbmZpZyKyAQoW",
+            "UmVwbGljYUNvbXB1dGVDYXBhY2l0eRJSChFyZXBsaWNhX3NlbGVjdGlvbhgB",
+            "IAEoCzIyLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLlJlcGxp",
+            "Y2FTZWxlY3Rpb25CA+BBAhIUCgpub2RlX2NvdW50GAIgASgFSAASGgoQcHJv",
+            "Y2Vzc2luZ191bml0cxgDIAEoBUgAQhIKEGNvbXB1dGVfY2FwYWNpdHkiuAgK",
+            "EUF1dG9zY2FsaW5nQ29uZmlnEmYKEmF1dG9zY2FsaW5nX2xpbWl0cxgBIAEo",
+            "CzJFLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkF1dG9zY2Fs",
+            "aW5nQ29uZmlnLkF1dG9zY2FsaW5nTGltaXRzQgPgQQISaAoTYXV0b3NjYWxp",
+            "bmdfdGFyZ2V0cxgCIAEoCzJGLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
+            "bmNlLnYxLkF1dG9zY2FsaW5nQ29uZmlnLkF1dG9zY2FsaW5nVGFyZ2V0c0ID",
+            "4EECEnwKHmFzeW1tZXRyaWNfYXV0b3NjYWxpbmdfb3B0aW9ucxgDIAMoCzJP",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkF1dG9zY2FsaW5n",
+            "Q29uZmlnLkFzeW1tZXRyaWNBdXRvc2NhbGluZ09wdGlvbkID4EEBGpcBChFB",
+            "dXRvc2NhbGluZ0xpbWl0cxITCgltaW5fbm9kZXMYASABKAVIABIeChRtaW5f",
+            "cHJvY2Vzc2luZ191bml0cxgCIAEoBUgAEhMKCW1heF9ub2RlcxgDIAEoBUgB",
+            "Eh4KFG1heF9wcm9jZXNzaW5nX3VuaXRzGAQgASgFSAFCCwoJbWluX2xpbWl0",
+            "QgsKCW1heF9saW1pdBpyChJBdXRvc2NhbGluZ1RhcmdldHMSMgolaGlnaF9w",
+            "cmlvcml0eV9jcHVfdXRpbGl6YXRpb25fcGVyY2VudBgBIAEoBUID4EECEigK",
+            "G3N0b3JhZ2VfdXRpbGl6YXRpb25fcGVyY2VudBgCIAEoBUID4EECGsQDChtB",
+            "c3ltbWV0cmljQXV0b3NjYWxpbmdPcHRpb24SUgoRcmVwbGljYV9zZWxlY3Rp",
+            "b24YASABKAsyMi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5S",
+            "ZXBsaWNhU2VsZWN0aW9uQgPgQQISggEKCW92ZXJyaWRlcxgCIAEoCzJqLmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkF1dG9zY2FsaW5nQ29u",
+            "ZmlnLkFzeW1tZXRyaWNBdXRvc2NhbGluZ09wdGlvbi5BdXRvc2NhbGluZ0Nv",
+            "bmZpZ092ZXJyaWRlc0ID4EEBGssBChpBdXRvc2NhbGluZ0NvbmZpZ092ZXJy",
+            "aWRlcxJmChJhdXRvc2NhbGluZ19saW1pdHMYASABKAsyRS5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5BdXRvc2NhbGluZ0NvbmZpZy5BdXRv",
+            "c2NhbGluZ0xpbWl0c0ID4EEBEkUKOGF1dG9zY2FsaW5nX3RhcmdldF9oaWdo",
+            "X3ByaW9yaXR5X2NwdV91dGlsaXphdGlvbl9wZXJjZW50GAIgASgFQgPgQQEi",
+            "qgsKCEluc3RhbmNlEhEKBG5hbWUYASABKAlCA+BBAhI9CgZjb25maWcYAiAB",
+            "KAlCLeBBAvpBJwolc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZUNv",
+            "bmZpZxIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAhISCgpub2RlX2NvdW50",
+            "GAUgASgFEhgKEHByb2Nlc3NpbmdfdW5pdHMYCSABKAUSXwoYcmVwbGljYV9j",
+            "b21wdXRlX2NhcGFjaXR5GBMgAygLMjguZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "aW5zdGFuY2UudjEuUmVwbGljYUNvbXB1dGVDYXBhY2l0eUID4EEDElQKEmF1",
+            "dG9zY2FsaW5nX2NvbmZpZxgRIAEoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "Lmluc3RhbmNlLnYxLkF1dG9zY2FsaW5nQ29uZmlnQgPgQQESRAoFc3RhdGUY",
+            "BiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0",
+            "YW5jZS5TdGF0ZUID4EEDEkYKBmxhYmVscxgHIAMoCzI2Lmdvb2dsZS5zcGFu",
+            "bmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlLkxhYmVsc0VudHJ5Ek4K",
+            "DWluc3RhbmNlX3R5cGUYCiABKA4yNy5nb29nbGUuc3Bhbm5lci5hZG1pbi5p",
+            "bnN0YW5jZS52MS5JbnN0YW5jZS5JbnN0YW5jZVR5cGUSFQoNZW5kcG9pbnRf",
+            "dXJpcxgIIAMoCRI0CgtjcmVhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgMIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJWChZmcmVlX2luc3RhbmNl",
+            "X21ldGFkYXRhGA0gASgLMjYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFu",
+            "Y2UudjEuRnJlZUluc3RhbmNlTWV0YWRhdGESSAoHZWRpdGlvbhgUIAEoDjIy",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlLkVk",
+            "aXRpb25CA+BBARJvChxkZWZhdWx0X2JhY2t1cF9zY2hlZHVsZV90eXBlGBcg",
+            "ASgOMkQuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFu",
+            "Y2UuRGVmYXVsdEJhY2t1cFNjaGVkdWxlVHlwZUID4EEBGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiNwoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZ",
+            "EAIiUQoMSW5zdGFuY2VUeXBlEh0KGUlOU1RBTkNFX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIPCgtQUk9WSVNJT05FRBABEhEKDUZSRUVfSU5TVEFOQ0UQAiJVCgdF",
+            "ZGl0aW9uEhcKE0VESVRJT05fVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBAB",
+            "Eg4KCkVOVEVSUFJJU0UQAhITCg9FTlRFUlBSSVNFX1BMVVMQAyJiChlEZWZh",
+            "dWx0QmFja3VwU2NoZWR1bGVUeXBlEiwKKERFRkFVTFRfQkFDS1VQX1NDSEVE",
+            "VUxFX1RZUEVfVU5TUEVDSUZJRUQQABIICgROT05FEAESDQoJQVVUT01BVElD",
+            "EAI6YupBXwofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJv",
+            "amVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9KglpbnN0YW5j",
+            "ZXMyCGluc3RhbmNlIogBChpMaXN0SW5zdGFuY2VDb25maWdzUmVxdWVzdBJD",
+            "CgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCSKCAQobTGlzdEluc3RhbmNlQ29uZmlnc1Jlc3Bv",
+            "bnNlEkoKEGluc3RhbmNlX2NvbmZpZ3MYASADKAsyMC5nb29nbGUuc3Bhbm5l",
+            "ci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkiVwoYR2V0SW5zdGFuY2VDb25maWdSZXF1ZXN0EjsK",
+            "BG5hbWUYASABKAlCLeBBAvpBJwolc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9J",
+            "bnN0YW5jZUNvbmZpZyLqAQobQ3JlYXRlSW5zdGFuY2VDb25maWdSZXF1ZXN0",
+            "EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0Eh8KEmluc3RhbmNlX2NvbmZpZ19p",
+            "ZBgCIAEoCUID4EECEk4KD2luc3RhbmNlX2NvbmZpZxgDIAEoCzIwLmdvb2ds",
+            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmlnQgPg",
+            "QQISFQoNdmFsaWRhdGVfb25seRgEIAEoCCK6AQobVXBkYXRlSW5zdGFuY2VD",
+            "b25maWdSZXF1ZXN0Ek4KD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIwLmdvb2ds",
+            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmlnQgPg",
+            "QQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrQgPgQQISFQoNdmFsaWRhdGVfb25seRgDIAEoCCJ/ChtEZWxldGVJ",
+            "bnN0YW5jZUNvbmZpZ1JlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVz",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEgwKBGV0YWcY",
+            "AiABKAkSFQoNdmFsaWRhdGVfb25seRgDIAEoCCKhAQojTGlzdEluc3RhbmNl",
+            "Q29uZmlnT3BlcmF0aW9uc1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6",
+            "QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2pl",
+            "Y3QSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdl",
+            "X3Rva2VuGAQgASgJInIKJExpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlvbnNS",
+            "ZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiewoSR2V0",
+            "SW5zdGFuY2VSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5l",
+            "ci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIuCgpmaWVsZF9tYXNrGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK5AQoVQ3JlYXRlSW5zdGFu",
+            "Y2VSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291",
+            "cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhgKC2luc3RhbmNl",
+            "X2lkGAIgASgJQgPgQQISQQoIaW5zdGFuY2UYAyABKAsyKi5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUID4EECIskBChRMaXN0",
+            "SW5zdGFuY2VzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xv",
+            "dWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIY",
+            "BCABKAkSNQoRaW5zdGFuY2VfZGVhZGxpbmUYBSABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wIoQBChVMaXN0SW5zdGFuY2VzUmVzcG9uc2USPQoJ",
+            "aW5zdGFuY2VzGAEgAygLMiouZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFu",
+            "Y2UudjEuSW5zdGFuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
+            "cmVhY2hhYmxlGAMgAygJIo8BChVVcGRhdGVJbnN0YW5jZVJlcXVlc3QSQQoI",
+            "aW5zdGFuY2UYASABKAsyKi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5j",
+            "ZS52MS5JbnN0YW5jZUID4EECEjMKCmZpZWxkX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiTgoVRGVsZXRlSW5zdGFuY2VS",
+            "ZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZSK/AgoWQ3JlYXRlSW5zdGFuY2VNZXRhZGF0YRI8",
+            "CghpbnN0YW5jZRgBIAEoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
+            "bmNlLnYxLkluc3RhbmNlEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASWAobZXhwZWN0ZWRfZnVsZmlsbG1l",
+            "bnRfcGVyaW9kGAUgASgOMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFu",
+            "Y2UudjEuRnVsZmlsbG1lbnRQZXJpb2QivwIKFlVwZGF0ZUluc3RhbmNlTWV0",
+            "YWRhdGESPAoIaW5zdGFuY2UYASABKAsyKi5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MS5JbnN0YW5jZRIuCgpzdGFydF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjYW5jZWxfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKG2V4cGVjdGVkX2Z1",
+            "bGZpbGxtZW50X3BlcmlvZBgFIAEoDjIzLmdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "Lmluc3RhbmNlLnYxLkZ1bGZpbGxtZW50UGVyaW9kIs4CChRGcmVlSW5zdGFu",
+            "Y2VNZXRhZGF0YRI0CgtleHBpcmVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgx1cGdyYWRlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSXgoPZXhwaXJlX2JlaGF2",
+            "aW9yGAMgASgOMkUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEu",
+            "RnJlZUluc3RhbmNlTWV0YWRhdGEuRXhwaXJlQmVoYXZpb3IiaQoORXhwaXJl",
+            "QmVoYXZpb3ISHwobRVhQSVJFX0JFSEFWSU9SX1VOU1BFQ0lGSUVEEAASFwoT",
+            "RlJFRV9UT19QUk9WSVNJT05FRBABEh0KGVJFTU9WRV9BRlRFUl9HUkFDRV9Q",
+            "RVJJT0QQAiLhAQocQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9p",
+            "bnN0YW5jZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5p",
+            "bnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIz",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblBy",
+            "b2dyZXNzEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCLhAQocVXBkYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJ",
+            "Cg9pbnN0YW5jZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEo",
+            "CzIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlv",
+            "blByb2dyZXNzEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcCK5BQoRSW5zdGFuY2VQYXJ0aXRpb24SEQoEbmFtZRgB",
+            "IAEoCUID4EECEj0KBmNvbmZpZxgCIAEoCUIt4EEC+kEnCiVzcGFubmVyLmdv",
+            "b2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEhkKDGRpc3BsYXlfbmFtZRgD",
+            "IAEoCUID4EECEhQKCm5vZGVfY291bnQYBSABKAVIABIaChBwcm9jZXNzaW5n",
+            "X3VuaXRzGAYgASgFSAASTQoFc3RhdGUYByABKA4yOS5nb29nbGUuc3Bhbm5l",
+            "ci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZVBhcnRpdGlvbi5TdGF0ZUID",
+            "4EEDEjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEiIKFXJlZmVyZW5jaW5nX2RhdGFiYXNl",
+            "cxgKIAMoCUID4EEDEiIKE3JlZmVyZW5jaW5nX2JhY2t1cHMYCyADKAlCBRgB",
+            "4EEDEgwKBGV0YWcYDCABKAkiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6pgHqQaIBCihzcGFubmVy",
+            "Lmdvb2dsZWFwaXMuY29tL0luc3RhbmNlUGFydGl0aW9uEk9wcm9qZWN0cy97",
+            "cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vaW5zdGFuY2VQYXJ0aXRp",
+            "b25zL3tpbnN0YW5jZV9wYXJ0aXRpb259KhJpbnN0YW5jZVBhcnRpdGlvbnMy",
+            "EWluc3RhbmNlUGFydGl0aW9uQhIKEGNvbXB1dGVfY2FwYWNpdHkigQIKH0Ny",
+            "ZWF0ZUluc3RhbmNlUGFydGl0aW9uTWV0YWRhdGESTwoSaW5zdGFuY2VfcGFy",
+            "dGl0aW9uGAEgASgLMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
+            "djEuSW5zdGFuY2VQYXJ0aXRpb24SLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY2FuY2VsX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLTAQoeQ3JlYXRlSW5zdGFu",
+            "Y2VQYXJ0aXRpb25SZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9z",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEiIKFWluc3RhbmNlX3Bh",
+            "cnRpdGlvbl9pZBgCIAEoCUID4EECElQKEmluc3RhbmNlX3BhcnRpdGlvbhgD",
+            "IAEoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3Rh",
+            "bmNlUGFydGl0aW9uQgPgQQIibgoeRGVsZXRlSW5zdGFuY2VQYXJ0aXRpb25S",
+            "ZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooc3Bhbm5lci5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZVBhcnRpdGlvbhIMCgRldGFnGAIgASgJIl0KG0dl",
+            "dEluc3RhbmNlUGFydGl0aW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6",
+            "QSoKKHNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VQYXJ0aXRpb24i",
+            "qwEKHlVwZGF0ZUluc3RhbmNlUGFydGl0aW9uUmVxdWVzdBJUChJpbnN0YW5j",
+            "ZV9wYXJ0aXRpb24YASABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0",
+            "YW5jZS52MS5JbnN0YW5jZVBhcnRpdGlvbkID4EECEjMKCmZpZWxkX21hc2sY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIigQIKH1Vw",
+            "ZGF0ZUluc3RhbmNlUGFydGl0aW9uTWV0YWRhdGESTwoSaW5zdGFuY2VfcGFy",
+            "dGl0aW9uGAEgASgLMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
+            "djEuSW5zdGFuY2VQYXJ0aXRpb24SLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY2FuY2VsX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLFAQodTGlzdEluc3RhbmNl",
+            "UGFydGl0aW9uc1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3Nw",
+            "YW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEQoJcGFnZV9zaXplGAIg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSRAobaW5zdGFuY2VfcGFydGl0aW9u",
+            "X2RlYWRsaW5lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEBIqABCh5MaXN0SW5zdGFuY2VQYXJ0aXRpb25zUmVzcG9uc2USUAoTaW5z",
+            "dGFuY2VfcGFydGl0aW9ucxgBIAMoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "Lmluc3RhbmNlLnYxLkluc3RhbmNlUGFydGl0aW9uEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSLtAQomTGlzdEluc3Rh",
+            "bmNlUGFydGl0aW9uT3BlcmF0aW9uc1JlcXVlc3QSNwoGcGFyZW50GAEgASgJ",
+            "QifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEwoG",
+            "ZmlsdGVyGAIgASgJQgPgQQESFgoJcGFnZV9zaXplGAMgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgEIAEoCUID4EEBEkQKG2luc3RhbmNlX3BhcnRpdGlvbl9k",
+            "ZWFkbGluZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "ASKeAQonTGlzdEluc3RhbmNlUGFydGl0aW9uT3BlcmF0aW9uc1Jlc3BvbnNl",
+            "EjEKCm9wZXJhdGlvbnMYASADKAsyHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRInCh91bnJlYWNoYWJs",
+            "ZV9pbnN0YW5jZV9wYXJ0aXRpb25zGAMgAygJIpIBChNNb3ZlSW5zdGFuY2VS",
+            "ZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZRJECg10YXJnZXRfY29uZmlnGAIgASgJQi3gQQL6",
+            "QScKJXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWciFgoU",
+            "TW92ZUluc3RhbmNlUmVzcG9uc2UipQEKFE1vdmVJbnN0YW5jZU1ldGFkYXRh",
+            "EhUKDXRhcmdldF9jb25maWcYASABKAkSRQoIcHJvZ3Jlc3MYAiABKAsyMy5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5PcGVyYXRpb25Qcm9n",
+            "cmVzcxIvCgtjYW5jZWxfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAy2icKDUluc3RhbmNlQWRtaW4SzAEKE0xpc3RJbnN0YW5jZUNv",
+            "bmZpZ3MSPC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5MaXN0",
+            "SW5zdGFuY2VDb25maWdzUmVxdWVzdBo9Lmdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "Lmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZUNvbmZpZ3NSZXNwb25zZSI42kEG",
+            "cGFyZW50gtPkkwIpEicvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9pbnN0YW5j",
+            "ZUNvbmZpZ3MSuQEKEUdldEluc3RhbmNlQ29uZmlnEjouZ29vZ2xlLnNwYW5u",
+            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuR2V0SW5zdGFuY2VDb25maWdSZXF1ZXN0",
+            "GjAuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VD",
+            "b25maWciNtpBBG5hbWWC0+STAikSJy92MS97bmFtZT1wcm9qZWN0cy8qL2lu",
+            "c3RhbmNlQ29uZmlncy8qfRLIAgoUQ3JlYXRlSW5zdGFuY2VDb25maWcSPS5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5DcmVhdGVJbnN0YW5j",
+            "ZUNvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "ItEBykFwCi9nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0",
+            "YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEu",
+            "Q3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YdpBKXBhcmVudCxpbnN0YW5j",
+            "ZV9jb25maWcsaW5zdGFuY2VfY29uZmlnX2lkgtPkkwIsIicvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qfS9pbnN0YW5jZUNvbmZpZ3M6ASoSygIKFFVwZGF0ZUlu",
+            "c3RhbmNlQ29uZmlnEj0uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
+            "djEuVXBkYXRlSW5zdGFuY2VDb25maWdSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiLTAcpBcAovZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "aW5zdGFuY2UudjEuSW5zdGFuY2VDb25maWcSPWdvb2dsZS5zcGFubmVyLmFk",
+            "bWluLmluc3RhbmNlLnYxLlVwZGF0ZUluc3RhbmNlQ29uZmlnTWV0YWRhdGHa",
+            "QRtpbnN0YW5jZV9jb25maWcsdXBkYXRlX21hc2uC0+STAjwyNy92MS97aW5z",
+            "dGFuY2VfY29uZmlnLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNvbmZpZ3Mv",
+            "Kn06ASoSpQEKFERlbGV0ZUluc3RhbmNlQ29uZmlnEj0uZ29vZ2xlLnNwYW5u",
+            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuRGVsZXRlSW5zdGFuY2VDb25maWdSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjbaQQRuYW1lgtPkkwIpKicv",
+            "djEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNvbmZpZ3MvKn0S8AEKHExp",
+            "c3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlvbnMSRS5nb29nbGUuc3Bhbm5lci5h",
+            "ZG1pbi5pbnN0YW5jZS52MS5MaXN0SW5zdGFuY2VDb25maWdPcGVyYXRpb25z",
+            "UmVxdWVzdBpGLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxp",
+            "c3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlvbnNSZXNwb25zZSJB2kEGcGFyZW50",
+            "gtPkkwIyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9pbnN0YW5jZUNvbmZp",
+            "Z09wZXJhdGlvbnMStAEKDUxpc3RJbnN0YW5jZXMSNi5nb29nbGUuc3Bhbm5l",
+            "ci5hZG1pbi5pbnN0YW5jZS52MS5MaXN0SW5zdGFuY2VzUmVxdWVzdBo3Lmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZXNS",
+            "ZXNwb25zZSIy2kEGcGFyZW50gtPkkwIjEiEvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qfS9pbnN0YW5jZXMS5AEKFkxpc3RJbnN0YW5jZVBhcnRpdGlvbnMSPy5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5MaXN0SW5zdGFuY2VQ",
+            "YXJ0aXRpb25zUmVxdWVzdBpALmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
+            "bmNlLnYxLkxpc3RJbnN0YW5jZVBhcnRpdGlvbnNSZXNwb25zZSJH2kEGcGFy",
+            "ZW50gtPkkwI4EjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "fS9pbnN0YW5jZVBhcnRpdGlvbnMSoQEKC0dldEluc3RhbmNlEjQuZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuR2V0SW5zdGFuY2VSZXF1ZXN0",
+            "GiouZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2Ui",
+            "MNpBBG5hbWWC0+STAiMSIS92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNl",
+            "cy8qfRKcAgoOQ3JlYXRlSW5zdGFuY2USNy5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MS5DcmVhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrEBykFkCilnb29nbGUuc3Bhbm5lci5h",
+            "ZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZRI3Z29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uaW5zdGFuY2UudjEuQ3JlYXRlSW5zdGFuY2VNZXRhZGF0YdpBG3BhcmVu",
+            "dCxpbnN0YW5jZV9pZCxpbnN0YW5jZYLT5JMCJiIhL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKn0vaW5zdGFuY2VzOgEqEp0CCg5VcGRhdGVJbnN0YW5jZRI3Lmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLlVwZGF0ZUluc3RhbmNl",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24isgHKQWQK",
+            "KWdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlEjdn",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5VcGRhdGVJbnN0YW5j",
+            "ZU1ldGFkYXRh2kETaW5zdGFuY2UsZmllbGRfbWFza4LT5JMCLzIqL3YxL3tp",
+            "bnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OgEqEpMBCg5E",
+            "ZWxldGVJbnN0YW5jZRI3Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNl",
+            "LnYxLkRlbGV0ZUluc3RhbmNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIw2kEEbmFtZYLT5JMCIyohL3YxL3tuYW1lPXByb2plY3RzLyovaW5z",
+            "dGFuY2VzLyp9EpoBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNl",
+            "dElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJP2kEP",
+            "cmVzb3VyY2UscG9saWN5gtPkkwI3IjIvdjEve3Jlc291cmNlPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyp9OnNldElhbVBvbGljeToBKhKTAQoMR2V0SWFtUG9s",
+            "aWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29v",
+            "Z2xlLmlhbS52MS5Qb2xpY3kiSNpBCHJlc291cmNlgtPkkwI3IjIvdjEve3Jl",
+            "c291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OmdldElhbVBvbGljeToB",
+            "KhLFAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0",
+            "SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFt",
+            "UGVybWlzc2lvbnNSZXNwb25zZSJa2kEUcmVzb3VyY2UscGVybWlzc2lvbnOC",
+            "0+STAj0iOC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06",
+            "dGVzdElhbVBlcm1pc3Npb25zOgEqEtEBChRHZXRJbnN0YW5jZVBhcnRpdGlv",
+            "bhI9Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkdldEluc3Rh",
+            "bmNlUGFydGl0aW9uUmVxdWVzdBozLmdvb2dsZS5zcGFubmVyLmFkbWluLmlu",
+            "c3RhbmNlLnYxLkluc3RhbmNlUGFydGl0aW9uIkXaQQRuYW1lgtPkkwI4EjYv",
+            "djEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9pbnN0YW5jZVBhcnRp",
+            "dGlvbnMvKn0S6QIKF0NyZWF0ZUluc3RhbmNlUGFydGl0aW9uEkAuZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuQ3JlYXRlSW5zdGFuY2VQYXJ0",
+            "aXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLs",
+            "AcpBdgoyZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFu",
+            "Y2VQYXJ0aXRpb24SQGdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYx",
+            "LkNyZWF0ZUluc3RhbmNlUGFydGl0aW9uTWV0YWRhdGHaQS9wYXJlbnQsaW5z",
+            "dGFuY2VfcGFydGl0aW9uLGluc3RhbmNlX3BhcnRpdGlvbl9pZILT5JMCOyI2",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0vaW5zdGFuY2VQ",
+            "YXJ0aXRpb25zOgEqEroBChdEZWxldGVJbnN0YW5jZVBhcnRpdGlvbhJALmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkRlbGV0ZUluc3RhbmNl",
+            "UGFydGl0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJF2kEE",
+            "bmFtZYLT5JMCOCo2L3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
+            "aW5zdGFuY2VQYXJ0aXRpb25zLyp9EuoCChdVcGRhdGVJbnN0YW5jZVBhcnRp",
+            "dGlvbhJALmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLlVwZGF0",
+            "ZUluc3RhbmNlUGFydGl0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24i7QHKQXYKMmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
+            "bmNlLnYxLkluc3RhbmNlUGFydGl0aW9uEkBnb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MS5VcGRhdGVJbnN0YW5jZVBhcnRpdGlvbk1ldGFkYXRh",
+            "2kEdaW5zdGFuY2VfcGFydGl0aW9uLGZpZWxkX21hc2uC0+STAk4ySS92MS97",
+            "aW5zdGFuY2VfcGFydGl0aW9uLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Ki9pbnN0YW5jZVBhcnRpdGlvbnMvKn06ASoSiAIKH0xpc3RJbnN0YW5jZVBh",
+            "cnRpdGlvbk9wZXJhdGlvbnMSSC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0",
+            "YW5jZS52MS5MaXN0SW5zdGFuY2VQYXJ0aXRpb25PcGVyYXRpb25zUmVxdWVz",
+            "dBpJLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0",
+            "YW5jZVBhcnRpdGlvbk9wZXJhdGlvbnNSZXNwb25zZSJQ2kEGcGFyZW50gtPk",
+            "kwJBEj8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9pbnN0",
+            "YW5jZVBhcnRpdGlvbk9wZXJhdGlvbnMSiQIKDE1vdmVJbnN0YW5jZRI1Lmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk1vdmVJbnN0YW5jZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqIBykFuCjVn",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5Nb3ZlSW5zdGFuY2VS",
+            "ZXNwb25zZRI1Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTW92",
+            "ZUluc3RhbmNlTWV0YWRhdGGC0+STAisiJi92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2luc3RhbmNlcy8qfTptb3ZlOgEqGnjKQRZzcGFubmVyLmdvb2dsZWFwaXMu",
+            "Y29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwYW5u",
+            "ZXIuYWRtaW5CiwIKJGNvbS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5j",
+            "ZS52MUIZU3Bhbm5lckluc3RhbmNlQWRtaW5Qcm90b1ABWkZjbG91ZC5nb29n",
+            "bGUuY29tL2dvL3NwYW5uZXIvYWRtaW4vaW5zdGFuY2UvYXBpdjEvaW5zdGFu",
+            "Y2VwYjtpbnN0YW5jZXBiqgImR29vZ2xlLkNsb3VkLlNwYW5uZXIuQWRtaW4u",
+            "SW5zdGFuY2UuVjHKAiZHb29nbGVcQ2xvdWRcU3Bhbm5lclxBZG1pblxJbnN0",
+            "YW5jZVxWMeoCK0dvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OkFkbWluOjpJbnN0",
+            "YW5jZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Instance.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser, new[]{ "Location", "Type", "DefaultLeaderLocation" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "ConfigType", "Replicas", "OptionalReplicas", "BaseConfig", "Labels", "Etag", "LeaderOptions", "Reconciling", "State" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.Type), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "State", "Labels", "EndpointUris", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "ConfigType", "Replicas", "OptionalReplicas", "BaseConfig", "Labels", "Etag", "LeaderOptions", "Reconciling", "State", "FreeInstanceAvailability", "QuorumType", "StorageLimitPerProcessingUnit" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.Type), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity.Parser, new[]{ "ReplicaSelection", "NodeCount", "ProcessingUnits" }, new[]{ "ComputeCapacity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets", "AsymmetricAutoscalingOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits.Parser, new[]{ "MinNodes", "MinProcessingUnits", "MaxNodes", "MaxProcessingUnits" }, new[]{ "MinLimit", "MaxLimit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets.Parser, new[]{ "HighPriorityCpuUtilizationPercent", "StorageUtilizationPercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Parser, new[]{ "ReplicaSelection", "Overrides" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargetHighPriorityCpuUtilizationPercent" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "ReplicaComputeCapacity", "AutoscalingConfig", "State", "Labels", "InstanceType", "EndpointUris", "CreateTime", "UpdateTime", "FreeInstanceMetadata", "Edition", "DefaultBackupScheduleType" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser, new[]{ "InstanceConfigs", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -230,20 +412,36 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "InstanceDeadline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser, new[]{ "Instance", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime", "ExpectedFulfillmentPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime", "ExpectedFulfillmentPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Parser, new[]{ "ExpireTime", "UpgradeTime", "ExpireBehavior" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata.Parser, new[]{ "InstanceConfig", "Progress", "CancelTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata.Parser, new[]{ "InstanceConfig", "Progress", "CancelTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata.Parser, new[]{ "InstanceConfig", "Progress", "CancelTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition), global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "State", "CreateTime", "UpdateTime", "ReferencingDatabases", "ReferencingBackups", "Etag" }, new[]{ "ComputeCapacity" }, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata.Parser, new[]{ "InstancePartition", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionRequest.Parser, new[]{ "Parent", "InstancePartitionId", "InstancePartition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstancePartitionRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstancePartitionRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstancePartitionRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstancePartitionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionRequest.Parser, new[]{ "InstancePartition", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata.Parser, new[]{ "InstancePartition", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "InstancePartitionDeadline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse.Parser, new[]{ "InstancePartitions", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "InstancePartitionDeadline" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse.Parser, new[]{ "Operations", "NextPageToken", "UnreachableInstancePartitions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest.Parser, new[]{ "Name", "TargetConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceMetadata.Parser, new[]{ "TargetConfig", "Progress", "CancelTime" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReplicaInfo : pb::IMessage<ReplicaInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -294,7 +492,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int LocationFieldNumber = 1;
     private string location_ = "";
     /// <summary>
-    /// The location of the serving resources, e.g. "us-central1".
+    /// The location of the serving resources, e.g., "us-central1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -572,6 +770,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// A possible configuration for a Cloud Spanner instance. Configurations
   /// define the geographic placement of nodes and their replication.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceConfig : pb::IMessage<InstanceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -617,6 +816,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       leaderOptions_ = other.leaderOptions_.Clone();
       reconciling_ = other.reconciling_;
       state_ = other.state_;
+      freeInstanceAvailability_ = other.freeInstanceAvailability_;
+      quorumType_ = other.quorumType_;
+      storageLimitPerProcessingUnit_ = other.storageLimitPerProcessingUnit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -633,6 +835,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// A unique identifier for the instance configuration.  Values
     /// are of the form
     /// `projects/&lt;project>/instanceConfigs/[a-z][-a-z0-9]*`.
+    ///
+    /// User instance configuration must start with `custom-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -662,8 +866,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int ConfigTypeFieldNumber = 5;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.Type configType_ = global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.Type.Unspecified;
     /// <summary>
-    /// Output only. Whether this instance config is a Google or User Managed
-    /// Configuration.
+    /// Output only. Whether this instance configuration is a Google-managed or
+    /// user-managed configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -682,6 +886,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// <summary>
     /// The geographic placement of nodes in this instance configuration and their
     /// replication properties.
+    ///
+    /// To create user-managed configurations, input
+    /// `replicas` must include all replicas in `replicas` of the `base_config`
+    /// and include one or more replicas in the `optional_replicas` of the
+    /// `base_config`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -695,8 +904,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo> optionalReplicas_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo>();
     /// <summary>
-    /// Output only. The available optional replicas to choose from for user
-    /// managed configurations. Populated for Google managed configurations.
+    /// Output only. The available optional replicas to choose from for
+    /// user-managed configurations. Populated for Google-managed configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -709,9 +918,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string baseConfig_ = "";
     /// <summary>
     /// Base configuration name, e.g. projects/&lt;project_name>/instanceConfigs/nam3,
-    /// based on which this configuration is created. Only set for user managed
+    /// based on which this configuration is created. Only set for user-managed
     /// configurations. `base_config` must refer to a configuration of type
-    /// GOOGLE_MANAGED in the same project as this configuration.
+    /// `GOOGLE_MANAGED` in the same project as this configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -761,15 +970,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string etag_ = "";
     /// <summary>
     /// etag is used for optimistic concurrency control as a way
-    /// to help prevent simultaneous updates of a instance config from overwriting
-    /// each other. It is strongly suggested that systems make use of the etag in
-    /// the read-modify-write cycle to perform instance config updates in order to
-    /// avoid race conditions: An etag is returned in the response which contains
-    /// instance configs, and systems are expected to put that etag in the request
-    /// to update instance config to ensure that their change will be applied to
-    /// the same version of the instance config.
-    /// If no etag is provided in the call to update instance config, then the
-    /// existing instance config is overwritten blindly.
+    /// to help prevent simultaneous updates of a instance configuration from
+    /// overwriting each other. It is strongly suggested that systems make use of
+    /// the etag in the read-modify-write cycle to perform instance configuration
+    /// updates in order to avoid race conditions: An etag is returned in the
+    /// response which contains instance configurations, and systems are expected
+    /// to put that etag in the request to update instance configuration to ensure
+    /// that their change is applied to the same version of the instance
+    /// configuration. If no etag is provided in the call to update the instance
+    /// configuration, then the existing instance configuration is overwritten
+    /// blindly.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -799,8 +1009,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int ReconcilingFieldNumber = 10;
     private bool reconciling_;
     /// <summary>
-    /// Output only. If true, the instance config is being created or updated. If
-    /// false, there are no ongoing operations for the instance config.
+    /// Output only. If true, the instance configuration is being created or
+    /// updated. If false, there are no ongoing operations for the instance
+    /// configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -815,7 +1026,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int StateFieldNumber = 11;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State state_ = global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The current instance config state.
+    /// Output only. The current instance configuration state. Applicable only for
+    /// `USER_MANAGED` configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -823,6 +1035,52 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       get { return state_; }
       set {
         state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "free_instance_availability" field.</summary>
+    public const int FreeInstanceAvailabilityFieldNumber = 12;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability freeInstanceAvailability_ = global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified;
+    /// <summary>
+    /// Output only. Describes whether free instances are available to be created
+    /// in this instance configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability FreeInstanceAvailability {
+      get { return freeInstanceAvailability_; }
+      set {
+        freeInstanceAvailability_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quorum_type" field.</summary>
+    public const int QuorumTypeFieldNumber = 18;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType quorumType_ = global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified;
+    /// <summary>
+    /// Output only. The `QuorumType` of the instance configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType QuorumType {
+      get { return quorumType_; }
+      set {
+        quorumType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "storage_limit_per_processing_unit" field.</summary>
+    public const int StorageLimitPerProcessingUnitFieldNumber = 19;
+    private long storageLimitPerProcessingUnit_;
+    /// <summary>
+    /// Output only. The storage limit in bytes per processing unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long StorageLimitPerProcessingUnit {
+      get { return storageLimitPerProcessingUnit_; }
+      set {
+        storageLimitPerProcessingUnit_ = value;
       }
     }
 
@@ -852,6 +1110,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if(!leaderOptions_.Equals(other.leaderOptions_)) return false;
       if (Reconciling != other.Reconciling) return false;
       if (State != other.State) return false;
+      if (FreeInstanceAvailability != other.FreeInstanceAvailability) return false;
+      if (QuorumType != other.QuorumType) return false;
+      if (StorageLimitPerProcessingUnit != other.StorageLimitPerProcessingUnit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -870,6 +1131,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       hash ^= leaderOptions_.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (FreeInstanceAvailability != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified) hash ^= FreeInstanceAvailability.GetHashCode();
+      if (QuorumType != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified) hash ^= QuorumType.GetHashCode();
+      if (StorageLimitPerProcessingUnit != 0L) hash ^= StorageLimitPerProcessingUnit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -920,6 +1184,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) State);
       }
+      if (FreeInstanceAvailability != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) FreeInstanceAvailability);
+      }
+      if (QuorumType != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) QuorumType);
+      }
+      if (StorageLimitPerProcessingUnit != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(StorageLimitPerProcessingUnit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -962,6 +1238,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) State);
       }
+      if (FreeInstanceAvailability != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) FreeInstanceAvailability);
+      }
+      if (QuorumType != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) QuorumType);
+      }
+      if (StorageLimitPerProcessingUnit != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(StorageLimitPerProcessingUnit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -997,6 +1285,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      if (FreeInstanceAvailability != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FreeInstanceAvailability);
+      }
+      if (QuorumType != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) QuorumType);
+      }
+      if (StorageLimitPerProcessingUnit != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(StorageLimitPerProcessingUnit);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1023,7 +1320,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.BaseConfig.Length != 0) {
         BaseConfig = other.BaseConfig;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -1033,6 +1330,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.FreeInstanceAvailability != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability.Unspecified) {
+        FreeInstanceAvailability = other.FreeInstanceAvailability;
+      }
+      if (other.QuorumType != global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType.Unspecified) {
+        QuorumType = other.QuorumType;
+      }
+      if (other.StorageLimitPerProcessingUnit != 0L) {
+        StorageLimitPerProcessingUnit = other.StorageLimitPerProcessingUnit;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1091,6 +1397,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           }
           case 88: {
             State = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            FreeInstanceAvailability = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            QuorumType = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            StorageLimitPerProcessingUnit = input.ReadInt64();
             break;
           }
         }
@@ -1152,6 +1470,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             State = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State) input.ReadEnum();
             break;
           }
+          case 96: {
+            FreeInstanceAvailability = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.FreeInstanceAvailability) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            QuorumType = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.QuorumType) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            StorageLimitPerProcessingUnit = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -1171,17 +1501,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Google managed configuration.
+        /// Google-managed configuration.
         /// </summary>
         [pbr::OriginalName("GOOGLE_MANAGED")] GoogleManaged = 1,
         /// <summary>
-        /// User managed configuration.
+        /// User-managed configuration.
         /// </summary>
         [pbr::OriginalName("USER_MANAGED")] UserManaged = 2,
       }
 
       /// <summary>
-      /// Indicates the current state of the instance config.
+      /// Indicates the current state of the instance configuration.
       /// </summary>
       public enum State {
         /// <summary>
@@ -1189,14 +1519,1934 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The instance config is still being created.
+        /// The instance configuration is still being created.
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 1,
         /// <summary>
-        /// The instance config is fully created and ready to be used to create
-        /// instances.
+        /// The instance configuration is fully created and ready to be used to
+        /// create instances.
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 2,
+      }
+
+      /// <summary>
+      /// Describes the availability for free instances to be created in an instance
+      /// configuration.
+      /// </summary>
+      public enum FreeInstanceAvailability {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("FREE_INSTANCE_AVAILABILITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that free instances are available to be created in this
+        /// instance configuration.
+        /// </summary>
+        [pbr::OriginalName("AVAILABLE")] Available = 1,
+        /// <summary>
+        /// Indicates that free instances are not supported in this instance
+        /// configuration.
+        /// </summary>
+        [pbr::OriginalName("UNSUPPORTED")] Unsupported = 2,
+        /// <summary>
+        /// Indicates that free instances are currently not available to be created
+        /// in this instance configuration.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 3,
+        /// <summary>
+        /// Indicates that additional free instances cannot be created in this
+        /// instance configuration because the project has reached its limit of free
+        /// instances.
+        /// </summary>
+        [pbr::OriginalName("QUOTA_EXCEEDED")] QuotaExceeded = 4,
+      }
+
+      /// <summary>
+      /// Indicates the quorum type of this instance configuration.
+      /// </summary>
+      public enum QuorumType {
+        /// <summary>
+        /// Quorum type not specified.
+        /// </summary>
+        [pbr::OriginalName("QUORUM_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// An instance configuration tagged with `REGION` quorum type forms a write
+        /// quorum in a single region.
+        /// </summary>
+        [pbr::OriginalName("REGION")] Region = 1,
+        /// <summary>
+        /// An instance configuration tagged with the `DUAL_REGION` quorum type forms
+        /// a write quorum with exactly two read-write regions in a multi-region
+        /// configuration.
+        ///
+        /// This instance configuration requires failover in the event of
+        /// regional failures.
+        /// </summary>
+        [pbr::OriginalName("DUAL_REGION")] DualRegion = 2,
+        /// <summary>
+        /// An instance configuration tagged with the `MULTI_REGION` quorum type
+        /// forms a write quorum from replicas that are spread across more than one
+        /// region in a multi-region configuration.
+        /// </summary>
+        [pbr::OriginalName("MULTI_REGION")] MultiRegion = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// ReplicaComputeCapacity describes the amount of server resources that are
+  /// allocated to each replica identified by the replica selection.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReplicaComputeCapacity : pb::IMessage<ReplicaComputeCapacity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReplicaComputeCapacity> _parser = new pb::MessageParser<ReplicaComputeCapacity>(() => new ReplicaComputeCapacity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReplicaComputeCapacity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaComputeCapacity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaComputeCapacity(ReplicaComputeCapacity other) : this() {
+      replicaSelection_ = other.replicaSelection_ != null ? other.replicaSelection_.Clone() : null;
+      switch (other.ComputeCapacityCase) {
+        case ComputeCapacityOneofCase.NodeCount:
+          NodeCount = other.NodeCount;
+          break;
+        case ComputeCapacityOneofCase.ProcessingUnits:
+          ProcessingUnits = other.ProcessingUnits;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaComputeCapacity Clone() {
+      return new ReplicaComputeCapacity(this);
+    }
+
+    /// <summary>Field number for the "replica_selection" field.</summary>
+    public const int ReplicaSelectionFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection replicaSelection_;
+    /// <summary>
+    /// Required. Identifies replicas by specified properties.
+    /// All replicas in the selection have the same amount of compute capacity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection ReplicaSelection {
+      get { return replicaSelection_; }
+      set {
+        replicaSelection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "node_count" field.</summary>
+    public const int NodeCountFieldNumber = 2;
+    /// <summary>
+    /// The number of nodes allocated to each replica.
+    ///
+    /// This may be zero in API responses for instances that are not yet in
+    /// state `READY`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NodeCount {
+      get { return HasNodeCount ? (int) computeCapacity_ : 0; }
+      set {
+        computeCapacity_ = value;
+        computeCapacityCase_ = ComputeCapacityOneofCase.NodeCount;
+      }
+    }
+    /// <summary>Gets whether the "node_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNodeCount {
+      get { return computeCapacityCase_ == ComputeCapacityOneofCase.NodeCount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "node_count" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNodeCount() {
+      if (HasNodeCount) {
+        ClearComputeCapacity();
+      }
+    }
+
+    /// <summary>Field number for the "processing_units" field.</summary>
+    public const int ProcessingUnitsFieldNumber = 3;
+    /// <summary>
+    /// The number of processing units allocated to each replica.
+    ///
+    /// This may be zero in API responses for instances that are not yet in
+    /// state `READY`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ProcessingUnits {
+      get { return HasProcessingUnits ? (int) computeCapacity_ : 0; }
+      set {
+        computeCapacity_ = value;
+        computeCapacityCase_ = ComputeCapacityOneofCase.ProcessingUnits;
+      }
+    }
+    /// <summary>Gets whether the "processing_units" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProcessingUnits {
+      get { return computeCapacityCase_ == ComputeCapacityOneofCase.ProcessingUnits; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "processing_units" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProcessingUnits() {
+      if (HasProcessingUnits) {
+        ClearComputeCapacity();
+      }
+    }
+
+    private object computeCapacity_;
+    /// <summary>Enum of possible cases for the "compute_capacity" oneof.</summary>
+    public enum ComputeCapacityOneofCase {
+      None = 0,
+      NodeCount = 2,
+      ProcessingUnits = 3,
+    }
+    private ComputeCapacityOneofCase computeCapacityCase_ = ComputeCapacityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComputeCapacityOneofCase ComputeCapacityCase {
+      get { return computeCapacityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearComputeCapacity() {
+      computeCapacityCase_ = ComputeCapacityOneofCase.None;
+      computeCapacity_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReplicaComputeCapacity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReplicaComputeCapacity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ReplicaSelection, other.ReplicaSelection)) return false;
+      if (NodeCount != other.NodeCount) return false;
+      if (ProcessingUnits != other.ProcessingUnits) return false;
+      if (ComputeCapacityCase != other.ComputeCapacityCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (replicaSelection_ != null) hash ^= ReplicaSelection.GetHashCode();
+      if (HasNodeCount) hash ^= NodeCount.GetHashCode();
+      if (HasProcessingUnits) hash ^= ProcessingUnits.GetHashCode();
+      hash ^= (int) computeCapacityCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (replicaSelection_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ReplicaSelection);
+      }
+      if (HasNodeCount) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ProcessingUnits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (replicaSelection_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ReplicaSelection);
+      }
+      if (HasNodeCount) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ProcessingUnits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (replicaSelection_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplicaSelection);
+      }
+      if (HasNodeCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcessingUnits);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReplicaComputeCapacity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.replicaSelection_ != null) {
+        if (replicaSelection_ == null) {
+          ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+        }
+        ReplicaSelection.MergeFrom(other.ReplicaSelection);
+      }
+      switch (other.ComputeCapacityCase) {
+        case ComputeCapacityOneofCase.NodeCount:
+          NodeCount = other.NodeCount;
+          break;
+        case ComputeCapacityOneofCase.ProcessingUnits:
+          ProcessingUnits = other.ProcessingUnits;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (replicaSelection_ == null) {
+              ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+            }
+            input.ReadMessage(ReplicaSelection);
+            break;
+          }
+          case 16: {
+            NodeCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ProcessingUnits = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (replicaSelection_ == null) {
+              ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+            }
+            input.ReadMessage(ReplicaSelection);
+            break;
+          }
+          case 16: {
+            NodeCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ProcessingUnits = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Autoscaling configuration for an instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutoscalingConfig : pb::IMessage<AutoscalingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingConfig> _parser = new pb::MessageParser<AutoscalingConfig>(() => new AutoscalingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoscalingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig(AutoscalingConfig other) : this() {
+      autoscalingLimits_ = other.autoscalingLimits_ != null ? other.autoscalingLimits_.Clone() : null;
+      autoscalingTargets_ = other.autoscalingTargets_ != null ? other.autoscalingTargets_.Clone() : null;
+      asymmetricAutoscalingOptions_ = other.asymmetricAutoscalingOptions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig Clone() {
+      return new AutoscalingConfig(this);
+    }
+
+    /// <summary>Field number for the "autoscaling_limits" field.</summary>
+    public const int AutoscalingLimitsFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits autoscalingLimits_;
+    /// <summary>
+    /// Required. Autoscaling limits for an instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits AutoscalingLimits {
+      get { return autoscalingLimits_; }
+      set {
+        autoscalingLimits_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "autoscaling_targets" field.</summary>
+    public const int AutoscalingTargetsFieldNumber = 2;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets autoscalingTargets_;
+    /// <summary>
+    /// Required. The autoscaling targets for an instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets AutoscalingTargets {
+      get { return autoscalingTargets_; }
+      set {
+        autoscalingTargets_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asymmetric_autoscaling_options" field.</summary>
+    public const int AsymmetricAutoscalingOptionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption> _repeated_asymmetricAutoscalingOptions_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption> asymmetricAutoscalingOptions_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption>();
+    /// <summary>
+    /// Optional. Optional asymmetric autoscaling options.
+    /// Replicas matching the replica selection criteria will be autoscaled
+    /// independently from other replicas. The autoscaler will scale the replicas
+    /// based on the utilization of replicas identified by the replica selection.
+    /// Replica selections should not overlap with each other.
+    ///
+    /// Other replicas (those do not match any replica selection) will be
+    /// autoscaled together and will have the same compute capacity allocated to
+    /// them.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption> AsymmetricAutoscalingOptions {
+      get { return asymmetricAutoscalingOptions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoscalingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AutoscalingLimits, other.AutoscalingLimits)) return false;
+      if (!object.Equals(AutoscalingTargets, other.AutoscalingTargets)) return false;
+      if(!asymmetricAutoscalingOptions_.Equals(other.asymmetricAutoscalingOptions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (autoscalingLimits_ != null) hash ^= AutoscalingLimits.GetHashCode();
+      if (autoscalingTargets_ != null) hash ^= AutoscalingTargets.GetHashCode();
+      hash ^= asymmetricAutoscalingOptions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (autoscalingLimits_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AutoscalingTargets);
+      }
+      asymmetricAutoscalingOptions_.WriteTo(output, _repeated_asymmetricAutoscalingOptions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (autoscalingLimits_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AutoscalingTargets);
+      }
+      asymmetricAutoscalingOptions_.WriteTo(ref output, _repeated_asymmetricAutoscalingOptions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (autoscalingLimits_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingTargets);
+      }
+      size += asymmetricAutoscalingOptions_.CalculateSize(_repeated_asymmetricAutoscalingOptions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoscalingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.autoscalingLimits_ != null) {
+        if (autoscalingLimits_ == null) {
+          AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+        }
+        AutoscalingLimits.MergeFrom(other.AutoscalingLimits);
+      }
+      if (other.autoscalingTargets_ != null) {
+        if (autoscalingTargets_ == null) {
+          AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+        }
+        AutoscalingTargets.MergeFrom(other.AutoscalingTargets);
+      }
+      asymmetricAutoscalingOptions_.Add(other.asymmetricAutoscalingOptions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (autoscalingLimits_ == null) {
+              AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+            }
+            input.ReadMessage(AutoscalingLimits);
+            break;
+          }
+          case 18: {
+            if (autoscalingTargets_ == null) {
+              AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+            }
+            input.ReadMessage(AutoscalingTargets);
+            break;
+          }
+          case 26: {
+            asymmetricAutoscalingOptions_.AddEntriesFrom(input, _repeated_asymmetricAutoscalingOptions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (autoscalingLimits_ == null) {
+              AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+            }
+            input.ReadMessage(AutoscalingLimits);
+            break;
+          }
+          case 18: {
+            if (autoscalingTargets_ == null) {
+              AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+            }
+            input.ReadMessage(AutoscalingTargets);
+            break;
+          }
+          case 26: {
+            asymmetricAutoscalingOptions_.AddEntriesFrom(ref input, _repeated_asymmetricAutoscalingOptions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutoscalingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The autoscaling limits for the instance. Users can define the minimum and
+      /// maximum compute capacity allocated to the instance, and the autoscaler will
+      /// only scale within that range. Users can either use nodes or processing
+      /// units to specify the limits, but should use the same unit to set both the
+      /// min_limit and max_limit.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AutoscalingLimits : pb::IMessage<AutoscalingLimits>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutoscalingLimits> _parser = new pb::MessageParser<AutoscalingLimits>(() => new AutoscalingLimits());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutoscalingLimits> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits(AutoscalingLimits other) : this() {
+          switch (other.MinLimitCase) {
+            case MinLimitOneofCase.MinNodes:
+              MinNodes = other.MinNodes;
+              break;
+            case MinLimitOneofCase.MinProcessingUnits:
+              MinProcessingUnits = other.MinProcessingUnits;
+              break;
+          }
+
+          switch (other.MaxLimitCase) {
+            case MaxLimitOneofCase.MaxNodes:
+              MaxNodes = other.MaxNodes;
+              break;
+            case MaxLimitOneofCase.MaxProcessingUnits:
+              MaxProcessingUnits = other.MaxProcessingUnits;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits Clone() {
+          return new AutoscalingLimits(this);
+        }
+
+        /// <summary>Field number for the "min_nodes" field.</summary>
+        public const int MinNodesFieldNumber = 1;
+        /// <summary>
+        /// Minimum number of nodes allocated to the instance. If set, this number
+        /// should be greater than or equal to 1.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinNodes {
+          get { return HasMinNodes ? (int) minLimit_ : 0; }
+          set {
+            minLimit_ = value;
+            minLimitCase_ = MinLimitOneofCase.MinNodes;
+          }
+        }
+        /// <summary>Gets whether the "min_nodes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinNodes {
+          get { return minLimitCase_ == MinLimitOneofCase.MinNodes; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "min_nodes" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinNodes() {
+          if (HasMinNodes) {
+            ClearMinLimit();
+          }
+        }
+
+        /// <summary>Field number for the "min_processing_units" field.</summary>
+        public const int MinProcessingUnitsFieldNumber = 2;
+        /// <summary>
+        /// Minimum number of processing units allocated to the instance. If set,
+        /// this number should be multiples of 1000.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinProcessingUnits {
+          get { return HasMinProcessingUnits ? (int) minLimit_ : 0; }
+          set {
+            minLimit_ = value;
+            minLimitCase_ = MinLimitOneofCase.MinProcessingUnits;
+          }
+        }
+        /// <summary>Gets whether the "min_processing_units" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinProcessingUnits {
+          get { return minLimitCase_ == MinLimitOneofCase.MinProcessingUnits; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "min_processing_units" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinProcessingUnits() {
+          if (HasMinProcessingUnits) {
+            ClearMinLimit();
+          }
+        }
+
+        /// <summary>Field number for the "max_nodes" field.</summary>
+        public const int MaxNodesFieldNumber = 3;
+        /// <summary>
+        /// Maximum number of nodes allocated to the instance. If set, this number
+        /// should be greater than or equal to min_nodes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxNodes {
+          get { return HasMaxNodes ? (int) maxLimit_ : 0; }
+          set {
+            maxLimit_ = value;
+            maxLimitCase_ = MaxLimitOneofCase.MaxNodes;
+          }
+        }
+        /// <summary>Gets whether the "max_nodes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxNodes {
+          get { return maxLimitCase_ == MaxLimitOneofCase.MaxNodes; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "max_nodes" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxNodes() {
+          if (HasMaxNodes) {
+            ClearMaxLimit();
+          }
+        }
+
+        /// <summary>Field number for the "max_processing_units" field.</summary>
+        public const int MaxProcessingUnitsFieldNumber = 4;
+        /// <summary>
+        /// Maximum number of processing units allocated to the instance. If set,
+        /// this number should be multiples of 1000 and be greater than or equal to
+        /// min_processing_units.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxProcessingUnits {
+          get { return HasMaxProcessingUnits ? (int) maxLimit_ : 0; }
+          set {
+            maxLimit_ = value;
+            maxLimitCase_ = MaxLimitOneofCase.MaxProcessingUnits;
+          }
+        }
+        /// <summary>Gets whether the "max_processing_units" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxProcessingUnits {
+          get { return maxLimitCase_ == MaxLimitOneofCase.MaxProcessingUnits; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "max_processing_units" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxProcessingUnits() {
+          if (HasMaxProcessingUnits) {
+            ClearMaxLimit();
+          }
+        }
+
+        private object minLimit_;
+        /// <summary>Enum of possible cases for the "min_limit" oneof.</summary>
+        public enum MinLimitOneofCase {
+          None = 0,
+          MinNodes = 1,
+          MinProcessingUnits = 2,
+        }
+        private MinLimitOneofCase minLimitCase_ = MinLimitOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MinLimitOneofCase MinLimitCase {
+          get { return minLimitCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinLimit() {
+          minLimitCase_ = MinLimitOneofCase.None;
+          minLimit_ = null;
+        }
+
+        private object maxLimit_;
+        /// <summary>Enum of possible cases for the "max_limit" oneof.</summary>
+        public enum MaxLimitOneofCase {
+          None = 0,
+          MaxNodes = 3,
+          MaxProcessingUnits = 4,
+        }
+        private MaxLimitOneofCase maxLimitCase_ = MaxLimitOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaxLimitOneofCase MaxLimitCase {
+          get { return maxLimitCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxLimit() {
+          maxLimitCase_ = MaxLimitOneofCase.None;
+          maxLimit_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutoscalingLimits);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutoscalingLimits other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MinNodes != other.MinNodes) return false;
+          if (MinProcessingUnits != other.MinProcessingUnits) return false;
+          if (MaxNodes != other.MaxNodes) return false;
+          if (MaxProcessingUnits != other.MaxProcessingUnits) return false;
+          if (MinLimitCase != other.MinLimitCase) return false;
+          if (MaxLimitCase != other.MaxLimitCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasMinNodes) hash ^= MinNodes.GetHashCode();
+          if (HasMinProcessingUnits) hash ^= MinProcessingUnits.GetHashCode();
+          if (HasMaxNodes) hash ^= MaxNodes.GetHashCode();
+          if (HasMaxProcessingUnits) hash ^= MaxProcessingUnits.GetHashCode();
+          hash ^= (int) minLimitCase_;
+          hash ^= (int) maxLimitCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasMinNodes) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            output.WriteRawTag(32);
+            output.WriteInt32(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasMinNodes) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            output.WriteRawTag(32);
+            output.WriteInt32(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasMinNodes) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutoscalingLimits other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.MinLimitCase) {
+            case MinLimitOneofCase.MinNodes:
+              MinNodes = other.MinNodes;
+              break;
+            case MinLimitOneofCase.MinProcessingUnits:
+              MinProcessingUnits = other.MinProcessingUnits;
+              break;
+          }
+
+          switch (other.MaxLimitCase) {
+            case MaxLimitOneofCase.MaxNodes:
+              MaxNodes = other.MaxNodes;
+              break;
+            case MaxLimitOneofCase.MaxProcessingUnits:
+              MaxProcessingUnits = other.MaxProcessingUnits;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MinNodes = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MinProcessingUnits = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodes = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                MaxProcessingUnits = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MinNodes = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MinProcessingUnits = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodes = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                MaxProcessingUnits = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The autoscaling targets for an instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AutoscalingTargets : pb::IMessage<AutoscalingTargets>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutoscalingTargets> _parser = new pb::MessageParser<AutoscalingTargets>(() => new AutoscalingTargets());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutoscalingTargets> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets(AutoscalingTargets other) : this() {
+          highPriorityCpuUtilizationPercent_ = other.highPriorityCpuUtilizationPercent_;
+          storageUtilizationPercent_ = other.storageUtilizationPercent_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets Clone() {
+          return new AutoscalingTargets(this);
+        }
+
+        /// <summary>Field number for the "high_priority_cpu_utilization_percent" field.</summary>
+        public const int HighPriorityCpuUtilizationPercentFieldNumber = 1;
+        private int highPriorityCpuUtilizationPercent_;
+        /// <summary>
+        /// Required. The target high priority cpu utilization percentage that the
+        /// autoscaler should be trying to achieve for the instance. This number is
+        /// on a scale from 0 (no utilization) to 100 (full utilization). The valid
+        /// range is [10, 90] inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int HighPriorityCpuUtilizationPercent {
+          get { return highPriorityCpuUtilizationPercent_; }
+          set {
+            highPriorityCpuUtilizationPercent_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "storage_utilization_percent" field.</summary>
+        public const int StorageUtilizationPercentFieldNumber = 2;
+        private int storageUtilizationPercent_;
+        /// <summary>
+        /// Required. The target storage utilization percentage that the autoscaler
+        /// should be trying to achieve for the instance. This number is on a scale
+        /// from 0 (no utilization) to 100 (full utilization). The valid range is
+        /// [10, 99] inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int StorageUtilizationPercent {
+          get { return storageUtilizationPercent_; }
+          set {
+            storageUtilizationPercent_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutoscalingTargets);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutoscalingTargets other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (HighPriorityCpuUtilizationPercent != other.HighPriorityCpuUtilizationPercent) return false;
+          if (StorageUtilizationPercent != other.StorageUtilizationPercent) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HighPriorityCpuUtilizationPercent != 0) hash ^= HighPriorityCpuUtilizationPercent.GetHashCode();
+          if (StorageUtilizationPercent != 0) hash ^= StorageUtilizationPercent.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutoscalingTargets other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HighPriorityCpuUtilizationPercent != 0) {
+            HighPriorityCpuUtilizationPercent = other.HighPriorityCpuUtilizationPercent;
+          }
+          if (other.StorageUtilizationPercent != 0) {
+            StorageUtilizationPercent = other.StorageUtilizationPercent;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                HighPriorityCpuUtilizationPercent = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                StorageUtilizationPercent = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                HighPriorityCpuUtilizationPercent = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                StorageUtilizationPercent = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// AsymmetricAutoscalingOption specifies the scaling of replicas identified by
+      /// the given selection.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AsymmetricAutoscalingOption : pb::IMessage<AsymmetricAutoscalingOption>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AsymmetricAutoscalingOption> _parser = new pb::MessageParser<AsymmetricAutoscalingOption>(() => new AsymmetricAutoscalingOption());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AsymmetricAutoscalingOption> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AsymmetricAutoscalingOption() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AsymmetricAutoscalingOption(AsymmetricAutoscalingOption other) : this() {
+          replicaSelection_ = other.replicaSelection_ != null ? other.replicaSelection_.Clone() : null;
+          overrides_ = other.overrides_ != null ? other.overrides_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AsymmetricAutoscalingOption Clone() {
+          return new AsymmetricAutoscalingOption(this);
+        }
+
+        /// <summary>Field number for the "replica_selection" field.</summary>
+        public const int ReplicaSelectionFieldNumber = 1;
+        private global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection replicaSelection_;
+        /// <summary>
+        /// Required. Selects the replicas to which this AsymmetricAutoscalingOption
+        /// applies. Only read-only replicas are supported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection ReplicaSelection {
+          get { return replicaSelection_; }
+          set {
+            replicaSelection_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "overrides" field.</summary>
+        public const int OverridesFieldNumber = 2;
+        private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides overrides_;
+        /// <summary>
+        /// Optional. Overrides applied to the top-level autoscaling configuration
+        /// for the selected replicas.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides Overrides {
+          get { return overrides_; }
+          set {
+            overrides_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AsymmetricAutoscalingOption);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AsymmetricAutoscalingOption other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ReplicaSelection, other.ReplicaSelection)) return false;
+          if (!object.Equals(Overrides, other.Overrides)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (replicaSelection_ != null) hash ^= ReplicaSelection.GetHashCode();
+          if (overrides_ != null) hash ^= Overrides.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (replicaSelection_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ReplicaSelection);
+          }
+          if (overrides_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Overrides);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (replicaSelection_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ReplicaSelection);
+          }
+          if (overrides_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Overrides);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (replicaSelection_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplicaSelection);
+          }
+          if (overrides_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overrides);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AsymmetricAutoscalingOption other) {
+          if (other == null) {
+            return;
+          }
+          if (other.replicaSelection_ != null) {
+            if (replicaSelection_ == null) {
+              ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+            }
+            ReplicaSelection.MergeFrom(other.ReplicaSelection);
+          }
+          if (other.overrides_ != null) {
+            if (overrides_ == null) {
+              Overrides = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides();
+            }
+            Overrides.MergeFrom(other.Overrides);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (replicaSelection_ == null) {
+                  ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+                }
+                input.ReadMessage(ReplicaSelection);
+                break;
+              }
+              case 18: {
+                if (overrides_ == null) {
+                  Overrides = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides();
+                }
+                input.ReadMessage(Overrides);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (replicaSelection_ == null) {
+                  ReplicaSelection = new global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection();
+                }
+                input.ReadMessage(ReplicaSelection);
+                break;
+              }
+              case 18: {
+                if (overrides_ == null) {
+                  Overrides = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Types.AutoscalingConfigOverrides();
+                }
+                input.ReadMessage(Overrides);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the AsymmetricAutoscalingOption message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Overrides the top-level autoscaling configuration for the replicas
+          /// identified by `replica_selection`. All fields in this message are
+          /// optional. Any unspecified fields will use the corresponding values from
+          /// the top-level autoscaling configuration.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class AutoscalingConfigOverrides : pb::IMessage<AutoscalingConfigOverrides>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<AutoscalingConfigOverrides> _parser = new pb::MessageParser<AutoscalingConfigOverrides>(() => new AutoscalingConfigOverrides());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<AutoscalingConfigOverrides> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AsymmetricAutoscalingOption.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AutoscalingConfigOverrides() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AutoscalingConfigOverrides(AutoscalingConfigOverrides other) : this() {
+              autoscalingLimits_ = other.autoscalingLimits_ != null ? other.autoscalingLimits_.Clone() : null;
+              autoscalingTargetHighPriorityCpuUtilizationPercent_ = other.autoscalingTargetHighPriorityCpuUtilizationPercent_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AutoscalingConfigOverrides Clone() {
+              return new AutoscalingConfigOverrides(this);
+            }
+
+            /// <summary>Field number for the "autoscaling_limits" field.</summary>
+            public const int AutoscalingLimitsFieldNumber = 1;
+            private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits autoscalingLimits_;
+            /// <summary>
+            /// Optional. If specified, overrides the min/max limit in the top-level
+            /// autoscaling configuration for the selected replicas.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits AutoscalingLimits {
+              get { return autoscalingLimits_; }
+              set {
+                autoscalingLimits_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "autoscaling_target_high_priority_cpu_utilization_percent" field.</summary>
+            public const int AutoscalingTargetHighPriorityCpuUtilizationPercentFieldNumber = 2;
+            private int autoscalingTargetHighPriorityCpuUtilizationPercent_;
+            /// <summary>
+            /// Optional. If specified, overrides the autoscaling target
+            /// high_priority_cpu_utilization_percent in the top-level autoscaling
+            /// configuration for the selected replicas.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int AutoscalingTargetHighPriorityCpuUtilizationPercent {
+              get { return autoscalingTargetHighPriorityCpuUtilizationPercent_; }
+              set {
+                autoscalingTargetHighPriorityCpuUtilizationPercent_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as AutoscalingConfigOverrides);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(AutoscalingConfigOverrides other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(AutoscalingLimits, other.AutoscalingLimits)) return false;
+              if (AutoscalingTargetHighPriorityCpuUtilizationPercent != other.AutoscalingTargetHighPriorityCpuUtilizationPercent) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (autoscalingLimits_ != null) hash ^= AutoscalingLimits.GetHashCode();
+              if (AutoscalingTargetHighPriorityCpuUtilizationPercent != 0) hash ^= AutoscalingTargetHighPriorityCpuUtilizationPercent.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (autoscalingLimits_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(AutoscalingLimits);
+              }
+              if (AutoscalingTargetHighPriorityCpuUtilizationPercent != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(AutoscalingTargetHighPriorityCpuUtilizationPercent);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (autoscalingLimits_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(AutoscalingLimits);
+              }
+              if (AutoscalingTargetHighPriorityCpuUtilizationPercent != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(AutoscalingTargetHighPriorityCpuUtilizationPercent);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (autoscalingLimits_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingLimits);
+              }
+              if (AutoscalingTargetHighPriorityCpuUtilizationPercent != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(AutoscalingTargetHighPriorityCpuUtilizationPercent);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(AutoscalingConfigOverrides other) {
+              if (other == null) {
+                return;
+              }
+              if (other.autoscalingLimits_ != null) {
+                if (autoscalingLimits_ == null) {
+                  AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+                }
+                AutoscalingLimits.MergeFrom(other.AutoscalingLimits);
+              }
+              if (other.AutoscalingTargetHighPriorityCpuUtilizationPercent != 0) {
+                AutoscalingTargetHighPriorityCpuUtilizationPercent = other.AutoscalingTargetHighPriorityCpuUtilizationPercent;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (autoscalingLimits_ == null) {
+                      AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+                    }
+                    input.ReadMessage(AutoscalingLimits);
+                    break;
+                  }
+                  case 16: {
+                    AutoscalingTargetHighPriorityCpuUtilizationPercent = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (autoscalingLimits_ == null) {
+                      AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+                    }
+                    input.ReadMessage(AutoscalingLimits);
+                    break;
+                  }
+                  case 16: {
+                    AutoscalingTargetHighPriorityCpuUtilizationPercent = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
       }
 
     }
@@ -1207,6 +3457,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// <summary>
   /// An isolated set of Cloud Spanner resources on which databases can be hosted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1221,7 +3472,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1246,11 +3497,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       displayName_ = other.displayName_;
       nodeCount_ = other.nodeCount_;
       processingUnits_ = other.processingUnits_;
+      replicaComputeCapacity_ = other.replicaComputeCapacity_.Clone();
+      autoscalingConfig_ = other.autoscalingConfig_ != null ? other.autoscalingConfig_.Clone() : null;
       state_ = other.state_;
       labels_ = other.labels_.Clone();
+      instanceType_ = other.instanceType_;
       endpointUris_ = other.endpointUris_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      freeInstanceMetadata_ = other.freeInstanceMetadata_ != null ? other.freeInstanceMetadata_.Clone() : null;
+      edition_ = other.edition_;
+      defaultBackupScheduleType_ = other.defaultBackupScheduleType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1316,14 +3573,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int NodeCountFieldNumber = 5;
     private int nodeCount_;
     /// <summary>
-    /// The number of nodes allocated to this instance. At most one of either
-    /// node_count or processing_units should be present in the message. This
-    /// may be zero in API responses for instances that are not yet in state
-    /// `READY`.
+    /// The number of nodes allocated to this instance. At most, one of either
+    /// `node_count` or `processing_units` should be present in the message.
     ///
-    /// See [the
-    /// documentation](https://cloud.google.com/spanner/docs/compute-capacity)
-    /// for more information about nodes and processing units.
+    /// Users can set the `node_count` field to specify the target number of nodes
+    /// allocated to the instance.
+    ///
+    /// If autoscaling is enabled, `node_count` is treated as an `OUTPUT_ONLY`
+    /// field and reflects the current number of nodes allocated to the instance.
+    ///
+    /// This might be zero in API responses for instances that are not yet in the
+    /// `READY` state.
+    ///
+    /// For more information, see
+    /// [Compute capacity, nodes, and processing
+    /// units](https://cloud.google.com/spanner/docs/compute-capacity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1338,13 +3602,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int ProcessingUnitsFieldNumber = 9;
     private int processingUnits_;
     /// <summary>
-    /// The number of processing units allocated to this instance. At most one of
-    /// processing_units or node_count should be present in the message. This may
-    /// be zero in API responses for instances that are not yet in state `READY`.
+    /// The number of processing units allocated to this instance. At most, one of
+    /// either `processing_units` or `node_count` should be present in the message.
     ///
-    /// See [the
-    /// documentation](https://cloud.google.com/spanner/docs/compute-capacity)
-    /// for more information about nodes and processing units.
+    /// Users can set the `processing_units` field to specify the target number of
+    /// processing units allocated to the instance.
+    ///
+    /// If autoscaling is enabled, `processing_units` is treated as an
+    /// `OUTPUT_ONLY` field and reflects the current number of processing units
+    /// allocated to the instance.
+    ///
+    /// This might be zero in API responses for instances that are not yet in the
+    /// `READY` state.
+    ///
+    /// For more information, see
+    /// [Compute capacity, nodes and processing
+    /// units](https://cloud.google.com/spanner/docs/compute-capacity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1352,6 +3625,40 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       get { return processingUnits_; }
       set {
         processingUnits_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "replica_compute_capacity" field.</summary>
+    public const int ReplicaComputeCapacityFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity> _repeated_replicaComputeCapacity_codec
+        = pb::FieldCodec.ForMessage(154, global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity> replicaComputeCapacity_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity>();
+    /// <summary>
+    /// Output only. Lists the compute capacity per ReplicaSelection. A replica
+    /// selection identifies a set of replicas with common properties. Replicas
+    /// identified by a ReplicaSelection are scaled with the same compute capacity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaComputeCapacity> ReplicaComputeCapacity {
+      get { return replicaComputeCapacity_; }
+    }
+
+    /// <summary>Field number for the "autoscaling_config" field.</summary>
+    public const int AutoscalingConfigFieldNumber = 17;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig autoscalingConfig_;
+    /// <summary>
+    /// Optional. The autoscaling configuration. Autoscaling is enabled if this
+    /// field is set. When autoscaling is enabled, node_count and processing_units
+    /// are treated as OUTPUT_ONLY fields and reflect the current compute capacity
+    /// allocated to the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig AutoscalingConfig {
+      get { return autoscalingConfig_; }
+      set {
+        autoscalingConfig_ = value;
       }
     }
 
@@ -1408,6 +3715,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "instance_type" field.</summary>
+    public const int InstanceTypeFieldNumber = 10;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType instanceType_ = global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified;
+    /// <summary>
+    /// The `InstanceType` of the current instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType InstanceType {
+      get { return instanceType_; }
+      set {
+        instanceType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "endpoint_uris" field.</summary>
     public const int EndpointUrisFieldNumber = 8;
     private static readonly pb::FieldCodec<string> _repeated_endpointUris_codec
@@ -1452,6 +3774,60 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "free_instance_metadata" field.</summary>
+    public const int FreeInstanceMetadataFieldNumber = 13;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata freeInstanceMetadata_;
+    /// <summary>
+    /// Free instance metadata. Only populated for free instances.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata FreeInstanceMetadata {
+      get { return freeInstanceMetadata_; }
+      set {
+        freeInstanceMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "edition" field.</summary>
+    public const int EditionFieldNumber = 20;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition edition_ = global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified;
+    /// <summary>
+    /// Optional. The `Edition` of the current instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition Edition {
+      get { return edition_; }
+      set {
+        edition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_backup_schedule_type" field.</summary>
+    public const int DefaultBackupScheduleTypeFieldNumber = 23;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType defaultBackupScheduleType_ = global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified;
+    /// <summary>
+    /// Optional. Controls the default backup schedule behavior for new databases
+    /// within the instance. By default, a backup schedule is created automatically
+    /// when a new database is created in a new instance.
+    ///
+    /// Note that the `AUTOMATIC` value isn't permitted for free instances,
+    /// as backups and backup schedules aren't supported for free instances.
+    ///
+    /// In the `GetInstance` or `ListInstances` response, if the value of
+    /// `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner doesn't
+    /// create a default backup schedule for new databases in the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType DefaultBackupScheduleType {
+      get { return defaultBackupScheduleType_; }
+      set {
+        defaultBackupScheduleType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1472,11 +3848,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (NodeCount != other.NodeCount) return false;
       if (ProcessingUnits != other.ProcessingUnits) return false;
+      if(!replicaComputeCapacity_.Equals(other.replicaComputeCapacity_)) return false;
+      if (!object.Equals(AutoscalingConfig, other.AutoscalingConfig)) return false;
       if (State != other.State) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (InstanceType != other.InstanceType) return false;
       if(!endpointUris_.Equals(other.endpointUris_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(FreeInstanceMetadata, other.FreeInstanceMetadata)) return false;
+      if (Edition != other.Edition) return false;
+      if (DefaultBackupScheduleType != other.DefaultBackupScheduleType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1489,11 +3871,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (NodeCount != 0) hash ^= NodeCount.GetHashCode();
       if (ProcessingUnits != 0) hash ^= ProcessingUnits.GetHashCode();
+      hash ^= replicaComputeCapacity_.GetHashCode();
+      if (autoscalingConfig_ != null) hash ^= AutoscalingConfig.GetHashCode();
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (InstanceType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified) hash ^= InstanceType.GetHashCode();
       hash ^= endpointUris_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (freeInstanceMetadata_ != null) hash ^= FreeInstanceMetadata.GetHashCode();
+      if (Edition != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified) hash ^= Edition.GetHashCode();
+      if (DefaultBackupScheduleType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified) hash ^= DefaultBackupScheduleType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1538,6 +3926,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(72);
         output.WriteInt32(ProcessingUnits);
       }
+      if (InstanceType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) InstanceType);
+      }
       if (createTime_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(CreateTime);
@@ -1545,6 +3937,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (updateTime_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(UpdateTime);
+      }
+      if (freeInstanceMetadata_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FreeInstanceMetadata);
+      }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
+      replicaComputeCapacity_.WriteTo(output, _repeated_replicaComputeCapacity_codec);
+      if (Edition != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) Edition);
+      }
+      if (DefaultBackupScheduleType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified) {
+        output.WriteRawTag(184, 1);
+        output.WriteEnum((int) DefaultBackupScheduleType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1582,6 +3991,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(72);
         output.WriteInt32(ProcessingUnits);
       }
+      if (InstanceType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) InstanceType);
+      }
       if (createTime_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(CreateTime);
@@ -1589,6 +4002,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (updateTime_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(UpdateTime);
+      }
+      if (freeInstanceMetadata_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FreeInstanceMetadata);
+      }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
+      replicaComputeCapacity_.WriteTo(ref output, _repeated_replicaComputeCapacity_codec);
+      if (Edition != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) Edition);
+      }
+      if (DefaultBackupScheduleType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified) {
+        output.WriteRawTag(184, 1);
+        output.WriteEnum((int) DefaultBackupScheduleType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1615,16 +4045,32 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (ProcessingUnits != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcessingUnits);
       }
+      size += replicaComputeCapacity_.CalculateSize(_repeated_replicaComputeCapacity_codec);
+      if (autoscalingConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingConfig);
+      }
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (InstanceType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InstanceType);
+      }
       size += endpointUris_.CalculateSize(_repeated_endpointUris_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (freeInstanceMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FreeInstanceMetadata);
+      }
+      if (Edition != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Edition);
+      }
+      if (DefaultBackupScheduleType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultBackupScheduleType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1653,10 +4099,20 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.ProcessingUnits != 0) {
         ProcessingUnits = other.ProcessingUnits;
       }
+      replicaComputeCapacity_.Add(other.replicaComputeCapacity_);
+      if (other.autoscalingConfig_ != null) {
+        if (autoscalingConfig_ == null) {
+          AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+        }
+        AutoscalingConfig.MergeFrom(other.AutoscalingConfig);
+      }
       if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
+      if (other.InstanceType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType.Unspecified) {
+        InstanceType = other.InstanceType;
+      }
       endpointUris_.Add(other.endpointUris_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -1669,6 +4125,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.freeInstanceMetadata_ != null) {
+        if (freeInstanceMetadata_ == null) {
+          FreeInstanceMetadata = new global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata();
+        }
+        FreeInstanceMetadata.MergeFrom(other.FreeInstanceMetadata);
+      }
+      if (other.Edition != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition.Unspecified) {
+        Edition = other.Edition;
+      }
+      if (other.DefaultBackupScheduleType != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType.Unspecified) {
+        DefaultBackupScheduleType = other.DefaultBackupScheduleType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1717,6 +4185,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             ProcessingUnits = input.ReadInt32();
             break;
           }
+          case 80: {
+            InstanceType = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType) input.ReadEnum();
+            break;
+          }
           case 90: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -1729,6 +4201,32 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            if (freeInstanceMetadata_ == null) {
+              FreeInstanceMetadata = new global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata();
+            }
+            input.ReadMessage(FreeInstanceMetadata);
+            break;
+          }
+          case 138: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
+          case 154: {
+            replicaComputeCapacity_.AddEntriesFrom(input, _repeated_replicaComputeCapacity_codec);
+            break;
+          }
+          case 160: {
+            Edition = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition) input.ReadEnum();
+            break;
+          }
+          case 184: {
+            DefaultBackupScheduleType = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType) input.ReadEnum();
             break;
           }
         }
@@ -1778,6 +4276,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             ProcessingUnits = input.ReadInt32();
             break;
           }
+          case 80: {
+            InstanceType = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.InstanceType) input.ReadEnum();
+            break;
+          }
           case 90: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -1790,6 +4292,32 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            if (freeInstanceMetadata_ == null) {
+              FreeInstanceMetadata = new global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata();
+            }
+            input.ReadMessage(FreeInstanceMetadata);
+            break;
+          }
+          case 138: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
+          case 154: {
+            replicaComputeCapacity_.AddEntriesFrom(ref input, _repeated_replicaComputeCapacity_codec);
+            break;
+          }
+          case 160: {
+            Edition = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.Edition) input.ReadEnum();
+            break;
+          }
+          case 184: {
+            DefaultBackupScheduleType = (global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.DefaultBackupScheduleType) input.ReadEnum();
             break;
           }
         }
@@ -1823,6 +4351,78 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         [pbr::OriginalName("READY")] Ready = 2,
       }
 
+      /// <summary>
+      /// The type of this instance. The type can be used to distinguish product
+      /// variants, that can affect aspects like: usage restrictions, quotas and
+      /// billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED
+      /// instances.
+      /// </summary>
+      public enum InstanceType {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Provisioned instances have dedicated resources, standard usage limits and
+        /// support.
+        /// </summary>
+        [pbr::OriginalName("PROVISIONED")] Provisioned = 1,
+        /// <summary>
+        /// Free instances provide no guarantee for dedicated resources,
+        /// [node_count, processing_units] should be 0. They come
+        /// with stricter usage limits and limited support.
+        /// </summary>
+        [pbr::OriginalName("FREE_INSTANCE")] FreeInstance = 2,
+      }
+
+      /// <summary>
+      /// The edition selected for this instance. Different editions provide
+      /// different capabilities at different price points.
+      /// </summary>
+      public enum Edition {
+        /// <summary>
+        /// Edition not specified.
+        /// </summary>
+        [pbr::OriginalName("EDITION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Standard edition.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Enterprise edition.
+        /// </summary>
+        [pbr::OriginalName("ENTERPRISE")] Enterprise = 2,
+        /// <summary>
+        /// Enterprise Plus edition.
+        /// </summary>
+        [pbr::OriginalName("ENTERPRISE_PLUS")] EnterprisePlus = 3,
+      }
+
+      /// <summary>
+      /// Indicates the
+      /// [default backup
+      /// schedule](https://cloud.google.com/spanner/docs/backup#default-backup-schedules)
+      /// behavior for new databases within the instance.
+      /// </summary>
+      public enum DefaultBackupScheduleType {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("DEFAULT_BACKUP_SCHEDULE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A default backup schedule isn't created automatically when a new database
+        /// is created in the instance.
+        /// </summary>
+        [pbr::OriginalName("NONE")] None = 1,
+        /// <summary>
+        /// A default backup schedule is created automatically when a new database
+        /// is created in the instance. The default backup schedule creates a full
+        /// backup every 24 hours. These full backups are retained for 7 days.
+        /// You can edit or delete the default backup schedule once it's created.
+        /// </summary>
+        [pbr::OriginalName("AUTOMATIC")] Automatic = 2,
+      }
+
     }
     #endregion
 
@@ -1832,6 +4432,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceConfigsRequest : pb::IMessage<ListInstanceConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1846,7 +4447,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2114,6 +4715,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The response for
   /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceConfigsResponse : pb::IMessage<ListInstanceConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2128,7 +4730,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2341,6 +4943,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [GetInstanceConfigRequest][google.spanner.admin.instance.v1.InstanceAdmin.GetInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceConfigRequest : pb::IMessage<GetInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2355,7 +4958,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2536,8 +5139,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
   /// <summary>
   /// The request for
-  /// [CreateInstanceConfigRequest][InstanceAdmin.CreateInstanceConfigRequest].
+  /// [CreateInstanceConfig][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceConfigRequest : pb::IMessage<CreateInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2552,7 +5156,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2589,8 +5193,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project in which to create the instance config.
-    /// Values are of the form `projects/&lt;project>`.
+    /// Required. The name of the project in which to create the instance
+    /// configuration. Values are of the form `projects/&lt;project>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2605,10 +5209,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int InstanceConfigIdFieldNumber = 2;
     private string instanceConfigId_ = "";
     /// <summary>
-    /// Required. The ID of the instance config to create.  Valid identifiers are
-    /// of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+    /// Required. The ID of the instance configuration to create. Valid identifiers
+    /// are of the form `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64
     /// characters in length. The `custom-` prefix is required to avoid name
-    /// conflicts with Google managed configurations.
+    /// conflicts with Google-managed configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2623,10 +5227,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int InstanceConfigFieldNumber = 3;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig instanceConfig_;
     /// <summary>
-    /// Required. The InstanceConfig proto of the configuration to create.
-    /// instance_config.name must be
+    /// Required. The `InstanceConfig` proto of the configuration to create.
+    /// `instance_config.name` must be
     /// `&lt;parent>/instanceConfigs/&lt;instance_config_id>`.
-    /// instance_config.base_config must be a Google managed configuration name,
+    /// `instance_config.base_config` must be a Google-managed configuration name,
     /// e.g. &lt;parent>/instanceConfigs/us-east1, &lt;parent>/instanceConfigs/nam3.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2870,8 +5474,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
   /// <summary>
   /// The request for
-  /// [UpdateInstanceConfigRequest][InstanceAdmin.UpdateInstanceConfigRequest].
+  /// [UpdateInstanceConfig][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceConfigRequest : pb::IMessage<UpdateInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2886,7 +5491,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2922,8 +5527,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int InstanceConfigFieldNumber = 1;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig instanceConfig_;
     /// <summary>
-    /// Required. The user instance config to update, which must always include the
-    /// instance config name. Otherwise, only fields mentioned in
+    /// Required. The user instance configuration to update, which must always
+    /// include the instance configuration name. Otherwise, only fields mentioned
+    /// in
     /// [update_mask][google.spanner.admin.instance.v1.UpdateInstanceConfigRequest.update_mask]
     /// need be included. To prevent conflicts of concurrent updates,
     /// [etag][google.spanner.admin.instance.v1.InstanceConfig.reconciling] can
@@ -3175,8 +5781,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
   /// <summary>
   /// The request for
-  /// [DeleteInstanceConfigRequest][InstanceAdmin.DeleteInstanceConfigRequest].
+  /// [DeleteInstanceConfig][google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceConfigRequest : pb::IMessage<DeleteInstanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3191,7 +5798,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3245,12 +5852,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string etag_ = "";
     /// <summary>
     /// Used for optimistic concurrency control as a way to help prevent
-    /// simultaneous deletes of an instance config from overwriting each
+    /// simultaneous deletes of an instance configuration from overwriting each
     /// other. If not empty, the API
-    /// only deletes the instance config when the etag provided matches the current
-    /// status of the requested instance config. Otherwise, deletes the instance
-    /// config without checking the current status of the requested instance
-    /// config.
+    /// only deletes the instance configuration when the etag provided matches the
+    /// current status of the requested instance configuration. Otherwise, deletes
+    /// the instance configuration without checking the current status of the
+    /// requested instance configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3462,6 +6069,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [ListInstanceConfigOperations][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceConfigOperationsRequest : pb::IMessage<ListInstanceConfigOperationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3476,7 +6084,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3513,7 +6121,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project of the instance config operations.
+    /// Required. The project of the instance configuration operations.
     /// Values are of the form `projects/&lt;project>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3537,8 +6145,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// must be one of: `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, or `:`.
     /// Colon `:` is the contains operator. Filter rules are not case sensitive.
     ///
-    /// The following fields in the [Operation][google.longrunning.Operation]
-    /// are eligible for filtering:
+    /// The following fields in the Operation are eligible for filtering:
     ///
     ///   * `name` - The name of the long-running operation
     ///   * `done` - False if the operation is in progress, else true.
@@ -3569,7 +6176,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     ///     `(error:*)` - Return operations where:
     ///     * The operation's metadata type is
     ///     [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-    ///     * The instance config name contains "custom-config".
+    ///     * The instance configuration name contains "custom-config".
     ///     * The operation started before 2021-03-28T14:50:00Z.
     ///     * The operation resulted in an error.
     /// </summary>
@@ -3826,6 +6433,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The response for
   /// [ListInstanceConfigOperations][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceConfigOperationsResponse : pb::IMessage<ListInstanceConfigOperationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3840,7 +6448,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3877,10 +6485,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.LongRunning.Operation.Parser);
     private readonly pbc::RepeatedField<global::Google.LongRunning.Operation> operations_ = new pbc::RepeatedField<global::Google.LongRunning.Operation>();
     /// <summary>
-    /// The list of matching instance config [long-running
-    /// operations][google.longrunning.Operation]. Each operation's name will be
-    /// prefixed by the instance config's name. The operation's
-    /// [metadata][google.longrunning.Operation.metadata] field type
+    /// The list of matching instance configuration long-running operations. Each
+    /// operation's name will be
+    /// prefixed by the name of the instance configuration. The operation's
+    /// metadata field type
     /// `metadata.type_url` describes the type of the metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4057,6 +6665,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [GetInstance][google.spanner.admin.instance.v1.InstanceAdmin.GetInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4071,7 +6680,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4306,6 +6915,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4320,7 +6930,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4595,6 +7205,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4609,7 +7220,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4633,6 +7244,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
+      instanceDeadline_ = other.instanceDeadline_ != null ? other.instanceDeadline_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4725,6 +7337,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "instance_deadline" field.</summary>
+    public const int InstanceDeadlineFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp instanceDeadline_;
+    /// <summary>
+    /// Deadline used while retrieving metadata for instances.
+    /// Instances whose metadata cannot be retrieved within this deadline will be
+    /// added to
+    /// [unreachable][google.spanner.admin.instance.v1.ListInstancesResponse.unreachable]
+    /// in
+    /// [ListInstancesResponse][google.spanner.admin.instance.v1.ListInstancesResponse].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InstanceDeadline {
+      get { return instanceDeadline_; }
+      set {
+        instanceDeadline_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4744,6 +7376,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
+      if (!object.Equals(InstanceDeadline, other.InstanceDeadline)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4755,6 +7388,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (instanceDeadline_ != null) hash ^= InstanceDeadline.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4789,6 +7423,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (instanceDeadline_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstanceDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4815,6 +7453,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (instanceDeadline_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstanceDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4836,6 +7478,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (instanceDeadline_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstanceDeadline);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4860,6 +7505,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.instanceDeadline_ != null) {
+        if (instanceDeadline_ == null) {
+          InstanceDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InstanceDeadline.MergeFrom(other.InstanceDeadline);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4890,6 +7541,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           }
           case 34: {
             Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (instanceDeadline_ == null) {
+              InstanceDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceDeadline);
             break;
           }
         }
@@ -4923,6 +7581,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             Filter = input.ReadString();
             break;
           }
+          case 42: {
+            if (instanceDeadline_ == null) {
+              InstanceDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceDeadline);
+            break;
+          }
         }
       }
     }
@@ -4934,6 +7599,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The response for
   /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4948,7 +7614,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4970,6 +7636,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public ListInstancesResponse(ListInstancesResponse other) : this() {
       instances_ = other.instances_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5010,6 +7677,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of unreachable instances.
+    /// It includes the names of instances whose metadata could not be retrieved
+    /// within
+    /// [instance_deadline][google.spanner.admin.instance.v1.ListInstancesRequest.instance_deadline].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5027,6 +7711,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if(!instances_.Equals(other.instances_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5036,6 +7721,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       int hash = 1;
       hash ^= instances_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5059,6 +7745,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5074,6 +7761,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5088,6 +7776,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5104,6 +7793,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5125,6 +7815,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -5150,6 +7844,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     }
@@ -5161,6 +7859,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5175,7 +7874,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5422,6 +8121,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// The request for
   /// [DeleteInstance][google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5436,7 +8136,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5619,6 +8319,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// Metadata type for the operation returned by
   /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceMetadata : pb::IMessage<CreateInstanceMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5633,7 +8334,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5657,6 +8358,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      expectedFulfillmentPeriod_ = other.expectedFulfillmentPeriod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5730,6 +8432,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "expected_fulfillment_period" field.</summary>
+    public const int ExpectedFulfillmentPeriodFieldNumber = 5;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod expectedFulfillmentPeriod_ = global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified;
+    /// <summary>
+    /// The expected fulfillment period of this create operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod ExpectedFulfillmentPeriod {
+      get { return expectedFulfillmentPeriod_; }
+      set {
+        expectedFulfillmentPeriod_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5749,6 +8466,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CancelTime, other.CancelTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ExpectedFulfillmentPeriod != other.ExpectedFulfillmentPeriod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5760,6 +8478,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) hash ^= ExpectedFulfillmentPeriod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5794,6 +8513,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5820,6 +8543,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5841,6 +8568,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedFulfillmentPeriod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5877,6 +8607,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        ExpectedFulfillmentPeriod = other.ExpectedFulfillmentPeriod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5919,6 +8652,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
             break;
           }
         }
@@ -5964,6 +8701,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -5975,6 +8716,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// Metadata type for the operation returned by
   /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceMetadata : pb::IMessage<UpdateInstanceMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5989,7 +8731,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6013,6 +8755,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      expectedFulfillmentPeriod_ = other.expectedFulfillmentPeriod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6086,6 +8829,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "expected_fulfillment_period" field.</summary>
+    public const int ExpectedFulfillmentPeriodFieldNumber = 5;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod expectedFulfillmentPeriod_ = global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified;
+    /// <summary>
+    /// The expected fulfillment period of this update operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod ExpectedFulfillmentPeriod {
+      get { return expectedFulfillmentPeriod_; }
+      set {
+        expectedFulfillmentPeriod_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6105,6 +8863,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CancelTime, other.CancelTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ExpectedFulfillmentPeriod != other.ExpectedFulfillmentPeriod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6116,6 +8875,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) hash ^= ExpectedFulfillmentPeriod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6150,6 +8910,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6176,6 +8940,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6197,6 +8965,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedFulfillmentPeriod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6233,6 +9004,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        ExpectedFulfillmentPeriod = other.ExpectedFulfillmentPeriod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6275,6 +9049,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
             break;
           }
         }
@@ -6320,6 +9098,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -6328,9 +9110,339 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
+  /// Free instance specific metadata that is kept even after an instance has been
+  /// upgraded for tracking purposes.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FreeInstanceMetadata : pb::IMessage<FreeInstanceMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FreeInstanceMetadata> _parser = new pb::MessageParser<FreeInstanceMetadata>(() => new FreeInstanceMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FreeInstanceMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FreeInstanceMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FreeInstanceMetadata(FreeInstanceMetadata other) : this() {
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      upgradeTime_ = other.upgradeTime_ != null ? other.upgradeTime_.Clone() : null;
+      expireBehavior_ = other.expireBehavior_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FreeInstanceMetadata Clone() {
+      return new FreeInstanceMetadata(this);
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. Timestamp after which the instance will either be upgraded or
+    /// scheduled for deletion after a grace period. ExpireBehavior is used to
+    /// choose between upgrading or scheduling the free instance for deletion. This
+    /// timestamp is set during the creation of a free instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "upgrade_time" field.</summary>
+    public const int UpgradeTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp upgradeTime_;
+    /// <summary>
+    /// Output only. If present, the timestamp at which the free instance was
+    /// upgraded to a provisioned instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpgradeTime {
+      get { return upgradeTime_; }
+      set {
+        upgradeTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_behavior" field.</summary>
+    public const int ExpireBehaviorFieldNumber = 3;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior expireBehavior_ = global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified;
+    /// <summary>
+    /// Specifies the expiration behavior of a free instance. The default of
+    /// ExpireBehavior is `REMOVE_AFTER_GRACE_PERIOD`. This can be modified during
+    /// or after creation, and before expiration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior ExpireBehavior {
+      get { return expireBehavior_; }
+      set {
+        expireBehavior_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FreeInstanceMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FreeInstanceMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!object.Equals(UpgradeTime, other.UpgradeTime)) return false;
+      if (ExpireBehavior != other.ExpireBehavior) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      if (upgradeTime_ != null) hash ^= UpgradeTime.GetHashCode();
+      if (ExpireBehavior != global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified) hash ^= ExpireBehavior.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (expireTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ExpireTime);
+      }
+      if (upgradeTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpgradeTime);
+      }
+      if (ExpireBehavior != global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ExpireBehavior);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (expireTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ExpireTime);
+      }
+      if (upgradeTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpgradeTime);
+      }
+      if (ExpireBehavior != global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ExpireBehavior);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (upgradeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpgradeTime);
+      }
+      if (ExpireBehavior != global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpireBehavior);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FreeInstanceMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      if (other.upgradeTime_ != null) {
+        if (upgradeTime_ == null) {
+          UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpgradeTime.MergeFrom(other.UpgradeTime);
+      }
+      if (other.ExpireBehavior != global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior.Unspecified) {
+        ExpireBehavior = other.ExpireBehavior;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 18: {
+            if (upgradeTime_ == null) {
+              UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpgradeTime);
+            break;
+          }
+          case 24: {
+            ExpireBehavior = (global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 18: {
+            if (upgradeTime_ == null) {
+              UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpgradeTime);
+            break;
+          }
+          case 24: {
+            ExpireBehavior = (global::Google.Cloud.Spanner.Admin.Instance.V1.FreeInstanceMetadata.Types.ExpireBehavior) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FreeInstanceMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Allows users to change behavior when a free instance expires.
+      /// </summary>
+      public enum ExpireBehavior {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("EXPIRE_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// When the free instance expires, upgrade the instance to a provisioned
+        /// instance.
+        /// </summary>
+        [pbr::OriginalName("FREE_TO_PROVISIONED")] FreeToProvisioned = 1,
+        /// <summary>
+        /// When the free instance expires, disable the instance, and delete it
+        /// after the grace period passes if it has not been upgraded.
+        /// </summary>
+        [pbr::OriginalName("REMOVE_AFTER_GRACE_PERIOD")] RemoveAfterGracePeriod = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Metadata type for the operation returned by
   /// [CreateInstanceConfig][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceConfigMetadata : pb::IMessage<CreateInstanceConfigMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6345,7 +9457,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6381,7 +9493,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int InstanceConfigFieldNumber = 1;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig instanceConfig_;
     /// <summary>
-    /// The target instance config end state.
+    /// The target instance configuration end state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6636,6 +9748,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// Metadata type for the operation returned by
   /// [UpdateInstanceConfig][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstanceConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceConfigMetadata : pb::IMessage<UpdateInstanceConfigMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6650,7 +9763,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6686,7 +9799,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int InstanceConfigFieldNumber = 1;
     private global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig instanceConfig_;
     /// <summary>
-    /// The desired instance config after updating.
+    /// The desired instance configuration after updating.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6914,6 +10027,4414 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               InstanceConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig();
             }
             input.ReadMessage(InstanceConfig);
+            break;
+          }
+          case 18: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An isolated set of Cloud Spanner resources that databases can define
+  /// placements on.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InstancePartition : pb::IMessage<InstancePartition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InstancePartition> _parser = new pb::MessageParser<InstancePartition>(() => new InstancePartition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InstancePartition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstancePartition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstancePartition(InstancePartition other) : this() {
+      name_ = other.name_;
+      config_ = other.config_;
+      displayName_ = other.displayName_;
+      state_ = other.state_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      referencingDatabases_ = other.referencingDatabases_.Clone();
+      referencingBackups_ = other.referencingBackups_.Clone();
+      etag_ = other.etag_;
+      switch (other.ComputeCapacityCase) {
+        case ComputeCapacityOneofCase.NodeCount:
+          NodeCount = other.NodeCount;
+          break;
+        case ComputeCapacityOneofCase.ProcessingUnits:
+          ProcessingUnits = other.ProcessingUnits;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstancePartition Clone() {
+      return new InstancePartition(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. A unique identifier for the instance partition. Values are of the
+    /// form
+    /// `projects/&lt;project>/instances/&lt;instance>/instancePartitions/[a-z][-a-z0-9]*[a-z0-9]`.
+    /// The final segment of the name must be between 2 and 64 characters in
+    /// length. An instance partition's name cannot be changed after the instance
+    /// partition is created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "config" field.</summary>
+    public const int ConfigFieldNumber = 2;
+    private string config_ = "";
+    /// <summary>
+    /// Required. The name of the instance partition's configuration. Values are of
+    /// the form `projects/&lt;project>/instanceConfigs/&lt;configuration>`. See also
+    /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig] and
+    /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Config {
+      get { return config_; }
+      set {
+        config_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The descriptive name for this instance partition as it appears in
+    /// UIs. Must be unique per project and between 4 and 30 characters in length.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_count" field.</summary>
+    public const int NodeCountFieldNumber = 5;
+    /// <summary>
+    /// The number of nodes allocated to this instance partition.
+    ///
+    /// Users can set the `node_count` field to specify the target number of
+    /// nodes allocated to the instance partition.
+    ///
+    /// This may be zero in API responses for instance partitions that are not
+    /// yet in state `READY`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NodeCount {
+      get { return HasNodeCount ? (int) computeCapacity_ : 0; }
+      set {
+        computeCapacity_ = value;
+        computeCapacityCase_ = ComputeCapacityOneofCase.NodeCount;
+      }
+    }
+    /// <summary>Gets whether the "node_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNodeCount {
+      get { return computeCapacityCase_ == ComputeCapacityOneofCase.NodeCount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "node_count" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNodeCount() {
+      if (HasNodeCount) {
+        ClearComputeCapacity();
+      }
+    }
+
+    /// <summary>Field number for the "processing_units" field.</summary>
+    public const int ProcessingUnitsFieldNumber = 6;
+    /// <summary>
+    /// The number of processing units allocated to this instance partition.
+    ///
+    /// Users can set the `processing_units` field to specify the target number
+    /// of processing units allocated to the instance partition.
+    ///
+    /// This might be zero in API responses for instance partitions that are not
+    /// yet in the `READY` state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ProcessingUnits {
+      get { return HasProcessingUnits ? (int) computeCapacity_ : 0; }
+      set {
+        computeCapacity_ = value;
+        computeCapacityCase_ = ComputeCapacityOneofCase.ProcessingUnits;
+      }
+    }
+    /// <summary>Gets whether the "processing_units" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProcessingUnits {
+      get { return computeCapacityCase_ == ComputeCapacityOneofCase.ProcessingUnits; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "processing_units" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProcessingUnits() {
+      if (HasProcessingUnits) {
+        ClearComputeCapacity();
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State state_ = global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The current instance partition state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The time at which the instance partition was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time at which the instance partition was most recently
+    /// updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "referencing_databases" field.</summary>
+    public const int ReferencingDatabasesFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_referencingDatabases_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> referencingDatabases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The names of the databases that reference this
+    /// instance partition. Referencing databases should share the parent instance.
+    /// The existence of any referencing database prevents the instance partition
+    /// from being deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ReferencingDatabases {
+      get { return referencingDatabases_; }
+    }
+
+    /// <summary>Field number for the "referencing_backups" field.</summary>
+    public const int ReferencingBackupsFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_referencingBackups_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> referencingBackups_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Deprecated: This field is not populated.
+    /// Output only. The names of the backups that reference this instance
+    /// partition. Referencing backups should share the parent instance. The
+    /// existence of any referencing backup prevents the instance partition from
+    /// being deleted.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ReferencingBackups {
+      get { return referencingBackups_; }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 12;
+    private string etag_ = "";
+    /// <summary>
+    /// Used for optimistic concurrency control as a way
+    /// to help prevent simultaneous updates of a instance partition from
+    /// overwriting each other. It is strongly suggested that systems make use of
+    /// the etag in the read-modify-write cycle to perform instance partition
+    /// updates in order to avoid race conditions: An etag is returned in the
+    /// response which contains instance partitions, and systems are expected to
+    /// put that etag in the request to update instance partitions to ensure that
+    /// their change will be applied to the same version of the instance partition.
+    /// If no etag is provided in the call to update instance partition, then the
+    /// existing instance partition is overwritten blindly.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object computeCapacity_;
+    /// <summary>Enum of possible cases for the "compute_capacity" oneof.</summary>
+    public enum ComputeCapacityOneofCase {
+      None = 0,
+      NodeCount = 5,
+      ProcessingUnits = 6,
+    }
+    private ComputeCapacityOneofCase computeCapacityCase_ = ComputeCapacityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComputeCapacityOneofCase ComputeCapacityCase {
+      get { return computeCapacityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearComputeCapacity() {
+      computeCapacityCase_ = ComputeCapacityOneofCase.None;
+      computeCapacity_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InstancePartition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InstancePartition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Config != other.Config) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (NodeCount != other.NodeCount) return false;
+      if (ProcessingUnits != other.ProcessingUnits) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if(!referencingDatabases_.Equals(other.referencingDatabases_)) return false;
+      if(!referencingBackups_.Equals(other.referencingBackups_)) return false;
+      if (Etag != other.Etag) return false;
+      if (ComputeCapacityCase != other.ComputeCapacityCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Config.Length != 0) hash ^= Config.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (HasNodeCount) hash ^= NodeCount.GetHashCode();
+      if (HasProcessingUnits) hash ^= ProcessingUnits.GetHashCode();
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= referencingDatabases_.GetHashCode();
+      hash ^= referencingBackups_.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      hash ^= (int) computeCapacityCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Config.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Config);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasNodeCount) {
+        output.WriteRawTag(40);
+        output.WriteInt32(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ProcessingUnits);
+      }
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
+      referencingDatabases_.WriteTo(output, _repeated_referencingDatabases_codec);
+      referencingBackups_.WriteTo(output, _repeated_referencingBackups_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Config.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Config);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasNodeCount) {
+        output.WriteRawTag(40);
+        output.WriteInt32(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ProcessingUnits);
+      }
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
+      referencingDatabases_.WriteTo(ref output, _repeated_referencingDatabases_codec);
+      referencingBackups_.WriteTo(ref output, _repeated_referencingBackups_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Config.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Config);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasNodeCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeCount);
+      }
+      if (HasProcessingUnits) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcessingUnits);
+      }
+      if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += referencingDatabases_.CalculateSize(_repeated_referencingDatabases_codec);
+      size += referencingBackups_.CalculateSize(_repeated_referencingBackups_codec);
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InstancePartition other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Config.Length != 0) {
+        Config = other.Config;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      referencingDatabases_.Add(other.referencingDatabases_);
+      referencingBackups_.Add(other.referencingBackups_);
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      switch (other.ComputeCapacityCase) {
+        case ComputeCapacityOneofCase.NodeCount:
+          NodeCount = other.NodeCount;
+          break;
+        case ComputeCapacityOneofCase.ProcessingUnits:
+          ProcessingUnits = other.ProcessingUnits;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Config = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 40: {
+            NodeCount = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ProcessingUnits = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            referencingDatabases_.AddEntriesFrom(input, _repeated_referencingDatabases_codec);
+            break;
+          }
+          case 90: {
+            referencingBackups_.AddEntriesFrom(input, _repeated_referencingBackups_codec);
+            break;
+          }
+          case 98: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Config = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 40: {
+            NodeCount = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ProcessingUnits = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            referencingDatabases_.AddEntriesFrom(ref input, _repeated_referencingDatabases_codec);
+            break;
+          }
+          case 90: {
+            referencingBackups_.AddEntriesFrom(ref input, _repeated_referencingBackups_codec);
+            break;
+          }
+          case 98: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the InstancePartition message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Indicates the current state of the instance partition.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The instance partition is still being created. Resources may not be
+        /// available yet, and operations such as creating placements using this
+        /// instance partition may not work.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 1,
+        /// <summary>
+        /// The instance partition is fully created and ready to do work such as
+        /// creating placements and using in databases.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Metadata type for the operation returned by
+  /// [CreateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateInstancePartitionMetadata : pb::IMessage<CreateInstancePartitionMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateInstancePartitionMetadata> _parser = new pb::MessageParser<CreateInstancePartitionMetadata>(() => new CreateInstancePartitionMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateInstancePartitionMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionMetadata(CreateInstancePartitionMetadata other) : this() {
+      instancePartition_ = other.instancePartition_ != null ? other.instancePartition_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionMetadata Clone() {
+      return new CreateInstancePartitionMetadata(this);
+    }
+
+    /// <summary>Field number for the "instance_partition" field.</summary>
+    public const int InstancePartitionFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition instancePartition_;
+    /// <summary>
+    /// The instance partition being created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition InstancePartition {
+      get { return instancePartition_; }
+      set {
+        instancePartition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time at which the
+    /// [CreateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition]
+    /// request was received.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cancel_time" field.</summary>
+    public const int CancelTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp cancelTime_;
+    /// <summary>
+    /// The time at which this operation was cancelled. If set, this operation is
+    /// in the process of undoing itself (which is guaranteed to succeed) and
+    /// cannot be cancelled again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CancelTime {
+      get { return cancelTime_; }
+      set {
+        cancelTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time at which this operation failed or was completed successfully.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateInstancePartitionMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateInstancePartitionMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InstancePartition, other.InstancePartition)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(CancelTime, other.CancelTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (instancePartition_ != null) hash ^= InstancePartition.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (instancePartition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartition);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (cancelTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateInstancePartitionMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.instancePartition_ != null) {
+        if (instancePartition_ == null) {
+          InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+        }
+        InstancePartition.MergeFrom(other.InstancePartition);
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.cancelTime_ != null) {
+        if (cancelTime_ == null) {
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CancelTime.MergeFrom(other.CancelTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [CreateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateInstancePartitionRequest : pb::IMessage<CreateInstancePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateInstancePartitionRequest> _parser = new pb::MessageParser<CreateInstancePartitionRequest>(() => new CreateInstancePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateInstancePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionRequest(CreateInstancePartitionRequest other) : this() {
+      parent_ = other.parent_;
+      instancePartitionId_ = other.instancePartitionId_;
+      instancePartition_ = other.instancePartition_ != null ? other.instancePartition_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateInstancePartitionRequest Clone() {
+      return new CreateInstancePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the instance in which to create the instance
+    /// partition. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_partition_id" field.</summary>
+    public const int InstancePartitionIdFieldNumber = 2;
+    private string instancePartitionId_ = "";
+    /// <summary>
+    /// Required. The ID of the instance partition to create. Valid identifiers are
+    /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+    /// characters in length.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstancePartitionId {
+      get { return instancePartitionId_; }
+      set {
+        instancePartitionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_partition" field.</summary>
+    public const int InstancePartitionFieldNumber = 3;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition instancePartition_;
+    /// <summary>
+    /// Required. The instance partition to create. The instance_partition.name may
+    /// be omitted, but if specified must be
+    /// `&lt;parent>/instancePartitions/&lt;instance_partition_id>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition InstancePartition {
+      get { return instancePartition_; }
+      set {
+        instancePartition_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateInstancePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateInstancePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (InstancePartitionId != other.InstancePartitionId) return false;
+      if (!object.Equals(InstancePartition, other.InstancePartition)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (InstancePartitionId.Length != 0) hash ^= InstancePartitionId.GetHashCode();
+      if (instancePartition_ != null) hash ^= InstancePartition.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (InstancePartitionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstancePartitionId);
+      }
+      if (instancePartition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InstancePartition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (InstancePartitionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstancePartitionId);
+      }
+      if (instancePartition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InstancePartition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (InstancePartitionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstancePartitionId);
+      }
+      if (instancePartition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartition);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateInstancePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.InstancePartitionId.Length != 0) {
+        InstancePartitionId = other.InstancePartitionId;
+      }
+      if (other.instancePartition_ != null) {
+        if (instancePartition_ == null) {
+          InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+        }
+        InstancePartition.MergeFrom(other.InstancePartition);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            InstancePartitionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            InstancePartitionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [DeleteInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteInstancePartitionRequest : pb::IMessage<DeleteInstancePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteInstancePartitionRequest> _parser = new pb::MessageParser<DeleteInstancePartitionRequest>(() => new DeleteInstancePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteInstancePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteInstancePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteInstancePartitionRequest(DeleteInstancePartitionRequest other) : this() {
+      name_ = other.name_;
+      etag_ = other.etag_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteInstancePartitionRequest Clone() {
+      return new DeleteInstancePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the instance partition to be deleted.
+    /// Values are of the form
+    /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. If not empty, the API only deletes the instance partition when
+    /// the etag provided matches the current status of the requested instance
+    /// partition. Otherwise, deletes the instance partition without checking the
+    /// current status of the requested instance partition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteInstancePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteInstancePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteInstancePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [GetInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetInstancePartitionRequest : pb::IMessage<GetInstancePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetInstancePartitionRequest> _parser = new pb::MessageParser<GetInstancePartitionRequest>(() => new GetInstancePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetInstancePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetInstancePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetInstancePartitionRequest(GetInstancePartitionRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetInstancePartitionRequest Clone() {
+      return new GetInstancePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the requested instance partition. Values are of
+    /// the form
+    /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetInstancePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetInstancePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetInstancePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [UpdateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateInstancePartitionRequest : pb::IMessage<UpdateInstancePartitionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateInstancePartitionRequest> _parser = new pb::MessageParser<UpdateInstancePartitionRequest>(() => new UpdateInstancePartitionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateInstancePartitionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionRequest(UpdateInstancePartitionRequest other) : this() {
+      instancePartition_ = other.instancePartition_ != null ? other.instancePartition_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionRequest Clone() {
+      return new UpdateInstancePartitionRequest(this);
+    }
+
+    /// <summary>Field number for the "instance_partition" field.</summary>
+    public const int InstancePartitionFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition instancePartition_;
+    /// <summary>
+    /// Required. The instance partition to update, which must always include the
+    /// instance partition name. Otherwise, only fields mentioned in
+    /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+    /// need be included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition InstancePartition {
+      get { return instancePartition_; }
+      set {
+        instancePartition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Required. A mask specifying which fields in
+    /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+    /// should be updated. The field mask must always be specified; this prevents
+    /// any future fields in
+    /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+    /// from being erased accidentally by clients that do not know about them.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateInstancePartitionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateInstancePartitionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InstancePartition, other.InstancePartition)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (instancePartition_ != null) hash ^= InstancePartition.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (instancePartition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartition);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateInstancePartitionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.instancePartition_ != null) {
+        if (instancePartition_ == null) {
+          InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+        }
+        InstancePartition.MergeFrom(other.InstancePartition);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata type for the operation returned by
+  /// [UpdateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateInstancePartitionMetadata : pb::IMessage<UpdateInstancePartitionMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateInstancePartitionMetadata> _parser = new pb::MessageParser<UpdateInstancePartitionMetadata>(() => new UpdateInstancePartitionMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateInstancePartitionMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionMetadata(UpdateInstancePartitionMetadata other) : this() {
+      instancePartition_ = other.instancePartition_ != null ? other.instancePartition_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateInstancePartitionMetadata Clone() {
+      return new UpdateInstancePartitionMetadata(this);
+    }
+
+    /// <summary>Field number for the "instance_partition" field.</summary>
+    public const int InstancePartitionFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition instancePartition_;
+    /// <summary>
+    /// The desired end state of the update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition InstancePartition {
+      get { return instancePartition_; }
+      set {
+        instancePartition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time at which
+    /// [UpdateInstancePartition][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition]
+    /// request was received.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cancel_time" field.</summary>
+    public const int CancelTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp cancelTime_;
+    /// <summary>
+    /// The time at which this operation was cancelled. If set, this operation is
+    /// in the process of undoing itself (which is guaranteed to succeed) and
+    /// cannot be cancelled again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CancelTime {
+      get { return cancelTime_; }
+      set {
+        cancelTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time at which this operation failed or was completed successfully.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateInstancePartitionMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateInstancePartitionMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InstancePartition, other.InstancePartition)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(CancelTime, other.CancelTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (instancePartition_ != null) hash ^= InstancePartition.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (instancePartition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InstancePartition);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (instancePartition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartition);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (cancelTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateInstancePartitionMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.instancePartition_ != null) {
+        if (instancePartition_ == null) {
+          InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+        }
+        InstancePartition.MergeFrom(other.InstancePartition);
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.cancelTime_ != null) {
+        if (cancelTime_ == null) {
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CancelTime.MergeFrom(other.CancelTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (instancePartition_ == null) {
+              InstancePartition = new global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition();
+            }
+            input.ReadMessage(InstancePartition);
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ListInstancePartitions][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListInstancePartitionsRequest : pb::IMessage<ListInstancePartitionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInstancePartitionsRequest> _parser = new pb::MessageParser<ListInstancePartitionsRequest>(() => new ListInstancePartitionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListInstancePartitionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsRequest(ListInstancePartitionsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      instancePartitionDeadline_ = other.instancePartitionDeadline_ != null ? other.instancePartitionDeadline_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsRequest Clone() {
+      return new ListInstancePartitionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The instance whose instance partitions should be listed. Values
+    /// are of the form `projects/&lt;project>/instances/&lt;instance>`. Use `{instance}
+    /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+    /// `projects/myproject/instances/-`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Number of instance partitions to be returned in the response. If 0 or less,
+    /// defaults to the server's maximum allowed page size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// If non-empty, `page_token` should contain a
+    /// [next_page_token][google.spanner.admin.instance.v1.ListInstancePartitionsResponse.next_page_token]
+    /// from a previous
+    /// [ListInstancePartitionsResponse][google.spanner.admin.instance.v1.ListInstancePartitionsResponse].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_partition_deadline" field.</summary>
+    public const int InstancePartitionDeadlineFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp instancePartitionDeadline_;
+    /// <summary>
+    /// Optional. Deadline used while retrieving metadata for instance partitions.
+    /// Instance partitions whose metadata cannot be retrieved within this deadline
+    /// will be added to
+    /// [unreachable][google.spanner.admin.instance.v1.ListInstancePartitionsResponse.unreachable]
+    /// in
+    /// [ListInstancePartitionsResponse][google.spanner.admin.instance.v1.ListInstancePartitionsResponse].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InstancePartitionDeadline {
+      get { return instancePartitionDeadline_; }
+      set {
+        instancePartitionDeadline_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListInstancePartitionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListInstancePartitionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (!object.Equals(InstancePartitionDeadline, other.InstancePartitionDeadline)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (instancePartitionDeadline_ != null) hash ^= InstancePartitionDeadline.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListInstancePartitionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.instancePartitionDeadline_ != null) {
+        if (instancePartitionDeadline_ == null) {
+          InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InstancePartitionDeadline.MergeFrom(other.InstancePartitionDeadline);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (instancePartitionDeadline_ == null) {
+              InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstancePartitionDeadline);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (instancePartitionDeadline_ == null) {
+              InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstancePartitionDeadline);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response for
+  /// [ListInstancePartitions][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListInstancePartitionsResponse : pb::IMessage<ListInstancePartitionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInstancePartitionsResponse> _parser = new pb::MessageParser<ListInstancePartitionsResponse>(() => new ListInstancePartitionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListInstancePartitionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsResponse(ListInstancePartitionsResponse other) : this() {
+      instancePartitions_ = other.instancePartitions_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionsResponse Clone() {
+      return new ListInstancePartitionsResponse(this);
+    }
+
+    /// <summary>Field number for the "instance_partitions" field.</summary>
+    public const int InstancePartitionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition> _repeated_instancePartitions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition> instancePartitions_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>();
+    /// <summary>
+    /// The list of requested instancePartitions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition> InstancePartitions {
+      get { return instancePartitions_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// `next_page_token` can be sent in a subsequent
+    /// [ListInstancePartitions][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions]
+    /// call to fetch more of the matching instance partitions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of unreachable instances or instance partitions.
+    /// It includes the names of instances or instance partitions whose metadata
+    /// could not be retrieved within
+    /// [instance_partition_deadline][google.spanner.admin.instance.v1.ListInstancePartitionsRequest.instance_partition_deadline].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListInstancePartitionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListInstancePartitionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!instancePartitions_.Equals(other.instancePartitions_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= instancePartitions_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      instancePartitions_.WriteTo(output, _repeated_instancePartitions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      instancePartitions_.WriteTo(ref output, _repeated_instancePartitions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += instancePartitions_.CalculateSize(_repeated_instancePartitions_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListInstancePartitionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      instancePartitions_.Add(other.instancePartitions_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            instancePartitions_.AddEntriesFrom(input, _repeated_instancePartitions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            instancePartitions_.AddEntriesFrom(ref input, _repeated_instancePartitions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ListInstancePartitionOperations][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListInstancePartitionOperationsRequest : pb::IMessage<ListInstancePartitionOperationsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInstancePartitionOperationsRequest> _parser = new pb::MessageParser<ListInstancePartitionOperationsRequest>(() => new ListInstancePartitionOperationsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListInstancePartitionOperationsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsRequest(ListInstancePartitionOperationsRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      instancePartitionDeadline_ = other.instancePartitionDeadline_ != null ? other.instancePartitionDeadline_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsRequest Clone() {
+      return new ListInstancePartitionOperationsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent instance of the instance partition operations.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. An expression that filters the list of returned operations.
+    ///
+    /// A filter expression consists of a field name, a
+    /// comparison operator, and a value for filtering.
+    /// The value must be a string, a number, or a boolean. The comparison operator
+    /// must be one of: `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, or `:`.
+    /// Colon `:` is the contains operator. Filter rules are not case sensitive.
+    ///
+    /// The following fields in the Operation are eligible for filtering:
+    ///
+    ///   * `name` - The name of the long-running operation
+    ///   * `done` - False if the operation is in progress, else true.
+    ///   * `metadata.@type` - the type of metadata. For example, the type string
+    ///      for
+    ///      [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata]
+    ///      is
+    ///      `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata`.
+    ///   * `metadata.&lt;field_name>` - any field in metadata.value.
+    ///      `metadata.@type` must be specified first, if filtering on metadata
+    ///      fields.
+    ///   * `error` - Error associated with the long-running operation.
+    ///   * `response.@type` - the type of response.
+    ///   * `response.&lt;field_name>` - any field in response.value.
+    ///
+    /// You can combine multiple expressions by enclosing each expression in
+    /// parentheses. By default, expressions are combined with AND logic. However,
+    /// you can specify AND, OR, and NOT logic explicitly.
+    ///
+    /// Here are a few examples:
+    ///
+    ///   * `done:true` - The operation is complete.
+    ///   * `(metadata.@type=` \
+    ///     `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata)
+    ///     AND` \
+    ///     `(metadata.instance_partition.name:custom-instance-partition) AND` \
+    ///     `(metadata.start_time &lt; \"2021-03-28T14:50:00Z\") AND` \
+    ///     `(error:*)` - Return operations where:
+    ///     * The operation's metadata type is
+    ///     [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+    ///     * The instance partition name contains "custom-instance-partition".
+    ///     * The operation started before 2021-03-28T14:50:00Z.
+    ///     * The operation resulted in an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Number of operations to be returned in the response. If 0 or
+    /// less, defaults to the server's maximum allowed page size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. If non-empty, `page_token` should contain a
+    /// [next_page_token][google.spanner.admin.instance.v1.ListInstancePartitionOperationsResponse.next_page_token]
+    /// from a previous
+    /// [ListInstancePartitionOperationsResponse][google.spanner.admin.instance.v1.ListInstancePartitionOperationsResponse]
+    /// to the same `parent` and with the same `filter`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_partition_deadline" field.</summary>
+    public const int InstancePartitionDeadlineFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp instancePartitionDeadline_;
+    /// <summary>
+    /// Optional. Deadline used while retrieving metadata for instance partition
+    /// operations. Instance partitions whose operation metadata cannot be
+    /// retrieved within this deadline will be added to
+    /// [unreachable_instance_partitions][google.spanner.admin.instance.v1.ListInstancePartitionOperationsResponse.unreachable_instance_partitions]
+    /// in
+    /// [ListInstancePartitionOperationsResponse][google.spanner.admin.instance.v1.ListInstancePartitionOperationsResponse].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InstancePartitionDeadline {
+      get { return instancePartitionDeadline_; }
+      set {
+        instancePartitionDeadline_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListInstancePartitionOperationsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListInstancePartitionOperationsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (!object.Equals(InstancePartitionDeadline, other.InstancePartitionDeadline)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (instancePartitionDeadline_ != null) hash ^= InstancePartitionDeadline.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (instancePartitionDeadline_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePartitionDeadline);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListInstancePartitionOperationsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.instancePartitionDeadline_ != null) {
+        if (instancePartitionDeadline_ == null) {
+          InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InstancePartitionDeadline.MergeFrom(other.InstancePartitionDeadline);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (instancePartitionDeadline_ == null) {
+              InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstancePartitionDeadline);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (instancePartitionDeadline_ == null) {
+              InstancePartitionDeadline = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstancePartitionDeadline);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response for
+  /// [ListInstancePartitionOperations][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListInstancePartitionOperationsResponse : pb::IMessage<ListInstancePartitionOperationsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInstancePartitionOperationsResponse> _parser = new pb::MessageParser<ListInstancePartitionOperationsResponse>(() => new ListInstancePartitionOperationsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListInstancePartitionOperationsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsResponse(ListInstancePartitionOperationsResponse other) : this() {
+      operations_ = other.operations_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachableInstancePartitions_ = other.unreachableInstancePartitions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListInstancePartitionOperationsResponse Clone() {
+      return new ListInstancePartitionOperationsResponse(this);
+    }
+
+    /// <summary>Field number for the "operations" field.</summary>
+    public const int OperationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.LongRunning.Operation> _repeated_operations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.LongRunning.Operation.Parser);
+    private readonly pbc::RepeatedField<global::Google.LongRunning.Operation> operations_ = new pbc::RepeatedField<global::Google.LongRunning.Operation>();
+    /// <summary>
+    /// The list of matching instance partition long-running operations. Each
+    /// operation's name will be
+    /// prefixed by the instance partition's name. The operation's
+    /// metadata field type
+    /// `metadata.type_url` describes the type of the metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.LongRunning.Operation> Operations {
+      get { return operations_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// `next_page_token` can be sent in a subsequent
+    /// [ListInstancePartitionOperations][google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations]
+    /// call to fetch more of the matching metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable_instance_partitions" field.</summary>
+    public const int UnreachableInstancePartitionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachableInstancePartitions_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachableInstancePartitions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of unreachable instance partitions.
+    /// It includes the names of instance partitions whose operation metadata could
+    /// not be retrieved within
+    /// [instance_partition_deadline][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.instance_partition_deadline].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> UnreachableInstancePartitions {
+      get { return unreachableInstancePartitions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListInstancePartitionOperationsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListInstancePartitionOperationsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!operations_.Equals(other.operations_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachableInstancePartitions_.Equals(other.unreachableInstancePartitions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= operations_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachableInstancePartitions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      operations_.WriteTo(output, _repeated_operations_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachableInstancePartitions_.WriteTo(output, _repeated_unreachableInstancePartitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      operations_.WriteTo(ref output, _repeated_operations_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachableInstancePartitions_.WriteTo(ref output, _repeated_unreachableInstancePartitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += operations_.CalculateSize(_repeated_operations_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachableInstancePartitions_.CalculateSize(_repeated_unreachableInstancePartitions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListInstancePartitionOperationsResponse other) {
+      if (other == null) {
+        return;
+      }
+      operations_.Add(other.operations_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachableInstancePartitions_.Add(other.unreachableInstancePartitions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            operations_.AddEntriesFrom(input, _repeated_operations_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachableInstancePartitions_.AddEntriesFrom(input, _repeated_unreachableInstancePartitions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            operations_.AddEntriesFrom(ref input, _repeated_operations_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachableInstancePartitions_.AddEntriesFrom(ref input, _repeated_unreachableInstancePartitions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [MoveInstance][google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MoveInstanceRequest : pb::IMessage<MoveInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MoveInstanceRequest> _parser = new pb::MessageParser<MoveInstanceRequest>(() => new MoveInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MoveInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[35]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceRequest(MoveInstanceRequest other) : this() {
+      name_ = other.name_;
+      targetConfig_ = other.targetConfig_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceRequest Clone() {
+      return new MoveInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The instance to move.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_config" field.</summary>
+    public const int TargetConfigFieldNumber = 2;
+    private string targetConfig_ = "";
+    /// <summary>
+    /// Required. The target instance configuration where to move the instance.
+    /// Values are of the form `projects/&lt;project>/instanceConfigs/&lt;config>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetConfig {
+      get { return targetConfig_; }
+      set {
+        targetConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MoveInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MoveInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (TargetConfig != other.TargetConfig) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (TargetConfig.Length != 0) hash ^= TargetConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (TargetConfig.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (TargetConfig.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (TargetConfig.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MoveInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.TargetConfig.Length != 0) {
+        TargetConfig = other.TargetConfig;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetConfig = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetConfig = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response for
+  /// [MoveInstance][google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MoveInstanceResponse : pb::IMessage<MoveInstanceResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MoveInstanceResponse> _parser = new pb::MessageParser<MoveInstanceResponse>(() => new MoveInstanceResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MoveInstanceResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceResponse(MoveInstanceResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceResponse Clone() {
+      return new MoveInstanceResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MoveInstanceResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MoveInstanceResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MoveInstanceResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata type for the operation returned by
+  /// [MoveInstance][google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MoveInstanceMetadata : pb::IMessage<MoveInstanceMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MoveInstanceMetadata> _parser = new pb::MessageParser<MoveInstanceMetadata>(() => new MoveInstanceMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MoveInstanceMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceMetadata(MoveInstanceMetadata other) : this() {
+      targetConfig_ = other.targetConfig_;
+      progress_ = other.progress_ != null ? other.progress_.Clone() : null;
+      cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveInstanceMetadata Clone() {
+      return new MoveInstanceMetadata(this);
+    }
+
+    /// <summary>Field number for the "target_config" field.</summary>
+    public const int TargetConfigFieldNumber = 1;
+    private string targetConfig_ = "";
+    /// <summary>
+    /// The target instance configuration where to move the instance.
+    /// Values are of the form `projects/&lt;project>/instanceConfigs/&lt;config>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetConfig {
+      get { return targetConfig_; }
+      set {
+        targetConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "progress" field.</summary>
+    public const int ProgressFieldNumber = 2;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress progress_;
+    /// <summary>
+    /// The progress of the
+    /// [MoveInstance][google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance]
+    /// operation.
+    /// [progress_percent][google.spanner.admin.instance.v1.OperationProgress.progress_percent]
+    /// is reset when cancellation is requested.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress Progress {
+      get { return progress_; }
+      set {
+        progress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cancel_time" field.</summary>
+    public const int CancelTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp cancelTime_;
+    /// <summary>
+    /// The time at which this operation was cancelled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CancelTime {
+      get { return cancelTime_; }
+      set {
+        cancelTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MoveInstanceMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MoveInstanceMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TargetConfig != other.TargetConfig) return false;
+      if (!object.Equals(Progress, other.Progress)) return false;
+      if (!object.Equals(CancelTime, other.CancelTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TargetConfig.Length != 0) hash ^= TargetConfig.GetHashCode();
+      if (progress_ != null) hash ^= Progress.GetHashCode();
+      if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TargetConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetConfig);
+      }
+      if (progress_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Progress);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TargetConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetConfig);
+      }
+      if (progress_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Progress);
+      }
+      if (cancelTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CancelTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TargetConfig.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetConfig);
+      }
+      if (progress_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
+      }
+      if (cancelTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MoveInstanceMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TargetConfig.Length != 0) {
+        TargetConfig = other.TargetConfig;
+      }
+      if (other.progress_ != null) {
+        if (progress_ == null) {
+          Progress = new global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress();
+        }
+        Progress.MergeFrom(other.Progress);
+      }
+      if (other.cancelTime_ != null) {
+        if (cancelTime_ == null) {
+          CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CancelTime.MergeFrom(other.CancelTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TargetConfig = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
+          case 26: {
+            if (cancelTime_ == null) {
+              CancelTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CancelTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TargetConfig = input.ReadString();
             break;
           }
           case 18: {

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_CreateQueue_async]
     using Google.Api.Gax.ResourceNames;
@@ -36,15 +36,15 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task CreateQueueRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            CreateQueueRequest request = new CreateQueueRequest
+            gctv::CreateQueueRequest request = new gctv::CreateQueueRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new gctv::Queue(),
             };
             // Make the request
-            Queue response = await cloudTasksClient.CreateQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.CreateQueueAsync(request);
         }
     }
     // [END cloudtasks_v2_generated_CloudTasks_CreateQueue_async]

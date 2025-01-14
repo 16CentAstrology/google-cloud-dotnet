@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gccv = Google.Cloud.CloudBuild.V2;
 using sys = System;
 
@@ -254,10 +254,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// <inheritdoc/>
         public bool Equals(ConnectionName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ConnectionName a, ConnectionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ConnectionName a, ConnectionName b) => !(a == b);
     }
 
@@ -512,10 +524,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// <inheritdoc/>
         public bool Equals(RepositoryName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(RepositoryName a, RepositoryName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(RepositoryName a, RepositoryName b) => !(a == b);
     }
 
@@ -768,10 +792,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// <inheritdoc/>
         public bool Equals(ServiceName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ServiceName a, ServiceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ServiceName a, ServiceName b) => !(a == b);
     }
 
@@ -822,6 +858,45 @@ namespace Google.Cloud.CloudBuild.V2
         }
     }
 
+    public partial class GitLabConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BitbucketDataCenterConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BitbucketCloudConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ServiceDirectoryConfig
     {
         /// <summary>
@@ -856,6 +931,19 @@ namespace Google.Cloud.CloudBuild.V2
         {
             get => string.IsNullOrEmpty(OauthTokenSecretVersion) ? null : SecretVersionName.Parse(OauthTokenSecretVersion, allowUnparsed: true);
             set => OauthTokenSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UserCredential
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="UserTokenSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName UserTokenSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(UserTokenSecretVersion) ? null : SecretVersionName.Parse(UserTokenSecretVersion, allowUnparsed: true);
+            set => UserTokenSecretVersion = value?.ToString() ?? "";
         }
     }
 
@@ -980,6 +1068,30 @@ namespace Google.Cloud.CloudBuild.V2
     }
 
     public partial class FetchReadTokenRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
+        /// </summary>
+        public RepositoryName RepositoryAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
+            set => Repository = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ProcessWebhookRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRefsRequest
     {
         /// <summary>
         /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.

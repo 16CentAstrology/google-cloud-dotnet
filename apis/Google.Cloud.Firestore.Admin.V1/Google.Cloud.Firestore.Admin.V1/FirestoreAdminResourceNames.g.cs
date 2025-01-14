@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcfav = Google.Cloud.Firestore.Admin.V1;
 using sys = System;
 
@@ -231,10 +231,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <inheritdoc/>
         public bool Equals(LocationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LocationName a, LocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LocationName a, LocationName b) => !(a == b);
     }
 
@@ -473,14 +485,38 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <inheritdoc/>
         public bool Equals(CollectionGroupName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(CollectionGroupName a, CollectionGroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(CollectionGroupName a, CollectionGroupName b) => !(a == b);
     }
 
     public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDatabaseRequest
     {
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
@@ -500,6 +536,66 @@ namespace Google.Cloud.Firestore.Admin.V1
         public gcfav::DatabaseName DatabaseName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::DatabaseName DatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupScheduleName BackupScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupScheduleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupSchedulesRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupScheduleName BackupScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupScheduleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -597,6 +693,73 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BulkDeleteDocumentsRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::DatabaseName DatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupsRequest
+    {
+        /// <summary>
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestoreDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
         }
     }
 }

@@ -28,54 +28,56 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xl",
             "L2Nsb3VkL2drZWJhY2t1cC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8iuw0KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8ihg4KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
             "QgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
             "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoG",
-            "bWFudWFsGAUgASgIQgPgQQMSPQoGbGFiZWxzGAYgAygLMi0uZ29vZ2xlLmNs",
-            "b3VkLmdrZWJhY2t1cC52MS5CYWNrdXAuTGFiZWxzRW50cnkSGAoQZGVsZXRl",
-            "X2xvY2tfZGF5cxgHIAEoBRJAChdkZWxldGVfbG9ja19leHBpcmVfdGltZRgI",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtyZXRh",
-            "aW5fZGF5cxgJIAEoBRI7ChJyZXRhaW5fZXhwaXJlX3RpbWUYCiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRQoOZW5jcnlwdGlvbl9r",
-            "ZXkYCyABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkVuY3J5cHRp",
-            "b25LZXlCA+BBAxIdCg5hbGxfbmFtZXNwYWNlcxgMIAEoCEID4EEDSAASSQoT",
-            "c2VsZWN0ZWRfbmFtZXNwYWNlcxgNIAEoCzIlLmdvb2dsZS5jbG91ZC5na2Vi",
-            "YWNrdXAudjEuTmFtZXNwYWNlc0ID4EEDSAASUAoVc2VsZWN0ZWRfYXBwbGlj",
-            "YXRpb25zGA4gASgLMiouZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5OYW1l",
-            "c3BhY2VkTmFtZXNCA+BBA0gAEiEKFGNvbnRhaW5zX3ZvbHVtZV9kYXRhGA8g",
-            "ASgIQgPgQQMSHQoQY29udGFpbnNfc2VjcmV0cxgQIAEoCEID4EEDElAKEGNs",
-            "dXN0ZXJfbWV0YWRhdGEYESABKAsyMS5nb29nbGUuY2xvdWQuZ2tlYmFja3Vw",
-            "LnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRhdGFCA+BBAxI7CgVzdGF0ZRgSIAEo",
-            "DjInLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuQmFja3VwLlN0YXRlQgPg",
-            "QQMSGQoMc3RhdGVfcmVhc29uGBMgASgJQgPgQQMSNgoNY29tcGxldGVfdGlt",
-            "ZRgUIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIbCg5y",
-            "ZXNvdXJjZV9jb3VudBgVIAEoBUID4EEDEhkKDHZvbHVtZV9jb3VudBgWIAEo",
-            "BUID4EEDEhcKCnNpemVfYnl0ZXMYFyABKANCA+BBAxIRCgRldGFnGBggASgJ",
-            "QgPgQQMSEwoLZGVzY3JpcHRpb24YGSABKAkSFgoJcG9kX2NvdW50GBogASgF",
-            "QgPgQQMSJQoYY29uZmlnX2JhY2t1cF9zaXplX2J5dGVzGBsgASgDQgPgQQMa",
-            "nQIKD0NsdXN0ZXJNZXRhZGF0YRIPCgdjbHVzdGVyGAEgASgJEhMKC2s4c192",
-            "ZXJzaW9uGAIgASgJEmUKE2JhY2t1cF9jcmRfdmVyc2lvbnMYAyADKAsySC5n",
-            "b29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRh",
-            "dGEuQmFja3VwQ3JkVmVyc2lvbnNFbnRyeRIVCgtna2VfdmVyc2lvbhgEIAEo",
-            "CUgAEhgKDmFudGhvc192ZXJzaW9uGAUgASgJSAAaOAoWQmFja3VwQ3JkVmVy",
-            "c2lvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhIK",
-            "EHBsYXRmb3JtX3ZlcnNpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASJmCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgwKCENSRUFUSU5HEAESDwoLSU5fUFJPR1JFU1MQAhINCglTVUND",
-            "RUVERUQQAxIKCgZGQUlMRUQQBBIMCghERUxFVElORxAFOnjqQXUKH2drZWJh",
-            "Y2t1cC5nb29nbGVhcGlzLmNvbS9CYWNrdXASUnByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3Bs",
-            "YW59L2JhY2t1cHMve2JhY2t1cH1CDgoMYmFja3VwX3Njb3BlQsIBCh1jb20u",
-            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MUILQmFja3VwUHJvdG9QAVo7Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEvZ2tlYmFja3VwcGI7",
-            "Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFja3VwLlYxygIZR29v",
-            "Z2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkdrZUJh",
-            "Y2t1cDo6VjFiBnByb3RvMw=="));
+            "bWFudWFsGAUgASgIQgPgQQMSQgoGbGFiZWxzGAYgAygLMi0uZ29vZ2xlLmNs",
+            "b3VkLmdrZWJhY2t1cC52MS5CYWNrdXAuTGFiZWxzRW50cnlCA+BBARIdChBk",
+            "ZWxldGVfbG9ja19kYXlzGAcgASgFQgPgQQESQAoXZGVsZXRlX2xvY2tfZXhw",
+            "aXJlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSGAoLcmV0YWluX2RheXMYCSABKAVCA+BBARI7ChJyZXRhaW5fZXhwaXJl",
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "RQoOZW5jcnlwdGlvbl9rZXkYCyABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFj",
+            "a3VwLnYxLkVuY3J5cHRpb25LZXlCA+BBAxIdCg5hbGxfbmFtZXNwYWNlcxgM",
+            "IAEoCEID4EEDSAASSQoTc2VsZWN0ZWRfbmFtZXNwYWNlcxgNIAEoCzIlLmdv",
+            "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlc0ID4EEDSAASUAoV",
+            "c2VsZWN0ZWRfYXBwbGljYXRpb25zGA4gASgLMiouZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5OYW1lc3BhY2VkTmFtZXNCA+BBA0gAEiEKFGNvbnRhaW5z",
+            "X3ZvbHVtZV9kYXRhGA8gASgIQgPgQQMSHQoQY29udGFpbnNfc2VjcmV0cxgQ",
+            "IAEoCEID4EEDElAKEGNsdXN0ZXJfbWV0YWRhdGEYESABKAsyMS5nb29nbGUu",
+            "Y2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRhdGFCA+BB",
+            "AxI7CgVzdGF0ZRgSIAEoDjInLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEu",
+            "QmFja3VwLlN0YXRlQgPgQQMSGQoMc3RhdGVfcmVhc29uGBMgASgJQgPgQQMS",
+            "NgoNY29tcGxldGVfdGltZRgUIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIbCg5yZXNvdXJjZV9jb3VudBgVIAEoBUID4EEDEhkKDHZv",
+            "bHVtZV9jb3VudBgWIAEoBUID4EEDEhcKCnNpemVfYnl0ZXMYFyABKANCA+BB",
+            "AxIRCgRldGFnGBggASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YGSABKAlCA+BB",
+            "ARIWCglwb2RfY291bnQYGiABKAVCA+BBAxIlChhjb25maWdfYmFja3VwX3Np",
+            "emVfYnl0ZXMYGyABKANCA+BBAxIcCg9wZXJtaXNzaXZlX21vZGUYHCABKAhC",
+            "A+BBAxq2AgoPQ2x1c3Rlck1ldGFkYXRhEhQKB2NsdXN0ZXIYASABKAlCA+BB",
+            "AxIYCgtrOHNfdmVyc2lvbhgCIAEoCUID4EEDEmoKE2JhY2t1cF9jcmRfdmVy",
+            "c2lvbnMYAyADKAsySC5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1",
+            "cC5DbHVzdGVyTWV0YWRhdGEuQmFja3VwQ3JkVmVyc2lvbnNFbnRyeUID4EED",
+            "EhoKC2drZV92ZXJzaW9uGAQgASgJQgPgQQNIABIdCg5hbnRob3NfdmVyc2lv",
+            "bhgFIAEoCUID4EEDSAAaOAoWQmFja3VwQ3JkVmVyc2lvbnNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhIKEHBsYXRmb3JtX3ZlcnNp",
+            "b24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASJmCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFU",
+            "SU5HEAESDwoLSU5fUFJPR1JFU1MQAhINCglTVUNDRUVERUQQAxIKCgZGQUlM",
+            "RUQQBBIMCghERUxFVElORxAFOnjqQXUKH2drZWJhY2t1cC5nb29nbGVhcGlz",
+            "LmNvbS9CYWNrdXASUnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3BsYW59L2JhY2t1cHMve2Jh",
+            "Y2t1cH1CDgoMYmFja3VwX3Njb3BlQsIBCh1jb20uZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MUILQmFja3VwUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9na2ViYWNrdXAvYXBpdjEvZ2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlH",
+            "b29nbGUuQ2xvdWQuR2tlQmFja3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJh",
+            "Y2t1cFxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup), global::Google.Cloud.GkeBackup.V1.Backup.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Manual", "Labels", "DeleteLockDays", "DeleteLockExpireTime", "RetainDays", "RetainExpireTime", "EncryptionKey", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "ContainsVolumeData", "ContainsSecrets", "ClusterMetadata", "State", "StateReason", "CompleteTime", "ResourceCount", "VolumeCount", "SizeBytes", "Etag", "Description", "PodCount", "ConfigBackupSizeBytes" }, new[]{ "BackupScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata), global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata.Parser, new[]{ "Cluster", "K8SVersion", "BackupCrdVersions", "GkeVersion", "AnthosVersion" }, new[]{ "PlatformVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup), global::Google.Cloud.GkeBackup.V1.Backup.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Manual", "Labels", "DeleteLockDays", "DeleteLockExpireTime", "RetainDays", "RetainExpireTime", "EncryptionKey", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "ContainsVolumeData", "ContainsSecrets", "ClusterMetadata", "State", "StateReason", "CompleteTime", "ResourceCount", "VolumeCount", "SizeBytes", "Etag", "Description", "PodCount", "ConfigBackupSizeBytes", "PermissiveMode" }, new[]{ "BackupScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata), global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata.Parser, new[]{ "Cluster", "K8SVersion", "BackupCrdVersions", "GkeVersion", "AnthosVersion" }, new[]{ "PlatformVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, })
           }));
     }
@@ -88,8 +90,8 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// some portion of the state of a GKE cluster, the record of the backup
   /// operation itself, and an anchor for the underlying artifacts that
   /// comprise the Backup (the config backup and VolumeBackups).
-  /// Next id: 28
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Backup : pb::IMessage<Backup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -148,6 +150,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       description_ = other.description_;
       podCount_ = other.podCount_;
       configBackupSizeBytes_ = other.configBackupSizeBytes_;
+      permissiveMode_ = other.permissiveMode_;
       switch (other.BackupScopeCase) {
         case BackupScopeOneofCase.AllNamespaces:
           AllNamespaces = other.AllNamespaces;
@@ -174,7 +177,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The fully qualified name of the Backup.
-    /// projects/*/locations/*/backupPlans/*/backups/*
+    /// `projects/*/locations/*/backupPlans/*/backups/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -235,9 +238,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ManualFieldNumber = 5;
     private bool manual_;
     /// <summary>
-    /// Output only. This flag indicates whether this Backup resource was created manually
-    /// by a user or via a schedule in the BackupPlan. A value of True means that
-    /// the Backup was created manually.
+    /// Output only. This flag indicates whether this Backup resource was created
+    /// manually by a user or via a schedule in the BackupPlan. A value of True
+    /// means that the Backup was created manually.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -254,7 +257,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// A set of custom labels supplied by user.
+    /// Optional. A set of custom labels supplied by user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -266,9 +269,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DeleteLockDaysFieldNumber = 7;
     private int deleteLockDays_;
     /// <summary>
-    /// Minimum age for this Backup (in days). If this field is set to a non-zero
-    /// value, the Backup will be "locked" against deletion (either manual or
-    /// automatic deletion) for the number of days provided (measured from the
+    /// Optional. Minimum age for this Backup (in days). If this field is set to a
+    /// non-zero value, the Backup will be "locked" against deletion (either manual
+    /// or automatic deletion) for the number of days provided (measured from the
     /// creation time of the Backup).  MUST be an integer value between 0-90
     /// (inclusive).
     ///
@@ -290,8 +293,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DeleteLockExpireTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteLockExpireTime_;
     /// <summary>
-    /// Output only. The time at which an existing delete lock will expire for this backup
-    /// (calculated from create_time + [delete_lock_days][google.cloud.gkebackup.v1.Backup.delete_lock_days]).
+    /// Output only. The time at which an existing delete lock will expire for this
+    /// backup (calculated from create_time +
+    /// [delete_lock_days][google.cloud.gkebackup.v1.Backup.delete_lock_days]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -306,16 +310,19 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int RetainDaysFieldNumber = 9;
     private int retainDays_;
     /// <summary>
-    /// The age (in days) after which this Backup will be automatically deleted.
-    /// Must be an integer value >= 0:
+    /// Optional. The age (in days) after which this Backup will be automatically
+    /// deleted. Must be an integer value >= 0:
     ///
     /// - If 0, no automatic deletion will occur for this Backup.
-    /// - If not 0, this must be >= [delete_lock_days][google.cloud.gkebackup.v1.Backup.delete_lock_days].
+    /// - If not 0, this must be >=
+    /// [delete_lock_days][google.cloud.gkebackup.v1.Backup.delete_lock_days] and
+    /// &lt;= 365.
     ///
     /// Once a Backup is created, this value may only be increased.
     ///
     /// Defaults to the parent BackupPlan's
-    /// [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days] value.
+    /// [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days]
+    /// value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -330,8 +337,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int RetainExpireTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp retainExpireTime_;
     /// <summary>
-    /// Output only. The time at which this Backup will be automatically deleted (calculated
-    /// from create_time + [retain_days][google.cloud.gkebackup.v1.Backup.retain_days]).
+    /// Output only. The time at which this Backup will be automatically deleted
+    /// (calculated from create_time +
+    /// [retain_days][google.cloud.gkebackup.v1.Backup.retain_days]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -346,9 +354,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EncryptionKeyFieldNumber = 11;
     private global::Google.Cloud.GkeBackup.V1.EncryptionKey encryptionKey_;
     /// <summary>
-    /// Output only. The customer managed encryption key that was used to encrypt the Backup's
-    /// artifacts.  Inherited from the parent BackupPlan's
-    /// [encryption_key][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.encryption_key] value.
+    /// Output only. The customer managed encryption key that was used to encrypt
+    /// the Backup's artifacts.  Inherited from the parent BackupPlan's
+    /// [encryption_key][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.encryption_key]
+    /// value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -367,17 +376,32 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllNamespaces {
-      get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces ? (bool) backupScope_ : false; }
+      get { return HasAllNamespaces ? (bool) backupScope_ : false; }
       set {
         backupScope_ = value;
         backupScopeCase_ = BackupScopeOneofCase.AllNamespaces;
+      }
+    }
+    /// <summary>Gets whether the "all_namespaces" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllNamespaces {
+      get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "all_namespaces" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllNamespaces() {
+      if (HasAllNamespaces) {
+        ClearBackupScope();
       }
     }
 
     /// <summary>Field number for the "selected_namespaces" field.</summary>
     public const int SelectedNamespacesFieldNumber = 13;
     /// <summary>
-    /// Output only. If set, the list of namespaces that were included in the Backup.
+    /// Output only. If set, the list of namespaces that were included in the
+    /// Backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -392,8 +416,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     /// <summary>Field number for the "selected_applications" field.</summary>
     public const int SelectedApplicationsFieldNumber = 14;
     /// <summary>
-    /// Output only. If set, the list of ProtectedApplications whose resources were included
-    /// in the Backup.
+    /// Output only. If set, the list of ProtectedApplications whose resources
+    /// were included in the Backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -409,9 +433,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ContainsVolumeDataFieldNumber = 15;
     private bool containsVolumeData_;
     /// <summary>
-    /// Output only. Whether or not the Backup contains volume data.  Controlled by the parent
-    /// BackupPlan's
-    /// [include_volume_data][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.include_volume_data] value.
+    /// Output only. Whether or not the Backup contains volume data.  Controlled by
+    /// the parent BackupPlan's
+    /// [include_volume_data][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.include_volume_data]
+    /// value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -426,9 +451,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ContainsSecretsFieldNumber = 16;
     private bool containsSecrets_;
     /// <summary>
-    /// Output only. Whether or not the Backup contains Kubernetes Secrets.  Controlled by the
-    /// parent BackupPlan's
-    /// [include_secrets][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.include_secrets] value.
+    /// Output only. Whether or not the Backup contains Kubernetes Secrets.
+    /// Controlled by the parent BackupPlan's
+    /// [include_secrets][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.include_secrets]
+    /// value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -443,7 +469,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterMetadataFieldNumber = 17;
     private global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata clusterMetadata_;
     /// <summary>
-    /// Output only. Information about the GKE cluster from which this Backup was created.
+    /// Output only. Information about the GKE cluster from which this Backup was
+    /// created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -473,7 +500,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int StateReasonFieldNumber = 19;
     private string stateReason_ = "";
     /// <summary>
-    /// Output only. Human-readable description of why the backup is in the current `state`.
+    /// Output only. Human-readable description of why the backup is in the current
+    /// `state`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -503,7 +531,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ResourceCountFieldNumber = 21;
     private int resourceCount_;
     /// <summary>
-    /// Output only. The total number of Kubernetes resources included in the Backup.
+    /// Output only. The total number of Kubernetes resources included in the
+    /// Backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -533,8 +562,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int SizeBytesFieldNumber = 23;
     private long sizeBytes_;
     /// <summary>
-    /// Output only. The total size of the Backup in bytes = config backup size + sum(volume
-    /// backup sizes)
+    /// Output only. The total size of the Backup in bytes = config backup size +
+    /// sum(volume backup sizes)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -549,8 +578,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 24;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a backup from overwriting each other.
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a backup from overwriting each other.
     /// It is strongly suggested that systems make use of the `etag` in the
     /// read-modify-write cycle to perform backup updates in order to avoid
     /// race conditions: An `etag` is returned in the response to `GetBackup`,
@@ -571,7 +600,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DescriptionFieldNumber = 25;
     private string description_ = "";
     /// <summary>
-    /// User specified descriptive string for this Backup.
+    /// Optional. User specified descriptive string for this Backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -609,6 +638,27 @@ namespace Google.Cloud.GkeBackup.V1 {
       get { return configBackupSizeBytes_; }
       set {
         configBackupSizeBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "permissive_mode" field.</summary>
+    public const int PermissiveModeFieldNumber = 28;
+    private bool permissiveMode_;
+    /// <summary>
+    /// Output only. If false, Backup will fail when Backup for GKE detects
+    /// Kubernetes configuration that is non-standard or
+    /// requires additional setup to restore.
+    ///
+    /// Inherited from the parent BackupPlan's
+    /// [permissive_mode][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.permissive_mode]
+    /// value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PermissiveMode {
+      get { return permissiveMode_; }
+      set {
+        permissiveMode_ = value;
       }
     }
 
@@ -676,6 +726,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Description != other.Description) return false;
       if (PodCount != other.PodCount) return false;
       if (ConfigBackupSizeBytes != other.ConfigBackupSizeBytes) return false;
+      if (PermissiveMode != other.PermissiveMode) return false;
       if (BackupScopeCase != other.BackupScopeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -695,7 +746,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (RetainDays != 0) hash ^= RetainDays.GetHashCode();
       if (retainExpireTime_ != null) hash ^= RetainExpireTime.GetHashCode();
       if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) hash ^= AllNamespaces.GetHashCode();
+      if (HasAllNamespaces) hash ^= AllNamespaces.GetHashCode();
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) hash ^= SelectedNamespaces.GetHashCode();
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedApplications) hash ^= SelectedApplications.GetHashCode();
       if (ContainsVolumeData != false) hash ^= ContainsVolumeData.GetHashCode();
@@ -711,6 +762,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (PodCount != 0) hash ^= PodCount.GetHashCode();
       if (ConfigBackupSizeBytes != 0L) hash ^= ConfigBackupSizeBytes.GetHashCode();
+      if (PermissiveMode != false) hash ^= PermissiveMode.GetHashCode();
       hash ^= (int) backupScopeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -771,7 +823,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(96);
         output.WriteBool(AllNamespaces);
       }
@@ -834,6 +886,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ConfigBackupSizeBytes != 0L) {
         output.WriteRawTag(216, 1);
         output.WriteInt64(ConfigBackupSizeBytes);
+      }
+      if (PermissiveMode != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(PermissiveMode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -886,7 +942,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(96);
         output.WriteBool(AllNamespaces);
       }
@@ -950,6 +1006,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(216, 1);
         output.WriteInt64(ConfigBackupSizeBytes);
       }
+      if (PermissiveMode != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(PermissiveMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -991,7 +1051,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (encryptionKey_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         size += 1 + 1;
       }
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) {
@@ -1039,6 +1099,9 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ConfigBackupSizeBytes != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(ConfigBackupSizeBytes);
       }
+      if (PermissiveMode != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1072,7 +1135,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (other.Manual != false) {
         Manual = other.Manual;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DeleteLockDays != 0) {
         DeleteLockDays = other.DeleteLockDays;
       }
@@ -1141,6 +1204,9 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (other.ConfigBackupSizeBytes != 0L) {
         ConfigBackupSizeBytes = other.ConfigBackupSizeBytes;
+      }
+      if (other.PermissiveMode != false) {
+        PermissiveMode = other.PermissiveMode;
       }
       switch (other.BackupScopeCase) {
         case BackupScopeOneofCase.AllNamespaces:
@@ -1314,6 +1380,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             ConfigBackupSizeBytes = input.ReadInt64();
             break;
           }
+          case 224: {
+            PermissiveMode = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1468,6 +1538,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             ConfigBackupSizeBytes = input.ReadInt64();
             break;
           }
+          case 224: {
+            PermissiveMode = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1514,6 +1588,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// <summary>
       /// Information about the GKE cluster from which this Backup was created.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ClusterMetadata : pb::IMessage<ClusterMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1573,11 +1648,11 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ClusterFieldNumber = 1;
         private string cluster_ = "";
         /// <summary>
-        /// The source cluster from which this Backup was created.
+        /// Output only. The source cluster from which this Backup was created.
         /// Valid formats:
         ///
-        ///   - projects/*/locations/*/clusters/*
-        ///   - projects/*/zones/*/clusters/*
+        ///   - `projects/*/locations/*/clusters/*`
+        ///   - `projects/*/zones/*/clusters/*`
         ///
         /// This is inherited from the parent BackupPlan's
         /// [cluster][google.cloud.gkebackup.v1.BackupPlan.cluster] field.
@@ -1595,7 +1670,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int K8SVersionFieldNumber = 2;
         private string k8SVersion_ = "";
         /// <summary>
-        /// The Kubernetes server version of the source cluster.
+        /// Output only. The Kubernetes server version of the source cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1612,7 +1687,8 @@ namespace Google.Cloud.GkeBackup.V1 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
         private readonly pbc::MapField<string, string> backupCrdVersions_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// A list of the Backup for GKE CRD versions found in the cluster.
+        /// Output only. A list of the Backup for GKE CRD versions found in the
+        /// cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1623,30 +1699,58 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// <summary>Field number for the "gke_version" field.</summary>
         public const int GkeVersionFieldNumber = 4;
         /// <summary>
-        /// GKE version
+        /// Output only. GKE version
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GkeVersion {
-          get { return platformVersionCase_ == PlatformVersionOneofCase.GkeVersion ? (string) platformVersion_ : ""; }
+          get { return HasGkeVersion ? (string) platformVersion_ : ""; }
           set {
             platformVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             platformVersionCase_ = PlatformVersionOneofCase.GkeVersion;
+          }
+        }
+        /// <summary>Gets whether the "gke_version" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGkeVersion {
+          get { return platformVersionCase_ == PlatformVersionOneofCase.GkeVersion; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gke_version" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGkeVersion() {
+          if (HasGkeVersion) {
+            ClearPlatformVersion();
           }
         }
 
         /// <summary>Field number for the "anthos_version" field.</summary>
         public const int AnthosVersionFieldNumber = 5;
         /// <summary>
-        /// Anthos version
+        /// Output only. Anthos version
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AnthosVersion {
-          get { return platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion ? (string) platformVersion_ : ""; }
+          get { return HasAnthosVersion ? (string) platformVersion_ : ""; }
           set {
             platformVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             platformVersionCase_ = PlatformVersionOneofCase.AnthosVersion;
+          }
+        }
+        /// <summary>Gets whether the "anthos_version" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAnthosVersion {
+          get { return platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "anthos_version" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAnthosVersion() {
+          if (HasAnthosVersion) {
+            ClearPlatformVersion();
           }
         }
 
@@ -1702,8 +1806,8 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
           if (K8SVersion.Length != 0) hash ^= K8SVersion.GetHashCode();
           hash ^= BackupCrdVersions.GetHashCode();
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) hash ^= GkeVersion.GetHashCode();
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) hash ^= AnthosVersion.GetHashCode();
+          if (HasGkeVersion) hash ^= GkeVersion.GetHashCode();
+          if (HasAnthosVersion) hash ^= AnthosVersion.GetHashCode();
           hash ^= (int) platformVersionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1732,11 +1836,11 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteString(K8SVersion);
           }
           backupCrdVersions_.WriteTo(output, _map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             output.WriteRawTag(34);
             output.WriteString(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             output.WriteRawTag(42);
             output.WriteString(AnthosVersion);
           }
@@ -1759,11 +1863,11 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteString(K8SVersion);
           }
           backupCrdVersions_.WriteTo(ref output, _map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             output.WriteRawTag(34);
             output.WriteString(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             output.WriteRawTag(42);
             output.WriteString(AnthosVersion);
           }
@@ -1784,10 +1888,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(K8SVersion);
           }
           size += backupCrdVersions_.CalculateSize(_map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AnthosVersion);
           }
           if (_unknownFields != null) {
@@ -1808,7 +1912,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (other.K8SVersion.Length != 0) {
             K8SVersion = other.K8SVersion;
           }
-          backupCrdVersions_.Add(other.backupCrdVersions_);
+          backupCrdVersions_.MergeFrom(other.backupCrdVersions_);
           switch (other.PlatformVersionCase) {
             case PlatformVersionOneofCase.GkeVersion:
               GkeVersion = other.GkeVersion;

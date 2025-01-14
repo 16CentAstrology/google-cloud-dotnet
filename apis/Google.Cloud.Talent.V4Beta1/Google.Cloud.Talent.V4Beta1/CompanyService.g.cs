@@ -50,30 +50,30 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3BvbnNlTWV0YWRhdGEy",
             "0gkKDkNvbXBhbnlTZXJ2aWNlEuMBCg1DcmVhdGVDb21wYW55EjEuZ29vZ2xl",
             "LmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZUNvbXBhbnlSZXF1ZXN0GiQu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnkieYLT5JMCYiIw",
-            "L3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vY29tcGFu",
-            "aWVzOgEqWisiJi92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vY29tcGFu",
-            "aWVzOgEq2kEOcGFyZW50LGNvbXBhbnkSzQEKCkdldENvbXBhbnkSLi5nb29n",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnkiedpBDnBhcmVu",
+            "dCxjb21wYW55gtPkkwJiIjAvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyov",
+            "dGVuYW50cy8qfS9jb21wYW5pZXM6ASpaKyImL3Y0YmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9jb21wYW5pZXM6ASoSzQEKCkdldENvbXBhbnkSLi5nb29n",
             "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuR2V0Q29tcGFueVJlcXVlc3QaJC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueSJpgtPkkwJcEjAv",
-            "djRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMv",
-            "Kn1aKBImL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi9jb21wYW5pZXMvKn3a",
-            "QQRuYW1lEu0BCg1VcGRhdGVDb21wYW55EjEuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueSJp2kEEbmFtZYLT",
+            "5JMCXBIwL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovY29t",
+            "cGFuaWVzLyp9WigSJi92NGJldGExL3tuYW1lPXByb2plY3RzLyovY29tcGFu",
+            "aWVzLyp9Eu0BCg1VcGRhdGVDb21wYW55EjEuZ29vZ2xlLmNsb3VkLnRhbGVu",
             "dC52NGJldGExLlVwZGF0ZUNvbXBhbnlSZXF1ZXN0GiQuZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkNvbXBhbnkiggGC0+STAnIyOC92NGJldGExL3tj",
-            "b21wYW55Lm5hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovY29tcGFuaWVzLyp9",
-            "OgEqWjMyLi92NGJldGExL3tjb21wYW55Lm5hbWU9cHJvamVjdHMvKi9jb21w",
-            "YW5pZXMvKn06ASraQQdjb21wYW55EsUBCg1EZWxldGVDb21wYW55EjEuZ29v",
+            "LnRhbGVudC52NGJldGExLkNvbXBhbnkiggHaQQdjb21wYW55gtPkkwJyMjgv",
+            "djRiZXRhMS97Y29tcGFueS5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2Nv",
+            "bXBhbmllcy8qfToBKlozMi4vdjRiZXRhMS97Y29tcGFueS5uYW1lPXByb2pl",
+            "Y3RzLyovY29tcGFuaWVzLyp9OgEqEsUBCg1EZWxldGVDb21wYW55EjEuZ29v",
             "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlbGV0ZUNvbXBhbnlSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ImmC0+STAlwqMC92NGJldGExL3tu",
-            "YW1lPXByb2plY3RzLyovdGVuYW50cy8qL2NvbXBhbmllcy8qfVooKiYvdjRi",
-            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2NvbXBhbmllcy8qfdpBBG5hbWUS4wEK",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ImnaQQRuYW1lgtPkkwJcKjAvdjRi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMvKn1a",
+            "KComL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi9jb21wYW5pZXMvKn0S4wEK",
             "DUxpc3RDb21wYW5pZXMSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
             "TGlzdENvbXBhbmllc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuTGlzdENvbXBhbmllc1Jlc3BvbnNlImuC0+STAlwSMC92NGJldGEx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NvbXBhbmllc1ooEiYv",
-            "djRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NvbXBhbmllc9pBBnBhcmVu",
-            "dBpsykETam9icy5nb29nbGVhcGlzLmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2ds",
+            "YmV0YTEuTGlzdENvbXBhbmllc1Jlc3BvbnNlImvaQQZwYXJlbnSC0+STAlwS",
+            "MC92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NvbXBh",
+            "bmllc1ooEiYvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NvbXBhbmll",
+            "cxpsykETam9icy5nb29nbGVhcGlzLmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2ds",
             "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
             "Z2xlYXBpcy5jb20vYXV0aC9qb2JzQncKH2NvbS5nb29nbGUuY2xvdWQudGFs",
             "ZW50LnY0YmV0YTFCE0NvbXBhbnlTZXJ2aWNlUHJvdG9QAVo3Y2xvdWQuZ29v",
@@ -97,6 +97,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The Request of the CreateCompany method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCompanyRequest : pb::IMessage<CreateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -345,6 +346,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request for getting a company by name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCompanyRequest : pb::IMessage<GetCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -547,6 +549,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request for updating a specified company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCompanyRequest : pb::IMessage<UpdateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -811,6 +814,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request to delete a company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCompanyRequest : pb::IMessage<DeleteCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1013,6 +1017,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// List companies for which the client has ACL visibility.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesRequest : pb::IMessage<ListCompaniesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1341,6 +1346,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The List companies response object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesResponse : pb::IMessage<ListCompaniesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

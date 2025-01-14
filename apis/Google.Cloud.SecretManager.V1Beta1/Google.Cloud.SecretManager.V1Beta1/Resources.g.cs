@@ -80,6 +80,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// A [Secret][google.cloud.secrets.v1beta1.Secret] is made up of zero or more [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] that
   /// represent the secret data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Secret : pb::IMessage<Secret>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -329,7 +330,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -414,6 +415,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// A secret version resource in the Secret Manager API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretVersion : pb::IMessage<SecretVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -786,6 +788,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// A policy that defines the replication configuration of data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Replication : pb::IMessage<Replication>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1084,6 +1087,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// A replication policy that replicates the [Secret][google.cloud.secrets.v1beta1.Secret] payload without any
       /// restrictions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Automatic : pb::IMessage<Automatic>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1240,6 +1244,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// A replication policy that replicates the [Secret][google.cloud.secrets.v1beta1.Secret] payload into the
       /// locations specified in [Secret.replication.user_managed.replicas][]
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserManaged : pb::IMessage<UserManaged>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1429,6 +1434,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
           /// <summary>
           /// Represents a Replica for this [Secret][google.cloud.secrets.v1beta1.Secret].
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Replica : pb::IMessage<Replica>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1636,6 +1642,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// A secret payload resource in the Secret Manager API. This contains the
   /// sensitive secret data that is associated with a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretPayload : pb::IMessage<SecretPayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

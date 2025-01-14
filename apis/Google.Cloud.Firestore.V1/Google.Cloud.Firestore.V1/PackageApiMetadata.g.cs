@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,10 +32,12 @@ namespace Google.Cloud.Firestore.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AggregationResultReflection.Descriptor;
+            yield return BloomFilterReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
             yield return FirestoreReflection.Descriptor;
             yield return QueryReflection.Descriptor;
+            yield return QueryProfileReflection.Descriptor;
             yield return WriteReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
         }

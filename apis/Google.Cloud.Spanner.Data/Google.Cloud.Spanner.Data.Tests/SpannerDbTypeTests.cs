@@ -1,17 +1,18 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -37,7 +38,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "StringValue2", SpannerDbType.String, null },
                     { "JsonValue", SpannerDbType.Json, null },
                     { "PgJsonbValue", SpannerDbType.PgJsonb, null },
-                    { "FloatValue", SpannerDbType.Float64, null },
+                    { "Float32Value", SpannerDbType.Float32, null },
+                    { "Float64Value", SpannerDbType.Float64, null },
                     { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
                 }.GetSpannerDbType(),
                 new SpannerStruct
@@ -46,10 +48,15 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "StringValue2", SpannerDbType.String, null },
                     { "JsonValue", SpannerDbType.Json, null },
                     { "PgJsonbValue", SpannerDbType.PgJsonb, null },
-                    { "FloatValue", SpannerDbType.Float64, null },
+                    { "Float32Value", SpannerDbType.Float32, null },
+                    { "Float64Value", SpannerDbType.Float64, null },
                     { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null},
                 }.GetSpannerDbType()
             };
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)};
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Rectangle)), SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName)};
         }
 
         [Theory]
@@ -69,8 +76,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "JSON", SpannerDbType.Json };
             yield return new object[] { "JSONB{PG}", SpannerDbType.PgJsonb };
             yield return new object[] { "DATE", SpannerDbType.Date };
+            yield return new object[] { "FLOAT32", SpannerDbType.Float32 };
             yield return new object[] { "FLOAT64", SpannerDbType.Float64 };
             yield return new object[] { "INT64", SpannerDbType.Int64 };
+            yield return new object[] { "OID{PG}", SpannerDbType.PgOid };
             yield return new object[] { "TIMESTAMP", SpannerDbType.Timestamp };
             yield return new object[] { "NUMERIC", SpannerDbType.Numeric };
             yield return new object[] { "NUMERIC{PG}", SpannerDbType.PgNumeric };
@@ -81,8 +90,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "  JSON  ", SpannerDbType.Json };
             yield return new object[] { "  JSONB{PG}  ", SpannerDbType.PgJsonb };
             yield return new object[] { "  DATE  ", SpannerDbType.Date };
+            yield return new object[] { "  FLOAT32  ", SpannerDbType.Float32 };
             yield return new object[] { "  FLOAT64  ", SpannerDbType.Float64 };
             yield return new object[] { "  INT64  ", SpannerDbType.Int64 };
+            yield return new object[] { "  OID{PG}", SpannerDbType.PgOid };
             yield return new object[] { "  TIMESTAMP  ", SpannerDbType.Timestamp };
             yield return new object[] { "  NUMERIC  ", SpannerDbType.Numeric };
             yield return new object[] { "  NUMERIC{PG}  ", SpannerDbType.PgNumeric };
@@ -107,12 +118,20 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "ARRAY<JSON>", SpannerDbType.ArrayOf(SpannerDbType.Json) };
             yield return new object[] { "ARRAY<JSONB{PG}>", SpannerDbType.ArrayOf(SpannerDbType.PgJsonb) };
             yield return new object[] { "ARRAY<DATE>", SpannerDbType.ArrayOf(SpannerDbType.Date) };
+            yield return new object[] { "ARRAY<FLOAT32>", SpannerDbType.ArrayOf(SpannerDbType.Float32) };
             yield return new object[] { "ARRAY<FLOAT64>", SpannerDbType.ArrayOf(SpannerDbType.Float64) };
             yield return new object[] { "ARRAY<INT64>", SpannerDbType.ArrayOf(SpannerDbType.Int64) };
+            yield return new object[] { "ARRAY<OID{PG}>", SpannerDbType.ArrayOf(SpannerDbType.PgOid) };
             yield return new object[] { "ARRAY<TIMESTAMP>", SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
 
             yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String), false };
             yield return new object[] { "ARRAY<BYTES(5)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes), false };
+
+            yield return new object[] { $"PROTO<{Duration.Descriptor.FullName}>", SpannerDbType.FromClrType(typeof(Duration)) };
+            yield return new object[] { $"ARRAY<PROTO<{Duration.Descriptor.FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) };
+
+            yield return new object[] { $"PROTO<{Rectangle.Descriptor.FullName}>", SpannerDbType.FromClrType(typeof(Rectangle)) };
+            yield return new object[] { $"ARRAY<PROTO<{Rectangle.Descriptor.FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) };
 
             yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
@@ -156,14 +175,16 @@ namespace Google.Cloud.Spanner.Data.Tests
                 { "F3", SpannerDbType.Bool, null },
                 { "F4", SpannerDbType.Bytes, null },
                 { "F5", SpannerDbType.Date, null },
-                { "F6", SpannerDbType.Float64, null },
-                { "F7", SpannerDbType.Timestamp, null },
-                { "F8", SpannerDbType.Numeric, null },
-                { "F9", SpannerDbType.Json, null },
-                { "F10", SpannerDbType.PgNumeric, null },
-                { "F11", SpannerDbType.PgJsonb, null }
+                { "F6", SpannerDbType.Float32, null },
+                { "F7", SpannerDbType.Float64, null },
+                { "F8", SpannerDbType.Timestamp, null },
+                { "F9", SpannerDbType.Numeric, null },
+                { "F10", SpannerDbType.Json, null },
+                { "F11", SpannerDbType.PgNumeric, null },
+                { "F12", SpannerDbType.PgJsonb, null },
+                { "F13", SpannerDbType.PgOid, null }
             };
-            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP,F8:NUMERIC,F9:JSON,F10:NUMERIC{PG},F11:JSONB{PG}>", sampleStruct.GetSpannerDbType() };
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT32,F7:FLOAT64,F8:TIMESTAMP,F9:NUMERIC,F10:JSON,F11:NUMERIC{PG},F12:JSONB{PG},F13:OID{PG}>", sampleStruct.GetSpannerDbType() };
 
             sampleStruct = new SpannerStruct
             {

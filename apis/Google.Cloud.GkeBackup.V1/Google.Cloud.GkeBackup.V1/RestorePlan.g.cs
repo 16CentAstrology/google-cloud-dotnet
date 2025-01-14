@@ -28,30 +28,34 @@ namespace Google.Cloud.GkeBackup.V1 {
             "bxIZZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxon",
             "Z29vZ2xlL2Nsb3VkL2drZWJhY2t1cC92MS9yZXN0b3JlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvMECgtSZXN0b3JlUGxhbhIR",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrQGCgtSZXN0b3JlUGxhbhIR",
             "CgRuYW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRl",
             "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
             "NAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSEwoLZGVzY3JpcHRpb24YBSABKAkSQwoLYmFja3VwX3BsYW4Y",
-            "BiABKAlCLuBBBeBBAvpBJQojZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL0Jh",
-            "Y2t1cFBsYW4SPAoHY2x1c3RlchgHIAEoCUIr4EEF4EEC+kEiCiBjb250YWlu",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchJFCg5yZXN0b3JlX2NvbmZpZxgI",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZp",
-            "Z0ID4EECEkIKBmxhYmVscxgJIAMoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNr",
-            "dXAudjEuUmVzdG9yZVBsYW4uTGFiZWxzRW50cnkSEQoEZXRhZxgKIAEoCUID",
-            "4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAE6bupBawokZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL1Jlc3RvcmVQ",
-            "bGFuEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "cmVzdG9yZVBsYW5zL3tyZXN0b3JlX3BsYW59QscBCh1jb20uZ29vZ2xlLmNs",
-            "b3VkLmdrZWJhY2t1cC52MUIQUmVzdG9yZVBsYW5Qcm90b1ABWjtjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2Vi",
-            "YWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVc",
-            "Q2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3Vw",
-            "OjpWMWIGcHJvdG8z"));
+            "YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24YBSABKAlCA+BBARJDCgtiYWNrdXBf",
+            "cGxhbhgGIAEoCUIu4EEF4EEC+kElCiNna2ViYWNrdXAuZ29vZ2xlYXBpcy5j",
+            "b20vQmFja3VwUGxhbhI8CgdjbHVzdGVyGAcgASgJQivgQQXgQQL6QSIKIGNv",
+            "bnRhaW5lci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEkUKDnJlc3RvcmVfY29u",
+            "ZmlnGAggASgLMiguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3Jl",
+            "Q29uZmlnQgPgQQISRwoGbGFiZWxzGAkgAygLMjIuZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5SZXN0b3JlUGxhbi5MYWJlbHNFbnRyeUID4EEBEhEKBGV0",
+            "YWcYCiABKAlCA+BBAxJACgVzdGF0ZRgLIAEoDjIsLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuUmVzdG9yZVBsYW4uU3RhdGVCA+BBAxIZCgxzdGF0ZV9y",
+            "ZWFzb24YDCABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBIlgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASEwoPQ0xVU1RFUl9QRU5ESU5HEAESCQoFUkVBRFkQAhIKCgZGQUlM",
+            "RUQQAxIMCghERUxFVElORxAEOm7qQWsKJGdrZWJhY2t1cC5nb29nbGVhcGlz",
+            "LmNvbS9SZXN0b3JlUGxhbhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3Jlc3RvcmVQbGFucy97cmVzdG9yZV9wbGFufULHAQod",
+            "Y29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCEFJlc3RvcmVQbGFuUHJv",
+            "dG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEvZ2tl",
+            "YmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFja3Vw",
+            "LlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6Q2xv",
+            "dWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.RestoreReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan), global::Google.Cloud.GkeBackup.V1.RestorePlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "BackupPlan", "Cluster", "RestoreConfig", "Labels", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan), global::Google.Cloud.GkeBackup.V1.RestorePlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "BackupPlan", "Cluster", "RestoreConfig", "Labels", "Etag", "State", "StateReason" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -61,8 +65,8 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// The configuration of a potential series of Restore operations to be performed
   /// against Backups belong to a particular BackupPlan.
-  /// Next id: 11
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestorePlan : pb::IMessage<RestorePlan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -107,6 +111,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       restoreConfig_ = other.restoreConfig_ != null ? other.restoreConfig_.Clone() : null;
       labels_ = other.labels_.Clone();
       etag_ = other.etag_;
+      state_ = other.state_;
+      stateReason_ = other.stateReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,7 +127,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The full name of the RestorePlan resource.
-    /// Format: projects/*/locations/*/restorePlans/*.
+    /// Format: `projects/*/locations/*/restorePlans/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,7 +190,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// User specified descriptive string for this RestorePlan.
+    /// Optional. User specified descriptive string for this RestorePlan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,9 +205,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int BackupPlanFieldNumber = 6;
     private string backupPlan_ = "";
     /// <summary>
-    /// Required. Immutable. A reference to the [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may be used as the
-    /// source for Restores created via this RestorePlan.
-    /// Format: projects/*/locations/*/backupPlans/*.
+    /// Required. Immutable. A reference to the
+    /// [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may
+    /// be used as the source for Restores created via this RestorePlan. Format:
+    /// `projects/*/locations/*/backupPlans/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -216,13 +223,12 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterFieldNumber = 7;
     private string cluster_ = "";
     /// <summary>
-    /// Required. Immutable. The target cluster into which Restores created via this RestorePlan
-    /// will restore data. NOTE: the cluster's region must be the same as the
-    /// RestorePlan.
-    /// Valid formats:
+    /// Required. Immutable. The target cluster into which Restores created via
+    /// this RestorePlan will restore data. NOTE: the cluster's region must be the
+    /// same as the RestorePlan. Valid formats:
     ///
-    ///   - projects/*/locations/*/clusters/*
-    ///   - projects/*/zones/*/clusters/*
+    ///   - `projects/*/locations/*/clusters/*`
+    ///   - `projects/*/zones/*/clusters/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -254,7 +260,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// A set of custom labels supplied by user.
+    /// Optional. A set of custom labels supplied by user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -266,8 +272,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 10;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a restore from overwriting each other.
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a restore from overwriting each other.
     /// It is strongly suggested that systems make use of the `etag` in the
     /// read-modify-write cycle to perform restore updates in order to avoid
     /// race conditions: An `etag` is returned in the response to `GetRestorePlan`,
@@ -281,6 +287,39 @@ namespace Google.Cloud.GkeBackup.V1 {
       get { return etag_; }
       set {
         etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 11;
+    private global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State state_ = global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the RestorePlan. This State field reflects the
+    /// various stages a RestorePlan can be in
+    /// during the Create operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state_reason" field.</summary>
+    public const int StateReasonFieldNumber = 12;
+    private string stateReason_ = "";
+    /// <summary>
+    /// Output only. Human-readable description of why RestorePlan is in the
+    /// current `state`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StateReason {
+      get { return stateReason_; }
+      set {
+        stateReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -309,6 +348,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (!object.Equals(RestoreConfig, other.RestoreConfig)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (Etag != other.Etag) return false;
+      if (State != other.State) return false;
+      if (StateReason != other.StateReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -326,6 +367,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (restoreConfig_ != null) hash ^= RestoreConfig.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (StateReason.Length != 0) hash ^= StateReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -381,6 +424,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(82);
         output.WriteString(Etag);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(StateReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -428,6 +479,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(82);
         output.WriteString(Etag);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(StateReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -465,6 +524,12 @@ namespace Google.Cloud.GkeBackup.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (StateReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -511,9 +576,15 @@ namespace Google.Cloud.GkeBackup.V1 {
         }
         RestoreConfig.MergeFrom(other.RestoreConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.StateReason.Length != 0) {
+        StateReason = other.StateReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -577,6 +648,14 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 82: {
             Etag = input.ReadString();
+            break;
+          }
+          case 88: {
+            State = (global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            StateReason = input.ReadString();
             break;
           }
         }
@@ -643,10 +722,52 @@ namespace Google.Cloud.GkeBackup.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 88: {
+            State = (global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            StateReason = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RestorePlan message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default first value for Enums.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Waiting for cluster state to be RUNNING.
+        /// </summary>
+        [pbr::OriginalName("CLUSTER_PENDING")] ClusterPending = 1,
+        /// <summary>
+        /// The RestorePlan has successfully been created and is ready for Restores.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 2,
+        /// <summary>
+        /// RestorePlan creation has failed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// The RestorePlan is in the process of being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+      }
+
+    }
+    #endregion
 
   }
 

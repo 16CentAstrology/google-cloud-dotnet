@@ -56,6 +56,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// A processor type is responsible for performing a certain document
   /// understanding task on a certain type of document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessorType : pb::IMessage<ProcessorType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -126,7 +127,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+    /// The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -474,6 +475,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// The location information about where the processor is available.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LocationInfo : pb::IMessage<LocationInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -522,7 +524,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int LocationIdFieldNumber = 1;
         private string locationId_ = "";
         /// <summary>
-        /// The location id, currently must be one of [us, eu].
+        /// The location ID. For supported locations, refer to [regional and
+        /// multi-regional support](/document-ai/docs/regions).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

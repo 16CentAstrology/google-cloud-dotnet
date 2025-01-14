@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.NetworkSecurity.V1Beta1
 {
@@ -489,14 +489,14 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkSecurityClient.Create(callInvoker, Settings, Logger);
+            return NetworkSecurityClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<NetworkSecurityClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkSecurityClient.Create(callInvoker, Settings, Logger);
+            return NetworkSecurityClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -631,13 +631,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AuthorizationPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAuthorizationPolicies(new ListAuthorizationPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizationPoliciesRequest request = new ListAuthorizationPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizationPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AuthorizationPolicies in a given project and location.
@@ -657,13 +666,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AuthorizationPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAuthorizationPoliciesAsync(new ListAuthorizationPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizationPoliciesRequest request = new ListAuthorizationPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizationPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AuthorizationPolicies in a given project and location.
@@ -683,13 +701,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AuthorizationPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAuthorizationPolicies(new ListAuthorizationPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizationPoliciesRequest request = new ListAuthorizationPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizationPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists AuthorizationPolicies in a given project and location.
@@ -709,13 +736,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AuthorizationPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAuthorizationPoliciesAsync(new ListAuthorizationPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizationPoliciesResponse, AuthorizationPolicy> ListAuthorizationPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizationPoliciesRequest request = new ListAuthorizationPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizationPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single AuthorizationPolicy.
@@ -1317,13 +1353,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServerTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServerTlsPolicies(new ListServerTlsPoliciesRequest
+        public virtual gax::PagedEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServerTlsPoliciesRequest request = new ListServerTlsPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServerTlsPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServerTlsPolicies in a given project and location.
@@ -1342,13 +1387,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServerTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServerTlsPoliciesAsync(new ListServerTlsPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServerTlsPoliciesRequest request = new ListServerTlsPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServerTlsPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServerTlsPolicies in a given project and location.
@@ -1367,13 +1421,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServerTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServerTlsPolicies(new ListServerTlsPoliciesRequest
+        public virtual gax::PagedEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServerTlsPoliciesRequest request = new ListServerTlsPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServerTlsPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ServerTlsPolicies in a given project and location.
@@ -1392,13 +1455,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServerTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServerTlsPoliciesAsync(new ListServerTlsPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServerTlsPoliciesResponse, ServerTlsPolicy> ListServerTlsPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServerTlsPoliciesRequest request = new ListServerTlsPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServerTlsPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ServerTlsPolicy.
@@ -2003,13 +2075,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ClientTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientTlsPolicies(new ListClientTlsPoliciesRequest
+        public virtual gax::PagedEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientTlsPoliciesRequest request = new ListClientTlsPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientTlsPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientTlsPolicies in a given project and location.
@@ -2028,13 +2109,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ClientTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientTlsPoliciesAsync(new ListClientTlsPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientTlsPoliciesRequest request = new ListClientTlsPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientTlsPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientTlsPolicies in a given project and location.
@@ -2053,13 +2143,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ClientTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientTlsPolicies(new ListClientTlsPoliciesRequest
+        public virtual gax::PagedEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientTlsPoliciesRequest request = new ListClientTlsPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientTlsPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ClientTlsPolicies in a given project and location.
@@ -2078,13 +2177,22 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ClientTlsPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClientTlsPoliciesAsync(new ListClientTlsPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListClientTlsPoliciesResponse, ClientTlsPolicy> ListClientTlsPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClientTlsPoliciesRequest request = new ListClientTlsPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClientTlsPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single ClientTlsPolicy.
@@ -2703,7 +2811,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         {
             GrpcClient = grpcClient;
             NetworkSecuritySettings effectiveSettings = settings ?? NetworkSecuritySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizationPolicyOperationsSettings, logger);
             UpdateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizationPolicyOperationsSettings, logger);
             DeleteAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthorizationPolicyOperationsSettings, logger);

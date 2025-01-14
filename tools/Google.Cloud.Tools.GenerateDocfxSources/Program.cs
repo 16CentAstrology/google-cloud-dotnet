@@ -26,6 +26,24 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 {
     public class Program
     {
+        private const string ProductDocumentationStub = @"{{title}}
+
+{{description}}
+
+{{version}}
+
+{{installation}}
+
+{{auth}}
+
+## Getting started
+
+{{client-classes}}
+
+{{client-construction}}
+";
+        private const string NonProductDocumentationStub = "{{non-product-stub}}";
+
         private static int Main(string[] args)
         {
             try
@@ -46,11 +64,13 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 throw new UserErrorException("Please specify the API name");
             }
             string api = args[0];
-            var layout = DirectoryLayout.ForApi(api);
-            var apiCatalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var docsLayout = rootLayout.CreateDocsLayout(api);
+
+            var apiCatalog = ApiCatalog.Load(rootLayout);
             var apiMetadata = apiCatalog[api];
 
-            string output = layout.DocsOutputDirectory;
+            string output = docsLayout.OutputDirectory;
             if (Directory.Exists(output))
             {
                 Directory.Delete(output, true);
@@ -59,7 +79,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
             CreateGoogleApisDevDocfxJson(apiCatalog, apiMetadata, output);
             CreateDevsiteDocfxJson(apiCatalog, apiMetadata, output);
-            CopyAndGenerateArticles(apiMetadata, layout.DocsSourceDirectory, output);
+            CopyAndGenerateArticles(apiMetadata, docsLayout.MarkdownDirectory, output);
             CreateToc(api, output);
             return 0;
         }
@@ -79,7 +99,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["src"] = new JObject
                         {
                             ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
-                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                            ["src"] = $"../../../apis/{rootApi.Id}"
                         },
                         ["dest"] = "obj/api",
                         ["filter"] = "filterConfig.yml",
@@ -136,7 +156,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["src"] = new JObject
                         {
                             ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
-                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                            ["src"] = $"../../../apis/{rootApi.Id}"
                         },
                         ["dest"] = "obj/bareapi",
                         ["filter"] = "filterConfig.yml"
@@ -148,11 +168,14 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
         private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
         {
-            // Make sure there's a landing page.
+            // If there's no landing page, work out the right stub and transform that.
             var index = Path.Combine(inputDirectory, "index.md");
             if (!File.Exists(index))
             {
-                throw new UserErrorException($"No index.md file for {api.Id}. Please add one!");
+                bool isProduct = api.ProductName != null && api.ProductUrl != null;
+                string stubText = isProduct ? ProductDocumentationStub : NonProductDocumentationStub;
+                string transformedText = TransformDocTemplate(api, stubText);
+                File.WriteAllText(Path.Combine(outputDirectory, "index.md"), transformedText);
             }
 
             // TODO: Do this properly, with templating etc.
@@ -193,7 +216,7 @@ $@"## Installation
 Install the `{api.Id}` package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing ""Manage NuGet Packages..."").";
-            if (!api.IsReleaseVersion)
+            if (!api.StructuredVersion.IsStable)
             {
                 installation += $@"
 Please ensure you enable pre-release packages (for example, in the
@@ -205,12 +228,12 @@ pre-release version (`{api.Version}`) of `{api.Id}`.";
             string auth =
 @"## Authentication
 
-When running on Google Cloud Platform, no action needs to be taken to authenticate.
+When running on Google Cloud, no action needs to be taken to authenticate.
 
 Otherwise, the simplest way of authenticating your API calls is to
-download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it.
-The credentials will automatically be used to authenticate. See the [Getting Started With
-Authentication](https://cloud.google.com/docs/authentication/getting-started) guide for more details.";
+set up Application Default Credentials.
+The credentials will automatically be used to authenticate. See 
+[Set up Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc) for more details.";
 
             var clients = GetClientClasses(api);
             string clientClasses = text.Contains("{{client-classes}}") ?
@@ -285,8 +308,9 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml).";
             {
                 return new List<string>();
             }
-            var layout = DirectoryLayout.ForApi(api.Id);
-            var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiLayout = rootLayout.CreateRepositoryApiLayout(api);
+            var packageSource = Path.Combine(apiLayout.ProductionDirectory);
             var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs").Concat(Directory.GetFiles(packageSource, "*Client.g.cs"));
             return sourceFiles
                 .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client

@@ -1,5 +1,81 @@
 # Version history
 
+## Version 3.9.0, released 2024-09-26
+
+No API surface changes; just dependency updates.
+
+## Version 3.8.0, released 2024-06-24
+
+### New features
+
+- Add dependency injection support for FirestoreDb ([commit 1a7e44b](https://github.com/googleapis/google-cloud-dotnet/commit/1a7e44bc3c0f0638977191bb48a4e993a75ece03))
+
+### Documentation improvements
+
+- Fix documentation for FirestoreDocumentUpdateTimestampAttribute ([commit 836de44](https://github.com/googleapis/google-cloud-dotnet/commit/836de44bedbcd0fc3b652b293b6aa1ab48e07e39))
+
+## Version 3.7.0, released 2024-05-03
+
+### Bug fixes
+
+- Retry more exceptions during transactions ([commit 027dd8b](https://github.com/googleapis/google-cloud-dotnet/commit/027dd8bc1fc2f638aa7305f996dc4a49ecc1ee41))
+
+## Version 3.6.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Throw if an must-exist precondition is explicitly set to false for update. ([commit 5cfc625](https://github.com/googleapis/google-cloud-dotnet/commit/5cfc625fe2edfd7a7c565bd020ccfc9332b41be6))
+
+## Version 3.5.1, released 2024-02-14
+
+### Bug fixes
+
+- Restore the use of "legacy" routing headers until the newer header is fully supported in the Firestore emulator. ([commit 6a5e369](https://github.com/googleapis/google-cloud-dotnet/commit/6a5e3696c4101fd1c33b5febdf4d75602415889c))
+
+## Version 3.5.0, released 2024-01-30
+
+### Bug fixes
+
+- Use FirestoreSettings.BatchGetDocuments for batch timing ([commit ad580e0](https://github.com/googleapis/google-cloud-dotnet/commit/ad580e003e4fab2864f1fd916e5bd5da971e2201))
+- Allow an explicit MustExist precondition for update. Fixes [issue 11361](https://github.com/googleapis/google-cloud-dotnet/issues/11361) ([commit f9f39a5](https://github.com/googleapis/google-cloud-dotnet/commit/f9f39a522e38969f20f32f3bde840148067bb090))
+
+### New features
+
+- Multiple database support promoted to GA
+- Add configurable retry timing for RunTransactionAsync ([commit 4b1acf8](https://github.com/googleapis/google-cloud-dotnet/commit/4b1acf8f9f0eddcaa7e19a7531a5511b2f0c1e05))
+- All BatchGetDocuments RPCs to have customized retry settiings (per-FirestoreDb) ([commit ad580e0](https://github.com/googleapis/google-cloud-dotnet/commit/ad580e003e4fab2864f1fd916e5bd5da971e2201))
+
+## Version 3.5.0-beta01, released 2023-11-29
+
+Note: this is a beta release as multiple database support in
+Firestore is still in preview. We don't *expect* the API surface to
+change between now and the final release, but we don't guarantee that.
+
+### New features
+
+- Expose multiple database support in FirestoreDb/FirestoreDbBuilder ([commit 4dd0318](https://github.com/googleapis/google-cloud-dotnet/commit/4dd0318f34b8763fb2dec2922ed8bc30213b7077))
+
+## Version 3.4.0, released 2023-10-04
+
+### Bug fixes
+
+- Dispose of the gRPC call in the WatchStream even if non-RpcExceptions are thrown ([commit f89ba63](https://github.com/googleapis/google-cloud-dotnet/commit/f89ba6306059149d4d7a6ee4458d9e88c4c99761))
+- Dispose of gRPC streaming calls appropriately ([commit 541d439](https://github.com/googleapis/google-cloud-dotnet/commit/541d43955ebde4b536d70cfe70d802ddb6703e6a))
+- Simple disposals within Firestore ([commit cdc22d2](https://github.com/googleapis/google-cloud-dotnet/commit/cdc22d28a2605a43f2efec54c947f47c7e4adc24))
+
+### New features
+
+- Add sum and average aggregates ([commit 9a8bfd5](https://github.com/googleapis/google-cloud-dotnet/commit/9a8bfd50c29e8bd133e1f92cb62c9b5bb05ef436))
+
+### Documentation improvements
+
+- Change Google Cloud Platform to Google Cloud in handwritten code ([commit cef5f43](https://github.com/googleapis/google-cloud-dotnet/commit/cef5f43dd2dc2817d091a398ac4620a357d535c5))
+
+## Version 3.3.0, released 2023-05-03
+
+No API surface changes; just dependency updates.
+
 ## Version 3.2.0, released 2023-03-22
 
 ### New features

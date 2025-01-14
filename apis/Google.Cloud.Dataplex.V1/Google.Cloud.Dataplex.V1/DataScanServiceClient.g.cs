@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataplex.V1
 {
@@ -61,6 +61,7 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanSettings = existing.RunDataScanSettings;
             GetDataScanJobSettings = existing.GetDataScanJobSettings;
             ListDataScanJobsSettings = existing.ListDataScanJobsSettings;
+            GenerateDataQualityRulesSettings = existing.GenerateDataQualityRulesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -219,6 +220,19 @@ namespace Google.Cloud.Dataplex.V1
         public gaxgrpc::CallSettings ListDataScanJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataScanServiceClient.GenerateDataQualityRules</c> and
+        /// <c>DataScanServiceClient.GenerateDataQualityRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateDataQualityRulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -271,14 +285,14 @@ namespace Google.Cloud.Dataplex.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataScanServiceClient.Create(callInvoker, Settings, Logger);
+            return DataScanServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataScanServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataScanServiceClient.Create(callInvoker, Settings, Logger);
+            return DataScanServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -668,7 +682,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -676,7 +690,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataScan(new UpdateDataScanRequest
             {
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -688,7 +702,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -696,7 +710,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataScanAsync(new UpdateDataScanRequest
             {
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -708,7 +722,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1024,13 +1038,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScans(new ListDataScansRequest
+        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1051,13 +1074,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScansAsync(new ListDataScansRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1078,13 +1110,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScans(new ListDataScansRequest
+        public virtual gax::PagedEnumerable<ListDataScansResponse, DataScan> ListDataScans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScans.
@@ -1105,13 +1146,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScansAsync(new ListDataScansRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScansResponse, DataScan> ListDataScansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScansRequest request = new ListDataScansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Runs an on-demand execution of a DataScan
@@ -1280,7 +1330,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1297,7 +1347,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1314,7 +1364,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1328,7 +1378,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1345,7 +1395,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1362,7 +1412,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
@@ -1408,13 +1458,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobs(new ListDataScanJobsRequest
+        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1435,13 +1494,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobsAsync(new ListDataScanJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1462,13 +1530,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobs(new ListDataScanJobsRequest
+        public virtual gax::PagedEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobs(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists DataScanJobs under the given DataScan.
@@ -1489,13 +1566,121 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataScanJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataScanJobsAsync(new ListDataScanJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> ListDataScanJobsAsync(DataScanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataScanJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateDataQualityRulesResponse GenerateDataQualityRules(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, st::CancellationToken cancellationToken) =>
+            GenerateDataQualityRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateDataQualityRulesResponse GenerateDataQualityRules(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateDataQualityRules(new GenerateDataQualityRulesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateDataQualityRulesAsync(new GenerateDataQualityRulesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name must be one of the following:
+        /// 
+        /// * The name of a data scan with at least one successful, completed data
+        /// profiling job
+        /// * The name of a successful, completed data profiling job (a data scan job
+        /// where the job type is data profiling)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(string name, st::CancellationToken cancellationToken) =>
+            GenerateDataQualityRulesAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataScanService client wrapper implementation, for convenient use.</summary>
@@ -1522,6 +1707,8 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> _callListDataScanJobs;
 
+        private readonly gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> _callGenerateDataQualityRules;
+
         /// <summary>
         /// Constructs a client wrapper for the DataScanService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1532,7 +1719,11 @@ namespace Google.Cloud.Dataplex.V1
         {
             GrpcClient = grpcClient;
             DataScanServiceSettings effectiveSettings = settings ?? DataScanServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDataScanOperationsSettings, logger);
             UpdateDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDataScanOperationsSettings, logger);
             DeleteDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataScanOperationsSettings, logger);
@@ -1562,6 +1753,9 @@ namespace Google.Cloud.Dataplex.V1
             _callListDataScanJobs = clientHelper.BuildApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse>("ListDataScanJobs", grpcClient.ListDataScanJobsAsync, grpcClient.ListDataScanJobs, effectiveSettings.ListDataScanJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataScanJobs);
             Modify_ListDataScanJobsApiCall(ref _callListDataScanJobs);
+            _callGenerateDataQualityRules = clientHelper.BuildApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse>("GenerateDataQualityRules", grpcClient.GenerateDataQualityRulesAsync, grpcClient.GenerateDataQualityRules, effectiveSettings.GenerateDataQualityRulesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGenerateDataQualityRules);
+            Modify_GenerateDataQualityRulesApiCall(ref _callGenerateDataQualityRules);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1582,6 +1776,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobApiCall(ref gaxgrpc::ApiCall<GetDataScanJobRequest, DataScanJob> call);
 
         partial void Modify_ListDataScanJobsApiCall(ref gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> call);
+
+        partial void Modify_GenerateDataQualityRulesApiCall(ref gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> call);
 
         partial void OnConstruction(DataScanService.DataScanServiceClient grpcClient, DataScanServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1609,6 +1805,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobRequest(ref GetDataScanJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataScanJobsRequest(ref ListDataScanJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateDataQualityRulesRequest(ref GenerateDataQualityRulesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateDataScan</c>.</summary>
         public override lro::OperationsClient CreateDataScanOperationsClient { get; }
@@ -1809,6 +2007,36 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_ListDataScanJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataScanJobsRequest, ListDataScanJobsResponse, DataScanJob>(_callListDataScanJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateDataQualityRulesResponse GenerateDataQualityRules(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateDataQualityRulesRequest(ref request, ref callSettings);
+            return _callGenerateDataQualityRules.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates recommended data quality rules based on the results of a data
+        /// profiling scan.
+        /// 
+        /// Use the recommendations to build rules for a data quality scan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateDataQualityRulesRequest(ref request, ref callSettings);
+            return _callGenerateDataQualityRules.Async(request, callSettings);
         }
     }
 

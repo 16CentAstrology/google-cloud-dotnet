@@ -26,9 +26,9 @@ namespace Google.Cloud.ServiceUsage.V1 {
           string.Concat(
             "Ci1nb29nbGUvYXBpL3NlcnZpY2V1c2FnZS92MS9zZXJ2aWNldXNhZ2UucHJv",
             "dG8SGmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvGipnb29nbGUvYXBpL3NlcnZpY2V1c2FnZS92MS9y",
-            "ZXNvdXJjZXMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
-            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90byIkChRFbmFibGVTZXJ2",
+            "bm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxoqZ29v",
+            "Z2xlL2FwaS9zZXJ2aWNldXNhZ2UvdjEvcmVzb3VyY2VzLnByb3RvGiNnb29n",
+            "bGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90byIkChRFbmFibGVTZXJ2",
             "aWNlUmVxdWVzdBIMCgRuYW1lGAEgASgJIk0KFUVuYWJsZVNlcnZpY2VSZXNw",
             "b25zZRI0CgdzZXJ2aWNlGAEgASgLMiMuZ29vZ2xlLmFwaS5zZXJ2aWNldXNh",
             "Z2UudjEuU2VydmljZSKSAgoVRGlzYWJsZVNlcnZpY2VSZXF1ZXN0EgwKBG5h",
@@ -56,14 +56,14 @@ namespace Google.Cloud.ServiceUsage.V1 {
             "c2USNQoIc2VydmljZXMYASADKAsyIy5nb29nbGUuYXBpLnNlcnZpY2V1c2Fn",
             "ZS52MS5TZXJ2aWNlMugJCgxTZXJ2aWNlVXNhZ2USugEKDUVuYWJsZVNlcnZp",
             "Y2USMC5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MS5FbmFibGVTZXJ2aWNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iWILT5JMC",
-            "JSIgL3YxL3tuYW1lPSovKi9zZXJ2aWNlcy8qfTplbmFibGU6ASrKQSoKFUVu",
-            "YWJsZVNlcnZpY2VSZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGESvgEKDkRp",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iWMpBKgoV",
+            "RW5hYmxlU2VydmljZVJlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMC",
+            "JSIgL3YxL3tuYW1lPSovKi9zZXJ2aWNlcy8qfTplbmFibGU6ASoSvgEKDkRp",
             "c2FibGVTZXJ2aWNlEjEuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuRGlz",
             "YWJsZVNlcnZpY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJagtPkkwImIiEvdjEve25hbWU9Ki8qL3NlcnZpY2VzLyp9OmRpc2Fi",
-            "bGU6ASrKQSsKFkRpc2FibGVTZXJ2aWNlUmVzcG9uc2USEU9wZXJhdGlvbk1l",
-            "dGFkYXRhEoMBCgpHZXRTZXJ2aWNlEi0uZ29vZ2xlLmFwaS5zZXJ2aWNldXNh",
+            "dGlvbiJaykErChZEaXNhYmxlU2VydmljZVJlc3BvbnNlEhFPcGVyYXRpb25N",
+            "ZXRhZGF0YYLT5JMCJiIhL3YxL3tuYW1lPSovKi9zZXJ2aWNlcy8qfTpkaXNh",
+            "YmxlOgEqEoMBCgpHZXRTZXJ2aWNlEi0uZ29vZ2xlLmFwaS5zZXJ2aWNldXNh",
             "Z2UudjEuR2V0U2VydmljZVJlcXVlc3QaIy5nb29nbGUuYXBpLnNlcnZpY2V1",
             "c2FnZS52MS5TZXJ2aWNlIiGC0+STAhsSGS92MS97bmFtZT0qLyovc2Vydmlj",
             "ZXMvKn0SlAEKDExpc3RTZXJ2aWNlcxIvLmdvb2dsZS5hcGkuc2VydmljZXVz",
@@ -71,10 +71,10 @@ namespace Google.Cloud.ServiceUsage.V1 {
             "Y2V1c2FnZS52MS5MaXN0U2VydmljZXNSZXNwb25zZSIhgtPkkwIbEhkvdjEv",
             "e3BhcmVudD0qLyp9L3NlcnZpY2VzEtEBChNCYXRjaEVuYWJsZVNlcnZpY2Vz",
             "EjYuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuQmF0Y2hFbmFibGVTZXJ2",
-            "aWNlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImOC",
-            "0+STAioiJS92MS97cGFyZW50PSovKn0vc2VydmljZXM6YmF0Y2hFbmFibGU6",
-            "ASrKQTAKG0JhdGNoRW5hYmxlU2VydmljZXNSZXNwb25zZRIRT3BlcmF0aW9u",
-            "TWV0YWRhdGESqQEKEEJhdGNoR2V0U2VydmljZXMSMy5nb29nbGUuYXBpLnNl",
+            "aWNlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImPK",
+            "QTAKG0JhdGNoRW5hYmxlU2VydmljZXNSZXNwb25zZRIRT3BlcmF0aW9uTWV0",
+            "YWRhdGGC0+STAioiJS92MS97cGFyZW50PSovKn0vc2VydmljZXM6YmF0Y2hF",
+            "bmFibGU6ASoSqQEKEEJhdGNoR2V0U2VydmljZXMSMy5nb29nbGUuYXBpLnNl",
             "cnZpY2V1c2FnZS52MS5CYXRjaEdldFNlcnZpY2VzUmVxdWVzdBo0Lmdvb2ds",
             "ZS5hcGkuc2VydmljZXVzYWdlLnYxLkJhdGNoR2V0U2VydmljZXNSZXNwb25z",
             "ZSIqgtPkkwIkEiIvdjEve3BhcmVudD0qLyp9L3NlcnZpY2VzOmJhdGNoR2V0",
@@ -89,7 +89,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
             "b3VkXFNlcnZpY2VVc2FnZVxWMeoCH0dvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VV",
             "c2FnZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ServiceUsage.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ServiceUsage.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.EnableServiceRequest), global::Google.Cloud.ServiceUsage.V1.EnableServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.EnableServiceResponse), global::Google.Cloud.ServiceUsage.V1.EnableServiceResponse.Parser, new[]{ "Service" }, null, null, null, null),
@@ -111,6 +111,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `EnableService` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableServiceRequest : pb::IMessage<EnableServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -318,6 +319,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// This response message is assigned to the `response` field of the returned
   /// Operation when that operation is done.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableServiceResponse : pb::IMessage<EnableServiceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -522,6 +524,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `DisableService` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableServiceRequest : pb::IMessage<DisableServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -838,6 +841,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// This response message is assigned to the `response` field of the returned
   /// Operation when that operation is done.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableServiceResponse : pb::IMessage<DisableServiceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1042,6 +1046,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `GetService` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceRequest : pb::IMessage<GetServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1241,6 +1246,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `ListServices` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1563,6 +1569,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Response message for the `ListServices` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1788,6 +1795,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `BatchEnableServices` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchEnableServicesRequest : pb::IMessage<BatchEnableServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2029,6 +2037,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// This response message is assigned to the `response` field of the returned
   /// Operation when that operation is done.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchEnableServicesResponse : pb::IMessage<BatchEnableServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2246,6 +2255,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
       /// <summary>
       /// Provides error messages for the failing services.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EnableFailure : pb::IMessage<EnableFailure>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2486,6 +2496,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Request message for the `BatchGetServices` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetServicesRequest : pb::IMessage<BatchGetServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2719,6 +2730,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// Response message for the `BatchGetServices` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetServicesResponse : pb::IMessage<BatchGetServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

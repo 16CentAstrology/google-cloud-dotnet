@@ -26,99 +26,111 @@ namespace Google.Cloud.Retail.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcmV0YWlsL3YyL2NvbW1vbi5wcm90bxIWZ29vZ2xl",
             "LmNsb3VkLnJldGFpbC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKwAgoJQ29u",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLJAgoJQ29u",
             "ZGl0aW9uEkAKC3F1ZXJ5X3Rlcm1zGAEgAygLMisuZ29vZ2xlLmNsb3VkLnJl",
             "dGFpbC52Mi5Db25kaXRpb24uUXVlcnlUZXJtEkYKEWFjdGl2ZV90aW1lX3Jh",
             "bmdlGAMgAygLMisuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Db25kaXRpb24u",
-            "VGltZVJhbmdlGi4KCVF1ZXJ5VGVybRINCgV2YWx1ZRgBIAEoCRISCgpmdWxs",
-            "X21hdGNoGAIgASgIGmkKCVRpbWVSYW5nZRIuCgpzdGFydF90aW1lGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi/QgKBFJ1bGUSQAoMYm9v",
-            "c3RfYWN0aW9uGAIgASgLMiguZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SdWxl",
-            "LkJvb3N0QWN0aW9uSAASRgoPcmVkaXJlY3RfYWN0aW9uGAMgASgLMisuZ29v",
-            "Z2xlLmNsb3VkLnJldGFpbC52Mi5SdWxlLlJlZGlyZWN0QWN0aW9uSAASUwoW",
-            "b25ld2F5X3N5bm9ueW1zX2FjdGlvbhgGIAEoCzIxLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuUnVsZS5PbmV3YXlTeW5vbnltc0FjdGlvbkgAElQKF2RvX25v",
-            "dF9hc3NvY2lhdGVfYWN0aW9uGAcgASgLMjEuZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5SdWxlLkRvTm90QXNzb2NpYXRlQWN0aW9uSAASTAoScmVwbGFjZW1l",
-            "bnRfYWN0aW9uGAggASgLMi4uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SdWxl",
-            "LlJlcGxhY2VtZW50QWN0aW9uSAASQgoNaWdub3JlX2FjdGlvbhgJIAEoCzIp",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5JZ25vcmVBY3Rpb25IABJC",
-            "Cg1maWx0ZXJfYWN0aW9uGAogASgLMikuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5SdWxlLkZpbHRlckFjdGlvbkgAElMKFnR3b3dheV9zeW5vbnltc19hY3Rp",
-            "b24YCyABKAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlJ1bGUuVHdvd2F5",
-            "U3lub255bXNBY3Rpb25IABI5Cgljb25kaXRpb24YASABKAsyIS5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLkNvbmRpdGlvbkID4EECGjUKC0Jvb3N0QWN0aW9u",
-            "Eg0KBWJvb3N0GAEgASgCEhcKD3Byb2R1Y3RzX2ZpbHRlchgCIAEoCRoeCgxG",
-            "aWx0ZXJBY3Rpb24SDgoGZmlsdGVyGAEgASgJGiYKDlJlZGlyZWN0QWN0aW9u",
-            "EhQKDHJlZGlyZWN0X3VyaRgBIAEoCRooChRUd293YXlTeW5vbnltc0FjdGlv",
-            "bhIQCghzeW5vbnltcxgBIAMoCRpTChRPbmV3YXlTeW5vbnltc0FjdGlvbhIT",
-            "CgtxdWVyeV90ZXJtcxgDIAMoCRIQCghzeW5vbnltcxgEIAMoCRIUCgxvbmV3",
-            "YXlfdGVybXMYAiADKAkaWgoURG9Ob3RBc3NvY2lhdGVBY3Rpb24SEwoLcXVl",
-            "cnlfdGVybXMYAiADKAkSHgoWZG9fbm90X2Fzc29jaWF0ZV90ZXJtcxgDIAMo",
-            "CRINCgV0ZXJtcxgBIAMoCRpQChFSZXBsYWNlbWVudEFjdGlvbhITCgtxdWVy",
-            "eV90ZXJtcxgCIAMoCRIYChByZXBsYWNlbWVudF90ZXJtGAMgASgJEgwKBHRl",
-            "cm0YASABKAkaJAoMSWdub3JlQWN0aW9uEhQKDGlnbm9yZV90ZXJtcxgBIAMo",
-            "CUIICgZhY3Rpb24iLwoIQXVkaWVuY2USDwoHZ2VuZGVycxgBIAMoCRISCgph",
-            "Z2VfZ3JvdXBzGAIgAygJIjMKCUNvbG9ySW5mbxIWCg5jb2xvcl9mYW1pbGll",
-            "cxgBIAMoCRIOCgZjb2xvcnMYAiADKAkihgEKD0N1c3RvbUF0dHJpYnV0ZRIM",
-            "CgR0ZXh0GAEgAygJEg8KB251bWJlcnMYAiADKAESGwoKc2VhcmNoYWJsZRgD",
-            "IAEoCEICGAFIAIgBARIaCglpbmRleGFibGUYBCABKAhCAhgBSAGIAQFCDQoL",
-            "X3NlYXJjaGFibGVCDAoKX2luZGV4YWJsZSIyCg9GdWxmaWxsbWVudEluZm8S",
-            "DAoEdHlwZRgBIAEoCRIRCglwbGFjZV9pZHMYAiADKAkiOAoFSW1hZ2USEAoD",
-            "dXJpGAEgASgJQgPgQQISDgoGaGVpZ2h0GAIgASgFEg0KBXdpZHRoGAMgASgF",
-            "IngKCEludGVydmFsEhEKB21pbmltdW0YASABKAFIABIbChFleGNsdXNpdmVf",
-            "bWluaW11bRgCIAEoAUgAEhEKB21heGltdW0YAyABKAFIARIbChFleGNsdXNp",
-            "dmVfbWF4aW11bRgEIAEoAUgBQgUKA21pbkIFCgNtYXgiiQMKCVByaWNlSW5m",
-            "bxIVCg1jdXJyZW5jeV9jb2RlGAEgASgJEg0KBXByaWNlGAIgASgCEhYKDm9y",
-            "aWdpbmFsX3ByaWNlGAMgASgCEgwKBGNvc3QYBCABKAISOAoUcHJpY2VfZWZm",
-            "ZWN0aXZlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjUKEXByaWNlX2V4cGlyZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBJGCgtwcmljZV9yYW5nZRgHIAEoCzIsLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuUHJpY2VJbmZvLlByaWNlUmFuZ2VCA+BBAxp3CgpQcmlj",
-            "ZVJhbmdlEi8KBXByaWNlGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbnRlcnZhbBI4Cg5vcmlnaW5hbF9wcmljZRgCIAEoCzIgLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW50ZXJ2YWwiUAoGUmF0aW5nEhQKDHJhdGluZ19j",
-            "b3VudBgBIAEoBRIWCg5hdmVyYWdlX3JhdGluZxgCIAEoAhIYChByYXRpbmdf",
-            "aGlzdG9ncmFtGAMgAygFImAKCFVzZXJJbmZvEg8KB3VzZXJfaWQYASABKAkS",
-            "EgoKaXBfYWRkcmVzcxgCIAEoCRISCgp1c2VyX2FnZW50GAMgASgJEhsKE2Rp",
-            "cmVjdF91c2VyX3JlcXVlc3QYBCABKAgioQIKDkxvY2FsSW52ZW50b3J5EhAK",
-            "CHBsYWNlX2lkGAEgASgJEjUKCnByaWNlX2luZm8YAiABKAsyIS5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlByaWNlSW5mbxJKCgphdHRyaWJ1dGVzGAMgAygL",
-            "MjYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Mb2NhbEludmVudG9yeS5BdHRy",
-            "aWJ1dGVzRW50cnkSHgoRZnVsZmlsbG1lbnRfdHlwZXMYBCADKAlCA+BBBBpa",
-            "Cg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgL",
-            "MicuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRyaWJ1dGU6AjgB",
-            "KoYBChRBdHRyaWJ1dGVDb25maWdMZXZlbBImCiJBVFRSSUJVVEVfQ09ORklH",
-            "X0xFVkVMX1VOU1BFQ0lGSUVEEAASIgoeUFJPRFVDVF9MRVZFTF9BVFRSSUJV",
-            "VEVfQ09ORklHEAESIgoeQ0FUQUxPR19MRVZFTF9BVFRSSUJVVEVfQ09ORklH",
-            "EAIqaQoMU29sdXRpb25UeXBlEh0KGVNPTFVUSU9OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIgChxTT0xVVElPTl9UWVBFX1JFQ09NTUVOREFUSU9OEAESGAoUU09M",
-            "VVRJT05fVFlQRV9TRUFSQ0gQAiqhAQoeUmVjb21tZW5kYXRpb25zRmlsdGVy",
-            "aW5nT3B0aW9uEjAKLFJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfT1BUSU9O",
-            "X1VOU1BFQ0lGSUVEEAASJgoiUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19E",
-            "SVNBQkxFRBABEiUKIVJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfRU5BQkxF",
-            "RBADKosBChVTZWFyY2hTb2x1dGlvblVzZUNhc2USKAokU0VBUkNIX1NPTFVU",
-            "SU9OX1VTRV9DQVNFX1VOU1BFQ0lGSUVEEAASIwofU0VBUkNIX1NPTFVUSU9O",
-            "X1VTRV9DQVNFX1NFQVJDSBABEiMKH1NFQVJDSF9TT0xVVElPTl9VU0VfQ0FT",
-            "RV9CUk9XU0UQAkK2AQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCC0Nv",
-            "bW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYy",
-            "L3JldGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJl",
-            "dGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNs",
-            "b3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "VGltZVJhbmdlEhcKD3BhZ2VfY2F0ZWdvcmllcxgEIAMoCRouCglRdWVyeVRl",
+            "cm0SDQoFdmFsdWUYASABKAkSEgoKZnVsbF9tYXRjaBgCIAEoCBppCglUaW1l",
+            "UmFuZ2USLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIqUMCgRSdWxlEkAKDGJvb3N0X2FjdGlvbhgCIAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5Cb29zdEFjdGlvbkgAEkYKD3Jl",
+            "ZGlyZWN0X2FjdGlvbhgDIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "UnVsZS5SZWRpcmVjdEFjdGlvbkgAElMKFm9uZXdheV9zeW5vbnltc19hY3Rp",
+            "b24YBiABKAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlJ1bGUuT25ld2F5",
+            "U3lub255bXNBY3Rpb25IABJUChdkb19ub3RfYXNzb2NpYXRlX2FjdGlvbhgH",
+            "IAEoCzIxLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5Eb05vdEFzc29j",
+            "aWF0ZUFjdGlvbkgAEkwKEnJlcGxhY2VtZW50X2FjdGlvbhgIIAEoCzIuLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5SZXBsYWNlbWVudEFjdGlvbkgA",
+            "EkIKDWlnbm9yZV9hY3Rpb24YCSABKAsyKS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlJ1bGUuSWdub3JlQWN0aW9uSAASQgoNZmlsdGVyX2FjdGlvbhgKIAEo",
+            "CzIpLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5GaWx0ZXJBY3Rpb25I",
+            "ABJTChZ0d293YXlfc3lub255bXNfYWN0aW9uGAsgASgLMjEuZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5SdWxlLlR3b3dheVN5bm9ueW1zQWN0aW9uSAASWAoZ",
+            "Zm9yY2VfcmV0dXJuX2ZhY2V0X2FjdGlvbhgMIAEoCzIzLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuUnVsZS5Gb3JjZVJldHVybkZhY2V0QWN0aW9uSAASTQoT",
+            "cmVtb3ZlX2ZhY2V0X2FjdGlvbhgNIAEoCzIuLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuUnVsZS5SZW1vdmVGYWNldEFjdGlvbkgAEjkKCWNvbmRpdGlvbhgB",
+            "IAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29uZGl0aW9uQgPgQQIa",
+            "NQoLQm9vc3RBY3Rpb24SDQoFYm9vc3QYASABKAISFwoPcHJvZHVjdHNfZmls",
+            "dGVyGAIgASgJGh4KDEZpbHRlckFjdGlvbhIOCgZmaWx0ZXIYASABKAkaJgoO",
+            "UmVkaXJlY3RBY3Rpb24SFAoMcmVkaXJlY3RfdXJpGAEgASgJGigKFFR3b3dh",
+            "eVN5bm9ueW1zQWN0aW9uEhAKCHN5bm9ueW1zGAEgAygJGlMKFE9uZXdheVN5",
+            "bm9ueW1zQWN0aW9uEhMKC3F1ZXJ5X3Rlcm1zGAMgAygJEhAKCHN5bm9ueW1z",
+            "GAQgAygJEhQKDG9uZXdheV90ZXJtcxgCIAMoCRpaChREb05vdEFzc29jaWF0",
+            "ZUFjdGlvbhITCgtxdWVyeV90ZXJtcxgCIAMoCRIeChZkb19ub3RfYXNzb2Np",
+            "YXRlX3Rlcm1zGAMgAygJEg0KBXRlcm1zGAEgAygJGlAKEVJlcGxhY2VtZW50",
+            "QWN0aW9uEhMKC3F1ZXJ5X3Rlcm1zGAIgAygJEhgKEHJlcGxhY2VtZW50X3Rl",
+            "cm0YAyABKAkSDAoEdGVybRgBIAEoCRokCgxJZ25vcmVBY3Rpb24SFAoMaWdu",
+            "b3JlX3Rlcm1zGAEgAygJGs4BChZGb3JjZVJldHVybkZhY2V0QWN0aW9uEm8K",
+            "GmZhY2V0X3Bvc2l0aW9uX2FkanVzdG1lbnRzGAEgAygLMksuZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5SdWxlLkZvcmNlUmV0dXJuRmFjZXRBY3Rpb24uRmFj",
+            "ZXRQb3NpdGlvbkFkanVzdG1lbnQaQwoXRmFjZXRQb3NpdGlvbkFkanVzdG1l",
+            "bnQSFgoOYXR0cmlidXRlX25hbWUYASABKAkSEAoIcG9zaXRpb24YAiABKAUa",
+            "LAoRUmVtb3ZlRmFjZXRBY3Rpb24SFwoPYXR0cmlidXRlX25hbWVzGAEgAygJ",
+            "QggKBmFjdGlvbiIvCghBdWRpZW5jZRIPCgdnZW5kZXJzGAEgAygJEhIKCmFn",
+            "ZV9ncm91cHMYAiADKAkiMwoJQ29sb3JJbmZvEhYKDmNvbG9yX2ZhbWlsaWVz",
+            "GAEgAygJEg4KBmNvbG9ycxgCIAMoCSKGAQoPQ3VzdG9tQXR0cmlidXRlEgwK",
+            "BHRleHQYASADKAkSDwoHbnVtYmVycxgCIAMoARIbCgpzZWFyY2hhYmxlGAMg",
+            "ASgIQgIYAUgAiAEBEhoKCWluZGV4YWJsZRgEIAEoCEICGAFIAYgBAUINCgtf",
+            "c2VhcmNoYWJsZUIMCgpfaW5kZXhhYmxlIjIKD0Z1bGZpbGxtZW50SW5mbxIM",
+            "CgR0eXBlGAEgASgJEhEKCXBsYWNlX2lkcxgCIAMoCSI4CgVJbWFnZRIQCgN1",
+            "cmkYASABKAlCA+BBAhIOCgZoZWlnaHQYAiABKAUSDQoFd2lkdGgYAyABKAUi",
+            "eAoISW50ZXJ2YWwSEQoHbWluaW11bRgBIAEoAUgAEhsKEWV4Y2x1c2l2ZV9t",
+            "aW5pbXVtGAIgASgBSAASEQoHbWF4aW11bRgDIAEoAUgBEhsKEWV4Y2x1c2l2",
+            "ZV9tYXhpbXVtGAQgASgBSAFCBQoDbWluQgUKA21heCKJAwoJUHJpY2VJbmZv",
+            "EhUKDWN1cnJlbmN5X2NvZGUYASABKAkSDQoFcHJpY2UYAiABKAISFgoOb3Jp",
+            "Z2luYWxfcHJpY2UYAyABKAISDAoEY29zdBgEIAEoAhI4ChRwcmljZV9lZmZl",
+            "Y3RpdmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "NQoRcHJpY2VfZXhwaXJlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEkYKC3ByaWNlX3JhbmdlGAcgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5QcmljZUluZm8uUHJpY2VSYW5nZUID4EEDGncKClByaWNl",
+            "UmFuZ2USLwoFcHJpY2UYASABKAsyIC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LkludGVydmFsEjgKDm9yaWdpbmFsX3ByaWNlGAIgASgLMiAuZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5JbnRlcnZhbCJQCgZSYXRpbmcSFAoMcmF0aW5nX2Nv",
+            "dW50GAEgASgFEhYKDmF2ZXJhZ2VfcmF0aW5nGAIgASgCEhgKEHJhdGluZ19o",
+            "aXN0b2dyYW0YAyADKAUiYAoIVXNlckluZm8SDwoHdXNlcl9pZBgBIAEoCRIS",
+            "CgppcF9hZGRyZXNzGAIgASgJEhIKCnVzZXJfYWdlbnQYAyABKAkSGwoTZGly",
+            "ZWN0X3VzZXJfcmVxdWVzdBgEIAEoCCKhAgoOTG9jYWxJbnZlbnRvcnkSEAoI",
+            "cGxhY2VfaWQYASABKAkSNQoKcHJpY2VfaW5mbxgCIAEoCzIhLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuUHJpY2VJbmZvEkoKCmF0dHJpYnV0ZXMYAyADKAsy",
+            "Ni5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxvY2FsSW52ZW50b3J5LkF0dHJp",
+            "YnV0ZXNFbnRyeRIeChFmdWxmaWxsbWVudF90eXBlcxgEIAMoCUID4EEEGloK",
+            "D0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsy",
+            "Jy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAEq",
+            "hgEKFEF0dHJpYnV0ZUNvbmZpZ0xldmVsEiYKIkFUVFJJQlVURV9DT05GSUdf",
+            "TEVWRUxfVU5TUEVDSUZJRUQQABIiCh5QUk9EVUNUX0xFVkVMX0FUVFJJQlVU",
+            "RV9DT05GSUcQARIiCh5DQVRBTE9HX0xFVkVMX0FUVFJJQlVURV9DT05GSUcQ",
+            "AippCgxTb2x1dGlvblR5cGUSHQoZU09MVVRJT05fVFlQRV9VTlNQRUNJRklF",
+            "RBAAEiAKHFNPTFVUSU9OX1RZUEVfUkVDT01NRU5EQVRJT04QARIYChRTT0xV",
+            "VElPTl9UWVBFX1NFQVJDSBACKqEBCh5SZWNvbW1lbmRhdGlvbnNGaWx0ZXJp",
+            "bmdPcHRpb24SMAosUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19PUFRJT05f",
+            "VU5TUEVDSUZJRUQQABImCiJSRUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX0RJ",
+            "U0FCTEVEEAESJQohUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19FTkFCTEVE",
+            "EAMqiwEKFVNlYXJjaFNvbHV0aW9uVXNlQ2FzZRIoCiRTRUFSQ0hfU09MVVRJ",
+            "T05fVVNFX0NBU0VfVU5TUEVDSUZJRUQQABIjCh9TRUFSQ0hfU09MVVRJT05f",
+            "VVNFX0NBU0VfU0VBUkNIEAESIwofU0VBUkNIX1NPTFVUSU9OX1VTRV9DQVNF",
+            "X0JST1dTRRACQrYBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkILQ29t",
+            "bW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9yZXRhaWwvYXBpdjIv",
+            "cmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0",
+            "YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xv",
+            "dWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Retail.V2.AttributeConfigLevel), typeof(global::Google.Cloud.Retail.V2.SolutionType), typeof(global::Google.Cloud.Retail.V2.RecommendationsFilteringOption), typeof(global::Google.Cloud.Retail.V2.SearchSolutionUseCase), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition), global::Google.Cloud.Retail.V2.Condition.Parser, new[]{ "QueryTerms", "ActiveTimeRange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm), global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm.Parser, new[]{ "Value", "FullMatch" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition), global::Google.Cloud.Retail.V2.Condition.Parser, new[]{ "QueryTerms", "ActiveTimeRange", "PageCategories" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm), global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm.Parser, new[]{ "Value", "FullMatch" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.TimeRange), global::Google.Cloud.Retail.V2.Condition.Types.TimeRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule), global::Google.Cloud.Retail.V2.Rule.Parser, new[]{ "BoostAction", "RedirectAction", "OnewaySynonymsAction", "DoNotAssociateAction", "ReplacementAction", "IgnoreAction", "FilterAction", "TwowaySynonymsAction", "Condition" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.BoostAction), global::Google.Cloud.Retail.V2.Rule.Types.BoostAction.Parser, new[]{ "Boost", "ProductsFilter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule), global::Google.Cloud.Retail.V2.Rule.Parser, new[]{ "BoostAction", "RedirectAction", "OnewaySynonymsAction", "DoNotAssociateAction", "ReplacementAction", "IgnoreAction", "FilterAction", "TwowaySynonymsAction", "ForceReturnFacetAction", "RemoveFacetAction", "Condition" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.BoostAction), global::Google.Cloud.Retail.V2.Rule.Types.BoostAction.Parser, new[]{ "Boost", "ProductsFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.FilterAction), global::Google.Cloud.Retail.V2.Rule.Types.FilterAction.Parser, new[]{ "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.RedirectAction), global::Google.Cloud.Retail.V2.Rule.Types.RedirectAction.Parser, new[]{ "RedirectUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.TwowaySynonymsAction), global::Google.Cloud.Retail.V2.Rule.Types.TwowaySynonymsAction.Parser, new[]{ "Synonyms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.OnewaySynonymsAction), global::Google.Cloud.Retail.V2.Rule.Types.OnewaySynonymsAction.Parser, new[]{ "QueryTerms", "Synonyms", "OnewayTerms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.DoNotAssociateAction), global::Google.Cloud.Retail.V2.Rule.Types.DoNotAssociateAction.Parser, new[]{ "QueryTerms", "DoNotAssociateTerms", "Terms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ReplacementAction), global::Google.Cloud.Retail.V2.Rule.Types.ReplacementAction.Parser, new[]{ "QueryTerms", "ReplacementTerm", "Term" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction), global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction.Parser, new[]{ "IgnoreTerms" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction), global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction.Parser, new[]{ "IgnoreTerms" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction), global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Parser, new[]{ "FacetPositionAdjustments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment), global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment.Parser, new[]{ "AttributeName", "Position" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction), global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction.Parser, new[]{ "AttributeNames" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Audience), global::Google.Cloud.Retail.V2.Audience.Parser, new[]{ "Genders", "AgeGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ColorInfo), global::Google.Cloud.Retail.V2.ColorInfo.Parser, new[]{ "ColorFamilies", "Colors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CustomAttribute), global::Google.Cloud.Retail.V2.CustomAttribute.Parser, new[]{ "Text", "Numbers", "Searchable", "Indexable" }, new[]{ "Searchable", "Indexable" }, null, null, null),
@@ -226,6 +238,7 @@ namespace Google.Cloud.Retail.V2 {
   /// are set, then only items matching the product_filter for requests with a
   /// query matching the query terms wil get boosted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Condition : pb::IMessage<Condition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -262,6 +275,7 @@ namespace Google.Cloud.Retail.V2 {
     public Condition(Condition other) : this() {
       queryTerms_ = other.queryTerms_.Clone();
       activeTimeRange_ = other.activeTimeRange_.Clone();
+      pageCategories_ = other.pageCategories_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -303,6 +317,23 @@ namespace Google.Cloud.Retail.V2 {
       get { return activeTimeRange_; }
     }
 
+    /// <summary>Field number for the "page_categories" field.</summary>
+    public const int PageCategoriesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_pageCategories_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> pageCategories_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Used to support browse uses cases.
+    /// A list (up to 10 entries) of categories or departments.
+    /// The format should be the same as
+    /// [UserEvent.page_categories][google.cloud.retail.v2.UserEvent.page_categories];
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PageCategories {
+      get { return pageCategories_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -320,6 +351,7 @@ namespace Google.Cloud.Retail.V2 {
       }
       if(!queryTerms_.Equals(other.queryTerms_)) return false;
       if(!activeTimeRange_.Equals(other.activeTimeRange_)) return false;
+      if(!pageCategories_.Equals(other.pageCategories_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -329,6 +361,7 @@ namespace Google.Cloud.Retail.V2 {
       int hash = 1;
       hash ^= queryTerms_.GetHashCode();
       hash ^= activeTimeRange_.GetHashCode();
+      hash ^= pageCategories_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -349,6 +382,7 @@ namespace Google.Cloud.Retail.V2 {
     #else
       queryTerms_.WriteTo(output, _repeated_queryTerms_codec);
       activeTimeRange_.WriteTo(output, _repeated_activeTimeRange_codec);
+      pageCategories_.WriteTo(output, _repeated_pageCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -361,6 +395,7 @@ namespace Google.Cloud.Retail.V2 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       queryTerms_.WriteTo(ref output, _repeated_queryTerms_codec);
       activeTimeRange_.WriteTo(ref output, _repeated_activeTimeRange_codec);
+      pageCategories_.WriteTo(ref output, _repeated_pageCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -373,6 +408,7 @@ namespace Google.Cloud.Retail.V2 {
       int size = 0;
       size += queryTerms_.CalculateSize(_repeated_queryTerms_codec);
       size += activeTimeRange_.CalculateSize(_repeated_activeTimeRange_codec);
+      size += pageCategories_.CalculateSize(_repeated_pageCategories_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -387,6 +423,7 @@ namespace Google.Cloud.Retail.V2 {
       }
       queryTerms_.Add(other.queryTerms_);
       activeTimeRange_.Add(other.activeTimeRange_);
+      pageCategories_.Add(other.pageCategories_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -408,6 +445,10 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 26: {
             activeTimeRange_.AddEntriesFrom(input, _repeated_activeTimeRange_codec);
+            break;
+          }
+          case 34: {
+            pageCategories_.AddEntriesFrom(input, _repeated_pageCategories_codec);
             break;
           }
         }
@@ -433,6 +474,10 @@ namespace Google.Cloud.Retail.V2 {
             activeTimeRange_.AddEntriesFrom(ref input, _repeated_activeTimeRange_codec);
             break;
           }
+          case 34: {
+            pageCategories_.AddEntriesFrom(ref input, _repeated_pageCategories_codec);
+            break;
+          }
         }
       }
     }
@@ -446,6 +491,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// Query terms that we want to match on.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QueryTerm : pb::IMessage<QueryTerm>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -687,6 +733,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Used for time-dependent conditions.
       /// Example: Want to have rule applied for week long sale.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimeRange : pb::IMessage<TimeRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -950,6 +997,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Currently rules only work for [controls][google.cloud.retail.v2.Control] with
   /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rule : pb::IMessage<Rule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1009,6 +1057,12 @@ namespace Google.Cloud.Retail.V2 {
           break;
         case ActionOneofCase.TwowaySynonymsAction:
           TwowaySynonymsAction = other.TwowaySynonymsAction.Clone();
+          break;
+        case ActionOneofCase.ForceReturnFacetAction:
+          ForceReturnFacetAction = other.ForceReturnFacetAction.Clone();
+          break;
+        case ActionOneofCase.RemoveFacetAction:
+          RemoveFacetAction = other.RemoveFacetAction.Clone();
           break;
       }
 
@@ -1142,6 +1196,36 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "force_return_facet_action" field.</summary>
+    public const int ForceReturnFacetActionFieldNumber = 12;
+    /// <summary>
+    /// Force returns an attribute as a facet in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction ForceReturnFacetAction {
+      get { return actionCase_ == ActionOneofCase.ForceReturnFacetAction ? (global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction) action_ : null; }
+      set {
+        action_ = value;
+        actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.ForceReturnFacetAction;
+      }
+    }
+
+    /// <summary>Field number for the "remove_facet_action" field.</summary>
+    public const int RemoveFacetActionFieldNumber = 13;
+    /// <summary>
+    /// Remove an attribute as a facet in the request (if present).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction RemoveFacetAction {
+      get { return actionCase_ == ActionOneofCase.RemoveFacetAction ? (global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction) action_ : null; }
+      set {
+        action_ = value;
+        actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.RemoveFacetAction;
+      }
+    }
+
     /// <summary>Field number for the "condition" field.</summary>
     public const int ConditionFieldNumber = 1;
     private global::Google.Cloud.Retail.V2.Condition condition_;
@@ -1170,6 +1254,8 @@ namespace Google.Cloud.Retail.V2 {
       IgnoreAction = 9,
       FilterAction = 10,
       TwowaySynonymsAction = 11,
+      ForceReturnFacetAction = 12,
+      RemoveFacetAction = 13,
     }
     private ActionOneofCase actionCase_ = ActionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1208,6 +1294,8 @@ namespace Google.Cloud.Retail.V2 {
       if (!object.Equals(IgnoreAction, other.IgnoreAction)) return false;
       if (!object.Equals(FilterAction, other.FilterAction)) return false;
       if (!object.Equals(TwowaySynonymsAction, other.TwowaySynonymsAction)) return false;
+      if (!object.Equals(ForceReturnFacetAction, other.ForceReturnFacetAction)) return false;
+      if (!object.Equals(RemoveFacetAction, other.RemoveFacetAction)) return false;
       if (!object.Equals(Condition, other.Condition)) return false;
       if (ActionCase != other.ActionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1225,6 +1313,8 @@ namespace Google.Cloud.Retail.V2 {
       if (actionCase_ == ActionOneofCase.IgnoreAction) hash ^= IgnoreAction.GetHashCode();
       if (actionCase_ == ActionOneofCase.FilterAction) hash ^= FilterAction.GetHashCode();
       if (actionCase_ == ActionOneofCase.TwowaySynonymsAction) hash ^= TwowaySynonymsAction.GetHashCode();
+      if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) hash ^= ForceReturnFacetAction.GetHashCode();
+      if (actionCase_ == ActionOneofCase.RemoveFacetAction) hash ^= RemoveFacetAction.GetHashCode();
       if (condition_ != null) hash ^= Condition.GetHashCode();
       hash ^= (int) actionCase_;
       if (_unknownFields != null) {
@@ -1281,6 +1371,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(TwowaySynonymsAction);
       }
+      if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ForceReturnFacetAction);
+      }
+      if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RemoveFacetAction);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1327,6 +1425,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(TwowaySynonymsAction);
       }
+      if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ForceReturnFacetAction);
+      }
+      if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RemoveFacetAction);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1360,6 +1466,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (actionCase_ == ActionOneofCase.TwowaySynonymsAction) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TwowaySynonymsAction);
+      }
+      if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForceReturnFacetAction);
+      }
+      if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveFacetAction);
       }
       if (condition_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
@@ -1430,6 +1542,18 @@ namespace Google.Cloud.Retail.V2 {
             TwowaySynonymsAction = new global::Google.Cloud.Retail.V2.Rule.Types.TwowaySynonymsAction();
           }
           TwowaySynonymsAction.MergeFrom(other.TwowaySynonymsAction);
+          break;
+        case ActionOneofCase.ForceReturnFacetAction:
+          if (ForceReturnFacetAction == null) {
+            ForceReturnFacetAction = new global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction();
+          }
+          ForceReturnFacetAction.MergeFrom(other.ForceReturnFacetAction);
+          break;
+        case ActionOneofCase.RemoveFacetAction:
+          if (RemoveFacetAction == null) {
+            RemoveFacetAction = new global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction();
+          }
+          RemoveFacetAction.MergeFrom(other.RemoveFacetAction);
           break;
       }
 
@@ -1527,6 +1651,24 @@ namespace Google.Cloud.Retail.V2 {
             TwowaySynonymsAction = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction();
+            if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) {
+              subBuilder.MergeFrom(ForceReturnFacetAction);
+            }
+            input.ReadMessage(subBuilder);
+            ForceReturnFacetAction = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction();
+            if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
+              subBuilder.MergeFrom(RemoveFacetAction);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveFacetAction = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1621,6 +1763,24 @@ namespace Google.Cloud.Retail.V2 {
             TwowaySynonymsAction = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction();
+            if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) {
+              subBuilder.MergeFrom(ForceReturnFacetAction);
+            }
+            input.ReadMessage(subBuilder);
+            ForceReturnFacetAction = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction();
+            if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
+              subBuilder.MergeFrom(RemoveFacetAction);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveFacetAction = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1634,6 +1794,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// A boost action to apply to results matching condition specified above.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BoostAction : pb::IMessage<BoostAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1897,20 +2058,23 @@ namespace Google.Cloud.Retail.V2 {
 
       /// <summary>
       /// * Rule Condition:
-      ///   - No
-      ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
-      ///   provided is a global match.
-      ///   - 1 or more
-      ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
-      ///   provided are combined with OR operator.
+      ///     - No
+      ///     [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
+      ///     provided is a global match.
+      ///     - 1 or more
+      ///     [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
+      ///     provided are combined with OR operator.
+      ///
       /// * Action Input: The request query and filter that are applied to the
       /// retrieved products, in addition to any filters already provided with the
       /// SearchRequest. The AND operator is used to combine the query's existing
       /// filters with the filter rule(s). NOTE: May result in 0 results when
       /// filters conflict.
+      ///
       /// * Action Result: Filters the returned objects to be ONLY those that passed
       /// the filter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FilterAction : pb::IMessage<FilterAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1963,10 +2127,9 @@ namespace Google.Cloud.Retail.V2 {
         ///
         /// * [filter][google.cloud.retail.v2.Rule.FilterAction.filter] must be set.
         /// * Filter syntax is identical to
-        /// [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter]. See
+        /// [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter]. For
         /// more
-        ///   details at the Retail Search
-        ///   [user guide](/retail/search/docs/filter-and-order#filter).
+        ///   information, see [Filter](/retail/docs/filter-and-order#filter).
         /// * To filter products with product ID "product_1" or "product_2", and
         /// color
         ///   "Red" or "Blue":&lt;br>
@@ -2120,11 +2283,12 @@ namespace Google.Cloud.Retail.V2 {
       /// Redirects a shopper to a specific page.
       ///
       /// * Rule Condition:
-      ///   - Must specify
+      ///   Must specify
       ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms].
       /// * Action Input: Request Query
       /// * Action Result: Redirects shopper to provided uri.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RedirectAction : pb::IMessage<RedirectAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2324,6 +2488,7 @@ namespace Google.Cloud.Retail.V2 {
       ///  * "sneakers" will use a synonym of "shoes".
       ///  * "shoes" will use a synonym of "sneakers".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TwowaySynonymsAction : pb::IMessage<TwowaySynonymsAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2514,6 +2679,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Example: "sneakers" will use a synonym of "shoes".
       /// "shoes" will not use a synonym of "sneakers".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OnewaySynonymsAction : pb::IMessage<OnewaySynonymsAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2763,6 +2929,7 @@ namespace Google.Cloud.Retail.V2 {
       /// search.
       /// Example: Don't associate "gShoe" and "cheap".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DoNotAssociateAction : pb::IMessage<DoNotAssociateAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3010,6 +3177,7 @@ namespace Google.Cloud.Retail.V2 {
       /// specified. All `query_terms` will be replaced with the replacement term.
       /// Example: Replace "gShoe" with "google shoe".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReplacementAction : pb::IMessage<ReplacementAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3277,6 +3445,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Prevents a term in the query from being used in search.
       /// Example: Don't search for "shoddy".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IgnoreAction : pb::IMessage<IgnoreAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3458,6 +3627,671 @@ namespace Google.Cloud.Retail.V2 {
 
       }
 
+      /// <summary>
+      /// Force returns an attribute/facet in the request around a certain position
+      /// or above.
+      ///
+      /// * Rule Condition:
+      ///   Must specify non-empty
+      ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
+      ///   (for search only) or
+      ///   [Condition.page_categories][google.cloud.retail.v2.Condition.page_categories]
+      ///   (for browse only), but can't specify both.
+      ///
+      /// * Action Inputs: attribute name, position
+      ///
+      /// * Action Result: Will force return a facet key around a certain position
+      /// or above if the condition is satisfied.
+      ///
+      /// Example: Suppose the query is "shoes", the
+      /// [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms] is
+      /// "shoes", the
+      /// [ForceReturnFacetAction.FacetPositionAdjustment.attribute_name][google.cloud.retail.v2.Rule.ForceReturnFacetAction.FacetPositionAdjustment.attribute_name]
+      /// is "size" and the
+      /// [ForceReturnFacetAction.FacetPositionAdjustment.position][google.cloud.retail.v2.Rule.ForceReturnFacetAction.FacetPositionAdjustment.position]
+      /// is 8.
+      ///
+      /// Two cases: a) The facet key "size" is not already in the top 8 slots, then
+      /// the facet "size" will appear at a position close to 8. b) The facet key
+      /// "size" in among the top 8 positions in the request, then it will stay at
+      /// its current rank.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ForceReturnFacetAction : pb::IMessage<ForceReturnFacetAction>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ForceReturnFacetAction> _parser = new pb::MessageParser<ForceReturnFacetAction>(() => new ForceReturnFacetAction());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ForceReturnFacetAction> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.Rule.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForceReturnFacetAction() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForceReturnFacetAction(ForceReturnFacetAction other) : this() {
+          facetPositionAdjustments_ = other.facetPositionAdjustments_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForceReturnFacetAction Clone() {
+          return new ForceReturnFacetAction(this);
+        }
+
+        /// <summary>Field number for the "facet_position_adjustments" field.</summary>
+        public const int FacetPositionAdjustmentsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment> _repeated_facetPositionAdjustments_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment> facetPositionAdjustments_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment>();
+        /// <summary>
+        /// Each instance corresponds to a force return attribute for the given
+        /// condition. There can't be more 15 instances here.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment> FacetPositionAdjustments {
+          get { return facetPositionAdjustments_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ForceReturnFacetAction);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ForceReturnFacetAction other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!facetPositionAdjustments_.Equals(other.facetPositionAdjustments_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= facetPositionAdjustments_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          facetPositionAdjustments_.WriteTo(output, _repeated_facetPositionAdjustments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          facetPositionAdjustments_.WriteTo(ref output, _repeated_facetPositionAdjustments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += facetPositionAdjustments_.CalculateSize(_repeated_facetPositionAdjustments_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ForceReturnFacetAction other) {
+          if (other == null) {
+            return;
+          }
+          facetPositionAdjustments_.Add(other.facetPositionAdjustments_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                facetPositionAdjustments_.AddEntriesFrom(input, _repeated_facetPositionAdjustments_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                facetPositionAdjustments_.AddEntriesFrom(ref input, _repeated_facetPositionAdjustments_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ForceReturnFacetAction message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Each facet position adjustment consists of a single attribute name (i.e.
+          /// facet key) along with a specified position.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class FacetPositionAdjustment : pb::IMessage<FacetPositionAdjustment>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<FacetPositionAdjustment> _parser = new pb::MessageParser<FacetPositionAdjustment>(() => new FacetPositionAdjustment());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<FacetPositionAdjustment> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FacetPositionAdjustment() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FacetPositionAdjustment(FacetPositionAdjustment other) : this() {
+              attributeName_ = other.attributeName_;
+              position_ = other.position_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FacetPositionAdjustment Clone() {
+              return new FacetPositionAdjustment(this);
+            }
+
+            /// <summary>Field number for the "attribute_name" field.</summary>
+            public const int AttributeNameFieldNumber = 1;
+            private string attributeName_ = "";
+            /// <summary>
+            /// The attribute name to force return as a facet. Each attribute name
+            /// should be a valid attribute name, be non-empty and contain at most 80
+            /// characters long.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string AttributeName {
+              get { return attributeName_; }
+              set {
+                attributeName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "position" field.</summary>
+            public const int PositionFieldNumber = 2;
+            private int position_;
+            /// <summary>
+            /// This is the position in the request as explained above. It should be
+            /// strictly positive be at most 100.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int Position {
+              get { return position_; }
+              set {
+                position_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as FacetPositionAdjustment);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(FacetPositionAdjustment other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (AttributeName != other.AttributeName) return false;
+              if (Position != other.Position) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (AttributeName.Length != 0) hash ^= AttributeName.GetHashCode();
+              if (Position != 0) hash ^= Position.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (AttributeName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(AttributeName);
+              }
+              if (Position != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(Position);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (AttributeName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(AttributeName);
+              }
+              if (Position != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(Position);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (AttributeName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(AttributeName);
+              }
+              if (Position != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(Position);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(FacetPositionAdjustment other) {
+              if (other == null) {
+                return;
+              }
+              if (other.AttributeName.Length != 0) {
+                AttributeName = other.AttributeName;
+              }
+              if (other.Position != 0) {
+                Position = other.Position;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    AttributeName = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    Position = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    AttributeName = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    Position = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Removes an attribute/facet in the request if is present.
+      ///
+      /// * Rule Condition:
+      ///   Must specify non-empty
+      ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
+      ///   (for search only) or
+      ///   [Condition.page_categories][google.cloud.retail.v2.Condition.page_categories]
+      ///   (for browse only), but can't specify both.
+      ///
+      /// * Action Input: attribute name
+      ///
+      /// * Action Result: Will remove the attribute (as a facet) from the request
+      /// if it is present.
+      ///
+      /// Example: Suppose the query is "shoes", the
+      /// [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms] is
+      /// "shoes" and the attribute name "size", then facet key "size" will be
+      /// removed from the request (if it is present).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RemoveFacetAction : pb::IMessage<RemoveFacetAction>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RemoveFacetAction> _parser = new pb::MessageParser<RemoveFacetAction>(() => new RemoveFacetAction());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RemoveFacetAction> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.Rule.Descriptor.NestedTypes[9]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveFacetAction() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveFacetAction(RemoveFacetAction other) : this() {
+          attributeNames_ = other.attributeNames_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveFacetAction Clone() {
+          return new RemoveFacetAction(this);
+        }
+
+        /// <summary>Field number for the "attribute_names" field.</summary>
+        public const int AttributeNamesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_attributeNames_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> attributeNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The attribute names (i.e. facet keys) to remove from the dynamic facets
+        /// (if present in the request). There can't be more 3 attribute names.
+        /// Each attribute name should be a valid attribute name, be non-empty and
+        /// contain at most 80 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> AttributeNames {
+          get { return attributeNames_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RemoveFacetAction);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RemoveFacetAction other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!attributeNames_.Equals(other.attributeNames_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= attributeNames_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          attributeNames_.WriteTo(output, _repeated_attributeNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          attributeNames_.WriteTo(ref output, _repeated_attributeNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += attributeNames_.CalculateSize(_repeated_attributeNames_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RemoveFacetAction other) {
+          if (other == null) {
+            return;
+          }
+          attributeNames_.Add(other.attributeNames_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                attributeNames_.AddEntriesFrom(input, _repeated_attributeNames_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                attributeNames_.AddEntriesFrom(ref input, _repeated_attributeNames_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -3467,6 +4301,7 @@ namespace Google.Cloud.Retail.V2 {
   /// An intended audience of the [Product][google.cloud.retail.v2.Product] for
   /// whom it's sold.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Audience : pb::IMessage<Audience>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3703,6 +4538,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The color information of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3940,6 +4776,7 @@ namespace Google.Cloud.Retail.V2 {
   /// A custom attribute that is not explicitly modeled in
   /// [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomAttribute : pb::IMessage<CustomAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4032,6 +4869,8 @@ namespace Google.Cloud.Retail.V2 {
 
     /// <summary>Field number for the "searchable" field.</summary>
     public const int SearchableFieldNumber = 3;
+    private readonly static bool SearchableDefaultValue = false;
+
     private bool searchable_;
     /// <summary>
     /// This field is normally ignored unless
@@ -4052,7 +4891,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Searchable {
-      get { if ((_hasBits0 & 1) != 0) { return searchable_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return searchable_; } else { return SearchableDefaultValue; } }
       set {
         _hasBits0 |= 1;
         searchable_ = value;
@@ -4075,6 +4914,8 @@ namespace Google.Cloud.Retail.V2 {
 
     /// <summary>Field number for the "indexable" field.</summary>
     public const int IndexableFieldNumber = 4;
+    private readonly static bool IndexableDefaultValue = false;
+
     private bool indexable_;
     /// <summary>
     /// This field is normally ignored unless
@@ -4099,7 +4940,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Indexable {
-      get { if ((_hasBits0 & 2) != 0) { return indexable_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return indexable_; } else { return IndexableDefaultValue; } }
       set {
         _hasBits0 |= 2;
         indexable_ = value;
@@ -4311,6 +5152,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Fulfillment information, such as the store IDs for in-store pickup or region
   /// IDs for different shipping methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FulfillmentInfo : pb::IMessage<FulfillmentInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4564,6 +5406,7 @@ namespace Google.Cloud.Retail.V2 {
   /// results. However, product images can be returned in results, and are shown in
   /// prediction or search previews in the console.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4852,6 +5695,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// A floating point interval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Interval : pb::IMessage<Interval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4921,10 +5765,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Minimum {
-      get { return minCase_ == MinOneofCase.Minimum ? (double) min_ : 0D; }
+      get { return HasMinimum ? (double) min_ : 0D; }
       set {
         min_ = value;
         minCase_ = MinOneofCase.Minimum;
+      }
+    }
+    /// <summary>Gets whether the "minimum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinimum {
+      get { return minCase_ == MinOneofCase.Minimum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "minimum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinimum() {
+      if (HasMinimum) {
+        ClearMin();
       }
     }
 
@@ -4936,10 +5794,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ExclusiveMinimum {
-      get { return minCase_ == MinOneofCase.ExclusiveMinimum ? (double) min_ : 0D; }
+      get { return HasExclusiveMinimum ? (double) min_ : 0D; }
       set {
         min_ = value;
         minCase_ = MinOneofCase.ExclusiveMinimum;
+      }
+    }
+    /// <summary>Gets whether the "exclusive_minimum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExclusiveMinimum {
+      get { return minCase_ == MinOneofCase.ExclusiveMinimum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exclusive_minimum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExclusiveMinimum() {
+      if (HasExclusiveMinimum) {
+        ClearMin();
       }
     }
 
@@ -4951,10 +5823,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Maximum {
-      get { return maxCase_ == MaxOneofCase.Maximum ? (double) max_ : 0D; }
+      get { return HasMaximum ? (double) max_ : 0D; }
       set {
         max_ = value;
         maxCase_ = MaxOneofCase.Maximum;
+      }
+    }
+    /// <summary>Gets whether the "maximum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaximum {
+      get { return maxCase_ == MaxOneofCase.Maximum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "maximum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaximum() {
+      if (HasMaximum) {
+        ClearMax();
       }
     }
 
@@ -4966,10 +5852,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ExclusiveMaximum {
-      get { return maxCase_ == MaxOneofCase.ExclusiveMaximum ? (double) max_ : 0D; }
+      get { return HasExclusiveMaximum ? (double) max_ : 0D; }
       set {
         max_ = value;
         maxCase_ = MaxOneofCase.ExclusiveMaximum;
+      }
+    }
+    /// <summary>Gets whether the "exclusive_maximum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExclusiveMaximum {
+      get { return maxCase_ == MaxOneofCase.ExclusiveMaximum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exclusive_maximum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExclusiveMaximum() {
+      if (HasExclusiveMaximum) {
+        ClearMax();
       }
     }
 
@@ -5043,10 +5943,10 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (minCase_ == MinOneofCase.Minimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMinimum);
-      if (maxCase_ == MaxOneofCase.Maximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMaximum);
+      if (HasMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
+      if (HasExclusiveMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMinimum);
+      if (HasMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
+      if (HasExclusiveMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMaximum);
       hash ^= (int) minCase_;
       hash ^= (int) maxCase_;
       if (_unknownFields != null) {
@@ -5067,19 +5967,19 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         output.WriteRawTag(9);
         output.WriteDouble(Minimum);
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         output.WriteRawTag(17);
         output.WriteDouble(ExclusiveMinimum);
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         output.WriteRawTag(25);
         output.WriteDouble(Maximum);
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         output.WriteRawTag(33);
         output.WriteDouble(ExclusiveMaximum);
       }
@@ -5093,19 +5993,19 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         output.WriteRawTag(9);
         output.WriteDouble(Minimum);
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         output.WriteRawTag(17);
         output.WriteDouble(ExclusiveMinimum);
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         output.WriteRawTag(25);
         output.WriteDouble(Maximum);
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         output.WriteRawTag(33);
         output.WriteDouble(ExclusiveMaximum);
       }
@@ -5119,16 +6019,16 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         size += 1 + 8;
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         size += 1 + 8;
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         size += 1 + 8;
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -5233,6 +6133,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The price information of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PriceInfo : pb::IMessage<PriceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5760,6 +6661,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [Product][google.cloud.retail.v2.Product] having the same
       /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PriceRange : pb::IMessage<PriceRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6026,6 +6928,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The rating of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rating : pb::IMessage<Rating>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6305,6 +7208,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Information of an end user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserInfo : pb::IMessage<UserInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6665,6 +7569,7 @@ namespace Google.Cloud.Retail.V2 {
   /// The inventory information at a place (e.g. a store) identified
   /// by a place ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalInventory : pb::IMessage<LocalInventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6928,7 +7833,7 @@ namespace Google.Cloud.Retail.V2 {
         }
         PriceInfo.MergeFrom(other.PriceInfo);
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       fulfillmentTypes_.Add(other.fulfillmentTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

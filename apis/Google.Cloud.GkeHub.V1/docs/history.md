@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.5.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.4.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.3.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.2.0, released 2023-05-03
+
+### New features
+
+- Add `monitoring_config` field ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `cluster_missing` on `GkeResource` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `google_managed` on `MembershipEndpoint` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `force` on `DeleteMembershipRequest` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+
+### Documentation improvements
+
+- Update API annotation ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+
 ## Version 2.1.0, released 2023-01-20
 
 ### New features

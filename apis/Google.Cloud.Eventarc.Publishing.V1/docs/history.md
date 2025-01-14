@@ -1,5 +1,26 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2024-10-30
+
+### New features
+
+- Add Eventarc Advanced Publishing features, allowing publishing events to a Message Bus ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+## Version 2.0.0-beta06, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-beta05, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta04, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features

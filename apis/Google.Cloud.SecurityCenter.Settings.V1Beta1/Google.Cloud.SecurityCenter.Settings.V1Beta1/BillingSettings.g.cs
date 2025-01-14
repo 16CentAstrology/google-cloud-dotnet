@@ -102,6 +102,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// Billing settings
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BillingSettings : pb::IMessage<BillingSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

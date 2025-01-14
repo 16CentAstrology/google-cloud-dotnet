@@ -1,5 +1,33 @@
 # Version history
 
+## Version 1.5.0, released 2024-07-22
+
+### New features
+
+- Update MS API stubs with Unified API ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.bigquery.migration.v2.MigrationWorkflow` is changed to include 'Identifier' ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+- A comment for field `translation_config_details` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is changed ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+- A comment for field `type` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is changed to include new supported types ([commit a645ee7](https://github.com/googleapis/google-cloud-dotnet/commit/a645ee7f96307cf71de1fdac850acb35d83e8ef8))
+
+## Version 1.4.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 1.3.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 1.2.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 1.1.0, released 2023-03-27
 
 ### New features

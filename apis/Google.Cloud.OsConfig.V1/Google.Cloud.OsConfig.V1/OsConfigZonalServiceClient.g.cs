@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.OsConfig.V1
 {
@@ -392,14 +392,14 @@ namespace Google.Cloud.OsConfig.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OsConfigZonalServiceClient.Create(callInvoker, Settings, Logger);
+            return OsConfigZonalServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<OsConfigZonalServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OsConfigZonalServiceClient.Create(callInvoker, Settings, Logger);
+            return OsConfigZonalServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1146,13 +1146,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignments(new ListOSPolicyAssignmentsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentsRequest request = new ListOSPolicyAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignments under the parent resource.
@@ -1172,13 +1181,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentsAsync(new ListOSPolicyAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentsRequest request = new ListOSPolicyAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignments under the parent resource.
@@ -1198,13 +1216,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignments(new ListOSPolicyAssignmentsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentsRequest request = new ListOSPolicyAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignments under the parent resource.
@@ -1224,13 +1251,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentsAsync(new ListOSPolicyAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentsRequest request = new ListOSPolicyAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignment revisions for a given OS policy assignment.
@@ -1266,13 +1302,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentRevisions(new ListOSPolicyAssignmentRevisionsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentRevisionsRequest request = new ListOSPolicyAssignmentRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignment revisions for a given OS policy assignment.
@@ -1290,13 +1335,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentRevisionsAsync(new ListOSPolicyAssignmentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentRevisionsRequest request = new ListOSPolicyAssignmentRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignment revisions for a given OS policy assignment.
@@ -1314,13 +1368,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentRevisions(new ListOSPolicyAssignmentRevisionsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentRevisionsRequest request = new ListOSPolicyAssignmentRevisionsRequest
             {
                 OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// List the OS policy assignment revisions for a given OS policy assignment.
@@ -1338,13 +1401,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentRevisionsAsync(new ListOSPolicyAssignmentRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentRevisionsRequest request = new ListOSPolicyAssignmentRevisionsRequest
             {
                 OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Delete the OS policy assignment.
@@ -1796,13 +1868,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentReports(request, callSettings);
+        }
 
         /// <summary>
         /// List OS policy asssignment reports for all Compute Engine VM instances in
@@ -1841,13 +1922,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentReportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List OS policy asssignment reports for all Compute Engine VM instances in
@@ -1886,13 +1976,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
             {
                 ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentReports(request, callSettings);
+        }
 
         /// <summary>
         /// List OS policy asssignment reports for all Compute Engine VM instances in
@@ -1931,13 +2030,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOSPolicyAssignmentReportsRequest request = new ListOSPolicyAssignmentReportsRequest
             {
                 ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOSPolicyAssignmentReportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Get inventory data for the specified VM instance. If the VM has no
@@ -2133,13 +2241,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Inventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInventoriesResponse, Inventory> ListInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInventories(new ListInventoriesRequest
+        public virtual gax::PagedEnumerable<ListInventoriesResponse, Inventory> ListInventories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInventoriesRequest request = new ListInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInventories(request, callSettings);
+        }
 
         /// <summary>
         /// List inventory data for all VM instances in the specified zone.
@@ -2161,13 +2278,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Inventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInventoriesResponse, Inventory> ListInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInventoriesAsync(new ListInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInventoriesResponse, Inventory> ListInventoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInventoriesRequest request = new ListInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List inventory data for all VM instances in the specified zone.
@@ -2189,13 +2315,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Inventory"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInventoriesResponse, Inventory> ListInventories(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInventories(new ListInventoriesRequest
+        public virtual gax::PagedEnumerable<ListInventoriesResponse, Inventory> ListInventories(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInventoriesRequest request = new ListInventoriesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInventories(request, callSettings);
+        }
 
         /// <summary>
         /// List inventory data for all VM instances in the specified zone.
@@ -2217,13 +2352,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Inventory"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInventoriesResponse, Inventory> ListInventoriesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInventoriesAsync(new ListInventoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInventoriesResponse, Inventory> ListInventoriesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInventoriesRequest request = new ListInventoriesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInventoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the vulnerability report for the specified VM instance. Only VMs with
@@ -2419,13 +2563,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VulnerabilityReport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVulnerabilityReports(new ListVulnerabilityReportsRequest
+        public virtual gax::PagedEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVulnerabilityReportsRequest request = new ListVulnerabilityReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVulnerabilityReports(request, callSettings);
+        }
 
         /// <summary>
         /// List vulnerability reports for all VM instances in the specified zone.
@@ -2447,13 +2600,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VulnerabilityReport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVulnerabilityReportsAsync(new ListVulnerabilityReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVulnerabilityReportsRequest request = new ListVulnerabilityReportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVulnerabilityReportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List vulnerability reports for all VM instances in the specified zone.
@@ -2475,13 +2637,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VulnerabilityReport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReports(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVulnerabilityReports(new ListVulnerabilityReportsRequest
+        public virtual gax::PagedEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReports(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVulnerabilityReportsRequest request = new ListVulnerabilityReportsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVulnerabilityReports(request, callSettings);
+        }
 
         /// <summary>
         /// List vulnerability reports for all VM instances in the specified zone.
@@ -2503,13 +2674,22 @@ namespace Google.Cloud.OsConfig.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VulnerabilityReport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReportsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVulnerabilityReportsAsync(new ListVulnerabilityReportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVulnerabilityReportsResponse, VulnerabilityReport> ListVulnerabilityReportsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVulnerabilityReportsRequest request = new ListVulnerabilityReportsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVulnerabilityReportsAsync(request, callSettings);
+        }
     }
 
     /// <summary>OsConfigZonalService client wrapper implementation, for convenient use.</summary>
@@ -2556,7 +2736,11 @@ namespace Google.Cloud.OsConfig.V1
         {
             GrpcClient = grpcClient;
             OsConfigZonalServiceSettings effectiveSettings = settings ?? OsConfigZonalServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOSPolicyAssignmentOperationsSettings, logger);
             UpdateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOSPolicyAssignmentOperationsSettings, logger);
             DeleteOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOSPolicyAssignmentOperationsSettings, logger);

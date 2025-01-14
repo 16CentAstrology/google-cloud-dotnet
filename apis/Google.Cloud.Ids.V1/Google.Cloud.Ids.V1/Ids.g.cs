@@ -68,21 +68,21 @@ namespace Google.Cloud.Ids.V1 {
             "dWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9u",
             "GAcgASgJQgPgQQMysgYKA0lEUxKmAQoNTGlzdEVuZHBvaW50cxIpLmdvb2ds",
             "ZS5jbG91ZC5pZHMudjEuTGlzdEVuZHBvaW50c1JlcXVlc3QaKi5nb29nbGUu",
-            "Y2xvdWQuaWRzLnYxLkxpc3RFbmRwb2ludHNSZXNwb25zZSI+gtPkkwIvEi0v",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9lbmRwb2ludHPa",
-            "QQZwYXJlbnQSkwEKC0dldEVuZHBvaW50EicuZ29vZ2xlLmNsb3VkLmlkcy52",
+            "Y2xvdWQuaWRzLnYxLkxpc3RFbmRwb2ludHNSZXNwb25zZSI+2kEGcGFyZW50",
+            "gtPkkwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9l",
+            "bmRwb2ludHMSkwEKC0dldEVuZHBvaW50EicuZ29vZ2xlLmNsb3VkLmlkcy52",
             "MS5HZXRFbmRwb2ludFJlcXVlc3QaHS5nb29nbGUuY2xvdWQuaWRzLnYxLkVu",
-            "ZHBvaW50IjyC0+STAi8SLS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2VuZHBvaW50cy8qfdpBBG5hbWUS2gEKDkNyZWF0ZUVuZHBvaW50Eiou",
+            "ZHBvaW50IjzaQQRuYW1lgtPkkwIvEi0vdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9lbmRwb2ludHMvKn0S2gEKDkNyZWF0ZUVuZHBvaW50Eiou",
             "Z29vZ2xlLmNsb3VkLmlkcy52MS5DcmVhdGVFbmRwb2ludFJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn2C0+STAjkiLS92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VuZHBvaW50czoIZW5kcG9p",
-            "bnTaQRtwYXJlbnQsZW5kcG9pbnQsZW5kcG9pbnRfaWTKQR0KCEVuZHBvaW50",
-            "EhFPcGVyYXRpb25NZXRhZGF0YRLGAQoORGVsZXRlRW5kcG9pbnQSKi5nb29n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn3KQR0KCEVuZHBvaW50EhFP",
+            "cGVyYXRpb25NZXRhZGF0YdpBG3BhcmVudCxlbmRwb2ludCxlbmRwb2ludF9p",
+            "ZILT5JMCOSItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "ZW5kcG9pbnRzOghlbmRwb2ludBLGAQoORGVsZXRlRW5kcG9pbnQSKi5nb29n",
             "bGUuY2xvdWQuaWRzLnYxLkRlbGV0ZUVuZHBvaW50UmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iaYLT5JMCLyotL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovZW5kcG9pbnRzLyp92kEEbmFtZcpBKgoV",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRpGykES",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iacpBKgoVZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAi8qLS92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VuZHBvaW50cy8qfRpGykES",
             "aWRzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
             "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJpChdjb20uZ29vZ2xlLmNsb3VkLmlk",
             "cy52MUIISWRzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9pZHMvYXBp",
@@ -108,6 +108,7 @@ namespace Google.Cloud.Ids.V1 {
   /// Endpoint describes a single IDS endpoint. It defines a forwarding rule to
   /// which packets can be sent for IDS inspection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Endpoint : pb::IMessage<Endpoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -549,7 +550,7 @@ namespace Google.Cloud.Ids.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }
@@ -768,6 +769,7 @@ namespace Google.Cloud.Ids.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEndpointsRequest : pb::IMessage<ListEndpointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1127,6 +1129,7 @@ namespace Google.Cloud.Ids.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEndpointsResponse : pb::IMessage<ListEndpointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1378,6 +1381,7 @@ namespace Google.Cloud.Ids.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEndpointRequest : pb::IMessage<GetEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1571,6 +1575,7 @@ namespace Google.Cloud.Ids.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEndpointRequest : pb::IMessage<CreateEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1909,6 +1914,7 @@ namespace Google.Cloud.Ids.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEndpointRequest : pb::IMessage<DeleteEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2156,6 +2162,7 @@ namespace Google.Cloud.Ids.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

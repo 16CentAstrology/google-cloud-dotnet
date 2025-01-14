@@ -110,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// [upload][google.cloud.aiplatform.v1.ModelService.UploadModel] the Model to
   /// Vertex AI, and evaluate the Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrainingPipeline : pb::IMessage<TrainingPipeline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -841,7 +842,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
@@ -1085,6 +1086,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Specifies Vertex AI owned input data to be used for training, and
   /// possibly evaluating, the Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputDataConfig : pb::IMessage<InputDataConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1989,6 +1991,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// decided by Vertex AI. If none of the fractions are set, by default roughly
   /// 80% of data is used for training, 10% for validation, and 10% for test.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FractionSplit : pb::IMessage<FractionSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2270,6 +2273,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   ///
   /// Supported only for unstructured Datasets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilterSplit : pb::IMessage<FilterSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2566,6 +2570,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   ///
   /// Supported only for tabular Datasets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredefinedSplit : pb::IMessage<PredefinedSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2770,6 +2775,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   ///
   /// Supported only for tabular Datasets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimestampSplit : pb::IMessage<TimestampSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3105,6 +3111,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   ///
   /// Supported only for tabular Datasets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StratifiedSplit : pb::IMessage<StratifiedSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

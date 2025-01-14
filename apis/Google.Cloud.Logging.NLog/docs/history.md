@@ -1,5 +1,30 @@
 # Version history
 
+## Version 5.2.0, released 2024-09-26
+
+### New features
+
+- Update NLog to 5.3.4 ([commit a2da879](https://github.com/googleapis/google-cloud-dotnet/commit/a2da87980e97abad96012e342077ba49bdd5921b))
+
+## Version 5.1.0, released 2024-03-28
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit cba7759](https://github.com/googleapis/google-cloud-dotnet/commit/cba77591907c4a4594a184466534ee9e258bb5ef))
+
+## Version 5.0.0, released 2024-03-12
+
+No API surface changes; just dependency updates and promotion to GA.
+
+## Version 5.0.0-beta01, released 2024-01-04
+
+### New features
+
+- Update NLog to 5.x ([commit 25820cf](https://github.com/googleapis/google-cloud-dotnet/commit/25820cf824e01ad1c3ac98a001db7c83d89f0ce2))
+
+This is a major version bump due to taking a new dependency major
+version. The API within the Google-owned code has no changes.
+
 ## Version 4.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,18 +19,18 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcfv = Google.Cloud.Firestore.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.V1
 {
@@ -412,14 +412,14 @@ namespace Google.Cloud.Firestore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FirestoreClient.Create(callInvoker, Settings, Logger);
+            return FirestoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<FirestoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FirestoreClient.Create(callInvoker, Settings, Logger);
+            return FirestoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Firestore.V1
 
         /// <summary>
         /// Streams batches of document updates and deletes, in order. This method is
-        /// only available via the gRPC API (not REST).
+        /// only available via gRPC or WebChannel (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1089,8 +1089,8 @@ namespace Google.Cloud.Firestore.V1
         }
 
         /// <summary>
-        /// Listens to changes. This method is only available via the gRPC API (not
-        /// REST).
+        /// Listens to changes. This method is only available via gRPC or WebChannel
+        /// (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1135,13 +1135,22 @@ namespace Google.Cloud.Firestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectionIds(new ListCollectionIdsRequest
+        public virtual gax::PagedEnumerable<ListCollectionIdsResponse, string> ListCollectionIds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectionIds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the collection IDs underneath a document.
@@ -1162,13 +1171,22 @@ namespace Google.Cloud.Firestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCollectionIdsAsync(new ListCollectionIdsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCollectionIdsResponse, string> ListCollectionIdsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCollectionIdsRequest request = new ListCollectionIdsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCollectionIdsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Applies a batch of write operations.
@@ -1307,7 +1325,11 @@ namespace Google.Cloud.Firestore.V1
         {
             GrpcClient = grpcClient;
             FirestoreSettings effectiveSettings = settings ?? FirestoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDocument);
@@ -1762,7 +1784,7 @@ namespace Google.Cloud.Firestore.V1
 
         /// <summary>
         /// Streams batches of document updates and deletes, in order. This method is
-        /// only available via the gRPC API (not REST).
+        /// only available via gRPC or WebChannel (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1821,8 +1843,8 @@ namespace Google.Cloud.Firestore.V1
         }
 
         /// <summary>
-        /// Listens to changes. This method is only available via the gRPC API (not
-        /// REST).
+        /// Listens to changes. This method is only available via gRPC or WebChannel
+        /// (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>

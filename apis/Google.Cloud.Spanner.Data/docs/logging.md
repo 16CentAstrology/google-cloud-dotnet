@@ -4,7 +4,7 @@ The Spanner client libraries contain a relatively rudimentary
 logging mechanism for diagnostic purposes. It is not intended for
 general application use, and most applications will never need to
 take any of the steps shown on this page. This page is primarily
-intended to make it easier for Google Cloud Platform support
+intended to make it easier for Google Cloud support
 engineers to help you configure your application to add logging if
 you encounter an issue.
 
@@ -53,7 +53,6 @@ If you need the log output in some different form, you can create
 your own class deriving from `Logger`. You need to implement two
 methods:
 
-```csharp
 - `LogPerformanceEntries` to log performance information. If you
   aren't performing performance tests, you can use an empty
   implementation.

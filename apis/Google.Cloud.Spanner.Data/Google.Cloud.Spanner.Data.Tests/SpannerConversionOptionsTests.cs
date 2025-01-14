@@ -1,11 +1,11 @@
-﻿// Copyright 2022 Google Inc. All Rights Reserved.
-// 
+// Copyright 2022 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,6 +20,18 @@ namespace Google.Cloud.Spanner.Data.Tests
     public class SpannerConversionOptionsTests
     {
         [Fact]
+        public void Defaults()
+        {
+            var options = SpannerConversionOptions.Default;
+
+            Assert.True(options.UseDBNull);
+            Assert.Equal(SpannerDbType.Float32, options.SingleToConfiguredSpannerType);
+            Assert.Equal(SpannerDbType.Numeric, options.DecimalToConfiguredSpannerType);
+            Assert.Equal(SpannerDbType.Timestamp, options.DateTimeToConfiguredSpannerType);
+            Assert.Equal(typeof(DateTime), options.DateToConfiguredClrType);
+        }
+
+        [Fact]
         public void WithClrDefaultForNullSetting()
         {
             var options = SpannerConversionOptions.Default;
@@ -27,7 +39,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(false, options.UseDBNull);
             options = options.WithClrDefaultForNullSetting(false);
             Assert.Equal(true, options.UseDBNull);
-            
+
             // Test with builder as well.
             var builder = new SpannerConnectionStringBuilder();
             builder.UseClrDefaultForNull = true;
@@ -47,7 +59,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             options = options.WithSpannerToClrMappings("DateToSpannerDate");
             Assert.Equal(typeof(SpannerDate), options.DateToConfiguredClrType);
-            
+
             // Test with builder as well.
             var builder = new SpannerConnectionStringBuilder();
             builder.SpannerToClrTypeDefaultMappings = "DateToDateTime";
@@ -67,38 +79,44 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void WithClrToSpannerMappings()
         {
             var options = SpannerConversionOptions.Default;
-            options = options.WithClrToSpannerMappings("DecimalToNumeric,DateTimeToDate");
+            options = options.WithClrToSpannerMappings("SingleToFloat32,DecimalToNumeric,DateTimeToDate");
+            Assert.Equal(SpannerDbType.Float32, options.SingleToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Numeric, options.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Date, options.DateTimeToConfiguredSpannerType);
 
-            options = options.WithClrToSpannerMappings("DecimalToPgNumeric,DateTimeToTimestamp");
+            options = options.WithClrToSpannerMappings("SingleToFloat64,DecimalToPgNumeric,DateTimeToTimestamp");
+            Assert.Equal(SpannerDbType.Float64, options.SingleToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.PgNumeric, options.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Timestamp, options.DateTimeToConfiguredSpannerType);
 
             // Test with builder as well.
             var builder = new SpannerConnectionStringBuilder();
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            builder.ClrToSpannerTypeDefaultMappings = "SingleToFloat32,DecimalToFloat64,DateTimeToDate";
+            Assert.Equal(SpannerDbType.Float32, builder.ConversionOptions.SingleToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Float64, builder.ConversionOptions.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Date, builder.ConversionOptions.DateTimeToConfiguredSpannerType);
 
             // Explicitly set valid type mapping.
-            builder = new SpannerConnectionStringBuilder("ClrToSpannerTypeDefaultMappings=DecimalToNumeric,DateTimeToTimestamp");
+            builder = new SpannerConnectionStringBuilder("ClrToSpannerTypeDefaultMappings=SingleToFloat32,DecimalToNumeric,DateTimeToTimestamp");
+            Assert.Equal(SpannerDbType.Float32, builder.ConversionOptions.SingleToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Numeric, builder.ConversionOptions.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Timestamp, builder.ConversionOptions.DateTimeToConfiguredSpannerType);
 
             // Check that properties are case-insensitive.
             builder = new SpannerConnectionStringBuilder();
-            builder.ClrToSpannerTypeDefaultMappings = "decimaltofloat64,datetimeTodate";
+            builder.ClrToSpannerTypeDefaultMappings = "singletofloat32,decimaltofloat64,datetimeTodate";
+            Assert.Equal(SpannerDbType.Float32, builder.ConversionOptions.SingleToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Float64, builder.ConversionOptions.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Date, builder.ConversionOptions.DateTimeToConfiguredSpannerType);
         }
 
         [Theory]
-        [InlineData("DecimalToFloat64,DecimalToNumeric,DateTimeToDate")] // Multiple mappings for a type.
-        [InlineData("DecimalToFloat64,DecimalToPgNumeric,DateTimeToDate,DateTimeToTimestamp")] // Multiple mappings for a type.
-        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.       
-        [InlineData("DecimalToFloat64   ,  DateTimeToDate")] // Valid mapping with whitespace.
-        [InlineData("UseDecimalToNumeric,DateTimeToDate")] // Invalid values.
+        [InlineData("DecimalToFloat64,DecimalToNumeric,DateTimeToDate")] // Multiple mappings for Decimal.
+        [InlineData("DecimalToFloat64,DateTimeToDate,DateTimeToTimestamp")] // Multiple mappings for DateTime.
+        [InlineData("DecimalToFloat64,SingleToFloat64,SingleToFloat32")] // Multiple mappings for Single.
+        [InlineData("DecimalToFloat64   ,DateTimeToDate")] // Whitespace after.
+        [InlineData("DecimalToFloat64,  DateTimeToDate")] // Whitespace before.
+        [InlineData("UseDecimalToNumeric,DateTimeToDate")] // Invalid value.
         public void BadClrToSpannerTypeDefaultMappingsThrows(string clrToSpannerTypeMappings)
         {
             var options = SpannerConversionOptions.Default;
@@ -107,7 +125,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [InlineData("DateToDateTime,DateToSpannerDate")] // Multiple mappings for a type.
-        [InlineData("  DateToDateTime  ,")] // Whitespace.   
+        [InlineData("  DateToDateTime  ,")] // Whitespace.
         [InlineData("UseDateToSpannerDate")] // Invalid value.
         public void BadSpannerToClrTypeDefaultMappingsThrows(string spannerToClrTypeMappings)
         {

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcsv = Google.Cloud.SecretManager.V1;
 
 namespace Google.Cloud.SecretManager.V1
@@ -30,6 +31,39 @@ namespace Google.Cloud.SecretManager.V1
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateSecretRequest
@@ -40,6 +74,39 @@ namespace Google.Cloud.SecretManager.V1
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

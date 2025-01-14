@@ -1,5 +1,193 @@
 # Version history
 
+## Version 3.5.0, released 2025-01-06
+
+### New features
+
+- A new field `force` is added to message `.google.cloud.dataplex.v1.DeleteDataScanRequest` ([commit cd7c4a2](https://github.com/googleapis/google-cloud-dotnet/commit/cd7c4a21176ae7da80669defa9da0550c7bf5470))
+
+### Documentation improvements
+
+- Miscellaneous doc updates ([commit cd7c4a2](https://github.com/googleapis/google-cloud-dotnet/commit/cd7c4a21176ae7da80669defa9da0550c7bf5470))
+
+## Version 3.4.0, released 2024-11-18
+
+### New features
+
+- Update Go Datastore import path ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Update Go Bigtable import path ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Release MetadataJob APIs and related resources in GA ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Expose create time in DataScanJobAPI ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Release metadata export in private preview ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add data_version field to AspectSource ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add annotations in CreateMetadataJob, GetMetadataJob, ListMetaDataJobs and CancelMetadataJob for cloud audit logging ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add new Data Discovery scan type in Datascan ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `suspended` is added to DataScans ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Expose create time to customers ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_PUBLISHED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_UPDATED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_IGNORED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_DELETED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a DATA_DISCOVERY enum type in DataScanEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a DataDiscoveryAppliedConfigs message ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add an Issue field to DiscoveryEvent.ActionDetails to output the action message in Cloud Logs ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new enum `TableType` is added ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new message `TableDetails` is added ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `datascan_id` is added to message `.google.cloud.dataplex.v1.DiscoveryEvent` ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `table` is added to message `.google.cloud.dataplex.v1.DiscoveryEvent` ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+
+### Documentation improvements
+
+- Correct API documentation ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add info about schema changes for BigQuery metadata in Dataplex Catalog ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add Identifier for `name` in message `.google.cloud.dataplex.v1.MetadataJob` per https://google.aip.dev/cloud/2510 ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add comment for field `type` in message `.google.cloud.dataplex.v1.MetadataJob` per https://linter.aip.dev/192/has-comments ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add comment for field `status` in message `.google.cloud.dataplex.v1.MetadataJob` per https://linter.aip.dev/192/has-comments ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add link to fully qualified names documentation ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Scrub descriptions for standalone discovery scans ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Correct the dimensions for data quality rules ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A comment for message `DataScanEvent` is changed ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Dataplex Tasks do not support Dataplex Content path as a direct input anymore ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+
+## Version 3.3.0, released 2024-07-08
+
+### New features
+
+- Expose data scan execution create time to customers ([commit 1a96f64](https://github.com/googleapis/google-cloud-dotnet/commit/1a96f6401777d115e95c9a7aa45d6f45914fcbe2))
+
+## Version 3.2.0, released 2024-06-24
+
+### New features
+
+- Exposing EntrySource.location field that contains location of a resource in the source system ([commit 4ce6d1e](https://github.com/googleapis/google-cloud-dotnet/commit/4ce6d1e6a9841ba9b1ffe7be7935d01f98e69b1e))
+
+### Documentation improvements
+
+- Scrub descriptions for GenerateDataQualityRules ([commit 4ce6d1e](https://github.com/googleapis/google-cloud-dotnet/commit/4ce6d1e6a9841ba9b1ffe7be7935d01f98e69b1e))
+- Clarify DataQualityRule.sql_assertion descriptions ([commit 5c4607f](https://github.com/googleapis/google-cloud-dotnet/commit/5c4607f3690d4b65941a6dcd8cf341f4243d8662))
+- Fix links to RuleType proto references ([commit 5c4607f](https://github.com/googleapis/google-cloud-dotnet/commit/5c4607f3690d4b65941a6dcd8cf341f4243d8662))
+
+## Version 3.1.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 3.0.0, released 2024-05-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing field `entry` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `display_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `entry_type` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `modify_time` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `fully_qualified_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `description` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `relative_resource` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- A comment for field `aspects` in message `.google.cloud.dataplex.v1.Entry` is changed ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- A comment for field `filter` in message `.google.cloud.dataplex.v1.ListEntriesRequest` is changed ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+
+## Version 2.15.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.14.0, released 2024-03-21
+
+### New features
+
+- Added Unified Metastore APIs and CRUD Metastore APIs ([commit 547bc55](https://github.com/googleapis/google-cloud-dotnet/commit/547bc5514bdda3379e506f5ea121edf55895800a))
+
+## Version 2.13.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 2.12.0, released 2024-02-09
+
+### Documentation improvements
+
+- Fix typo in comment ([commit 84266b6](https://github.com/googleapis/google-cloud-dotnet/commit/84266b6099a52b845e28fae19300d1fa034309fc))
+## Version 2.11.0, released 2024-01-08
+
+### New features
+
+- Added enum value EventType.GOVERNANCE_RULE_PROCESSING ([commit d69b53d](https://github.com/googleapis/google-cloud-dotnet/commit/d69b53d698d7473699414f3686aa8f9e08ebf927))
+
+### Documentation improvements
+
+- Fix the comment for `ignore_null` field to clarify its applicability on data quality rules ([commit df58fbb](https://github.com/googleapis/google-cloud-dotnet/commit/df58fbbfc3c5912724d0253ef3fd959ddf47d811))
+- Added documentation of page_size default and maximum value for ListEntries and RetrieveAspects ([commit df58fbb](https://github.com/googleapis/google-cloud-dotnet/commit/df58fbbfc3c5912724d0253ef3fd959ddf47d811))
+
+## Version 2.10.0, released 2023-12-04
+
+### New features
+
+- Add data quality score to DataQualityResult ([commit 1d5d4bc](https://github.com/googleapis/google-cloud-dotnet/commit/1d5d4bccfa052038b2ddf87c8fdb3c0143f60b0e))
+- Added DataQualityResult.score, dimension_score, column_score ([commit 4514953](https://github.com/googleapis/google-cloud-dotnet/commit/4514953ce68393f342bd13e9217b4d44d589d180))
+- New event types GOVERNANCE_RULE_MATCHED_RESOURCES, GOVERNANCE_RULE_SEARCH_LIMIT_EXCEEDS, GOVERNANCE_RULE_ERRORS ([commit 4514953](https://github.com/googleapis/google-cloud-dotnet/commit/4514953ce68393f342bd13e9217b4d44d589d180))
+
+## Version 2.9.0, released 2023-11-07
+
+### New features
+
+- DataQualityDimension is now part of the DataQualityDimensionResult message ([commit a879994](https://github.com/googleapis/google-cloud-dotnet/commit/a879994e8fce714e0e43135849dd392ebdd35741))
+- Add relativeResourceName and linkedResourceName to search result ([commit a879994](https://github.com/googleapis/google-cloud-dotnet/commit/a879994e8fce714e0e43135849dd392ebdd35741))
+
+### Documentation improvements
+
+- Updated comments for `DataQualityResult.dimensions` field ([commit 51657c7](https://github.com/googleapis/google-cloud-dotnet/commit/51657c71b91c57aee2c8ca95bd06eb81a4887dad))
+
+## Version 2.8.0, released 2023-10-30
+
+### New features
+
+- DataQualityDimension is now part of the DataQualityDimensionResult message ([commit 67025d5](https://github.com/googleapis/google-cloud-dotnet/commit/67025d5655432b841e329fcae10f15a2afebeba1))
+
+## Version 2.7.0, released 2023-09-25
+
+### New features
+
+- Additional HTTP bindings for IAM methods ([commit b904305](https://github.com/googleapis/google-cloud-dotnet/commit/b904305dc867d732f7fac4db82aeb0d014aa2dce))
+
+## Version 2.6.0, released 2023-09-06
+
+### Bug fixes
+
+- Remove unused annotation in results_table ([commit 78ebeac](https://github.com/googleapis/google-cloud-dotnet/commit/78ebeace797b97e5ec53e9908f860f688a25e8c2))
+
+## Version 2.5.0, released 2023-08-04
+
+### New features
+
+- New service DataTaxonomyService and related messages ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- DataProfileSpec message with DataProfileScan related settings ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added TopNValue.ratio ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataQualitySpec.sampling_percent, row_filter ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataQualityRule.name, description ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added ListDataScanJobsRequest.filter to filter ListDataScanJob results ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added JobEvent.execution_trigger ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataScanEvent.data_profile_configs, data_quality_configs, post_scan_actions_result ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added RunTaskRequest.labels, args ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added Job.labels, trigger, execution_spec ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+
+## Version 2.4.0, released 2023-05-03
+
+### New features
+
+- Added new Dataplex APIs and new features for existing APIs (e.g. DataScans) ([commit 5da3cc6](https://github.com/googleapis/google-cloud-dotnet/commit/5da3cc6e696341f295a3518a64b1fb6fceb7d7a9))
+
+### Documentation improvements
+
+- Updated comments for multiple Dataplex APIs ([commit 5da3cc6](https://github.com/googleapis/google-cloud-dotnet/commit/5da3cc6e696341f295a3518a64b1fb6fceb7d7a9))
+
 ## Version 2.3.0, released 2023-02-08
 
 ### New features

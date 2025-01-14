@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Channel.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudchannel_v1_generated_CloudChannelReportsService_ListReports_async_flattened]
     using Google.Api.Gax;
@@ -33,6 +33,7 @@ namespace Google.Cloud.Channel.V1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task ListReportsAsync()
         {
             // Create client
@@ -40,21 +41,29 @@ namespace Google.Cloud.Channel.V1.Snippets
             // Initialize request argument(s)
             string parent = "";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListReportsResponse, Report> response = cloudChannelReportsServiceClient.ListReportsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((Report item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListReportsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (Report item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -63,10 +72,14 @@ namespace Google.Cloud.Channel.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<Report> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (Report item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);

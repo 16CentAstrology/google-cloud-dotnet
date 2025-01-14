@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -238,6 +238,18 @@ namespace Google.Cloud.Dataplex.V1
         public gcdv::JobName JobName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::JobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RunTaskRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TaskName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TaskName TaskName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TaskName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

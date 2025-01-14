@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,17 +19,17 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataplex.V1
 {
@@ -249,14 +249,14 @@ namespace Google.Cloud.Dataplex.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
+            return MetadataServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<MetadataServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetadataServiceClient.Create(callInvoker, Settings, Logger);
+            return MetadataServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -771,13 +771,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entity"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitiesResponse, Entity> ListEntities(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntities(new ListEntitiesRequest
+        public virtual gax::PagedEnumerable<ListEntitiesResponse, Entity> ListEntities(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitiesRequest request = new ListEntitiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntities(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata entities in a zone.
@@ -796,13 +805,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entity"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitiesResponse, Entity> ListEntitiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitiesAsync(new ListEntitiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitiesResponse, Entity> ListEntitiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitiesRequest request = new ListEntitiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata entities in a zone.
@@ -821,13 +839,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entity"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntitiesResponse, Entity> ListEntities(ZoneName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntities(new ListEntitiesRequest
+        public virtual gax::PagedEnumerable<ListEntitiesResponse, Entity> ListEntities(ZoneName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitiesRequest request = new ListEntitiesRequest
             {
                 ParentAsZoneName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntities(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata entities in a zone.
@@ -846,13 +873,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entity"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntitiesResponse, Entity> ListEntitiesAsync(ZoneName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntitiesAsync(new ListEntitiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListEntitiesResponse, Entity> ListEntitiesAsync(ZoneName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEntitiesRequest request = new ListEntitiesRequest
             {
                 ParentAsZoneName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEntitiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a metadata partition.
@@ -1274,13 +1310,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Partition"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPartitionsResponse, Partition> ListPartitions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPartitions(new ListPartitionsRequest
+        public virtual gax::PagedEnumerable<ListPartitionsResponse, Partition> ListPartitions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPartitionsRequest request = new ListPartitionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPartitions(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata partitions of an entity.
@@ -1299,13 +1344,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Partition"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPartitionsResponse, Partition> ListPartitionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPartitionsAsync(new ListPartitionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPartitionsResponse, Partition> ListPartitionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPartitionsRequest request = new ListPartitionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPartitionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata partitions of an entity.
@@ -1324,13 +1378,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Partition"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPartitionsResponse, Partition> ListPartitions(EntityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPartitions(new ListPartitionsRequest
+        public virtual gax::PagedEnumerable<ListPartitionsResponse, Partition> ListPartitions(EntityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPartitionsRequest request = new ListPartitionsRequest
             {
                 ParentAsEntityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPartitions(request, callSettings);
+        }
 
         /// <summary>
         /// List metadata partitions of an entity.
@@ -1349,13 +1412,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Partition"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPartitionsResponse, Partition> ListPartitionsAsync(EntityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPartitionsAsync(new ListPartitionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPartitionsResponse, Partition> ListPartitionsAsync(EntityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPartitionsRequest request = new ListPartitionsRequest
             {
                 ParentAsEntityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPartitionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>MetadataService client wrapper implementation, for convenient use.</summary>
@@ -1393,7 +1465,11 @@ namespace Google.Cloud.Dataplex.V1
         {
             GrpcClient = grpcClient;
             MetadataServiceSettings effectiveSettings = settings ?? MetadataServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateEntity = clientHelper.BuildApiCall<CreateEntityRequest, Entity>("CreateEntity", grpcClient.CreateEntityAsync, grpcClient.CreateEntity, effectiveSettings.CreateEntitySettings).WithGoogleRequestParam("parent", request => request.Parent);

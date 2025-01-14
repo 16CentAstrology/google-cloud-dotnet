@@ -1,5 +1,84 @@
 # Version history
 
+## Version 2.14.0, released 2025-01-13
+
+### New features
+
+- Add option to enable structured logging ([commit 881f147](https://github.com/googleapis/google-cloud-dotnet/commit/881f147890736fc7eb43747dec7db60afa527841))
+- Add GoModule to Artifact and Results messages and new GO_MODULE_H1 hash type ([commit 6903167](https://github.com/googleapis/google-cloud-dotnet/commit/6903167f75cb3fc38012f0780fefd1a2492dcf9f))
+
+## Version 2.13.0, released 2024-10-29
+
+### New features
+
+- Add PrivateServiceConnect option to WorkerPool ([commit 59748e6](https://github.com/googleapis/google-cloud-dotnet/commit/59748e60fa58d45650d8f63981db904478308272))
+
+## Version 2.12.0, released 2024-09-26
+
+### New features
+
+- Add LEGACY_BUCKET option to DefaultLogsBucketBehavior ([commit 2f2b8d0](https://github.com/googleapis/google-cloud-dotnet/commit/2f2b8d05336d6487277288331c7d2c674a827c37))
+
+### Documentation improvements
+
+- Sanitize docs ([commit 2f2b8d0](https://github.com/googleapis/google-cloud-dotnet/commit/2f2b8d05336d6487277288331c7d2c674a827c37))
+
+## Version 2.11.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.10.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.9.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.8.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.7.0, released 2023-11-07
+
+### New features
+
+- Add optional field "SourceFetcher" to choose source fetcher tool ([commit 5740cd2](https://github.com/googleapis/google-cloud-dotnet/commit/5740cd23080c15d0d2c7e872cc2c3e55307a7a27))
+
+## Version 2.6.0, released 2023-08-04
+
+### New features
+
+- Add update_mask to UpdateBuildTriggerRequest proto ([commit 1b10e84](https://github.com/googleapis/google-cloud-dotnet/commit/1b10e842187af385bf22f2ab334785539c72a0c3))
+- Add automap_substitutions flag to use substitutions as envs in Cloud Build ([commit ae515fb](https://github.com/googleapis/google-cloud-dotnet/commit/ae515fb363445ea21c06500acce5d53a08d34081))
+- Add git_file_source and git_repo_source to build_trigger ([commit 510e913](https://github.com/googleapis/google-cloud-dotnet/commit/510e9133c70a36d731b563d10225d5238422be75))
+
+## Version 2.5.0, released 2023-07-13
+
+### New features
+
+- Add routing information in Cloud Build GRPC clients ([commit 89156c3](https://github.com/googleapis/google-cloud-dotnet/commit/89156c3719f4dcf1d371fe6a974cf8d62cd9384a))
+- Added e2-medium machine type ([commit dc5d51f](https://github.com/googleapis/google-cloud-dotnet/commit/dc5d51ff8eda2db70bb23bb4034cc65c404c7731))
+- Add repositoryevent to buildtrigger ([commit e207559](https://github.com/googleapis/google-cloud-dotnet/commit/e207559237a093beef962df0b10d973518eac4b4))
+
+## Version 2.4.0, released 2023-04-19
+
+### New features
+
+- Add PeeredNetworkIpRange to NetworkConfigs message ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+- Add NpmPackages to Artifact and Results messages and new SHA512 hash type ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+- Update third party clodubuild.proto library to include git_source ([commit 6c369f5](https://github.com/googleapis/google-cloud-dotnet/commit/6c369f5baaab5af66addcde14d7cf4483a8d4709))
+
+### Documentation improvements
+
+- Various doc updates ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+
 ## Version 2.3.0, released 2023-03-20
 
 ### New features

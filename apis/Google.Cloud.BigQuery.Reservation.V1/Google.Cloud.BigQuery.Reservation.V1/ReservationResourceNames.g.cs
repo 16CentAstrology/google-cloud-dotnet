@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbrv = Google.Cloud.BigQuery.Reservation.V1;
 using sys = System;
 
@@ -254,10 +254,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <inheritdoc/>
         public bool Equals(ReservationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ReservationName a, ReservationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ReservationName a, ReservationName b) => !(a == b);
     }
 
@@ -513,10 +525,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <inheritdoc/>
         public bool Equals(CapacityCommitmentName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(CapacityCommitmentName a, CapacityCommitmentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(CapacityCommitmentName a, CapacityCommitmentName b) => !(a == b);
     }
 
@@ -771,10 +795,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <inheritdoc/>
         public bool Equals(AssignmentName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AssignmentName a, AssignmentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AssignmentName a, AssignmentName b) => !(a == b);
     }
 
@@ -993,10 +1029,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <inheritdoc/>
         public bool Equals(BiReservationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(BiReservationName a, BiReservationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(BiReservationName a, BiReservationName b) => !(a == b);
     }
 
@@ -1009,6 +1057,34 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbrv::ReservationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="PrimaryLocation"/> resource name property.
+        /// </summary>
+        public gagr::LocationName PrimaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(PrimaryLocation) ? null : gagr::LocationName.Parse(PrimaryLocation, allowUnparsed: true);
+            set => PrimaryLocation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="SecondaryLocation"/> resource name property.
+        /// </summary>
+        public gagr::LocationName SecondaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(SecondaryLocation) ? null : gagr::LocationName.Parse(SecondaryLocation, allowUnparsed: true);
+            set => SecondaryLocation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="OriginalPrimaryLocation"/> resource name
+        /// property.
+        /// </summary>
+        public gagr::LocationName OriginalPrimaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(OriginalPrimaryLocation) ? null : gagr::LocationName.Parse(OriginalPrimaryLocation, allowUnparsed: true);
+            set => OriginalPrimaryLocation = value?.ToString() ?? "";
         }
     }
 
@@ -1061,6 +1137,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     public partial class DeleteReservationRequest
+    {
+        /// <summary>
+        /// <see cref="gcbrv::ReservationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbrv::ReservationName ReservationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbrv::ReservationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FailoverReservationRequest
     {
         /// <summary>
         /// <see cref="gcbrv::ReservationName"/>-typed view over the <see cref="Name"/> resource name property.

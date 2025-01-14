@@ -81,24 +81,24 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
             "QgPgQQMy9gcKEkFwcEdhdGV3YXlzU2VydmljZRLUAQoPTGlzdEFwcEdhdGV3",
             "YXlzEj4uZ29vZ2xlLmNsb3VkLmJleW9uZGNvcnAuYXBwZ2F0ZXdheXMudjEu",
             "TGlzdEFwcEdhdGV3YXlzUmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5iZXlvbmRj",
-            "b3JwLmFwcGdhdGV3YXlzLnYxLkxpc3RBcHBHYXRld2F5c1Jlc3BvbnNlIkCC",
-            "0+STAjESLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Fw",
-            "cEdhdGV3YXlz2kEGcGFyZW50EsEBCg1HZXRBcHBHYXRld2F5EjwuZ29vZ2xl",
+            "b3JwLmFwcGdhdGV3YXlzLnYxLkxpc3RBcHBHYXRld2F5c1Jlc3BvbnNlIkDa",
+            "QQZwYXJlbnSC0+STAjESLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L2FwcEdhdGV3YXlzEsEBCg1HZXRBcHBHYXRld2F5EjwuZ29vZ2xl",
             "LmNsb3VkLmJleW9uZGNvcnAuYXBwZ2F0ZXdheXMudjEuR2V0QXBwR2F0ZXdh",
             "eVJlcXVlc3QaMi5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBnYXRld2F5",
-            "cy52MS5BcHBHYXRld2F5Ij6C0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FwcEdhdGV3YXlzLyp92kEEbmFtZRKJAgoQQ3JlYXRl",
+            "cy52MS5BcHBHYXRld2F5Ij7aQQRuYW1lgtPkkwIxEi8vdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9hcHBHYXRld2F5cy8qfRKJAgoQQ3JlYXRl",
             "QXBwR2F0ZXdheRI/Lmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmFwcGdhdGV3",
             "YXlzLnYxLkNyZWF0ZUFwcEdhdGV3YXlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKUAYLT5JMCPiIvL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vYXBwR2F0ZXdheXM6C2FwcF9nYXRld2F52kEh",
-            "cGFyZW50LGFwcF9nYXRld2F5LGFwcF9nYXRld2F5X2lkykEpCgpBcHBHYXRl",
-            "d2F5EhtBcHBHYXRld2F5T3BlcmF0aW9uTWV0YWRhdGES6QEKEERlbGV0ZUFw",
+            "dW5uaW5nLk9wZXJhdGlvbiKUAcpBKQoKQXBwR2F0ZXdheRIbQXBwR2F0ZXdh",
+            "eU9wZXJhdGlvbk1ldGFkYXRh2kEhcGFyZW50LGFwcF9nYXRld2F5LGFwcF9n",
+            "YXRld2F5X2lkgtPkkwI+Ii8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9hcHBHYXRld2F5czoLYXBwX2dhdGV3YXkS6QEKEERlbGV0ZUFw",
             "cEdhdGV3YXkSPy5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBnYXRld2F5",
             "cy52MS5EZWxldGVBcHBHYXRld2F5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24idYLT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn3aQQRuYW1lykE0ChVnb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkSG0FwcEdhdGV3YXlPcGVyYXRpb25NZXRhZGF0YRpN",
+            "bmluZy5PcGVyYXRpb24idcpBNAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhtB",
+            "cHBHYXRld2F5T3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIxKi8vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBHYXRld2F5cy8qfRpN",
             "ykEZYmV5b25kY29ycC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKKmNvbS5nb29n",
             "bGUuY2xvdWQuYmV5b25kY29ycC5hcHBnYXRld2F5cy52MUIXQXBwR2F0ZXdh",
@@ -128,6 +128,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Request message for BeyondCorp.ListAppGateways.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAppGatewaysRequest : pb::IMessage<ListAppGatewaysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -493,6 +494,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Response message for BeyondCorp.ListAppGateways.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAppGatewaysResponse : pb::IMessage<ListAppGatewaysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -747,6 +749,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Request message for BeyondCorp.GetAppGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAppGatewayRequest : pb::IMessage<GetAppGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -943,6 +946,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Request message for BeyondCorp.CreateAppGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAppGatewayRequest : pb::IMessage<CreateAppGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1324,6 +1328,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Request message for BeyondCorp.DeleteAppGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAppGatewayRequest : pb::IMessage<DeleteAppGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1616,6 +1621,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// for creating a BeyondCorp protected AppGateway. Multiple connectors can be
   /// authorised for a single AppGateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppGateway : pb::IMessage<AppGateway>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2050,7 +2056,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -2274,6 +2280,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <summary>
       /// Allocated connection of the AppGateway.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AllocatedConnection : pb::IMessage<AllocatedConnection>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2514,6 +2521,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppGatewayOperationMetadata : pb::IMessage<AppGatewayOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

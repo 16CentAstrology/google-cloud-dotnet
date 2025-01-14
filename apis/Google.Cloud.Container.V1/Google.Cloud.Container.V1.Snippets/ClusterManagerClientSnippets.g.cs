@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Container.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Container.V1;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -430,6 +431,17 @@ namespace Google.Cloud.Container.V1.Snippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                Accelerators =
+                {
+                    new AcceleratorConfig(),
+                },
+                MachineType = "",
+                DiskType = "",
+                DiskSizeGb = 0L,
+                ResourceManagerTags = new ResourceManagerTags(),
+                ContainerdConfig = new ContainerdConfig(),
+                QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
+                StoragePools = { "", },
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -466,6 +478,17 @@ namespace Google.Cloud.Container.V1.Snippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                Accelerators =
+                {
+                    new AcceleratorConfig(),
+                },
+                MachineType = "",
+                DiskType = "",
+                DiskSizeGb = 0L,
+                ResourceManagerTags = new ResourceManagerTags(),
+                ContainerdConfig = new ContainerdConfig(),
+                QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
+                StoragePools = { "", },
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
@@ -1174,7 +1197,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListOperations</summary>
-        public void ListOperations()
+        public void ListOperations1()
         {
             // Snippet: ListOperations(string, string, CallSettings)
             // Create client
@@ -1190,7 +1213,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for ListOperationsAsync</summary>
-        public async Task ListOperationsAsync()
+        public async Task ListOperations1Async()
         {
             // Snippet: ListOperationsAsync(string, string, CallSettings)
             // Additional: ListOperationsAsync(string, string, CancellationToken)
@@ -1203,6 +1226,33 @@ namespace Google.Cloud.Container.V1.Snippets
 #pragma warning disable CS0612
             ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
 #pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperations</summary>
+        public void ListOperations2()
+        {
+            // Snippet: ListOperations(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListOperationsResponse response = clusterManagerClient.ListOperations(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOperationsAsync</summary>
+        public async Task ListOperations2Async()
+        {
+            // Snippet: ListOperationsAsync(string, CallSettings)
+            // Additional: ListOperationsAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(parent);
             // End snippet
         }
 
@@ -2689,6 +2739,33 @@ namespace Google.Cloud.Container.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckAutopilotCompatibility</summary>
+        public void CheckAutopilotCompatibilityRequestObject()
+        {
+            // Snippet: CheckAutopilotCompatibility(CheckAutopilotCompatibilityRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            CheckAutopilotCompatibilityRequest request = new CheckAutopilotCompatibilityRequest { Name = "", };
+            // Make the request
+            CheckAutopilotCompatibilityResponse response = clusterManagerClient.CheckAutopilotCompatibility(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckAutopilotCompatibilityAsync</summary>
+        public async Task CheckAutopilotCompatibilityRequestObjectAsync()
+        {
+            // Snippet: CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest, CallSettings)
+            // Additional: CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CheckAutopilotCompatibilityRequest request = new CheckAutopilotCompatibilityRequest { Name = "", };
+            // Make the request
+            CheckAutopilotCompatibilityResponse response = await clusterManagerClient.CheckAutopilotCompatibilityAsync(request);
             // End snippet
         }
     }

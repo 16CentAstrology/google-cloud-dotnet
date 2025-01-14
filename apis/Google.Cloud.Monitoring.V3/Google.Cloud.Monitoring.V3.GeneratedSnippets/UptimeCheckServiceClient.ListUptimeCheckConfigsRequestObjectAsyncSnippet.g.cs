@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Monitoring.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START monitoring_v3_generated_UptimeCheckService_ListUptimeCheckConfigs_async]
     using Google.Api.Gax;
@@ -42,6 +42,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(request);

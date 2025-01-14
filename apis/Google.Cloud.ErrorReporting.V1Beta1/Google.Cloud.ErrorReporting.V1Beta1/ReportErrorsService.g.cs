@@ -46,17 +46,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "EkQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRh",
             "MS5SZXBvcnRFcnJvckV2ZW50UmVxdWVzdBpFLmdvb2dsZS5kZXZ0b29scy5j",
             "bG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuUmVwb3J0RXJyb3JFdmVudFJl",
-            "c3BvbnNlIlSC0+STAjkiMC92MWJldGExL3twcm9qZWN0X25hbWU9cHJvamVj",
-            "dHMvKn0vZXZlbnRzOnJlcG9ydDoFZXZlbnTaQRJwcm9qZWN0X25hbWUsZXZl",
+            "c3BvbnNlIlTaQRJwcm9qZWN0X25hbWUsZXZlbnSC0+STAjkiMC92MWJldGEx",
+            "L3twcm9qZWN0X25hbWU9cHJvamVjdHMvKn0vZXZlbnRzOnJlcG9ydDoFZXZl",
             "bnQaVspBImNsb3VkZXJyb3JyZXBvcnRpbmcuZ29vZ2xlYXBpcy5jb23SQS5o",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "QqUCCi9jb20uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcu",
-            "djFiZXRhMUIYUmVwb3J0RXJyb3JzU2VydmljZVByb3RvUAFaXmdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRl",
-            "cnJvcnJlcG9ydGluZy92MWJldGExO2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGq",
-            "AiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2ds",
-            "ZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGEx6gImR29vZ2xlOjpDbG91",
-            "ZDo6RXJyb3JSZXBvcnRpbmc6OlYxYmV0YTFiBnByb3RvMw=="));
+            "QpYCCi9jb20uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcu",
+            "djFiZXRhMUIYUmVwb3J0RXJyb3JzU2VydmljZVByb3RvUAFaT2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZXJyb3JyZXBvcnRpbmcvYXBpdjFiZXRhMS9lcnJvcnJl",
+            "cG9ydGluZ3BiO2Vycm9ycmVwb3J0aW5ncGL4AQGqAiNHb29nbGUuQ2xvdWQu",
+            "RXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJl",
+            "cG9ydGluZ1xWMWJldGEx6gImR29vZ2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRp",
+            "bmc6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,6 +72,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// A request for reporting an individual error event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportErrorEventRequest : pb::IMessage<ReportErrorEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -322,6 +323,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// Response for reporting an individual error event.
   /// Data may be added to this message in the future.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportErrorEventResponse : pb::IMessage<ReportErrorEventResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -477,6 +479,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// An error event which is reported to the Error Reporting system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportedErrorEvent : pb::IMessage<ReportedErrorEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -530,7 +533,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     /// Optional. Time when the event occurred.
     /// If not provided, the time when the event was received by the
-    /// Error Reporting system will be used.
+    /// Error Reporting system is used. If provided, the time must not
+    /// exceed the [logs retention
+    /// period](https://cloud.google.com/logging/quotas#logs_retention_periods) in
+    /// the past, or be more than 24 hours in the future.
+    /// If an invalid time is provided, then an error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -579,9 +586,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
     /// * **C#**: Must be the return value of
     /// [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
-    /// * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
-    /// and contain the result of
-    /// [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+    /// * **PHP**: Must be prefixed with `"PHP (Notice|Parse error|Fatal
+    /// error|Warning): "` and contain the result of
+    /// [`(string)$exception`](https://php.net/manual/en/exception.tostring.php).
     /// * **Go**: Must be the return value of
     /// [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
     /// </summary>

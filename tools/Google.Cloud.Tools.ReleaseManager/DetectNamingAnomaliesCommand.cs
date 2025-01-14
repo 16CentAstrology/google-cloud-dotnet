@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -26,15 +25,14 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapis = Path.Combine(root, "googleapis");
-            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(RootLayout.Googleapis);
             foreach (var api in apiIndex.Apis)
             {
                 ReportAnomalies(api);
             }
+            return 0;
         }
 
         private static void ReportAnomalies(ApiIndex.V1.Api api)

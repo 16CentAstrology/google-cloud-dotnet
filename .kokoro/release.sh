@@ -38,13 +38,6 @@ fi
 export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
 
-PYTHON3=$(source toolversions.sh && echo $PYTHON3)
-
-# Make sure we have the most recent version of pip, then install other packages.
-# (If we're being called from autorelease, this will already have been done...)
-python -m pip install --require-hashes -r .kokoro/pip-requirements.txt
-python -m pip install --require-hashes -r .kokoro/requirements.txt
-
 DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
 GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"
@@ -62,6 +55,11 @@ echo "Building with commit $COMMITTISH"
 # Build the release and run the tests.
 ./buildrelease.sh $COMMITTISH
 
+# Restore tools just in case we haven't done so already.
+# (If we're using autorelease, this should have happened, but
+# doing it again is harmless.) This will make the SBOM generator available.
+dotnet tool restore
+
 if [[ $SKIP_NUGET_PUSH = "" ]]
 then
   echo "Pushing NuGet packages"
@@ -71,9 +69,17 @@ then
   do
     # Work out just the package ID based on the filename.
     pkg_id=$(echo $pkg | sed -r 's/^(.*)\.([0-9]+\.[0-9]+\.[0-9]+(-.*)?)\.nupkg$/\1/g')
-    # Work out the package owner based on apis.json and the package ID
-    default_package_owner=$([[ $pkg == Google.Cloud* ]] && echo google-cloud || echo google-apis-packages)
-    package_owner=$($PYTHON3 ../tools/getapifield.py ../apis/apis.json $pkg_id packageOwner --default=$default_package_owner)
+    
+    # Google.Cloud.Tools.* don't exist in apis.json, but are always owned by google-cloud
+    if [[ $pkg_id == Google.Cloud.Tools.* ]]
+    then
+      package_owner=google-cloud
+    else
+      # Work out the package owner based on apis.json and the package ID
+      default_package_owner=$([[ $pkg == Google.Cloud* ]] && echo google-cloud || echo google-apis-packages)
+      package_owner=$(dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field $pkg_id packageOwner $default_package_owner)
+    fi
+    
     # Work out the right NuGet API key based on the package owner
     case "$package_owner" in
       google-cloud)
@@ -86,7 +92,8 @@ then
        echo "No NuGet API key found for package owner $package_owner"
        exit 1
     esac
-    
+
+    dotnet generate-sbom $pkg
     dotnet nuget push -s https://api.nuget.org/v3/index.json -k $pkg_nuget_api_key $pkg
   done
   cd ../..

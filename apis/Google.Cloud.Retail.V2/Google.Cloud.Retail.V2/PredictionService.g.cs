@@ -74,6 +74,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for Predict method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -537,8 +538,8 @@ namespace Google.Cloud.Retail.V2 {
       if (other.ValidateOnly != false) {
         ValidateOnly = other.ValidateOnly;
       }
-      params_.Add(other.params_);
-      labels_.Add(other.labels_);
+      params_.MergeFrom(other.params_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -649,6 +650,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Response message for predict method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -949,6 +951,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// PredictionResult represents the recommendation prediction results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PredictionResult : pb::IMessage<PredictionResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1123,7 +1126,7 @@ namespace Google.Cloud.Retail.V2 {
           if (other.Id.Length != 0) {
             Id = other.Id;
           }
-          metadata_.Add(other.metadata_);
+          metadata_.MergeFrom(other.metadata_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

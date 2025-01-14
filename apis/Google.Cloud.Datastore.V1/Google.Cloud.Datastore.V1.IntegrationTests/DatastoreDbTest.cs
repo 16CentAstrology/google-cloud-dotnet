@@ -1,23 +1,25 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Datastore.V1.Aggregations;
 using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -68,6 +70,39 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task MultiDb_InsertLookupDelete()
+        {
+            await _fixture.RunWithTemporaryDatabaseAsync(databaseId =>
+            {
+                var db = _fixture.CreateDatastoreDbWithDatabase(databaseId);
+                var keyFactory = db.CreateKeyFactory("test_dbid");
+                var entities = new[]
+                {
+                    new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
+                    new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" }
+                };
+
+                var insertedKeys = db.Insert(entities);
+
+                Assert.Null(insertedKeys[0]); // Insert with predefined key
+                Assert.NotNull(insertedKeys[1]); // Insert with incomplete key
+                Assert.Equal(insertedKeys[1], entities[1].Key); // Inserted key is propagated into entity
+
+                var lookupKey = new Key
+                {
+                    PartitionId = new() { ProjectId = _fixture.ProjectId, NamespaceId = _fixture.NamespaceId, DatabaseId = databaseId },
+                    Path = { insertedKeys[1].Path }
+                };
+                var fetchedEntity = db.Lookup(lookupKey);
+                Assert.NotNull(fetchedEntity);
+                Assert.Equal("incomplete_key", fetchedEntity["description"]);
+
+                db.Delete(lookupKey);
+                Assert.Null(db.Lookup(lookupKey));
+            });
+        }
+
+        [Fact]
         public async Task Lookup_NoPartition()
         {
             // Deliberately in the empty namespace, which won't be cleaned up automatically - hence the db.Delete call later.
@@ -84,7 +119,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 var lookupKey = new Key { Path = { insertedKey.Path } };
                 var result = db.Lookup(lookupKey);
                 Assert.NotNull(result);
-                Assert.Equal("bar", (string)entity["foo"]);
+                Assert.Equal("bar", (string) entity["foo"]);
 
                 // And the same lookup asynchronously...
                 Assert.Equal(result, await db.LookupAsync(lookupKey));
@@ -245,7 +280,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
 
             var keys = db.Insert(entities);
-            Assert.Null(keys[0]); // Insert with predefined key 
+            Assert.Null(keys[0]); // Insert with predefined key
             Assert.NotNull(keys[1]); // Insert with incomplete key
 
             // Inserted key is propagated into entity
@@ -268,7 +303,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
             var keys = db.Upsert(revisedEntity, newEntity1, newEntity2);
             Assert.Null(keys[0]); // Update
-            Assert.Null(keys[1]); // Insert with predefined key 
+            Assert.Null(keys[1]); // Insert with predefined key
             Assert.NotNull(keys[2]); // Insert with incomplete key
 
             // Inserted key is propagated into entity
@@ -290,7 +325,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
 
             var keys = await db.InsertAsync(entities);
-            Assert.Null(keys[0]); // Insert with predefined key 
+            Assert.Null(keys[0]); // Insert with predefined key
             Assert.NotNull(keys[1]); // Insert with incomplete key
 
             // Inserted key is propagated into entity
@@ -313,7 +348,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
             var keys = await db.UpsertAsync(revisedEntity, newEntity1, newEntity2);
             Assert.Null(keys[0]); // Update
-            Assert.Null(keys[1]); // Insert with predefined key 
+            Assert.Null(keys[1]); // Insert with predefined key
             Assert.NotNull(keys[2]); // Insert with incomplete key
 
             // Inserted key is propagated into entity
@@ -441,11 +476,56 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var query = new Query("CountTestStQuery");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
-                Aggregations = { Aggregations.Count("count")}
+                Aggregations = { Count("count") }
             };
             AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
             long count = results["count"].IntegerValue;
             Assert.Equal(2, count);
+        }
+
+        [Fact]
+        public void Aggregation_WithGqlQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("Students");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("21"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("31"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("41"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avg_height` FROM Students" };
+            AggregationQueryResults results = db.RunAggregationQuery(gql);
+            Assert.Equal(18.8, results["property_1"].DoubleValue);
+            Assert.Equal(4.7, results["avg_height"].DoubleValue);
+        }
+
+        [Fact]
+        public void Aggregations_StructuredQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("Student");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("7"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("8"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("9"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var query = new Query("Student");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
+            };
+            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
+            Assert.Equal(49, results["sum_age"].IntegerValue);
+            Assert.Equal(12.25, results["property_1"].DoubleValue);
+            Assert.Equal(4, results["count"].IntegerValue);
         }
 
         [Fact]
@@ -468,6 +548,56 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
             var result = db.RunQuery(query);
             Assert.Equal(2, result.Entities.Count);
+        }
+
+        [SkippableFact]
+        public async Task MultipleInequalities_StructuredQuery()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            var db = _fixture.CreateDatastoreDb();
+            string kind = await InsertMultipleInequalitiesTestData(db);
+            var query = new Query(kind)
+            {
+                Filter = Filter.And(Filter.GreaterThan("height", 60), Filter.GreaterThan("age", 35))
+            };
+            var result = await db.RunQueryAsync(query);
+            Assert.Equal(1, result.Entities.Count);
+            Assert.Equal("match", result.Entities[0].Key.Path.Last().Name);
+        }
+
+        [SkippableFact]
+        public async Task MultipleInequalities_Gql()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            var db = _fixture.CreateDatastoreDb();
+            string kind = await InsertMultipleInequalitiesTestData(db);
+            var query = new GqlQuery
+            {
+                QueryString = $"SELECT * FROM {kind} WHERE height > 60 AND age > 35",
+                AllowLiterals = true
+            };
+            var result = await db.RunQueryAsync(query);
+            Assert.Equal(1, result.Entities.Count);
+            Assert.Equal("match", result.Entities[0].Key.Path.Last().Name);
+        }
+
+        private async Task<string> InsertMultipleInequalitiesTestData(DatastoreDb db)
+        {
+            // Use a different kind for each test, to avoid index collisions.
+            string kind = IdGenerator.FromDateTime(prefix: "MultipleInequalities_");
+            await _fixture.CreateIndexAsync(kind, _fixture.AscendingProperty("height"), _fixture.AscendingProperty("age"));
+            var keyFactory = db.CreateKeyFactory(kind);
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("too-short-and-young"), ["height"] = 50, ["age"] = 10  },
+                new Entity { Key = keyFactory.CreateKey("too-short"), ["height"] = 50, ["age"] = 40  },
+                new Entity { Key = keyFactory.CreateKey("too-young"), ["height"] = 70, ["age"] = 10  },
+                new Entity { Key = keyFactory.CreateKey("match"), ["height"] = 70, ["age"] = 40  }
+            };
+            db.Insert(entities);
+            return kind;
         }
     }
 }

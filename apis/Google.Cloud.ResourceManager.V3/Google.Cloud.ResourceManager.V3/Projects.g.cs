@@ -76,47 +76,47 @@ namespace Google.Cloud.ResourceManager.V3 {
             "b2dsZWFwaXMuY29tL1Byb2plY3QiGQoXVW5kZWxldGVQcm9qZWN0TWV0YWRh",
             "dGEyjxAKCFByb2plY3RzEpABCgpHZXRQcm9qZWN0EjIuZ29vZ2xlLmNsb3Vk",
             "LnJlc291cmNlbWFuYWdlci52My5HZXRQcm9qZWN0UmVxdWVzdBooLmdvb2ds",
-            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuUHJvamVjdCIkgtPkkwIXEhUv",
-            "djMve25hbWU9cHJvamVjdHMvKn3aQQRuYW1lEpoBCgxMaXN0UHJvamVjdHMS",
+            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuUHJvamVjdCIk2kEEbmFtZYLT",
+            "5JMCFxIVL3YzL3tuYW1lPXByb2plY3RzLyp9EpoBCgxMaXN0UHJvamVjdHMS",
             "NC5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLkxpc3RQcm9qZWN0",
             "c1JlcXVlc3QaNS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLkxp",
-            "c3RQcm9qZWN0c1Jlc3BvbnNlIh2C0+STAg4SDC92My9wcm9qZWN0c9pBBnBh",
-            "cmVudBKmAQoOU2VhcmNoUHJvamVjdHMSNi5nb29nbGUuY2xvdWQucmVzb3Vy",
+            "c3RQcm9qZWN0c1Jlc3BvbnNlIh3aQQZwYXJlbnSC0+STAg4SDC92My9wcm9q",
+            "ZWN0cxKmAQoOU2VhcmNoUHJvamVjdHMSNi5nb29nbGUuY2xvdWQucmVzb3Vy",
             "Y2VtYW5hZ2VyLnYzLlNlYXJjaFByb2plY3RzUmVxdWVzdBo3Lmdvb2dsZS5j",
             "bG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuU2VhcmNoUHJvamVjdHNSZXNwb25z",
-            "ZSIjgtPkkwIVEhMvdjMvcHJvamVjdHM6c2VhcmNo2kEFcXVlcnkSsQEKDUNy",
+            "ZSIj2kEFcXVlcnmC0+STAhUSEy92My9wcm9qZWN0czpzZWFyY2gSsQEKDUNy",
             "ZWF0ZVByb2plY3QSNS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
             "LkNyZWF0ZVByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJKgtPkkwIXIgwvdjMvcHJvamVjdHM6B3Byb2plY3TaQQdwcm9q",
-            "ZWN0ykEgCgdQcm9qZWN0EhVDcmVhdGVQcm9qZWN0TWV0YWRhdGESzgEKDVVw",
+            "ZXJhdGlvbiJKykEgCgdQcm9qZWN0EhVDcmVhdGVQcm9qZWN0TWV0YWRhdGHa",
+            "QQdwcm9qZWN0gtPkkwIXIgwvdjMvcHJvamVjdHM6B3Byb2plY3QSzgEKDVVw",
             "ZGF0ZVByb2plY3QSNS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
             "LlVwZGF0ZVByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJngtPkkwIoMh0vdjMve3Byb2plY3QubmFtZT1wcm9qZWN0cy8q",
-            "fToHcHJvamVjdNpBE3Byb2plY3QsdXBkYXRlX21hc2vKQSAKB1Byb2plY3QS",
-            "FVVwZGF0ZVByb2plY3RNZXRhZGF0YRLEAQoLTW92ZVByb2plY3QSMy5nb29n",
+            "ZXJhdGlvbiJnykEgCgdQcm9qZWN0EhVVcGRhdGVQcm9qZWN0TWV0YWRhdGHa",
+            "QRNwcm9qZWN0LHVwZGF0ZV9tYXNrgtPkkwIoMh0vdjMve3Byb2plY3QubmFt",
+            "ZT1wcm9qZWN0cy8qfToHcHJvamVjdBLEAQoLTW92ZVByb2plY3QSMy5nb29n",
             "bGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLk1vdmVQcm9qZWN0UmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iYYLT5JMCHyIaL3Yz",
-            "L3tuYW1lPXByb2plY3RzLyp9Om1vdmU6ASraQRhuYW1lLCBkZXN0aW5hdGlv",
-            "bl9wYXJlbnTKQR4KB1Byb2plY3QSE01vdmVQcm9qZWN0TWV0YWRhdGESrgEK",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iYcpBHgoHUHJvamVj",
+            "dBITTW92ZVByb2plY3RNZXRhZGF0YdpBGG5hbWUsIGRlc3RpbmF0aW9uX3Bh",
+            "cmVudILT5JMCHyIaL3YzL3tuYW1lPXByb2plY3RzLyp9Om1vdmU6ASoSrgEK",
             "DURlbGV0ZVByb2plY3QSNS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2Vy",
             "LnYzLkRlbGV0ZVByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiJHgtPkkwIXKhUvdjMve25hbWU9cHJvamVjdHMvKn3aQQRu",
-            "YW1lykEgCgdQcm9qZWN0EhVEZWxldGVQcm9qZWN0TWV0YWRhdGESwAEKD1Vu",
+            "Lk9wZXJhdGlvbiJHykEgCgdQcm9qZWN0EhVEZWxldGVQcm9qZWN0TWV0YWRh",
+            "dGHaQQRuYW1lgtPkkwIXKhUvdjMve25hbWU9cHJvamVjdHMvKn0SwAEKD1Vu",
             "ZGVsZXRlUHJvamVjdBI3Lmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIu",
             "djMuVW5kZWxldGVQcm9qZWN0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iVYLT5JMCIyIeL3YzL3tuYW1lPXByb2plY3RzLyp9OnVu",
-            "ZGVsZXRlOgEq2kEEbmFtZcpBIgoHUHJvamVjdBIXVW5kZWxldGVQcm9qZWN0",
-            "TWV0YWRhdGEShwEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0",
-            "SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IjyC0+ST",
-            "AisiJi92My97cmVzb3VyY2U9cHJvamVjdHMvKn06Z2V0SWFtUG9saWN5OgEq",
-            "2kEIcmVzb3VyY2USjwEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEu",
-            "U2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkSC",
-            "0+STAisiJi92My97cmVzb3VyY2U9cHJvamVjdHMvKn06c2V0SWFtUG9saWN5",
-            "OgEq2kEQcmVzb3VyY2UsIHBvbGljeRK6AQoSVGVzdElhbVBlcm1pc3Npb25z",
+            "Zy5PcGVyYXRpb24iVcpBIgoHUHJvamVjdBIXVW5kZWxldGVQcm9qZWN0TWV0",
+            "YWRhdGHaQQRuYW1lgtPkkwIjIh4vdjMve25hbWU9cHJvamVjdHMvKn06dW5k",
+            "ZWxldGU6ASoShwEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0",
+            "SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IjzaQQhy",
+            "ZXNvdXJjZYLT5JMCKyImL3YzL3tyZXNvdXJjZT1wcm9qZWN0cy8qfTpnZXRJ",
+            "YW1Qb2xpY3k6ASoSjwEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEu",
+            "U2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkTa",
+            "QRByZXNvdXJjZSwgcG9saWN5gtPkkwIrIiYvdjMve3Jlc291cmNlPXByb2pl",
+            "Y3RzLyp9OnNldElhbVBvbGljeToBKhK6AQoSVGVzdElhbVBlcm1pc3Npb25z",
             "EiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0Giku",
-            "Z29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJPgtPk",
-            "kwIxIiwvdjMve3Jlc291cmNlPXByb2plY3RzLyp9OnRlc3RJYW1QZXJtaXNz",
-            "aW9uczoBKtpBFXJlc291cmNlLCBwZXJtaXNzaW9ucxqQAcpBI2Nsb3VkcmVz",
+            "Z29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJP2kEV",
+            "cmVzb3VyY2UsIHBlcm1pc3Npb25zgtPkkwIxIiwvdjMve3Jlc291cmNlPXBy",
+            "b2plY3RzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhqQAcpBI2Nsb3VkcmVz",
             "b3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFnaHR0cHM6Ly93d3cuZ29v",
             "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
             "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULu",
@@ -156,6 +156,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// container for ACLs, APIs, App Engine Apps, VMs, and other
   /// Google Cloud Platform resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Project : pb::IMessage<Project>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -213,8 +214,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The unique resource name of the project. It is an int64 generated number
-    /// prefixed by "projects/".
+    /// Output only. The unique resource name of the project. It is an int64
+    /// generated number prefixed by "projects/".
     ///
     /// Example: `projects/415104041262`
     /// </summary>
@@ -347,9 +348,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 9;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the Project
-    /// resource. This may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the Project resource. This may be sent on update and delete requests to
+    /// ensure the client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -374,7 +375,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     /// Label values must be between 0 and 63 characters long and must conform
     /// to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
     ///
-    /// No more than 256 labels can be associated with a given resource.
+    /// No more than 64 labels can be associated with a given resource.
     ///
     /// Clients should store labels in a representation such as JSON that does not
     /// depend on specific characters being disallowed.
@@ -617,7 +618,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -790,6 +791,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [GetProject][google.cloud.resourcemanager.v3.Projects.GetProject]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProjectRequest : pb::IMessage<GetProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -987,6 +989,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [ListProjects][google.cloud.resourcemanager.v3.Projects.ListProjects]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProjectsRequest : pb::IMessage<ListProjectsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1038,10 +1041,12 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the parent resource to list projects under.
+    /// Required. The name of the parent resource whose projects are being listed.
+    /// Only children of this parent resource are listed; descendants are not
+    /// listed.
     ///
-    /// For example, setting this field to 'folders/1234' would list all projects
-    /// directly under that folder.
+    /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+    /// parent is an organization, use the value `organizations/{org_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1056,9 +1061,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to [ListProjects]
-    /// [google.cloud.resourcemanager.v3.Projects.ListProjects]
-    /// that indicates from where listing should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+    /// indicates from where listing should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1090,8 +1095,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ShowDeletedFieldNumber = 4;
     private bool showDeleted_;
     /// <summary>
-    /// Optional. Indicate that projects in the `DELETE_REQUESTED` state should also be
-    /// returned. Normally only `ACTIVE` projects are returned.
+    /// Optional. Indicate that projects in the `DELETE_REQUESTED` state should
+    /// also be returned. Normally only `ACTIVE` projects are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1319,6 +1324,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// NOTE: A response may contain fewer elements than the request `page_size` and
   /// still have a `next_page_token`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProjectsResponse : pb::IMessage<ListProjectsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1555,6 +1561,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [SearchProjects][google.cloud.resourcemanager.v3.Projects.SearchProjects]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchProjectsRequest : pb::IMessage<SearchProjectsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1607,40 +1614,33 @@ namespace Google.Cloud.ResourceManager.V3 {
     /// <summary>
     /// Optional. A query string for searching for projects that the caller has
     /// `resourcemanager.projects.get` permission to. If multiple fields are
-    /// included in the query, the it will return results that match any of the
+    /// included in the query, then it will return results that match any of the
     /// fields. Some eligible fields are:
     ///
-    /// ```
-    /// | Field                   | Description                                  |
-    /// |-------------------------|----------------------------------------------|
-    /// | displayName, name       | Filters by displayName.                      |
-    /// | parent                  | Project's parent. (for example: folders/123,
-    /// organizations/*) Prefer parent field over parent.type and parent.id. |
-    /// | parent.type             | Parent's type: `folder` or `organization`.   |
-    /// | parent.id               | Parent's id number (for example: 123)        |
-    /// | id, projectId           | Filters by projectId.                        |
-    /// | state, lifecycleState   | Filters by state.                            |
-    /// | labels                  | Filters by label name or value.              |
-    /// | labels.&lt;key> (where *key* is the name of a label) | Filters by label
-    /// name. |
-    /// ```
+    /// - **`displayName`, `name`**: Filters by displayName.
+    /// - **`parent`**: Project's parent (for example: `folders/123`,
+    /// `organizations/*`). Prefer `parent` field over `parent.type` and
+    /// `parent.id`.
+    /// - **`parent.type`**: Parent's type: `folder` or `organization`.
+    /// - **`parent.id`**: Parent's id number (for example: `123`).
+    /// - **`id`, `projectId`**: Filters by projectId.
+    /// - **`state`, `lifecycleState`**: Filters by state.
+    /// - **`labels`**: Filters by label name or value.
+    /// - **`labels.&lt;key>` (where `&lt;key>` is the name of a label)**: Filters by label
+    /// name.
     ///
     /// Search expressions are case insensitive.
     ///
     /// Some examples queries:
     ///
-    /// ```
-    /// | Query            | Description                                         |
-    /// |------------------|-----------------------------------------------------|
-    /// | name:how*        | The project's name starts with "how".               |
-    /// | name:Howl        | The project's name is `Howl` or `howl`.             |
-    /// | name:HOWL        | Equivalent to above.                                |
-    /// | NAME:howl        | Equivalent to above.                                |
-    /// | labels.color:*   | The project has the label `color`.                  |
-    /// | labels.color:red | The project's label `color` has the value `red`.    |
-    /// | labels.color:red&amp;nbsp;labels.size:big | The project's label `color` has
-    /// the value `red` and its label `size` has the value `big`.                |
-    /// ```
+    /// - **`name:how*`**: The project's name starts with "how".
+    /// - **`name:Howl`**: The project's name is `Howl` or `howl`.
+    /// - **`name:HOWL`**: Equivalent to above.
+    /// - **`NAME:howl`**: Equivalent to above.
+    /// - **`labels.color:*`**: The project has the label `color`.
+    /// - **`labels.color:red`**:  The project's label `color` has the value `red`.
+    /// - **`labels.color:red labels.size:big`**: The project's label `color` has
+    /// the value `red` or its label `size` has the value `big`.
     ///
     /// If no query is specified, the call will return projects for which the user
     /// has the `resourcemanager.projects.get` permission.
@@ -1658,9 +1658,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to [ListProjects]
-    /// [google.cloud.resourcemanager.v3.Projects.ListProjects]
-    /// that indicates from where listing should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+    /// indicates from where listing should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1878,6 +1878,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// `next_page_token` set. This token can be used in a subsequent request to
   /// retrieve the next request page.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchProjectsResponse : pb::IMessage<SearchProjectsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2115,6 +2116,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [CreateProject][google.cloud.resourcemanager.v3.Projects.CreateProject]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProjectRequest : pb::IMessage<CreateProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2170,7 +2172,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     ///
     /// If the `parent` field is set, the `resourcemanager.projects.create`
     /// permission is checked on the parent resource. If no parent is set and
-    /// the authorization credentials belong to an Organziation, the parent
+    /// the authorization credentials belong to an Organization, the parent
     /// will be set to that Organization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2329,6 +2331,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// returned by CreateProject. It provides insight for when significant phases of
   /// Project creation have completed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProjectMetadata : pb::IMessage<CreateProjectMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2621,6 +2624,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject] method to
   /// change the `parent` field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProjectRequest : pb::IMessage<UpdateProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2875,6 +2879,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by UpdateProject.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProjectMetadata : pb::IMessage<UpdateProjectMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3032,6 +3037,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveProjectRequest : pb::IMessage<MoveProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3268,6 +3274,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by MoveProject.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveProjectMetadata : pb::IMessage<MoveProjectMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3424,6 +3431,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [DeleteProject][google.cloud.resourcemanager.v3.Projects.DeleteProject]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProjectRequest : pb::IMessage<DeleteProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3620,6 +3628,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by `DeleteProject`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProjectMetadata : pb::IMessage<DeleteProjectMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3777,6 +3786,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [google.cloud.resourcemanager.v3.Projects.UndeleteProject]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteProjectRequest : pb::IMessage<UndeleteProjectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3975,6 +3985,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by `UndeleteProject`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteProjectMetadata : pb::IMessage<UndeleteProjectMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

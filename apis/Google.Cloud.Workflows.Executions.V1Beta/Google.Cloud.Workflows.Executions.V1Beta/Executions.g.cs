@@ -65,24 +65,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
             "dXRpb25zEuQBCg5MaXN0RXhlY3V0aW9ucxI/Lmdvb2dsZS5jbG91ZC53b3Jr",
             "Zmxvd3MuZXhlY3V0aW9ucy52MWJldGEuTGlzdEV4ZWN1dGlvbnNSZXF1ZXN0",
             "GkAuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxYmV0YS5M",
-            "aXN0RXhlY3V0aW9uc1Jlc3BvbnNlIk+C0+STAkASPi92MWJldGEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfS9leGVjdXRp",
-            "b25z2kEGcGFyZW50Eu4BCg9DcmVhdGVFeGVjdXRpb24SQC5nb29nbGUuY2xv",
+            "aXN0RXhlY3V0aW9uc1Jlc3BvbnNlIk/aQQZwYXJlbnSC0+STAkASPi92MWJl",
+            "dGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8q",
+            "fS9leGVjdXRpb25zEu4BCg9DcmVhdGVFeGVjdXRpb24SQC5nb29nbGUuY2xv",
             "dWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjFiZXRhLkNyZWF0ZUV4ZWN1dGlv",
             "blJlcXVlc3QaMy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
-            "djFiZXRhLkV4ZWN1dGlvbiJkgtPkkwJLIj4vdjFiZXRhL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3MvKn0vZXhlY3V0aW9uczoJ",
-            "ZXhlY3V0aW9u2kEQcGFyZW50LGV4ZWN1dGlvbhLRAQoMR2V0RXhlY3V0aW9u",
+            "djFiZXRhLkV4ZWN1dGlvbiJk2kEQcGFyZW50LGV4ZWN1dGlvboLT5JMCSyI+",
+            "L3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zs",
+            "b3dzLyp9L2V4ZWN1dGlvbnM6CWV4ZWN1dGlvbhLRAQoMR2V0RXhlY3V0aW9u",
             "Ej0uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxYmV0YS5H",
             "ZXRFeGVjdXRpb25SZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5l",
-            "eGVjdXRpb25zLnYxYmV0YS5FeGVjdXRpb24iTYLT5JMCQBI+L3YxYmV0YS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qL2V4ZWN1",
-            "dGlvbnMvKn3aQQRuYW1lEuEBCg9DYW5jZWxFeGVjdXRpb24SQC5nb29nbGUu",
+            "eGVjdXRpb25zLnYxYmV0YS5FeGVjdXRpb24iTdpBBG5hbWWC0+STAkASPi92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3Mv",
+            "Ki9leGVjdXRpb25zLyp9EuEBCg9DYW5jZWxFeGVjdXRpb24SQC5nb29nbGUu",
             "Y2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjFiZXRhLkNhbmNlbEV4ZWN1",
             "dGlvblJlcXVlc3QaMy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlv",
-            "bnMudjFiZXRhLkV4ZWN1dGlvbiJXgtPkkwJKIkUvdjFiZXRhL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyovZXhlY3V0aW9ucy8q",
-            "fTpjYW5jZWw6ASraQQRuYW1lGlXKQSF3b3JrZmxvd2V4ZWN1dGlvbnMuZ29v",
+            "bnMudjFiZXRhLkV4ZWN1dGlvbiJX2kEEbmFtZYLT5JMCSiJFL3YxYmV0YS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qL2V4ZWN1",
+            "dGlvbnMvKn06Y2FuY2VsOgEqGlXKQSF3b3JrZmxvd2V4ZWN1dGlvbnMuZ29v",
             "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
             "L2Nsb3VkLXBsYXRmb3JtQvMBCixjb20uZ29vZ2xlLmNsb3VkLndvcmtmbG93",
             "cy5leGVjdXRpb25zLnYxYmV0YUIPRXhlY3V0aW9uc1Byb3RvUAFaTGNsb3Vk",
@@ -131,6 +131,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// <summary>
   /// A running instance of a [Workflow][google.cloud.workflows.v1beta.Workflow].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Execution : pb::IMessage<Execution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -669,6 +670,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <summary>
       /// Error describes why the execution was abnormally terminated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Error : pb::IMessage<Error>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -911,6 +913,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// [ListExecutions][google.cloud.workflows.executions.v1beta.Executions.ListExecutions]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListExecutionsRequest : pb::IMessage<ListExecutionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1238,6 +1241,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// [ListExecutions][google.cloud.workflows.executions.v1beta.Executions.ListExecutions]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListExecutionsResponse : pb::IMessage<ListExecutionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1465,6 +1469,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// [CreateExecution][google.cloud.workflows.executions.v1beta.Executions.CreateExecution]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateExecutionRequest : pb::IMessage<CreateExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1713,6 +1718,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// [GetExecution][google.cloud.workflows.executions.v1beta.Executions.GetExecution]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetExecutionRequest : pb::IMessage<GetExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1953,6 +1959,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   /// [CancelExecution][google.cloud.workflows.executions.v1beta.Executions.CancelExecution]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelExecutionRequest : pb::IMessage<CancelExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

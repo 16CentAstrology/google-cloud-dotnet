@@ -1,5 +1,66 @@
 # Version history
 
+## Version 3.9.0, released 2024-12-06
+
+### New features
+
+- Added currency field to billing account message ([commit 0089a68](https://github.com/googleapis/google-cloud-dotnet/commit/0089a686e6934b7c32b54dea46f778f7b3c3043b))
+
+### Documentation improvements
+
+- Genereal documentation improvements ([commit fb61eae](https://github.com/googleapis/google-cloud-dotnet/commit/fb61eaee81d1ba2b125f7370890755e1412cfde2))
+
+## Version 3.8.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Clarify that the parent field in the CreateBillingAccountRequest must be a billing account ([commit 0c2c601](https://github.com/googleapis/google-cloud-dotnet/commit/0c2c6018b82fa49527b1b1108bc569cc4c9018c5))
+- Update comments ([commit fe663ba](https://github.com/googleapis/google-cloud-dotnet/commit/fe663ba9a85fd347c4fd3a4fd554466dede34a7f))
+
+## Version 3.5.0, released 2023-12-11
+
+### New features
+
+- Added the MoveBillingAccount method, which allows changing which organization a billing account belongs to ([commit d8674a8](https://github.com/googleapis/google-cloud-dotnet/commit/d8674a8ec8fed0314c4a0c557f05f47eb5139381))
+- Added field BillingAccount.parent ([commit d8674a8](https://github.com/googleapis/google-cloud-dotnet/commit/d8674a8ec8fed0314c4a0c557f05f47eb5139381))
+
+### Documentation improvements
+
+- Update service documentation ([commit e6e28ae](https://github.com/googleapis/google-cloud-dotnet/commit/e6e28aea18f1fbd8d70e62eae8bbdc698e321565))
+## Version 3.4.0, released 2023-09-08
+
+### Breaking change
+
+The resource annotation for `GetProjectBillingInfoRequest.Name` has changed from referring to a `ProjectBillingInfoName` to a `ProjectName`. This means `GetProjectBillingInfoRequest.ProjectBillingInfoName` has been removed, and `GetProjectBillingInfo.ProjectName` has replaced it, and the overloads to the `GetProjectName` method have changed accordingly.
+
+Although this is clearly a breaking change (as removing a public property always is), we have not taken a major version bump as any customers whose source code is broken by this would already have been broken when making a request. Customers whose code is already working will not be affected.
+
+### Bug fixes
+
+- Fixed resource_reference for name in GetProjectBillingInfo ([commit 58d6168](https://github.com/googleapis/google-cloud-dotnet/commit/58d6168573e2039bae924d9a3e15ffe32aa38f0d))
+
+### Documentation improvements
+
+- Update comments ([commit 5de2c9b](https://github.com/googleapis/google-cloud-dotnet/commit/5de2c9b2badcd4b58642b12c5fa5413ed96be75f))
+
+## Version 3.3.0, released 2023-06-20
+
+### New features
+
+- Added resource_reference for name in GetProjectBillingInfoRequest message ([commit a092965](https://github.com/googleapis/google-cloud-dotnet/commit/a092965c2e524581712dec037b73d2f3c0931abb))
+
 ## Version 3.2.0, released 2023-01-18
 
 ### New features

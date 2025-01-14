@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -270,6 +270,87 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyBackupRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="BackupName"/>-typed view over the <see cref="SourceBackup"/> resource name property.
+        /// </summary>
+        public BackupName SourceBackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(SourceBackup) ? null : BackupName.Parse(SourceBackup, allowUnparsed: true);
+            set => SourceBackup = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyBackupMetadata
+    {
+        /// <summary>
+        /// <see cref="gcbav::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAuthorizedViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::AuthorizedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::AuthorizedViewName AuthorizedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::AuthorizedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::AuthorizedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::AuthorizedViewName AuthorizedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::AuthorizedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

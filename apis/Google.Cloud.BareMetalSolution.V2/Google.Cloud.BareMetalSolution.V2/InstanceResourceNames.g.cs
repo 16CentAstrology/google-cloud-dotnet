@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbv = Google.Cloud.BareMetalSolution.V2;
 using sys = System;
 
@@ -245,10 +245,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// <inheritdoc/>
         public bool Equals(InstanceName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(InstanceName a, InstanceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
     }
 
@@ -509,10 +521,22 @@ namespace Google.Cloud.BareMetalSolution.V2
         /// <inheritdoc/>
         public bool Equals(ServerNetworkTemplateName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ServerNetworkTemplateName a, ServerNetworkTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ServerNetworkTemplateName a, ServerNetworkTemplateName b) => !(a == b);
     }
 
@@ -562,6 +586,18 @@ namespace Google.Cloud.BareMetalSolution.V2
         }
     }
 
+    public partial class RenameInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ResetInstanceRequest
     {
         /// <summary>
@@ -587,6 +623,30 @@ namespace Google.Cloud.BareMetalSolution.V2
     }
 
     public partial class StopInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EnableInteractiveSerialConsoleRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DisableInteractiveSerialConsoleRequest
     {
         /// <summary>
         /// <see cref="gcbv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.

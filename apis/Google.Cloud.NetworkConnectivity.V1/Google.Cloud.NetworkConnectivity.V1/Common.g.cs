@@ -58,6 +58,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -189,8 +190,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have been cancelled successfully
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-    /// corresponding to `Code.CANCELLED`.
+    /// have [Operation.error][] value with a
+    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+    /// `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

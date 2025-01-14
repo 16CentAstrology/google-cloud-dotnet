@@ -26,13 +26,19 @@ namespace Google.Maps.Routing.V2 {
           string.Concat(
             "CiJnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlLnByb3RvEhZnb29nbGUu",
             "bWFwcy5yb3V0aW5nLnYyGh5nb29nbGUvZ2VvL3R5cGUvdmlld3BvcnQucHJv",
+            "dG8aK2dvb2dsZS9tYXBzL3JvdXRpbmcvdjIvbG9jYWxpemVkX3RpbWUucHJv",
             "dG8aJWdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvbG9jYXRpb24ucHJvdG8aM2dv",
             "b2dsZS9tYXBzL3JvdXRpbmcvdjIvbmF2aWdhdGlvbl9pbnN0cnVjdGlvbi5w",
-            "cm90bxolZ29vZ2xlL21hcHMvcm91dGluZy92Mi9wb2x5bGluZS5wcm90bxoo",
-            "Z29vZ2xlL21hcHMvcm91dGluZy92Mi9yb3V0ZV9sYWJlbC5wcm90bxozZ29v",
-            "Z2xlL21hcHMvcm91dGluZy92Mi9zcGVlZF9yZWFkaW5nX2ludGVydmFsLnBy",
-            "b3RvGiZnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RvbGxfaW5mby5wcm90bxoe",
-            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIs4DCgVSb3V0ZRI4Cgxy",
+            "cm90bxolZ29vZ2xlL21hcHMvcm91dGluZy92Mi9wb2x5bGluZS5wcm90bxot",
+            "Z29vZ2xlL21hcHMvcm91dGluZy92Mi9wb2x5bGluZV9kZXRhaWxzLnByb3Rv",
+            "Gihnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX2xhYmVsLnByb3RvGi5n",
+            "b29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX3RyYXZlbF9tb2RlLnByb3Rv",
+            "GjNnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3NwZWVkX3JlYWRpbmdfaW50ZXJ2",
+            "YWwucHJvdG8aJmdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvdG9sbF9pbmZvLnBy",
+            "b3RvGiRnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RyYW5zaXQucHJvdG8aHmdv",
+            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQu",
+            "cHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3RvIuoGCgVSb3V0ZRI4Cgxy",
             "b3V0ZV9sYWJlbHMYDSADKA4yIi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJv",
             "dXRlTGFiZWwSLgoEbGVncxgBIAMoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
             "djIuUm91dGVMZWcSFwoPZGlzdGFuY2VfbWV0ZXJzGAIgASgFEisKCGR1cmF0",
@@ -42,50 +48,106 @@ namespace Google.Maps.Routing.V2 {
             "eWxpbmUSEwoLZGVzY3JpcHRpb24YBiABKAkSEAoId2FybmluZ3MYByADKAkS",
             "KwoIdmlld3BvcnQYCCABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnQS",
             "RAoPdHJhdmVsX2Fkdmlzb3J5GAkgASgLMisuZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5EhMKC3JvdXRlX3Rva2VuGAwgASgJ",
-            "Ir8BChNSb3V0ZVRyYXZlbEFkdmlzb3J5EjMKCXRvbGxfaW5mbxgCIAEoCzIg",
-            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVG9sbEluZm8STQoXc3BlZWRfcmVh",
-            "ZGluZ19pbnRlcnZhbHMYAyADKAsyLC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "LlNwZWVkUmVhZGluZ0ludGVydmFsEiQKHGZ1ZWxfY29uc3VtcHRpb25fbWlj",
-            "cm9saXRlcnMYBSABKAMinAEKFlJvdXRlTGVnVHJhdmVsQWR2aXNvcnkSMwoJ",
-            "dG9sbF9pbmZvGAEgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Ub2xs",
-            "SW5mbxJNChdzcGVlZF9yZWFkaW5nX2ludGVydmFscxgCIAMoCzIsLmdvb2ds",
-            "ZS5tYXBzLnJvdXRpbmcudjIuU3BlZWRSZWFkaW5nSW50ZXJ2YWwiawoaUm91",
-            "dGVMZWdTdGVwVHJhdmVsQWR2aXNvcnkSTQoXc3BlZWRfcmVhZGluZ19pbnRl",
-            "cnZhbHMYASADKAsyLC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNwZWVkUmVh",
-            "ZGluZ0ludGVydmFsIqgDCghSb3V0ZUxlZxIXCg9kaXN0YW5jZV9tZXRlcnMY",
-            "ASABKAUSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24SMgoPc3RhdGljX2R1cmF0aW9uGAMgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEjIKCHBvbHlsaW5lGAQgASgLMiAuZ29vZ2xlLm1hcHMu",
-            "cm91dGluZy52Mi5Qb2x5bGluZRI4Cg5zdGFydF9sb2NhdGlvbhgFIAEoCzIg",
-            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb24SNgoMZW5kX2xvY2F0",
-            "aW9uGAYgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Mb2NhdGlvbhIz",
-            "CgVzdGVwcxgHIAMoCzIkLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVM",
-            "ZWdTdGVwEkcKD3RyYXZlbF9hZHZpc29yeRgIIAEoCzIuLmdvb2dsZS5tYXBz",
-            "LnJvdXRpbmcudjIuUm91dGVMZWdUcmF2ZWxBZHZpc29yeSKdAwoMUm91dGVM",
-            "ZWdTdGVwEhcKD2Rpc3RhbmNlX21ldGVycxgBIAEoBRIyCg9zdGF0aWNfZHVy",
-            "YXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoIcG9s",
-            "eWxpbmUYAyABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5l",
-            "EjgKDnN0YXJ0X2xvY2F0aW9uGAQgASgLMiAuZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5Mb2NhdGlvbhI2CgxlbmRfbG9jYXRpb24YBSABKAsyIC5nb29nbGUu",
-            "bWFwcy5yb3V0aW5nLnYyLkxvY2F0aW9uEk0KFm5hdmlnYXRpb25faW5zdHJ1",
-            "Y3Rpb24YBiABKAsyLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLk5hdmlnYXRp",
-            "b25JbnN0cnVjdGlvbhJLCg90cmF2ZWxfYWR2aXNvcnkYByABKAsyMi5nb29n",
-            "bGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTGVnU3RlcFRyYXZlbEFkdmlzb3J5",
-            "Qr8BChpjb20uZ29vZ2xlLm1hcHMucm91dGluZy52MkIKUm91dGVQcm90b1AB",
-            "WjpjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0",
-            "aW5ncGI7cm91dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0",
-            "aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFw",
-            "czo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "Zy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5Ei0KJW9wdGltaXplZF9pbnRlcm1l",
+            "ZGlhdGVfd2F5cG9pbnRfaW5kZXgYCiADKAUSTAoQbG9jYWxpemVkX3ZhbHVl",
+            "cxgLIAEoCzIyLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGUuUm91dGVM",
+            "b2NhbGl6ZWRWYWx1ZXMSEwoLcm91dGVfdG9rZW4YDCABKAkSQQoQcG9seWxp",
+            "bmVfZGV0YWlscxgOIAEoCzInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9s",
+            "eWxpbmVEZXRhaWxzGtkBChRSb3V0ZUxvY2FsaXplZFZhbHVlcxIsCghkaXN0",
+            "YW5jZRgBIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSLAoIZHVy",
+            "YXRpb24YAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EjMKD3N0",
+            "YXRpY19kdXJhdGlvbhgDIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRl",
+            "eHQSMAoMdHJhbnNpdF9mYXJlGAQgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxp",
+            "emVkVGV4dCKXAgoTUm91dGVUcmF2ZWxBZHZpc29yeRIzCgl0b2xsX2luZm8Y",
+            "AiABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlRvbGxJbmZvEk0KF3Nw",
+            "ZWVkX3JlYWRpbmdfaW50ZXJ2YWxzGAMgAygLMiwuZ29vZ2xlLm1hcHMucm91",
+            "dGluZy52Mi5TcGVlZFJlYWRpbmdJbnRlcnZhbBIkChxmdWVsX2NvbnN1bXB0",
+            "aW9uX21pY3JvbGl0ZXJzGAUgASgDEiwKJHJvdXRlX3Jlc3RyaWN0aW9uc19w",
+            "YXJ0aWFsbHlfaWdub3JlZBgGIAEoCBIoCgx0cmFuc2l0X2ZhcmUYByABKAsy",
+            "Ei5nb29nbGUudHlwZS5Nb25leSKcAQoWUm91dGVMZWdUcmF2ZWxBZHZpc29y",
+            "eRIzCgl0b2xsX2luZm8YASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlRvbGxJbmZvEk0KF3NwZWVkX3JlYWRpbmdfaW50ZXJ2YWxzGAIgAygLMiwu",
+            "Z29vZ2xlLm1hcHMucm91dGluZy52Mi5TcGVlZFJlYWRpbmdJbnRlcnZhbCJr",
+            "ChpSb3V0ZUxlZ1N0ZXBUcmF2ZWxBZHZpc29yeRJNChdzcGVlZF9yZWFkaW5n",
+            "X2ludGVydmFscxgBIAMoCzIsLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuU3Bl",
+            "ZWRSZWFkaW5nSW50ZXJ2YWwi6ggKCFJvdXRlTGVnEhcKD2Rpc3RhbmNlX21l",
+            "dGVycxgBIAEoBRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIyCg9zdGF0aWNfZHVyYXRpb24YAyABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SMgoIcG9seWxpbmUYBCABKAsyIC5nb29nbGUu",
+            "bWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5lEjgKDnN0YXJ0X2xvY2F0aW9uGAUg",
+            "ASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Mb2NhdGlvbhI2CgxlbmRf",
+            "bG9jYXRpb24YBiABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkxvY2F0",
+            "aW9uEjMKBXN0ZXBzGAcgAygLMiQuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5S",
+            "b3V0ZUxlZ1N0ZXASRwoPdHJhdmVsX2Fkdmlzb3J5GAggASgLMi4uZ29vZ2xl",
+            "Lm1hcHMucm91dGluZy52Mi5Sb3V0ZUxlZ1RyYXZlbEFkdmlzb3J5ElIKEGxv",
+            "Y2FsaXplZF92YWx1ZXMYCSABKAsyOC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlJvdXRlTGVnLlJvdXRlTGVnTG9jYWxpemVkVmFsdWVzEkYKDnN0ZXBzX292",
+            "ZXJ2aWV3GAogASgLMi4uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZUxl",
+            "Zy5TdGVwc092ZXJ2aWV3GqoBChdSb3V0ZUxlZ0xvY2FsaXplZFZhbHVlcxIs",
+            "CghkaXN0YW5jZRgBIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQS",
+            "LAoIZHVyYXRpb24YAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0",
+            "EjMKD3N0YXRpY19kdXJhdGlvbhgDIAEoCzIaLmdvb2dsZS50eXBlLkxvY2Fs",
+            "aXplZFRleHQa9gIKDVN0ZXBzT3ZlcnZpZXcSXgoUbXVsdGlfbW9kYWxfc2Vn",
+            "bWVudHMYASADKAsyQC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTGVn",
+            "LlN0ZXBzT3ZlcnZpZXcuTXVsdGlNb2RhbFNlZ21lbnQahAIKEU11bHRpTW9k",
+            "YWxTZWdtZW50Eh0KEHN0ZXBfc3RhcnRfaW5kZXgYASABKAVIAIgBARIbCg5z",
+            "dGVwX2VuZF9pbmRleBgCIAEoBUgBiAEBEk0KFm5hdmlnYXRpb25faW5zdHJ1",
+            "Y3Rpb24YAyABKAsyLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLk5hdmlnYXRp",
+            "b25JbnN0cnVjdGlvbhI8Cgt0cmF2ZWxfbW9kZRgEIAEoDjInLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQhMKEV9zdGVwX3N0YXJ0",
+            "X2luZGV4QhEKD19zdGVwX2VuZF9pbmRleCKHBgoMUm91dGVMZWdTdGVwEhcK",
+            "D2Rpc3RhbmNlX21ldGVycxgBIAEoBRIyCg9zdGF0aWNfZHVyYXRpb24YAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoIcG9seWxpbmUYAyAB",
+            "KAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5lEjgKDnN0YXJ0",
+            "X2xvY2F0aW9uGAQgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Mb2Nh",
+            "dGlvbhI2CgxlbmRfbG9jYXRpb24YBSABKAsyIC5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyLkxvY2F0aW9uEk0KFm5hdmlnYXRpb25faW5zdHJ1Y3Rpb24YBiAB",
+            "KAsyLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLk5hdmlnYXRpb25JbnN0cnVj",
+            "dGlvbhJLCg90cmF2ZWxfYWR2aXNvcnkYByABKAsyMi5nb29nbGUubWFwcy5y",
+            "b3V0aW5nLnYyLlJvdXRlTGVnU3RlcFRyYXZlbEFkdmlzb3J5EloKEGxvY2Fs",
+            "aXplZF92YWx1ZXMYCCABKAsyQC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJv",
+            "dXRlTGVnU3RlcC5Sb3V0ZUxlZ1N0ZXBMb2NhbGl6ZWRWYWx1ZXMSSwoPdHJh",
+            "bnNpdF9kZXRhaWxzGAkgASgLMjIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5S",
+            "b3V0ZUxlZ1N0ZXBUcmFuc2l0RGV0YWlscxI8Cgt0cmF2ZWxfbW9kZRgKIAEo",
+            "DjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlGoAB",
+            "ChtSb3V0ZUxlZ1N0ZXBMb2NhbGl6ZWRWYWx1ZXMSLAoIZGlzdGFuY2UYASAB",
+            "KAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EjMKD3N0YXRpY19kdXJh",
+            "dGlvbhgDIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQingYKGlJv",
+            "dXRlTGVnU3RlcFRyYW5zaXREZXRhaWxzElsKDHN0b3BfZGV0YWlscxgBIAEo",
+            "CzJFLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVMZWdTdGVwVHJhbnNp",
+            "dERldGFpbHMuVHJhbnNpdFN0b3BEZXRhaWxzEmoKEGxvY2FsaXplZF92YWx1",
+            "ZXMYAiABKAsyUC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTGVnU3Rl",
+            "cFRyYW5zaXREZXRhaWxzLlRyYW5zaXREZXRhaWxzTG9jYWxpemVkVmFsdWVz",
+            "EhAKCGhlYWRzaWduGAMgASgJEioKB2hlYWR3YXkYBCABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SOQoMdHJhbnNpdF9saW5lGAUgASgLMiMuZ29v",
+            "Z2xlLm1hcHMucm91dGluZy52Mi5UcmFuc2l0TGluZRISCgpzdG9wX2NvdW50",
+            "GAYgASgFEhcKD3RyaXBfc2hvcnRfdGV4dBgHIAEoCRryAQoSVHJhbnNpdFN0",
+            "b3BEZXRhaWxzEjkKDGFycml2YWxfc3RvcBgBIAEoCzIjLmdvb2dsZS5tYXBz",
+            "LnJvdXRpbmcudjIuVHJhbnNpdFN0b3ASMAoMYXJyaXZhbF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI7Cg5kZXBhcnR1cmVfc3Rv",
+            "cBgDIAEoCzIjLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVHJhbnNpdFN0b3AS",
+            "MgoOZGVwYXJ0dXJlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wGpsBCh1UcmFuc2l0RGV0YWlsc0xvY2FsaXplZFZhbHVlcxI7Cgxh",
+            "cnJpdmFsX3RpbWUYASABKAsyJS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkxv",
+            "Y2FsaXplZFRpbWUSPQoOZGVwYXJ0dXJlX3RpbWUYAiABKAsyJS5nb29nbGUu",
+            "bWFwcy5yb3V0aW5nLnYyLkxvY2FsaXplZFRpbWVCvAEKGmNvbS5nb29nbGUu",
+            "bWFwcy5yb3V0aW5nLnYyQgpSb3V0ZVByb3RvUAFaOmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vbWFwcy9yb3V0aW5nL2FwaXYyL3JvdXRpbmdwYjtyb3V0aW5ncGKi",
+            "AgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLKAhZHb29nbGVcTWFw",
+            "c1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Routing.V2.LocationReflection.Descriptor, global::Google.Maps.Routing.V2.NavigationInstructionReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteLabelReflection.Descriptor, global::Google.Maps.Routing.V2.SpeedReadingIntervalReflection.Descriptor, global::Google.Maps.Routing.V2.TollInfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Routing.V2.LocalizedTimeReflection.Descriptor, global::Google.Maps.Routing.V2.LocationReflection.Descriptor, global::Google.Maps.Routing.V2.NavigationInstructionReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineDetailsReflection.Descriptor, global::Google.Maps.Routing.V2.RouteLabelReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.SpeedReadingIntervalReflection.Descriptor, global::Google.Maps.Routing.V2.TollInfoReflection.Descriptor, global::Google.Maps.Routing.V2.TransitReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Route), global::Google.Maps.Routing.V2.Route.Parser, new[]{ "RouteLabels", "Legs", "DistanceMeters", "Duration", "StaticDuration", "Polyline", "Description", "Warnings", "Viewport", "TravelAdvisory", "RouteToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteTravelAdvisory), global::Google.Maps.Routing.V2.RouteTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals", "FuelConsumptionMicroliters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Route), global::Google.Maps.Routing.V2.Route.Parser, new[]{ "RouteLabels", "Legs", "DistanceMeters", "Duration", "StaticDuration", "Polyline", "Description", "Warnings", "Viewport", "TravelAdvisory", "OptimizedIntermediateWaypointIndex", "LocalizedValues", "RouteToken", "PolylineDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues), global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues.Parser, new[]{ "Distance", "Duration", "StaticDuration", "TransitFare" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteTravelAdvisory), global::Google.Maps.Routing.V2.RouteTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals", "FuelConsumptionMicroliters", "RouteRestrictionsPartiallyIgnored", "TransitFare" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegTravelAdvisory), global::Google.Maps.Routing.V2.RouteLegTravelAdvisory.Parser, new[]{ "TollInfo", "SpeedReadingIntervals" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory), global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory.Parser, new[]{ "SpeedReadingIntervals" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg), global::Google.Maps.Routing.V2.RouteLeg.Parser, new[]{ "DistanceMeters", "Duration", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "Steps", "TravelAdvisory" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStep), global::Google.Maps.Routing.V2.RouteLegStep.Parser, new[]{ "DistanceMeters", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "NavigationInstruction", "TravelAdvisory" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg), global::Google.Maps.Routing.V2.RouteLeg.Parser, new[]{ "DistanceMeters", "Duration", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "Steps", "TravelAdvisory", "LocalizedValues", "StepsOverview" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues), global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues.Parser, new[]{ "Distance", "Duration", "StaticDuration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview), global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Parser, new[]{ "MultiModalSegments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment), global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment.Parser, new[]{ "StepStartIndex", "StepEndIndex", "NavigationInstruction", "TravelMode" }, new[]{ "StepStartIndex", "StepEndIndex" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStep), global::Google.Maps.Routing.V2.RouteLegStep.Parser, new[]{ "DistanceMeters", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "NavigationInstruction", "TravelAdvisory", "LocalizedValues", "TransitDetails", "TravelMode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues), global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues.Parser, new[]{ "Distance", "StaticDuration" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStepTransitDetails), global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Parser, new[]{ "StopDetails", "LocalizedValues", "Headsign", "Headway", "TransitLine", "StopCount", "TripShortText" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails), global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails.Parser, new[]{ "ArrivalStop", "ArrivalTime", "DepartureStop", "DepartureTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues), global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues.Parser, new[]{ "ArrivalTime", "DepartureTime" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -93,9 +155,10 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Encapsulates a route, which consists of a series of connected road segments
+  /// Contains a route, which consists of a series of connected road segments
   /// that join beginning, ending, and intermediate waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Route : pb::IMessage<Route>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -140,7 +203,10 @@ namespace Google.Maps.Routing.V2 {
       warnings_ = other.warnings_.Clone();
       viewport_ = other.viewport_ != null ? other.viewport_.Clone() : null;
       travelAdvisory_ = other.travelAdvisory_ != null ? other.travelAdvisory_.Clone() : null;
+      optimizedIntermediateWaypointIndex_ = other.optimizedIntermediateWaypointIndex_.Clone();
+      localizedValues_ = other.localizedValues_ != null ? other.localizedValues_.Clone() : null;
       routeToken_ = other.routeToken_;
+      polylineDetails_ = other.polylineDetails_ != null ? other.polylineDetails_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -171,13 +237,13 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.Routing.V2.RouteLeg.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg> legs_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg>();
     /// <summary>
-    /// A collection of legs (path segments between waypoints) that make-up the
+    /// A collection of legs (path segments between waypoints) that make up the
     /// route. Each leg corresponds to the trip between two non-`via`
-    /// [Waypoints][google.maps.routing.v2.Waypoint]. For example, a route with no
-    /// intermediate waypoints has only one leg. A route that includes one
+    /// [`Waypoints`][google.maps.routing.v2.Waypoint]. For example, a route with
+    /// no intermediate waypoints has only one leg. A route that includes one
     /// non-`via` intermediate waypoint has two legs. A route that includes one
     /// `via` intermediate waypoint has one leg. The order of the legs matches the
-    /// order of Waypoints from `origin` to `intermediates` to `destination`.
+    /// order of waypoints from `origin` to `intermediates` to `destination`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -223,7 +289,7 @@ namespace Google.Maps.Routing.V2 {
     public const int StaticDurationFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration staticDuration_;
     /// <summary>
-    /// The duration of traveling through the route without taking traffic
+    /// The duration of travel through the route without taking traffic
     /// conditions into consideration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -239,7 +305,7 @@ namespace Google.Maps.Routing.V2 {
     public const int PolylineFieldNumber = 5;
     private global::Google.Maps.Routing.V2.Polyline polyline_;
     /// <summary>
-    /// The overall route polyline. This polyline will be the combined polyline of
+    /// The overall route polyline. This polyline is the combined polyline of
     /// all `legs`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -310,19 +376,58 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "optimized_intermediate_waypoint_index" field.</summary>
+    public const int OptimizedIntermediateWaypointIndexFieldNumber = 10;
+    private static readonly pb::FieldCodec<int> _repeated_optimizedIntermediateWaypointIndex_codec
+        = pb::FieldCodec.ForInt32(82);
+    private readonly pbc::RepeatedField<int> optimizedIntermediateWaypointIndex_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// If you set
+    /// [`optimize_waypoint_order`][google.maps.routing.v2.ComputeRoutesRequest.optimize_waypoint_order]
+    /// to true, this field contains the optimized ordering of intermediate
+    /// waypoints. Otherwise, this field is empty.
+    /// For example, if you give an input of Origin: LA; Intermediate waypoints:
+    /// Dallas, Bangor, Phoenix; Destination: New York; and the optimized
+    /// intermediate waypoint order is Phoenix, Dallas, Bangor, then this field
+    /// contains the values [2, 0, 1]. The index starts with 0 for the first
+    /// intermediate waypoint provided in the input.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> OptimizedIntermediateWaypointIndex {
+      get { return optimizedIntermediateWaypointIndex_; }
+    }
+
+    /// <summary>Field number for the "localized_values" field.</summary>
+    public const int LocalizedValuesFieldNumber = 11;
+    private global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues localizedValues_;
+    /// <summary>
+    /// Text representations of properties of the `Route`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues LocalizedValues {
+      get { return localizedValues_; }
+      set {
+        localizedValues_ = value;
+      }
+    }
+
     /// <summary>Field number for the "route_token" field.</summary>
     public const int RouteTokenFieldNumber = 12;
     private string routeToken_ = "";
     /// <summary>
-    /// Web-safe base64 encoded route token that can be passed to NavigationSDK,
-    /// which allows the Navigation SDK to reconstruct the route during navigation,
-    /// and in the event of rerouting honor the original intention when Routes
-    /// ComputeRoutes is called. Customers should treat this token as an
-    /// opaque blob.
+    /// An opaque token that can be passed to [Navigation
+    /// SDK](https://developers.google.com/maps/documentation/navigation) to
+    /// reconstruct the route during navigation, and, in the event of rerouting,
+    /// honor the original intention when the route was created. Treat this token
+    /// as an opaque blob.  Don't compare its value across requests as its value
+    /// may change even if the service returns the exact same route.
+    ///
     /// NOTE: `Route.route_token` is only available for requests that have set
     /// `ComputeRoutesRequest.routing_preference` to `TRAFFIC_AWARE` or
-    /// `TRAFFIC_AWARE_OPTIMAL`. `Route.route_token` is also not supported for
-    /// requests that have Via waypoints.
+    /// `TRAFFIC_AWARE_OPTIMAL`. `Route.route_token` is not supported for requests
+    /// that have Via waypoints.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -330,6 +435,21 @@ namespace Google.Maps.Routing.V2 {
       get { return routeToken_; }
       set {
         routeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "polyline_details" field.</summary>
+    public const int PolylineDetailsFieldNumber = 14;
+    private global::Google.Maps.Routing.V2.PolylineDetails polylineDetails_;
+    /// <summary>
+    /// Contains information about details along the polyline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.PolylineDetails PolylineDetails {
+      get { return polylineDetails_; }
+      set {
+        polylineDetails_ = value;
       }
     }
 
@@ -358,7 +478,10 @@ namespace Google.Maps.Routing.V2 {
       if(!warnings_.Equals(other.warnings_)) return false;
       if (!object.Equals(Viewport, other.Viewport)) return false;
       if (!object.Equals(TravelAdvisory, other.TravelAdvisory)) return false;
+      if(!optimizedIntermediateWaypointIndex_.Equals(other.optimizedIntermediateWaypointIndex_)) return false;
+      if (!object.Equals(LocalizedValues, other.LocalizedValues)) return false;
       if (RouteToken != other.RouteToken) return false;
+      if (!object.Equals(PolylineDetails, other.PolylineDetails)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -376,7 +499,10 @@ namespace Google.Maps.Routing.V2 {
       hash ^= warnings_.GetHashCode();
       if (viewport_ != null) hash ^= Viewport.GetHashCode();
       if (travelAdvisory_ != null) hash ^= TravelAdvisory.GetHashCode();
+      hash ^= optimizedIntermediateWaypointIndex_.GetHashCode();
+      if (localizedValues_ != null) hash ^= LocalizedValues.GetHashCode();
       if (RouteToken.Length != 0) hash ^= RouteToken.GetHashCode();
+      if (polylineDetails_ != null) hash ^= PolylineDetails.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -425,11 +551,20 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(TravelAdvisory);
       }
+      optimizedIntermediateWaypointIndex_.WriteTo(output, _repeated_optimizedIntermediateWaypointIndex_codec);
+      if (localizedValues_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(LocalizedValues);
+      }
       if (RouteToken.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(RouteToken);
       }
       routeLabels_.WriteTo(output, _repeated_routeLabels_codec);
+      if (polylineDetails_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PolylineDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -470,11 +605,20 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(TravelAdvisory);
       }
+      optimizedIntermediateWaypointIndex_.WriteTo(ref output, _repeated_optimizedIntermediateWaypointIndex_codec);
+      if (localizedValues_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(LocalizedValues);
+      }
       if (RouteToken.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(RouteToken);
       }
       routeLabels_.WriteTo(ref output, _repeated_routeLabels_codec);
+      if (polylineDetails_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PolylineDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -509,8 +653,15 @@ namespace Google.Maps.Routing.V2 {
       if (travelAdvisory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TravelAdvisory);
       }
+      size += optimizedIntermediateWaypointIndex_.CalculateSize(_repeated_optimizedIntermediateWaypointIndex_codec);
+      if (localizedValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalizedValues);
+      }
       if (RouteToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RouteToken);
+      }
+      if (polylineDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PolylineDetails);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -563,8 +714,21 @@ namespace Google.Maps.Routing.V2 {
         }
         TravelAdvisory.MergeFrom(other.TravelAdvisory);
       }
+      optimizedIntermediateWaypointIndex_.Add(other.optimizedIntermediateWaypointIndex_);
+      if (other.localizedValues_ != null) {
+        if (localizedValues_ == null) {
+          LocalizedValues = new global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues();
+        }
+        LocalizedValues.MergeFrom(other.LocalizedValues);
+      }
       if (other.RouteToken.Length != 0) {
         RouteToken = other.RouteToken;
+      }
+      if (other.polylineDetails_ != null) {
+        if (polylineDetails_ == null) {
+          PolylineDetails = new global::Google.Maps.Routing.V2.PolylineDetails();
+        }
+        PolylineDetails.MergeFrom(other.PolylineDetails);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -632,6 +796,18 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(TravelAdvisory);
             break;
           }
+          case 82:
+          case 80: {
+            optimizedIntermediateWaypointIndex_.AddEntriesFrom(input, _repeated_optimizedIntermediateWaypointIndex_codec);
+            break;
+          }
+          case 90: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
           case 98: {
             RouteToken = input.ReadString();
             break;
@@ -639,6 +815,13 @@ namespace Google.Maps.Routing.V2 {
           case 106:
           case 104: {
             routeLabels_.AddEntriesFrom(input, _repeated_routeLabels_codec);
+            break;
+          }
+          case 114: {
+            if (polylineDetails_ == null) {
+              PolylineDetails = new global::Google.Maps.Routing.V2.PolylineDetails();
+            }
+            input.ReadMessage(PolylineDetails);
             break;
           }
         }
@@ -707,6 +890,18 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(TravelAdvisory);
             break;
           }
+          case 82:
+          case 80: {
+            optimizedIntermediateWaypointIndex_.AddEntriesFrom(ref input, _repeated_optimizedIntermediateWaypointIndex_codec);
+            break;
+          }
+          case 90: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.Route.Types.RouteLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
           case 98: {
             RouteToken = input.ReadString();
             break;
@@ -716,17 +911,389 @@ namespace Google.Maps.Routing.V2 {
             routeLabels_.AddEntriesFrom(ref input, _repeated_routeLabels_codec);
             break;
           }
+          case 114: {
+            if (polylineDetails_ == null) {
+              PolylineDetails = new global::Google.Maps.Routing.V2.PolylineDetails();
+            }
+            input.ReadMessage(PolylineDetails);
+            break;
+          }
         }
       }
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the Route message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Text representations of certain properties.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RouteLocalizedValues : pb::IMessage<RouteLocalizedValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RouteLocalizedValues> _parser = new pb::MessageParser<RouteLocalizedValues>(() => new RouteLocalizedValues());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RouteLocalizedValues> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.Route.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLocalizedValues() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLocalizedValues(RouteLocalizedValues other) : this() {
+          distance_ = other.distance_ != null ? other.distance_.Clone() : null;
+          duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+          staticDuration_ = other.staticDuration_ != null ? other.staticDuration_.Clone() : null;
+          transitFare_ = other.transitFare_ != null ? other.transitFare_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLocalizedValues Clone() {
+          return new RouteLocalizedValues(this);
+        }
+
+        /// <summary>Field number for the "distance" field.</summary>
+        public const int DistanceFieldNumber = 1;
+        private global::Google.Type.LocalizedText distance_;
+        /// <summary>
+        /// Travel distance represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Distance {
+          get { return distance_; }
+          set {
+            distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "duration" field.</summary>
+        public const int DurationFieldNumber = 2;
+        private global::Google.Type.LocalizedText duration_;
+        /// <summary>
+        /// Duration, represented in text form and localized to the region of the
+        /// query. Takes traffic conditions into consideration. Note: If you did not
+        /// request traffic information, this value is the same value as
+        /// `static_duration`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Duration {
+          get { return duration_; }
+          set {
+            duration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "static_duration" field.</summary>
+        public const int StaticDurationFieldNumber = 3;
+        private global::Google.Type.LocalizedText staticDuration_;
+        /// <summary>
+        /// Duration without taking traffic conditions into consideration,
+        /// represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText StaticDuration {
+          get { return staticDuration_; }
+          set {
+            staticDuration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "transit_fare" field.</summary>
+        public const int TransitFareFieldNumber = 4;
+        private global::Google.Type.LocalizedText transitFare_;
+        /// <summary>
+        /// Transit fare represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText TransitFare {
+          get { return transitFare_; }
+          set {
+            transitFare_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RouteLocalizedValues);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RouteLocalizedValues other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Distance, other.Distance)) return false;
+          if (!object.Equals(Duration, other.Duration)) return false;
+          if (!object.Equals(StaticDuration, other.StaticDuration)) return false;
+          if (!object.Equals(TransitFare, other.TransitFare)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (distance_ != null) hash ^= Distance.GetHashCode();
+          if (duration_ != null) hash ^= Duration.GetHashCode();
+          if (staticDuration_ != null) hash ^= StaticDuration.GetHashCode();
+          if (transitFare_ != null) hash ^= TransitFare.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TransitFare);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TransitFare);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (distance_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distance);
+          }
+          if (duration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+          }
+          if (staticDuration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitFare);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RouteLocalizedValues other) {
+          if (other == null) {
+            return;
+          }
+          if (other.distance_ != null) {
+            if (distance_ == null) {
+              Distance = new global::Google.Type.LocalizedText();
+            }
+            Distance.MergeFrom(other.Distance);
+          }
+          if (other.duration_ != null) {
+            if (duration_ == null) {
+              Duration = new global::Google.Type.LocalizedText();
+            }
+            Duration.MergeFrom(other.Duration);
+          }
+          if (other.staticDuration_ != null) {
+            if (staticDuration_ == null) {
+              StaticDuration = new global::Google.Type.LocalizedText();
+            }
+            StaticDuration.MergeFrom(other.StaticDuration);
+          }
+          if (other.transitFare_ != null) {
+            if (transitFare_ == null) {
+              TransitFare = new global::Google.Type.LocalizedText();
+            }
+            TransitFare.MergeFrom(other.TransitFare);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+              case 34: {
+                if (transitFare_ == null) {
+                  TransitFare = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(TransitFare);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+              case 34: {
+                if (transitFare_ == null) {
+                  TransitFare = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(TransitFare);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
-  /// Encapsulates the additional information that the user should be informed
-  /// about, such as possible traffic zone restriction etc.
+  /// Contains the additional information that the user should be informed
+  /// about, such as possible traffic zone restrictions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteTravelAdvisory : pb::IMessage<RouteTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -764,6 +1331,8 @@ namespace Google.Maps.Routing.V2 {
       tollInfo_ = other.tollInfo_ != null ? other.tollInfo_.Clone() : null;
       speedReadingIntervals_ = other.speedReadingIntervals_.Clone();
       fuelConsumptionMicroliters_ = other.fuelConsumptionMicroliters_;
+      routeRestrictionsPartiallyIgnored_ = other.routeRestrictionsPartiallyIgnored_;
+      transitFare_ = other.transitFare_ != null ? other.transitFare_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -777,11 +1346,11 @@ namespace Google.Maps.Routing.V2 {
     public const int TollInfoFieldNumber = 2;
     private global::Google.Maps.Routing.V2.TollInfo tollInfo_;
     /// <summary>
-    /// Encapsulates information about tolls on the Route.
-    /// This field is only populated if we expect there are tolls on the Route.
-    /// If this field is set but the estimated_price subfield is not populated,
-    /// we expect that road contains tolls but we do not know an estimated price.
-    /// If this field is not set, then we expect there is no toll on the Route.
+    /// Contains information about tolls on the route. This field is only populated
+    /// if tolls are expected on the route. If this field is set, but the
+    /// `estimatedPrice` subfield is not populated, then the route contains tolls,
+    /// but the estimated price is unknown. If this field is not set, then there
+    /// are no tolls expected on the route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -819,7 +1388,7 @@ namespace Google.Maps.Routing.V2 {
     public const int FuelConsumptionMicrolitersFieldNumber = 5;
     private long fuelConsumptionMicroliters_;
     /// <summary>
-    /// The fuel consumption prediction in microliters.
+    /// The predicted fuel consumption in microliters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -827,6 +1396,39 @@ namespace Google.Maps.Routing.V2 {
       get { return fuelConsumptionMicroliters_; }
       set {
         fuelConsumptionMicroliters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "route_restrictions_partially_ignored" field.</summary>
+    public const int RouteRestrictionsPartiallyIgnoredFieldNumber = 6;
+    private bool routeRestrictionsPartiallyIgnored_;
+    /// <summary>
+    /// Returned route may have restrictions that are not suitable for requested
+    /// travel mode or route modifiers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RouteRestrictionsPartiallyIgnored {
+      get { return routeRestrictionsPartiallyIgnored_; }
+      set {
+        routeRestrictionsPartiallyIgnored_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transit_fare" field.</summary>
+    public const int TransitFareFieldNumber = 7;
+    private global::Google.Type.Money transitFare_;
+    /// <summary>
+    /// If present, contains the total fare or ticket costs on this route
+    /// This property is only returned for `TRANSIT` requests and only
+    /// for routes where fare information is available for all transit steps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Money TransitFare {
+      get { return transitFare_; }
+      set {
+        transitFare_ = value;
       }
     }
 
@@ -848,6 +1450,8 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(TollInfo, other.TollInfo)) return false;
       if(!speedReadingIntervals_.Equals(other.speedReadingIntervals_)) return false;
       if (FuelConsumptionMicroliters != other.FuelConsumptionMicroliters) return false;
+      if (RouteRestrictionsPartiallyIgnored != other.RouteRestrictionsPartiallyIgnored) return false;
+      if (!object.Equals(TransitFare, other.TransitFare)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -858,6 +1462,8 @@ namespace Google.Maps.Routing.V2 {
       if (tollInfo_ != null) hash ^= TollInfo.GetHashCode();
       hash ^= speedReadingIntervals_.GetHashCode();
       if (FuelConsumptionMicroliters != 0L) hash ^= FuelConsumptionMicroliters.GetHashCode();
+      if (RouteRestrictionsPartiallyIgnored != false) hash ^= RouteRestrictionsPartiallyIgnored.GetHashCode();
+      if (transitFare_ != null) hash ^= TransitFare.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -885,6 +1491,14 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteInt64(FuelConsumptionMicroliters);
       }
+      if (RouteRestrictionsPartiallyIgnored != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(RouteRestrictionsPartiallyIgnored);
+      }
+      if (transitFare_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TransitFare);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -904,6 +1518,14 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteInt64(FuelConsumptionMicroliters);
       }
+      if (RouteRestrictionsPartiallyIgnored != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(RouteRestrictionsPartiallyIgnored);
+      }
+      if (transitFare_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TransitFare);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -920,6 +1542,12 @@ namespace Google.Maps.Routing.V2 {
       size += speedReadingIntervals_.CalculateSize(_repeated_speedReadingIntervals_codec);
       if (FuelConsumptionMicroliters != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(FuelConsumptionMicroliters);
+      }
+      if (RouteRestrictionsPartiallyIgnored != false) {
+        size += 1 + 1;
+      }
+      if (transitFare_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitFare);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -942,6 +1570,15 @@ namespace Google.Maps.Routing.V2 {
       speedReadingIntervals_.Add(other.speedReadingIntervals_);
       if (other.FuelConsumptionMicroliters != 0L) {
         FuelConsumptionMicroliters = other.FuelConsumptionMicroliters;
+      }
+      if (other.RouteRestrictionsPartiallyIgnored != false) {
+        RouteRestrictionsPartiallyIgnored = other.RouteRestrictionsPartiallyIgnored;
+      }
+      if (other.transitFare_ != null) {
+        if (transitFare_ == null) {
+          TransitFare = new global::Google.Type.Money();
+        }
+        TransitFare.MergeFrom(other.TransitFare);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -971,6 +1608,17 @@ namespace Google.Maps.Routing.V2 {
           }
           case 40: {
             FuelConsumptionMicroliters = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            RouteRestrictionsPartiallyIgnored = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (transitFare_ == null) {
+              TransitFare = new global::Google.Type.Money();
+            }
+            input.ReadMessage(TransitFare);
             break;
           }
         }
@@ -1003,6 +1651,17 @@ namespace Google.Maps.Routing.V2 {
             FuelConsumptionMicroliters = input.ReadInt64();
             break;
           }
+          case 48: {
+            RouteRestrictionsPartiallyIgnored = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (transitFare_ == null) {
+              TransitFare = new global::Google.Type.Money();
+            }
+            input.ReadMessage(TransitFare);
+            break;
+          }
         }
       }
     }
@@ -1011,9 +1670,10 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Encapsulates the additional information that the user should be informed
-  /// about, such as possible traffic zone restriction etc. on a route leg.
+  /// Contains the additional information that the user should be informed
+  /// about on a leg step, such as possible traffic zone restrictions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegTravelAdvisory : pb::IMessage<RouteLegTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1063,11 +1723,12 @@ namespace Google.Maps.Routing.V2 {
     public const int TollInfoFieldNumber = 1;
     private global::Google.Maps.Routing.V2.TollInfo tollInfo_;
     /// <summary>
-    /// Encapsulates information about tolls on the specific RouteLeg.
-    /// This field is only populated if we expect there are tolls on the RouteLeg.
-    /// If this field is set but the estimated_price subfield is not populated,
-    /// we expect that road contains tolls but we do not know an estimated price.
-    /// If this field does not exist, then there is no toll on the RouteLeg.
+    /// Contains information about tolls on the specific `RouteLeg`.
+    /// This field is only populated if we expect there are tolls on the
+    /// `RouteLeg`. If this field is set but the estimated_price subfield is not
+    /// populated, we expect that road contains tolls but we do not know an
+    /// estimated price. If this field does not exist, then there is no toll on the
+    /// `RouteLeg`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1086,7 +1747,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Speed reading intervals detailing traffic density. Applicable in case of
     /// `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-    /// The intervals cover the entire polyline of the RouteLg without overlap.
+    /// The intervals cover the entire polyline of the `RouteLeg` without overlap.
     /// The start point of a specified interval is the same as the end point of the
     /// preceding interval.
     ///
@@ -1258,9 +1919,10 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Encapsulates the additional information that the user should be informed
-  /// about, such as possible traffic zone restriction on a leg step.
+  /// Contains the additional information that the user should be informed
+  /// about, such as possible traffic zone restrictions on a leg step.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegStepTravelAdvisory : pb::IMessage<RouteLegStepTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1443,8 +2105,9 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Encapsulates a segment between non-`via` waypoints.
+  /// Contains a segment between non-`via` waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLeg : pb::IMessage<RouteLeg>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1487,6 +2150,8 @@ namespace Google.Maps.Routing.V2 {
       endLocation_ = other.endLocation_ != null ? other.endLocation_.Clone() : null;
       steps_ = other.steps_.Clone();
       travelAdvisory_ = other.travelAdvisory_ != null ? other.travelAdvisory_.Clone() : null;
+      localizedValues_ = other.localizedValues_ != null ? other.localizedValues_.Clone() : null;
+      stepsOverview_ = other.stepsOverview_ != null ? other.stepsOverview_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1534,7 +2199,7 @@ namespace Google.Maps.Routing.V2 {
     public const int StaticDurationFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration staticDuration_;
     /// <summary>
-    /// The duration of traveling through the leg, calculated without taking
+    /// The duration of travel through the leg, calculated without taking
     /// traffic conditions into consideration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1550,7 +2215,7 @@ namespace Google.Maps.Routing.V2 {
     public const int PolylineFieldNumber = 4;
     private global::Google.Maps.Routing.V2.Polyline polyline_;
     /// <summary>
-    /// The overall polyline for this leg. This includes that each `step`'s
+    /// The overall polyline for this leg that includes each `step`'s
     /// polyline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1566,9 +2231,9 @@ namespace Google.Maps.Routing.V2 {
     public const int StartLocationFieldNumber = 5;
     private global::Google.Maps.Routing.V2.Location startLocation_;
     /// <summary>
-    /// The start location of this leg. This might be different from the provided
-    /// `origin`. For example, when the provided `origin` is not near a road, this
-    /// is a point on the road.
+    /// The start location of this leg. This location might be different from the
+    /// provided `origin`. For example, when the provided `origin` is not near a
+    /// road, this is a point on the road.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1583,9 +2248,9 @@ namespace Google.Maps.Routing.V2 {
     public const int EndLocationFieldNumber = 6;
     private global::Google.Maps.Routing.V2.Location endLocation_;
     /// <summary>
-    /// The end location of this leg. This might be different from the provided
-    /// `destination`. For example, when the provided `destination` is not near a
-    /// road, this is a point on the road.
+    /// The end location of this leg. This location might be different from the
+    /// provided `destination`. For example, when the provided `destination` is not
+    /// near a road, this is a point on the road.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1615,8 +2280,8 @@ namespace Google.Maps.Routing.V2 {
     public const int TravelAdvisoryFieldNumber = 8;
     private global::Google.Maps.Routing.V2.RouteLegTravelAdvisory travelAdvisory_;
     /// <summary>
-    /// Encapsulates the additional information that the user should be informed
-    /// about, such as possible traffic zone restriction etc. on a route leg.
+    /// Contains the additional information that the user should be informed
+    /// about, such as possible traffic zone restrictions, on a route leg.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1624,6 +2289,37 @@ namespace Google.Maps.Routing.V2 {
       get { return travelAdvisory_; }
       set {
         travelAdvisory_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "localized_values" field.</summary>
+    public const int LocalizedValuesFieldNumber = 9;
+    private global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues localizedValues_;
+    /// <summary>
+    /// Text representations of properties of the `RouteLeg`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues LocalizedValues {
+      get { return localizedValues_; }
+      set {
+        localizedValues_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "steps_overview" field.</summary>
+    public const int StepsOverviewFieldNumber = 10;
+    private global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview stepsOverview_;
+    /// <summary>
+    /// Overview information about the steps in this `RouteLeg`. This field is only
+    /// populated for TRANSIT routes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview StepsOverview {
+      get { return stepsOverview_; }
+      set {
+        stepsOverview_ = value;
       }
     }
 
@@ -1650,6 +2346,8 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(EndLocation, other.EndLocation)) return false;
       if(!steps_.Equals(other.steps_)) return false;
       if (!object.Equals(TravelAdvisory, other.TravelAdvisory)) return false;
+      if (!object.Equals(LocalizedValues, other.LocalizedValues)) return false;
+      if (!object.Equals(StepsOverview, other.StepsOverview)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1665,6 +2363,8 @@ namespace Google.Maps.Routing.V2 {
       if (endLocation_ != null) hash ^= EndLocation.GetHashCode();
       hash ^= steps_.GetHashCode();
       if (travelAdvisory_ != null) hash ^= TravelAdvisory.GetHashCode();
+      if (localizedValues_ != null) hash ^= LocalizedValues.GetHashCode();
+      if (stepsOverview_ != null) hash ^= StepsOverview.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1712,6 +2412,14 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(TravelAdvisory);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (stepsOverview_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(StepsOverview);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1751,6 +2459,14 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(TravelAdvisory);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (stepsOverview_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(StepsOverview);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1782,6 +2498,12 @@ namespace Google.Maps.Routing.V2 {
       size += steps_.CalculateSize(_repeated_steps_codec);
       if (travelAdvisory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TravelAdvisory);
+      }
+      if (localizedValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalizedValues);
+      }
+      if (stepsOverview_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StepsOverview);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1834,6 +2556,18 @@ namespace Google.Maps.Routing.V2 {
           TravelAdvisory = new global::Google.Maps.Routing.V2.RouteLegTravelAdvisory();
         }
         TravelAdvisory.MergeFrom(other.TravelAdvisory);
+      }
+      if (other.localizedValues_ != null) {
+        if (localizedValues_ == null) {
+          LocalizedValues = new global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues();
+        }
+        LocalizedValues.MergeFrom(other.LocalizedValues);
+      }
+      if (other.stepsOverview_ != null) {
+        if (stepsOverview_ == null) {
+          StepsOverview = new global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview();
+        }
+        StepsOverview.MergeFrom(other.StepsOverview);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1898,6 +2632,20 @@ namespace Google.Maps.Routing.V2 {
               TravelAdvisory = new global::Google.Maps.Routing.V2.RouteLegTravelAdvisory();
             }
             input.ReadMessage(TravelAdvisory);
+            break;
+          }
+          case 74: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 82: {
+            if (stepsOverview_ == null) {
+              StepsOverview = new global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview();
+            }
+            input.ReadMessage(StepsOverview);
             break;
           }
         }
@@ -1965,18 +2713,906 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(TravelAdvisory);
             break;
           }
+          case 74: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLeg.Types.RouteLegLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 82: {
+            if (stepsOverview_ == null) {
+              StepsOverview = new global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview();
+            }
+            input.ReadMessage(StepsOverview);
+            break;
+          }
         }
       }
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the RouteLeg message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Text representations of certain properties.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RouteLegLocalizedValues : pb::IMessage<RouteLegLocalizedValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RouteLegLocalizedValues> _parser = new pb::MessageParser<RouteLegLocalizedValues>(() => new RouteLegLocalizedValues());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RouteLegLocalizedValues> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteLeg.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegLocalizedValues() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegLocalizedValues(RouteLegLocalizedValues other) : this() {
+          distance_ = other.distance_ != null ? other.distance_.Clone() : null;
+          duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+          staticDuration_ = other.staticDuration_ != null ? other.staticDuration_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegLocalizedValues Clone() {
+          return new RouteLegLocalizedValues(this);
+        }
+
+        /// <summary>Field number for the "distance" field.</summary>
+        public const int DistanceFieldNumber = 1;
+        private global::Google.Type.LocalizedText distance_;
+        /// <summary>
+        /// Travel distance represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Distance {
+          get { return distance_; }
+          set {
+            distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "duration" field.</summary>
+        public const int DurationFieldNumber = 2;
+        private global::Google.Type.LocalizedText duration_;
+        /// <summary>
+        /// Duration, represented in text form and localized to the region of the
+        /// query. Takes traffic conditions into consideration. Note: If you did not
+        /// request traffic information, this value is the same value as
+        /// static_duration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Duration {
+          get { return duration_; }
+          set {
+            duration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "static_duration" field.</summary>
+        public const int StaticDurationFieldNumber = 3;
+        private global::Google.Type.LocalizedText staticDuration_;
+        /// <summary>
+        /// Duration without taking traffic conditions into
+        /// consideration, represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText StaticDuration {
+          get { return staticDuration_; }
+          set {
+            staticDuration_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RouteLegLocalizedValues);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RouteLegLocalizedValues other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Distance, other.Distance)) return false;
+          if (!object.Equals(Duration, other.Duration)) return false;
+          if (!object.Equals(StaticDuration, other.StaticDuration)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (distance_ != null) hash ^= Distance.GetHashCode();
+          if (duration_ != null) hash ^= Duration.GetHashCode();
+          if (staticDuration_ != null) hash ^= StaticDuration.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (distance_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distance);
+          }
+          if (duration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+          }
+          if (staticDuration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RouteLegLocalizedValues other) {
+          if (other == null) {
+            return;
+          }
+          if (other.distance_ != null) {
+            if (distance_ == null) {
+              Distance = new global::Google.Type.LocalizedText();
+            }
+            Distance.MergeFrom(other.Distance);
+          }
+          if (other.duration_ != null) {
+            if (duration_ == null) {
+              Duration = new global::Google.Type.LocalizedText();
+            }
+            Duration.MergeFrom(other.Duration);
+          }
+          if (other.staticDuration_ != null) {
+            if (staticDuration_ == null) {
+              StaticDuration = new global::Google.Type.LocalizedText();
+            }
+            StaticDuration.MergeFrom(other.StaticDuration);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Provides overview information about a list of `RouteLegStep`s.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StepsOverview : pb::IMessage<StepsOverview>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StepsOverview> _parser = new pb::MessageParser<StepsOverview>(() => new StepsOverview());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StepsOverview> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteLeg.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StepsOverview() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StepsOverview(StepsOverview other) : this() {
+          multiModalSegments_ = other.multiModalSegments_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StepsOverview Clone() {
+          return new StepsOverview(this);
+        }
+
+        /// <summary>Field number for the "multi_modal_segments" field.</summary>
+        public const int MultiModalSegmentsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment> _repeated_multiModalSegments_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment.Parser);
+        private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment> multiModalSegments_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment>();
+        /// <summary>
+        /// Summarized information about different multi-modal segments of
+        /// the `RouteLeg.steps`. This field is not populated if the `RouteLeg` does
+        /// not contain any multi-modal segments in the steps.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Types.MultiModalSegment> MultiModalSegments {
+          get { return multiModalSegments_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StepsOverview);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StepsOverview other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!multiModalSegments_.Equals(other.multiModalSegments_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= multiModalSegments_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          multiModalSegments_.WriteTo(output, _repeated_multiModalSegments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          multiModalSegments_.WriteTo(ref output, _repeated_multiModalSegments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += multiModalSegments_.CalculateSize(_repeated_multiModalSegments_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StepsOverview other) {
+          if (other == null) {
+            return;
+          }
+          multiModalSegments_.Add(other.multiModalSegments_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                multiModalSegments_.AddEntriesFrom(input, _repeated_multiModalSegments_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                multiModalSegments_.AddEntriesFrom(ref input, _repeated_multiModalSegments_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the StepsOverview message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Provides summarized information about different multi-modal segments of
+          /// the `RouteLeg.steps`. A multi-modal segment is defined as one or more
+          /// contiguous `RouteLegStep` that have the same `RouteTravelMode`.
+          /// This field is not populated if the `RouteLeg` does not contain any
+          /// multi-modal segments in the steps.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MultiModalSegment : pb::IMessage<MultiModalSegment>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MultiModalSegment> _parser = new pb::MessageParser<MultiModalSegment>(() => new MultiModalSegment());
+            private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MultiModalSegment> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Routing.V2.RouteLeg.Types.StepsOverview.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MultiModalSegment() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MultiModalSegment(MultiModalSegment other) : this() {
+              _hasBits0 = other._hasBits0;
+              stepStartIndex_ = other.stepStartIndex_;
+              stepEndIndex_ = other.stepEndIndex_;
+              navigationInstruction_ = other.navigationInstruction_ != null ? other.navigationInstruction_.Clone() : null;
+              travelMode_ = other.travelMode_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MultiModalSegment Clone() {
+              return new MultiModalSegment(this);
+            }
+
+            /// <summary>Field number for the "step_start_index" field.</summary>
+            public const int StepStartIndexFieldNumber = 1;
+            private readonly static int StepStartIndexDefaultValue = 0;
+
+            private int stepStartIndex_;
+            /// <summary>
+            /// The corresponding `RouteLegStep` index that is the start of a
+            /// multi-modal segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int StepStartIndex {
+              get { if ((_hasBits0 & 1) != 0) { return stepStartIndex_; } else { return StepStartIndexDefaultValue; } }
+              set {
+                _hasBits0 |= 1;
+                stepStartIndex_ = value;
+              }
+            }
+            /// <summary>Gets whether the "step_start_index" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasStepStartIndex {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "step_start_index" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearStepStartIndex() {
+              _hasBits0 &= ~1;
+            }
+
+            /// <summary>Field number for the "step_end_index" field.</summary>
+            public const int StepEndIndexFieldNumber = 2;
+            private readonly static int StepEndIndexDefaultValue = 0;
+
+            private int stepEndIndex_;
+            /// <summary>
+            /// The corresponding `RouteLegStep` index that is the end of a
+            /// multi-modal segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int StepEndIndex {
+              get { if ((_hasBits0 & 2) != 0) { return stepEndIndex_; } else { return StepEndIndexDefaultValue; } }
+              set {
+                _hasBits0 |= 2;
+                stepEndIndex_ = value;
+              }
+            }
+            /// <summary>Gets whether the "step_end_index" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasStepEndIndex {
+              get { return (_hasBits0 & 2) != 0; }
+            }
+            /// <summary>Clears the value of the "step_end_index" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearStepEndIndex() {
+              _hasBits0 &= ~2;
+            }
+
+            /// <summary>Field number for the "navigation_instruction" field.</summary>
+            public const int NavigationInstructionFieldNumber = 3;
+            private global::Google.Maps.Routing.V2.NavigationInstruction navigationInstruction_;
+            /// <summary>
+            /// NavigationInstruction for the multi-modal segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Routing.V2.NavigationInstruction NavigationInstruction {
+              get { return navigationInstruction_; }
+              set {
+                navigationInstruction_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "travel_mode" field.</summary>
+            public const int TravelModeFieldNumber = 4;
+            private global::Google.Maps.Routing.V2.RouteTravelMode travelMode_ = global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified;
+            /// <summary>
+            /// The travel mode of the multi-modal segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Routing.V2.RouteTravelMode TravelMode {
+              get { return travelMode_; }
+              set {
+                travelMode_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MultiModalSegment);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MultiModalSegment other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (StepStartIndex != other.StepStartIndex) return false;
+              if (StepEndIndex != other.StepEndIndex) return false;
+              if (!object.Equals(NavigationInstruction, other.NavigationInstruction)) return false;
+              if (TravelMode != other.TravelMode) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasStepStartIndex) hash ^= StepStartIndex.GetHashCode();
+              if (HasStepEndIndex) hash ^= StepEndIndex.GetHashCode();
+              if (navigationInstruction_ != null) hash ^= NavigationInstruction.GetHashCode();
+              if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) hash ^= TravelMode.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasStepStartIndex) {
+                output.WriteRawTag(8);
+                output.WriteInt32(StepStartIndex);
+              }
+              if (HasStepEndIndex) {
+                output.WriteRawTag(16);
+                output.WriteInt32(StepEndIndex);
+              }
+              if (navigationInstruction_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(NavigationInstruction);
+              }
+              if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) TravelMode);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasStepStartIndex) {
+                output.WriteRawTag(8);
+                output.WriteInt32(StepStartIndex);
+              }
+              if (HasStepEndIndex) {
+                output.WriteRawTag(16);
+                output.WriteInt32(StepEndIndex);
+              }
+              if (navigationInstruction_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(NavigationInstruction);
+              }
+              if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) TravelMode);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasStepStartIndex) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(StepStartIndex);
+              }
+              if (HasStepEndIndex) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(StepEndIndex);
+              }
+              if (navigationInstruction_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(NavigationInstruction);
+              }
+              if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TravelMode);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MultiModalSegment other) {
+              if (other == null) {
+                return;
+              }
+              if (other.HasStepStartIndex) {
+                StepStartIndex = other.StepStartIndex;
+              }
+              if (other.HasStepEndIndex) {
+                StepEndIndex = other.StepEndIndex;
+              }
+              if (other.navigationInstruction_ != null) {
+                if (navigationInstruction_ == null) {
+                  NavigationInstruction = new global::Google.Maps.Routing.V2.NavigationInstruction();
+                }
+                NavigationInstruction.MergeFrom(other.NavigationInstruction);
+              }
+              if (other.TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+                TravelMode = other.TravelMode;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    StepStartIndex = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    StepEndIndex = input.ReadInt32();
+                    break;
+                  }
+                  case 26: {
+                    if (navigationInstruction_ == null) {
+                      NavigationInstruction = new global::Google.Maps.Routing.V2.NavigationInstruction();
+                    }
+                    input.ReadMessage(NavigationInstruction);
+                    break;
+                  }
+                  case 32: {
+                    TravelMode = (global::Google.Maps.Routing.V2.RouteTravelMode) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    StepStartIndex = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    StepEndIndex = input.ReadInt32();
+                    break;
+                  }
+                  case 26: {
+                    if (navigationInstruction_ == null) {
+                      NavigationInstruction = new global::Google.Maps.Routing.V2.NavigationInstruction();
+                    }
+                    input.ReadMessage(NavigationInstruction);
+                    break;
+                  }
+                  case 32: {
+                    TravelMode = (global::Google.Maps.Routing.V2.RouteTravelMode) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
-  /// Encapsulates a segment of a [RouteLeg][google.maps.routing.v2.RouteLeg]. A
+  /// Contains a segment of a [`RouteLeg`][google.maps.routing.v2.RouteLeg]. A
   /// step corresponds to a single navigation instruction. Route legs are made up
   /// of steps.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegStep : pb::IMessage<RouteLegStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2018,6 +3654,9 @@ namespace Google.Maps.Routing.V2 {
       endLocation_ = other.endLocation_ != null ? other.endLocation_.Clone() : null;
       navigationInstruction_ = other.navigationInstruction_ != null ? other.navigationInstruction_.Clone() : null;
       travelAdvisory_ = other.travelAdvisory_ != null ? other.travelAdvisory_.Clone() : null;
+      localizedValues_ = other.localizedValues_ != null ? other.localizedValues_.Clone() : null;
+      transitDetails_ = other.transitDetails_ != null ? other.transitDetails_.Clone() : null;
+      travelMode_ = other.travelMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2124,8 +3763,8 @@ namespace Google.Maps.Routing.V2 {
     public const int TravelAdvisoryFieldNumber = 7;
     private global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory travelAdvisory_;
     /// <summary>
-    /// Encapsulates the additional information that the user should be informed
-    /// about, such as possible traffic zone restriction on a leg step.
+    /// Contains the additional information that the user should be informed
+    /// about, such as possible traffic zone restrictions, on a leg step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2133,6 +3772,51 @@ namespace Google.Maps.Routing.V2 {
       get { return travelAdvisory_; }
       set {
         travelAdvisory_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "localized_values" field.</summary>
+    public const int LocalizedValuesFieldNumber = 8;
+    private global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues localizedValues_;
+    /// <summary>
+    /// Text representations of properties of the `RouteLegStep`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues LocalizedValues {
+      get { return localizedValues_; }
+      set {
+        localizedValues_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transit_details" field.</summary>
+    public const int TransitDetailsFieldNumber = 9;
+    private global::Google.Maps.Routing.V2.RouteLegStepTransitDetails transitDetails_;
+    /// <summary>
+    /// Details pertaining to this step if the travel mode is `TRANSIT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLegStepTransitDetails TransitDetails {
+      get { return transitDetails_; }
+      set {
+        transitDetails_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "travel_mode" field.</summary>
+    public const int TravelModeFieldNumber = 10;
+    private global::Google.Maps.Routing.V2.RouteTravelMode travelMode_ = global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified;
+    /// <summary>
+    /// The travel mode used for this step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteTravelMode TravelMode {
+      get { return travelMode_; }
+      set {
+        travelMode_ = value;
       }
     }
 
@@ -2158,6 +3842,9 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(EndLocation, other.EndLocation)) return false;
       if (!object.Equals(NavigationInstruction, other.NavigationInstruction)) return false;
       if (!object.Equals(TravelAdvisory, other.TravelAdvisory)) return false;
+      if (!object.Equals(LocalizedValues, other.LocalizedValues)) return false;
+      if (!object.Equals(TransitDetails, other.TransitDetails)) return false;
+      if (TravelMode != other.TravelMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2172,6 +3859,9 @@ namespace Google.Maps.Routing.V2 {
       if (endLocation_ != null) hash ^= EndLocation.GetHashCode();
       if (navigationInstruction_ != null) hash ^= NavigationInstruction.GetHashCode();
       if (travelAdvisory_ != null) hash ^= TravelAdvisory.GetHashCode();
+      if (localizedValues_ != null) hash ^= LocalizedValues.GetHashCode();
+      if (transitDetails_ != null) hash ^= TransitDetails.GetHashCode();
+      if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) hash ^= TravelMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2218,6 +3908,18 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(TravelAdvisory);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (transitDetails_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TransitDetails);
+      }
+      if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TravelMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2256,6 +3958,18 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(TravelAdvisory);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (transitDetails_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TransitDetails);
+      }
+      if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TravelMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2286,6 +4000,15 @@ namespace Google.Maps.Routing.V2 {
       }
       if (travelAdvisory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TravelAdvisory);
+      }
+      if (localizedValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalizedValues);
+      }
+      if (transitDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitDetails);
+      }
+      if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TravelMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2337,6 +4060,21 @@ namespace Google.Maps.Routing.V2 {
           TravelAdvisory = new global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory();
         }
         TravelAdvisory.MergeFrom(other.TravelAdvisory);
+      }
+      if (other.localizedValues_ != null) {
+        if (localizedValues_ == null) {
+          LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues();
+        }
+        LocalizedValues.MergeFrom(other.LocalizedValues);
+      }
+      if (other.transitDetails_ != null) {
+        if (transitDetails_ == null) {
+          TransitDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails();
+        }
+        TransitDetails.MergeFrom(other.TransitDetails);
+      }
+      if (other.TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) {
+        TravelMode = other.TravelMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2397,6 +4135,24 @@ namespace Google.Maps.Routing.V2 {
               TravelAdvisory = new global::Google.Maps.Routing.V2.RouteLegStepTravelAdvisory();
             }
             input.ReadMessage(TravelAdvisory);
+            break;
+          }
+          case 66: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 74: {
+            if (transitDetails_ == null) {
+              TransitDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails();
+            }
+            input.ReadMessage(TransitDetails);
+            break;
+          }
+          case 80: {
+            TravelMode = (global::Google.Maps.Routing.V2.RouteTravelMode) input.ReadEnum();
             break;
           }
         }
@@ -2460,10 +4216,1387 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(TravelAdvisory);
             break;
           }
+          case 66: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStep.Types.RouteLegStepLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 74: {
+            if (transitDetails_ == null) {
+              TransitDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails();
+            }
+            input.ReadMessage(TransitDetails);
+            break;
+          }
+          case 80: {
+            TravelMode = (global::Google.Maps.Routing.V2.RouteTravelMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RouteLegStep message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Text representations of certain properties.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RouteLegStepLocalizedValues : pb::IMessage<RouteLegStepLocalizedValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RouteLegStepLocalizedValues> _parser = new pb::MessageParser<RouteLegStepLocalizedValues>(() => new RouteLegStepLocalizedValues());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RouteLegStepLocalizedValues> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteLegStep.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegStepLocalizedValues() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegStepLocalizedValues(RouteLegStepLocalizedValues other) : this() {
+          distance_ = other.distance_ != null ? other.distance_.Clone() : null;
+          staticDuration_ = other.staticDuration_ != null ? other.staticDuration_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RouteLegStepLocalizedValues Clone() {
+          return new RouteLegStepLocalizedValues(this);
+        }
+
+        /// <summary>Field number for the "distance" field.</summary>
+        public const int DistanceFieldNumber = 1;
+        private global::Google.Type.LocalizedText distance_;
+        /// <summary>
+        /// Travel distance represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Distance {
+          get { return distance_; }
+          set {
+            distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "static_duration" field.</summary>
+        public const int StaticDurationFieldNumber = 3;
+        private global::Google.Type.LocalizedText staticDuration_;
+        /// <summary>
+        /// Duration without taking traffic conditions into
+        /// consideration, represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText StaticDuration {
+          get { return staticDuration_; }
+          set {
+            staticDuration_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RouteLegStepLocalizedValues);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RouteLegStepLocalizedValues other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Distance, other.Distance)) return false;
+          if (!object.Equals(StaticDuration, other.StaticDuration)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (distance_ != null) hash ^= Distance.GetHashCode();
+          if (staticDuration_ != null) hash ^= StaticDuration.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (distance_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distance);
+          }
+          if (staticDuration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StaticDuration);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RouteLegStepLocalizedValues other) {
+          if (other == null) {
+            return;
+          }
+          if (other.distance_ != null) {
+            if (distance_ == null) {
+              Distance = new global::Google.Type.LocalizedText();
+            }
+            Distance.MergeFrom(other.Distance);
+          }
+          if (other.staticDuration_ != null) {
+            if (staticDuration_ == null) {
+              StaticDuration = new global::Google.Type.LocalizedText();
+            }
+            StaticDuration.MergeFrom(other.StaticDuration);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Additional information for the `RouteLegStep` related to `TRANSIT` routes.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RouteLegStepTransitDetails : pb::IMessage<RouteLegStepTransitDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RouteLegStepTransitDetails> _parser = new pb::MessageParser<RouteLegStepTransitDetails>(() => new RouteLegStepTransitDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RouteLegStepTransitDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.Routing.V2.RouteReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteLegStepTransitDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteLegStepTransitDetails(RouteLegStepTransitDetails other) : this() {
+      stopDetails_ = other.stopDetails_ != null ? other.stopDetails_.Clone() : null;
+      localizedValues_ = other.localizedValues_ != null ? other.localizedValues_.Clone() : null;
+      headsign_ = other.headsign_;
+      headway_ = other.headway_ != null ? other.headway_.Clone() : null;
+      transitLine_ = other.transitLine_ != null ? other.transitLine_.Clone() : null;
+      stopCount_ = other.stopCount_;
+      tripShortText_ = other.tripShortText_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteLegStepTransitDetails Clone() {
+      return new RouteLegStepTransitDetails(this);
+    }
+
+    /// <summary>Field number for the "stop_details" field.</summary>
+    public const int StopDetailsFieldNumber = 1;
+    private global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails stopDetails_;
+    /// <summary>
+    /// Information about the arrival and departure stops for the step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails StopDetails {
+      get { return stopDetails_; }
+      set {
+        stopDetails_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "localized_values" field.</summary>
+    public const int LocalizedValuesFieldNumber = 2;
+    private global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues localizedValues_;
+    /// <summary>
+    /// Text representations of properties of the `RouteLegStepTransitDetails`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues LocalizedValues {
+      get { return localizedValues_; }
+      set {
+        localizedValues_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "headsign" field.</summary>
+    public const int HeadsignFieldNumber = 3;
+    private string headsign_ = "";
+    /// <summary>
+    /// Specifies the direction in which to travel on this line as marked on
+    /// the vehicle or at the departure stop. The direction is often the terminus
+    /// station.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Headsign {
+      get { return headsign_; }
+      set {
+        headsign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "headway" field.</summary>
+    public const int HeadwayFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Duration headway_;
+    /// <summary>
+    /// Specifies the expected time as a duration between departures from the same
+    /// stop at this time. For example, with a headway seconds value of 600, you
+    /// would expect a ten minute wait if you should miss your bus.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Headway {
+      get { return headway_; }
+      set {
+        headway_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transit_line" field.</summary>
+    public const int TransitLineFieldNumber = 5;
+    private global::Google.Maps.Routing.V2.TransitLine transitLine_;
+    /// <summary>
+    /// Information about the transit line used in this step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.TransitLine TransitLine {
+      get { return transitLine_; }
+      set {
+        transitLine_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stop_count" field.</summary>
+    public const int StopCountFieldNumber = 6;
+    private int stopCount_;
+    /// <summary>
+    /// The number of stops from the departure to the arrival stop. This count
+    /// includes the arrival stop, but excludes the departure stop. For example, if
+    /// your route leaves from Stop A, passes through stops B and C, and arrives at
+    /// stop D, &lt;code>stop_count&lt;/code> returns 3.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StopCount {
+      get { return stopCount_; }
+      set {
+        stopCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "trip_short_text" field.</summary>
+    public const int TripShortTextFieldNumber = 7;
+    private string tripShortText_ = "";
+    /// <summary>
+    /// The text that appears in schedules and sign boards to identify a transit
+    /// trip to passengers. The text should uniquely identify a trip within a
+    /// service day. For example, "538" is the `trip_short_text` of the Amtrak
+    /// train that leaves San Jose, CA at 15:10 on weekdays to Sacramento, CA.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TripShortText {
+      get { return tripShortText_; }
+      set {
+        tripShortText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RouteLegStepTransitDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RouteLegStepTransitDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StopDetails, other.StopDetails)) return false;
+      if (!object.Equals(LocalizedValues, other.LocalizedValues)) return false;
+      if (Headsign != other.Headsign) return false;
+      if (!object.Equals(Headway, other.Headway)) return false;
+      if (!object.Equals(TransitLine, other.TransitLine)) return false;
+      if (StopCount != other.StopCount) return false;
+      if (TripShortText != other.TripShortText) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (stopDetails_ != null) hash ^= StopDetails.GetHashCode();
+      if (localizedValues_ != null) hash ^= LocalizedValues.GetHashCode();
+      if (Headsign.Length != 0) hash ^= Headsign.GetHashCode();
+      if (headway_ != null) hash ^= Headway.GetHashCode();
+      if (transitLine_ != null) hash ^= TransitLine.GetHashCode();
+      if (StopCount != 0) hash ^= StopCount.GetHashCode();
+      if (TripShortText.Length != 0) hash ^= TripShortText.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (stopDetails_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StopDetails);
+      }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (Headsign.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Headsign);
+      }
+      if (headway_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Headway);
+      }
+      if (transitLine_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TransitLine);
+      }
+      if (StopCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(StopCount);
+      }
+      if (TripShortText.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(TripShortText);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (stopDetails_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StopDetails);
+      }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LocalizedValues);
+      }
+      if (Headsign.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Headsign);
+      }
+      if (headway_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Headway);
+      }
+      if (transitLine_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TransitLine);
+      }
+      if (StopCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(StopCount);
+      }
+      if (TripShortText.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(TripShortText);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (stopDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StopDetails);
+      }
+      if (localizedValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalizedValues);
+      }
+      if (Headsign.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Headsign);
+      }
+      if (headway_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Headway);
+      }
+      if (transitLine_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitLine);
+      }
+      if (StopCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StopCount);
+      }
+      if (TripShortText.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TripShortText);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RouteLegStepTransitDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.stopDetails_ != null) {
+        if (stopDetails_ == null) {
+          StopDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails();
+        }
+        StopDetails.MergeFrom(other.StopDetails);
+      }
+      if (other.localizedValues_ != null) {
+        if (localizedValues_ == null) {
+          LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues();
+        }
+        LocalizedValues.MergeFrom(other.LocalizedValues);
+      }
+      if (other.Headsign.Length != 0) {
+        Headsign = other.Headsign;
+      }
+      if (other.headway_ != null) {
+        if (headway_ == null) {
+          Headway = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Headway.MergeFrom(other.Headway);
+      }
+      if (other.transitLine_ != null) {
+        if (transitLine_ == null) {
+          TransitLine = new global::Google.Maps.Routing.V2.TransitLine();
+        }
+        TransitLine.MergeFrom(other.TransitLine);
+      }
+      if (other.StopCount != 0) {
+        StopCount = other.StopCount;
+      }
+      if (other.TripShortText.Length != 0) {
+        TripShortText = other.TripShortText;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (stopDetails_ == null) {
+              StopDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails();
+            }
+            input.ReadMessage(StopDetails);
+            break;
+          }
+          case 18: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 26: {
+            Headsign = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (headway_ == null) {
+              Headway = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Headway);
+            break;
+          }
+          case 42: {
+            if (transitLine_ == null) {
+              TransitLine = new global::Google.Maps.Routing.V2.TransitLine();
+            }
+            input.ReadMessage(TransitLine);
+            break;
+          }
+          case 48: {
+            StopCount = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            TripShortText = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stopDetails_ == null) {
+              StopDetails = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitStopDetails();
+            }
+            input.ReadMessage(StopDetails);
+            break;
+          }
+          case 18: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Types.TransitDetailsLocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
+          case 26: {
+            Headsign = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (headway_ == null) {
+              Headway = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Headway);
+            break;
+          }
+          case 42: {
+            if (transitLine_ == null) {
+              TransitLine = new global::Google.Maps.Routing.V2.TransitLine();
+            }
+            input.ReadMessage(TransitLine);
+            break;
+          }
+          case 48: {
+            StopCount = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            TripShortText = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RouteLegStepTransitDetails message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Details about the transit stops for the `RouteLegStep`.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TransitStopDetails : pb::IMessage<TransitStopDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TransitStopDetails> _parser = new pb::MessageParser<TransitStopDetails>(() => new TransitStopDetails());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TransitStopDetails> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitStopDetails() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitStopDetails(TransitStopDetails other) : this() {
+          arrivalStop_ = other.arrivalStop_ != null ? other.arrivalStop_.Clone() : null;
+          arrivalTime_ = other.arrivalTime_ != null ? other.arrivalTime_.Clone() : null;
+          departureStop_ = other.departureStop_ != null ? other.departureStop_.Clone() : null;
+          departureTime_ = other.departureTime_ != null ? other.departureTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitStopDetails Clone() {
+          return new TransitStopDetails(this);
+        }
+
+        /// <summary>Field number for the "arrival_stop" field.</summary>
+        public const int ArrivalStopFieldNumber = 1;
+        private global::Google.Maps.Routing.V2.TransitStop arrivalStop_;
+        /// <summary>
+        /// Information about the arrival stop for the step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.TransitStop ArrivalStop {
+          get { return arrivalStop_; }
+          set {
+            arrivalStop_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "arrival_time" field.</summary>
+        public const int ArrivalTimeFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp arrivalTime_;
+        /// <summary>
+        /// The estimated time of arrival for the step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp ArrivalTime {
+          get { return arrivalTime_; }
+          set {
+            arrivalTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "departure_stop" field.</summary>
+        public const int DepartureStopFieldNumber = 3;
+        private global::Google.Maps.Routing.V2.TransitStop departureStop_;
+        /// <summary>
+        /// Information about the departure stop for the step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.TransitStop DepartureStop {
+          get { return departureStop_; }
+          set {
+            departureStop_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "departure_time" field.</summary>
+        public const int DepartureTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp departureTime_;
+        /// <summary>
+        /// The estimated time of departure for the step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp DepartureTime {
+          get { return departureTime_; }
+          set {
+            departureTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TransitStopDetails);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TransitStopDetails other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ArrivalStop, other.ArrivalStop)) return false;
+          if (!object.Equals(ArrivalTime, other.ArrivalTime)) return false;
+          if (!object.Equals(DepartureStop, other.DepartureStop)) return false;
+          if (!object.Equals(DepartureTime, other.DepartureTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (arrivalStop_ != null) hash ^= ArrivalStop.GetHashCode();
+          if (arrivalTime_ != null) hash ^= ArrivalTime.GetHashCode();
+          if (departureStop_ != null) hash ^= DepartureStop.GetHashCode();
+          if (departureTime_ != null) hash ^= DepartureTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (arrivalStop_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ArrivalStop);
+          }
+          if (arrivalTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ArrivalTime);
+          }
+          if (departureStop_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DepartureStop);
+          }
+          if (departureTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (arrivalStop_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ArrivalStop);
+          }
+          if (arrivalTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ArrivalTime);
+          }
+          if (departureStop_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DepartureStop);
+          }
+          if (departureTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (arrivalStop_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrivalStop);
+          }
+          if (arrivalTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrivalTime);
+          }
+          if (departureStop_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureStop);
+          }
+          if (departureTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TransitStopDetails other) {
+          if (other == null) {
+            return;
+          }
+          if (other.arrivalStop_ != null) {
+            if (arrivalStop_ == null) {
+              ArrivalStop = new global::Google.Maps.Routing.V2.TransitStop();
+            }
+            ArrivalStop.MergeFrom(other.ArrivalStop);
+          }
+          if (other.arrivalTime_ != null) {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            ArrivalTime.MergeFrom(other.ArrivalTime);
+          }
+          if (other.departureStop_ != null) {
+            if (departureStop_ == null) {
+              DepartureStop = new global::Google.Maps.Routing.V2.TransitStop();
+            }
+            DepartureStop.MergeFrom(other.DepartureStop);
+          }
+          if (other.departureTime_ != null) {
+            if (departureTime_ == null) {
+              DepartureTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            DepartureTime.MergeFrom(other.DepartureTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (arrivalStop_ == null) {
+                  ArrivalStop = new global::Google.Maps.Routing.V2.TransitStop();
+                }
+                input.ReadMessage(ArrivalStop);
+                break;
+              }
+              case 18: {
+                if (arrivalTime_ == null) {
+                  ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ArrivalTime);
+                break;
+              }
+              case 26: {
+                if (departureStop_ == null) {
+                  DepartureStop = new global::Google.Maps.Routing.V2.TransitStop();
+                }
+                input.ReadMessage(DepartureStop);
+                break;
+              }
+              case 34: {
+                if (departureTime_ == null) {
+                  DepartureTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DepartureTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (arrivalStop_ == null) {
+                  ArrivalStop = new global::Google.Maps.Routing.V2.TransitStop();
+                }
+                input.ReadMessage(ArrivalStop);
+                break;
+              }
+              case 18: {
+                if (arrivalTime_ == null) {
+                  ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ArrivalTime);
+                break;
+              }
+              case 26: {
+                if (departureStop_ == null) {
+                  DepartureStop = new global::Google.Maps.Routing.V2.TransitStop();
+                }
+                input.ReadMessage(DepartureStop);
+                break;
+              }
+              case 34: {
+                if (departureTime_ == null) {
+                  DepartureTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DepartureTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Localized descriptions of values for `RouteTransitDetails`.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TransitDetailsLocalizedValues : pb::IMessage<TransitDetailsLocalizedValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TransitDetailsLocalizedValues> _parser = new pb::MessageParser<TransitDetailsLocalizedValues>(() => new TransitDetailsLocalizedValues());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TransitDetailsLocalizedValues> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteLegStepTransitDetails.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitDetailsLocalizedValues() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitDetailsLocalizedValues(TransitDetailsLocalizedValues other) : this() {
+          arrivalTime_ = other.arrivalTime_ != null ? other.arrivalTime_.Clone() : null;
+          departureTime_ = other.departureTime_ != null ? other.departureTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TransitDetailsLocalizedValues Clone() {
+          return new TransitDetailsLocalizedValues(this);
+        }
+
+        /// <summary>Field number for the "arrival_time" field.</summary>
+        public const int ArrivalTimeFieldNumber = 1;
+        private global::Google.Maps.Routing.V2.LocalizedTime arrivalTime_;
+        /// <summary>
+        /// Time in its formatted text representation with a corresponding time zone.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.LocalizedTime ArrivalTime {
+          get { return arrivalTime_; }
+          set {
+            arrivalTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "departure_time" field.</summary>
+        public const int DepartureTimeFieldNumber = 2;
+        private global::Google.Maps.Routing.V2.LocalizedTime departureTime_;
+        /// <summary>
+        /// Time in its formatted text representation with a corresponding time zone.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.LocalizedTime DepartureTime {
+          get { return departureTime_; }
+          set {
+            departureTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TransitDetailsLocalizedValues);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TransitDetailsLocalizedValues other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ArrivalTime, other.ArrivalTime)) return false;
+          if (!object.Equals(DepartureTime, other.DepartureTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (arrivalTime_ != null) hash ^= ArrivalTime.GetHashCode();
+          if (departureTime_ != null) hash ^= DepartureTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (arrivalTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ArrivalTime);
+          }
+          if (departureTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (arrivalTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ArrivalTime);
+          }
+          if (departureTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (arrivalTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrivalTime);
+          }
+          if (departureTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TransitDetailsLocalizedValues other) {
+          if (other == null) {
+            return;
+          }
+          if (other.arrivalTime_ != null) {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+            }
+            ArrivalTime.MergeFrom(other.ArrivalTime);
+          }
+          if (other.departureTime_ != null) {
+            if (departureTime_ == null) {
+              DepartureTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+            }
+            DepartureTime.MergeFrom(other.DepartureTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (arrivalTime_ == null) {
+                  ArrivalTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+                }
+                input.ReadMessage(ArrivalTime);
+                break;
+              }
+              case 18: {
+                if (departureTime_ == null) {
+                  DepartureTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+                }
+                input.ReadMessage(DepartureTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (arrivalTime_ == null) {
+                  ArrivalTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+                }
+                input.ReadMessage(ArrivalTime);
+                break;
+              }
+              case 18: {
+                if (departureTime_ == null) {
+                  DepartureTime = new global::Google.Maps.Routing.V2.LocalizedTime();
+                }
+                input.ReadMessage(DepartureTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

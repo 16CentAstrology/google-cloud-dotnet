@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ArtifactRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START artifactregistry_v1_generated_ArtifactRegistry_ListPackages_async]
     using Google.Api.Gax;
@@ -41,6 +41,8 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             ListPackagesRequest request = new ListPackagesRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(request);

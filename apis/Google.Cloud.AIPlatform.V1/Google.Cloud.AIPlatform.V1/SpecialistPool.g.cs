@@ -58,6 +58,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// specialist pool as well as start data labeling jobs on Cloud, managers and
   /// workers handle the jobs using CrowdCompute console.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpecialistPool : pb::IMessage<SpecialistPool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

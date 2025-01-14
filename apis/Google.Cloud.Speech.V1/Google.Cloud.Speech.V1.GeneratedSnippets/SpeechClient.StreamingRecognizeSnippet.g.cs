@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START speech_v1_generated_Speech_StreamingRecognize_sync]
     using Google.Api.Gax.Grpc;
@@ -36,7 +36,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
+            using SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

@@ -1,5 +1,57 @@
 # Version history
 
+## Version 2.8.0, released 2025-01-06
+
+### New features
+
+- Added support for optionally disabling built-in GKE metrics ([commit 3170840](https://github.com/googleapis/google-cloud-dotnet/commit/317084009432ca7040b2a6cf1bf1f77efeaee353))
+- Added tag bindings support for Attached Clusters ([commit 3170840](https://github.com/googleapis/google-cloud-dotnet/commit/317084009432ca7040b2a6cf1bf1f77efeaee353))
+
+### Documentation improvements
+
+- Updated comments of existing fields ([commit 3170840](https://github.com/googleapis/google-cloud-dotnet/commit/317084009432ca7040b2a6cf1bf1f77efeaee353))
+
+## Version 2.7.0, released 2024-09-16
+
+### New features
+
+- An optional field `security_posture_config` in message `.google.cloud.gkemulticloud.v1.AttachedCluster` is added ([commit d8adaac](https://github.com/googleapis/google-cloud-dotnet/commit/d8adaac06030ce3fb83da05f4f0931111d3e56b7))
+- An optional field `kubelet_config` in message `.google.cloud.gkemulticloud.v1.AwsNodePool` is added ([commit d8adaac](https://github.com/googleapis/google-cloud-dotnet/commit/d8adaac06030ce3fb83da05f4f0931111d3e56b7))
+
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Option to ignore_errors while deleting Azure clusters / nodepools ([commit 564312f](https://github.com/googleapis/google-cloud-dotnet/commit/564312fafe111033b4f45180097c60ac02f5ddf4))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Added proxy support for Attached Clusters ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added Binary Authorization support which is a deploy-time security control that ensures only trusted container images are deployed ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for a new admin-groups flag in the create and update APIs ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added Surge Update and Rollback support for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for per-node-pool subnet security group rules for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for EC2 Spot instance types for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added force-deletion support for AWS Clusters & Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Expanded Kubernetes version info ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+
+### Documentation improvements
+
+- Updated comments of existing fields ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+
 ## Version 2.2.0, released 2023-02-08
 
 ### New features

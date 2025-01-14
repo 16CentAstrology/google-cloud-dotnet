@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,18 +15,18 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
 {
@@ -126,14 +126,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RecaptchaEnterpriseServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -259,8 +259,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -278,8 +278,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -297,8 +297,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -312,8 +312,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -331,8 +331,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -350,8 +350,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// Required. The name of the project in which the assessment is created,
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -397,11 +397,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -419,11 +419,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -441,11 +441,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -459,11 +459,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -481,11 +481,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -503,11 +503,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -539,7 +539,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         {
             GrpcClient = grpcClient;
             RecaptchaEnterpriseServiceV1Beta1Settings effectiveSettings = settings ?? RecaptchaEnterpriseServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateAssessment = clientHelper.BuildApiCall<CreateAssessmentRequest, Assessment>("CreateAssessment", grpcClient.CreateAssessmentAsync, grpcClient.CreateAssessment, effectiveSettings.CreateAssessmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAssessment);
             Modify_CreateAssessmentApiCall(ref _callCreateAssessment);

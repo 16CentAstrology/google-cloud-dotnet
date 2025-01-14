@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -50,6 +50,7 @@ namespace Google.Cloud.Compute.V1
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             GetDiagnosticsSettings = existing.GetDiagnosticsSettings;
+            GetMacsecConfigSettings = existing.GetMacsecConfigSettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
@@ -133,6 +134,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDiagnosticsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InterconnectsClient.GetMacsecConfig</c> and <c>InterconnectsClient.GetMacsecConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMacsecConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InterconnectsClient.Insert</c>
@@ -288,14 +310,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return InterconnectsClient.Create(callInvoker, Settings, Logger);
+            return InterconnectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<InterconnectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return InterconnectsClient.Create(callInvoker, Settings, Logger);
+            return InterconnectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -569,7 +591,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -578,7 +600,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,7 +609,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -596,7 +618,7 @@ namespace Google.Cloud.Compute.V1
             GetDiagnosticsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -614,7 +636,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -632,7 +654,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -644,6 +666,83 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<InterconnectsGetDiagnosticsResponse> GetDiagnosticsAsync(string project, string interconnect, st::CancellationToken cancellationToken) =>
             GetDiagnosticsAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InterconnectsGetMacsecConfigResponse GetMacsecConfig(GetMacsecConfigInterconnectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InterconnectsGetMacsecConfigResponse> GetMacsecConfigAsync(GetMacsecConfigInterconnectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InterconnectsGetMacsecConfigResponse> GetMacsecConfigAsync(GetMacsecConfigInterconnectRequest request, st::CancellationToken cancellationToken) =>
+            GetMacsecConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect resource to query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InterconnectsGetMacsecConfigResponse GetMacsecConfig(string project, string interconnect, gaxgrpc::CallSettings callSettings = null) =>
+            GetMacsecConfig(new GetMacsecConfigInterconnectRequest
+            {
+                Interconnect = gax::GaxPreconditions.CheckNotNullOrEmpty(interconnect, nameof(interconnect)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect resource to query.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InterconnectsGetMacsecConfigResponse> GetMacsecConfigAsync(string project, string interconnect, gaxgrpc::CallSettings callSettings = null) =>
+            GetMacsecConfigAsync(new GetMacsecConfigInterconnectRequest
+            {
+                Interconnect = gax::GaxPreconditions.CheckNotNullOrEmpty(interconnect, nameof(interconnect)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect resource to query.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InterconnectsGetMacsecConfigResponse> GetMacsecConfigAsync(string project, string interconnect, st::CancellationToken cancellationToken) =>
+            GetMacsecConfigAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an Interconnect in the specified project using the data included in the request.
@@ -782,13 +881,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Interconnect"/> resources.</returns>
-        public virtual gax::PagedEnumerable<InterconnectList, Interconnect> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListInterconnectsRequest
+        public virtual gax::PagedEnumerable<InterconnectList, Interconnect> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInterconnectsRequest request = new ListInterconnectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of Interconnects available to the specified project.
@@ -806,13 +914,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Interconnect"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<InterconnectList, Interconnect> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListInterconnectsRequest
+        public virtual gax::PagedAsyncEnumerable<InterconnectList, Interconnect> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInterconnectsRequest request = new ListInterconnectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -1055,6 +1172,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetDiagnosticsInterconnectRequest, InterconnectsGetDiagnosticsResponse> _callGetDiagnostics;
 
+        private readonly gaxgrpc::ApiCall<GetMacsecConfigInterconnectRequest, InterconnectsGetMacsecConfigResponse> _callGetMacsecConfig;
+
         private readonly gaxgrpc::ApiCall<InsertInterconnectRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListInterconnectsRequest, InterconnectList> _callList;
@@ -1073,7 +1192,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             InterconnectsSettings effectiveSettings = settings ?? InterconnectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
@@ -1087,6 +1210,9 @@ namespace Google.Cloud.Compute.V1
             _callGetDiagnostics = clientHelper.BuildApiCall<GetDiagnosticsInterconnectRequest, InterconnectsGetDiagnosticsResponse>("GetDiagnostics", grpcClient.GetDiagnosticsAsync, grpcClient.GetDiagnostics, effectiveSettings.GetDiagnosticsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callGetDiagnostics);
             Modify_GetDiagnosticsApiCall(ref _callGetDiagnostics);
+            _callGetMacsecConfig = clientHelper.BuildApiCall<GetMacsecConfigInterconnectRequest, InterconnectsGetMacsecConfigResponse>("GetMacsecConfig", grpcClient.GetMacsecConfigAsync, grpcClient.GetMacsecConfig, effectiveSettings.GetMacsecConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            Modify_ApiCall(ref _callGetMacsecConfig);
+            Modify_GetMacsecConfigApiCall(ref _callGetMacsecConfig);
             _callInsert = clientHelper.BuildApiCall<InsertInterconnectRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -1110,6 +1236,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetDiagnosticsApiCall(ref gaxgrpc::ApiCall<GetDiagnosticsInterconnectRequest, InterconnectsGetDiagnosticsResponse> call);
 
+        partial void Modify_GetMacsecConfigApiCall(ref gaxgrpc::ApiCall<GetMacsecConfigInterconnectRequest, InterconnectsGetMacsecConfigResponse> call);
+
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertInterconnectRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListInterconnectsRequest, InterconnectList> call);
@@ -1128,6 +1256,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_GetInterconnectRequest(ref GetInterconnectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDiagnosticsInterconnectRequest(ref GetDiagnosticsInterconnectRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMacsecConfigInterconnectRequest(ref GetMacsecConfigInterconnectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InsertInterconnectRequest(ref InsertInterconnectRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1195,7 +1325,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1207,7 +1337,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect.
+        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1216,6 +1346,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetDiagnosticsInterconnectRequest(ref request, ref callSettings);
             return _callGetDiagnostics.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InterconnectsGetMacsecConfigResponse GetMacsecConfig(GetMacsecConfigInterconnectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMacsecConfigInterconnectRequest(ref request, ref callSettings);
+            return _callGetMacsecConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InterconnectsGetMacsecConfigResponse> GetMacsecConfigAsync(GetMacsecConfigInterconnectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMacsecConfigInterconnectRequest(ref request, ref callSettings);
+            return _callGetMacsecConfig.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Insert</c>.</summary>

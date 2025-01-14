@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,19 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ServiceManagement.V1
 {
@@ -66,6 +67,7 @@ namespace Google.Cloud.ServiceManagement.V1
             CreateServiceRolloutSettings = existing.CreateServiceRolloutSettings;
             CreateServiceRolloutOperationsSettings = existing.CreateServiceRolloutOperationsSettings.Clone();
             GenerateConfigReportSettings = existing.GenerateConfigReportSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -317,6 +319,11 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </remarks>
         public gaxgrpc::CallSettings GenerateConfigReportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ServiceManagerSettings"/> object.</returns>
         public ServiceManagerSettings Clone() => new ServiceManagerSettings(this);
@@ -360,14 +367,14 @@ namespace Google.Cloud.ServiceManagement.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ServiceManagerClient.Create(callInvoker, Settings, Logger);
+            return ServiceManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ServiceManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ServiceManagerClient.Create(callInvoker, Settings, Logger);
+            return ServiceManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -465,6 +472,9 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <summary>The underlying gRPC ServiceManager client</summary>
         public virtual ServiceManager.ServiceManagerClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Lists managed services.
         /// 
@@ -519,14 +529,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ManagedService"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<ListServicesResponse, ManagedService> ListServices(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, ManagedService> ListServices(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ProducerProjectId = producerProjectId ?? "",
                 ConsumerId = consumerId ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists managed services.
@@ -556,14 +575,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ManagedService"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, ManagedService> ListServicesAsync(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, ManagedService> ListServicesAsync(string producerProjectId, string consumerId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ProducerProjectId = producerProjectId ?? "",
                 ConsumerId = consumerId ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a managed service. Authentication is required unless the service is
@@ -878,8 +906,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -901,8 +929,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -924,8 +952,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1010,8 +1038,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements. For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1031,8 +1059,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements. For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1052,8 +1080,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service. See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements. For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements. For example: `example.googleapis.com`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1086,8 +1114,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1099,13 +1127,22 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigs(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceConfigs(new ListServiceConfigsRequest
+        public virtual gax::PagedEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigs(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceConfigsRequest request = new ListServiceConfigsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the history of the service configuration for a managed service,
@@ -1113,8 +1150,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1126,13 +1163,22 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigsAsync(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceConfigsAsync(new ListServiceConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceConfigsResponse, ga::Service> ListServiceConfigsAsync(string serviceName, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceConfigsRequest request = new ListServiceConfigsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a service configuration (version) for a managed service.
@@ -1166,8 +1212,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1194,8 +1240,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1222,8 +1268,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configId">
         /// Required. The id of the service configuration resource.
@@ -1300,8 +1346,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1327,8 +1373,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1354,8 +1400,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="serviceConfig">
         /// Required. The service configuration resource.
@@ -1476,8 +1522,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1515,8 +1561,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1554,8 +1600,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="configSource">
         /// Required. The source configuration for the service.
@@ -1596,18 +1642,20 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
-        /// -- To limit the results to only those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
-        /// use filter='status=SUCCESS'
-        /// -- To limit the results to those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
-        /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
+        /// 
+        /// -- By [status]
+        /// [google.api.servicemanagement.v1.Rollout.RolloutStatus]. For example,
+        /// `filter='status=SUCCESS'`
+        /// 
+        /// -- By [strategy]
+        /// [google.api.servicemanagement.v1.Rollout.strategy]. For example,
+        /// `filter='strategy=TrafficPercentStrategy'`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1619,14 +1667,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Rollout"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRollouts(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceRollouts(new ListServiceRolloutsRequest
+        public virtual gax::PagedEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRollouts(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceRolloutsRequest request = new ListServiceRolloutsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceRollouts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the history of the service configuration rollouts for a managed
@@ -1634,18 +1691,20 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="filter">
         /// Required. Use `filter` to return subset of rollouts.
         /// The following filters are supported:
-        /// -- To limit the results to only those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',
-        /// use filter='status=SUCCESS'
-        /// -- To limit the results to those in
-        /// status (google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'
-        /// or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
+        /// 
+        /// -- By [status]
+        /// [google.api.servicemanagement.v1.Rollout.RolloutStatus]. For example,
+        /// `filter='status=SUCCESS'`
+        /// 
+        /// -- By [strategy]
+        /// [google.api.servicemanagement.v1.Rollout.strategy]. For example,
+        /// `filter='strategy=TrafficPercentStrategy'`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1657,14 +1716,23 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Rollout"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRolloutsAsync(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceRolloutsAsync(new ListServiceRolloutsRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceRolloutsResponse, Rollout> ListServiceRolloutsAsync(string serviceName, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceRolloutsRequest request = new ListServiceRolloutsRequest
             {
                 ServiceName = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceRolloutsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a service configuration
@@ -1702,8 +1770,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1723,8 +1791,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1744,8 +1812,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rolloutId">
         /// Required. The id of the rollout resource.
@@ -1866,8 +1934,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -1899,8 +1967,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -1932,8 +2000,8 @@ namespace Google.Cloud.ServiceManagement.V1
         /// </summary>
         /// <param name="serviceName">
         /// Required. The name of the service.  See the
-        /// [overview](https://cloud.google.com/service-infrastructure/docs/overview) for naming requirements.  For
-        /// example: `example.googleapis.com`.
+        /// [overview](https://cloud.google.com/service-management/overview) for naming
+        /// requirements.  For example: `example.googleapis.com`.
         /// </param>
         /// <param name="rollout">
         /// Required. The rollout resource. The `service_name` field is output only.
@@ -2148,12 +2216,17 @@ namespace Google.Cloud.ServiceManagement.V1
         {
             GrpcClient = grpcClient;
             ServiceManagerSettings effectiveSettings = settings ?? ServiceManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings, logger);
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings, logger);
             UndeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteServiceOperationsSettings, logger);
             SubmitConfigSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitConfigSourceOperationsSettings, logger);
             CreateServiceRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceRolloutOperationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
@@ -2228,6 +2301,9 @@ namespace Google.Cloud.ServiceManagement.V1
 
         /// <summary>The underlying gRPC ServiceManager client</summary>
         public override ServiceManager.ServiceManagerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListServicesRequest(ref ListServicesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2776,6 +2852,22 @@ namespace Google.Cloud.ServiceManagement.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ServiceManager
+    {
+        public partial class ServiceManagerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

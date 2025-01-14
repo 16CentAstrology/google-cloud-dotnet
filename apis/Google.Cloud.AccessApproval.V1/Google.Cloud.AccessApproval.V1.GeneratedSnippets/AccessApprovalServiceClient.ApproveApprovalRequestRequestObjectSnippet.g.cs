@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AccessApproval.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_sync]
+    // [START accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_sync]
     using Google.Cloud.AccessApproval.V1;
     using Google.Protobuf.WellKnownTypes;
 
@@ -44,5 +44,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             ApprovalRequest response = accessApprovalServiceClient.ApproveApprovalRequest(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_sync]
+    // [END accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_sync]
 }

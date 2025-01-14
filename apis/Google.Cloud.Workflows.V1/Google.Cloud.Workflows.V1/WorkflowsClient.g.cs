@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using gcwcv = Google.Cloud.Workflows.Common.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Workflows.V1
 {
@@ -57,6 +58,7 @@ namespace Google.Cloud.Workflows.V1
             DeleteWorkflowOperationsSettings = existing.DeleteWorkflowOperationsSettings.Clone();
             UpdateWorkflowSettings = existing.UpdateWorkflowSettings;
             UpdateWorkflowOperationsSettings = existing.UpdateWorkflowOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -176,6 +178,11 @@ namespace Google.Cloud.Workflows.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="WorkflowsSettings"/> object.</returns>
         public WorkflowsSettings Clone() => new WorkflowsSettings(this);
@@ -218,14 +225,14 @@ namespace Google.Cloud.Workflows.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowsClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<WorkflowsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowsClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -318,8 +325,11 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>The underlying gRPC Workflows client</summary>
         public virtual Workflows.WorkflowsClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -329,7 +339,7 @@ namespace Google.Cloud.Workflows.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -339,7 +349,7 @@ namespace Google.Cloud.Workflows.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="parent">
@@ -356,16 +366,25 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflows(new ListWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflows(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="parent">
@@ -382,16 +401,25 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowsAsync(new ListWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="parent">
@@ -408,16 +436,25 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflows(new ListWorkflowsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowsResponse, Workflow> ListWorkflows(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflows(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="parent">
@@ -434,16 +471,25 @@ namespace Google.Cloud.Workflows.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowsAsync(new ListWorkflowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowsResponse, Workflow> ListWorkflowsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowsRequest request = new ListWorkflowsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -452,7 +498,7 @@ namespace Google.Cloud.Workflows.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -461,7 +507,7 @@ namespace Google.Cloud.Workflows.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -470,10 +516,10 @@ namespace Google.Cloud.Workflows.V1
             GetWorkflowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -485,10 +531,10 @@ namespace Google.Cloud.Workflows.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -500,10 +546,10 @@ namespace Google.Cloud.Workflows.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -512,10 +558,10 @@ namespace Google.Cloud.Workflows.V1
             GetWorkflowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -527,10 +573,10 @@ namespace Google.Cloud.Workflows.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,10 +588,10 @@ namespace Google.Cloud.Workflows.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the workflow which information should be retrieved.
+        /// Required. Name of the workflow for which information should be retrieved.
         /// Format: projects/{project}/locations/{location}/workflows/{workflow}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -556,7 +602,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,7 +613,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -578,7 +624,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -615,7 +661,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -647,7 +693,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -679,7 +725,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -706,7 +752,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -738,7 +784,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -770,7 +816,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="parent">
         /// Required. Project and location in which the workflow should be created.
@@ -952,8 +998,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -965,8 +1011,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -978,8 +1024,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1017,8 +1063,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="workflow">
@@ -1040,8 +1086,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="workflow">
@@ -1063,8 +1109,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="workflow">
@@ -1108,10 +1154,15 @@ namespace Google.Cloud.Workflows.V1
         {
             GrpcClient = grpcClient;
             WorkflowsSettings effectiveSettings = settings ?? WorkflowsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkflowOperationsSettings, logger);
             DeleteWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkflowOperationsSettings, logger);
             UpdateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkflowOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListWorkflows = clientHelper.BuildApiCall<ListWorkflowsRequest, ListWorkflowsResponse>("ListWorkflows", grpcClient.ListWorkflowsAsync, grpcClient.ListWorkflows, effectiveSettings.ListWorkflowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkflows);
             Modify_ListWorkflowsApiCall(ref _callListWorkflows);
@@ -1147,6 +1198,9 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>The underlying gRPC Workflows client</summary>
         public override Workflows.WorkflowsClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
         partial void Modify_ListWorkflowsRequest(ref ListWorkflowsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetWorkflowRequest(ref GetWorkflowRequest request, ref gaxgrpc::CallSettings settings);
@@ -1158,7 +1212,7 @@ namespace Google.Cloud.Workflows.V1
         partial void Modify_UpdateWorkflowRequest(ref UpdateWorkflowRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1171,7 +1225,7 @@ namespace Google.Cloud.Workflows.V1
         }
 
         /// <summary>
-        /// Lists Workflows in a given project and location.
+        /// Lists workflows in a given project and location.
         /// The default order is not specified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1184,7 +1238,7 @@ namespace Google.Cloud.Workflows.V1
         }
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1196,7 +1250,7 @@ namespace Google.Cloud.Workflows.V1
         }
 
         /// <summary>
-        /// Gets details of a single Workflow.
+        /// Gets details of a single workflow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1213,7 +1267,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1227,7 +1281,7 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Creates a new workflow. If a workflow with the specified name already
         /// exists in the specified project and location, the long running operation
-        /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+        /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1275,8 +1329,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1291,8 +1345,8 @@ namespace Google.Cloud.Workflows.V1
         /// <summary>
         /// Updates an existing workflow.
         /// Running this method has no impact on already running executions of the
-        /// workflow. A new revision of the workflow may be created as a result of a
-        /// successful update operation. In that case, such revision will be used
+        /// workflow. A new revision of the workflow might be created as a result of a
+        /// successful update operation. In that case, the new revision is used
         /// in new workflow executions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1328,6 +1382,22 @@ namespace Google.Cloud.Workflows.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Workflows
+    {
+        public partial class WorkflowsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

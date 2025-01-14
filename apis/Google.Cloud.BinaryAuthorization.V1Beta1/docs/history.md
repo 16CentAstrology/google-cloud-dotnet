@@ -1,5 +1,38 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-beta07, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta06, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.0.0-beta05, released 2023-12-04
+
+### New features
+
+- Add container_name, container_type fields to Continuous Validation Logs ([commit 38aeca4](https://github.com/googleapis/google-cloud-dotnet/commit/38aeca45b2cfd63ffb1dff7af40b36b324334ebe))
+
+## Version 2.0.0-beta04, released 2023-08-16
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove unused unsupported_policy_event event_type from ContinuousValidationPodEvent ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+
+### New features
+
+- Adds support for check-based platform policy evaluation to Binary Authorization Continuous Validation logs ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+- Adds support for communicating configuration issues that prevent Continuous Validation from monitoring pods ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features

@@ -27,28 +27,29 @@ namespace Google.Cloud.Eventarc.V1 {
             "CiZnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvY2hhbm5lbC5wcm90bxIYZ29v",
             "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrIECgdDaGFubmVsEhEKBG5hbWUY",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIssECgdDaGFubmVsEhEKBG5hbWUY",
             "ASABKAlCA+BBAhIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgF",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
             "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
             "AxIQCghwcm92aWRlchgHIAEoCRIbCgxwdWJzdWJfdG9waWMYCCABKAlCA+BB",
             "A0gAEjsKBXN0YXRlGAkgASgOMicuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
             "LkNoYW5uZWwuU3RhdGVCA+BBAxIdChBhY3RpdmF0aW9uX3Rva2VuGAogASgJ",
-            "QgPgQQMSQgoPY3J5cHRvX2tleV9uYW1lGAsgASgJQingQQH6QSMKIWNsb3Vk",
-            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleSJFCgVTdGF0ZRIVChFTVEFU",
-            "RV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJVkUQAhIMCghJ",
-            "TkFDVElWRRADOnPqQXAKH2V2ZW50YXJjLmdvb2dsZWFwaXMuY29tL0NoYW5u",
-            "ZWwSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
-            "aGFubmVscy97Y2hhbm5lbH0qCGNoYW5uZWxzMgdjaGFubmVsQgsKCXRyYW5z",
-            "cG9ydEK8AQocY29tLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52MUIMQ2hhbm5l",
-            "bFByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZXZlbnRhcmMvYXBpdjEv",
-            "ZXZlbnRhcmNwYjtldmVudGFyY3BiqgIYR29vZ2xlLkNsb3VkLkV2ZW50YXJj",
-            "LlYxygIYR29vZ2xlXENsb3VkXEV2ZW50YXJjXFYx6gIbR29vZ2xlOjpDbG91",
-            "ZDo6RXZlbnRhcmM6OlYxYgZwcm90bzM="));
+            "QgPgQQMSPwoPY3J5cHRvX2tleV9uYW1lGAsgASgJQib6QSMKIWNsb3Vka21z",
+            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIaCg1zYXRpc2ZpZXNfcHpzGAwg",
+            "ASgIQgPgQQMiRQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQ",
+            "RU5ESU5HEAESCgoGQUNUSVZFEAISDAoISU5BQ1RJVkUQAzpz6kFwCh9ldmVu",
+            "dGFyYy5nb29nbGVhcGlzLmNvbS9DaGFubmVsEjpwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2hhbm5lbHMve2NoYW5uZWx9Kghj",
+            "aGFubmVsczIHY2hhbm5lbEILCgl0cmFuc3BvcnRCvAEKHGNvbS5nb29nbGUu",
+            "Y2xvdWQuZXZlbnRhcmMudjFCDENoYW5uZWxQcm90b1ABWjhjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2V2ZW50YXJjL2FwaXYxL2V2ZW50YXJjcGI7ZXZlbnRhcmNw",
+            "YqoCGEdvb2dsZS5DbG91ZC5FdmVudGFyYy5WMcoCGEdvb2dsZVxDbG91ZFxF",
+            "dmVudGFyY1xWMeoCG0dvb2dsZTo6Q2xvdWQ6OkV2ZW50YXJjOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken", "CryptoKeyName" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken", "CryptoKeyName", "SatisfiesPzs" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -61,6 +62,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// The published events are delivered through the transport associated with the
   /// channel. Note that a channel is associated with exactly one event provider.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Channel : pb::IMessage<Channel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -103,6 +105,7 @@ namespace Google.Cloud.Eventarc.V1 {
       state_ = other.state_;
       activationToken_ = other.activationToken_;
       cryptoKeyName_ = other.cryptoKeyName_;
+      satisfiesPzs_ = other.satisfiesPzs_;
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
           PubsubTopic = other.PubsubTopic;
@@ -210,10 +213,24 @@ namespace Google.Cloud.Eventarc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopic {
-      get { return transportCase_ == TransportOneofCase.PubsubTopic ? (string) transport_ : ""; }
+      get { return HasPubsubTopic ? (string) transport_ : ""; }
       set {
         transport_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transportCase_ = TransportOneofCase.PubsubTopic;
+      }
+    }
+    /// <summary>Gets whether the "pubsub_topic" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPubsubTopic {
+      get { return transportCase_ == TransportOneofCase.PubsubTopic; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "pubsub_topic" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPubsubTopic() {
+      if (HasPubsubTopic) {
+        ClearTransport();
       }
     }
 
@@ -252,7 +269,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int CryptoKeyNameFieldNumber = 11;
     private string cryptoKeyName_ = "";
     /// <summary>
-    /// Optional. Resource name of a KMS crypto key (managed by the user) used to
+    /// Resource name of a KMS crypto key (managed by the user) used to
     /// encrypt/decrypt their event data.
     ///
     /// It must match the pattern
@@ -264,6 +281,22 @@ namespace Google.Cloud.Eventarc.V1 {
       get { return cryptoKeyName_; }
       set {
         cryptoKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 12;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Whether or not this Channel satisfies the requirements of
+    /// physical zone separation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
       }
     }
 
@@ -311,6 +344,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (State != other.State) return false;
       if (ActivationToken != other.ActivationToken) return false;
       if (CryptoKeyName != other.CryptoKeyName) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (TransportCase != other.TransportCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -324,10 +358,11 @@ namespace Google.Cloud.Eventarc.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Provider.Length != 0) hash ^= Provider.GetHashCode();
-      if (transportCase_ == TransportOneofCase.PubsubTopic) hash ^= PubsubTopic.GetHashCode();
+      if (HasPubsubTopic) hash ^= PubsubTopic.GetHashCode();
       if (State != global::Google.Cloud.Eventarc.V1.Channel.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (ActivationToken.Length != 0) hash ^= ActivationToken.GetHashCode();
       if (CryptoKeyName.Length != 0) hash ^= CryptoKeyName.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       hash ^= (int) transportCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -367,7 +402,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(58);
         output.WriteString(Provider);
       }
-      if (transportCase_ == TransportOneofCase.PubsubTopic) {
+      if (HasPubsubTopic) {
         output.WriteRawTag(66);
         output.WriteString(PubsubTopic);
       }
@@ -382,6 +417,10 @@ namespace Google.Cloud.Eventarc.V1 {
       if (CryptoKeyName.Length != 0) {
         output.WriteRawTag(90);
         output.WriteString(CryptoKeyName);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -413,7 +452,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(58);
         output.WriteString(Provider);
       }
-      if (transportCase_ == TransportOneofCase.PubsubTopic) {
+      if (HasPubsubTopic) {
         output.WriteRawTag(66);
         output.WriteString(PubsubTopic);
       }
@@ -428,6 +467,10 @@ namespace Google.Cloud.Eventarc.V1 {
       if (CryptoKeyName.Length != 0) {
         output.WriteRawTag(90);
         output.WriteString(CryptoKeyName);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -454,7 +497,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (Provider.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
       }
-      if (transportCase_ == TransportOneofCase.PubsubTopic) {
+      if (HasPubsubTopic) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PubsubTopic);
       }
       if (State != global::Google.Cloud.Eventarc.V1.Channel.Types.State.Unspecified) {
@@ -465,6 +508,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (CryptoKeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CryptoKeyName);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -507,6 +553,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (other.CryptoKeyName.Length != 0) {
         CryptoKeyName = other.CryptoKeyName;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
       }
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
@@ -571,6 +620,10 @@ namespace Google.Cloud.Eventarc.V1 {
             CryptoKeyName = input.ReadString();
             break;
           }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -626,6 +679,10 @@ namespace Google.Cloud.Eventarc.V1 {
           }
           case 90: {
             CryptoKeyName = input.ReadString();
+            break;
+          }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
             break;
           }
         }

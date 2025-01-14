@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Translate.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START translate_v3_generated_TranslationService_TranslateText_async]
     using Google.Api.Gax.ResourceNames;
@@ -46,6 +46,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
+                TransliterationConfig = new TransliterationConfig(),
             };
             // Make the request
             TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(request);

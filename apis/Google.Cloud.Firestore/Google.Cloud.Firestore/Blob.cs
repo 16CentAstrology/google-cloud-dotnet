@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ namespace Google.Cloud.Firestore
         /// <param name="byteString">The ByteString to wrap. Must not be null.</param>
         /// <returns>A new blob wrapping <paramref name="byteString"/>.</returns>
         public static Blob FromByteString(ByteString byteString) => new Blob(byteString);
-        
+
         /// <summary>
         /// Constructs a new <see cref="Blob"/> by copying the current content of <paramref name="bytes"/>.
         /// </summary>

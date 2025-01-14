@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace Google.Cloud.PubSub.V1;
@@ -51,6 +52,28 @@ public abstract partial class PublisherClient
         public TimeSpan? DisposeTimeout { get; set; }
 
         /// <summary>
+        /// Enables publish message compression. If set to <c>true</c>, messages will be compressed before being sent to the server
+        /// by the <see cref="PublisherClient"/>.
+        /// </summary>
+        public bool EnableCompression { get; set; }
+
+        /// <summary>
+        /// Specifies the threshold for the number of bytes in a message batch before compression is applied.
+        /// This property comes into play only when <see cref="EnableCompression"/> is set to <c>true</c>.
+        /// If the number of bytes in a batch is less than this value, compression will not be applied even
+        /// if <see cref="EnableCompression"/> is <c>true</c>.
+        /// If <c>null</c>, defaults to <see cref="DefaultCompressionBytesThreshold"/>.
+        /// </summary>
+        public long? CompressionBytesThreshold { get; set; }
+
+        /// <summary>
+        /// The logger to use in <see cref="PublisherClient"/>. This is propagated from the
+        /// logger in the <see cref="PublisherClientBuilder"/> when building the client. This is
+        /// to ensure there's only a single public place to set the logger (i.e. the builder).
+        /// </summary>
+        internal ILogger Logger { get; set; }
+
+        /// <summary>
         /// Create a new instance.
         /// </summary>
         public Settings() { }
@@ -61,6 +84,9 @@ public abstract partial class PublisherClient
             Scheduler = other.Scheduler;
             EnableMessageOrdering = other.EnableMessageOrdering;
             DisposeTimeout = other.DisposeTimeout;
+            EnableCompression = other.EnableCompression;
+            CompressionBytesThreshold = other.CompressionBytesThreshold;
+            Logger = other.Logger;
         }
 
         internal void Validate()

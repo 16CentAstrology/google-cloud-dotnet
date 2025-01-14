@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.Lineage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.DataCatalog.Lineage.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -27,6 +28,72 @@ namespace Google.Cloud.DataCatalog.Lineage.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedLineageClientSnippets
     {
+        /// <summary>Snippet for ProcessOpenLineageRunEvent</summary>
+        public void ProcessOpenLineageRunEventRequestObject()
+        {
+            // Snippet: ProcessOpenLineageRunEvent(ProcessOpenLineageRunEventRequest, CallSettings)
+            // Create client
+            LineageClient lineageClient = LineageClient.Create();
+            // Initialize request argument(s)
+            ProcessOpenLineageRunEventRequest request = new ProcessOpenLineageRunEventRequest
+            {
+                Parent = "",
+                OpenLineage = new Struct(),
+                RequestId = "",
+            };
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEventAsync</summary>
+        public async Task ProcessOpenLineageRunEventRequestObjectAsync()
+        {
+            // Snippet: ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest, CallSettings)
+            // Additional: ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest, CancellationToken)
+            // Create client
+            LineageClient lineageClient = await LineageClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessOpenLineageRunEventRequest request = new ProcessOpenLineageRunEventRequest
+            {
+                Parent = "",
+                OpenLineage = new Struct(),
+                RequestId = "",
+            };
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEvent</summary>
+        public void ProcessOpenLineageRunEvent()
+        {
+            // Snippet: ProcessOpenLineageRunEvent(string, Struct, CallSettings)
+            // Create client
+            LineageClient lineageClient = LineageClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            Struct openLineage = new Struct();
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(parent, openLineage);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEventAsync</summary>
+        public async Task ProcessOpenLineageRunEventAsync()
+        {
+            // Snippet: ProcessOpenLineageRunEventAsync(string, Struct, CallSettings)
+            // Additional: ProcessOpenLineageRunEventAsync(string, Struct, CancellationToken)
+            // Create client
+            LineageClient lineageClient = await LineageClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            Struct openLineage = new Struct();
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(parent, openLineage);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateProcess</summary>
         public void CreateProcessRequestObject()
         {
@@ -842,6 +909,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1.Snippets
             {
                 Run = new Run(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Run response = lineageClient.UpdateRun(request);
@@ -860,6 +928,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1.Snippets
             {
                 Run = new Run(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Run response = await lineageClient.UpdateRunAsync(request);

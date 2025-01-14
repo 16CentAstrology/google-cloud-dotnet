@@ -95,80 +95,80 @@ namespace Google.Cloud.Dialogflow.V2 {
             "RW50aXR5VHlwZTLWGQoLRW50aXR5VHlwZXMShwIKD0xpc3RFbnRpdHlUeXBl",
             "cxIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RFbnRpdHlUeXBl",
             "c1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0RW50",
-            "aXR5VHlwZXNSZXNwb25zZSKKAYLT5JMCZBIpL3YyL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9hZ2VudH0vZW50aXR5VHlwZXNaNxI1L3YyL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW50aXR5VHlwZXPaQQZwYXJlbnTa",
-            "QRRwYXJlbnQsbGFuZ3VhZ2VfY29kZRLyAQoNR2V0RW50aXR5VHlwZRIwLmdv",
+            "aXR5VHlwZXNSZXNwb25zZSKKAdpBBnBhcmVudNpBFHBhcmVudCxsYW5ndWFn",
+            "ZV9jb2RlgtPkkwJkEikvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50fS9l",
+            "bnRpdHlUeXBlc1o3EjUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50fS9lbnRpdHlUeXBlcxLyAQoNR2V0RW50aXR5VHlwZRIwLmdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldEVudGl0eVR5cGVSZXF1ZXN0",
-            "GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZSKGAYLT",
-            "5JMCZBIpL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMv",
-            "Kn1aNxI1L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQv",
-            "ZW50aXR5VHlwZXMvKn3aQQRuYW1l2kESbmFtZSxsYW5ndWFnZV9jb2RlEq4C",
+            "GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZSKGAdpB",
+            "BG5hbWXaQRJuYW1lLGxhbmd1YWdlX2NvZGWC0+STAmQSKS92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2FnZW50L2VudGl0eVR5cGVzLyp9WjcSNS92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2VudGl0eVR5cGVzLyp9Eq4C",
             "ChBDcmVhdGVFbnRpdHlUeXBlEjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
             "djIuQ3JlYXRlRW50aXR5VHlwZVJlcXVlc3QaJi5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5FbnRpdHlUeXBlIrwBgtPkkwJ+IikvdjIve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2FnZW50fS9lbnRpdHlUeXBlczoLZW50aXR5X3R5cGVaRCI1",
-            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW50",
-            "aXR5VHlwZXM6C2VudGl0eV90eXBl2kEScGFyZW50LGVudGl0eV90eXBl2kEg",
-            "cGFyZW50LGVudGl0eV90eXBlLGxhbmd1YWdlX2NvZGUSuQIKEFVwZGF0ZUVu",
+            "bG9nZmxvdy52Mi5FbnRpdHlUeXBlIrwB2kEScGFyZW50LGVudGl0eV90eXBl",
+            "2kEgcGFyZW50LGVudGl0eV90eXBlLGxhbmd1YWdlX2NvZGWC0+STAn4iKS92",
+            "Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnR9L2VudGl0eVR5cGVzOgtlbnRp",
+            "dHlfdHlwZVpEIjUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2FnZW50fS9lbnRpdHlUeXBlczoLZW50aXR5X3R5cGUSuQIKEFVwZGF0ZUVu",
             "dGl0eVR5cGUSMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVF",
             "bnRpdHlUeXBlUmVxdWVzdBomLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "LkVudGl0eVR5cGUixwGC0+STApYBMjUvdjIve2VudGl0eV90eXBlLm5hbWU9",
-            "cHJvamVjdHMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfToLZW50aXR5X3R5cGVa",
-            "UDJBL3YyL3tlbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYWdlbnQvZW50aXR5VHlwZXMvKn06C2VudGl0eV90eXBl2kELZW50aXR5",
-            "X3R5cGXaQRllbnRpdHlfdHlwZSxsYW5ndWFnZV9jb2RlEtIBChBEZWxldGVF",
+            "LkVudGl0eVR5cGUixwHaQQtlbnRpdHlfdHlwZdpBGWVudGl0eV90eXBlLGxh",
+            "bmd1YWdlX2NvZGWC0+STApYBMjUvdjIve2VudGl0eV90eXBlLm5hbWU9cHJv",
+            "amVjdHMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfToLZW50aXR5X3R5cGVaUDJB",
+            "L3YyL3tlbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "YWdlbnQvZW50aXR5VHlwZXMvKn06C2VudGl0eV90eXBlEtIBChBEZWxldGVF",
             "bnRpdHlUeXBlEjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRGVsZXRl",
-            "RW50aXR5VHlwZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkicYLT",
-            "5JMCZCopL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMv",
-            "Kn1aNyo1L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQv",
-            "ZW50aXR5VHlwZXMvKn3aQQRuYW1lEtQCChZCYXRjaFVwZGF0ZUVudGl0eVR5",
+            "RW50aXR5VHlwZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkicdpB",
+            "BG5hbWWC0+STAmQqKS92Mi97bmFtZT1wcm9qZWN0cy8qL2FnZW50L2VudGl0",
+            "eVR5cGVzLyp9WjcqNS92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2FnZW50L2VudGl0eVR5cGVzLyp9EtQCChZCYXRjaFVwZGF0ZUVudGl0eVR5",
             "cGVzEjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQmF0Y2hVcGRhdGVF",
             "bnRpdHlUeXBlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIt8BgtPkkwKCASI1L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0v",
-            "ZW50aXR5VHlwZXM6YmF0Y2hVcGRhdGU6ASpaRiJBL3YyL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW50aXR5VHlwZXM6YmF0Y2hV",
-            "cGRhdGU6ASrKQVMKOWdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkJhdGNo",
-            "VXBkYXRlRW50aXR5VHlwZXNSZXNwb25zZRIWZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdBLLAgoWQmF0Y2hEZWxldGVFbnRpdHlUeXBlcxI5Lmdvb2dsZS5jbG91",
+            "aW9uIt8BykFTCjlnb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaFVw",
+            "ZGF0ZUVudGl0eVR5cGVzUmVzcG9uc2USFmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
+            "Y3SC0+STAoIBIjUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50fS9lbnRp",
+            "dHlUeXBlczpiYXRjaFVwZGF0ZToBKlpGIkEvdjIve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2FnZW50fS9lbnRpdHlUeXBlczpiYXRjaFVwZGF0",
+            "ZToBKhLLAgoWQmF0Y2hEZWxldGVFbnRpdHlUeXBlcxI5Lmdvb2dsZS5jbG91",
             "ZC5kaWFsb2dmbG93LnYyLkJhdGNoRGVsZXRlRW50aXR5VHlwZXNSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLWAYLT5JMCggEiNS92",
-            "Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnR9L2VudGl0eVR5cGVzOmJhdGNo",
-            "RGVsZXRlOgEqWkYiQS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYWdlbnR9L2VudGl0eVR5cGVzOmJhdGNoRGVsZXRlOgEq2kEYcGFyZW50",
-            "LGVudGl0eV90eXBlX25hbWVzykEvChVnb29nbGUucHJvdG9idWYuRW1wdHkS",
-            "Fmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QS8gIKE0JhdGNoQ3JlYXRlRW50aXRp",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLWAcpBLwoVZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN02kEYcGFy",
+            "ZW50LGVudGl0eV90eXBlX25hbWVzgtPkkwKCASI1L3YyL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9hZ2VudH0vZW50aXR5VHlwZXM6YmF0Y2hEZWxldGU6ASpaRiJB",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW50",
+            "aXR5VHlwZXM6YmF0Y2hEZWxldGU6ASoS8gIKE0JhdGNoQ3JlYXRlRW50aXRp",
             "ZXMSNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaENyZWF0ZUVu",
             "dGl0aWVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "gwKC0+STApgBIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L2VudGl0",
-            "eVR5cGVzLyp9L2VudGl0aWVzOmJhdGNoQ3JlYXRlOgEqWlEiTC92Mi97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvZW50aXR5VHlwZXMv",
-            "Kn0vZW50aXRpZXM6YmF0Y2hDcmVhdGU6ASraQQ9wYXJlbnQsZW50aXRpZXPa",
-            "QR1wYXJlbnQsZW50aXRpZXMsbGFuZ3VhZ2VfY29kZcpBLwoVZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0EvICChNCYXRj",
+            "gwLKQS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIWZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cnVjdNpBD3BhcmVudCxlbnRpdGllc9pBHXBhcmVudCxlbnRpdGllcyxs",
+            "YW5ndWFnZV9jb2RlgtPkkwKYASJAL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9h",
+            "Z2VudC9lbnRpdHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaENyZWF0ZToBKlpR",
+            "IkwvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2Vu",
+            "dGl0eVR5cGVzLyp9L2VudGl0aWVzOmJhdGNoQ3JlYXRlOgEqEvICChNCYXRj",
             "aFVwZGF0ZUVudGl0aWVzEjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
             "QmF0Y2hVcGRhdGVFbnRpdGllc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIoMCgtPkkwKYASJAL3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9hZ2VudC9lbnRpdHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaFVwZGF0ZToB",
-            "KlpRIkwvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50",
-            "L2VudGl0eVR5cGVzLyp9L2VudGl0aWVzOmJhdGNoVXBkYXRlOgEq2kEPcGFy",
-            "ZW50LGVudGl0aWVz2kEdcGFyZW50LGVudGl0aWVzLGxhbmd1YWdlX2NvZGXK",
-            "QS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIWZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdBL8AgoTQmF0Y2hEZWxldGVFbnRpdGllcxI2Lmdvb2dsZS5jbG91ZC5k",
+            "bmcuT3BlcmF0aW9uIoMCykEvChVnb29nbGUucHJvdG9idWYuRW1wdHkSFmdv",
+            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3TaQQ9wYXJlbnQsZW50aXRpZXPaQR1wYXJl",
+            "bnQsZW50aXRpZXMsbGFuZ3VhZ2VfY29kZYLT5JMCmAEiQC92Mi97cGFyZW50",
+            "PXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn0vZW50aXRpZXM6YmF0",
+            "Y2hVcGRhdGU6ASpaUSJML3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaFVwZGF0",
+            "ZToBKhL8AgoTQmF0Y2hEZWxldGVFbnRpdGllcxI2Lmdvb2dsZS5jbG91ZC5k",
             "aWFsb2dmbG93LnYyLkJhdGNoRGVsZXRlRW50aXRpZXNSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKNAoLT5JMCmAEiQC92Mi97cGFy",
-            "ZW50PXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn0vZW50aXRpZXM6",
-            "YmF0Y2hEZWxldGU6ASpaUSJML3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaERl",
-            "bGV0ZToBKtpBFHBhcmVudCxlbnRpdHlfdmFsdWVz2kEicGFyZW50LGVudGl0",
-            "eV92YWx1ZXMsbGFuZ3VhZ2VfY29kZcpBLwoVZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0GnjKQRlkaWFsb2dmbG93Lmdv",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKNAspBLwoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN02kEUcGFyZW50LGVu",
+            "dGl0eV92YWx1ZXPaQSJwYXJlbnQsZW50aXR5X3ZhbHVlcyxsYW5ndWFnZV9j",
+            "b2RlgtPkkwKYASJAL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9lbnRp",
+            "dHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaERlbGV0ZToBKlpRIkwvdjIve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2VudGl0eVR5cGVz",
+            "Lyp9L2VudGl0aWVzOmJhdGNoRGVsZXRlOgEqGnjKQRlkaWFsb2dmbG93Lmdv",
             "b2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
             "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2RpYWxvZ2Zsb3dCmAEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dXRoL2RpYWxvZ2Zsb3dClQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
             "dy52MkIPRW50aXR5VHlwZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "ZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEB",
-            "ogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "ZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogIC",
+            "REaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -206,6 +206,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// For more information, see the
   /// [Entity guide](https://cloud.google.com/dialogflow/docs/entities-overview).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityType : pb::IMessage<EntityType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -643,6 +644,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// An **entity entry** for an associated entity type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entity : pb::IMessage<Entity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -890,6 +892,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1212,6 +1215,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The response message for
   /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1439,6 +1443,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1680,6 +1685,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.CreateEntityType][google.cloud.dialogflow.v2.EntityTypes.CreateEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1970,6 +1976,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2268,6 +2275,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.DeleteEntityType][google.cloud.dialogflow.v2.EntityTypes.DeleteEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2465,6 +2473,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateEntityTypesRequest : pb::IMessage<BatchUpdateEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2547,10 +2556,24 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntityTypeBatchUri {
-      get { return entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri ? (string) entityTypeBatch_ : ""; }
+      get { return HasEntityTypeBatchUri ? (string) entityTypeBatch_ : ""; }
       set {
         entityTypeBatch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         entityTypeBatchCase_ = EntityTypeBatchOneofCase.EntityTypeBatchUri;
+      }
+    }
+    /// <summary>Gets whether the "entity_type_batch_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypeBatchUri {
+      get { return entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_type_batch_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypeBatchUri() {
+      if (HasEntityTypeBatchUri) {
+        ClearEntityTypeBatch();
       }
     }
 
@@ -2653,7 +2676,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) hash ^= EntityTypeBatchUri.GetHashCode();
+      if (HasEntityTypeBatchUri) hash ^= EntityTypeBatchUri.GetHashCode();
       if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchInline) hash ^= EntityTypeBatchInline.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
@@ -2680,7 +2703,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(EntityTypeBatchUri);
       }
@@ -2710,7 +2733,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(EntityTypeBatchUri);
       }
@@ -2739,7 +2762,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityTypeBatchUri);
       }
       if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchInline) {
@@ -2884,6 +2907,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The response message for
   /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateEntityTypesResponse : pb::IMessage<BatchUpdateEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3069,6 +3093,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.BatchDeleteEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDeleteEntityTypesRequest : pb::IMessage<BatchDeleteEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3296,6 +3321,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateEntitiesRequest : pb::IMessage<BatchCreateEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3566,6 +3592,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.BatchUpdateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateEntitiesRequest : pb::IMessage<BatchUpdateEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3885,6 +3912,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [EntityTypes.BatchDeleteEntities][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDeleteEntitiesRequest : pb::IMessage<BatchDeleteEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4156,6 +4184,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// This message is a wrapper around a collection of entity types.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityTypeBatch : pb::IMessage<EntityTypeBatch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

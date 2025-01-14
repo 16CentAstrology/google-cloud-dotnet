@@ -25,88 +25,92 @@ namespace Google.Cloud.Batch.V1Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvYmF0Y2gvdjFhbHBoYS90YXNrLnByb3RvEhpnb29n",
-            "bGUuY2xvdWQuYmF0Y2gudjFhbHBoYRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxonZ29vZ2xlL2Nsb3VkL2JhdGNoL3YxYWxwaGEvdm9sdW1lLnByb3Rv",
-            "Gh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8iYgoPQ29tcHV0ZVJlc291cmNlEhEKCWNw",
-            "dV9taWxsaRgBIAEoAxISCgptZW1vcnlfbWliGAIgASgDEhEKCWdwdV9jb3Vu",
-            "dBgDIAEoAxIVCg1ib290X2Rpc2tfbWliGAQgASgDIuUBCgtTdGF0dXNFdmVu",
-            "dBIMCgR0eXBlGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAEgASgJEi4KCmV2ZW50",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKDnRh",
-            "c2tfZXhlY3V0aW9uGAQgASgLMikuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
-            "aGEuVGFza0V4ZWN1dGlvbhJACgp0YXNrX3N0YXRlGAUgASgOMiwuZ29vZ2xl",
-            "LmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5TdGF0ZSIiCg1UYXNr",
-            "RXhlY3V0aW9uEhEKCWV4aXRfY29kZRgBIAEoBSKzAgoKVGFza1N0YXR1cxI7",
-            "CgVzdGF0ZRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRh",
-            "c2tTdGF0dXMuU3RhdGUSPgoNc3RhdHVzX2V2ZW50cxgCIAMoCzInLmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLlN0YXR1c0V2ZW50EkUKDnJlc291cmNl",
-            "X3VzYWdlGAMgASgLMi0uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFz",
-            "a1Jlc291cmNlVXNhZ2UiYQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABILCgdQRU5ESU5HEAESDAoIQVNTSUdORUQQAhILCgdSVU5OSU5HEAMSCgoG",
-            "RkFJTEVEEAQSDQoJU1VDQ0VFREVEEAUiJwoRVGFza1Jlc291cmNlVXNhZ2US",
-            "EgoKY29yZV9ob3VycxgBIAEoASL3BQoIUnVubmFibGUSQwoJY29udGFpbmVy",
-            "GAEgASgLMi4uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUu",
-            "Q29udGFpbmVySAASPQoGc2NyaXB0GAIgASgLMisuZ29vZ2xlLmNsb3VkLmJh",
-            "dGNoLnYxYWxwaGEuUnVubmFibGUuU2NyaXB0SAASPwoHYmFycmllchgGIAEo",
-            "CzIsLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlJ1bm5hYmxlLkJhcnJp",
-            "ZXJIABIaChJpZ25vcmVfZXhpdF9zdGF0dXMYAyABKAgSEgoKYmFja2dyb3Vu",
-            "ZBgEIAEoCBISCgphbHdheXNfcnVuGAUgASgIEjwKC2Vudmlyb25tZW50GAcg",
-            "ASgLMicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQS",
-            "KgoHdGltZW91dBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJA",
-            "CgZsYWJlbHMYCSADKAsyMC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5S",
-            "dW5uYWJsZS5MYWJlbHNFbnRyeRqqAQoJQ29udGFpbmVyEhEKCWltYWdlX3Vy",
-            "aRgBIAEoCRIQCghjb21tYW5kcxgCIAMoCRISCgplbnRyeXBvaW50GAMgASgJ",
-            "Eg8KB3ZvbHVtZXMYByADKAkSDwoHb3B0aW9ucxgIIAEoCRIeChZibG9ja19l",
-            "eHRlcm5hbF9uZXR3b3JrGAkgASgIEhAKCHVzZXJuYW1lGAogASgJEhAKCHBh",
-            "c3N3b3JkGAsgASgJGjMKBlNjcmlwdBIOCgRwYXRoGAEgASgJSAASDgoEdGV4",
-            "dBgCIAEoCUgAQgkKB2NvbW1hbmQaFwoHQmFycmllchIMCgRuYW1lGAEgASgJ",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAFCDAoKZXhlY3V0YWJsZSKbBAoIVGFza1NwZWMSNwoJcnVubmFibGVzGAgg",
-            "AygLMiQuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUSRQoQ",
-            "Y29tcHV0ZV9yZXNvdXJjZRgDIAEoCzIrLmdvb2dsZS5jbG91ZC5iYXRjaC52",
-            "MWFscGhhLkNvbXB1dGVSZXNvdXJjZRIzChBtYXhfcnVuX2R1cmF0aW9uGAQg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD21heF9yZXRyeV9j",
-            "b3VudBgFIAEoBRJHChJsaWZlY3ljbGVfcG9saWNpZXMYCSADKAsyKy5nb29n",
-            "bGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5MaWZlY3ljbGVQb2xpY3kSUAoMZW52",
-            "aXJvbm1lbnRzGAYgAygLMjYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEu",
-            "VGFza1NwZWMuRW52aXJvbm1lbnRzRW50cnlCAhgBEjMKB3ZvbHVtZXMYByAD",
-            "KAsyIi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5Wb2x1bWUSPAoLZW52",
-            "aXJvbm1lbnQYCiABKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5F",
-            "bnZpcm9ubWVudBozChFFbnZpcm9ubWVudHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIpQCCg9MaWZlY3ljbGVQb2xpY3kSQgoGYWN0",
-            "aW9uGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlmZWN5",
-            "Y2xlUG9saWN5LkFjdGlvbhJVChBhY3Rpb25fY29uZGl0aW9uGAIgASgLMjsu",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlmZWN5Y2xlUG9saWN5LkFj",
-            "dGlvbkNvbmRpdGlvbholCg9BY3Rpb25Db25kaXRpb24SEgoKZXhpdF9jb2Rl",
-            "cxgBIAMoBSI/CgZBY3Rpb24SFgoSQUNUSU9OX1VOU1BFQ0lGSUVEEAASDgoK",
-            "UkVUUllfVEFTSxABEg0KCUZBSUxfVEFTSxACIsUBCgRUYXNrEgwKBG5hbWUY",
-            "ASABKAkSNgoGc3RhdHVzGAIgASgLMiYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYx",
-            "YWxwaGEuVGFza1N0YXR1czp36kF0ChliYXRjaC5nb29nbGVhcGlzLmNvbS9U",
-            "YXNrEldwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "am9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfS90YXNrcy97dGFz",
-            "a30ingMKC0Vudmlyb25tZW50EkkKCXZhcmlhYmxlcxgBIAMoCzI2Lmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLkVudmlyb25tZW50LlZhcmlhYmxlc0Vu",
-            "dHJ5ElYKEHNlY3JldF92YXJpYWJsZXMYAiADKAsyPC5nb29nbGUuY2xvdWQu",
-            "YmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudC5TZWNyZXRWYXJpYWJsZXNFbnRy",
-            "eRJOChNlbmNyeXB0ZWRfdmFyaWFibGVzGAMgASgLMjEuZ29vZ2xlLmNsb3Vk",
-            "LmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQuS01TRW52TWFwGjIKCUtNU0Vu",
-            "dk1hcBIQCghrZXlfbmFtZRgBIAEoCRITCgtjaXBoZXJfdGV4dBgCIAEoCRow",
-            "Cg5WYXJpYWJsZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBGjYKFFNlY3JldFZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAFCwwEKHmNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
-            "bHBoYUIJVGFza1Byb3RvUAFaNGNsb3VkLmdvb2dsZS5jb20vZ28vYmF0Y2gv",
-            "YXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhpHb29nbGUuQ2xv",
-            "dWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91ZFxCYXRjaFxWMWFscGhh",
-            "6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxwaGFiBnByb3RvMw=="));
+            "bGUuY2xvdWQuYmF0Y2gudjFhbHBoYRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxonZ29vZ2xl",
+            "L2Nsb3VkL2JhdGNoL3YxYWxwaGEvdm9sdW1lLnByb3RvGh5nb29nbGUvcHJv",
+            "dG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8iYgoPQ29tcHV0ZVJlc291cmNlEhEKCWNwdV9taWxsaRgBIAEo",
+            "AxISCgptZW1vcnlfbWliGAIgASgDEhEKCWdwdV9jb3VudBgDIAEoAxIVCg1i",
+            "b290X2Rpc2tfbWliGAQgASgDIuUBCgtTdGF0dXNFdmVudBIMCgR0eXBlGAMg",
+            "ASgJEhMKC2Rlc2NyaXB0aW9uGAEgASgJEi4KCmV2ZW50X3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKDnRhc2tfZXhlY3V0aW9u",
+            "GAQgASgLMikuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza0V4ZWN1",
+            "dGlvbhJACgp0YXNrX3N0YXRlGAUgASgOMiwuZ29vZ2xlLmNsb3VkLmJhdGNo",
+            "LnYxYWxwaGEuVGFza1N0YXR1cy5TdGF0ZSI/Cg1UYXNrRXhlY3V0aW9uEhEK",
+            "CWV4aXRfY29kZRgBIAEoBRIbCg5zdGRlcnJfc25pcHBldBgCIAEoCUID4EEB",
+            "IsMCCgpUYXNrU3RhdHVzEjsKBXN0YXRlGAEgASgOMiwuZ29vZ2xlLmNsb3Vk",
+            "LmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5TdGF0ZRI+Cg1zdGF0dXNfZXZl",
+            "bnRzGAIgAygLMicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuU3RhdHVz",
+            "RXZlbnQSRQoOcmVzb3VyY2VfdXNhZ2UYAyABKAsyLS5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjFhbHBoYS5UYXNrUmVzb3VyY2VVc2FnZSJxCgVTdGF0ZRIVChFT",
+            "VEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIMCghBU1NJR05FRBAC",
+            "EgsKB1JVTk5JTkcQAxIKCgZGQUlMRUQQBBINCglTVUNDRUVERUQQBRIOCgpV",
+            "TkVYRUNVVEVEEAYiJwoRVGFza1Jlc291cmNlVXNhZ2USEgoKY29yZV9ob3Vy",
+            "cxgBIAEoASK3BgoIUnVubmFibGUSQwoJY29udGFpbmVyGAEgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUuQ29udGFpbmVySAAS",
+            "PQoGc2NyaXB0GAIgASgLMisuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEu",
+            "UnVubmFibGUuU2NyaXB0SAASPwoHYmFycmllchgGIAEoCzIsLmdvb2dsZS5j",
+            "bG91ZC5iYXRjaC52MWFscGhhLlJ1bm5hYmxlLkJhcnJpZXJIABIZCgxkaXNw",
+            "bGF5X25hbWUYCiABKAlCA+BBARIaChJpZ25vcmVfZXhpdF9zdGF0dXMYAyAB",
+            "KAgSEgoKYmFja2dyb3VuZBgEIAEoCBISCgphbHdheXNfcnVuGAUgASgIEjwK",
+            "C2Vudmlyb25tZW50GAcgASgLMicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
+            "aGEuRW52aXJvbm1lbnQSKgoHdGltZW91dBgIIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhJACgZsYWJlbHMYCSADKAsyMC5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjFhbHBoYS5SdW5uYWJsZS5MYWJlbHNFbnRyeRrPAQoJQ29udGFp",
+            "bmVyEhEKCWltYWdlX3VyaRgBIAEoCRIQCghjb21tYW5kcxgCIAMoCRISCgpl",
+            "bnRyeXBvaW50GAMgASgJEg8KB3ZvbHVtZXMYByADKAkSDwoHb3B0aW9ucxgI",
+            "IAEoCRIeChZibG9ja19leHRlcm5hbF9uZXR3b3JrGAkgASgIEhAKCHVzZXJu",
+            "YW1lGAogASgJEhAKCHBhc3N3b3JkGAsgASgJEiMKFmVuYWJsZV9pbWFnZV9z",
+            "dHJlYW1pbmcYDCABKAhCA+BBARozCgZTY3JpcHQSDgoEcGF0aBgBIAEoCUgA",
+            "Eg4KBHRleHQYAiABKAlIAEIJCgdjb21tYW5kGhcKB0JhcnJpZXISDAoEbmFt",
+            "ZRgBIAEoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBQgwKCmV4ZWN1dGFibGUimwQKCFRhc2tTcGVjEjcKCXJ1bm5h",
+            "YmxlcxgIIAMoCzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlJ1bm5h",
+            "YmxlEkUKEGNvbXB1dGVfcmVzb3VyY2UYAyABKAsyKy5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjFhbHBoYS5Db21wdXRlUmVzb3VyY2USMwoQbWF4X3J1bl9kdXJh",
+            "dGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9tYXhf",
+            "cmV0cnlfY291bnQYBSABKAUSRwoSbGlmZWN5Y2xlX3BvbGljaWVzGAkgAygL",
+            "MisuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlmZWN5Y2xlUG9saWN5",
+            "ElAKDGVudmlyb25tZW50cxgGIAMoCzI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52",
+            "MWFscGhhLlRhc2tTcGVjLkVudmlyb25tZW50c0VudHJ5QgIYARIzCgd2b2x1",
+            "bWVzGAcgAygLMiIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVm9sdW1l",
+            "EjwKC2Vudmlyb25tZW50GAogASgLMicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYx",
+            "YWxwaGEuRW52aXJvbm1lbnQaMwoRRW52aXJvbm1lbnRzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKUAgoPTGlmZWN5Y2xlUG9saWN5",
+            "EkIKBmFjdGlvbhgBIAEoDjIyLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
+            "LkxpZmVjeWNsZVBvbGljeS5BY3Rpb24SVQoQYWN0aW9uX2NvbmRpdGlvbhgC",
+            "IAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkxpZmVjeWNsZVBv",
+            "bGljeS5BY3Rpb25Db25kaXRpb24aJQoPQWN0aW9uQ29uZGl0aW9uEhIKCmV4",
+            "aXRfY29kZXMYASADKAUiPwoGQWN0aW9uEhYKEkFDVElPTl9VTlNQRUNJRklF",
+            "RBAAEg4KClJFVFJZX1RBU0sQARINCglGQUlMX1RBU0sQAiLFAQoEVGFzaxIM",
+            "CgRuYW1lGAEgASgJEjYKBnN0YXR1cxgCIAEoCzImLmdvb2dsZS5jbG91ZC5i",
+            "YXRjaC52MWFscGhhLlRhc2tTdGF0dXM6d+pBdAoZYmF0Y2guZ29vZ2xlYXBp",
+            "cy5jb20vVGFzaxJXcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2pvYnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91cH0vdGFz",
+            "a3Mve3Rhc2t9Ip4DCgtFbnZpcm9ubWVudBJJCgl2YXJpYWJsZXMYASADKAsy",
+            "Ni5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudC5WYXJp",
+            "YWJsZXNFbnRyeRJWChBzZWNyZXRfdmFyaWFibGVzGAIgAygLMjwuZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQuU2VjcmV0VmFyaWFi",
+            "bGVzRW50cnkSTgoTZW5jcnlwdGVkX3ZhcmlhYmxlcxgDIAEoCzIxLmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLkVudmlyb25tZW50LktNU0Vudk1hcBoy",
+            "CglLTVNFbnZNYXASEAoIa2V5X25hbWUYASABKAkSEwoLY2lwaGVyX3RleHQY",
+            "AiABKAkaMAoOVmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ARo2ChRTZWNyZXRWYXJpYWJsZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQsMBCh5jb20uZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxYWxwaGFCCVRhc2tQcm90b1ABWjRjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2JhdGNoL2FwaXYxYWxwaGEvYmF0Y2hwYjtiYXRjaHBiogIDR0NCqgIaR29v",
+            "Z2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpHb29nbGVcQ2xvdWRcQmF0Y2hc",
+            "VjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpWMWFscGhhYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ComputeResource), global::Google.Cloud.Batch.V1Alpha.ComputeResource.Parser, new[]{ "CpuMilli", "MemoryMib", "GpuCount", "BootDiskMib" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.StatusEvent), global::Google.Cloud.Batch.V1Alpha.StatusEvent.Parser, new[]{ "Type", "Description", "EventTime", "TaskExecution", "TaskState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskExecution), global::Google.Cloud.Batch.V1Alpha.TaskExecution.Parser, new[]{ "ExitCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskExecution), global::Google.Cloud.Batch.V1Alpha.TaskExecution.Parser, new[]{ "ExitCode", "StderrSnippet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus), global::Google.Cloud.Batch.V1Alpha.TaskStatus.Parser, new[]{ "State", "StatusEvents", "ResourceUsage" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage), global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage.Parser, new[]{ "CoreHours" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable), global::Google.Cloud.Batch.V1Alpha.Runnable.Parser, new[]{ "Container", "Script", "Barrier", "IgnoreExitStatus", "Background", "AlwaysRun", "Environment", "Timeout", "Labels" }, new[]{ "Executable" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container.Parser, new[]{ "ImageUri", "Commands", "Entrypoint", "Volumes", "Options", "BlockExternalNetwork", "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable), global::Google.Cloud.Batch.V1Alpha.Runnable.Parser, new[]{ "Container", "Script", "Barrier", "DisplayName", "IgnoreExitStatus", "Background", "AlwaysRun", "Environment", "Timeout", "Labels" }, new[]{ "Executable" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container.Parser, new[]{ "ImageUri", "Commands", "Entrypoint", "Volumes", "Options", "BlockExternalNetwork", "Username", "Password", "EnableImageStreaming" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Script), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Script.Parser, new[]{ "Path", "Text" }, new[]{ "Command" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Barrier), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Barrier.Parser, new[]{ "Name" }, null, null, null, null),
             null, }),
@@ -122,8 +126,15 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
   #region Messages
   /// <summary>
-  /// Compute resource requirements
+  /// Compute resource requirements.
+  ///
+  /// ComputeResource defines the amount of resources required for each task.
+  /// Make sure your tasks have enough resources to successfully run.
+  /// If you also define the types of resources for a job to use with the
+  /// [InstancePolicyOrTemplate](https://cloud.google.com/batch/docs/reference/rest/v1/projects.locations.jobs#instancepolicyortemplate)
+  /// field, make sure both fields are compatible with each other.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComputeResource : pb::IMessage<ComputeResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -176,6 +187,23 @@ namespace Google.Cloud.Batch.V1Alpha {
     private long cpuMilli_;
     /// <summary>
     /// The milliCPU count.
+    ///
+    /// `cpuMilli` defines the amount of CPU resources per task in milliCPU units.
+    /// For example, `1000` corresponds to 1 vCPU per task. If undefined, the
+    /// default value is `2000`.
+    ///
+    /// If you also define the VM's machine type using the `machineType` in
+    /// [InstancePolicy](https://cloud.google.com/batch/docs/reference/rest/v1/projects.locations.jobs#instancepolicy)
+    /// field or inside the `instanceTemplate` in the
+    /// [InstancePolicyOrTemplate](https://cloud.google.com/batch/docs/reference/rest/v1/projects.locations.jobs#instancepolicyortemplate)
+    /// field, make sure the CPU resources for both fields are compatible with each
+    /// other and with how many tasks you want to allow to run on the same VM at
+    /// the same time.
+    ///
+    /// For example, if you specify the `n2-standard-2` machine type, which has 2
+    /// vCPUs each, you are recommended to set `cpuMilli` no more than `2000`, or
+    /// you are recommended to run two tasks on the same VM if you set `cpuMilli`
+    /// to `1000` or less.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,6 +219,21 @@ namespace Google.Cloud.Batch.V1Alpha {
     private long memoryMib_;
     /// <summary>
     /// Memory in MiB.
+    ///
+    /// `memoryMib` defines the amount of memory per task in MiB units.
+    /// If undefined, the default value is `2000`.
+    /// If you also define the VM's machine type using the `machineType` in
+    /// [InstancePolicy](https://cloud.google.com/batch/docs/reference/rest/v1/projects.locations.jobs#instancepolicy)
+    /// field or inside the `instanceTemplate` in the
+    /// [InstancePolicyOrTemplate](https://cloud.google.com/batch/docs/reference/rest/v1/projects.locations.jobs#instancepolicyortemplate)
+    /// field, make sure the memory resources for both fields are compatible with
+    /// each other and with how many tasks you want to allow to run on the same VM
+    /// at the same time.
+    ///
+    /// For example, if you specify the `n2-standard-2` machine type, which has 8
+    /// GiB each, you are recommended to set `memoryMib` to no more than `8192`,
+    /// or you are recommended to run two tasks on the same VM if you set
+    /// `memoryMib` to `4096` or less.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -439,8 +482,9 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// Status event
+  /// Status event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StatusEvent : pb::IMessage<StatusEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -538,7 +582,9 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int TaskExecutionFieldNumber = 4;
     private global::Google.Cloud.Batch.V1Alpha.TaskExecution taskExecution_;
     /// <summary>
-    /// Task Execution
+    /// Task Execution.
+    /// This field is only defined for task-level status events where the task
+    /// fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -553,7 +599,8 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int TaskStateFieldNumber = 5;
     private global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State taskState_ = global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified;
     /// <summary>
-    /// Task State
+    /// Task State.
+    /// This field is only defined for task-level status events.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -815,6 +862,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// This Task Execution field includes detail information for
   /// task execution procedures, based on StatusEvent types.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskExecution : pb::IMessage<TaskExecution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -850,6 +898,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TaskExecution(TaskExecution other) : this() {
       exitCode_ = other.exitCode_;
+      stderrSnippet_ = other.stderrSnippet_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -863,8 +912,17 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int ExitCodeFieldNumber = 1;
     private int exitCode_;
     /// <summary>
-    /// When task is completed as the status of FAILED or SUCCEEDED,
-    /// exit code is for one task execution result, default is 0 as success.
+    /// The exit code of a finished task.
+    ///
+    /// If the task succeeded, the exit code will be 0. If the task failed but not
+    /// due to the following reasons, the exit code will be 50000.
+    ///
+    /// Otherwise, it can be from different sources:
+    /// * Batch known failures:
+    /// https://cloud.google.com/batch/docs/troubleshooting#reserved-exit-codes.
+    /// * Batch runnable execution failures; you can rely on Batch logs to further
+    /// diagnose: https://cloud.google.com/batch/docs/analyze-job-using-logs. If
+    /// there are multiple runnables failures, Batch only exposes the first error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -872,6 +930,22 @@ namespace Google.Cloud.Batch.V1Alpha {
       get { return exitCode_; }
       set {
         exitCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stderr_snippet" field.</summary>
+    public const int StderrSnippetFieldNumber = 2;
+    private string stderrSnippet_ = "";
+    /// <summary>
+    /// Optional. The tail end of any content written to standard error by the task
+    /// execution. This field will be populated only when the execution failed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StderrSnippet {
+      get { return stderrSnippet_; }
+      set {
+        stderrSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -891,6 +965,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         return true;
       }
       if (ExitCode != other.ExitCode) return false;
+      if (StderrSnippet != other.StderrSnippet) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -899,6 +974,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public override int GetHashCode() {
       int hash = 1;
       if (ExitCode != 0) hash ^= ExitCode.GetHashCode();
+      if (StderrSnippet.Length != 0) hash ^= StderrSnippet.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -921,6 +997,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(8);
         output.WriteInt32(ExitCode);
       }
+      if (StderrSnippet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StderrSnippet);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -935,6 +1015,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(8);
         output.WriteInt32(ExitCode);
       }
+      if (StderrSnippet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StderrSnippet);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -947,6 +1031,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       int size = 0;
       if (ExitCode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExitCode);
+      }
+      if (StderrSnippet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StderrSnippet);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -962,6 +1049,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (other.ExitCode != 0) {
         ExitCode = other.ExitCode;
+      }
+      if (other.StderrSnippet.Length != 0) {
+        StderrSnippet = other.StderrSnippet;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -980,6 +1070,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             break;
           case 8: {
             ExitCode = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            StderrSnippet = input.ReadString();
             break;
           }
         }
@@ -1001,6 +1095,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             ExitCode = input.ReadInt32();
             break;
           }
+          case 18: {
+            StderrSnippet = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1009,8 +1107,9 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// Status of a task
+  /// Status of a task.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskStatus : pb::IMessage<TaskStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1061,7 +1160,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State state_ = global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified;
     /// <summary>
-    /// Task state
+    /// Task state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1289,7 +1388,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       /// </summary>
       public enum State {
         /// <summary>
-        /// unknown state
+        /// Unknown state.
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1312,6 +1411,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// The Task has succeeded.
         /// </summary>
         [pbr::OriginalName("SUCCEEDED")] Succeeded = 5,
+        /// <summary>
+        /// The Task has not been executed when the Job finishes.
+        /// </summary>
+        [pbr::OriginalName("UNEXECUTED")] Unexecuted = 6,
       }
 
     }
@@ -1322,6 +1425,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// <summary>
   /// TaskResourceUsage describes the resource usage of the task.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskResourceUsage : pb::IMessage<TaskResourceUsage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1519,6 +1623,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// Runnable describes instructions for executing a specific script or container
   /// as part of a Task.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Runnable : pb::IMessage<Runnable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1553,6 +1658,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Runnable(Runnable other) : this() {
+      displayName_ = other.displayName_;
       ignoreExitStatus_ = other.ignoreExitStatus_;
       background_ = other.background_;
       alwaysRun_ = other.alwaysRun_;
@@ -1625,12 +1731,32 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 10;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. DisplayName is an optional field that can be provided by the
+    /// caller. If provided, it will be used in logs and other outputs to identify
+    /// the script, making it easier for users to understand the logs. If not
+    /// provided the index of the runnable will be used for outputs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "ignore_exit_status" field.</summary>
     public const int IgnoreExitStatusFieldNumber = 3;
     private bool ignoreExitStatus_;
     /// <summary>
-    /// Normally, a non-zero exit status causes the Task to fail. This flag allows
-    /// execution of other Runnables to continue instead.
+    /// Normally, a runnable that returns a non-zero exit status fails and causes
+    /// the task to fail. However, you can set this field to `true` to allow the
+    /// task to continue executing its other runnables even if this runnable
+    /// fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1645,9 +1771,18 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int BackgroundFieldNumber = 4;
     private bool background_;
     /// <summary>
-    /// This flag allows a Runnable to continue running in the background while the
-    /// Task executes subsequent Runnables. This is useful to provide services to
-    /// other Runnables (or to provide debugging support tools like SSH servers).
+    /// Normally, a runnable that doesn't exit causes its task to fail. However,
+    /// you can set this field to `true` to configure a background runnable.
+    /// Background runnables are allowed continue running in the background while
+    /// the task executes subsequent runnables. For example, background runnables
+    /// are useful for providing services to other runnables or providing
+    /// debugging-support tools like SSH servers.
+    ///
+    /// Specifically, background runnables are killed automatically (if they have
+    /// not already exited) a short time after all foreground runnables have
+    /// completed. Even though this is likely to result in a non-zero exit status
+    /// for the background runnable, these automatic kills are not treated as task
+    /// failures.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1765,6 +1900,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (!object.Equals(Container, other.Container)) return false;
       if (!object.Equals(Script, other.Script)) return false;
       if (!object.Equals(Barrier, other.Barrier)) return false;
+      if (DisplayName != other.DisplayName) return false;
       if (IgnoreExitStatus != other.IgnoreExitStatus) return false;
       if (Background != other.Background) return false;
       if (AlwaysRun != other.AlwaysRun) return false;
@@ -1782,6 +1918,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (executableCase_ == ExecutableOneofCase.Container) hash ^= Container.GetHashCode();
       if (executableCase_ == ExecutableOneofCase.Script) hash ^= Script.GetHashCode();
       if (executableCase_ == ExecutableOneofCase.Barrier) hash ^= Barrier.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (IgnoreExitStatus != false) hash ^= IgnoreExitStatus.GetHashCode();
       if (Background != false) hash ^= Background.GetHashCode();
       if (AlwaysRun != false) hash ^= AlwaysRun.GetHashCode();
@@ -1840,6 +1977,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteMessage(Timeout);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1883,6 +2024,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteMessage(Timeout);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1901,6 +2046,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (executableCase_ == ExecutableOneofCase.Barrier) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Barrier);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (IgnoreExitStatus != false) {
         size += 1 + 1;
@@ -1930,6 +2078,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (other == null) {
         return;
       }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
       if (other.IgnoreExitStatus != false) {
         IgnoreExitStatus = other.IgnoreExitStatus;
       }
@@ -1951,7 +2102,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         }
         Timeout.MergeFrom(other.Timeout);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ExecutableCase) {
         case ExecutableOneofCase.Container:
           if (Container == null) {
@@ -2045,6 +2196,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2117,6 +2272,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2130,6 +2289,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       /// <summary>
       /// Container runnable.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Container : pb::IMessage<Container>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2172,6 +2332,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           blockExternalNetwork_ = other.blockExternalNetwork_;
           username_ = other.username_;
           password_ = other.password_;
+          enableImageStreaming_ = other.enableImageStreaming_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2185,7 +2346,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int ImageUriFieldNumber = 1;
         private string imageUri_ = "";
         /// <summary>
-        /// The URI to pull the container image from.
+        /// Required. The URI to pull the container image from.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2202,9 +2363,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> commands_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Overrides the `CMD` specified in the container. If there is an ENTRYPOINT
-        /// (either in the container image or with the entrypoint field below) then
-        /// commands are appended as arguments to the ENTRYPOINT.
+        /// Required for some container images. Overrides the `CMD` specified in the
+        /// container. If there is an `ENTRYPOINT` (either in the container image or
+        /// with the `entrypoint` field below) then these commands are appended as
+        /// arguments to the `ENTRYPOINT`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2216,7 +2378,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int EntrypointFieldNumber = 3;
         private string entrypoint_ = "";
         /// <summary>
-        /// Overrides the `ENTRYPOINT` specified in the container.
+        /// Required for some container images. Overrides the `ENTRYPOINT` specified
+        /// in the container.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2234,8 +2397,16 @@ namespace Google.Cloud.Batch.V1Alpha {
         private readonly pbc::RepeatedField<string> volumes_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Volumes to mount (bind mount) from the host machine files or directories
-        /// into the container, formatted to match docker run's --volume option,
-        /// e.g. /foo:/bar, or /foo:/bar:ro
+        /// into the container, formatted to match `--volume` option for the
+        /// `docker run` command&amp;mdash;for example, `/foo:/bar` or `/foo:/bar:ro`.
+        ///
+        /// If the `TaskSpec.Volumes` field is specified but this field is not, Batch
+        /// will mount each volume from the host machine to the container with the
+        /// same mount path by default. In this case, the default mount option for
+        /// containers will be read-only (`ro`) for existing persistent disks and
+        /// read-write (`rw`) for other volume types, regardless of the original
+        /// mount options specified in `TaskSpec.Volumes`. If you need different
+        /// mount settings, you can explicitly configure them in this field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2247,8 +2418,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int OptionsFieldNumber = 8;
         private string options_ = "";
         /// <summary>
-        /// Arbitrary additional options to include in the "docker run" command when
-        /// running this container, e.g. "--network host".
+        /// Required for some container images. Arbitrary additional options to
+        /// include in the `docker run` command when running this container&amp;mdash;for
+        /// example, `--network host`. For the `--volume` option, use the `volumes`
+        /// field for the container.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2264,8 +2437,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         private bool blockExternalNetwork_;
         /// <summary>
         /// If set to true, external network access to and from container will be
-        /// blocked. The container will use the default internal network
-        /// 'goog-internal'.
+        /// blocked, containers that are with block_external_network as true can
+        /// still communicate with each other, network cannot be specified in the
+        /// `container.options` field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2280,9 +2454,22 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int UsernameFieldNumber = 10;
         private string username_ = "";
         /// <summary>
-        /// Optional username for logging in to a docker registry. If username
-        /// matches `projects/*/secrets/*/versions/*` then Batch will read the
-        /// username from the Secret Manager.
+        /// Required if the container image is from a private Docker registry. The
+        /// username to login to the Docker registry that contains the image.
+        ///
+        /// You can either specify the username directly by using plain text or
+        /// specify an encrypted username by using a Secret Manager secret:
+        /// `projects/*/secrets/*/versions/*`. However, using a secret is
+        /// recommended for enhanced security.
+        ///
+        /// Caution: If you specify the username using plain text, you risk the
+        /// username being exposed to any users who can view the job or its logs.
+        /// To avoid this risk, specify a secret that contains the username instead.
+        ///
+        /// Learn more about [Secret
+        /// Manager](https://cloud.google.com/secret-manager/docs/) and [using
+        /// Secret Manager with
+        /// Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2297,9 +2484,21 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int PasswordFieldNumber = 11;
         private string password_ = "";
         /// <summary>
-        /// Optional password for logging in to a docker registry. If password
-        /// matches `projects/*/secrets/*/versions/*` then Batch will read the
-        /// password from the Secret Manager;
+        /// Required if the container image is from a private Docker registry. The
+        /// password to login to the Docker registry that contains the image.
+        ///
+        /// For security, it is strongly recommended to specify an
+        /// encrypted password by using a Secret Manager secret:
+        /// `projects/*/secrets/*/versions/*`.
+        ///
+        /// Warning: If you specify the password using plain text, you risk the
+        /// password being exposed to any users who can view the job or its logs.
+        /// To avoid this risk, specify a secret that contains the password instead.
+        ///
+        /// Learn more about [Secret
+        /// Manager](https://cloud.google.com/secret-manager/docs/) and [using
+        /// Secret Manager with
+        /// Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2307,6 +2506,37 @@ namespace Google.Cloud.Batch.V1Alpha {
           get { return password_; }
           set {
             password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "enable_image_streaming" field.</summary>
+        public const int EnableImageStreamingFieldNumber = 12;
+        private bool enableImageStreaming_;
+        /// <summary>
+        /// Optional. If set to true, this container runnable uses Image streaming.
+        ///
+        /// Use Image streaming to allow the runnable to initialize without
+        /// waiting for the entire container image to download, which can
+        /// significantly reduce startup time for large container images.
+        ///
+        /// When `enableImageStreaming` is set to true, the container
+        /// runtime is [containerd](https://containerd.io/) instead of Docker.
+        /// Additionally, this container runnable only supports the following
+        /// `container` subfields: `imageUri`,
+        /// `commands[]`, `entrypoint`, and
+        /// `volumes[]`; any other `container` subfields are ignored.
+        ///
+        /// For more information about the requirements and limitations for using
+        /// Image streaming with Batch, see the [`image-streaming`
+        /// sample on
+        /// GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-streaming).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableImageStreaming {
+          get { return enableImageStreaming_; }
+          set {
+            enableImageStreaming_ = value;
           }
         }
 
@@ -2333,6 +2563,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (BlockExternalNetwork != other.BlockExternalNetwork) return false;
           if (Username != other.Username) return false;
           if (Password != other.Password) return false;
+          if (EnableImageStreaming != other.EnableImageStreaming) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2348,6 +2579,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (BlockExternalNetwork != false) hash ^= BlockExternalNetwork.GetHashCode();
           if (Username.Length != 0) hash ^= Username.GetHashCode();
           if (Password.Length != 0) hash ^= Password.GetHashCode();
+          if (EnableImageStreaming != false) hash ^= EnableImageStreaming.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2392,6 +2624,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(90);
             output.WriteString(Password);
           }
+          if (EnableImageStreaming != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(EnableImageStreaming);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2428,6 +2664,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(90);
             output.WriteString(Password);
           }
+          if (EnableImageStreaming != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(EnableImageStreaming);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2457,6 +2697,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (Password.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+          }
+          if (EnableImageStreaming != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2489,6 +2732,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (other.Password.Length != 0) {
             Password = other.Password;
+          }
+          if (other.EnableImageStreaming != false) {
+            EnableImageStreaming = other.EnableImageStreaming;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2535,6 +2781,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 90: {
                 Password = input.ReadString();
+                break;
+              }
+              case 96: {
+                EnableImageStreaming = input.ReadBool();
                 break;
               }
             }
@@ -2584,6 +2834,10 @@ namespace Google.Cloud.Batch.V1Alpha {
                 Password = input.ReadString();
                 break;
               }
+              case 96: {
+                EnableImageStreaming = input.ReadBool();
+                break;
+              }
             }
           }
         }
@@ -2594,6 +2848,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       /// <summary>
       /// Script runnable.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Script : pb::IMessage<Script>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2649,44 +2904,74 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "path" field.</summary>
         public const int PathFieldNumber = 1;
         /// <summary>
-        /// Script file path on the host VM.
+        /// The path to a script file that is accessible from the host VM(s).
         ///
-        /// To specify an interpreter, please add a `#!&lt;interpreter>`(also known as
-        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
-        /// first line of the file.(For example, to execute the script using bash,
-        /// `#!/bin/bash` should be the first line of the file. To execute the
-        /// script using`Python3`, `#!/usr/bin/env python3` should be the first
-        /// line of the file.) Otherwise, the file will by default be excuted by
-        /// `/bin/sh`.
+        /// Unless the script file supports the default `#!/bin/sh` shell
+        /// interpreter, you must specify an interpreter by including a
+        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) as the
+        /// first line of the file. For example, to execute the script using bash,
+        /// include `#!/bin/bash` as the first line of the file. Alternatively,
+        /// to execute the script using Python3, include `#!/usr/bin/env python3`
+        /// as the first line of the file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Path {
-          get { return commandCase_ == CommandOneofCase.Path ? (string) command_ : ""; }
+          get { return HasPath ? (string) command_ : ""; }
           set {
             command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             commandCase_ = CommandOneofCase.Path;
+          }
+        }
+        /// <summary>Gets whether the "path" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPath {
+          get { return commandCase_ == CommandOneofCase.Path; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "path" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPath() {
+          if (HasPath) {
+            ClearCommand();
           }
         }
 
         /// <summary>Field number for the "text" field.</summary>
         public const int TextFieldNumber = 2;
         /// <summary>
-        /// Shell script text.
+        /// The text for a script.
         ///
-        /// To specify an interpreter, please add a `#!&lt;interpreter>\n` at the
-        /// beginning of the text.(For example, to execute the script using bash,
-        /// `#!/bin/bash\n` should be added. To execute the script using`Python3`,
-        /// `#!/usr/bin/env python3\n` should be added.) Otherwise, the script will
-        /// by default be excuted by `/bin/sh`.
+        /// Unless the script text supports the default `#!/bin/sh` shell
+        /// interpreter, you must specify an interpreter by including a
+        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) at the
+        /// beginning of the text. For example, to execute the script using bash,
+        /// include `#!/bin/bash\n` at the beginning of the text. Alternatively,
+        /// to execute the script using Python3, include `#!/usr/bin/env python3\n`
+        /// at the beginning of the text.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Text {
-          get { return commandCase_ == CommandOneofCase.Text ? (string) command_ : ""; }
+          get { return HasText ? (string) command_ : ""; }
           set {
             command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             commandCase_ = CommandOneofCase.Text;
+          }
+        }
+        /// <summary>Gets whether the "text" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasText {
+          get { return commandCase_ == CommandOneofCase.Text; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearText() {
+          if (HasText) {
+            ClearCommand();
           }
         }
 
@@ -2736,8 +3021,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (commandCase_ == CommandOneofCase.Path) hash ^= Path.GetHashCode();
-          if (commandCase_ == CommandOneofCase.Text) hash ^= Text.GetHashCode();
+          if (HasPath) hash ^= Path.GetHashCode();
+          if (HasText) hash ^= Text.GetHashCode();
           hash ^= (int) commandCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2757,11 +3042,11 @@ namespace Google.Cloud.Batch.V1Alpha {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             output.WriteRawTag(10);
             output.WriteString(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(18);
             output.WriteString(Text);
           }
@@ -2775,11 +3060,11 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             output.WriteRawTag(10);
             output.WriteString(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(18);
             output.WriteString(Text);
           }
@@ -2793,10 +3078,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
           if (_unknownFields != null) {
@@ -2874,8 +3159,10 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// Barrier runnable blocks until all tasks in a taskgroup reach it.
+      /// A barrier runnable automatically blocks the execution of subsequent
+      /// runnables until all the tasks in the task group reach the barrier.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Barrier : pb::IMessage<Barrier>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3077,6 +3364,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// <summary>
   /// Spec of a task
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskSpec : pb::IMessage<TaskSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3134,16 +3422,16 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Batch.V1Alpha.Runnable.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.Runnable> runnables_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.Runnable>();
     /// <summary>
-    /// The sequence of scripts or containers to run for this Task. Each Task using
-    /// this TaskSpec executes its list of runnables in order. The Task succeeds if
-    /// all of its runnables either exit with a zero status or any that exit with a
-    /// non-zero status have the ignore_exit_status flag.
+    /// Required. The sequence of one or more runnables (executable scripts,
+    /// executable containers, and/or barriers) for each task in this task group to
+    /// run. Each task runs this list of runnables in order. For a task to succeed,
+    /// all of its script and container runnables each must meet at least one of
+    /// the following conditions:
     ///
-    /// Background runnables are killed automatically (if they have not already
-    /// exited) a short time after all foreground runnables have completed. Even
-    /// though this is likely to result in a non-zero exit status for the
-    /// background runnable, these automatic kills are not treated as Task
-    /// failures.
+    /// + The runnable exited with a zero status.
+    /// + The runnable didn't finish, but you enabled its `background` subfield.
+    /// + The runnable exited with a non-zero status, but you enabled its
+    ///   `ignore_exit_status` subfield.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3170,8 +3458,15 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int MaxRunDurationFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration maxRunDuration_;
     /// <summary>
-    /// Maximum duration the task should run.
-    /// The task will be killed and marked as FAILED if over this limit.
+    /// Maximum duration the task should run before being automatically retried
+    /// (if enabled) or automatically failed. Format the value of this field
+    /// as a time limit in seconds followed by `s`&amp;mdash;for example, `3600s`
+    /// for 1 hour. The field accepts any value between 0 and the maximum listed
+    /// for the `Duration` field type at
+    /// https://protobuf.dev/reference/protobuf/google.protobuf/#duration; however,
+    /// the actual maximum run time for a job will be limited to the maximum run
+    /// time for a job listed at
+    /// https://cloud.google.com/batch/quotas#max-job-duration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3425,7 +3720,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         MaxRetryCount = other.MaxRetryCount;
       }
       lifecyclePolicies_.Add(other.lifecyclePolicies_);
-      environments_.Add(other.environments_);
+      environments_.MergeFrom(other.environments_);
       volumes_.Add(other.volumes_);
       if (other.environment_ != null) {
         if (environment_ == null) {
@@ -3556,6 +3851,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// LifecyclePolicy describes how to deal with task failures
   /// based on different conditions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LifecyclePolicy : pb::IMessage<LifecyclePolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3825,6 +4121,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       /// <summary>
       /// Conditions for actions to deal with task failures.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ActionCondition : pb::IMessage<ActionCondition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4019,6 +4316,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// <summary>
   /// A Cloud Batch task.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Task : pb::IMessage<Task>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4267,6 +4565,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   /// An Environment describes a collection of environment variables to set when
   /// executing Tasks.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4454,8 +4753,8 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (other == null) {
         return;
       }
-      variables_.Add(other.variables_);
-      secretVariables_.Add(other.secretVariables_);
+      variables_.MergeFrom(other.variables_);
+      secretVariables_.MergeFrom(other.secretVariables_);
       if (other.encryptedVariables_ != null) {
         if (encryptedVariables_ == null) {
           EncryptedVariables = new global::Google.Cloud.Batch.V1Alpha.Environment.Types.KMSEnvMap();
@@ -4532,6 +4831,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class KMSEnvMap : pb::IMessage<KMSEnvMap>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

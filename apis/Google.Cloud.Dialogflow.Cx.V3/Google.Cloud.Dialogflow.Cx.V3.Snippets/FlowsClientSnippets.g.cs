@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Dialogflow.Cx.V3;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -962,6 +963,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 FlowUri = "",
                 ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+                FlowImportStrategy = new FlowImportStrategy(),
             };
             // Make the request
             Operation<ImportFlowResponse, Struct> response = flowsClient.ImportFlow(request);
@@ -997,6 +999,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 FlowUri = "",
                 ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+                FlowImportStrategy = new FlowImportStrategy(),
             };
             // Make the request
             Operation<ImportFlowResponse, Struct> response = await flowsClient.ImportFlowAsync(request);

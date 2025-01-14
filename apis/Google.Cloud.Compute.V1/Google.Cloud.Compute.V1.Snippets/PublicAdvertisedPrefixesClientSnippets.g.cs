@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -27,6 +28,136 @@ namespace Google.Cloud.Compute.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedPublicAdvertisedPrefixesClientSnippets
     {
+        /// <summary>Snippet for Announce</summary>
+        public void AnnounceRequestObject()
+        {
+            // Snippet: Announce(AnnouncePublicAdvertisedPrefixeRequest, CallSettings)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = PublicAdvertisedPrefixesClient.Create();
+            // Initialize request argument(s)
+            AnnouncePublicAdvertisedPrefixeRequest request = new AnnouncePublicAdvertisedPrefixeRequest
+            {
+                RequestId = "",
+                PublicAdvertisedPrefix = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = publicAdvertisedPrefixesClient.Announce(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = publicAdvertisedPrefixesClient.PollOnceAnnounce(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnnounceAsync</summary>
+        public async Task AnnounceRequestObjectAsync()
+        {
+            // Snippet: AnnounceAsync(AnnouncePublicAdvertisedPrefixeRequest, CallSettings)
+            // Additional: AnnounceAsync(AnnouncePublicAdvertisedPrefixeRequest, CancellationToken)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = await PublicAdvertisedPrefixesClient.CreateAsync();
+            // Initialize request argument(s)
+            AnnouncePublicAdvertisedPrefixeRequest request = new AnnouncePublicAdvertisedPrefixeRequest
+            {
+                RequestId = "",
+                PublicAdvertisedPrefix = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.AnnounceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await publicAdvertisedPrefixesClient.PollOnceAnnounceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Announce</summary>
+        public void Announce()
+        {
+            // Snippet: Announce(string, string, CallSettings)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = PublicAdvertisedPrefixesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string publicAdvertisedPrefix = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = publicAdvertisedPrefixesClient.Announce(project, publicAdvertisedPrefix);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = publicAdvertisedPrefixesClient.PollOnceAnnounce(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnnounceAsync</summary>
+        public async Task AnnounceAsync()
+        {
+            // Snippet: AnnounceAsync(string, string, CallSettings)
+            // Additional: AnnounceAsync(string, string, CancellationToken)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = await PublicAdvertisedPrefixesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string publicAdvertisedPrefix = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.AnnounceAsync(project, publicAdvertisedPrefix);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await publicAdvertisedPrefixesClient.PollOnceAnnounceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {
@@ -668,6 +799,136 @@ namespace Google.Cloud.Compute.V1.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await publicAdvertisedPrefixesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Withdraw</summary>
+        public void WithdrawRequestObject()
+        {
+            // Snippet: Withdraw(WithdrawPublicAdvertisedPrefixeRequest, CallSettings)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = PublicAdvertisedPrefixesClient.Create();
+            // Initialize request argument(s)
+            WithdrawPublicAdvertisedPrefixeRequest request = new WithdrawPublicAdvertisedPrefixeRequest
+            {
+                RequestId = "",
+                PublicAdvertisedPrefix = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = publicAdvertisedPrefixesClient.Withdraw(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = publicAdvertisedPrefixesClient.PollOnceWithdraw(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for WithdrawAsync</summary>
+        public async Task WithdrawRequestObjectAsync()
+        {
+            // Snippet: WithdrawAsync(WithdrawPublicAdvertisedPrefixeRequest, CallSettings)
+            // Additional: WithdrawAsync(WithdrawPublicAdvertisedPrefixeRequest, CancellationToken)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = await PublicAdvertisedPrefixesClient.CreateAsync();
+            // Initialize request argument(s)
+            WithdrawPublicAdvertisedPrefixeRequest request = new WithdrawPublicAdvertisedPrefixeRequest
+            {
+                RequestId = "",
+                PublicAdvertisedPrefix = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.WithdrawAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await publicAdvertisedPrefixesClient.PollOnceWithdrawAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Withdraw</summary>
+        public void Withdraw()
+        {
+            // Snippet: Withdraw(string, string, CallSettings)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = PublicAdvertisedPrefixesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string publicAdvertisedPrefix = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = publicAdvertisedPrefixesClient.Withdraw(project, publicAdvertisedPrefix);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = publicAdvertisedPrefixesClient.PollOnceWithdraw(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for WithdrawAsync</summary>
+        public async Task WithdrawAsync()
+        {
+            // Snippet: WithdrawAsync(string, string, CallSettings)
+            // Additional: WithdrawAsync(string, string, CancellationToken)
+            // Create client
+            PublicAdvertisedPrefixesClient publicAdvertisedPrefixesClient = await PublicAdvertisedPrefixesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string publicAdvertisedPrefix = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await publicAdvertisedPrefixesClient.WithdrawAsync(project, publicAdvertisedPrefix);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await publicAdvertisedPrefixesClient.PollOnceWithdrawAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

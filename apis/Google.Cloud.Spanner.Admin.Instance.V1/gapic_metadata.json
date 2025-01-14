@@ -22,6 +22,12 @@
                 "CreateInstanceConfigAsync"
               ]
             },
+            "CreateInstancePartition": {
+              "methods": [
+                "CreateInstancePartition",
+                "CreateInstancePartitionAsync"
+              ]
+            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
@@ -32,6 +38,12 @@
               "methods": [
                 "DeleteInstanceConfig",
                 "DeleteInstanceConfigAsync"
+              ]
+            },
+            "DeleteInstancePartition": {
+              "methods": [
+                "DeleteInstancePartition",
+                "DeleteInstancePartitionAsync"
               ]
             },
             "GetIamPolicy": {
@@ -52,6 +64,12 @@
                 "GetInstanceConfigAsync"
               ]
             },
+            "GetInstancePartition": {
+              "methods": [
+                "GetInstancePartition",
+                "GetInstancePartitionAsync"
+              ]
+            },
             "ListInstanceConfigOperations": {
               "methods": [
                 "ListInstanceConfigOperations",
@@ -64,10 +82,28 @@
                 "ListInstanceConfigsAsync"
               ]
             },
+            "ListInstancePartitionOperations": {
+              "methods": [
+                "ListInstancePartitionOperations",
+                "ListInstancePartitionOperationsAsync"
+              ]
+            },
+            "ListInstancePartitions": {
+              "methods": [
+                "ListInstancePartitions",
+                "ListInstancePartitionsAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "MoveInstance": {
+              "methods": [
+                "MoveInstance",
+                "MoveInstanceAsync"
               ]
             },
             "SetIamPolicy": {
@@ -92,6 +128,12 @@
               "methods": [
                 "UpdateInstanceConfig",
                 "UpdateInstanceConfigAsync"
+              ]
+            },
+            "UpdateInstancePartition": {
+              "methods": [
+                "UpdateInstancePartition",
+                "UpdateInstancePartitionAsync"
               ]
             }
           }

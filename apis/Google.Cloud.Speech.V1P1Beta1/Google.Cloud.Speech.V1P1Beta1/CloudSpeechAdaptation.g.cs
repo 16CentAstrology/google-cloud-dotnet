@@ -66,50 +66,50 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             "aC5nb29nbGVhcGlzLmNvbS9DdXN0b21DbGFzczLSEAoKQWRhcHRhdGlvbhLW",
             "AQoPQ3JlYXRlUGhyYXNlU2V0EjUuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAx",
             "YmV0YTEuQ3JlYXRlUGhyYXNlU2V0UmVxdWVzdBooLmdvb2dsZS5jbG91ZC5z",
-            "cGVlY2gudjFwMWJldGExLlBocmFzZVNldCJigtPkkwI6IjUvdjFwMWJldGEx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcGhyYXNlU2V0czoB",
-            "KtpBH3BhcmVudCxwaHJhc2Vfc2V0LHBocmFzZV9zZXRfaWQSsgEKDEdldFBo",
+            "cGVlY2gudjFwMWJldGExLlBocmFzZVNldCJi2kEfcGFyZW50LHBocmFzZV9z",
+            "ZXQscGhyYXNlX3NldF9pZILT5JMCOiI1L3YxcDFiZXRhMS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L3BocmFzZVNldHM6ASoSsgEKDEdldFBo",
             "cmFzZVNldBIyLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLkdldFBo",
             "cmFzZVNldFJlcXVlc3QaKC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRh",
-            "MS5QaHJhc2VTZXQiRILT5JMCNxI1L3YxcDFiZXRhMS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3BocmFzZVNldHMvKn3aQQRuYW1lEsIBCg1MaXN0",
+            "MS5QaHJhc2VTZXQiRNpBBG5hbWWC0+STAjcSNS92MXAxYmV0YTEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9waHJhc2VTZXRzLyp9EsIBCg1MaXN0",
             "UGhyYXNlU2V0EjMuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuTGlz",
             "dFBocmFzZVNldFJlcXVlc3QaNC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFi",
-            "ZXRhMS5MaXN0UGhyYXNlU2V0UmVzcG9uc2UiRoLT5JMCNxI1L3YxcDFiZXRh",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3BocmFzZVNldHPa",
-            "QQZwYXJlbnQS4QEKD1VwZGF0ZVBocmFzZVNldBI1Lmdvb2dsZS5jbG91ZC5z",
+            "ZXRhMS5MaXN0UGhyYXNlU2V0UmVzcG9uc2UiRtpBBnBhcmVudILT5JMCNxI1",
+            "L3YxcDFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Bo",
+            "cmFzZVNldHMS4QEKD1VwZGF0ZVBocmFzZVNldBI1Lmdvb2dsZS5jbG91ZC5z",
             "cGVlY2gudjFwMWJldGExLlVwZGF0ZVBocmFzZVNldFJlcXVlc3QaKC5nb29n",
-            "bGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5QaHJhc2VTZXQibYLT5JMCTjJA",
-            "L3YxcDFiZXRhMS97cGhyYXNlX3NldC5uYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcGhyYXNlU2V0cy8qfToKcGhyYXNlX3NldNpBFnBocmFzZV9zZXQs",
-            "dXBkYXRlX21hc2sSpgEKD0RlbGV0ZVBocmFzZVNldBI1Lmdvb2dsZS5jbG91",
+            "bGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5QaHJhc2VTZXQibdpBFnBocmFz",
+            "ZV9zZXQsdXBkYXRlX21hc2uC0+STAk4yQC92MXAxYmV0YTEve3BocmFzZV9z",
+            "ZXQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3BocmFzZVNldHMvKn06",
+            "CnBocmFzZV9zZXQSpgEKD0RlbGV0ZVBocmFzZVNldBI1Lmdvb2dsZS5jbG91",
             "ZC5zcGVlY2gudjFwMWJldGExLkRlbGV0ZVBocmFzZVNldFJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiRILT5JMCNyo1L3YxcDFiZXRhMS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3BocmFzZVNldHMvKn3aQQRuYW1l",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiRNpBBG5hbWWC0+STAjcqNS92MXAxYmV0",
+            "YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9waHJhc2VTZXRzLyp9",
             "EuMBChFDcmVhdGVDdXN0b21DbGFzcxI3Lmdvb2dsZS5jbG91ZC5zcGVlY2gu",
             "djFwMWJldGExLkNyZWF0ZUN1c3RvbUNsYXNzUmVxdWVzdBoqLmdvb2dsZS5j",
-            "bG91ZC5zcGVlY2gudjFwMWJldGExLkN1c3RvbUNsYXNzImmC0+STAj0iOC92",
-            "MXAxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jdXN0",
-            "b21DbGFzc2VzOgEq2kEjcGFyZW50LGN1c3RvbV9jbGFzcyxjdXN0b21fY2xh",
-            "c3NfaWQSuwEKDkdldEN1c3RvbUNsYXNzEjQuZ29vZ2xlLmNsb3VkLnNwZWVj",
+            "bG91ZC5zcGVlY2gudjFwMWJldGExLkN1c3RvbUNsYXNzImnaQSNwYXJlbnQs",
+            "Y3VzdG9tX2NsYXNzLGN1c3RvbV9jbGFzc19pZILT5JMCPSI4L3YxcDFiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2N1c3RvbUNsYXNz",
+            "ZXM6ASoSuwEKDkdldEN1c3RvbUNsYXNzEjQuZ29vZ2xlLmNsb3VkLnNwZWVj",
             "aC52MXAxYmV0YTEuR2V0Q3VzdG9tQ2xhc3NSZXF1ZXN0GiouZ29vZ2xlLmNs",
-            "b3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MiR4LT5JMCOhI4L3Yx",
-            "cDFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2N1c3RvbUNs",
-            "YXNzZXMvKn3aQQRuYW1lEtEBChFMaXN0Q3VzdG9tQ2xhc3NlcxI3Lmdvb2ds",
+            "b3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MiR9pBBG5hbWWC0+ST",
+            "AjoSOC92MXAxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
+            "dXN0b21DbGFzc2VzLyp9EtEBChFMaXN0Q3VzdG9tQ2xhc3NlcxI3Lmdvb2ds",
             "ZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLkxpc3RDdXN0b21DbGFzc2VzUmVx",
             "dWVzdBo4Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLkxpc3RDdXN0",
-            "b21DbGFzc2VzUmVzcG9uc2UiSYLT5JMCOhI4L3YxcDFiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2N1c3RvbUNsYXNzZXPaQQZwYXJl",
-            "bnQS8AEKEVVwZGF0ZUN1c3RvbUNsYXNzEjcuZ29vZ2xlLmNsb3VkLnNwZWVj",
+            "b21DbGFzc2VzUmVzcG9uc2UiSdpBBnBhcmVudILT5JMCOhI4L3YxcDFiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2N1c3RvbUNsYXNz",
+            "ZXMS8AEKEVVwZGF0ZUN1c3RvbUNsYXNzEjcuZ29vZ2xlLmNsb3VkLnNwZWVj",
             "aC52MXAxYmV0YTEuVXBkYXRlQ3VzdG9tQ2xhc3NSZXF1ZXN0GiouZ29vZ2xl",
-            "LmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MidoLT5JMCVTJF",
-            "L3YxcDFiZXRhMS97Y3VzdG9tX2NsYXNzLm5hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jdXN0b21DbGFzc2VzLyp9OgxjdXN0b21fY2xhc3PaQRhjdXN0",
-            "b21fY2xhc3MsdXBkYXRlX21hc2sSrQEKEURlbGV0ZUN1c3RvbUNsYXNzEjcu",
+            "LmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MidtpBGGN1c3Rv",
+            "bV9jbGFzcyx1cGRhdGVfbWFza4LT5JMCVTJFL3YxcDFiZXRhMS97Y3VzdG9t",
+            "X2NsYXNzLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jdXN0b21DbGFz",
+            "c2VzLyp9OgxjdXN0b21fY2xhc3MSrQEKEURlbGV0ZUN1c3RvbUNsYXNzEjcu",
             "Z29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuRGVsZXRlQ3VzdG9tQ2xh",
-            "c3NSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkeC0+STAjoqOC92",
-            "MXAxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jdXN0b21D",
-            "bGFzc2VzLyp92kEEbmFtZRpJykEVc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEu",
+            "c3NSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkfaQQRuYW1lgtPk",
+            "kwI6KjgvdjFwMWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "Y3VzdG9tQ2xhc3Nlcy8qfRpJykEVc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEu",
             "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
             "bUKAAQohY29tLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExQhVTcGVl",
             "Y2hBZGFwdGF0aW9uUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGVl",
@@ -139,6 +139,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `CreatePhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePhraseSetRequest : pb::IMessage<CreatePhraseSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -436,6 +437,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `UpdatePhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePhraseSetRequest : pb::IMessage<UpdatePhraseSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -700,6 +702,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `GetPhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPhraseSetRequest : pb::IMessage<GetPhraseSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -903,6 +906,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `ListPhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPhraseSetRequest : pb::IMessage<ListPhraseSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1193,6 +1197,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message returned to the client by the `ListPhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPhraseSetResponse : pb::IMessage<ListPhraseSetResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1418,6 +1423,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `DeletePhraseSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePhraseSetRequest : pb::IMessage<DeletePhraseSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1615,6 +1621,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `CreateCustomClass` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCustomClassRequest : pb::IMessage<CreateCustomClassRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1912,6 +1919,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `UpdateCustomClass` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCustomClassRequest : pb::IMessage<UpdateCustomClassRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2176,6 +2184,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `GetCustomClass` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCustomClassRequest : pb::IMessage<GetCustomClassRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2373,6 +2382,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `ListCustomClasses` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCustomClassesRequest : pb::IMessage<ListCustomClassesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2663,6 +2673,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message returned to the client by the `ListCustomClasses` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCustomClassesResponse : pb::IMessage<ListCustomClassesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2888,6 +2899,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Message sent by the client for the `DeleteCustomClass` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCustomClassRequest : pb::IMessage<DeleteCustomClassRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,0 +1,10 @@
+[
+  {
+    "method": "ListConferenceRecords",
+    "client": "ConferenceRecordsServiceClient",
+    "arguments": {
+      "request": {
+      }
+    }
+  }
+]

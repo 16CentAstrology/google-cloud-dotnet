@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -59,8 +59,12 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
-        private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
-        private bool _disposed = false;
+        private readonly SpannerTransactionCreationOptions _creationOptions;
+        // This value will be true if and only if this transaction was created by RetriableTransaction.
+        private readonly bool _isRetriable = false;
+        private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
+        private int _disposed = 0;
+        private int _commited = 0;
 
         // Flag indicating whether the transaction has executed at least one statement.
         // The TransactionTag may no longer be set once the transaction has executed one
@@ -99,15 +103,16 @@ namespace Google.Cloud.Spanner.Data
         /// </list>
         /// </para>
         /// </remarks>
-        public TransactionMode Mode { get; }
+        public TransactionMode Mode => _creationOptions.TransactionMode;
 
         private readonly PooledSession _session;
 
         private int _commitTimeout;
+        private TimeSpan? _maxCommitDelay;
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
-        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit()"/> 
+        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit()"/>
         /// or <see cref="Rollback"/> and generating an error.
         /// Defaults to the timeout from the connection string. A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
         /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
@@ -117,6 +122,20 @@ namespace Google.Cloud.Spanner.Data
         {
             get => _commitTimeout;
             set => _commitTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
+        }
+
+        /// <summary>
+        /// The maximum amount of time the commit may be delayed server side for batching with other commits.
+        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
+        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
+        /// May be null, in which case commits will continue to be batched as they had been before this configuration
+        /// option was made available to Spanner API consumers.
+        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
+        /// </summary>
+        public TimeSpan? MaxCommitDelay
+        {
+            get => _maxCommitDelay;
+            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
         }
 
         /// <summary>
@@ -133,7 +152,7 @@ namespace Google.Cloud.Spanner.Data
         /// </list>
         /// </para>
         /// </remarks>
-        public TimestampBound TimestampBound { get; }
+        public TimestampBound TimestampBound => _creationOptions.TimestampBound ?? _creationOptions.TransactionId?.TimestampBound;
 
         /// <inheritdoc />
         protected override DbConnection DbConnection => SpannerConnection;
@@ -190,38 +209,43 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerTransaction(
             SpannerConnection connection,
-            TransactionMode mode,
             PooledSession session,
-            TimestampBound timestampBound)
+            SpannerTransactionCreationOptions creationOptions,
+            bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             CommitTimeout = SpannerConnection.Builder.Timeout;
             LogCommitStats = SpannerConnection.LogCommitStats;
-            Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
-            TimestampBound = timestampBound;
+            _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+            _isRetriable = isRetriable;
         }
 
         /// <summary>
-        /// Returns true if this transaction is being used by multiple <see cref="SpannerConnection"/> objects.
-        /// <see cref="SpannerCommand.GetReaderPartitionsAsync"/> will automatically mark the transaction as shared
-        /// because it is expected that you will be distributing the read among several tasks or processes.
+        /// Whether this transaction is detached or not.
+        /// A detached transaction's resources are not pooled, so the transaction may be
+        /// shared across processes for instance, for partitioned reads.
         /// </summary>
-        public bool Shared { get; internal set; }
+        public bool IsDetached => _session.IsDetached;
 
         /// <summary>
         /// Specifies how resources are treated when <see cref="Dispose"/> is called.
-        /// The default behavior of <see cref="DisposeBehavior.ReleaseToPool"/> will cause transactional resources
+        /// Defaults to <see cref="DisposeBehavior.Default"/>. For a pooled transaction, 
+        /// <see cref="DisposeBehavior.Default"/> will cause transactional resources
         /// to be sent back into a shared pool for re-use.
-        /// Shared transactions may only set this value to either <see cref="DisposeBehavior.CloseResources"/> to close
-        /// resources or <see cref="DisposeBehavior.Detach"/> to detach from the resources.
-        /// A shared transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
+        /// For a detached transaction the default behaviour is to do nothing with transactional resources.
+        /// If set to <see cref="DisposeBehavior.CloseResources"/> all transactional resource will be closed.
+        /// A detached transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
         /// to avoid leaks of transactional resources.
         /// </summary>
         public DisposeBehavior DisposeBehavior
         {
             get => _disposeBehavior;
-            set => _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
+            set
+            {
+                CheckNotDisposed();
+                _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
+            }
         }
 
         /// <summary>
@@ -237,7 +261,11 @@ namespace Google.Cloud.Spanner.Data
         /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
         /// and <see cref="SpannerBatchCommand.Add(string, SpannerParameterCollection)"/>.
         /// </summary>
-        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
+        public SpannerBatchCommand CreateBatchDmlCommand()
+        {
+            CheckNotDisposed();
+            return new SpannerBatchCommand(this);
+        }
 
         internal Task<IEnumerable<ByteString>> GetPartitionTokensAsync(
             ReadOrQueryRequest request,
@@ -246,14 +274,11 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds)
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a read-only transaction.");
+            GaxPreconditions.CheckState(IsDetached, "You can only call GetPartitions on a detached transaction.");
             _hasExecutedStatements = true;
-
-            // Calling this method marks the used transaction as "shared" - but does not set
-            // DisposeBehavior to any value. This will cause an exception during dispose that tells the developer
-            // that they need to handle this condition by explicitly setting DisposeBehavior to some value.
-            Shared = true;
 
             var partitionRequest = request.ToPartitionReadOrQueryRequest(partitionSizeBytes, maxPartitions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
@@ -272,6 +297,7 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds /* ignored */)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             _hasExecutedStatements = true;
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
@@ -289,9 +315,9 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
             ReadOrQueryRequest request,
-            CancellationToken cancellationToken,
-            int timeoutSeconds) // Ignored
+            CancellationToken cancellationToken)
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             _hasExecutedStatements = true;
@@ -304,6 +330,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -337,6 +364,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -352,6 +380,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -396,12 +425,24 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
         public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
+
+            var request = new CommitRequest
+            {
+                Mutations = { _mutations },
+                ReturnCommitStats = LogCommitStats,
+                RequestOptions = BuildCommitRequestOptions(),
+                MaxCommitDelay = MaxCommitDelay is null ? null : Duration.FromTimeSpan(MaxCommitDelay.Value),
+            };
+
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
+                Interlocked.Exchange(ref _commited, 1);
+                // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
+                Dispose();
                 if (response.CommitTimestamp == null)
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
@@ -425,16 +466,18 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
 #if NET462
-        public Task RollbackAsync(CancellationToken cancellationToken = default)
+        public async Task RollbackAsync(CancellationToken cancellationToken = default)
 #else
-        public override Task RollbackAsync(CancellationToken cancellationToken = default)
+        public override async Task RollbackAsync(CancellationToken cancellationToken = default)
 #endif
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
+            await  ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
-                "SpannerTransaction.Rollback", SpannerConnection.Logger);
+                "SpannerTransaction.Rollback", SpannerConnection.Logger).ConfigureAwait(false);
+            Dispose();
         }
 
         /// <summary>
@@ -443,7 +486,7 @@ namespace Google.Cloud.Spanner.Data
         public TransactionId TransactionId => new TransactionId(
             SpannerConnection.ConnectionString,
             _session.SessionName.ToString(),
-            _session.TransactionId.ToBase64(),
+            _session.TransactionId?.ToBase64(),
             TimestampBound);
 
         /// <summary>
@@ -452,31 +495,46 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Timestamp ReadTimestamp => _session.ReadTimestamp;
 
+        private void CheckNotDisposed()
+        {
+            if (Interlocked.CompareExchange(ref _disposed, 0, 0) == 1)
+            {
+                throw new ObjectDisposedException("This transaction has been disposed and cannot be reused.");
+            }
+        }
+
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            if (_disposed)
+            if (Interlocked.Exchange(ref _disposed, 1) == 1)
             {
                 return;
             }
-            _disposed = true;
+
+            if (_isRetriable && Interlocked.CompareExchange(ref _commited, 0, 0) == 0)
+            {
+                // If this transaction is being used by RetriableTransaction and is not yet commited,
+                // we want to dispose of this instance but we don't want to do anything with the session,
+                // as the RetriableTransaction will attempt to reuse it with a fresh transaction.
+                // If acquiring a fresh transaction with the existing session fails, the session will be disposed
+                // and a new one with a fresh transaction will be obtained.
+                // If acquiring a fresh transaction succeeds, then the session will be disposed after the RetriableTransaction
+                // succeeds or we have stopped retrying.
+                return;
+            }
+
             switch (DisposeBehavior)
             {
                 case DisposeBehavior.CloseResources:
                     _session.ReleaseToPool(forceDelete: true);
                     break;
-                case DisposeBehavior.ReleaseToPool:
-                    if (Shared)
-                    {
-                        // This guard will prevent accidental leaks by forcing the developer to think
-                        // about how they want to manage the lifetime of the outer transactional resources.
-                        throw new InvalidOperationException(
-                            "When calling GetPartitionTokensAsync, you must indicate when transactional resources are released by setting DisposeBehavior=DisposeBehavior.CloseResources or DisposeBehavior.Detach");
-                    }
+                case DisposeBehavior.Default:
+                    // This is a no-op for a detached session.
+                    // We don't have to make a distinction here.
                     _session.ReleaseToPool(forceDelete: false);
                     break;
                 default:
-                    // Default for detached or unknown DisposeBehavior is to do nothing.
+                    // Default for unknown DisposeBehavior is to do nothing.
                     break;
             }
         }
@@ -503,5 +561,9 @@ namespace Google.Cloud.Spanner.Data
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
         }
+
+        // TODO: Move to SpannerTransactionOptions once all transaction types are using it.
+        internal static TimeSpan? CheckMaxCommitDelayRange(TimeSpan? maxCommitDelay) =>
+            maxCommitDelay is null ? maxCommitDelay : GaxPreconditions.CheckArgumentRange(maxCommitDelay.Value, nameof(MaxCommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }
 }

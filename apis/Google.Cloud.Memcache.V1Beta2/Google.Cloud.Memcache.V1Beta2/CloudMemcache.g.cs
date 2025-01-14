@@ -142,59 +142,59 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             "MpoUCg1DbG91ZE1lbWNhY2hlEr8BCg1MaXN0SW5zdGFuY2VzEjMuZ29vZ2xl",
             "LmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuTGlzdEluc3RhbmNlc1JlcXVlc3Qa",
             "NC5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5MaXN0SW5zdGFuY2Vz",
-            "UmVzcG9uc2UiQ4LT5JMCNBIyL3YxYmV0YTIve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9pbnN0YW5jZXPaQQZwYXJlbnQSrAEKC0dldEluc3Rh",
+            "UmVzcG9uc2UiQ9pBBnBhcmVudILT5JMCNBIyL3YxYmV0YTIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXMSrAEKC0dldEluc3Rh",
             "bmNlEjEuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuR2V0SW5zdGFu",
             "Y2VSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5z",
-            "dGFuY2UiQYLT5JMCNBIyL3YxYmV0YTIve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lEqYCCg5DcmVhdGVJbnN0YW5j",
+            "dGFuY2UiQdpBBG5hbWWC0+STAjQSMi92MWJldGEyL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9EqYCCg5DcmVhdGVJbnN0YW5j",
             "ZRI0Lmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkNyZWF0ZUluc3Rh",
-            "bmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ivgGC",
-            "0+STAj4iMi92MWJldGEyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Kn0vaW5zdGFuY2VzOghyZXNvdXJjZdpBG3BhcmVudCxpbnN0YW5jZV9pZCxy",
-            "ZXNvdXJjZcpBWQomZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5z",
-            "dGFuY2USL2dvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlv",
-            "bk1ldGFkYXRhEqgCCg5VcGRhdGVJbnN0YW5jZRI0Lmdvb2dsZS5jbG91ZC5t",
+            "bmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ivgHK",
+            "QVkKJmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkluc3RhbmNlEi9n",
+            "b29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5PcGVyYXRpb25NZXRhZGF0",
+            "YdpBG3BhcmVudCxpbnN0YW5jZV9pZCxyZXNvdXJjZYLT5JMCPiIyL3YxYmV0",
+            "YTIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXM6",
+            "CHJlc291cmNlEqgCCg5VcGRhdGVJbnN0YW5jZRI0Lmdvb2dsZS5jbG91ZC5t",
             "ZW1jYWNoZS52MWJldGEyLlVwZGF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iwAGC0+STAkcyOy92MWJldGEyL3ty",
-            "ZXNvdXJjZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2Vz",
-            "Lyp9OghyZXNvdXJjZdpBFHVwZGF0ZV9tYXNrLHJlc291cmNlykFZCiZnb29n",
-            "bGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNs",
-            "b3VkLm1lbWNhY2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGEStAIKEFVw",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iwAHKQVkKJmdvb2dsZS5jbG91ZC5t",
+            "ZW1jYWNoZS52MWJldGEyLkluc3RhbmNlEi9nb29nbGUuY2xvdWQubWVtY2Fj",
+            "aGUudjFiZXRhMi5PcGVyYXRpb25NZXRhZGF0YdpBFHVwZGF0ZV9tYXNrLHJl",
+            "c291cmNlgtPkkwJHMjsvdjFiZXRhMi97cmVzb3VyY2UubmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfToIcmVzb3VyY2UStAIKEFVw",
             "ZGF0ZVBhcmFtZXRlcnMSNi5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRh",
             "Mi5VcGRhdGVQYXJhbWV0ZXJzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iyAGC0+STAkgyQy92MWJldGEyL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnVwZGF0ZVBhcmFtZXRlcnM6",
-            "ASraQRtuYW1lLHVwZGF0ZV9tYXNrLHBhcmFtZXRlcnPKQVkKJmdvb2dsZS5j",
-            "bG91ZC5tZW1jYWNoZS52MWJldGEyLkluc3RhbmNlEi9nb29nbGUuY2xvdWQu",
-            "bWVtY2FjaGUudjFiZXRhMi5PcGVyYXRpb25NZXRhZGF0YRL0AQoORGVsZXRl",
+            "Zy5PcGVyYXRpb24iyAHKQVkKJmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJl",
+            "dGEyLkluc3RhbmNlEi9nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5P",
+            "cGVyYXRpb25NZXRhZGF0YdpBG25hbWUsdXBkYXRlX21hc2sscGFyYW1ldGVy",
+            "c4LT5JMCSDJDL3YxYmV0YTIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9pbnN0YW5jZXMvKn06dXBkYXRlUGFyYW1ldGVyczoBKhL0AQoORGVsZXRl",
             "SW5zdGFuY2USNC5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5EZWxl",
             "dGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIowBgtPkkwI0KjIvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWXKQUgKFWdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eRIvZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuT3BlcmF0",
-            "aW9uTWV0YWRhdGESrQIKD0FwcGx5UGFyYW1ldGVycxI1Lmdvb2dsZS5jbG91",
+            "aW9uIowBykFIChVnb29nbGUucHJvdG9idWYuRW1wdHkSL2dvb2dsZS5jbG91",
+            "ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT",
+            "5JMCNCoyL3YxYmV0YTIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9p",
+            "bnN0YW5jZXMvKn0SrQIKD0FwcGx5UGFyYW1ldGVycxI1Lmdvb2dsZS5jbG91",
             "ZC5tZW1jYWNoZS52MWJldGEyLkFwcGx5UGFyYW1ldGVyc1JlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIsMBgtPkkwJHIkIvdjFiZXRh",
-            "Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTph",
-            "cHBseVBhcmFtZXRlcnM6ASraQRduYW1lLG5vZGVfaWRzLGFwcGx5X2FsbMpB",
-            "WQomZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2USL2dv",
-            "b2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlvbk1ldGFkYXRh",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIsMBykFZCiZnb29nbGUuY2xv",
+            "dWQubWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1l",
+            "bWNhY2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGHaQRduYW1lLG5vZGVf",
+            "aWRzLGFwcGx5X2FsbILT5JMCRyJCL3YxYmV0YTIve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06YXBwbHlQYXJhbWV0ZXJzOgEq",
             "EsECChNBcHBseVNvZnR3YXJlVXBkYXRlEjkuZ29vZ2xlLmNsb3VkLm1lbWNh",
             "Y2hlLnYxYmV0YTIuQXBwbHlTb2Z0d2FyZVVwZGF0ZVJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIs8BgtPkkwJPIkovdjFiZXRhMi97",
-            "aW5zdGFuY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06",
-            "YXBwbHlTb2Z0d2FyZVVwZGF0ZToBKtpBG2luc3RhbmNlLG5vZGVfaWRzLGFw",
-            "cGx5X2FsbMpBWQomZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5z",
-            "dGFuY2USL2dvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlv",
-            "bk1ldGFkYXRhEtQCChVSZXNjaGVkdWxlTWFpbnRlbmFuY2USOy5nb29nbGUu",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIs8BykFZCiZnb29nbGUuY2xvdWQu",
+            "bWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1lbWNh",
+            "Y2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGHaQRtpbnN0YW5jZSxub2Rl",
+            "X2lkcyxhcHBseV9hbGyC0+STAk8iSi92MWJldGEyL3tpbnN0YW5jZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTphcHBseVNvZnR3YXJl",
+            "VXBkYXRlOgEqEtQCChVSZXNjaGVkdWxlTWFpbnRlbmFuY2USOy5nb29nbGUu",
             "Y2xvdWQubWVtY2FjaGUudjFiZXRhMi5SZXNjaGVkdWxlTWFpbnRlbmFuY2VS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLeAYLT5JMC",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLeAcpBWQom",
+            "Z29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2USL2dvb2ds",
+            "ZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlvbk1ldGFkYXRh2kEo",
+            "aW5zdGFuY2UsIHJlc2NoZWR1bGVfdHlwZSwgc2NoZWR1bGVfdGltZYLT5JMC",
             "USJML3YxYmV0YTIve2luc3RhbmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "aW5zdGFuY2VzLyp9OnJlc2NoZWR1bGVNYWludGVuYW5jZToBKtpBKGluc3Rh",
-            "bmNlLCByZXNjaGVkdWxlX3R5cGUsIHNjaGVkdWxlX3RpbWXKQVkKJmdvb2ds",
-            "ZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkluc3RhbmNlEi9nb29nbGUuY2xv",
-            "dWQubWVtY2FjaGUudjFiZXRhMi5PcGVyYXRpb25NZXRhZGF0YRpLykEXbWVt",
+            "aW5zdGFuY2VzLyp9OnJlc2NoZWR1bGVNYWludGVuYW5jZToBKhpLykEXbWVt",
             "Y2FjaGUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
             "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQngKIWNvbS5nb29nbGUuY2xvdWQu",
             "bWVtY2FjaGUudjFiZXRhMkISQ2xvdWRNZW1jYWNoZVByb3RvUAFaPWNsb3Vk",
@@ -247,6 +247,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// A Memorystore for Memcached instance
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -910,7 +911,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.AuthorizedNetwork.Length != 0) {
         AuthorizedNetwork = other.AuthorizedNetwork;
       }
@@ -1233,6 +1234,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       /// <summary>
       /// Configuration for a Memcached Node.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NodeConfig : pb::IMessage<NodeConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1465,6 +1467,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Node : pb::IMessage<Node>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1942,6 +1945,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InstanceMessage : pb::IMessage<InstanceMessage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2201,6 +2205,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Maintenance policy per instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MaintenancePolicy : pb::IMessage<MaintenancePolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2526,6 +2531,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Time window specified for weekly operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WeeklyMaintenanceWindow : pb::IMessage<WeeklyMaintenanceWindow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2819,6 +2825,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Upcoming maintenance schedule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MaintenanceSchedule : pb::IMessage<MaintenanceSchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3122,6 +3129,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [ListInstances][google.cloud.memcache.v1beta2.CloudMemcache.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3486,6 +3494,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Response for [ListInstances][google.cloud.memcache.v1beta2.CloudMemcache.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3744,6 +3753,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [GetInstance][google.cloud.memcache.v1beta2.CloudMemcache.GetInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3941,6 +3951,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [CreateInstance][google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4236,6 +4247,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [UpdateInstance][google.cloud.memcache.v1beta2.CloudMemcache.UpdateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4492,6 +4504,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [DeleteInstance][google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4689,6 +4702,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [RescheduleMaintenance][google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RescheduleMaintenanceRequest : pb::IMessage<RescheduleMaintenanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5008,6 +5022,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [ApplyParameters][google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApplyParametersRequest : pb::IMessage<ApplyParametersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5275,6 +5290,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [UpdateParameters][google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateParametersRequest : pb::IMessage<UpdateParametersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5569,6 +5585,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Request for [ApplySoftwareUpdate][google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApplySoftwareUpdateRequest : pb::IMessage<ApplySoftwareUpdateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5834,6 +5851,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MemcacheParameters : pb::IMessage<MemcacheParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6005,7 +6023,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6062,6 +6080,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Represents the metadata of a long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6518,6 +6537,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// <summary>
   /// Metadata for the given [google.cloud.location.Location][google.cloud.location.Location].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6655,7 +6675,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other == null) {
         return;
       }
-      availableZones_.Add(other.availableZones_);
+      availableZones_.MergeFrom(other.availableZones_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6701,6 +6721,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ZoneMetadata : pb::IMessage<ZoneMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

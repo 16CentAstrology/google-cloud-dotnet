@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.DocumentAI.V1Beta3
 {
@@ -99,20 +99,20 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 9</description></item>
+        /// <item><description>Retry maximum delay: 90000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.ResourceExhausted"/>.
         /// </description>
         /// </item>
-        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ProcessDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ProcessDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(90000), backoffMultiplier: 9, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -121,10 +121,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.5</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
@@ -134,7 +134,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <item><description>Timeout: 120 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchProcessDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings BatchProcessDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.5, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DocumentProcessorServiceClient.BatchProcessDocuments</c> and
@@ -513,10 +513,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.5</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
@@ -526,7 +526,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <item><description>Timeout: 120 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ReviewDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ReviewDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.5, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DocumentProcessorServiceClient.ReviewDocument</c> and
@@ -682,14 +682,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
+            return DocumentProcessorServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DocumentProcessorServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
+            return DocumentProcessorServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -698,7 +698,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
     /// <summary>DocumentProcessorService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service to call Cloud DocumentAI to process documents according to the
+    /// Service to call Document AI to process documents according to the
     /// processor's definition. Processors are built using state-of-the-art Google
     /// AI such as natural language, computer vision, and translation to extract
     /// structured information from unstructured or semi-structured documents.
@@ -1120,8 +1120,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             BatchProcessDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1130,8 +1131,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1140,8 +1142,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1150,13 +1153,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             FetchProcessorTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1167,13 +1170,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1184,13 +1187,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1198,13 +1201,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             FetchProcessorTypesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1215,13 +1218,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1232,13 +1235,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1267,9 +1270,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1281,21 +1283,29 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypes(new ListProcessorTypesRequest
+        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1307,21 +1317,29 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypesAsync(new ListProcessorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1333,21 +1351,29 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypes(new ListProcessorTypesRequest
+        public virtual gax::PagedEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1359,13 +1385,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorTypesAsync(new ListProcessorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorTypesResponse, ProcessorType> ListProcessorTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorTypesRequest request = new ListProcessorTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a processor type detail.
@@ -1507,13 +1542,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessors(new ListProcessorsRequest
+        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1532,13 +1576,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorsAsync(new ListProcessorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1557,13 +1610,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessors(new ListProcessorsRequest
+        public virtual gax::PagedEnumerable<ListProcessorsResponse, Processor> ListProcessors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -1582,13 +1644,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Processor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorsAsync(new ListProcessorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorsResponse, Processor> ListProcessorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorsRequest request = new ListProcessorsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a processor detail.
@@ -1698,7 +1769,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1709,7 +1780,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1720,7 +1791,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1758,7 +1829,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1780,7 +1851,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1802,7 +1873,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1820,7 +1891,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1842,7 +1913,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1864,7 +1935,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -2020,13 +2091,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersions(new ListProcessorVersionsRequest
+        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2046,13 +2126,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersionsAsync(new ListProcessorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2072,13 +2161,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersions(new ListProcessorVersionsRequest
+        public virtual gax::PagedEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersions(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all versions of a processor.
@@ -2098,13 +2196,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessorVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessorVersionsAsync(new ListProcessorVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessorVersionsResponse, ProcessorVersion> ListProcessorVersionsAsync(ProcessorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessorVersionsRequest request = new ListProcessorVersionsRequest
             {
                 ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessorVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the processor version, all artifacts under the processor version
@@ -2512,8 +2619,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             UndeployProcessorVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2522,8 +2634,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2532,8 +2649,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2542,17 +2664,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             CreateProcessorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2564,17 +2694,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2586,17 +2724,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2604,17 +2750,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             CreateProcessorAsync(parent, processor, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2626,17 +2780,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2648,17 +2810,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+        /// [Processor.display_name][google.cloud.documentai.v1beta3.Processor.display_name]
+        /// to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3038,8 +3208,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3054,8 +3225,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3070,8 +3242,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3083,8 +3256,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3099,8 +3273,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3115,8 +3290,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+        /// the document will be reviewed with.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3436,13 +3612,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3463,13 +3648,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3490,13 +3684,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluations(new ListEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a set of evaluations for a given processor version.
@@ -3517,13 +3720,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEvaluationsAsync(new ListEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEvaluationsRequest request = new ListEvaluationsRequest
             {
                 ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Imports a processor version from source processor version.
@@ -3672,7 +3884,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
     /// <summary>DocumentProcessorService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service to call Cloud DocumentAI to process documents according to the
+    /// Service to call Document AI to process documents according to the
     /// processor's definition. Processors are built using state-of-the-art Google
     /// AI such as natural language, computer vision, and translation to extract
     /// structured information from unstructured or semi-structured documents.
@@ -3738,7 +3950,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             GrpcClient = grpcClient;
             DocumentProcessorServiceSettings effectiveSettings = settings ?? DocumentProcessorServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BatchProcessDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchProcessDocumentsOperationsSettings, logger);
             TrainProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainProcessorVersionOperationsSettings, logger);
             DeleteProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProcessorVersionOperationsSettings, logger);
@@ -3980,8 +4196,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3993,8 +4210,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4107,7 +4325,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4121,7 +4339,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1beta3.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4264,8 +4482,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4277,8 +4500,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] provided.
+        /// The processor will be at `ENABLED` state by default after its creation.
+        /// Note that this method requires the `documentai.processors.create`
+        /// permission on the project, which is highly privileged. A user or service
+        /// account with this permission can create new processors that can interact
+        /// with any gcs bucket in your project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

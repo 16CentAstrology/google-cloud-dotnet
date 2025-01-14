@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Datastore.V1;
     using Google.Protobuf;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };
@@ -54,6 +56,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };
@@ -107,6 +110,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
+                PropertyMask = new PropertyMask(),
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
@@ -128,6 +133,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
+                PropertyMask = new PropertyMask(),
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
@@ -148,6 +155,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 AggregationQuery = new AggregationQuery(),
                 ProjectId = "",
                 DatabaseId = "",
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request
             RunAggregationQueryResponse response = datastoreClient.RunAggregationQuery(request);
@@ -169,6 +177,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 AggregationQuery = new AggregationQuery(),
                 ProjectId = "",
                 DatabaseId = "",
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request
             RunAggregationQueryResponse response = await datastoreClient.RunAggregationQueryAsync(request);

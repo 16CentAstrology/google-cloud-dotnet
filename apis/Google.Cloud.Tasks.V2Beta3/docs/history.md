@@ -1,5 +1,38 @@
 # Version history
 
+## Version 3.0.0-beta07, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.0.0-beta06, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.0.0-beta05, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 3.0.0-beta04, released 2024-02-09
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove BufferTask method which cannot be called from client libraries ([commit 41c1707](https://github.com/googleapis/google-cloud-dotnet/commit/41c170792d0bb39fdceddfcee7938ebb06bb4588))
+
+## Version 3.0.0-beta03, released 2023-08-04
+
+### New features
+
+- Add BufferTask RPC method for CloudTasks service for v2beta3 ([commit 36504a4](https://github.com/googleapis/google-cloud-dotnet/commit/36504a43d32649cb13b347bd18263c341eaf2c26))
+- Add YAML config for GetLocation and ListLocations for v2beta3 ([commit 36504a4](https://github.com/googleapis/google-cloud-dotnet/commit/36504a43d32649cb13b347bd18263c341eaf2c26))
+
+### Documentation improvements
+
+- Minor formatting ([commit 7c49dff](https://github.com/googleapis/google-cloud-dotnet/commit/7c49dffc44bf828460d367673ec802778832cd1d))
+
 ## Version 3.0.0-beta02, released 2023-01-19
 
 ### New features

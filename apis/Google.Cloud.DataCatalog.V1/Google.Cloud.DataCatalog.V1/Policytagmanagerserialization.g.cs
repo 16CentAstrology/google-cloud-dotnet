@@ -75,12 +75,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "bm9taWVzUmVzcG9uc2UiPYLT5JMCNxI1L3YxL3twYXJlbnQ9cHJvamVjdHMv",
             "Ki9sb2NhdGlvbnMvKn0vdGF4b25vbWllczpleHBvcnQaTspBGmRhdGFjYXRh",
             "bG9nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybULqAQofY29tLmdvb2dsZS5jbG91ZC5k",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybULnAQofY29tLmdvb2dsZS5jbG91ZC5k",
             "YXRhY2F0YWxvZy52MUIiUG9saWN5VGFnTWFuYWdlclNlcmlhbGl6YXRpb25Q",
             "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYx",
-            "L2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91",
-            "ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xW",
-            "MeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "L2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYqoCG0dvb2dsZS5DbG91ZC5E",
+            "YXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoC",
+            "Hkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.PolicytagmanagerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -104,6 +104,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// policy tags. Used for taxonomy replacement, import, and
   /// export.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SerializedTaxonomy : pb::IMessage<SerializedTaxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -402,6 +403,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// A nested protocol buffer that represents a policy tag and all its
   /// descendants.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SerializedPolicyTag : pb::IMessage<SerializedPolicyTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -712,6 +714,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ReplaceTaxonomy][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ReplaceTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReplaceTaxonomyRequest : pb::IMessage<ReplaceTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -957,6 +960,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ImportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ImportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportTaxonomiesRequest : pb::IMessage<ImportTaxonomiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1292,6 +1296,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Inline source containing taxonomies to import.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InlineSource : pb::IMessage<InlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1477,6 +1482,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Cross-regional source used to import an existing taxonomy into a different
   /// region.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CrossRegionalSource : pb::IMessage<CrossRegionalSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1673,6 +1679,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ImportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ImportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportTaxonomiesResponse : pb::IMessage<ImportTaxonomiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1858,6 +1865,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ExportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ExportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportTaxonomiesRequest : pb::IMessage<ExportTaxonomiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1948,10 +1956,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SerializedTaxonomies {
-      get { return destinationCase_ == DestinationOneofCase.SerializedTaxonomies ? (bool) destination_ : false; }
+      get { return HasSerializedTaxonomies ? (bool) destination_ : false; }
       set {
         destination_ = value;
         destinationCase_ = DestinationOneofCase.SerializedTaxonomies;
+      }
+    }
+    /// <summary>Gets whether the "serialized_taxonomies" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSerializedTaxonomies {
+      get { return destinationCase_ == DestinationOneofCase.SerializedTaxonomies; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "serialized_taxonomies" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSerializedTaxonomies() {
+      if (HasSerializedTaxonomies) {
+        ClearDestination();
       }
     }
 
@@ -2003,7 +2025,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       hash ^= taxonomies_.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) hash ^= SerializedTaxonomies.GetHashCode();
+      if (HasSerializedTaxonomies) hash ^= SerializedTaxonomies.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2028,7 +2050,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Parent);
       }
       taxonomies_.WriteTo(output, _repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         output.WriteRawTag(24);
         output.WriteBool(SerializedTaxonomies);
       }
@@ -2047,7 +2069,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Parent);
       }
       taxonomies_.WriteTo(ref output, _repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         output.WriteRawTag(24);
         output.WriteBool(SerializedTaxonomies);
       }
@@ -2065,7 +2087,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       size += taxonomies_.CalculateSize(_repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2155,6 +2177,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ExportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ExportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportTaxonomiesResponse : pb::IMessage<ExportTaxonomiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

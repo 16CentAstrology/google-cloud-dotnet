@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,18 +15,18 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
 {
@@ -107,14 +107,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ReportErrorsServiceClient.Create(callInvoker, Settings, Logger);
+            return ReportErrorsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ReportErrorsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ReportErrorsServiceClient.Create(callInvoker, Settings, Logger);
+            return ReportErrorsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -219,9 +219,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -240,9 +247,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -261,9 +275,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -282,9 +303,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -317,9 +345,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -352,9 +387,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -383,9 +425,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -418,9 +467,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -453,9 +509,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -493,7 +556,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GrpcClient = grpcClient;
             ReportErrorsServiceSettings effectiveSettings = settings ?? ReportErrorsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>("ReportErrorEvent", grpcClient.ReportErrorEventAsync, grpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings).WithGoogleRequestParam("project_name", request => request.ProjectName);
             Modify_ApiCall(ref _callReportErrorEvent);
             Modify_ReportErrorEventApiCall(ref _callReportErrorEvent);
@@ -522,9 +589,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -546,9 +620,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// `POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
         /// 
-        /// **Note:** [Error Reporting](/error-reporting) is a global service built
-        /// on Cloud Logging and doesn't analyze logs stored
-        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// **Note:** [Error Reporting] (https://cloud.google.com/error-reporting)
+        /// is a service built on Cloud Logging and can analyze log entries when all of
+        /// the following are true:
+        /// 
+        /// * Customer-managed encryption keys (CMEK) are disabled on the log bucket.
+        /// * The log bucket satisfies one of the following:
+        /// * The log bucket is stored in the same project where the logs
+        /// originated.
+        /// * The logs were routed to a project, and then that project stored those
+        /// logs in a log bucket that it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

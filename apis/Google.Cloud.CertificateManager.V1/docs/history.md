@@ -1,5 +1,33 @@
 # Version history
 
+## Version 2.8.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.7.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.6.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.5.0, released 2024-03-21
+
+### New features
+
+- Added Trust Configs and DnsAuthorization.Type to Certificate Manager ([commit ac4eb8a](https://github.com/googleapis/google-cloud-dotnet/commit/ac4eb8a1afb11a6885101a658e5b0094192c6e03))
+
+## Version 2.4.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 2.3.0, released 2023-03-06
 
 ### Bug fixes

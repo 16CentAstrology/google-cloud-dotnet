@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcbav = Google.Cloud.BeyondCorp.AppConnections.V1;
 using sys = System;
 
@@ -258,10 +258,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// <inheritdoc/>
         public bool Equals(AppConnectionName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AppConnectionName a, AppConnectionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AppConnectionName a, AppConnectionName b) => !(a == b);
     }
 
@@ -499,10 +511,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// <inheritdoc/>
         public bool Equals(AppConnectorName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AppConnectorName a, AppConnectorName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AppConnectorName a, AppConnectorName b) => !(a == b);
     }
 
@@ -738,10 +762,22 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         /// <inheritdoc/>
         public bool Equals(AppGatewayName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AppGatewayName a, AppGatewayName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AppGatewayName a, AppGatewayName b) => !(a == b);
     }
 
@@ -823,6 +859,21 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbav::AppConnectionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class Gateway
+            {
+                /// <summary>
+                /// <see cref="AppGatewayName"/>-typed view over the <see cref="AppGateway"/> resource name property.
+                /// </summary>
+                public AppGatewayName AppGatewayAsAppGatewayName
+                {
+                    get => string.IsNullOrEmpty(AppGateway) ? null : AppGatewayName.Parse(AppGateway, allowUnparsed: true);
+                    set => AppGateway = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

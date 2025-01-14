@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -183,14 +183,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RegionInstanceGroupsClient.Create(callInvoker, Settings, Logger);
+            return RegionInstanceGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RegionInstanceGroupsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RegionInstanceGroupsClient.Create(callInvoker, Settings, Logger);
+            return RegionInstanceGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -411,14 +411,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupList, InstanceGroup> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListRegionInstanceGroupsRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupList, InstanceGroup> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionInstanceGroupsRequest request = new ListRegionInstanceGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of instance group resources contained within the specified region.
@@ -439,14 +448,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListRegionInstanceGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegionInstanceGroupsRequest request = new ListRegionInstanceGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
@@ -491,16 +509,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstances(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRegionInstanceGroupsRequest
+        public virtual gax::PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstances(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRegionInstanceGroupsRequest request = new ListInstancesRegionInstanceGroupsRequest
             {
                 InstanceGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroup, nameof(instanceGroup)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 RegionInstanceGroupsListInstancesRequestResource = gax::GaxPreconditions.CheckNotNull(regionInstanceGroupsListInstancesRequestResource, nameof(regionInstanceGroupsListInstancesRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
@@ -527,16 +554,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstancesAsync(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRegionInstanceGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstancesAsync(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRegionInstanceGroupsRequest request = new ListInstancesRegionInstanceGroupsRequest
             {
                 InstanceGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroup, nameof(instanceGroup)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 RegionInstanceGroupsListInstancesRequestResource = gax::GaxPreconditions.CheckNotNull(regionInstanceGroupsListInstancesRequestResource, nameof(regionInstanceGroupsListInstancesRequestResource)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the named ports for the specified regional instance group.
@@ -689,7 +725,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             RegionInstanceGroupsSettings effectiveSettings = settings ?? RegionInstanceGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SetNamedPortsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetNamedPortsOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetRegionInstanceGroupRequest, InstanceGroup>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group", request => request.InstanceGroup);
             Modify_ApiCall(ref _callGet);

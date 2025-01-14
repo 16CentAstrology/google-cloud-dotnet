@@ -30,52 +30,66 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "bGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9odHRwYm9keS5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxo3Z29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2lu",
-            "ZS92MWJldGEvaW1wb3J0X2NvbmZpZy5wcm90bxo0Z29vZ2xlL2Nsb3VkL2Rp",
-            "c2NvdmVyeWVuZ2luZS92MWJldGEvdXNlcl9ldmVudC5wcm90bxojZ29vZ2xl",
-            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8itgEKFVdyaXRlVXNlckV2",
-            "ZW50UmVxdWVzdBJACgZwYXJlbnQYASABKAlCMOBBAvpBKgooZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRJMCgp1c2VyX2V2ZW50",
-            "GAIgASgLMi4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
-            "VXNlckV2ZW50QgPgQQJIAIgBAUINCgtfdXNlcl9ldmVudCKoAQoXQ29sbGVj",
-            "dFVzZXJFdmVudFJlcXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoKKGRp",
-            "c2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9EYXRhU3RvcmUSFwoKdXNl",
-            "cl9ldmVudBgCIAEoCUID4EECEhAKA3VyaRgDIAEoCUgAiAEBEhAKA2V0cxgE",
-            "IAEoA0gBiAEBQgYKBF91cmlCBgoEX2V0czLbCAoQVXNlckV2ZW50U2Vydmlj",
-            "ZRK8AgoOV3JpdGVVc2VyRXZlbnQSOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxYmV0YS5Xcml0ZVVzZXJFdmVudFJlcXVlc3QaLi5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Vc2VyRXZlbnQivQGC0+ST",
-            "ArYBIkUvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9k",
-            "YXRhU3RvcmVzLyp9L3VzZXJFdmVudHM6d3JpdGU6CnVzZXJfZXZlbnRaYSJT",
-            "L3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVj",
-            "dGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJFdmVudHM6d3JpdGU6CnVzZXJf",
-            "ZXZlbnQSkgIKEENvbGxlY3RVc2VyRXZlbnQSPC5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YS5Db2xsZWN0VXNlckV2ZW50UmVxdWVzdBoU",
-            "Lmdvb2dsZS5hcGkuSHR0cEJvZHkiqQGC0+STAqIBEkcvdjFiZXRhL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJF",
-            "dmVudHM6Y29sbGVjdFpXElUvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKn0vdXNlckV2",
-            "ZW50czpjb2xsZWN0Ep4DChBJbXBvcnRVc2VyRXZlbnRzEjwuZ29vZ2xlLmNs",
+            "ZS92MWJldGEvaW1wb3J0X2NvbmZpZy5wcm90bxo2Z29vZ2xlL2Nsb3VkL2Rp",
+            "c2NvdmVyeWVuZ2luZS92MWJldGEvcHVyZ2VfY29uZmlnLnByb3RvGjRnb29n",
+            "bGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS91c2VyX2V2ZW50LnBy",
+            "b3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90byLLAQoV",
+            "V3JpdGVVc2VyRXZlbnRSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw4EEC+kEq",
+            "CihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGF0YVN0b3JlEkwK",
+            "CnVzZXJfZXZlbnQYAiABKAsyLi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxYmV0YS5Vc2VyRXZlbnRCA+BBAkgAiAEBEhMKC3dyaXRlX2FzeW5j",
+            "GAMgASgIQg0KC191c2VyX2V2ZW50IqgBChdDb2xsZWN0VXNlckV2ZW50UmVx",
+            "dWVzdBJACgZwYXJlbnQYASABKAlCMOBBAvpBKgooZGlzY292ZXJ5ZW5naW5l",
+            "Lmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRIXCgp1c2VyX2V2ZW50GAIgASgJ",
+            "QgPgQQISEAoDdXJpGAMgASgJSACIAQESEAoDZXRzGAQgASgDSAGIAQFCBgoE",
+            "X3VyaUIGCgRfZXRzMvwMChBVc2VyRXZlbnRTZXJ2aWNlEoQDCg5Xcml0ZVVz",
+            "ZXJFdmVudBI6Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
+            "LldyaXRlVXNlckV2ZW50UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjFiZXRhLlVzZXJFdmVudCKFAoLT5JMC/gEiRS92MWJldGEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKn0v",
+            "dXNlckV2ZW50czp3cml0ZToKdXNlcl9ldmVudFphIlMvdjFiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFT",
+            "dG9yZXMvKn0vdXNlckV2ZW50czp3cml0ZToKdXNlcl9ldmVudFpGIjgvdjFi",
+            "ZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdXNlckV2ZW50",
+            "czp3cml0ZToKdXNlcl9ldmVudBLQAgoQQ29sbGVjdFVzZXJFdmVudBI8Lmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkNvbGxlY3RVc2Vy",
+            "RXZlbnRSZXF1ZXN0GhQuZ29vZ2xlLmFwaS5IdHRwQm9keSLnAYLT5JMC4AES",
+            "Ry92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFT",
+            "dG9yZXMvKn0vdXNlckV2ZW50czpjb2xsZWN0WlcSVS92MWJldGEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0",
+            "b3Jlcy8qfS91c2VyRXZlbnRzOmNvbGxlY3RaPBI6L3YxYmV0YS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3VzZXJFdmVudHM6Y29sbGVjdBKY",
+            "AwoPUHVyZ2VVc2VyRXZlbnRzEjsuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MWJldGEuUHVyZ2VVc2VyRXZlbnRzUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24iqALKQXoKO2dvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLlB1cmdlVXNlckV2ZW50c1Jlc3BvbnNlEjtn",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5QdXJnZVVzZXJF",
+            "dmVudHNNZXRhZGF0YYLT5JMCpAEiRS92MWJldGEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKn0vdXNlckV2ZW50czpwdXJn",
+            "ZToBKlpYIlMvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKn0vdXNlckV2ZW50czpwdXJn",
+            "ZToBKhKeAwoQSW1wb3J0VXNlckV2ZW50cxI8Lmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydFVzZXJFdmVudHNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKsAspBfAo8Z29vZ2xlLmNs",
             "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1wb3J0VXNlckV2ZW50c1Jl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqwCgtPkkwKm",
-            "ASJGL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0",
-            "YVN0b3Jlcy8qfS91c2VyRXZlbnRzOmltcG9ydDoBKlpZIlQvdjFiZXRhL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2Rh",
-            "dGFTdG9yZXMvKn0vdXNlckV2ZW50czppbXBvcnQ6ASrKQXwKPGdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydFVzZXJFdmVudHNS",
-            "ZXNwb25zZRI8Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
-            "SW1wb3J0VXNlckV2ZW50c01ldGFkYXRhGlLKQR5kaXNjb3ZlcnllbmdpbmUu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQpwCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MWJldGFCFVVzZXJFdmVudFNlcnZpY2VQcm90b1ABWlFj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEv",
-            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
-            "UllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0",
-            "YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29v",
-            "Z2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "c3BvbnNlEjxnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5J",
+            "bXBvcnRVc2VyRXZlbnRzTWV0YWRhdGGC0+STAqYBIkYvdjFiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJF",
+            "dmVudHM6aW1wb3J0OgEqWlkiVC92MWJldGEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qfS91c2Vy",
+            "RXZlbnRzOmltcG9ydDoBKhpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFw",
+            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybUKcAgonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhQhVVc2VyRXZlbnRTZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVy",
+            "eWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5F",
+            "qgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29n",
+            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xv",
+            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.PurgeConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest.Parser, new[]{ "Parent", "UserEvent" }, new[]{ "UserEvent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest.Parser, new[]{ "Parent", "UserEvent", "WriteAsync" }, new[]{ "UserEvent" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CollectUserEventRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.CollectUserEventRequest.Parser, new[]{ "Parent", "UserEvent", "Uri", "Ets" }, new[]{ "Uri", "Ets" }, null, null, null)
           }));
     }
@@ -86,6 +100,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Request message for WriteUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteUserEventRequest : pb::IMessage<WriteUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -122,6 +137,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public WriteUserEventRequest(WriteUserEventRequest other) : this() {
       parent_ = other.parent_;
       userEvent_ = other.userEvent_ != null ? other.userEvent_.Clone() : null;
+      writeAsync_ = other.writeAsync_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,8 +151,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent DataStore resource name, such as
+    /// Required. The parent resource name.
+    /// If the write user event action is applied in
+    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore] level, the
+    /// format is:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+    /// If the write user event action is applied in [Location][] level, for
+    /// example, the event with
+    /// [Document][google.cloud.discoveryengine.v1beta.Document] across multiple
+    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore], the format is:
+    /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -162,6 +186,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "write_async" field.</summary>
+    public const int WriteAsyncFieldNumber = 3;
+    private bool writeAsync_;
+    /// <summary>
+    /// If set to true, the user event is written asynchronously after
+    /// validation, and the API responds without waiting for the write.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool WriteAsync {
+      get { return writeAsync_; }
+      set {
+        writeAsync_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -179,6 +219,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(UserEvent, other.UserEvent)) return false;
+      if (WriteAsync != other.WriteAsync) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -188,6 +229,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (userEvent_ != null) hash ^= UserEvent.GetHashCode();
+      if (WriteAsync != false) hash ^= WriteAsync.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,6 +256,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(UserEvent);
       }
+      if (WriteAsync != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(WriteAsync);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -232,6 +278,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(UserEvent);
       }
+      if (WriteAsync != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(WriteAsync);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -247,6 +297,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (userEvent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserEvent);
+      }
+      if (WriteAsync != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -268,6 +321,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           UserEvent = new global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent();
         }
         UserEvent.MergeFrom(other.UserEvent);
+      }
+      if (other.WriteAsync != false) {
+        WriteAsync = other.WriteAsync;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -293,6 +349,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               UserEvent = new global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent();
             }
             input.ReadMessage(UserEvent);
+            break;
+          }
+          case 24: {
+            WriteAsync = input.ReadBool();
             break;
           }
         }
@@ -321,6 +381,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(UserEvent);
             break;
           }
+          case 24: {
+            WriteAsync = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -331,6 +395,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Request message for CollectUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CollectUserEventRequest : pb::IMessage<CollectUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -414,17 +479,19 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 3;
+    private readonly static string UriDefaultValue = "";
+
     private string uri_;
     /// <summary>
     /// The URL including cgi-parameters but excluding the hash fragment with a
     /// length limit of 5,000 characters. This is often more useful than the
-    /// referer URL, because many browsers only send the domain for 3rd party
+    /// referer URL, because many browsers only send the domain for third-party
     /// requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return uri_ ?? ""; }
+      get { return uri_ ?? UriDefaultValue; }
       set {
         uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -444,6 +511,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "ets" field.</summary>
     public const int EtsFieldNumber = 4;
+    private readonly static long EtsDefaultValue = 0L;
+
     private long ets_;
     /// <summary>
     /// The event timestamp in milliseconds. This prevents browser caching of
@@ -453,7 +522,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Ets {
-      get { if ((_hasBits0 & 1) != 0) { return ets_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return ets_; } else { return EtsDefaultValue; } }
       set {
         _hasBits0 |= 1;
         ets_ = value;

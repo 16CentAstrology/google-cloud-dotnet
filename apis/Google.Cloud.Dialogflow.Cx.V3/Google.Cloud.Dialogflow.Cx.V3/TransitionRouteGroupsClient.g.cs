@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
@@ -203,14 +203,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TransitionRouteGroupsClient.Create(callInvoker, Settings, Logger);
+            return TransitionRouteGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TransitionRouteGroupsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TransitionRouteGroupsClient.Create(callInvoker, Settings, Logger);
+            return TransitionRouteGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -333,8 +333,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to list all transition route groups for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -346,21 +347,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroups(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to list all transition route groups for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -372,21 +383,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroupsAsync(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to list all transition route groups for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -398,21 +419,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroups(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsFlowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all transition route groups in the specified flow.
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to list all transition route groups for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -424,13 +455,94 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransitionRouteGroupsAsync(new ListTransitionRouteGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(FlowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
             {
                 ParentAsFlowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all transition route groups in the specified flow.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The flow to list all transition route groups for.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroups(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all transition route groups in the specified flow.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The flow to list all transition route groups for.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TransitionRouteGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> ListTransitionRouteGroupsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransitionRouteGroupsRequest request = new ListTransitionRouteGroupsRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransitionRouteGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified
@@ -469,8 +581,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -487,8 +601,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -505,8 +621,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -520,8 +638,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -538,8 +658,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -556,8 +678,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition Route Group ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -621,8 +745,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -648,8 +774,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -675,8 +803,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -698,8 +828,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -725,8 +857,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -752,8 +886,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The flow to create an
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/flows/&lt;Flow ID&gt;`.
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
         /// </param>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to create.
@@ -761,6 +897,89 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<TransitionRouteGroup> CreateTransitionRouteGroupAsync(FlowName parent, TransitionRouteGroup transitionRouteGroup, st::CancellationToken cancellationToken) =>
+            CreateTransitionRouteGroupAsync(parent, transitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The flow to create an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
+        /// </param>
+        /// <param name="transitionRouteGroup">
+        /// Required. The transition route group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TransitionRouteGroup CreateTransitionRouteGroup(AgentName parent, TransitionRouteGroup transitionRouteGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTransitionRouteGroup(new CreateTransitionRouteGroupRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TransitionRouteGroup = gax::GaxPreconditions.CheckNotNull(transitionRouteGroup, nameof(transitionRouteGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The flow to create an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
+        /// </param>
+        /// <param name="transitionRouteGroup">
+        /// Required. The transition route group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TransitionRouteGroup> CreateTransitionRouteGroupAsync(AgentName parent, TransitionRouteGroup transitionRouteGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTransitionRouteGroupAsync(new CreateTransitionRouteGroupRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TransitionRouteGroup = gax::GaxPreconditions.CheckNotNull(transitionRouteGroup, nameof(transitionRouteGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The flow to create an
+        /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+        /// for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;`
+        /// or `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`
+        /// for agent-level groups.
+        /// </param>
+        /// <param name="transitionRouteGroup">
+        /// Required. The transition route group to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TransitionRouteGroup> CreateTransitionRouteGroupAsync(AgentName parent, TransitionRouteGroup transitionRouteGroup, st::CancellationToken cancellationToken) =>
             CreateTransitionRouteGroupAsync(parent, transitionRouteGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -923,9 +1142,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -946,9 +1166,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -969,9 +1190,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -989,9 +1211,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1012,9 +1235,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1035,9 +1259,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-        /// to delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;Transition
-        /// Route Group ID&gt;`.
+        /// to delete. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/flows/&lt;FlowID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`
+        /// or
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/transitionRouteGroups/&lt;TransitionRouteGroupID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1073,7 +1298,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             TransitionRouteGroupsSettings effectiveSettings = settings ?? TransitionRouteGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListTransitionRouteGroups = clientHelper.BuildApiCall<ListTransitionRouteGroupsRequest, ListTransitionRouteGroupsResponse>("ListTransitionRouteGroups", grpcClient.ListTransitionRouteGroupsAsync, grpcClient.ListTransitionRouteGroups, effectiveSettings.ListTransitionRouteGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTransitionRouteGroups);

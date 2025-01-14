@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,20 +28,33 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             _apis = new HashSet<string>(apis);
         }
 
-        public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        public IEnumerable<ReleaseProposal> GetProposals(
+            RootLayout rootLayout,
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
                 if (!_apis.Contains(api.Id))
                 {
                     continue;
                 }
+                progressCallback?.Invoke(++progress, _apis.Count);
+
+                if (api.BlockRelease is string blockReason)
+                {
+                    Console.WriteLine($"Skipping {api.Id} due to block: {blockReason}");
+                    continue;
+                }
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
-                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
             }
         }
     }

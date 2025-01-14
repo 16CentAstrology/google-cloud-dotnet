@@ -35,12 +35,12 @@ namespace Google.Maps.Routing.V2 {
             "cnBjLlN0YXR1cxIwCiNpbnRlcm1lZGlhdGVfd2F5cG9pbnRfcmVxdWVzdF9p",
             "bmRleBgCIAEoBUgAiAEBEgwKBHR5cGUYAyADKAkSFQoNcGFydGlhbF9tYXRj",
             "aBgEIAEoCBIQCghwbGFjZV9pZBgFIAEoCUImCiRfaW50ZXJtZWRpYXRlX3dh",
-            "eXBvaW50X3JlcXVlc3RfaW5kZXhCygEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
+            "eXBvaW50X3JlcXVlc3RfaW5kZXhCxwEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
             "aW5nLnYyQhVHZW9jb2RpbmdSZXN1bHRzUHJvdG9QAVo6Y2xvdWQuZ29vZ2xl",
             "LmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdw",
-            "YvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2ds",
-            "ZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYy",
-            "YgZwcm90bzM="));
+            "YqICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxN",
+            "YXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,10 +53,11 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Contains [GeocodedWaypoints][google.maps.routing.v2.GeocodedWaypoint] for
+  /// Contains [`GeocodedWaypoints`][google.maps.routing.v2.GeocodedWaypoint] for
   /// origin, destination and intermediate waypoints. Only populated for address
   /// waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeocodingResults : pb::IMessage<GeocodingResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,6 +344,7 @@ namespace Google.Maps.Routing.V2 {
   /// waypoints. Includes details about the geocoding results for the purposes of
   /// determining what the address was geocoded to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeocodedWaypoint : pb::IMessage<GeocodedWaypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -410,6 +412,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "intermediate_waypoint_request_index" field.</summary>
     public const int IntermediateWaypointRequestIndexFieldNumber = 2;
+    private readonly static int IntermediateWaypointRequestIndexDefaultValue = 0;
+
     private int intermediateWaypointRequestIndex_;
     /// <summary>
     /// The index of the corresponding intermediate waypoint in the request.
@@ -419,7 +423,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int IntermediateWaypointRequestIndex {
-      get { if ((_hasBits0 & 1) != 0) { return intermediateWaypointRequestIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return intermediateWaypointRequestIndex_; } else { return IntermediateWaypointRequestIndexDefaultValue; } }
       set {
         _hasBits0 |= 1;
         intermediateWaypointRequestIndex_ = value;
@@ -445,8 +449,8 @@ namespace Google.Maps.Routing.V2 {
     private readonly pbc::RepeatedField<string> type_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The type(s) of the result, in the form of zero or more type tags.
-    /// Supported types:
-    /// https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types
+    /// Supported types: [Address types and address component
+    /// types](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

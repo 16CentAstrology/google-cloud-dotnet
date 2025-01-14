@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,18 @@
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
 {
+    public partial class FhirStoreSource
+    {
+        /// <summary>
+        /// <see cref="FhirStoreName"/>-typed view over the <see cref="FhirStore"/> resource name property.
+        /// </summary>
+        public FhirStoreName FhirStoreAsFhirStoreName
+        {
+            get => string.IsNullOrEmpty(FhirStore) ? null : FhirStoreName.Parse(FhirStore, allowUnparsed: true);
+            set => FhirStore = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportUserEventsRequest
     {
         /// <summary>
@@ -36,6 +48,42 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public BranchName ParentAsBranchName
         {
             get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportSuggestionDenyListEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportCompletionSuggestionsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportSampleQueriesRequest
+    {
+        /// <summary>
+        /// <see cref="SampleQuerySetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SampleQuerySetName ParentAsSampleQuerySetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SampleQuerySetName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

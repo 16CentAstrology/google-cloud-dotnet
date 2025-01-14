@@ -58,6 +58,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// TensorboardRun maps to a specific execution of a training job with a given
   /// set of hyperparameter values, model definition, dataset, etc
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardRun : pb::IMessage<TensorboardRun>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -410,7 +411,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

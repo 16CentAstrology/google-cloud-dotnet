@@ -1,5 +1,48 @@
 # Version history
 
+## Version 4.10.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Support object soft delete ([commit ae28cb4](https://github.com/googleapis/google-cloud-dotnet/commit/ae28cb432f96ebaebb330ee59ff7c8bf31272621))
+## Version 4.9.0, released 2024-03-07
+
+### Bug fixes
+
+- Fix typo ([commit 3fbdeb0](https://github.com/googleapis/google-cloud-dotnet/commit/3fbdeb03961bc767934dfd09981dedf88e8026e6))
+
+### New features
+
+- Allow a new upload session to be initiated as a single method call ([commit f0b643e](https://github.com/googleapis/google-cloud-dotnet/commit/f0b643e3f952624f323b64ec90a904ee804d8e7f))
+- Support overriding some URLSigner.Options default values. ([commit 4cc8131](https://github.com/googleapis/google-cloud-dotnet/commit/4cc81319385df5efce7671b16ba2da980fd38c13))
+- Support custom hostname and port in signers. ([commit adaa7c4](https://github.com/googleapis/google-cloud-dotnet/commit/adaa7c4ea307bc4948142f1d2c38558122b5a4bf))
+- Allows creating UrlSigner directly from a StorageClient. ([commit 4f0d708](https://github.com/googleapis/google-cloud-dotnet/commit/4f0d708a0b26c5223228f90bdd42a567bc983636))
+- Support object retention ([commit 6d73d8e](https://github.com/googleapis/google-cloud-dotnet/commit/6d73d8eb86d739f113ea70a535ecf704af471f85))
+
+## Version 4.8.0, released 2024-02-09
+
+### New features
+
+- Support the include folders option for listing objects. ([commit 28b9cb6](https://github.com/googleapis/google-cloud-dotnet/commit/28b9cb6c01105763b1564811e4d41d412f82fdac))
+- Add support for the Firebase Storage emulator ([commit a454073](https://github.com/googleapis/google-cloud-dotnet/commit/a454073e1264092ab5c8ae7c8f1420e14216c7c4))
+
+## Version 4.7.0, released 2023-10-31
+
+No API surface changes; just dependency updates.
+
+## Version 4.6.0, released 2023-06-05
+
+### New features
+
+- Add support for glob pattern storage ([commit d0e4541](https://github.com/googleapis/google-cloud-dotnet/commit/d0e45410df7c08d24bd254826d8a64591aa8c22c))
+
+## Version 4.5.0, released 2023-04-20
+
+### New features
+
+- Support custom retry options on all API calls (other than upload/download object) ([commit cc384b5](https://github.com/googleapis/google-cloud-dotnet/commit/cc384b5e2db95b718d68300141152078f2d736d1)) and ([commit 385ee89](https://github.com/googleapis/google-cloud-dotnet/commit/385ee890cf10cbbebab000b96da04d6fc9f62bcc))
+
 ## Version 4.4.0, released 2023-02-21
 
 ### New features

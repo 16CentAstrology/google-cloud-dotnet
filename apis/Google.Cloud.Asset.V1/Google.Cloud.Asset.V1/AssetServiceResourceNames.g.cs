@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcav = Google.Cloud.Asset.V1;
 using sys = System;
 
@@ -310,10 +310,22 @@ namespace Google.Cloud.Asset.V1
         /// <inheritdoc/>
         public bool Equals(FeedName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(FeedName a, FeedName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(FeedName a, FeedName b) => !(a == b);
     }
 
@@ -619,10 +631,22 @@ namespace Google.Cloud.Asset.V1
         /// <inheritdoc/>
         public bool Equals(SavedQueryName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(SavedQueryName a, SavedQueryName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(SavedQueryName a, SavedQueryName b) => !(a == b);
     }
 
@@ -847,6 +871,27 @@ namespace Google.Cloud.Asset.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::SavedQueryName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AnalyzeMoveRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Resource"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ResourceAsProjectName
+        {
+            get => string.IsNullOrEmpty(Resource) ? null : gagr::ProjectName.Parse(Resource, allowUnparsed: true);
+            set => Resource = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="DestinationParent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName DestinationParentAsResourceName
+        {
+            get => string.IsNullOrEmpty(DestinationParent) ? null : gax::UnparsedResourceName.Parse(DestinationParent);
+            set => DestinationParent = value?.ToString() ?? "";
         }
     }
 

@@ -53,32 +53,32 @@ namespace Google.Cloud.Dataplex.V1 {
             "Q09OVEVOVF9WSUVXX1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARIICgRGVUxM",
             "EAIyrRAKDkNvbnRlbnRTZXJ2aWNlEoACCg1DcmVhdGVDb250ZW50Ei4uZ29v",
             "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUNvbnRlbnRSZXF1ZXN0GiEu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNvbnRlbnQimwGC0+STAoMBIjgv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyp9L2Nv",
-            "bnRlbnRpdGVtczoHY29udGVudFo+IjMvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2xha2VzLyp9L2NvbnRlbnQ6B2NvbnRlbnTaQQ5wYXJl",
-            "bnQsY29udGVudBKXAgoNVXBkYXRlQ29udGVudBIuLmdvb2dsZS5jbG91ZC5k",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNvbnRlbnQimwHaQQ5wYXJlbnQs",
+            "Y29udGVudILT5JMCgwEiOC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbGFrZXMvKn0vY29udGVudGl0ZW1zOgdjb250ZW50Wj4iMy92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKn0vY29udGVu",
+            "dDoHY29udGVudBKXAgoNVXBkYXRlQ29udGVudBIuLmdvb2dsZS5jbG91ZC5k",
             "YXRhcGxleC52MS5VcGRhdGVDb250ZW50UmVxdWVzdBohLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5Db250ZW50IrIBgtPkkwKVATJBL3YxL3tjb250ZW50",
-            "Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL2NvbnRlbnRp",
-            "dGVtcy8qKn06B2NvbnRlbnRaRzI8L3YxL3tjb250ZW50Lm5hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL2NvbnRlbnQvKip9Ogdjb250ZW50",
-            "2kETY29udGVudCx1cGRhdGVfbWFzaxLaAQoNRGVsZXRlQ29udGVudBIuLmdv",
+            "ZC5kYXRhcGxleC52MS5Db250ZW50IrIB2kETY29udGVudCx1cGRhdGVfbWFz",
+            "a4LT5JMClQEyQS92MS97Y29udGVudC5uYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbGFrZXMvKi9jb250ZW50aXRlbXMvKip9Ogdjb250ZW50WkcyPC92",
+            "MS97Y29udGVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMv",
+            "Ki9jb250ZW50LyoqfToHY29udGVudBLaAQoNRGVsZXRlQ29udGVudBIuLmdv",
             "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EZWxldGVDb250ZW50UmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSKAAYLT5JMCcyo5L3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKi9jb250ZW50aXRlbXMvKip9",
-            "WjYqNC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyov",
-            "Y29udGVudC8qKn3aQQRuYW1lEt8BCgpHZXRDb250ZW50EisuZ29vZ2xlLmNs",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSKAAdpBBG5hbWWC0+STAnMqOS92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovY29udGVudGl0",
+            "ZW1zLyoqfVo2KjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9s",
+            "YWtlcy8qL2NvbnRlbnQvKip9Et8BCgpHZXRDb250ZW50EisuZ29vZ2xlLmNs",
             "b3VkLmRhdGFwbGV4LnYxLkdldENvbnRlbnRSZXF1ZXN0GiEuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkNvbnRlbnQigAGC0+STAnMSOS92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovY29udGVudGl0ZW1zLyoq",
-            "fVo2EjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8q",
-            "L2NvbnRlbnQvKip92kEEbmFtZRLzAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xl",
+            "b3VkLmRhdGFwbGV4LnYxLkNvbnRlbnQigAHaQQRuYW1lgtPkkwJzEjkvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL2NvbnRlbnRp",
+            "dGVtcy8qKn1aNhI0L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "bGFrZXMvKi9jb250ZW50LyoqfRLzAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xl",
             "LmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Q",
-            "b2xpY3kipwGC0+STApUBEkovdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovbGFrZXMvKi9jb250ZW50aXRlbXMvKip9OmdldElhbVBvbGlj",
-            "eVpHEkUvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbGFr",
-            "ZXMvKi9jb250ZW50LyoqfTpnZXRJYW1Qb2xpY3naQQhyZXNvdXJjZRLuAQoM",
+            "b2xpY3kipwHaQQhyZXNvdXJjZYLT5JMClQESSi92MS97cmVzb3VyY2U9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL2NvbnRlbnRpdGVtcy8qKn06",
+            "Z2V0SWFtUG9saWN5WkcSRS92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9sYWtlcy8qL2NvbnRlbnQvKip9OmdldElhbVBvbGljeRLuAQoM",
             "U2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1",
             "ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiogGC0+STApsBIkovdjEve3Jl",
             "c291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKi9jb250ZW50",
@@ -93,9 +93,9 @@ namespace Google.Cloud.Dataplex.V1 {
             "LyoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASoS7QEKC0xpc3RDb250ZW50Eiwu",
             "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RDb250ZW50UmVxdWVzdBot",
             "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0Q29udGVudFJlc3BvbnNl",
-            "IoABgtPkkwJxEjgvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2xha2VzLyp9L2NvbnRlbnRpdGVtc1o1EjMvdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2xha2VzLyp9L2NvbnRlbnTaQQZwYXJlbnQaS8pB",
+            "IoAB2kEGcGFyZW50gtPkkwJxEjgvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2xha2VzLyp9L2NvbnRlbnRpdGVtc1o1EjMvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyp9L2NvbnRlbnQaS8pB",
             "F2RhdGFwbGV4Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
             "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJoChxjb20uZ29vZ2xlLmNs",
             "b3VkLmRhdGFwbGV4LnYxQgxDb250ZW50UHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
@@ -119,6 +119,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Create content request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateContentRequest : pb::IMessage<CreateContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -405,6 +406,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Update content request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateContentRequest : pb::IMessage<UpdateContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -700,6 +702,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Delete content request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteContentRequest : pb::IMessage<DeleteContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -896,6 +899,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// List content request. Returns the BASIC Content view.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListContentRequest : pb::IMessage<ListContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1225,6 +1229,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// List content response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListContentResponse : pb::IMessage<ListContentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1450,6 +1455,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Get content request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetContentRequest : pb::IMessage<GetContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

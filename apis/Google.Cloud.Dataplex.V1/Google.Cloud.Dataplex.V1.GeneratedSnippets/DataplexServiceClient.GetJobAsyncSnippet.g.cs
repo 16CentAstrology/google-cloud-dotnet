@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetJob_async_flattened]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetJobAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]/jobs/[JOB]";
             // Make the request
-            Job response = await dataplexServiceClient.GetJobAsync(name);
+            gcdv::Job response = await dataplexServiceClient.GetJobAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetJob_async_flattened]

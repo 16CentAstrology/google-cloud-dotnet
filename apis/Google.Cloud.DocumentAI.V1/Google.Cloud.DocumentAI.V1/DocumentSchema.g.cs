@@ -25,38 +25,39 @@ namespace Google.Cloud.DocumentAI.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MS9kb2N1bWVudF9zY2hlbWEu",
-            "cHJvdG8SGmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxIqcHCg5Eb2N1bWVu",
+            "cHJvdG8SGmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxIr0HCg5Eb2N1bWVu",
             "dFNjaGVtYRIUCgxkaXNwbGF5X25hbWUYASABKAkSEwoLZGVzY3JpcHRpb24Y",
             "AiABKAkSSwoMZW50aXR5X3R5cGVzGAMgAygLMjUuZ29vZ2xlLmNsb3VkLmRv",
             "Y3VtZW50YWkudjEuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJFCghtZXRh",
             "ZGF0YRgEIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3Vt",
-            "ZW50U2NoZW1hLk1ldGFkYXRhGr4ECgpFbnRpdHlUeXBlElcKC2VudW1fdmFs",
+            "ZW50U2NoZW1hLk1ldGFkYXRhGtQECgpFbnRpdHlUeXBlElcKC2VudW1fdmFs",
             "dWVzGA4gASgLMkAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1l",
             "bnRTY2hlbWEuRW50aXR5VHlwZS5FbnVtVmFsdWVzSAASFAoMZGlzcGxheV9u",
             "YW1lGA0gASgJEgwKBG5hbWUYASABKAkSEgoKYmFzZV90eXBlcxgCIAMoCRJS",
             "Cgpwcm9wZXJ0aWVzGAYgAygLMj4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
             "djEuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRocCgpFbnVt",
-            "VmFsdWVzEg4KBnZhbHVlcxgBIAMoCRqcAgoIUHJvcGVydHkSDAoEbmFtZRgB",
-            "IAEoCRISCgp2YWx1ZV90eXBlGAIgASgJEmYKD29jY3VycmVuY2VfdHlwZRgD",
-            "IAEoDjJNLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50U2No",
-            "ZW1hLkVudGl0eVR5cGUuUHJvcGVydHkuT2NjdXJyZW5jZVR5cGUihQEKDk9j",
-            "Y3VycmVuY2VUeXBlEh8KG09DQ1VSUkVOQ0VfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhEKDU9QVElPTkFMX09OQ0UQARIVChFPUFRJT05BTF9NVUxUSVBMRRACEhEK",
-            "DVJFUVVJUkVEX09OQ0UQAxIVChFSRVFVSVJFRF9NVUxUSVBMRRAEQg4KDHZh",
-            "bHVlX3NvdXJjZRqUAQoITWV0YWRhdGESGQoRZG9jdW1lbnRfc3BsaXR0ZXIY",
-            "ASABKAgSJgoeZG9jdW1lbnRfYWxsb3dfbXVsdGlwbGVfbGFiZWxzGAIgASgI",
-            "EiUKHXByZWZpeGVkX25hbWluZ19vbl9wcm9wZXJ0aWVzGAYgASgIEh4KFnNr",
-            "aXBfbmFtaW5nX3ZhbGlkYXRpb24YByABKAhC1gEKHmNvbS5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MUIYRG9jdW1lbnRBaURvY3VtZW50U2NoZW1hUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9hcGl2MS9kb2N1bWVu",
-            "dGFpcGI7ZG9jdW1lbnRhaXBiqgIaR29vZ2xlLkNsb3VkLkRvY3VtZW50QUku",
-            "VjHKAhpHb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkRvY3VtZW50QUk6OlYxYgZwcm90bzM="));
+            "VmFsdWVzEg4KBnZhbHVlcxgBIAMoCRqyAgoIUHJvcGVydHkSDAoEbmFtZRgB",
+            "IAEoCRIUCgxkaXNwbGF5X25hbWUYBiABKAkSEgoKdmFsdWVfdHlwZRgCIAEo",
+            "CRJmCg9vY2N1cnJlbmNlX3R5cGUYAyABKA4yTS5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MS5Eb2N1bWVudFNjaGVtYS5FbnRpdHlUeXBlLlByb3BlcnR5",
+            "Lk9jY3VycmVuY2VUeXBlIoUBCg5PY2N1cnJlbmNlVHlwZRIfChtPQ0NVUlJF",
+            "TkNFX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1PUFRJT05BTF9PTkNFEAESFQoR",
+            "T1BUSU9OQUxfTVVMVElQTEUQAhIRCg1SRVFVSVJFRF9PTkNFEAMSFQoRUkVR",
+            "VUlSRURfTVVMVElQTEUQBEIOCgx2YWx1ZV9zb3VyY2UalAEKCE1ldGFkYXRh",
+            "EhkKEWRvY3VtZW50X3NwbGl0dGVyGAEgASgIEiYKHmRvY3VtZW50X2FsbG93",
+            "X211bHRpcGxlX2xhYmVscxgCIAEoCBIlCh1wcmVmaXhlZF9uYW1pbmdfb25f",
+            "cHJvcGVydGllcxgGIAEoCBIeChZza2lwX25hbWluZ192YWxpZGF0aW9uGAcg",
+            "ASgIQtYBCh5jb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFCGERvY3Vt",
+            "ZW50QWlEb2N1bWVudFNjaGVtYVABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Rv",
+            "Y3VtZW50YWkvYXBpdjEvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCGkdv",
+            "b2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xlXENsb3VkXERvY3Vt",
+            "ZW50QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "BaseTypes", "Properties" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "ValueType", "OccurrenceType" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "DisplayName", "ValueType", "OccurrenceType" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.Metadata), global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.Metadata.Parser, new[]{ "DocumentSplitter", "DocumentAllowMultipleLabels", "PrefixedNamingOnProperties", "SkipNamingValidation" }, null, null, null, null)})
           }));
     }
@@ -67,6 +68,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// The schema defines the output of the processed document by a processor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentSchema : pb::IMessage<DocumentSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -385,6 +387,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// detailed attributes and limitations for entity-based processors. Multiple
       /// types can also compose a dependency tree to represent nested types.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityType : pb::IMessage<EntityType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -477,16 +480,15 @@ namespace Google.Cloud.DocumentAI.V1 {
         private string name_ = "";
         /// <summary>
         /// Name of the type. It must be unique within the schema file and
-        /// cannot be a 'Common Type'.  Besides that we use the following naming
-        /// conventions:
+        /// cannot be a "Common Type".  The following naming conventions are used:
         ///
-        /// - *use `snake_casing`*
-        /// - name matching is case-sensitive
+        /// - Use `snake_casing`.
+        /// - Name matching is case-sensitive.
         /// - Maximum 64 characters.
         /// - Must start with a letter.
         /// - Allowed characters: ASCII letters `[a-z0-9_-]`.  (For backward
         ///   compatibility internal infrastructure and tooling can handle any ascii
-        ///   character)
+        ///   character.)
         /// - The `/` is sometimes used to denote a property of a type.  For example
         ///   `line_item/amount`.  This convention is deprecated, but will still be
         ///   honored for backward compatibility.
@@ -782,6 +784,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           /// <summary>
           /// Defines the a list of enum values.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class EnumValues : pb::IMessage<EnumValues>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -966,6 +969,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           /// <summary>
           /// Defines properties that can be part of the entity type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Property : pb::IMessage<Property>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1001,6 +1005,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Property(Property other) : this() {
               name_ = other.name_;
+              displayName_ = other.displayName_;
               valueType_ = other.valueType_;
               occurrenceType_ = other.occurrenceType_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1025,6 +1030,21 @@ namespace Google.Cloud.DocumentAI.V1 {
               get { return name_; }
               set {
                 name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "display_name" field.</summary>
+            public const int DisplayNameFieldNumber = 6;
+            private string displayName_ = "";
+            /// <summary>
+            /// User defined name for the property.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string DisplayName {
+              get { return displayName_; }
+              set {
+                displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
             }
 
@@ -1076,6 +1096,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 return true;
               }
               if (Name != other.Name) return false;
+              if (DisplayName != other.DisplayName) return false;
               if (ValueType != other.ValueType) return false;
               if (OccurrenceType != other.OccurrenceType) return false;
               return Equals(_unknownFields, other._unknownFields);
@@ -1086,6 +1107,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Name.Length != 0) hash ^= Name.GetHashCode();
+              if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
               if (ValueType.Length != 0) hash ^= ValueType.GetHashCode();
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) hash ^= OccurrenceType.GetHashCode();
               if (_unknownFields != null) {
@@ -1118,6 +1140,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(24);
                 output.WriteEnum((int) OccurrenceType);
               }
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(DisplayName);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1140,6 +1166,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(24);
                 output.WriteEnum((int) OccurrenceType);
               }
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(DisplayName);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1152,6 +1182,9 @@ namespace Google.Cloud.DocumentAI.V1 {
               int size = 0;
               if (Name.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+              }
+              if (DisplayName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
               }
               if (ValueType.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ValueType);
@@ -1173,6 +1206,9 @@ namespace Google.Cloud.DocumentAI.V1 {
               }
               if (other.Name.Length != 0) {
                 Name = other.Name;
+              }
+              if (other.DisplayName.Length != 0) {
+                DisplayName = other.DisplayName;
               }
               if (other.ValueType.Length != 0) {
                 ValueType = other.ValueType;
@@ -1207,6 +1243,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                     OccurrenceType = (global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) input.ReadEnum();
                     break;
                   }
+                  case 50: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
                 }
               }
             #endif
@@ -1234,6 +1274,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                     OccurrenceType = (global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) input.ReadEnum();
                     break;
                   }
+                  case 50: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
                 }
               }
             }
@@ -1246,14 +1290,14 @@ namespace Google.Cloud.DocumentAI.V1 {
             public static partial class Types {
               /// <summary>
               /// Types of occurrences of the entity type in the document.  This
-              /// represents the number of instances of instances of an entity, not
-              /// number of mentions of an entity.  For example, a bank statement may
-              /// only have one `account_number`, but this account number may be
-              /// mentioned in several places on the document.  In this case the
-              /// 'account_number' would be considered a `REQUIRED_ONCE` entity type. If,
-              /// on the other hand, we expect a bank statement to contain the status of
-              /// multiple different accounts for the customers, the occurrence type will
-              /// be set to `REQUIRED_MULTIPLE`.
+              /// represents the number of instances, not mentions, of an entity.
+              /// For example, a bank statement might only have one
+              /// `account_number`, but this account number can be mentioned in several
+              /// places on the document.  In this case, the `account_number` is
+              /// considered a `REQUIRED_ONCE` entity type. If, on the other hand, we
+              /// expect a bank statement to contain the status of multiple different
+              /// accounts for the customers, the occurrence type is set to
+              /// `REQUIRED_MULTIPLE`.
               /// </summary>
               public enum OccurrenceType {
                 /// <summary>
@@ -1293,6 +1337,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Metadata for global schema behavior.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metadata : pb::IMessage<Metadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1344,8 +1389,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int DocumentSplitterFieldNumber = 1;
         private bool documentSplitter_;
         /// <summary>
-        /// If true, a `document` entity type can be applied to subdocument (
-        /// splitting). Otherwise, it can only be applied to the entire document
+        /// If true, a `document` entity type can be applied to subdocument
+        /// (splitting). Otherwise, it can only be applied to the entire document
         /// (classification).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

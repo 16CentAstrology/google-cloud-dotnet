@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -22,7 +22,7 @@ using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using Moq;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -119,8 +119,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             const string connOptimizerVersion = "1";
             const string connOptimizerStatisticsPackage = "stats_package_1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -136,18 +135,17 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.True(reader.HasRows);
             }
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request =>
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request =>
                     request.QueryOptions.OptimizerVersion == connOptimizerVersion &&
                     request.QueryOptions.OptimizerStatisticsPackage == connOptimizerStatisticsPackage),
-                It.IsAny<CallSettings>()), Times.Once());
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void CommandHasQueryOptionsFromEnvironment()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -166,24 +164,21 @@ namespace Google.Cloud.Spanner.Data.Tests
                     .WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = command.ExecuteReader();
+                Assert.True(reader.HasRows);
             }, envOptimizerVersion, envOptimizerStatisticsPackage);
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request =>
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request =>
                     request.QueryOptions.OptimizerVersion == envOptimizerVersion &&
                     request.QueryOptions.OptimizerStatisticsPackage == envOptimizerStatisticsPackage),
-                It.IsAny<CallSettings>()), Times.Once());
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void CommandHasQueryOptionsSetOnCommand()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -205,20 +200,94 @@ namespace Google.Cloud.Spanner.Data.Tests
                 command.QueryOptions = QueryOptions.Empty
                     .WithOptimizerVersion(cmdOptimizerVersion)
                     .WithOptimizerStatisticsPackage(cmdOptimizerStatisticsPackage);
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = command.ExecuteReader();
+                Assert.True(reader.HasRows);
             }, envOptimizerVersion, envOptimizerStatisticsPackage);
 
             // Optimizer version set at a command level has higher precedence
             // than version set through the connection or the environment
             // variable.
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request =>
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request =>
                     request.QueryOptions.OptimizerVersion == cmdOptimizerVersion &&
                     request.QueryOptions.OptimizerStatisticsPackage == cmdOptimizerStatisticsPackage),
-            It.IsAny<CallSettings>()), Times.Once());
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void ExecuteSqlRequestHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void ReadRequestHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateReadCommand("FOO", ReadOptions.FromColumns("Col1", "Col2"), KeySet.All);
+            command.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task PartitionHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupPartitionAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
+            command.Transaction = transaction;
+            var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10));
+
+            // Normally we would send this information to another client to read, but we are just simulating it here
+            // by serializing and deserializing the information locally.
+            var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+            foreach (var partition in partitions)
+            {
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
+                var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
+                cmd.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+                using var reader = await cmd.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(10).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -244,11 +313,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommitPriorityDefaultsToUnspecified()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync();
+                .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
             Assert.Equal(Priority.Unspecified, transaction.CommitPriority);
@@ -258,8 +325,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandIncludesPriority()
         {
             var priority = Priority.High;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -271,21 +337,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void CommitIncludesPriority()
+        public async Task CommitIncludesPriority()
         {
             var commitPriority = Priority.Medium;
             var commandPriority = Priority.High;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -301,23 +365,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commandPriority)),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commitPriority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commandPriority)),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commitPriority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void CommitPriorityCanBeSetAfterCommandExecution()
+        public async Task CommitPriorityCanBeSetAfterCommandExecution()
         {
             var priority = Priority.Medium;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -334,32 +396,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             transaction.CommitPriority = priority;
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void CommitPriorityCannotBeSetForReadOnlyTransaction()
+        public async Task CommitPriorityCannotBeSetForReadOnlyTransaction()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync();
+                .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.CommitPriority = Priority.High);
         }
 
         [Fact]
-        public void PriorityCanBeSetToUnspecified()
+        public async Task PriorityCanBeSetToUnspecified()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -375,52 +433,47 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void RunWithRetryableTransactionWithCommitPriority()
+        public async Task RunWithRetryableTransactionWithCommitPriority()
         {
             var priority = Priority.Low;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
                 .SetupRollbackAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
 
-            connection.RunWithRetriableTransaction(tx =>
+            await connection.RunWithRetriableTransactionAsync(async tx =>
             {
                 tx.CommitPriority = priority;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
             });
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
-                It.IsAny<CallSettings>()), Times.Exactly(2));
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Exactly(2));
+            spannerClientMock.Received(2).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(2).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MutationCommandIncludesPriority()
+        public async Task MutationCommandIncludesPriority()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -431,16 +484,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = Priority.High;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.High),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.High),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void PdmlCommandIncludesPriority()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -451,20 +503,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = Priority.Low;
             command.ExecutePartitionedUpdate();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Low),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Low),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
+        public async Task EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
         {
             var priority = Priority.Medium;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.RowCountExact)
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -473,12 +523,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = priority;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -497,8 +547,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandIncludesRequestTag()
         {
             var tag = "tag-1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -510,22 +559,20 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == tag && request.RequestOptions.TransactionTag == ""),
-                It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == tag && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void CommandIncludesRequestAndTransactionTag()
+        public async Task CommandIncludesRequestAndTransactionTag()
         {
             var requestTag1 = "request-tag-1";
             var requestTag2 = "request-tag-2";
             var transactionTag = "transaction-tag-1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -557,29 +604,27 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == requestTag1 && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == requestTag2 && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == requestTag1 && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == requestTag2 && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void TransactionTagCannotBeSetAfterCommandExecution()
+        public async Task TransactionTagCannotBeSetAfterCommandExecution()
         {
             var transactionTag = "transaction-tag-1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -596,35 +641,31 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void TransactionTagCannotBeSetForReadOnlyTransaction()
+        public async Task TransactionTagCannotBeSetForReadOnlyTransaction()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync();
+                .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.Tag = "transaction-tag-1");
         }
 
         [Fact]
-        public void TagsCanBeSetToNull()
+        public async Task TagsCanBeSetToNull()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -640,58 +681,517 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void RunWithRetryableTransactionWithTransactionTag()
+        public async Task RunWithRetryableTransactionWithTransactionTag()
         {
             var transactionTag = "retryable-tx-tag";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteStreamingSql()
                 .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
                 .SetupRollbackAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
 
-            connection.RunWithRetriableTransaction(tx =>
+            await connection.RunWithRetriableTransactionAsync(async tx =>
             {
                 tx.Tag = transactionTag;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 command.Tag = null;
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
             });
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Exactly(2));
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Exactly(2));
+            spannerClientMock.Received(2).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(2).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+        }
+
+        public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues => SpannerTransactionTests.ValidMaxCommitDelayValues;
+
+        public static TheoryData<TimeSpan?> InvalidMaxCommitDelayValues => SpannerTransactionTests.InvalidMaxCommitDelayValues;
+
+        [Fact]
+        public void MaxCommitDelay_DefaultsToNull()
+        {
+            var command = new SpannerCommand();
+
+            Assert.Null(command.MaxCommitDelay);
+        }
+
+        [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
+        public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
+        {
+            var command = new SpannerCommand();
+
+            command.MaxCommitDelay = maxCommitDelay;
+
+            Assert.Equal(maxCommitDelay, command.MaxCommitDelay);
+        }
+
+        [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
+        public void MaxCommitDelay_Invalid(TimeSpan? maxCommitDelay)
+        {
+            var command = new SpannerCommand();
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => command.MaxCommitDelay = maxCommitDelay);
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_DefaultsToNull_ExplicitTransaction()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_Propagates_ExplicitTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.MaxCommitDelay = maxCommitDelay;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_CanBeSetAfterCommandExecution_ExplicitTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.MaxCommitDelay = maxCommitDelay;
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_Propagates_RunWithRetryableTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
+                .SetupRollbackAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
+
+            await connection.RunWithRetriableTransactionAsync(async tx =>
+            {
+                tx.MaxCommitDelay = maxCommitDelay;
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                command.Transaction = tx;
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
+            });
+
+            await spannerClientMock.Received(2).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_DefaultsToNull_ImplicitTransaction()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateInsertCommand("FOO");
+            command.ExecuteNonQuery();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_Propagates_ImplicitTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateInsertCommand("FOO");
+            command.MaxCommitDelay = maxCommitDelay;
+            command.ExecuteNonQuery();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_SetOnExplicitTransaction_CommandIgnored()
+        {
+            var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.MaxCommitDelay = transactionMaxCommitDelay;
+
+            var command = connection.CreateInsertCommand("FOO");
+            command.Transaction = transaction;
+            command.MaxCommitDelay = commandMaxCommitDelay;
+
+            command.ExecuteNonQuery();
+
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnExplicitTransaction_CommandIgnored()
+        {
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = connection.CreateInsertCommand("FOO");
+            command.Transaction = transaction;
+            command.MaxCommitDelay = commandMaxCommitDelay;
+
+            command.ExecuteNonQuery();
+
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_DefaultsToNull_AmbientTransaction()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open();
+                var command = connection.CreateInsertCommand("FOO");
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_Propagates_AmbientTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay});
+                var command = connection.CreateInsertCommand("FOO");
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_SetOnAmbientTransaction_CommandIgnored()
+        {
+            var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
+                var command = connection.CreateInsertCommand("FOO");
+                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnAmbientTransaction_CommandIgnored()
+        {
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open();
+                var command = connection.CreateInsertCommand("FOO");
+                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_ExplicitTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(transactionCreationOptions, cancellationToken: default);
+
+            var command = connection.CreateDmlCommand("DELETE FROM Foo");
+            command.Transaction = transaction;
+            await command.ExecuteNonQueryAsync();
+
+            transaction.Commit();
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_RunWithRetryableTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            await connection.RunWithRetriableTransactionAsync(async tx =>
+            {
+                var command = connection.CreateDmlCommand("DELETE FROM Foo");
+                command.Transaction = tx;
+                await command.ExecuteNonQueryAsync();
+            }, transactionCreationOptions, cancellationToken: default);
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_ImplicitTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("DELETE FROM Foo");
+            command.EphemeralTransactionCreationOptions = transactionCreationOptions;
+            await command.ExecuteNonQueryAsync();
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_AmbientTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                await connection.OpenAsync(transactionCreationOptions, options: null, cancellationToken: default);
+                var command = connection.CreateDmlCommand("DELETE FROM Foo");
+                await command.ExecuteNonQueryAsync();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
-            spannerClientMock
+            SpannerClient spannerClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClient
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
 
-            var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions
             {
                 MaintenanceLoopDelay = TimeSpan.Zero
@@ -719,16 +1219,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.IsAny<ExecuteSqlRequest>(),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClient.Received(1).ExecuteStreamingSql(
+                Arg.Any<ExecuteSqlRequest>(),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void ExecuteReaderHasResourceHeader()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
@@ -740,16 +1239,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.IsAny<ExecuteSqlRequest>(),
-                It.Is<CallSettings>(settings => HasResourcePrefixHeader(settings))), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Any<ExecuteSqlRequest>(),
+                Arg.Is<CallSettings>(settings => HasResourcePrefixHeader(settings)));
         }
 
         [Fact]
         public void PdmlRetriedOnEosError()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -760,16 +1258,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateDmlCommand("UPDATE abc SET xyz = 1 WHERE Id > 1");
             long rowCount = command.ExecutePartitionedUpdate();
             Assert.True(rowCount > 0);
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.IsAny<ExecuteSqlRequest>(),
-                It.IsAny<CallSettings>()), Times.Exactly(3));
+            spannerClientMock.Received(3).ExecuteStreamingSql(
+                Arg.Any<ExecuteSqlRequest>(),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task ParallelMutationCommandsOnAmbientTransaction_OnlyCreateOneSpannerTransactionAsync()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -788,11 +1285,10 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.IsAny<CommitRequest>(), It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.Mutations.Count == 3),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).CommitAsync(Arg.Any<CommitRequest>(), Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.Mutations.Count == 3),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -825,6 +1321,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"string", SpannerDbType.String, "test"},
                     {"bytes", SpannerDbType.Bytes, new byte[] {1, 2, 3}},
                     {"int64", SpannerDbType.Int64, "10"},
+                    {"float32", SpannerDbType.Float32, 2.718f},
                     {"float64", SpannerDbType.Float64, 3.14},
                     {"numeric", SpannerDbType.Numeric, SpannerNumeric.Parse("6.626")},
                     {"pgnumeric", SpannerDbType.PgNumeric, PgNumeric.Parse("16.626")},
@@ -834,18 +1331,17 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.Table == "Foo"),
-                It.IsAny<CallSettings>()));
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.Columns.Equals(new RepeatedField<string> { "Col1", "Col2" })),
-                It.IsAny<CallSettings>()));
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys = {  new ListValue{ Values =
+            spannerClientMock.Received().StreamingRead(
+                Arg.Is<ReadRequest>(request => request.Table == "Foo"), Arg.Any<CallSettings>());
+            spannerClientMock.Received().StreamingRead(
+                Arg.Is<ReadRequest>(request => request.Columns.Equals(new RepeatedField<string> { "Col1", "Col2" })), Arg.Any<CallSettings>());
+            spannerClientMock.Received().StreamingRead(
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys = {  new ListValue { Values =
                 {
                     new Value { StringValue = "test"},
                     new Value { StringValue = Convert.ToBase64String(new byte[] {1, 2, 3})},
                     new Value { StringValue = "10" },
+                    new Value { NumberValue = 2.718f },
                     new Value { NumberValue = 3.14 },
                     new Value { StringValue = "6.626" },
                     new Value { StringValue = "16.626" },
@@ -853,7 +1349,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new Value { StringValue = "2021-09-08T15:22:59Z" },
                     new Value { BoolValue = true },
                 } } } })),
-                It.IsAny<CallSettings>()));
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -869,16 +1365,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2"), KeySet.All);
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { All = true })),
-                It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { All = true })),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task CanExecuteReadCommandWithKeyRange()
         {
-            var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -889,20 +1384,19 @@ namespace Google.Cloud.Spanner.Data.Tests
                 KeySet.FromRanges(KeyRange.ClosedOpen(new Key("test_begin"), new Key("test_end"))));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Ranges = { new [] { new V1.KeyRange
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Ranges = { new [] { new V1.KeyRange
                 {
                     StartClosed = new ListValue { Values = { new Value { StringValue = "test_begin" } } },
                     EndOpen = new ListValue { Values = { new Value { StringValue = "test_end" } } }
                 } } } } )),
-                It.IsAny<CallSettings>()));
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task CanExecuteReadCommandWithKeyCollection()
         {
-            var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -913,21 +1407,20 @@ namespace Google.Cloud.Spanner.Data.Tests
                 KeySet.FromKeys(new Key("key1"), new Key("key2"), new Key("key3")));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys =
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys =
                 {
                     new ListValue { Values = { new Value { StringValue = "key1" } } },
                     new ListValue { Values = { new Value { StringValue = "key2" } } },
                     new ListValue { Values = { new Value { StringValue = "key3" } } },
                 } } )),
-                It.IsAny<CallSettings>()));
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task CanExecuteReadCommandWithIndex()
         {
-            var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -936,16 +1429,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithIndexName("IdxBar"), KeySet.All);
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.Index == "IdxBar"),
-                It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.Index == "IdxBar"),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task CanExecuteReadCommandWithLimit()
         {
-            var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead();
@@ -954,47 +1446,52 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => request.Limit == 10),
-                It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.Limit == 10),
+                Arg.Any<CallSettings>());
         }
 
-        [Fact]
-        public async Task CanExecuteReadPartitionedReadCommand()
+        [Theory, CombinatorialData]
+        public async Task CanExecuteReadPartitionedReadCommand(bool dataBoostEnabled)
         {
-            var spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupPartitionAsync()
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
-            var partitions = await command.GetReaderPartitionsAsync(0, 10);
+            var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10).WithDataBoostEnabled(dataBoostEnabled));
+
+            Assert.Equal(dataBoostEnabled, CommandPartition.FromBase64String(partitions.FirstOrDefault().ToBase64String()).Request.DataBoostEnabled);
+
+            // Normally we would send this information to another client to read, but we are just simulating it here
+            // by serializing and deserializing the information locally.
+            var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
             foreach (var partition in partitions)
             {
-                // Normally we would send this information to another client to read, but we are just simulating it here
-                // by serializing and deserializing the information locally.
-                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
                 var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
                 var reader = await cmd.ExecuteReaderAsync();
                 Assert.True(reader.HasRows);
             }
 
-            spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => !request.PartitionToken.IsEmpty && object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
-                It.IsAny<CallSettings>()), Times.Exactly(10));
+            spannerClientMock.Received(10).StreamingRead(
+                Arg.Is<ReadRequest>(request =>
+                    !request.PartitionToken.IsEmpty &&
+                    request.DataBoostEnabled == dataBoostEnabled &&
+                    object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
+                Arg.Any<CallSettings>());
         }
 
         public static IEnumerable<object[]> ConfiguredSpannerDbTypes()
         {
             // Format : ClrToSpannerTypeDefaultMappings value, Parameter value, expected SpannerDbType.
             // Decimal mappings.
-            yield return new object[] { default, 3.14m, SpannerDbType.Float64 };
+            yield return new object[] { default, 3.14m, SpannerDbType.Numeric };
             yield return new object[] { DecimalToFloat64, 3.14m, SpannerDbType.Float64 };
             yield return new object[] { DecimalToNumeric, 3.14m, SpannerDbType.Numeric };
             yield return new object[] { DecimalToPgNumeric, 3.14m, SpannerDbType.PgNumeric };
@@ -1057,8 +1554,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private Struct RunExecuteStreamingSqlWithParameter(SpannerConnectionStringBuilder builder, SpannerParameter parameter)
         {
             var request = new ExecuteSqlRequest();
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql(request);
@@ -1069,9 +1565,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Parameters.Add(parameter);
             using var reader = command.ExecuteReader();
             Assert.True(reader.HasRows);
-            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
-                It.IsAny<ExecuteSqlRequest>(),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Any<ExecuteSqlRequest>(),
+                Arg.Any<CallSettings>());
             return request.Params;
         }
 
@@ -1079,8 +1575,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private ListValue RunReadRequest(SpannerConnectionStringBuilder builder, SpannerDbType dbType, object value)
         {
             var request = new ReadRequest();
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupStreamingRead(request);
@@ -1091,30 +1586,30 @@ namespace Google.Cloud.Spanner.Data.Tests
                  "Foo", ReadOptions.FromColumns(new List<string> { "Col1" }),
                  KeySet.FromParameters(new SpannerParameterCollection
                      {
-                        { "p", dbType, value } 
+                        { "p", dbType, value }
                      }));
             using var reader = command.ExecuteReader();
             Assert.True(reader.HasRows);
             // Handle the cases of Float64 and Date for now.
             Value val = dbType == SpannerDbType.Float64 ? Value.ForNumber((double)value) : Value.ForString((string)value);
-            spannerClientMock.Verify(client => client.StreamingRead(It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
-            {
-                Keys = { new ListValue { Values = { val } } }
-            })),
-            It.IsAny<CallSettings>()));
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
+                {
+                    Keys = { new ListValue { Values = { val } } }
+                })),
+                Arg.Any<CallSettings>());
             return request.KeySet.Keys[0];
         }
 
-        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock) =>
+        internal static SpannerConnection BuildSpannerConnection(SpannerClient spannerClientMock) =>
             BuildSpannerConnection(spannerClientMock, new SpannerConnectionStringBuilder());
 
         /// <summary>
         /// Builds a spanner connection based on the given mock and connection string builder.
         /// The connection string builder will be mutated during the course of this method.
         /// </summary>
-        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock, SpannerConnectionStringBuilder builder)
+        internal static SpannerConnection BuildSpannerConnection(SpannerClient spannerClient, SpannerConnectionStringBuilder builder)
         {
-            var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions
             {
                 MaintenanceLoopDelay = TimeSpan.Zero
@@ -1123,7 +1618,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
-            
+
             builder.DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database);
             builder.SessionPoolManager = sessionPoolManager;
             return new SpannerConnection(builder);

@@ -57,6 +57,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Provides details for errors and the corresponding resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceErrorDetail : pb::IMessage<ResourceErrorDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// Provides details for errors, e.g. issues that where encountered when
   /// processing a subtask.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorDetail : pb::IMessage<ErrorDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -586,6 +588,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Holds information about where the error is located.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorLocation : pb::IMessage<ErrorLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

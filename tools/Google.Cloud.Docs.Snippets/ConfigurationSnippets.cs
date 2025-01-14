@@ -24,26 +24,16 @@ public class ConfigurationSnippets
     // Note: If you change this sample, please also change the sample
     // in Google.Cloud.Language.V1.Snippets.
     [Fact]
-    public void LanguageApiKey()
+    public void ApiKey_Simple()
     {
         string apiKey = "some-api-key";
 
-        // Sample: ApiKey
-        // Create a LanguageServiceSettings that applies the X-Goog-Api-Key
-        // header on every request
-        LanguageServiceSettings settings = new LanguageServiceSettings
-        {
-            CallSettings = CallSettings.FromHeader("X-Goog-Api-Key", apiKey)
-        };
-
-        // Create a LanguageServiceClient which uses the settings to apply
-        // the API key to every request. The ChannelCredentials are set to
-        // just SSL; we don't authenticate at the channel level when
-        // applying API keys.
+        // Sample: ApiKey_Simple
+        // Create a LanguageServiceClient which uses the given API key
+        // instead of regular credentials.
         LanguageServiceClient client = new LanguageServiceClientBuilder
         {
-            ChannelCredentials = ChannelCredentials.SecureSsl,
-            Settings = settings
+            ApiKey = apiKey
         }.Build();
         // End sample
 

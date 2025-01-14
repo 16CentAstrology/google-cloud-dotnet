@@ -62,23 +62,23 @@ namespace Google.Cloud.VpcAccess.V1 {
             "IAEoCUIq4EED+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVj",
             "dG9yMvwGChBWcGNBY2Nlc3NTZXJ2aWNlEugBCg9DcmVhdGVDb25uZWN0b3IS",
             "MS5nb29nbGUuY2xvdWQudnBjYWNjZXNzLnYxLkNyZWF0ZUNvbm5lY3RvclJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBgtPkkwI7",
-            "Ii4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb25uZWN0",
-            "b3JzOgljb25uZWN0b3LaQR1wYXJlbnQsY29ubmVjdG9yX2lkLGNvbm5lY3Rv",
-            "cspBHgoJQ29ubmVjdG9yEhFPcGVyYXRpb25NZXRhZGF0YRKjAQoMR2V0Q29u",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBykEeCglD",
+            "b25uZWN0b3ISEU9wZXJhdGlvbk1ldGFkYXRh2kEdcGFyZW50LGNvbm5lY3Rv",
+            "cl9pZCxjb25uZWN0b3KC0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2Nvbm5lY3RvcnM6CWNvbm5lY3RvchKjAQoMR2V0Q29u",
             "bmVjdG9yEi4uZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5HZXRDb25uZWN0",
             "b3JSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5Db25uZWN0",
-            "b3IiPYLT5JMCMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "Y29ubmVjdG9ycy8qfdpBBG5hbWUStgEKDkxpc3RDb25uZWN0b3JzEjAuZ29v",
+            "b3IiPdpBBG5hbWWC0+STAjASLi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2Nvbm5lY3RvcnMvKn0StgEKDkxpc3RDb25uZWN0b3JzEjAuZ29v",
             "Z2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5MaXN0Q29ubmVjdG9yc1JlcXVlc3Qa",
             "MS5nb29nbGUuY2xvdWQudnBjYWNjZXNzLnYxLkxpc3RDb25uZWN0b3JzUmVz",
-            "cG9uc2UiP4LT5JMCMBIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0vY29ubmVjdG9yc9pBBnBhcmVudBLPAQoPRGVsZXRlQ29ubmVjdG9y",
+            "cG9uc2UiP9pBBnBhcmVudILT5JMCMBIuL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vY29ubmVjdG9ycxLPAQoPRGVsZXRlQ29ubmVjdG9y",
             "EjEuZ29vZ2xlLmNsb3VkLnZwY2FjY2Vzcy52MS5EZWxldGVDb25uZWN0b3JS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJqgtPkkwIw",
-            "Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0b3Jz",
-            "Lyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRp",
-            "b25NZXRhZGF0YRpMykEYdnBjYWNjZXNzLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJqykEqChVn",
+            "b29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh2kEEbmFt",
+            "ZYLT5JMCMCouL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29u",
+            "bmVjdG9ycy8qfRpMykEYdnBjYWNjZXNzLmdvb2dsZWFwaXMuY29t0kEuaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULF",
             "AQodY29tLmdvb2dsZS5jbG91ZC52cGNhY2Nlc3MudjFCDlZwY0FjY2Vzc1By",
             "b3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vdnBjYWNjZXNzL2FwaXYxL3Zw",
@@ -104,6 +104,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Definition of a Serverless VPC Access connector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Connector : pb::IMessage<Connector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -731,6 +732,7 @@ namespace Google.Cloud.VpcAccess.V1 {
       /// <summary>
       /// The subnet in which to house the connector
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Subnet : pb::IMessage<Subnet>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -976,6 +978,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Request for creating a Serverless VPC Access connector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateConnectorRequest : pb::IMessage<CreateConnectorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1261,6 +1264,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Request for getting a Serverless VPC Access connector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetConnectorRequest : pb::IMessage<GetConnectorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1456,6 +1460,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Request for listing Serverless VPC Access connectors in a location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectorsRequest : pb::IMessage<ListConnectorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1731,6 +1736,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Response for listing Serverless VPC Access connectors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectorsResponse : pb::IMessage<ListConnectorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1961,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Request for deleting a Serverless VPC Access connector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteConnectorRequest : pb::IMessage<DeleteConnectorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2150,6 +2157,7 @@ namespace Google.Cloud.VpcAccess.V1 {
   /// <summary>
   /// Metadata for google.longrunning.Operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (var connection = _fixture.GetConnection())
                 {
-                    await connection.OpenAsReadOnlyAsync();
+                    await connection.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
                     AssertReadLatestValue(connection);
                     scope.Complete();
                 }
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (var connection = _fixture.GetConnection())
                 {
-                    connection.OpenAsReadOnly();
+                    connection.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
                     AssertReadLatestValue(connection);
                     scope.Complete();
                 }
@@ -136,8 +136,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var readConnection1 = _fixture.GetConnection())
             using (var readConnection2 = _fixture.GetConnection())
             {
-                await readConnection1.OpenAsReadOnlyAsync();
-                await readConnection2.OpenAsReadOnlyAsync();
+                await readConnection1.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
+                await readConnection2.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
 
                 await AssertReadLatestValueAsync(readConnection1);
                 await AssertReadLatestValueAsync(readConnection2);
@@ -152,8 +152,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var readConnection1 = _fixture.GetConnection())
             using (var readConnection2 = _fixture.GetConnection())
             {
-                readConnection1.OpenAsReadOnly();
-                readConnection2.OpenAsReadOnly();
+                readConnection1.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
+                readConnection2.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
 
                 AssertReadLatestValue(readConnection1);
                 AssertReadLatestValue(readConnection2);
@@ -169,7 +169,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var readConnection = _fixture.GetConnection())
                 using (var writeConnection = _fixture.GetConnection())
                 {
-                    await readConnection.OpenAsReadOnlyAsync();
+                    await readConnection.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
                     await writeConnection.OpenAsync();
 
                     await AssertReadLatestValueAsync(readConnection);
@@ -187,7 +187,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var readConnection = _fixture.GetConnection())
                 using (var writeConnection = _fixture.GetConnection())
                 {
-                    readConnection.OpenAsReadOnly();
+                    readConnection.OpenAsync(SpannerTransactionCreationOptions.ReadOnly, options: null, cancellationToken: default);
                     writeConnection.Open();
 
                     AssertReadLatestValue(readConnection);

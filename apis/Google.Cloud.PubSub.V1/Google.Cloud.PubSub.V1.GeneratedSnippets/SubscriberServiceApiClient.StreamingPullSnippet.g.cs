@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_StreamingPull_sync]
+    // [START pubsub_v1_generated_Subscriber_StreamingPull_sync]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
@@ -36,7 +36,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
+            using SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -82,5 +82,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
             await responseHandlerTask;
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_StreamingPull_sync]
+    // [END pubsub_v1_generated_Subscriber_StreamingPull_sync]
 }

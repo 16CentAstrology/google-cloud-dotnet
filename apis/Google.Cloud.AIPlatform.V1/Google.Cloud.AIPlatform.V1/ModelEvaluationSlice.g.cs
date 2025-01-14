@@ -80,6 +80,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A collection of metrics calculated by comparing Model's predictions on a
   /// slice of the test data against ground truth annotations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelEvaluationSlice : pb::IMessage<ModelEvaluationSlice>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,6 +524,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Definition of a slice.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Slice : pb::IMessage<Slice>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -818,6 +820,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Specification for how the data should be sliced.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class SliceSpec : pb::IMessage<SliceSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -956,7 +959,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               if (other == null) {
                 return;
               }
-              configs_.Add(other.configs_);
+              configs_.MergeFrom(other.configs_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -1062,6 +1065,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// "Canada" in another slice, and zip_code 12345 and country "Mexico" in
               /// another slice, totaling 3 slices.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class SliceConfig : pb::IMessage<SliceConfig>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1404,6 +1408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// A range of values for slice(s).
               /// `low` is inclusive, `high` is exclusive.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Range : pb::IMessage<Range>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1639,6 +1644,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// <summary>
               /// Single value that supports strings and floats.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Value : pb::IMessage<Value>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1699,10 +1705,24 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string StringValue {
-                  get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
+                  get { return HasStringValue ? (string) kind_ : ""; }
                   set {
                     kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                     kindCase_ = KindOneofCase.StringValue;
+                  }
+                }
+                /// <summary>Gets whether the "string_value" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasStringValue {
+                  get { return kindCase_ == KindOneofCase.StringValue; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearStringValue() {
+                  if (HasStringValue) {
+                    ClearKind();
                   }
                 }
 
@@ -1714,10 +1734,24 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public float FloatValue {
-                  get { return kindCase_ == KindOneofCase.FloatValue ? (float) kind_ : 0F; }
+                  get { return HasFloatValue ? (float) kind_ : 0F; }
                   set {
                     kind_ = value;
                     kindCase_ = KindOneofCase.FloatValue;
+                  }
+                }
+                /// <summary>Gets whether the "float_value" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasFloatValue {
+                  get { return kindCase_ == KindOneofCase.FloatValue; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "float_value" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearFloatValue() {
+                  if (HasFloatValue) {
+                    ClearKind();
                   }
                 }
 
@@ -1767,8 +1801,8 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
-                  if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-                  if (kindCase_ == KindOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
+                  if (HasStringValue) hash ^= StringValue.GetHashCode();
+                  if (HasFloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
                   hash ^= (int) kindCase_;
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
@@ -1788,11 +1822,11 @@ namespace Google.Cloud.AIPlatform.V1 {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
                 #else
-                  if (kindCase_ == KindOneofCase.StringValue) {
+                  if (HasStringValue) {
                     output.WriteRawTag(10);
                     output.WriteString(StringValue);
                   }
-                  if (kindCase_ == KindOneofCase.FloatValue) {
+                  if (HasFloatValue) {
                     output.WriteRawTag(21);
                     output.WriteFloat(FloatValue);
                   }
@@ -1806,11 +1840,11 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-                  if (kindCase_ == KindOneofCase.StringValue) {
+                  if (HasStringValue) {
                     output.WriteRawTag(10);
                     output.WriteString(StringValue);
                   }
-                  if (kindCase_ == KindOneofCase.FloatValue) {
+                  if (HasFloatValue) {
                     output.WriteRawTag(21);
                     output.WriteFloat(FloatValue);
                   }
@@ -1824,10 +1858,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
-                  if (kindCase_ == KindOneofCase.StringValue) {
+                  if (HasStringValue) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
                   }
-                  if (kindCase_ == KindOneofCase.FloatValue) {
+                  if (HasFloatValue) {
                     size += 1 + 4;
                   }
                   if (_unknownFields != null) {

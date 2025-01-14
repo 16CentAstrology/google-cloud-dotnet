@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -203,14 +203,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return UptimeCheckServiceClient.Create(callInvoker, Settings, Logger);
+            return UptimeCheckServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<UptimeCheckServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return UptimeCheckServiceClient.Create(callInvoker, Settings, Logger);
+            return UptimeCheckServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -220,13 +220,13 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>UptimeCheckService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The UptimeCheckService API is used to manage (list, create, delete, edit)
-    /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+    /// Uptime check configurations in the Cloud Monitoring product. An Uptime
     /// check is a piece of configuration that determines which resources and
     /// services to monitor for availability. These configurations can also be
-    /// configured interactively by navigating to the [Cloud Console]
-    /// (http://console.cloud.google.com), selecting the appropriate project,
-    /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-    /// and then clicking on "Uptime".
+    /// configured interactively by navigating to the [Cloud console]
+    /// (https://console.cloud.google.com), selecting the appropriate project,
+    /// clicking on "Monitoring" on the left-hand side to navigate to Cloud
+    /// Monitoring, and then clicking on "Uptime".
     /// </remarks>
     public abstract partial class UptimeCheckServiceClient
     {
@@ -356,13 +356,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigs(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -385,13 +394,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigsAsync(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -414,13 +432,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigs(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -443,13 +470,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigsAsync(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -472,13 +508,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigs(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -501,13 +546,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigsAsync(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -530,13 +584,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigs(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -559,13 +622,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigsAsync(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -588,13 +660,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigs(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigs(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing valid Uptime check configurations for the project
@@ -617,13 +698,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UptimeCheckConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUptimeCheckConfigsAsync(new ListUptimeCheckConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> ListUptimeCheckConfigsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUptimeCheckConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single Uptime check configuration.
@@ -1171,7 +1261,7 @@ namespace Google.Cloud.Monitoring.V3
         /// the values for the set of fields mentioned in the `updateMask`. If an
         /// `updateMask` has not been given, this Uptime check configuration replaces
         /// the current configuration. If a field is mentioned in `updateMask` but
-        /// the corresonding field is omitted in this partial Uptime check
+        /// the corresponding field is omitted in this partial Uptime check
         /// configuration, it has the effect of deleting/clearing the field from the
         /// configuration on the server.
         /// 
@@ -1198,7 +1288,7 @@ namespace Google.Cloud.Monitoring.V3
         /// the values for the set of fields mentioned in the `updateMask`. If an
         /// `updateMask` has not been given, this Uptime check configuration replaces
         /// the current configuration. If a field is mentioned in `updateMask` but
-        /// the corresonding field is omitted in this partial Uptime check
+        /// the corresponding field is omitted in this partial Uptime check
         /// configuration, it has the effect of deleting/clearing the field from the
         /// configuration on the server.
         /// 
@@ -1225,7 +1315,7 @@ namespace Google.Cloud.Monitoring.V3
         /// the values for the set of fields mentioned in the `updateMask`. If an
         /// `updateMask` has not been given, this Uptime check configuration replaces
         /// the current configuration. If a field is mentioned in `updateMask` but
-        /// the corresonding field is omitted in this partial Uptime check
+        /// the corresponding field is omitted in this partial Uptime check
         /// configuration, it has the effect of deleting/clearing the field from the
         /// configuration on the server.
         /// 
@@ -1425,7 +1515,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteUptimeCheckConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1434,7 +1524,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1446,13 +1536,13 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>UptimeCheckService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The UptimeCheckService API is used to manage (list, create, delete, edit)
-    /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+    /// Uptime check configurations in the Cloud Monitoring product. An Uptime
     /// check is a piece of configuration that determines which resources and
     /// services to monitor for availability. These configurations can also be
-    /// configured interactively by navigating to the [Cloud Console]
-    /// (http://console.cloud.google.com), selecting the appropriate project,
-    /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-    /// and then clicking on "Uptime".
+    /// configured interactively by navigating to the [Cloud console]
+    /// (https://console.cloud.google.com), selecting the appropriate project,
+    /// clicking on "Monitoring" on the left-hand side to navigate to Cloud
+    /// Monitoring, and then clicking on "Uptime".
     /// </remarks>
     public sealed partial class UptimeCheckServiceClientImpl : UptimeCheckServiceClient
     {
@@ -1478,7 +1568,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             UptimeCheckServiceSettings effectiveSettings = settings ?? UptimeCheckServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListUptimeCheckConfigs = clientHelper.BuildApiCall<ListUptimeCheckConfigsRequest, ListUptimeCheckConfigsResponse>("ListUptimeCheckConfigs", grpcClient.ListUptimeCheckConfigsAsync, grpcClient.ListUptimeCheckConfigs, effectiveSettings.ListUptimeCheckConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUptimeCheckConfigs);
             Modify_ListUptimeCheckConfigsApiCall(ref _callListUptimeCheckConfigs);
@@ -1664,7 +1758,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1676,7 +1770,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

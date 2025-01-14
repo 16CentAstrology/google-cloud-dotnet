@@ -95,6 +95,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   ///           - tunnel
   ///       - logagent
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceInfo : pb::IMessage<ResourceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

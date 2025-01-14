@@ -69,27 +69,27 @@ namespace Google.Cloud.Shell.V1 {
             "VEFfRVhDRUVERUQQBRIbChdFTlZJUk9OTUVOVF9VTkFWQUlMQUJMRRAGMtQI",
             "ChFDbG91ZFNoZWxsU2VydmljZRKUAQoOR2V0RW52aXJvbm1lbnQSLC5nb29n",
             "bGUuY2xvdWQuc2hlbGwudjEuR2V0RW52aXJvbm1lbnRSZXF1ZXN0GiIuZ29v",
-            "Z2xlLmNsb3VkLnNoZWxsLnYxLkVudmlyb25tZW50IjCC0+STAiMSIS92MS97",
-            "bmFtZT11c2Vycy8qL2Vudmlyb25tZW50cy8qfdpBBG5hbWUSzAEKEFN0YXJ0",
+            "Z2xlLmNsb3VkLnNoZWxsLnYxLkVudmlyb25tZW50IjDaQQRuYW1lgtPkkwIj",
+            "EiEvdjEve25hbWU9dXNlcnMvKi9lbnZpcm9ubWVudHMvKn0SzAEKEFN0YXJ0",
             "RW52aXJvbm1lbnQSLi5nb29nbGUuY2xvdWQuc2hlbGwudjEuU3RhcnRFbnZp",
             "cm9ubWVudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "ImmC0+STAiwiJy92MS97bmFtZT11c2Vycy8qL2Vudmlyb25tZW50cy8qfTpz",
-            "dGFydDoBKspBNAoYU3RhcnRFbnZpcm9ubWVudFJlc3BvbnNlEhhTdGFydEVu",
-            "dmlyb25tZW50TWV0YWRhdGES4AEKFEF1dGhvcml6ZUVudmlyb25tZW50EjIu",
+            "ImnKQTQKGFN0YXJ0RW52aXJvbm1lbnRSZXNwb25zZRIYU3RhcnRFbnZpcm9u",
+            "bWVudE1ldGFkYXRhgtPkkwIsIicvdjEve25hbWU9dXNlcnMvKi9lbnZpcm9u",
+            "bWVudHMvKn06c3RhcnQ6ASoS4AEKFEF1dGhvcml6ZUVudmlyb25tZW50EjIu",
             "Z29vZ2xlLmNsb3VkLnNoZWxsLnYxLkF1dGhvcml6ZUVudmlyb25tZW50UmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24idYLT5JMCMCIr",
-            "L3YxL3tuYW1lPXVzZXJzLyovZW52aXJvbm1lbnRzLyp9OmF1dGhvcml6ZToB",
-            "KspBPAocQXV0aG9yaXplRW52aXJvbm1lbnRSZXNwb25zZRIcQXV0aG9yaXpl",
-            "RW52aXJvbm1lbnRNZXRhZGF0YRLKAQoMQWRkUHVibGljS2V5EiouZ29vZ2xl",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24idcpBPAocQXV0",
+            "aG9yaXplRW52aXJvbm1lbnRSZXNwb25zZRIcQXV0aG9yaXplRW52aXJvbm1l",
+            "bnRNZXRhZGF0YYLT5JMCMCIrL3YxL3tuYW1lPXVzZXJzLyovZW52aXJvbm1l",
+            "bnRzLyp9OmF1dGhvcml6ZToBKhLKAQoMQWRkUHVibGljS2V5EiouZ29vZ2xl",
             "LmNsb3VkLnNoZWxsLnYxLkFkZFB1YmxpY0tleVJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm+C0+STAjoiNS92MS97ZW52aXJvbm1l",
-            "bnQ9dXNlcnMvKi9lbnZpcm9ubWVudHMvKn06YWRkUHVibGljS2V5OgEqykEs",
-            "ChRBZGRQdWJsaWNLZXlSZXNwb25zZRIUQWRkUHVibGljS2V5TWV0YWRhdGES",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm/KQSwKFEFkZFB1YmxpY0tleVJlc3Bv",
+            "bnNlEhRBZGRQdWJsaWNLZXlNZXRhZGF0YYLT5JMCOiI1L3YxL3tlbnZpcm9u",
+            "bWVudD11c2Vycy8qL2Vudmlyb25tZW50cy8qfTphZGRQdWJsaWNLZXk6ASoS",
             "2QEKD1JlbW92ZVB1YmxpY0tleRItLmdvb2dsZS5jbG91ZC5zaGVsbC52MS5S",
             "ZW1vdmVQdWJsaWNLZXlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJ4gtPkkwI9IjgvdjEve2Vudmlyb25tZW50PXVzZXJzLyovZW52",
-            "aXJvbm1lbnRzLyp9OnJlbW92ZVB1YmxpY0tleToBKspBMgoXUmVtb3ZlUHVi",
-            "bGljS2V5UmVzcG9uc2USF1JlbW92ZVB1YmxpY0tleU1ldGFkYXRhGk3KQRlj",
+            "ZXJhdGlvbiJ4ykEyChdSZW1vdmVQdWJsaWNLZXlSZXNwb25zZRIXUmVtb3Zl",
+            "UHVibGljS2V5TWV0YWRhdGGC0+STAj0iOC92MS97ZW52aXJvbm1lbnQ9dXNl",
+            "cnMvKi9lbnZpcm9ubWVudHMvKn06cmVtb3ZlUHVibGljS2V5OgEqGk3KQRlj",
             "bG91ZHNoZWxsLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
             "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJfChljb20uZ29vZ2xlLmNs",
             "b3VkLnNoZWxsLnYxQg9DbG91ZFNoZWxsUHJvdG9QAVovY2xvdWQuZ29vZ2xl",
@@ -126,6 +126,7 @@ namespace Google.Cloud.Shell.V1 {
   /// containing the user's data that will remain across sessions. Each user has
   /// at least an environment with the ID "default".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -683,6 +684,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [GetEnvironment][google.cloud.shell.v1.CloudShellService.GetEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -880,6 +882,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [CreateEnvironment][google.cloud.shell.v1.CloudShellService.CreateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEnvironmentMetadata : pb::IMessage<CreateEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1036,6 +1039,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [DeleteEnvironment][google.cloud.shell.v1.CloudShellService.DeleteEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEnvironmentMetadata : pb::IMessage<DeleteEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1192,6 +1196,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentRequest : pb::IMessage<StartEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1462,6 +1467,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentRequest : pb::IMessage<AuthorizeEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1790,6 +1796,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentResponse : pb::IMessage<AuthorizeEnvironmentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1946,6 +1953,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentMetadata : pb::IMessage<AuthorizeEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2102,6 +2110,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentMetadata : pb::IMessage<StartEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2345,6 +2354,7 @@ namespace Google.Cloud.Shell.V1 {
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment]
   /// once the operation is complete.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentResponse : pb::IMessage<StartEnvironmentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2550,6 +2560,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyRequest : pb::IMessage<AddPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2792,6 +2803,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyResponse : pb::IMessage<AddPublicKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2988,6 +3000,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyMetadata : pb::IMessage<AddPublicKeyMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3144,6 +3157,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyRequest : pb::IMessage<RemovePublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3381,6 +3395,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyResponse : pb::IMessage<RemovePublicKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3537,6 +3552,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyMetadata : pb::IMessage<RemovePublicKeyMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3693,6 +3709,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Cloud-shell specific information that will be included as details in failure
   /// responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudShellErrorDetails : pb::IMessage<CloudShellErrorDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

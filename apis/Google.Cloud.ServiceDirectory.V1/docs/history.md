@@ -1,5 +1,38 @@
 # Version history
 
+## Version 2.6.0, released 2024-12-06
+
+No API changes, just dependency updates.
+## Version 2.5.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.4.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.3.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 2.2.0, released 2023-08-04
+
+### New features
+
+- Added network and uid fields in Endpoint message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Added uid field to Namespace message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Added uid field to Service message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Enable Location methods ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+
+### Documentation improvements
+
+- Updated docs for ResolveServiceRequest message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Updated docs for ListServicesRequest and ListEndpointsRequest message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features

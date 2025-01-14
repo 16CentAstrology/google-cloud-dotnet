@@ -56,39 +56,39 @@ namespace Google.Cloud.Dialogflow.V2 {
             "a0ID4EEBMrQNCg5Lbm93bGVkZ2VCYXNlcxKkAgoSTGlzdEtub3dsZWRnZUJh",
             "c2VzEjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdEtub3dsZWRn",
             "ZUJhc2VzUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxp",
-            "c3RLbm93bGVkZ2VCYXNlc1Jlc3BvbnNlIp4BgtPkkwKOARImL3YyL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0va25vd2xlZGdlQmFzZXNaNBIyL3YyL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0va25vd2xlZGdlQmFzZXNaLhIsL3Yy",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0va25vd2xlZGdlQmFzZXPaQQZw",
-            "YXJlbnQSkQIKEEdldEtub3dsZWRnZUJhc2USMy5nb29nbGUuY2xvdWQuZGlh",
+            "c3RLbm93bGVkZ2VCYXNlc1Jlc3BvbnNlIp4B2kEGcGFyZW50gtPkkwKOARIm",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKn0va25vd2xlZGdlQmFzZXNaNBIyL3Yy",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0va25vd2xlZGdlQmFz",
+            "ZXNaLhIsL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0va25vd2xlZGdl",
+            "QmFzZXMSkQIKEEdldEtub3dsZWRnZUJhc2USMy5nb29nbGUuY2xvdWQuZGlh",
             "bG9nZmxvdy52Mi5HZXRLbm93bGVkZ2VCYXNlUmVxdWVzdBopLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyLktub3dsZWRnZUJhc2UinAGC0+STAo4BEiYv",
-            "djIve25hbWU9cHJvamVjdHMvKi9rbm93bGVkZ2VCYXNlcy8qfVo0EjIvdjIv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rbm93bGVkZ2VCYXNlcy8q",
-            "fVouEiwvdjIve25hbWU9cHJvamVjdHMvKi9hZ2VudC9rbm93bGVkZ2VCYXNl",
-            "cy8qfdpBBG5hbWUS2AIKE0NyZWF0ZUtub3dsZWRnZUJhc2USNi5nb29nbGUu",
+            "bG91ZC5kaWFsb2dmbG93LnYyLktub3dsZWRnZUJhc2UinAHaQQRuYW1lgtPk",
+            "kwKOARImL3YyL3tuYW1lPXByb2plY3RzLyova25vd2xlZGdlQmFzZXMvKn1a",
+            "NBIyL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova25vd2xlZGdl",
+            "QmFzZXMvKn1aLhIsL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQva25vd2xl",
+            "ZGdlQmFzZXMvKn0S2AIKE0NyZWF0ZUtub3dsZWRnZUJhc2USNi5nb29nbGUu",
             "Y2xvdWQuZGlhbG9nZmxvdy52Mi5DcmVhdGVLbm93bGVkZ2VCYXNlUmVxdWVz",
             "dBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLktub3dsZWRnZUJhc2Ui",
-            "3QGC0+STAr4BIiYvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9rbm93bGVkZ2VC",
-            "YXNlczoOa25vd2xlZGdlX2Jhc2VaRCIyL3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0va25vd2xlZGdlQmFzZXM6Dmtub3dsZWRnZV9iYXNl",
-            "Wj4iLC92Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnR9L2tub3dsZWRnZUJh",
-            "c2VzOg5rbm93bGVkZ2VfYmFzZdpBFXBhcmVudCxrbm93bGVkZ2VfYmFzZRKE",
+            "3QHaQRVwYXJlbnQsa25vd2xlZGdlX2Jhc2WC0+STAr4BIiYvdjIve3BhcmVu",
+            "dD1wcm9qZWN0cy8qfS9rbm93bGVkZ2VCYXNlczoOa25vd2xlZGdlX2Jhc2Va",
+            "RCIyL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0va25vd2xl",
+            "ZGdlQmFzZXM6Dmtub3dsZWRnZV9iYXNlWj4iLC92Mi97cGFyZW50PXByb2pl",
+            "Y3RzLyovYWdlbnR9L2tub3dsZWRnZUJhc2VzOg5rbm93bGVkZ2VfYmFzZRKE",
             "AgoTRGVsZXRlS25vd2xlZGdlQmFzZRI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
             "bG93LnYyLkRlbGV0ZUtub3dsZWRnZUJhc2VSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IpwBgtPkkwKOASomL3YyL3tuYW1lPXByb2plY3RzLyov",
-            "a25vd2xlZGdlQmFzZXMvKn1aNCoyL3YyL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyova25vd2xlZGdlQmFzZXMvKn1aLiosL3YyL3tuYW1lPXByb2pl",
-            "Y3RzLyovYWdlbnQva25vd2xlZGdlQmFzZXMvKn3aQQRuYW1lEooDChNVcGRh",
+            "b3RvYnVmLkVtcHR5IpwB2kEEbmFtZYLT5JMCjgEqJi92Mi97bmFtZT1wcm9q",
+            "ZWN0cy8qL2tub3dsZWRnZUJhc2VzLyp9WjQqMi92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2tub3dsZWRnZUJhc2VzLyp9Wi4qLC92Mi97bmFt",
+            "ZT1wcm9qZWN0cy8qL2FnZW50L2tub3dsZWRnZUJhc2VzLyp9EooDChNVcGRh",
             "dGVLbm93bGVkZ2VCYXNlEjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
             "VXBkYXRlS25vd2xlZGdlQmFzZVJlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5Lbm93bGVkZ2VCYXNlIo8CgtPkkwLrATI1L3YyL3trbm93",
-            "bGVkZ2VfYmFzZS5uYW1lPXByb2plY3RzLyova25vd2xlZGdlQmFzZXMvKn06",
-            "Dmtub3dsZWRnZV9iYXNlWlMyQS92Mi97a25vd2xlZGdlX2Jhc2UubmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tub3dsZWRnZUJhc2VzLyp9Og5rbm93",
-            "bGVkZ2VfYmFzZVpNMjsvdjIve2tub3dsZWRnZV9iYXNlLm5hbWU9cHJvamVj",
-            "dHMvKi9hZ2VudC9rbm93bGVkZ2VCYXNlcy8qfToOa25vd2xlZGdlX2Jhc2Xa",
-            "QRprbm93bGVkZ2VfYmFzZSx1cGRhdGVfbWFzaxp4ykEZZGlhbG9nZmxvdy5n",
+            "bG9nZmxvdy52Mi5Lbm93bGVkZ2VCYXNlIo8C2kEaa25vd2xlZGdlX2Jhc2Us",
+            "dXBkYXRlX21hc2uC0+STAusBMjUvdjIve2tub3dsZWRnZV9iYXNlLm5hbWU9",
+            "cHJvamVjdHMvKi9rbm93bGVkZ2VCYXNlcy8qfToOa25vd2xlZGdlX2Jhc2Va",
+            "UzJBL3YyL3trbm93bGVkZ2VfYmFzZS5uYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyova25vd2xlZGdlQmFzZXMvKn06Dmtub3dsZWRnZV9iYXNlWk0yOy92",
+            "Mi97a25vd2xlZGdlX2Jhc2UubmFtZT1wcm9qZWN0cy8qL2FnZW50L2tub3ds",
+            "ZWRnZUJhc2VzLyp9Og5rbm93bGVkZ2VfYmFzZRp4ykEZZGlhbG9nZmxvdy5n",
             "b29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
             "YXV0aC9kaWFsb2dmbG93QpsBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
@@ -124,6 +124,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Note: The `projects.agent.knowledgeBases` resource is deprecated;
   /// only use `projects.knowledgeBases`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KnowledgeBase : pb::IMessage<KnowledgeBase>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -406,6 +407,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Request message for
   /// [KnowledgeBases.ListKnowledgeBases][google.cloud.dialogflow.v2.KnowledgeBases.ListKnowledgeBases].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListKnowledgeBasesRequest : pb::IMessage<ListKnowledgeBasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -749,6 +751,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Response message for
   /// [KnowledgeBases.ListKnowledgeBases][google.cloud.dialogflow.v2.KnowledgeBases.ListKnowledgeBases].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListKnowledgeBasesResponse : pb::IMessage<ListKnowledgeBasesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -975,6 +978,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Request message for
   /// [KnowledgeBases.GetKnowledgeBase][google.cloud.dialogflow.v2.KnowledgeBases.GetKnowledgeBase].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetKnowledgeBaseRequest : pb::IMessage<GetKnowledgeBaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1173,6 +1177,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Request message for
   /// [KnowledgeBases.CreateKnowledgeBase][google.cloud.dialogflow.v2.KnowledgeBases.CreateKnowledgeBase].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateKnowledgeBaseRequest : pb::IMessage<CreateKnowledgeBaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1419,6 +1424,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Request message for
   /// [KnowledgeBases.DeleteKnowledgeBase][google.cloud.dialogflow.v2.KnowledgeBases.DeleteKnowledgeBase].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteKnowledgeBaseRequest : pb::IMessage<DeleteKnowledgeBaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1658,6 +1664,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Request message for
   /// [KnowledgeBases.UpdateKnowledgeBase][google.cloud.dialogflow.v2.KnowledgeBases.UpdateKnowledgeBase].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateKnowledgeBaseRequest : pb::IMessage<UpdateKnowledgeBaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

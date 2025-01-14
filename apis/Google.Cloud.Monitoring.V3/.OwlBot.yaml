@@ -1,5 +1,5 @@
 
-# Copyright 2023 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3
       dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3
-    - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.Tests
-      dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.Snippets
       dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Snippets
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.GeneratedSnippets

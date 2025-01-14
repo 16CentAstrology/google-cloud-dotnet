@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -152,6 +152,18 @@ namespace Google.Cloud.CloudDms.V1
         }
     }
 
+    public partial class GenerateTcpProxyScriptRequest
+    {
+        /// <summary>
+        /// <see cref="MigrationJobName"/>-typed view over the <see cref="MigrationJob"/> resource name property.
+        /// </summary>
+        public MigrationJobName MigrationJobAsMigrationJobName
+        {
+            get => string.IsNullOrEmpty(MigrationJob) ? null : MigrationJobName.Parse(MigrationJob, allowUnparsed: true);
+            set => MigrationJob = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListConnectionProfilesRequest
     {
         /// <summary>
@@ -179,11 +191,11 @@ namespace Google.Cloud.CloudDms.V1
     public partial class CreateConnectionProfileRequest
     {
         /// <summary>
-        /// <see cref="ConnectionProfileName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ConnectionProfileName ParentAsConnectionProfileName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ConnectionProfileName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -196,6 +208,273 @@ namespace Google.Cloud.CloudDms.V1
         public gccv::ConnectionProfileName ConnectionProfileName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ConnectionProfileName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreatePrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPrivateConnectionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeletePrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::PrivateConnectionName PrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetPrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::PrivateConnectionName PrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListConversionWorkspacesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CommitConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RollbackConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ApplyConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMappingRulesRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversionWorkspaceName ParentAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversionWorkspaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::MappingRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::MappingRuleName MappingRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::MappingRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SeedConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ConvertConversionWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportMappingRulesRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversionWorkspaceName ParentAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversionWorkspaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DescribeDatabaseEntitiesRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="ConversionWorkspace"/> resource name
+        /// property.
+        /// </summary>
+        public ConversionWorkspaceName ConversionWorkspaceAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(ConversionWorkspace) ? null : ConversionWorkspaceName.Parse(ConversionWorkspace, allowUnparsed: true);
+            set => ConversionWorkspace = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchBackgroundJobsRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="ConversionWorkspace"/> resource name
+        /// property.
+        /// </summary>
+        public ConversionWorkspaceName ConversionWorkspaceAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(ConversionWorkspace) ? null : ConversionWorkspaceName.Parse(ConversionWorkspace, allowUnparsed: true);
+            set => ConversionWorkspace = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DescribeConversionWorkspaceRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="ConversionWorkspace"/> resource name
+        /// property.
+        /// </summary>
+        public ConversionWorkspaceName ConversionWorkspaceAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(ConversionWorkspace) ? null : ConversionWorkspaceName.Parse(ConversionWorkspace, allowUnparsed: true);
+            set => ConversionWorkspace = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversionWorkspaceName ParentAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversionWorkspaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchStaticIpsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gagr::LocationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

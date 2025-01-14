@@ -56,6 +56,12 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public string InitiallyEmptyBucket => BucketPrefix + "-empty";
 
         /// <summary>
+        /// Name of a bucket which already exists, has no canned data, but has soft delete protection
+        /// for 24 hours.
+        /// </summary>
+        public string SoftDeleteBucket => BucketPrefix + "-soft-delete";
+
+        /// <summary>
         /// A small amount of content. Do not mutate the array.
         /// </summary>
         public byte[] SmallContent { get; } = Encoding.UTF8.GetBytes("hello, world");
@@ -154,12 +160,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Client = StorageClient.Create();
             BucketPrefix = IdGenerator.FromDateTime(prefix: "tests-", suffix: "-");
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
-            CreateBucket(SingleVersionBucket, false);
-            CreateBucket(MultiVersionBucket, true);
+            CreateBucket(SingleVersionBucket, multiVersion: false);
+            CreateBucket(MultiVersionBucket, multiVersion: true);
             CreateAndPopulateReadBucket();
-            CreateBucket(BucketBeginningWithZ, false);
-            CreateBucket(LabelsTestBucket, false);
-            CreateBucket(InitiallyEmptyBucket, false);
+            CreateBucket(BucketBeginningWithZ, multiVersion: false);
+            CreateBucket(LabelsTestBucket, multiVersion: false);
+            CreateBucket(InitiallyEmptyBucket, multiVersion: false);
+            CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -239,12 +246,19 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
                     new UploadObjectOptions { UserProject = RequesterPaysProjectId });
             }
-            
+
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion)
+        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false)
         {
-            var bucket = Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
+            var bucket = Client.CreateBucket(ProjectId,
+                new Bucket
+                {
+                    Name = name,
+                    Versioning = new Bucket.VersioningData { Enabled = multiVersion },
+                    // The minimum allowed for soft delete is 7 days.
+                    SoftDeletePolicy = softDelete ? new Bucket.SoftDeletePolicyData { RetentionDurationSeconds = (int) TimeSpan.FromDays(7).TotalSeconds } : null,
+                });
             SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
             return bucket;
@@ -273,6 +287,45 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         internal void RegisterBucketToDelete(string bucket) => _bucketsToDelete.Add(bucket);
 
         internal void UnregisterBucket(string bucket) => _bucketsToDelete.Remove(bucket);
+
+        internal Task EventuallyAsync(TimeSpan delayUntilGuaranteedConsistency, Action action) =>
+            EventuallyAsync(delayUntilGuaranteedConsistency, () =>
+            {
+                action();
+                return Task.CompletedTask;
+            });
+
+        internal async Task EventuallyAsync(TimeSpan delayUntilGuaranteedConsistency, Func<Task> action)
+        {
+            // We don't want to continue retrying past this point in time
+            // as that's meant to be the time for the change to be eventually consistent.
+            DateTimeOffset shouldSucceedAfter = DateTimeOffset.UtcNow + delayUntilGuaranteedConsistency;
+
+            // Initial backoff is 10% of the guaranteed success delay.
+            // Max backoff is 60% of the guaranteed success delay.
+            int backoffMs = (int) delayUntilGuaranteedConsistency.TotalMilliseconds / 10;
+            int maxBackoffMs = 6 * backoffMs;
+
+            bool retry;
+            do
+            {
+                // We continue to retry until we are certain we have retried at least once past the
+                // guaranteed success delay.
+                retry = DateTimeOffset.UtcNow <= shouldSucceedAfter;
+                try
+                {
+                    await action();
+                    // The operation was successful we don't need to retry further.
+                    retry = false;
+                }
+                catch (Exception) when (retry)
+                {
+                    await Task.Delay(backoffMs);
+                    backoffMs = Math.Max(2 * backoffMs, maxBackoffMs);
+                }
+
+            } while (retry);
+        }
 
         internal async Task FinishDelayTest(string testName)
         {
@@ -324,7 +377,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 _delayTestsTypeBeingRegistered = null;
             }
         }
-        
+
         internal void RegisterDelayTest(TimeSpan duration, Func<TimeSpan, Task> beforeDelay, Func<Task> afterDelay, [CallerMemberName] string initMethodName = null)
         {
             GaxPreconditions.CheckArgument(

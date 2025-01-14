@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.NetworkConnectivity.V1Alpha1
 {
@@ -363,14 +363,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return HubServiceClient.Create(callInvoker, Settings, Logger);
+            return HubServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<HubServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return HubServiceClient.Create(callInvoker, Settings, Logger);
+            return HubServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -498,13 +498,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Hub"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHubsResponse, Hub> ListHubs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHubs(new ListHubsRequest
+        public virtual gax::PagedEnumerable<ListHubsResponse, Hub> ListHubs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHubsRequest request = new ListHubsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHubs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Hubs in a given project and location.
@@ -522,13 +531,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Hub"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHubsResponse, Hub> ListHubsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHubsAsync(new ListHubsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHubsResponse, Hub> ListHubsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHubsRequest request = new ListHubsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHubsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Hubs in a given project and location.
@@ -546,13 +564,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Hub"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHubsResponse, Hub> ListHubs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHubs(new ListHubsRequest
+        public virtual gax::PagedEnumerable<ListHubsResponse, Hub> ListHubs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHubsRequest request = new ListHubsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHubs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Hubs in a given project and location.
@@ -570,13 +597,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Hub"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHubsResponse, Hub> ListHubsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHubsAsync(new ListHubsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHubsResponse, Hub> ListHubsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHubsRequest request = new ListHubsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHubsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Hub.
@@ -1138,13 +1174,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Spoke"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSpokesResponse, Spoke> ListSpokes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpokes(new ListSpokesRequest
+        public virtual gax::PagedEnumerable<ListSpokesResponse, Spoke> ListSpokes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpokesRequest request = new ListSpokesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpokes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Spokes in a given project and location.
@@ -1162,13 +1207,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Spoke"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSpokesResponse, Spoke> ListSpokesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpokesAsync(new ListSpokesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSpokesResponse, Spoke> ListSpokesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpokesRequest request = new ListSpokesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpokesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Spokes in a given project and location.
@@ -1186,13 +1240,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Spoke"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSpokesResponse, Spoke> ListSpokes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpokes(new ListSpokesRequest
+        public virtual gax::PagedEnumerable<ListSpokesResponse, Spoke> ListSpokes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpokesRequest request = new ListSpokesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpokes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Spokes in a given project and location.
@@ -1210,13 +1273,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Spoke"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSpokesResponse, Spoke> ListSpokesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSpokesAsync(new ListSpokesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSpokesResponse, Spoke> ListSpokesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSpokesRequest request = new ListSpokesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSpokesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Spoke.
@@ -1784,7 +1856,11 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1
         {
             GrpcClient = grpcClient;
             HubServiceSettings effectiveSettings = settings ?? HubServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHubOperationsSettings, logger);
             UpdateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHubOperationsSettings, logger);
             DeleteHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHubOperationsSettings, logger);

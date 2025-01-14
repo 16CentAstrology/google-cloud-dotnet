@@ -59,32 +59,32 @@ namespace Google.Cloud.Monitoring.V3 {
             "ASgJEhIKCnRvdGFsX3NpemUYAyABKAUymAgKDEdyb3VwU2VydmljZRKMAQoK",
             "TGlzdEdyb3VwcxInLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RHcm91cHNS",
             "ZXF1ZXN0GiguZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdEdyb3Vwc1Jlc3Bv",
-            "bnNlIiuC0+STAh4SHC92My97bmFtZT1wcm9qZWN0cy8qfS9ncm91cHPaQQRu",
-            "YW1lEn0KCEdldEdyb3VwEiUuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0R3Jv",
-            "dXBSZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXAiLYLT5JMC",
-            "IBIeL3YzL3tuYW1lPXByb2plY3RzLyovZ3JvdXBzLyp92kEEbmFtZRKOAQoL",
+            "bnNlIivaQQRuYW1lgtPkkwIeEhwvdjMve25hbWU9cHJvamVjdHMvKn0vZ3Jv",
+            "dXBzEn0KCEdldEdyb3VwEiUuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0R3Jv",
+            "dXBSZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXAiLdpBBG5h",
+            "bWWC0+STAiASHi92My97bmFtZT1wcm9qZWN0cy8qL2dyb3Vwcy8qfRKOAQoL",
             "Q3JlYXRlR3JvdXASKC5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVHcm91",
-            "cFJlcXVlc3QaGy5nb29nbGUubW9uaXRvcmluZy52My5Hcm91cCI4gtPkkwIl",
-            "IhwvdjMve25hbWU9cHJvamVjdHMvKn0vZ3JvdXBzOgVncm91cNpBCm5hbWUs",
+            "cFJlcXVlc3QaGy5nb29nbGUubW9uaXRvcmluZy52My5Hcm91cCI42kEKbmFt",
+            "ZSxncm91cILT5JMCJSIcL3YzL3tuYW1lPXByb2plY3RzLyp9L2dyb3VwczoF",
             "Z3JvdXASkQEKC1VwZGF0ZUdyb3VwEiguZ29vZ2xlLm1vbml0b3JpbmcudjMu",
             "VXBkYXRlR3JvdXBSZXF1ZXN0GhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3Jv",
-            "dXAiO4LT5JMCLRokL3YzL3tncm91cC5uYW1lPXByb2plY3RzLyovZ3JvdXBz",
-            "Lyp9OgVncm91cNpBBWdyb3VwEn4KC0RlbGV0ZUdyb3VwEiguZ29vZ2xlLm1v",
+            "dXAiO9pBBWdyb3VwgtPkkwItGiQvdjMve2dyb3VwLm5hbWU9cHJvamVjdHMv",
+            "Ki9ncm91cHMvKn06BWdyb3VwEn4KC0RlbGV0ZUdyb3VwEiguZ29vZ2xlLm1v",
             "bml0b3JpbmcudjMuRGVsZXRlR3JvdXBSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5Ii2C0+STAiAqHi92My97bmFtZT1wcm9qZWN0cy8qL2dyb3Vw",
-            "cy8qfdpBBG5hbWUSqAEKEExpc3RHcm91cE1lbWJlcnMSLS5nb29nbGUubW9u",
+            "YnVmLkVtcHR5Ii3aQQRuYW1lgtPkkwIgKh4vdjMve25hbWU9cHJvamVjdHMv",
+            "Ki9ncm91cHMvKn0SqAEKEExpc3RHcm91cE1lbWJlcnMSLS5nb29nbGUubW9u",
             "aXRvcmluZy52My5MaXN0R3JvdXBNZW1iZXJzUmVxdWVzdBouLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkxpc3RHcm91cE1lbWJlcnNSZXNwb25zZSI1gtPkkwIo",
-            "EiYvdjMve25hbWU9cHJvamVjdHMvKi9ncm91cHMvKn0vbWVtYmVyc9pBBG5h",
-            "bWUaqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMuY29t0kGJAWh0dHBzOi8v",
+            "b25pdG9yaW5nLnYzLkxpc3RHcm91cE1lbWJlcnNSZXNwb25zZSI12kEEbmFt",
+            "ZYLT5JMCKBImL3YzL3tuYW1lPXByb2plY3RzLyovZ3JvdXBzLyp9L21lbWJl",
+            "cnMaqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMuY29t0kGJAWh0dHBzOi8v",
             "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
             "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25pdG9yaW5nLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkQskBChhj",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkQswBChhj",
             "b20uZ29vZ2xlLm1vbml0b3JpbmcudjNCEUdyb3VwU2VydmljZVByb3RvUAFa",
-            "Pmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRv",
-            "cmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jpbmcu",
-            "VjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xv",
-            "dWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
+            "QWNsb3VkLmdvb2dsZS5jb20vZ28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25p",
+            "dG9yaW5ncGI7bW9uaXRvcmluZ3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jp",
+            "bmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6",
+            "Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,6 +105,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListGroup` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGroupsRequest : pb::IMessage<ListGroupsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -167,8 +168,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 7;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-    /// whose groups are to be listed. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+    /// groups are to be listed. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -194,10 +196,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ChildrenOfGroup {
-      get { return filterCase_ == FilterOneofCase.ChildrenOfGroup ? (string) filter_ : ""; }
+      get { return HasChildrenOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.ChildrenOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "children_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasChildrenOfGroup {
+      get { return filterCase_ == FilterOneofCase.ChildrenOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "children_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearChildrenOfGroup() {
+      if (HasChildrenOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -216,10 +232,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AncestorsOfGroup {
-      get { return filterCase_ == FilterOneofCase.AncestorsOfGroup ? (string) filter_ : ""; }
+      get { return HasAncestorsOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.AncestorsOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "ancestors_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAncestorsOfGroup {
+      get { return filterCase_ == FilterOneofCase.AncestorsOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ancestors_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAncestorsOfGroup() {
+      if (HasAncestorsOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -237,10 +267,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DescendantsOfGroup {
-      get { return filterCase_ == FilterOneofCase.DescendantsOfGroup ? (string) filter_ : ""; }
+      get { return HasDescendantsOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.DescendantsOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "descendants_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescendantsOfGroup {
+      get { return filterCase_ == FilterOneofCase.DescendantsOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "descendants_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescendantsOfGroup() {
+      if (HasDescendantsOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -328,9 +372,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) hash ^= ChildrenOfGroup.GetHashCode();
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) hash ^= AncestorsOfGroup.GetHashCode();
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) hash ^= DescendantsOfGroup.GetHashCode();
+      if (HasChildrenOfGroup) hash ^= ChildrenOfGroup.GetHashCode();
+      if (HasAncestorsOfGroup) hash ^= AncestorsOfGroup.GetHashCode();
+      if (HasDescendantsOfGroup) hash ^= DescendantsOfGroup.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       hash ^= (int) filterCase_;
@@ -352,15 +396,15 @@ namespace Google.Cloud.Monitoring.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         output.WriteRawTag(18);
         output.WriteString(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         output.WriteRawTag(26);
         output.WriteString(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         output.WriteRawTag(34);
         output.WriteString(DescendantsOfGroup);
       }
@@ -386,15 +430,15 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         output.WriteRawTag(18);
         output.WriteString(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         output.WriteRawTag(26);
         output.WriteString(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         output.WriteRawTag(34);
         output.WriteString(DescendantsOfGroup);
       }
@@ -423,13 +467,13 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DescendantsOfGroup);
       }
       if (PageSize != 0) {
@@ -559,6 +603,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListGroups` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGroupsResponse : pb::IMessage<ListGroupsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -785,6 +830,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetGroup` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetGroupRequest : pb::IMessage<GetGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -982,6 +1028,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateGroup` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateGroupRequest : pb::IMessage<CreateGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1032,8 +1079,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-    /// which to create the group. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+    /// to create the group. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1050,8 +1098,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int GroupFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
-    /// Required. A group definition. It is an error to define the `name` field because
-    /// the system assigns the name.
+    /// Required. A group definition. It is an error to define the `name` field
+    /// because the system assigns the name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1270,6 +1318,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `UpdateGroup` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateGroupRequest : pb::IMessage<UpdateGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1319,8 +1368,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int GroupFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
-    /// Required. The new definition of the group.  All fields of the existing group,
-    /// excepting `name`, are replaced with the corresponding fields of this group.
+    /// Required. The new definition of the group.  All fields of the existing
+    /// group, excepting `name`, are replaced with the corresponding fields of this
+    /// group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1516,6 +1566,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The `DeleteGroup` request. The default behavior is to be able to delete a
   /// single group without any descendants.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteGroupRequest : pb::IMessage<DeleteGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1755,6 +1806,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListGroupMembers` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGroupMembersRequest : pb::IMessage<ListGroupMembersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2133,6 +2185,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListGroupMembers` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGroupMembersResponse : pb::IMessage<ListGroupMembersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

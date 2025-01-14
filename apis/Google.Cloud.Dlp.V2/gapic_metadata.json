@@ -22,10 +22,22 @@
                 "CancelDlpJobAsync"
               ]
             },
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
             "CreateDeidentifyTemplate": {
               "methods": [
                 "CreateDeidentifyTemplate",
                 "CreateDeidentifyTemplateAsync"
+              ]
+            },
+            "CreateDiscoveryConfig": {
+              "methods": [
+                "CreateDiscoveryConfig",
+                "CreateDiscoveryConfigAsync"
               ]
             },
             "CreateDlpJob": {
@@ -58,16 +70,34 @@
                 "DeidentifyContentAsync"
               ]
             },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
             "DeleteDeidentifyTemplate": {
               "methods": [
                 "DeleteDeidentifyTemplate",
                 "DeleteDeidentifyTemplateAsync"
               ]
             },
+            "DeleteDiscoveryConfig": {
+              "methods": [
+                "DeleteDiscoveryConfig",
+                "DeleteDiscoveryConfigAsync"
+              ]
+            },
             "DeleteDlpJob": {
               "methods": [
                 "DeleteDlpJob",
                 "DeleteDlpJobAsync"
+              ]
+            },
+            "DeleteFileStoreDataProfile": {
+              "methods": [
+                "DeleteFileStoreDataProfile",
+                "DeleteFileStoreDataProfileAsync"
               ]
             },
             "DeleteInspectTemplate": {
@@ -88,10 +118,28 @@
                 "DeleteStoredInfoTypeAsync"
               ]
             },
+            "DeleteTableDataProfile": {
+              "methods": [
+                "DeleteTableDataProfile",
+                "DeleteTableDataProfileAsync"
+              ]
+            },
             "FinishDlpJob": {
               "methods": [
                 "FinishDlpJob",
                 "FinishDlpJobAsync"
+              ]
+            },
+            "GetColumnDataProfile": {
+              "methods": [
+                "GetColumnDataProfile",
+                "GetColumnDataProfileAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
               ]
             },
             "GetDeidentifyTemplate": {
@@ -100,10 +148,22 @@
                 "GetDeidentifyTemplateAsync"
               ]
             },
+            "GetDiscoveryConfig": {
+              "methods": [
+                "GetDiscoveryConfig",
+                "GetDiscoveryConfigAsync"
+              ]
+            },
             "GetDlpJob": {
               "methods": [
                 "GetDlpJob",
                 "GetDlpJobAsync"
+              ]
+            },
+            "GetFileStoreDataProfile": {
+              "methods": [
+                "GetFileStoreDataProfile",
+                "GetFileStoreDataProfileAsync"
               ]
             },
             "GetInspectTemplate": {
@@ -118,10 +178,22 @@
                 "GetJobTriggerAsync"
               ]
             },
+            "GetProjectDataProfile": {
+              "methods": [
+                "GetProjectDataProfile",
+                "GetProjectDataProfileAsync"
+              ]
+            },
             "GetStoredInfoType": {
               "methods": [
                 "GetStoredInfoType",
                 "GetStoredInfoTypeAsync"
+              ]
+            },
+            "GetTableDataProfile": {
+              "methods": [
+                "GetTableDataProfile",
+                "GetTableDataProfileAsync"
               ]
             },
             "HybridInspectDlpJob": {
@@ -142,16 +214,40 @@
                 "InspectContentAsync"
               ]
             },
+            "ListColumnDataProfiles": {
+              "methods": [
+                "ListColumnDataProfiles",
+                "ListColumnDataProfilesAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
             "ListDeidentifyTemplates": {
               "methods": [
                 "ListDeidentifyTemplates",
                 "ListDeidentifyTemplatesAsync"
               ]
             },
+            "ListDiscoveryConfigs": {
+              "methods": [
+                "ListDiscoveryConfigs",
+                "ListDiscoveryConfigsAsync"
+              ]
+            },
             "ListDlpJobs": {
               "methods": [
                 "ListDlpJobs",
                 "ListDlpJobsAsync"
+              ]
+            },
+            "ListFileStoreDataProfiles": {
+              "methods": [
+                "ListFileStoreDataProfiles",
+                "ListFileStoreDataProfilesAsync"
               ]
             },
             "ListInfoTypes": {
@@ -172,10 +268,22 @@
                 "ListJobTriggersAsync"
               ]
             },
+            "ListProjectDataProfiles": {
+              "methods": [
+                "ListProjectDataProfiles",
+                "ListProjectDataProfilesAsync"
+              ]
+            },
             "ListStoredInfoTypes": {
               "methods": [
                 "ListStoredInfoTypes",
                 "ListStoredInfoTypesAsync"
+              ]
+            },
+            "ListTableDataProfiles": {
+              "methods": [
+                "ListTableDataProfiles",
+                "ListTableDataProfilesAsync"
               ]
             },
             "RedactImage": {
@@ -190,10 +298,28 @@
                 "ReidentifyContentAsync"
               ]
             },
+            "SearchConnections": {
+              "methods": [
+                "SearchConnections",
+                "SearchConnectionsAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
+              ]
+            },
             "UpdateDeidentifyTemplate": {
               "methods": [
                 "UpdateDeidentifyTemplate",
                 "UpdateDeidentifyTemplateAsync"
+              ]
+            },
+            "UpdateDiscoveryConfig": {
+              "methods": [
+                "UpdateDiscoveryConfig",
+                "UpdateDiscoveryConfigAsync"
               ]
             },
             "UpdateInspectTemplate": {

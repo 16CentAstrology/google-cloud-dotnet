@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Dialogflow.V2
@@ -71,10 +71,12 @@ namespace Google.Cloud.Dialogflow.V2
             yield return ConversationModelReflection.Descriptor;
             yield return ConversationProfileReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return EncryptionSpecReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
             yield return FulfillmentReflection.Descriptor;
             yield return GcsReflection.Descriptor;
+            yield return GeneratorReflection.Descriptor;
             yield return HumanAgentAssistantEventReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return KnowledgeBaseReflection.Descriptor;

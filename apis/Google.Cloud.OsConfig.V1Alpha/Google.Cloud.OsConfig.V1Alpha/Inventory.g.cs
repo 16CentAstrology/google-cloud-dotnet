@@ -161,6 +161,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// For more information, see [Information provided by OS inventory
   /// management](https://cloud.google.com/compute/docs/instances/os-inventory-management#data-collected).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Inventory : pb::IMessage<Inventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -398,7 +399,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
         OsInfo.MergeFrom(other.OsInfo);
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -492,6 +493,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Operating system information for the VM.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OsInfo : pb::IMessage<OsInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -970,6 +972,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// A single piece of inventory on a VM.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Item : pb::IMessage<Item>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1523,6 +1526,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Software package information of the operating system.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SoftwarePackage : pb::IMessage<SoftwarePackage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2225,6 +2229,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// Information related to the a standard versioned package.  This includes
       /// package info for APT, Yum, Zypper, and Googet package managers.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VersionedPackage : pb::IMessage<VersionedPackage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2500,6 +2505,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Details related to a Zypper Patch.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ZypperPatch : pb::IMessage<ZypperPatch>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2819,6 +2825,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// Descriptive fields like title, and description are localized based on
       /// the locale of the VM being updated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WindowsUpdatePackage : pb::IMessage<WindowsUpdatePackage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3316,6 +3323,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// Categories specified by the Windows Update.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class WindowsUpdateCategory : pb::IMessage<WindowsUpdateCategory>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3559,6 +3567,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// the source names:
       /// https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-quickfixengineering
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WindowsQuickFixEngineeringPackage : pb::IMessage<WindowsQuickFixEngineeringPackage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3885,6 +3894,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// Windows Registry. For more information about these fields, see:
       /// https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WindowsApplication : pb::IMessage<WindowsApplication>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4256,6 +4266,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// A request message for getting inventory data for the specified VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInventoryRequest : pb::IMessage<GetInventoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4500,6 +4511,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// A request message for listing inventory data for all VMs in the specified
   /// location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInventoriesRequest : pb::IMessage<ListInventoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4864,6 +4876,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// A response message for listing inventory data for all VMs in a specified
   /// location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInventoriesResponse : pb::IMessage<ListInventoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

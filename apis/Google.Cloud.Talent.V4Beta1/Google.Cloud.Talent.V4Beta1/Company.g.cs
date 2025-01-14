@@ -61,6 +61,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// entity that owns job postings, that is, the hiring entity responsible for
   /// employing applicants for the job position.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Company : pb::IMessage<Company>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -779,6 +780,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Derived details about the company.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

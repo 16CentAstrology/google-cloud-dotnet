@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1_generated_DataprocMetastore_RestoreService_sync]
     using Google.Cloud.Metastore.V1;

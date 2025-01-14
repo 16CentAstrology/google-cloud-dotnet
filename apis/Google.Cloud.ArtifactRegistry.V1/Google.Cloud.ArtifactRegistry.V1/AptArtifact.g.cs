@@ -77,6 +77,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// is derived from the archive's control file.
   /// See https://www.debian.org/doc/debian-policy/ch-controlfields.html
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AptArtifact : pb::IMessage<AptArtifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -498,6 +499,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Google Cloud Storage location where the artifacts currently reside.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAptArtifactsGcsSource : pb::IMessage<ImportAptArtifactsGcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -722,6 +724,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to import new apt artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAptArtifactsRequest : pb::IMessage<ImportAptArtifactsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1000,6 +1003,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Error information explaining why a package was not imported.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAptArtifactsErrorInfo : pb::IMessage<ImportAptArtifactsErrorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1287,6 +1291,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response message from importing APT artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAptArtifactsResponse : pb::IMessage<ImportAptArtifactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1500,6 +1505,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The operation metadata for importing artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAptArtifactsMetadata : pb::IMessage<ImportAptArtifactsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -61,37 +61,37 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "bnJlYWNoYWJsZRgDIAMoCTKSDAoRVHJhbnNjb2RlclNlcnZpY2USqgEKCUNy",
             "ZWF0ZUpvYhIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkNy",
             "ZWF0ZUpvYlJlcXVlc3QaJS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
-            "ci52MS5Kb2IiQoLT5JMCLyIoL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vam9iczoDam9i2kEKcGFyZW50LGpvYhKsAQoITGlzdEpvYnMS",
+            "ci52MS5Kb2IiQtpBCnBhcmVudCxqb2KC0+STAi8iKC92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnM6A2pvYhKsAQoITGlzdEpvYnMS",
             "MS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5MaXN0Sm9ic1Jl",
             "cXVlc3QaMi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5MaXN0",
-            "Sm9ic1Jlc3BvbnNlIjmC0+STAioSKC92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L2pvYnPaQQZwYXJlbnQSmQEKBkdldEpvYhIvLmdvb2ds",
+            "Sm9ic1Jlc3BvbnNlIjnaQQZwYXJlbnSC0+STAioSKC92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnMSmQEKBkdldEpvYhIvLmdvb2ds",
             "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkdldEpvYlJlcXVlc3QaJS5n",
-            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2IiN4LT5JMCKhIo",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfdpBBG5h",
-            "bWUSkAEKCURlbGV0ZUpvYhIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2IiN9pBBG5hbWWC",
+            "0+STAioSKC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMv",
+            "Kn0SkAEKCURlbGV0ZUpvYhIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
             "ZGVyLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiN4LT5JMCKiooL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "am9icy8qfdpBBG5hbWUS7AEKEUNyZWF0ZUpvYlRlbXBsYXRlEjouZ29vZ2xl",
+            "dHkiN9pBBG5hbWWC0+STAioqKC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2pvYnMvKn0S7AEKEUNyZWF0ZUpvYlRlbXBsYXRlEjouZ29vZ2xl",
             "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuQ3JlYXRlSm9iVGVtcGxhdGVS",
             "ZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuSm9i",
-            "VGVtcGxhdGUibILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vam9iVGVtcGxhdGVzOgxqb2JfdGVtcGxhdGXaQSNwYXJlbnQs",
-            "am9iX3RlbXBsYXRlLGpvYl90ZW1wbGF0ZV9pZBLMAQoQTGlzdEpvYlRlbXBs",
+            "VGVtcGxhdGUibNpBI3BhcmVudCxqb2JfdGVtcGxhdGUsam9iX3RlbXBsYXRl",
+            "X2lkgtPkkwJAIjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fS9qb2JUZW1wbGF0ZXM6DGpvYl90ZW1wbGF0ZRLMAQoQTGlzdEpvYlRlbXBs",
             "YXRlcxI5Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkxpc3RK",
             "b2JUZW1wbGF0ZXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjEuTGlzdEpvYlRlbXBsYXRlc1Jlc3BvbnNlIkGC0+STAjISMC92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYlRlbXBsYXRl",
-            "c9pBBnBhcmVudBK5AQoOR2V0Sm9iVGVtcGxhdGUSNy5nb29nbGUuY2xvdWQu",
+            "Y29kZXIudjEuTGlzdEpvYlRlbXBsYXRlc1Jlc3BvbnNlIkHaQQZwYXJlbnSC",
+            "0+STAjISMC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pv",
+            "YlRlbXBsYXRlcxK5AQoOR2V0Sm9iVGVtcGxhdGUSNy5nb29nbGUuY2xvdWQu",
             "dmlkZW8udHJhbnNjb2Rlci52MS5HZXRKb2JUZW1wbGF0ZVJlcXVlc3QaLS5n",
             "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2JUZW1wbGF0ZSI/",
-            "gtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JU",
-            "ZW1wbGF0ZXMvKn3aQQRuYW1lEqgBChFEZWxldGVKb2JUZW1wbGF0ZRI6Lmdv",
+            "2kEEbmFtZYLT5JMCMhIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyovam9iVGVtcGxhdGVzLyp9EqgBChFEZWxldGVKb2JUZW1wbGF0ZRI6Lmdv",
             "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkRlbGV0ZUpvYlRlbXBs",
-            "YXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/gtPkkwIyKjAv",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JUZW1wbGF0ZXMv",
-            "Kn3aQQRuYW1lGk3KQRl0cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "YXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/2kEEbmFtZYLT",
+            "5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9iVGVt",
+            "cGxhdGVzLyp9Gk3KQRl0cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULq",
             "AQokY29tLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxQg1TZXJ2",
             "aWNlc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vdHJhbnNj",
@@ -121,6 +121,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.CreateJob`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -367,6 +368,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// Request message for `TranscoderService.ListJobs`.
   /// The parent location from which to retrieve the collection of jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -725,6 +727,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.GetJob`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -921,6 +924,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.DeleteJob`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1158,6 +1162,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Response message for `TranscoderService.ListJobs`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1411,6 +1416,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.CreateJobTemplate`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobTemplateRequest : pb::IMessage<CreateJobTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1700,6 +1706,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.ListJobTemplates`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobTemplatesRequest : pb::IMessage<ListJobTemplatesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2059,6 +2066,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.GetJobTemplate`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobTemplateRequest : pb::IMessage<GetJobTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2256,6 +2264,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Request message for `TranscoderService.DeleteJobTemplate`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobTemplateRequest : pb::IMessage<DeleteJobTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2493,6 +2502,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   /// <summary>
   /// Response message for `TranscoderService.ListJobTemplates`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobTemplatesResponse : pb::IMessage<ListJobTemplatesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

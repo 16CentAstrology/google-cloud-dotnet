@@ -75,54 +75,54 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
             "VmVyc2lvbjKDFgoUU2VjcmV0TWFuYWdlclNlcnZpY2USqQEKC0xpc3RTZWNy",
             "ZXRzEjAuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5MaXN0U2VjcmV0",
             "c1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLkxpc3RT",
-            "ZWNyZXRzUmVzcG9uc2UiNYLT5JMCJhIkL3YxYmV0YTEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qfS9zZWNyZXRz2kEGcGFyZW50ErcBCgxDcmVhdGVTZWNyZXQSMS5n",
+            "ZWNyZXRzUmVzcG9uc2UiNdpBBnBhcmVudILT5JMCJhIkL3YxYmV0YTEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qfS9zZWNyZXRzErcBCgxDcmVhdGVTZWNyZXQSMS5n",
             "b29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLkNyZWF0ZVNlY3JldFJlcXVl",
-            "c3QaJC5nb29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLlNlY3JldCJOgtPk",
-            "kwIuIiQvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3NlY3JldHM6BnNl",
-            "Y3JldNpBF3BhcmVudCxzZWNyZXRfaWQsc2VjcmV0EsUBChBBZGRTZWNyZXRW",
+            "c3QaJC5nb29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLlNlY3JldCJO2kEX",
+            "cGFyZW50LHNlY3JldF9pZCxzZWNyZXSC0+STAi4iJC92MWJldGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKn0vc2VjcmV0czoGc2VjcmV0EsUBChBBZGRTZWNyZXRW",
             "ZXJzaW9uEjUuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5BZGRTZWNy",
             "ZXRWZXJzaW9uUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0",
-            "YTEuU2VjcmV0VmVyc2lvbiJNgtPkkwI2IjEvdjFiZXRhMS97cGFyZW50PXBy",
-            "b2plY3RzLyovc2VjcmV0cy8qfTphZGRWZXJzaW9uOgEq2kEOcGFyZW50LHBh",
-            "eWxvYWQSlgEKCUdldFNlY3JldBIuLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYx",
+            "YTEuU2VjcmV0VmVyc2lvbiJN2kEOcGFyZW50LHBheWxvYWSC0+STAjYiMS92",
+            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9zZWNyZXRzLyp9OmFkZFZlcnNp",
+            "b246ASoSlgEKCUdldFNlY3JldBIuLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYx",
             "YmV0YTEuR2V0U2VjcmV0UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5zZWNyZXRz",
-            "LnYxYmV0YTEuU2VjcmV0IjOC0+STAiYSJC92MWJldGExL3tuYW1lPXByb2pl",
-            "Y3RzLyovc2VjcmV0cy8qfdpBBG5hbWUSuQEKDFVwZGF0ZVNlY3JldBIxLmdv",
+            "LnYxYmV0YTEuU2VjcmV0IjPaQQRuYW1lgtPkkwImEiQvdjFiZXRhMS97bmFt",
+            "ZT1wcm9qZWN0cy8qL3NlY3JldHMvKn0SuQEKDFVwZGF0ZVNlY3JldBIxLmdv",
             "b2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuVXBkYXRlU2VjcmV0UmVxdWVz",
-            "dBokLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuU2VjcmV0IlCC0+ST",
-            "AjUyKy92MWJldGExL3tzZWNyZXQubmFtZT1wcm9qZWN0cy8qL3NlY3JldHMv",
-            "Kn06BnNlY3JldNpBEnNlY3JldCx1cGRhdGVfbWFzaxKOAQoMRGVsZXRlU2Vj",
+            "dBokLmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuU2VjcmV0IlDaQRJz",
+            "ZWNyZXQsdXBkYXRlX21hc2uC0+STAjUyKy92MWJldGExL3tzZWNyZXQubmFt",
+            "ZT1wcm9qZWN0cy8qL3NlY3JldHMvKn06BnNlY3JldBKOAQoMRGVsZXRlU2Vj",
             "cmV0EjEuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5EZWxldGVTZWNy",
-            "ZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjOC0+STAiYqJC92",
-            "MWJldGExL3tuYW1lPXByb2plY3RzLyovc2VjcmV0cy8qfdpBBG5hbWUSyQEK",
+            "ZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjPaQQRuYW1lgtPk",
+            "kwImKiQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3NlY3JldHMvKn0SyQEK",
             "Ekxpc3RTZWNyZXRWZXJzaW9ucxI3Lmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYx",
             "YmV0YTEuTGlzdFNlY3JldFZlcnNpb25zUmVxdWVzdBo4Lmdvb2dsZS5jbG91",
             "ZC5zZWNyZXRzLnYxYmV0YTEuTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2Ui",
-            "QILT5JMCMRIvL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3NlY3JldHMv",
-            "Kn0vdmVyc2lvbnPaQQZwYXJlbnQStgEKEEdldFNlY3JldFZlcnNpb24SNS5n",
+            "QNpBBnBhcmVudILT5JMCMRIvL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L3NlY3JldHMvKn0vdmVyc2lvbnMStgEKEEdldFNlY3JldFZlcnNpb24SNS5n",
             "b29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLkdldFNlY3JldFZlcnNpb25S",
             "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5TZWNyZXRW",
-            "ZXJzaW9uIj6C0+STAjESLy92MWJldGExL3tuYW1lPXByb2plY3RzLyovc2Vj",
-            "cmV0cy8qL3ZlcnNpb25zLyp92kEEbmFtZRLRAQoTQWNjZXNzU2VjcmV0VmVy",
+            "ZXJzaW9uIj7aQQRuYW1lgtPkkwIxEi8vdjFiZXRhMS97bmFtZT1wcm9qZWN0",
+            "cy8qL3NlY3JldHMvKi92ZXJzaW9ucy8qfRLRAQoTQWNjZXNzU2VjcmV0VmVy",
             "c2lvbhI4Lmdvb2dsZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuQWNjZXNzU2Vj",
             "cmV0VmVyc2lvblJlcXVlc3QaOS5nb29nbGUuY2xvdWQuc2VjcmV0cy52MWJl",
-            "dGExLkFjY2Vzc1NlY3JldFZlcnNpb25SZXNwb25zZSJFgtPkkwI4EjYvdjFi",
-            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL3NlY3JldHMvKi92ZXJzaW9ucy8qfTph",
-            "Y2Nlc3PaQQRuYW1lEskBChREaXNhYmxlU2VjcmV0VmVyc2lvbhI5Lmdvb2ds",
+            "dGExLkFjY2Vzc1NlY3JldFZlcnNpb25SZXNwb25zZSJF2kEEbmFtZYLT5JMC",
+            "OBI2L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9zZWNyZXRzLyovdmVyc2lv",
+            "bnMvKn06YWNjZXNzEskBChREaXNhYmxlU2VjcmV0VmVyc2lvbhI5Lmdvb2ds",
             "ZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuRGlzYWJsZVNlY3JldFZlcnNpb25S",
             "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5TZWNyZXRW",
-            "ZXJzaW9uIkmC0+STAjwiNy92MWJldGExL3tuYW1lPXByb2plY3RzLyovc2Vj",
-            "cmV0cy8qL3ZlcnNpb25zLyp9OmRpc2FibGU6ASraQQRuYW1lEsYBChNFbmFi",
+            "ZXJzaW9uIknaQQRuYW1lgtPkkwI8IjcvdjFiZXRhMS97bmFtZT1wcm9qZWN0",
+            "cy8qL3NlY3JldHMvKi92ZXJzaW9ucy8qfTpkaXNhYmxlOgEqEsYBChNFbmFi",
             "bGVTZWNyZXRWZXJzaW9uEjguZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRh",
             "MS5FbmFibGVTZWNyZXRWZXJzaW9uUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5z",
-            "ZWNyZXRzLnYxYmV0YTEuU2VjcmV0VmVyc2lvbiJIgtPkkwI7IjYvdjFiZXRh",
-            "MS97bmFtZT1wcm9qZWN0cy8qL3NlY3JldHMvKi92ZXJzaW9ucy8qfTplbmFi",
-            "bGU6ASraQQRuYW1lEskBChREZXN0cm95U2VjcmV0VmVyc2lvbhI5Lmdvb2ds",
+            "ZWNyZXRzLnYxYmV0YTEuU2VjcmV0VmVyc2lvbiJI2kEEbmFtZYLT5JMCOyI2",
+            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9zZWNyZXRzLyovdmVyc2lvbnMv",
+            "Kn06ZW5hYmxlOgEqEskBChREZXN0cm95U2VjcmV0VmVyc2lvbhI5Lmdvb2ds",
             "ZS5jbG91ZC5zZWNyZXRzLnYxYmV0YTEuRGVzdHJveVNlY3JldFZlcnNpb25S",
             "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLnNlY3JldHMudjFiZXRhMS5TZWNyZXRW",
-            "ZXJzaW9uIkmC0+STAjwiNy92MWJldGExL3tuYW1lPXByb2plY3RzLyovc2Vj",
-            "cmV0cy8qL3ZlcnNpb25zLyp9OmRlc3Ryb3k6ASraQQRuYW1lEosBCgxTZXRJ",
+            "ZXJzaW9uIknaQQRuYW1lgtPkkwI8IjcvdjFiZXRhMS97bmFtZT1wcm9qZWN0",
+            "cy8qL3NlY3JldHMvKi92ZXJzaW9ucy8qfTpkZXN0cm95OgEqEosBCgxTZXRJ",
             "YW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVlc3Qa",
             "FS5nb29nbGUuaWFtLnYxLlBvbGljeSJAgtPkkwI6IjUvdjFiZXRhMS97cmVz",
             "b3VyY2U9cHJvamVjdHMvKi9zZWNyZXRzLyp9OnNldElhbVBvbGljeToBKhKI",
@@ -168,6 +168,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.ListSecrets][google.cloud.secrets.v1beta1.SecretManagerService.ListSecrets].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretsRequest : pb::IMessage<ListSecretsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -447,6 +448,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Response message for [SecretManagerService.ListSecrets][google.cloud.secrets.v1beta1.SecretManagerService.ListSecrets].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretsResponse : pb::IMessage<ListSecretsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -713,6 +715,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.CreateSecret][google.cloud.secrets.v1beta1.SecretManagerService.CreateSecret].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSecretRequest : pb::IMessage<CreateSecretRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1002,6 +1005,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.AddSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.AddSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddSecretVersionRequest : pb::IMessage<AddSecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1247,6 +1251,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.GetSecret][google.cloud.secrets.v1beta1.SecretManagerService.GetSecret].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSecretRequest : pb::IMessage<GetSecretRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1442,6 +1447,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.ListSecretVersions][google.cloud.secrets.v1beta1.SecretManagerService.ListSecretVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretVersionsRequest : pb::IMessage<ListSecretVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1722,6 +1728,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Response message for [SecretManagerService.ListSecretVersions][google.cloud.secrets.v1beta1.SecretManagerService.ListSecretVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretVersionsResponse : pb::IMessage<ListSecretVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1988,6 +1995,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.GetSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.GetSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSecretVersionRequest : pb::IMessage<GetSecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2186,6 +2194,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.UpdateSecret][google.cloud.secrets.v1beta1.SecretManagerService.UpdateSecret].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSecretRequest : pb::IMessage<UpdateSecretRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2439,6 +2448,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.AccessSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.AccessSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessSecretVersionRequest : pb::IMessage<AccessSecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2635,6 +2645,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Response message for [SecretManagerService.AccessSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.AccessSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessSecretVersionResponse : pb::IMessage<AccessSecretVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2880,6 +2891,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.DeleteSecret][google.cloud.secrets.v1beta1.SecretManagerService.DeleteSecret].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSecretRequest : pb::IMessage<DeleteSecretRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3076,6 +3088,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.DisableSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.DisableSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableSecretVersionRequest : pb::IMessage<DisableSecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3272,6 +3285,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.EnableSecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.EnableSecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableSecretVersionRequest : pb::IMessage<EnableSecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3468,6 +3482,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   /// <summary>
   /// Request message for [SecretManagerService.DestroySecretVersion][google.cloud.secrets.v1beta1.SecretManagerService.DestroySecretVersion].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestroySecretVersionRequest : pb::IMessage<DestroySecretVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

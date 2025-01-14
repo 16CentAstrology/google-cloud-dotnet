@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START discoveryengine_v1beta_generated_DocumentService_ImportDocuments_async]
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDocumentServiceClientSnippets
@@ -42,6 +43,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
+                AutoGenerateIds = false,
+                IdField = "",
             };
             // Make the request
             Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(request);

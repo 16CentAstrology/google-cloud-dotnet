@@ -27,11 +27,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             "CiRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9nY3MucHJvdG8SGmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvIh8KCkdjc1NvdXJjZXMSEQoEdXJpcxgCIAMoCUID4EECIh0K",
-            "Dkdjc0Rlc3RpbmF0aW9uEgsKA3VyaRgBIAEoCUKRAQoeY29tLmdvb2dsZS5j",
+            "Dkdjc0Rlc3RpbmF0aW9uEgsKA3VyaRgBIAEoCUKOAQoeY29tLmdvb2dsZS5j",
             "bG91ZC5kaWFsb2dmbG93LnYyQghHY3NQcm90b1ABWj5jbG91ZC5nb29nbGUu",
             "Y29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjIvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zs",
-            "b3dwYvgBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnBy",
-            "b3RvMw=="));
+            "b3dwYqICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,6 +46,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Google Cloud Storage location for the inputs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSources : pb::IMessage<GcsSources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -97,7 +98,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private readonly pbc::RepeatedField<string> uris_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. Google Cloud Storage URIs for the inputs. A URI is of the form:
-    ///   gs://bucket/object-prefix-or-name
+    /// `gs://bucket/object-prefix-or-name`
     /// Whether a prefix or name is used depends on the use case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -232,6 +233,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Google Cloud Storage location for the output.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -282,7 +284,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The Google Cloud Storage URIs for the output. A URI is of the
     /// form:
-    ///   gs://bucket/object-prefix-or-name
+    /// `gs://bucket/object-prefix-or-name`
     /// Whether a prefix or name is used depends on the use case. The requesting
     /// user must have "write-permission" to the bucket.
     /// </summary>

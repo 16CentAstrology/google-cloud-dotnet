@@ -1,5 +1,42 @@
 # Version history
 
+## Version 2.8.0, released 2025-01-06
+
+### New features
+
+- Support cross-bucket replication ([commit 7dea52d](https://github.com/googleapis/google-cloud-dotnet/commit/7dea52d9add3fe9892ae97524d1033b8aac145d2))
+
+## Version 2.7.0, released 2024-09-09
+
+### New features
+
+- Add HDFS configuration ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add GCS Managed Folders ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add S3 Managed Private Network ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add S3 Cloudfront Domain ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2023-06-27
+
+### New features
+
+- Add event driven transfer configuration ([commit 218b433](https://github.com/googleapis/google-cloud-dotnet/commit/218b4337b70dd78b804137fea48998890382686b))
+
 ## Version 2.2.0, released 2023-01-16
 
 ### New features

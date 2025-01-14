@@ -65,39 +65,39 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             "VEFUSU9OX05PVF9WRVJJRklBQkxFEAIy4goKG0JpbmF1dGh6TWFuYWdlbWVu",
             "dFNlcnZpY2VWMRKcAQoJR2V0UG9saWN5EjUuZ29vZ2xlLmNsb3VkLmJpbmFy",
             "eWF1dGhvcml6YXRpb24udjEuR2V0UG9saWN5UmVxdWVzdBorLmdvb2dsZS5j",
-            "bG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxLlBvbGljeSIrgtPkkwIeEhwv",
-            "djEve25hbWU9cHJvamVjdHMvKi9wb2xpY3l92kEEbmFtZRKzAQoMVXBkYXRl",
+            "bG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxLlBvbGljeSIr2kEEbmFtZYLT",
+            "5JMCHhIcL3YxL3tuYW1lPXByb2plY3RzLyovcG9saWN5fRKzAQoMVXBkYXRl",
             "UG9saWN5EjguZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEu",
             "VXBkYXRlUG9saWN5UmVxdWVzdBorLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRo",
-            "b3JpemF0aW9uLnYxLlBvbGljeSI8gtPkkwItGiMvdjEve3BvbGljeS5uYW1l",
-            "PXByb2plY3RzLyovcG9saWN5fToGcG9saWN52kEGcG9saWN5Es4BCg5DcmVh",
+            "b3JpemF0aW9uLnYxLlBvbGljeSI82kEGcG9saWN5gtPkkwItGiMvdjEve3Bv",
+            "bGljeS5uYW1lPXByb2plY3RzLyovcG9saWN5fToGcG9saWN5Es4BCg5DcmVh",
             "dGVBdHRlc3RvchI6Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9u",
             "LnYxLkNyZWF0ZUF0dGVzdG9yUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5iaW5h",
-            "cnlhdXRob3JpemF0aW9uLnYxLkF0dGVzdG9yIlGC0+STAi0iIS92MS97cGFy",
-            "ZW50PXByb2plY3RzLyp9L2F0dGVzdG9yczoIYXR0ZXN0b3LaQRtwYXJlbnQs",
-            "YXR0ZXN0b3JfaWQsYXR0ZXN0b3ISpwEKC0dldEF0dGVzdG9yEjcuZ29vZ2xl",
+            "cnlhdXRob3JpemF0aW9uLnYxLkF0dGVzdG9yIlHaQRtwYXJlbnQsYXR0ZXN0",
+            "b3JfaWQsYXR0ZXN0b3KC0+STAi0iIS92MS97cGFyZW50PXByb2plY3RzLyp9",
+            "L2F0dGVzdG9yczoIYXR0ZXN0b3ISpwEKC0dldEF0dGVzdG9yEjcuZ29vZ2xl",
             "LmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEuR2V0QXR0ZXN0b3JSZXF1",
             "ZXN0Gi0uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEuQXR0",
-            "ZXN0b3IiMILT5JMCIxIhL3YxL3tuYW1lPXByb2plY3RzLyovYXR0ZXN0b3Jz",
-            "Lyp92kEEbmFtZRLEAQoOVXBkYXRlQXR0ZXN0b3ISOi5nb29nbGUuY2xvdWQu",
+            "ZXN0b3IiMNpBBG5hbWWC0+STAiMSIS92MS97bmFtZT1wcm9qZWN0cy8qL2F0",
+            "dGVzdG9ycy8qfRLEAQoOVXBkYXRlQXR0ZXN0b3ISOi5nb29nbGUuY2xvdWQu",
             "YmluYXJ5YXV0aG9yaXphdGlvbi52MS5VcGRhdGVBdHRlc3RvclJlcXVlc3Qa",
             "LS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5BdHRlc3Rv",
-            "ciJHgtPkkwI2GiovdjEve2F0dGVzdG9yLm5hbWU9cHJvamVjdHMvKi9hdHRl",
-            "c3RvcnMvKn06CGF0dGVzdG9y2kEIYXR0ZXN0b3ISugEKDUxpc3RBdHRlc3Rv",
+            "ciJH2kEIYXR0ZXN0b3KC0+STAjYaKi92MS97YXR0ZXN0b3IubmFtZT1wcm9q",
+            "ZWN0cy8qL2F0dGVzdG9ycy8qfToIYXR0ZXN0b3ISugEKDUxpc3RBdHRlc3Rv",
             "cnMSOS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5MaXN0",
             "QXR0ZXN0b3JzUmVxdWVzdBo6Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3Jp",
-            "emF0aW9uLnYxLkxpc3RBdHRlc3RvcnNSZXNwb25zZSIygtPkkwIjEiEvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qfS9hdHRlc3RvcnPaQQZwYXJlbnQSlgEKDkRl",
+            "emF0aW9uLnYxLkxpc3RBdHRlc3RvcnNSZXNwb25zZSIy2kEGcGFyZW50gtPk",
+            "kwIjEiEvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hdHRlc3RvcnMSlgEKDkRl",
             "bGV0ZUF0dGVzdG9yEjouZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRp",
             "b24udjEuRGVsZXRlQXR0ZXN0b3JSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IjCC0+STAiMqIS92MS97bmFtZT1wcm9qZWN0cy8qL2F0dGVzdG9y",
-            "cy8qfdpBBG5hbWUaVspBImJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBp",
+            "LkVtcHR5IjDaQQRuYW1lgtPkkwIjKiEvdjEve25hbWU9cHJvamVjdHMvKi9h",
+            "dHRlc3RvcnMvKn0aVspBImJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBp",
             "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtMpQCCg5TeXN0ZW1Qb2xpY3lWMRKpAQoPR2V0U3lzdGVtUG9s",
             "aWN5EjsuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEuR2V0",
             "U3lzdGVtUG9saWN5UmVxdWVzdBorLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRo",
-            "b3JpemF0aW9uLnYxLlBvbGljeSIsgtPkkwIfEh0vdjEve25hbWU9bG9jYXRp",
-            "b25zLyovcG9saWN5fdpBBG5hbWUaVspBImJpbmFyeWF1dGhvcml6YXRpb24u",
+            "b3JpemF0aW9uLnYxLlBvbGljeSIs2kEEbmFtZYLT5JMCHxIdL3YxL3tuYW1l",
+            "PWxvY2F0aW9ucy8qL3BvbGljeX0aVspBImJpbmFyeWF1dGhvcml6YXRpb24u",
             "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2Nsb3VkLXBsYXRmb3JtMvUCChJWYWxpZGF0aW9uSGVscGVyVjEShgIK",
             "HVZhbGlkYXRlQXR0ZXN0YXRpb25PY2N1cnJlbmNlEkkuZ29vZ2xlLmNsb3Vk",
@@ -137,6 +137,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.GetPolicy][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyRequest : pb::IMessage<GetPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.UpdatePolicy][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePolicyRequest : pb::IMessage<UpdatePolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -539,6 +541,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.CreateAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAttestorRequest : pb::IMessage<CreateAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -825,6 +828,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.GetAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAttestorRequest : pb::IMessage<GetAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1021,6 +1025,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.UpdateAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAttestorRequest : pb::IMessage<UpdateAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1227,6 +1232,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.ListAttestors][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsRequest : pb::IMessage<ListAttestorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1506,6 +1512,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Response message for [BinauthzManagementService.ListAttestors][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsResponse : pb::IMessage<ListAttestorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1732,6 +1739,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.DeleteAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAttestorRequest : pb::IMessage<DeleteAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1928,6 +1936,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// <summary>
   /// Request to read the current system policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSystemPolicyRequest : pb::IMessage<GetSystemPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2125,6 +2134,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// Request message for
   /// [ValidationHelperV1.ValidateAttestationOccurrence][google.cloud.binaryauthorization.v1.ValidationHelperV1.ValidateAttestationOccurrence].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateAttestationOccurrenceRequest : pb::IMessage<ValidateAttestationOccurrenceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2457,6 +2467,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   /// Response message for
   /// [ValidationHelperV1.ValidateAttestationOccurrence][google.cloud.binaryauthorization.v1.ValidationHelperV1.ValidateAttestationOccurrence].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateAttestationOccurrenceResponse : pb::IMessage<ValidateAttestationOccurrenceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

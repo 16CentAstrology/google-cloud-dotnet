@@ -77,6 +77,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// analysis, policy testing, and enforcement. For example, an XSS vulnerability
   /// in an App Engine application is a finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Finding : pb::IMessage<Finding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -581,7 +582,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (other.ExternalUri.Length != 0) {
         ExternalUri = other.ExternalUri;
       }
-      sourceProperties_.Add(other.sourceProperties_);
+      sourceProperties_.MergeFrom(other.sourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
           SecurityMarks = new global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks();

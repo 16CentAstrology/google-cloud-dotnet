@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudBuild.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbuild_v1_generated_CloudBuild_UpdateBuildTrigger_async]
     using Google.Cloud.CloudBuild.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
@@ -40,6 +41,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 TriggerId = "",
                 Trigger = new BuildTrigger(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.UpdateBuildTriggerAsync(request);

@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             foreach (var diff in FindChangedVersions())
             {
@@ -41,28 +41,28 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Execute(diff.Id);
                 }
             }
+            return 0;
         }
 
-        private static void Execute(string id)
+        private void Execute(string id)
         {
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var api = catalog[id];
             if (api.NoVersionHistory)
             {
                 Console.WriteLine($"Skipping version history update for {id}");
                 return;
             }
-            string historyFilePath = HistoryFile.GetPathForPackage(id);
+            string historyFilePath = HistoryFile.GetPathForPackage(RootLayout, id);
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
             var historyFile = HistoryFile.Load(historyFilePath);
-            var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage: null);
+            var sectionsInserted = historyFile.MergeReleases(RootLayout, releases, defaultMessage: null);
             if (sectionsInserted.Count != 0)
             {
                 historyFile.Save(historyFilePath);
-                var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
+                var relativePath = Path.GetRelativePath(RootLayout.RepositoryRoot, historyFilePath)
                     .Replace('\\', '/');
                 Console.WriteLine($"Updated version history file: {relativePath}");
                 Console.WriteLine("New content:");

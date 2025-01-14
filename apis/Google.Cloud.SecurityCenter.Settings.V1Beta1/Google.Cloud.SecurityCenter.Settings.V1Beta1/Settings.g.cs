@@ -88,6 +88,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// Common configuration settings for all of Security Center.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Settings : pb::IMessage<Settings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -479,8 +480,8 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         }
         SinkSettings.MergeFrom(other.SinkSettings);
       }
-      componentSettings_.Add(other.componentSettings_);
-      detectorGroupSettings_.Add(other.detectorGroupSettings_);
+      componentSettings_.MergeFrom(other.componentSettings_);
+      detectorGroupSettings_.MergeFrom(other.detectorGroupSettings_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -662,6 +663,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <summary>
       /// The DetectorGroupSettings define the configuration for a detector group.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectorGroupSettings : pb::IMessage<DetectorGroupSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

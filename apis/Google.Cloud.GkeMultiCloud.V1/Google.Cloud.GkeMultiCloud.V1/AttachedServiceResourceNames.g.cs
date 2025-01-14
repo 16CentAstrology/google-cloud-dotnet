@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -101,6 +101,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AttachedServerConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateAttachedClusterAgentTokenRequest
+    {
+        /// <summary>
+        /// <see cref="AttachedClusterName"/>-typed view over the <see cref="AttachedCluster"/> resource name property.
+        /// </summary>
+        public AttachedClusterName AttachedClusterAsAttachedClusterName
+        {
+            get => string.IsNullOrEmpty(AttachedCluster) ? null : AttachedClusterName.Parse(AttachedCluster, allowUnparsed: true);
+            set => AttachedCluster = value?.ToString() ?? "";
         }
     }
 }

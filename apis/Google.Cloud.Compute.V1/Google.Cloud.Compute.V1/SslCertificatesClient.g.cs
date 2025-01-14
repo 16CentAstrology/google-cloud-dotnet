@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -224,14 +224,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SslCertificatesClient.Create(callInvoker, Settings, Logger);
+            return SslCertificatesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SslCertificatesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SslCertificatesClient.Create(callInvoker, Settings, Logger);
+            return SslCertificatesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -325,7 +325,7 @@ namespace Google.Cloud.Compute.V1
         public virtual SslCertificates.SslCertificatesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -334,7 +334,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -345,7 +345,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -360,16 +360,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SslCertificateAggregatedList, scg::KeyValuePair<string, SslCertificatesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListSslCertificatesRequest
+        public virtual gax::PagedEnumerable<SslCertificateAggregatedList, scg::KeyValuePair<string, SslCertificatesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListSslCertificatesRequest request = new AggregatedListSslCertificatesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -386,13 +395,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SslCertificateAggregatedList, scg::KeyValuePair<string, SslCertificatesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListSslCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<SslCertificateAggregatedList, scg::KeyValuePair<string, SslCertificatesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListSslCertificatesRequest request = new AggregatedListSslCertificatesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified SslCertificate resource.
@@ -711,13 +729,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SslCertificate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SslCertificateList, SslCertificate> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListSslCertificatesRequest
+        public virtual gax::PagedEnumerable<SslCertificateList, SslCertificate> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSslCertificatesRequest request = new ListSslCertificatesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of SslCertificate resources available to the specified project.
@@ -735,13 +762,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SslCertificate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SslCertificateList, SslCertificate> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListSslCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<SslCertificateList, SslCertificate> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSslCertificatesRequest request = new ListSslCertificatesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
     }
 
     /// <summary>SslCertificates client wrapper implementation, for convenient use.</summary>
@@ -770,7 +806,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             SslCertificatesSettings effectiveSettings = settings ?? SslCertificatesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSslCertificatesRequest, SslCertificateAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
@@ -819,7 +859,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListSslCertificatesRequest(ref ListSslCertificatesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -831,7 +871,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project.
+        /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

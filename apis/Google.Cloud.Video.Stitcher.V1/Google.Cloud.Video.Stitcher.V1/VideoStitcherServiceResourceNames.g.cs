@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -215,11 +215,11 @@ namespace Google.Cloud.Video.Stitcher.V1
     public partial class CreateLiveSessionRequest
     {
         /// <summary>
-        /// <see cref="LiveSessionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public LiveSessionName ParentAsLiveSessionName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LiveSessionName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -280,6 +280,54 @@ namespace Google.Cloud.Video.Stitcher.V1
         public gcvsv::LiveConfigName LiveConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvsv::LiveConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListVodConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::VodConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::VodConfigName VodConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::VodConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteVodConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::VodConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::VodConfigName VodConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::VodConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

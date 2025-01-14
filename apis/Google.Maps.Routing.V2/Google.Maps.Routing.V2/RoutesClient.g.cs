@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Maps.Routing.V2
 {
@@ -117,14 +117,14 @@ namespace Google.Maps.Routing.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RoutesClient.Create(callInvoker, Settings, Logger);
+            return RoutesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RoutesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RoutesClient.Create(callInvoker, Settings, Logger);
+            return RoutesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -214,7 +214,7 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using URL parameter
         /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
         /// (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
         /// is a comma separated list of field paths. See detailed documentation about
         /// [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -257,7 +257,7 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using URL parameter
         /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
         /// (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
         /// is a comma separated list of field paths. See detailed documentation about
         /// [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -300,7 +300,7 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using URL parameter
         /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
         /// (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
         /// is a comma separated list of field paths. See detailed documentation about
         /// [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -351,9 +351,9 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using the URL
         /// parameter `$fields` or `fields`, or by using the HTTP/gRPC header
         /// `X-Goog-FieldMask` (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
-        /// is a comma separated list of field paths. See this detailed documentation
-        /// about [how to construct the field
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)).
+        /// The value is a comma separated list of field paths. See this detailed
+        /// documentation about [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
         /// 
         /// For example, in this method:
@@ -407,7 +407,11 @@ namespace Google.Maps.Routing.V2
         {
             GrpcClient = grpcClient;
             RoutesSettings effectiveSettings = settings ?? RoutesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callComputeRoutes = clientHelper.BuildApiCall<ComputeRoutesRequest, ComputeRoutesResponse>("ComputeRoutes", grpcClient.ComputeRoutesAsync, grpcClient.ComputeRoutes, effectiveSettings.ComputeRoutesSettings);
             Modify_ApiCall(ref _callComputeRoutes);
             Modify_ComputeRoutesApiCall(ref _callComputeRoutes);
@@ -442,7 +446,7 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using URL parameter
         /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
         /// (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
         /// is a comma separated list of field paths. See detailed documentation about
         /// [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -488,7 +492,7 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using URL parameter
         /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
         /// (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
         /// is a comma separated list of field paths. See detailed documentation about
         /// [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -543,9 +547,9 @@ namespace Google.Maps.Routing.V2
         /// the input. You can provide the response field mask by using the URL
         /// parameter `$fields` or `fields`, or by using the HTTP/gRPC header
         /// `X-Goog-FieldMask` (see the [available URL parameters and
-        /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
-        /// is a comma separated list of field paths. See this detailed documentation
-        /// about [how to construct the field
+        /// headers](https://cloud.google.com/apis/docs/system-parameters)).
+        /// The value is a comma separated list of field paths. See this detailed
+        /// documentation about [how to construct the field
         /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
         /// 
         /// For example, in this method:

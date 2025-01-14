@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Language.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Language.V1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -444,6 +445,66 @@ namespace Google.Cloud.Language.V1.Snippets
             Document document = new Document();
             // Make the request
             ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(document);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModerateText</summary>
+        public void ModerateTextRequestObject()
+        {
+            // Snippet: ModerateText(ModerateTextRequest, CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            ModerateTextRequest request = new ModerateTextRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            ModerateTextResponse response = languageServiceClient.ModerateText(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModerateTextAsync</summary>
+        public async Task ModerateTextRequestObjectAsync()
+        {
+            // Snippet: ModerateTextAsync(ModerateTextRequest, CallSettings)
+            // Additional: ModerateTextAsync(ModerateTextRequest, CancellationToken)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModerateTextRequest request = new ModerateTextRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            ModerateTextResponse response = await languageServiceClient.ModerateTextAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModerateText</summary>
+        public void ModerateText()
+        {
+            // Snippet: ModerateText(Document, CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            Document document = new Document();
+            // Make the request
+            ModerateTextResponse response = languageServiceClient.ModerateText(document);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModerateTextAsync</summary>
+        public async Task ModerateTextAsync()
+        {
+            // Snippet: ModerateTextAsync(Document, CallSettings)
+            // Additional: ModerateTextAsync(Document, CancellationToken)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Document document = new Document();
+            // Make the request
+            ModerateTextResponse response = await languageServiceClient.ModerateTextAsync(document);
             // End snippet
         }
 

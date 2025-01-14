@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_GetQueue_async]
     using Google.Protobuf.WellKnownTypes;
@@ -36,15 +36,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task GetQueueRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetQueueRequest request = new GetQueueRequest
+            gctv::GetQueueRequest request = new gctv::GetQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            Queue response = await cloudTasksClient.GetQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.GetQueueAsync(request);
         }
     }
     // [END cloudtasks_v2beta3_generated_CloudTasks_GetQueue_async]

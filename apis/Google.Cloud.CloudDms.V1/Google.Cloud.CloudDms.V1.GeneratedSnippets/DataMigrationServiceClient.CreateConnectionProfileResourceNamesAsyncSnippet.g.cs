@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudDms.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_CreateConnectionProfile_async_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudDms.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace Google.Cloud.CloudDms.V1.Snippets
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request

@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -61,12 +61,16 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool UsesEmulator { get; }
 
+        internal bool LeaderRoutingEnabled { get; }
+
+        internal DirectedReadOptions DirectedReadOptions { get; }
+
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
 
         // May be null
         private readonly string _credentialsFile;
-        // May be null 
+        // May be null
         private readonly ChannelCredentials _credentialsOverride;
         // May be null; _credentialsOverride takes precedence if both this and _credentialsOverride
         // are non-null (which should only happen when connecting to the emulator)
@@ -89,6 +93,8 @@ namespace Google.Cloud.Spanner.Data
             _googleCredential = builder.GoogleCredential;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
+            LeaderRoutingEnabled = builder.EnableLeaderRouting;
+            DirectedReadOptions = builder.DirectedReadOptions;
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
@@ -105,6 +111,8 @@ namespace Google.Cloud.Spanner.Data
             UsesEmulator == other.UsesEmulator &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
+            LeaderRoutingEnabled == other.LeaderRoutingEnabled &&
+            Equals(DirectedReadOptions, other.DirectedReadOptions) &&
             GrpcAdapter.Equals(other.GrpcAdapter);
 
         public override int GetHashCode()
@@ -119,6 +127,8 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
+                hash = hash * 23 + LeaderRoutingEnabled.GetHashCode();
+                hash = hash * 23 + (DirectedReadOptions?.GetHashCode() ?? 0);
                 hash = hash * 23 + GrpcAdapter.GetHashCode();
                 return hash;
             }
@@ -144,6 +154,10 @@ namespace Google.Cloud.Spanner.Data
                 builder.Append($"; GoogleCredential: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
+            builder.Append($"; MaximumGrpcChannels: {MaximumGrpcChannels}");
+            builder.Append($"; MaximumConcurrentStreamsLowWatermark: {MaximumConcurrentStreamsLowWatermark}");
+            builder.Append($"; LeaderRoutingEnabled: {LeaderRoutingEnabled}");
+            builder.Append($"; DirectedReadOptions: {DirectedReadOptions?.ToString() ?? "None"}");
             builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
             return builder.ToString();
         }

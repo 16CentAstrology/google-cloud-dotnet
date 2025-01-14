@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,6 +20,18 @@ using gagr = Google.Api.Gax.ResourceNames;
 namespace Google.Cloud.WebRisk.V1
 {
     public partial class CreateSubmissionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SubmitUriRequest
     {
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.

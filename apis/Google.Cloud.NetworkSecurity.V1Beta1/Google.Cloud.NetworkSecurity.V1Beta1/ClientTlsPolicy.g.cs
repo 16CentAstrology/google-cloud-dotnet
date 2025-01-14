@@ -91,6 +91,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// connections to backends of a service. This resource itself does not affect
   /// configuration unless it is attached to a backend service resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientTlsPolicy : pb::IMessage<ClientTlsPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -444,7 +445,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Sni.Length != 0) {
         Sni = other.Sni;
       }
@@ -577,6 +578,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the ListClientTlsPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListClientTlsPoliciesRequest : pb::IMessage<ListClientTlsPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -856,6 +858,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Response returned by the ListClientTlsPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListClientTlsPoliciesResponse : pb::IMessage<ListClientTlsPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1082,6 +1085,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the GetClientTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetClientTlsPolicyRequest : pb::IMessage<GetClientTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1278,6 +1282,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the CreateClientTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateClientTlsPolicyRequest : pb::IMessage<CreateClientTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1566,6 +1571,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by UpdateClientTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateClientTlsPolicyRequest : pb::IMessage<UpdateClientTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1824,6 +1830,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the DeleteClientTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteClientTlsPolicyRequest : pb::IMessage<DeleteClientTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

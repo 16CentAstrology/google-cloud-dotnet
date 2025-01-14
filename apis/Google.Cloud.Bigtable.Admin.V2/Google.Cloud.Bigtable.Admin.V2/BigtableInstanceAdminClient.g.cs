@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
@@ -615,14 +615,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigtableInstanceAdminClient.Create(callInvoker, Settings, Logger);
+            return BigtableInstanceAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BigtableInstanceAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigtableInstanceAdminClient.Create(callInvoker, Settings, Logger);
+            return BigtableInstanceAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -811,12 +811,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -854,12 +854,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -897,12 +897,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -931,12 +931,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -974,12 +974,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -1017,12 +1017,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project in which to create the new instance.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project in which to create the new
+        /// instance. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The ID to be used when referring to the new instance within its project,
-        /// e.g., just `myinstance` rather than
+        /// Required. The ID to be used when referring to the new instance within its
+        /// project, e.g., just `myinstance` rather than
         /// `projects/myproject/instances/myinstance`.
         /// </param>
         /// <param name="instance">
@@ -1183,8 +1183,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1198,8 +1198,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1213,8 +1213,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1225,8 +1225,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1240,8 +1240,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1255,8 +1255,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about instances in a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the project for which a list of instances is requested.
-        /// Values are of the form `projects/{project}`.
+        /// Required. The unique name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/{project}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1601,13 +1601,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1634,13 +1633,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1667,13 +1665,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1695,13 +1692,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1728,13 +1724,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1761,13 +1756,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// enabled.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new cluster.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new
+        /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="clusterId">
-        /// Required. The ID to be used when referring to the new cluster within its instance,
-        /// e.g., just `mycluster` rather than
+        /// Required. The ID to be used when referring to the new cluster within its
+        /// instance, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// </param>
         /// <param name="cluster">
@@ -1921,10 +1915,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1938,10 +1933,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1955,10 +1951,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1969,10 +1966,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1986,10 +1984,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2003,10 +2002,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about clusters in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of clusters is requested.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
-        /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-        /// e.g., `projects/myproject/instances/-`.
+        /// Required. The unique name of the instance for which a list of clusters is
+        /// requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+        /// Clusters for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2180,8 +2180,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and explicitly set a serve_node count via the update_mask.
         /// </summary>
         /// <param name="cluster">
-        /// Required. The Cluster which contains the partial updates to be applied, subject to
-        /// the update_mask.
+        /// Required. The Cluster which contains the partial updates to be applied,
+        /// subject to the update_mask.
         /// </param>
         /// <param name="updateMask">
         /// Required. The subset of Cluster fields which should be replaced.
@@ -2210,8 +2210,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and explicitly set a serve_node count via the update_mask.
         /// </summary>
         /// <param name="cluster">
-        /// Required. The Cluster which contains the partial updates to be applied, subject to
-        /// the update_mask.
+        /// Required. The Cluster which contains the partial updates to be applied,
+        /// subject to the update_mask.
         /// </param>
         /// <param name="updateMask">
         /// Required. The subset of Cluster fields which should be replaced.
@@ -2240,8 +2240,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and explicitly set a serve_node count via the update_mask.
         /// </summary>
         /// <param name="cluster">
-        /// Required. The Cluster which contains the partial updates to be applied, subject to
-        /// the update_mask.
+        /// Required. The Cluster which contains the partial updates to be applied,
+        /// subject to the update_mask.
         /// </param>
         /// <param name="updateMask">
         /// Required. The subset of Cluster fields which should be replaced.
@@ -2282,8 +2282,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2297,8 +2297,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2312,8 +2312,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2324,8 +2324,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2339,8 +2339,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2354,8 +2354,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes a cluster from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the cluster to be deleted. Values are of the form
-        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Required. The unique name of the cluster to be deleted. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2393,13 +2393,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2420,13 +2419,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2447,13 +2445,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2469,13 +2466,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2496,13 +2492,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2523,13 +2518,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Creates an app profile within an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance in which to create the new app profile.
-        /// Values are of the form
-        /// `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance in which to create the new app
+        /// profile. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="appProfileId">
-        /// Required. The ID to be used when referring to the new app profile within its
-        /// instance, e.g., just `myprofile` rather than
+        /// Required. The ID to be used when referring to the new app profile within
+        /// its instance, e.g., just `myprofile` rather than
         /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
         /// </param>
         /// <param name="appProfile">
@@ -2572,8 +2566,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2587,8 +2581,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2602,8 +2596,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2614,8 +2608,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2629,8 +2623,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2644,8 +2638,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Gets information about an app profile.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the requested app profile. Values are of the form
-        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// Required. The unique name of the requested app profile. Values are of the
+        /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2674,8 +2668,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of app profiles is
-        /// requested. Values are of the form
+        /// Required. The unique name of the instance for which a list of app profiles
+        /// is requested. Values are of the form
         /// `projects/{project}/instances/{instance}`.
         /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
         /// e.g., `projects/myproject/instances/-`.
@@ -2690,20 +2684,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfiles(new ListAppProfilesRequest
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of app profiles is
-        /// requested. Values are of the form
+        /// Required. The unique name of the instance for which a list of app profiles
+        /// is requested. Values are of the form
         /// `projects/{project}/instances/{instance}`.
         /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
         /// e.g., `projects/myproject/instances/-`.
@@ -2718,20 +2721,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfilesAsync(new ListAppProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of app profiles is
-        /// requested. Values are of the form
+        /// Required. The unique name of the instance for which a list of app profiles
+        /// is requested. Values are of the form
         /// `projects/{project}/instances/{instance}`.
         /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
         /// e.g., `projects/myproject/instances/-`.
@@ -2746,20 +2758,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfiles(new ListAppProfilesRequest
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists information about app profiles in an instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which a list of app profiles is
-        /// requested. Values are of the form
+        /// Required. The unique name of the instance for which a list of app profiles
+        /// is requested. Values are of the form
         /// `projects/{project}/instances/{instance}`.
         /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
         /// e.g., `projects/myproject/instances/-`.
@@ -2774,13 +2795,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAppProfilesAsync(new ListAppProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppProfilesRequest request = new ListAppProfilesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an app profile within an instance.
@@ -2919,7 +2949,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2934,7 +2965,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2949,7 +2981,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2961,7 +2994,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2976,7 +3010,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2991,7 +3026,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Deletes an app profile from an instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the app profile to be deleted. Values are of the form
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
         /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3481,13 +3517,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTablets(new ListHotTabletsRequest
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTablets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3508,13 +3553,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTabletsAsync(new ListHotTabletsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTabletsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3535,13 +3589,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTablets(new ListHotTabletsRequest
+        public virtual gax::PagedEnumerable<ListHotTabletsResponse, HotTablet> ListHotTablets(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTablets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists hot tablets in a cluster, within the time range provided. Hot
@@ -3562,13 +3625,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HotTablet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHotTabletsAsync(new ListHotTabletsRequest
+        public virtual gax::PagedAsyncEnumerable<ListHotTabletsResponse, HotTablet> ListHotTabletsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHotTabletsRequest request = new ListHotTabletsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHotTabletsAsync(request, callSettings);
+        }
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper implementation, for convenient use.</summary>
@@ -3632,7 +3704,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             GrpcClient = grpcClient;
             BigtableInstanceAdminSettings effectiveSettings = settings ?? BigtableInstanceAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             PartialUpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings, logger);
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);

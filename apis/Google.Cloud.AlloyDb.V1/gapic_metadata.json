@@ -34,6 +34,24 @@
                 "CreateInstanceAsync"
               ]
             },
+            "CreateSecondaryCluster": {
+              "methods": [
+                "CreateSecondaryCluster",
+                "CreateSecondaryClusterAsync"
+              ]
+            },
+            "CreateSecondaryInstance": {
+              "methods": [
+                "CreateSecondaryInstance",
+                "CreateSecondaryInstanceAsync"
+              ]
+            },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -52,10 +70,28 @@
                 "DeleteInstanceAsync"
               ]
             },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
             "FailoverInstance": {
               "methods": [
                 "FailoverInstance",
                 "FailoverInstanceAsync"
+              ]
+            },
+            "GenerateClientCertificate": {
+              "methods": [
+                "GenerateClientCertificate",
+                "GenerateClientCertificateAsync"
               ]
             },
             "GetBackup": {
@@ -70,10 +106,28 @@
                 "GetClusterAsync"
               ]
             },
+            "GetConnectionInfo": {
+              "methods": [
+                "GetConnectionInfo",
+                "GetConnectionInfoAsync"
+              ]
+            },
             "GetInstance": {
               "methods": [
                 "GetInstance",
                 "GetInstanceAsync"
+              ]
+            },
+            "GetUser": {
+              "methods": [
+                "GetUser",
+                "GetUserAsync"
+              ]
+            },
+            "InjectFault": {
+              "methods": [
+                "InjectFault",
+                "InjectFaultAsync"
               ]
             },
             "ListBackups": {
@@ -88,6 +142,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
@@ -100,6 +160,18 @@
                 "ListSupportedDatabaseFlagsAsync"
               ]
             },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
+              ]
+            },
+            "PromoteCluster": {
+              "methods": [
+                "PromoteCluster",
+                "PromoteClusterAsync"
+              ]
+            },
             "RestartInstance": {
               "methods": [
                 "RestartInstance",
@@ -110,6 +182,12 @@
               "methods": [
                 "RestoreCluster",
                 "RestoreClusterAsync"
+              ]
+            },
+            "SwitchoverCluster": {
+              "methods": [
+                "SwitchoverCluster",
+                "SwitchoverClusterAsync"
               ]
             },
             "UpdateBackup": {
@@ -128,6 +206,12 @@
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
               ]
             }
           }

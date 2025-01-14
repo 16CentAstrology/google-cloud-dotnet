@@ -1,5 +1,27 @@
 # Version history
 
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 7707366](https://github.com/googleapis/google-cloud-dotnet/commit/77073662b153c73c7f9a869ede1376f4c7a12661))
+
+## Version 2.4.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2023-12-04
+
+### New features
+
+- Added REGIONAL tier support in the v1 API ([commit e6cd7ec](https://github.com/googleapis/google-cloud-dotnet/commit/e6cd7ec6b26d49ce07b835ceca6b283cf55ec8ca))
+
 ## Version 2.2.0, released 2023-03-20
 
 ### New features

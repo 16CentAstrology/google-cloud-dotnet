@@ -63,10 +63,10 @@ namespace Google.Cloud.Vision.V1 {
             "cm9wZXJ0eRgBIAEoCzIzLmdvb2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFu",
             "bm90YXRpb24uVGV4dFByb3BlcnR5EjoKDGJvdW5kaW5nX2JveBgCIAEoCzIk",
             "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQm91bmRpbmdQb2x5EgwKBHRleHQY",
-            "AyABKAkSEgoKY29uZmlkZW5jZRgEIAEoAkJxChpjb20uZ29vZ2xlLmNsb3Vk",
-            "LnZpc2lvbi52MUITVGV4dEFubm90YXRpb25Qcm90b1ABWjJjbG91ZC5nb29n",
-            "bGUuY29tL2dvL3Zpc2lvbi9hcGl2MS92aXNpb25wYjt2aXNpb25wYvgBAaIC",
-            "BEdDVk5iBnByb3RvMw=="));
+            "AyABKAkSEgoKY29uZmlkZW5jZRgEIAEoAkJ0Chpjb20uZ29vZ2xlLmNsb3Vk",
+            "LnZpc2lvbi52MUITVGV4dEFubm90YXRpb25Qcm90b1ABWjVjbG91ZC5nb29n",
+            "bGUuY29tL2dvL3Zpc2lvbi92Mi9hcGl2MS92aXNpb25wYjt2aXNpb25wYvgB",
+            "AaICBEdDVk5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,9 +90,11 @@ namespace Google.Cloud.Vision.V1 {
   ///     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
   /// Each structural component, starting from Page, may further have their own
   /// properties. Properties describe detected languages, breaks etc.. Please refer
-  /// to the [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message definition below for more
-  /// detail.
+  /// to the
+  /// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
+  /// message definition below for more detail.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -320,6 +322,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Detected language for a structural component.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -557,6 +560,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Detected start or end of a structural component.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -831,6 +835,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Additional information detected on the structural component.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TextProperty : pb::IMessage<TextProperty>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1069,6 +1074,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Detected page from OCR.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Page : pb::IMessage<Page>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1424,6 +1430,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Logical element on the page.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Block : pb::IMessage<Block>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1843,6 +1850,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Structural unit of text representing a number of words in certain order.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Paragraph : pb::IMessage<Paragraph>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2179,6 +2187,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A word representation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Word : pb::IMessage<Word>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2516,6 +2525,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A single symbol representation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Symbol : pb::IMessage<Symbol>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

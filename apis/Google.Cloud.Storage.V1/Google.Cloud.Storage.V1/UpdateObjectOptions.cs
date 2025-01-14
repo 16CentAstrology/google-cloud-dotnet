@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -83,6 +83,17 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// Must be true to remove the retention configuration, reduce its unlocked retention period, or change its
+        /// mode from unlocked to locked.
+        /// </summary>
+        public bool? OverrideUnlockedRetention { get; set; }
+
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         private bool AnyExplicitPreconditions =>
             IfGenerationMatch != null || IfGenerationNotMatch != null || IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
 
@@ -125,7 +136,6 @@ namespace Google.Cloud.Storage.V1
                 if (IfMetagenerationMatch != null)
                 {
                     request.IfMetagenerationMatch = IfMetagenerationMatch;
-                    RetryHandler.MarkAsRetriable(request);
                 }
                 if (IfMetagenerationNotMatch != null)
                 {
@@ -144,6 +154,10 @@ namespace Google.Cloud.Storage.V1
             if (UserProject != null)
             {
                 request.UserProject = UserProject;
+            }
+            if (OverrideUnlockedRetention.HasValue)
+            {
+                request.OverrideUnlockedRetention = OverrideUnlockedRetention.Value;
             }
         }
     }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Asset.V1
 {
@@ -566,14 +566,14 @@ namespace Google.Cloud.Asset.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AssetServiceClient.Create(callInvoker, Settings, Logger);
+            return AssetServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AssetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AssetServiceClient.Create(callInvoker, Settings, Logger);
+            return AssetServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -788,13 +788,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -817,13 +826,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -846,13 +864,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssets(new ListAssetsRequest
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assets with time and resource types and returns paged results in
@@ -875,13 +902,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssetsAsync(new ListAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssetsRequest request = new ListAssetsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch gets the update history of assets that overlap a time window.
@@ -1461,55 +1497,83 @@ namespace Google.Cloud.Asset.V1
         /// Examples:
         /// 
         /// * `name:Important` to find Google Cloud resources whose name contains
-        /// "Important" as a word.
+        /// `Important` as a word.
         /// * `name=Important` to find the Google Cloud resource whose name is exactly
-        /// "Important".
+        /// `Important`.
         /// * `displayName:Impor*` to find Google Cloud resources whose display name
-        /// contains "Impor" as a prefix of any word in the field.
+        /// contains `Impor` as a prefix of any word in the field.
         /// * `location:us-west*` to find Google Cloud resources whose location
-        /// contains both "us" and "west" as prefixes.
-        /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+        /// contains both `us` and `west` as prefixes.
+        /// * `labels:prod` to find Google Cloud resources whose labels contain `prod`
         /// as a key or value.
-        /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
-        /// and its value is "prod".
-        /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+        /// * `labels.env:prod` to find Google Cloud resources that have a label `env`
+        /// and its value is `prod`.
+        /// * `labels.env:*` to find Google Cloud resources that have a label `env`.
+        /// * `tagKeys:env` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// contains `env`.
+        /// * `tagValues:prod*` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// contains a word prefixed by `prod`.
+        /// * `tagValueIds=tagValues/123` to find Google Cloud resources that have
+        /// directly attached tags where the
+        /// [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// is exactly `tagValues/123`.
+        /// * `effectiveTagKeys:env` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// contains `env`.
+        /// * `effectiveTagValues:prod*` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// contains a word prefixed by `prod`.
+        /// * `effectiveTagValueIds=tagValues/123` to find Google Cloud resources that
+        /// have directly attached or inherited tags where the
+        /// [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// is exactly `tagValues/123`.
         /// * `kmsKey:key` to find Google Cloud resources encrypted with a
-        /// customer-managed encryption key whose name contains "key" as a word. This
-        /// field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
+        /// customer-managed encryption key whose name contains `key` as a word. This
+        /// field is deprecated. Use the `kmsKeys` field to retrieve Cloud KMS
         /// key information.
         /// * `kmsKeys:key` to find Google Cloud resources encrypted with
-        /// customer-managed encryption keys whose name contains the word "key".
+        /// customer-managed encryption keys whose name contains the word `key`.
         /// * `relationships:instance-group-1` to find Google Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
+        /// relationships with `instance-group-1` in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
-        /// instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// instances that have relationships of type `INSTANCE_TO_INSTANCEGROUP`.
         /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// Compute Engine instances that have relationships with "instance-group-1"
+        /// Compute Engine instances that have relationships with `instance-group-1`
         /// in the Compute Engine instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
+        /// `INSTANCE_TO_INSTANCEGROUP`.
+        /// * `sccSecurityMarks.key=value` to find Cloud resources that are attached
+        /// with security marks whose key is `key` and value is `value`.
+        /// * `sccSecurityMarks.key:*` to find Cloud resources that are attached with
+        /// security marks whose key is `key`.
         /// * `state:ACTIVE` to find Google Cloud resources whose state contains
-        /// "ACTIVE" as a word.
+        /// `ACTIVE` as a word.
         /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
-        /// contain "ACTIVE" as a word.
+        /// contain `ACTIVE` as a word.
         /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
-        /// before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
         /// * `updateTime&gt;1609459200` to find Google Cloud resources that were updated
-        /// after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `Important` to find Google Cloud resources that contain "Important" as a
+        /// after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
+        /// * `Important` to find Google Cloud resources that contain `Important` as a
         /// word in any of the searchable fields.
-        /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+        /// * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
         /// of any word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Google Cloud
-        /// resources that contain "Important" as a word in any of the searchable
-        /// fields and are also located in the "us-west1" region or the "global"
+        /// resources that contain `Important` as a word in any of the searchable
+        /// fields and are also located in the `us-west1` region or the `global`
         /// location.
         /// </param>
         /// <param name="assetTypes">
         /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// it will search all the asset types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
         /// 
         /// Regular expressions are also supported. For example:
         /// 
@@ -1532,8 +1596,9 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ResourceSearchResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllResources(new SearchAllResourcesRequest
+        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllResourcesRequest request = new SearchAllResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
@@ -1541,9 +1606,17 @@ namespace Google.Cloud.Asset.V1
                 {
                     assetTypes ?? linq::Enumerable.Empty<string>(),
                 },
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all Google Cloud resources within the specified scope, such as a
@@ -1574,55 +1647,83 @@ namespace Google.Cloud.Asset.V1
         /// Examples:
         /// 
         /// * `name:Important` to find Google Cloud resources whose name contains
-        /// "Important" as a word.
+        /// `Important` as a word.
         /// * `name=Important` to find the Google Cloud resource whose name is exactly
-        /// "Important".
+        /// `Important`.
         /// * `displayName:Impor*` to find Google Cloud resources whose display name
-        /// contains "Impor" as a prefix of any word in the field.
+        /// contains `Impor` as a prefix of any word in the field.
         /// * `location:us-west*` to find Google Cloud resources whose location
-        /// contains both "us" and "west" as prefixes.
-        /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+        /// contains both `us` and `west` as prefixes.
+        /// * `labels:prod` to find Google Cloud resources whose labels contain `prod`
         /// as a key or value.
-        /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
-        /// and its value is "prod".
-        /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+        /// * `labels.env:prod` to find Google Cloud resources that have a label `env`
+        /// and its value is `prod`.
+        /// * `labels.env:*` to find Google Cloud resources that have a label `env`.
+        /// * `tagKeys:env` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// contains `env`.
+        /// * `tagValues:prod*` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// contains a word prefixed by `prod`.
+        /// * `tagValueIds=tagValues/123` to find Google Cloud resources that have
+        /// directly attached tags where the
+        /// [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// is exactly `tagValues/123`.
+        /// * `effectiveTagKeys:env` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// contains `env`.
+        /// * `effectiveTagValues:prod*` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// contains a word prefixed by `prod`.
+        /// * `effectiveTagValueIds=tagValues/123` to find Google Cloud resources that
+        /// have directly attached or inherited tags where the
+        /// [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// is exactly `tagValues/123`.
         /// * `kmsKey:key` to find Google Cloud resources encrypted with a
-        /// customer-managed encryption key whose name contains "key" as a word. This
-        /// field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
+        /// customer-managed encryption key whose name contains `key` as a word. This
+        /// field is deprecated. Use the `kmsKeys` field to retrieve Cloud KMS
         /// key information.
         /// * `kmsKeys:key` to find Google Cloud resources encrypted with
-        /// customer-managed encryption keys whose name contains the word "key".
+        /// customer-managed encryption keys whose name contains the word `key`.
         /// * `relationships:instance-group-1` to find Google Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
+        /// relationships with `instance-group-1` in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
-        /// instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// instances that have relationships of type `INSTANCE_TO_INSTANCEGROUP`.
         /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// Compute Engine instances that have relationships with "instance-group-1"
+        /// Compute Engine instances that have relationships with `instance-group-1`
         /// in the Compute Engine instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
+        /// `INSTANCE_TO_INSTANCEGROUP`.
+        /// * `sccSecurityMarks.key=value` to find Cloud resources that are attached
+        /// with security marks whose key is `key` and value is `value`.
+        /// * `sccSecurityMarks.key:*` to find Cloud resources that are attached with
+        /// security marks whose key is `key`.
         /// * `state:ACTIVE` to find Google Cloud resources whose state contains
-        /// "ACTIVE" as a word.
+        /// `ACTIVE` as a word.
         /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
-        /// contain "ACTIVE" as a word.
+        /// contain `ACTIVE` as a word.
         /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
-        /// before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
         /// * `updateTime&gt;1609459200` to find Google Cloud resources that were updated
-        /// after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `Important` to find Google Cloud resources that contain "Important" as a
+        /// after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
+        /// * `Important` to find Google Cloud resources that contain `Important` as a
         /// word in any of the searchable fields.
-        /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+        /// * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
         /// of any word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Google Cloud
-        /// resources that contain "Important" as a word in any of the searchable
-        /// fields and are also located in the "us-west1" region or the "global"
+        /// resources that contain `Important` as a word in any of the searchable
+        /// fields and are also located in the `us-west1` region or the `global`
         /// location.
         /// </param>
         /// <param name="assetTypes">
         /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// it will search all the asset types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
         /// 
         /// Regular expressions are also supported. For example:
         /// 
@@ -1645,8 +1746,9 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ResourceSearchResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllResourcesAsync(new SearchAllResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllResourcesRequest request = new SearchAllResourcesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
@@ -1654,9 +1756,17 @@ namespace Google.Cloud.Asset.V1
                 {
                     assetTypes ?? linq::Enumerable.Empty<string>(),
                 },
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all IAM policies within the specified scope, such as a project,
@@ -1756,14 +1866,23 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllIamPolicies(new SearchAllIamPoliciesRequest
+        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllIamPoliciesRequest request = new SearchAllIamPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllIamPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all IAM policies within the specified scope, such as a project,
@@ -1839,14 +1958,23 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllIamPoliciesAsync(new SearchAllIamPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllIamPoliciesRequest request = new SearchAllIamPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllIamPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes IAM policies to answer which identities have what accesses on
@@ -2000,8 +2128,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2010,9 +2137,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2022,8 +2148,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2032,9 +2157,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2044,8 +2168,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2054,9 +2177,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2656,13 +2778,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2682,13 +2813,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2708,13 +2848,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2734,13 +2883,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2760,13 +2918,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2786,13 +2953,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2812,13 +2988,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueries(new ListSavedQueriesRequest
+        public virtual gax::PagedEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueries(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all saved queries in a parent project/folder/organization.
@@ -2838,13 +3023,22 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SavedQuery"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSavedQueriesAsync(new ListSavedQueriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSavedQueriesResponse, SavedQuery> ListSavedQueriesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSavedQueriesRequest request = new ListSavedQueriesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSavedQueriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a saved query.
@@ -3146,12 +3340,15 @@ namespace Google.Cloud.Asset.V1
         /// <param name="filter">
         /// The expression to filter
         /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results].
-        /// The only supported field is `consolidated_policy.attached_resource`, and
-        /// the only supported operator is `=`.
+        /// Filtering is currently available for bare literal values and the following
+        /// fields:
+        /// * consolidated_policy.attached_resource
+        /// * consolidated_policy.rules.enforce
         /// 
-        /// Example:
+        /// When filtering by a specific field, the only supported operator is `=`.
+        /// For example, filtering by
         /// consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
-        /// will return the org policy results of"folders/001".
+        /// will return all the Organization Policy results attached to "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3165,15 +3362,24 @@ namespace Google.Cloud.Asset.V1
         /// <returns>
         /// A pageable sequence of <see cref="AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPolicies(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicies(new AnalyzeOrgPoliciesRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPolicies(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies under a scope.
@@ -3192,12 +3398,15 @@ namespace Google.Cloud.Asset.V1
         /// <param name="filter">
         /// The expression to filter
         /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results].
-        /// The only supported field is `consolidated_policy.attached_resource`, and
-        /// the only supported operator is `=`.
+        /// Filtering is currently available for bare literal values and the following
+        /// fields:
+        /// * consolidated_policy.attached_resource
+        /// * consolidated_policy.rules.enforce
         /// 
-        /// Example:
+        /// When filtering by a specific field, the only supported operator is `=`.
+        /// For example, filtering by
         /// consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
-        /// will return the org policy results of"folders/001".
+        /// will return all the Organization Policy results attached to "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3212,15 +3421,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of <see cref="AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPoliciesAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPoliciesAsync(new AnalyzeOrgPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> AnalyzeOrgPoliciesAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed containers (projects, folders or
@@ -3266,13 +3484,17 @@ namespace Google.Cloud.Asset.V1
         /// constraint.
         /// </param>
         /// <param name="filter">
-        /// The expression to filter the governed containers in result.
-        /// The only supported field is `parent`, and the only supported operator is
-        /// `=`.
+        /// The expression to filter
+        /// [AnalyzeOrgPolicyGovernedContainersResponse.governed_containers][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.governed_containers].
+        /// Filtering is currently available for bare literal values and the following
+        /// fields:
+        /// * parent
+        /// * consolidated_policy.rules.enforce
         /// 
-        /// Example:
-        /// parent="//cloudresourcemanager.googleapis.com/folders/001" will return all
-        /// containers under "folders/001".
+        /// When filtering by a specific field, the only supported operator is `=`.
+        /// For example, filtering by
+        /// parent="//cloudresourcemanager.googleapis.com/folders/001"
+        /// will return all the containers under "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3287,15 +3509,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable sequence of <see cref="AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainers(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedContainers(new AnalyzeOrgPolicyGovernedContainersRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainers(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedContainers(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed containers (projects, folders or
@@ -3315,13 +3546,17 @@ namespace Google.Cloud.Asset.V1
         /// constraint.
         /// </param>
         /// <param name="filter">
-        /// The expression to filter the governed containers in result.
-        /// The only supported field is `parent`, and the only supported operator is
-        /// `=`.
+        /// The expression to filter
+        /// [AnalyzeOrgPolicyGovernedContainersResponse.governed_containers][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.governed_containers].
+        /// Filtering is currently available for bare literal values and the following
+        /// fields:
+        /// * parent
+        /// * consolidated_policy.rules.enforce
         /// 
-        /// Example:
-        /// parent="//cloudresourcemanager.googleapis.com/folders/001" will return all
-        /// containers under "folders/001".
+        /// When filtering by a specific field, the only supported operator is `=`.
+        /// For example, filtering by
+        /// parent="//cloudresourcemanager.googleapis.com/folders/001"
+        /// will return all the containers under "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3336,35 +3571,74 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of
         /// <see cref="AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainersAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedContainersAsync(new AnalyzeOrgPolicyGovernedContainersRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> AnalyzeOrgPolicyGovernedContainersAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedContainersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3378,22 +3652,52 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3408,22 +3712,52 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="scope">
@@ -3440,18 +3774,33 @@ namespace Google.Cloud.Asset.V1
         /// constraint.
         /// </param>
         /// <param name="filter">
-        /// The expression to filter the governed assets in result. The only supported
-        /// fields for governed resources are `governed_resource.project` and
-        /// `governed_resource.folders`. The only supported fields for governed iam
-        /// policies are `governed_iam_policy.project` and
-        /// `governed_iam_policy.folders`. The only supported operator is `=`.
+        /// The expression to filter
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets].
         /// 
-        /// Example 1: governed_resource.project="projects/12345678" filter will return
-        /// all governed resources under projects/12345678 including the project
-        /// ifself, if applicable.
+        /// For governed resources, filtering is currently available for bare literal
+        /// values and the following fields:
+        /// * governed_resource.project
+        /// * governed_resource.folders
+        /// * consolidated_policy.rules.enforce
+        /// When filtering by `governed_resource.project` or
+        /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+        /// When filtering by `governed_resource.folders`, the supported operators
+        /// are `=` and `:`.
+        /// For example, filtering by `governed_resource.project="projects/12345678"`
+        /// will return all the governed resources under "projects/12345678",
+        /// including the project itself if applicable.
         /// 
-        /// Example 2: governed_iam_policy.folders="folders/12345678" filter will
-        /// return all governed iam policies under folders/12345678, if applicable.
+        /// For governed IAM policies, filtering is currently available for bare
+        /// literal values and the following fields:
+        /// * governed_iam_policy.project
+        /// * governed_iam_policy.folders
+        /// * consolidated_policy.rules.enforce
+        /// When filtering by `governed_iam_policy.project` or
+        /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+        /// When filtering by `governed_iam_policy.folders`, the supported operators
+        /// are `=` and `:`.
+        /// For example, filtering by `governed_iam_policy.folders:"folders/12345678"`
+        /// will return all the governed IAM policies under "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3465,35 +3814,74 @@ namespace Google.Cloud.Asset.V1
         /// <returns>
         /// A pageable sequence of <see cref="AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssets(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedAssets(new AnalyzeOrgPolicyGovernedAssetsRequest
+        public virtual gax::PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssets(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedAssets(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="scope">
@@ -3510,18 +3898,33 @@ namespace Google.Cloud.Asset.V1
         /// constraint.
         /// </param>
         /// <param name="filter">
-        /// The expression to filter the governed assets in result. The only supported
-        /// fields for governed resources are `governed_resource.project` and
-        /// `governed_resource.folders`. The only supported fields for governed iam
-        /// policies are `governed_iam_policy.project` and
-        /// `governed_iam_policy.folders`. The only supported operator is `=`.
+        /// The expression to filter
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets].
         /// 
-        /// Example 1: governed_resource.project="projects/12345678" filter will return
-        /// all governed resources under projects/12345678 including the project
-        /// ifself, if applicable.
+        /// For governed resources, filtering is currently available for bare literal
+        /// values and the following fields:
+        /// * governed_resource.project
+        /// * governed_resource.folders
+        /// * consolidated_policy.rules.enforce
+        /// When filtering by `governed_resource.project` or
+        /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+        /// When filtering by `governed_resource.folders`, the supported operators
+        /// are `=` and `:`.
+        /// For example, filtering by `governed_resource.project="projects/12345678"`
+        /// will return all the governed resources under "projects/12345678",
+        /// including the project itself if applicable.
         /// 
-        /// Example 2: governed_iam_policy.folders="folders/12345678" filter will
-        /// return all governed iam policies under folders/12345678, if applicable.
+        /// For governed IAM policies, filtering is currently available for bare
+        /// literal values and the following fields:
+        /// * governed_iam_policy.project
+        /// * governed_iam_policy.folders
+        /// * consolidated_policy.rules.enforce
+        /// When filtering by `governed_iam_policy.project` or
+        /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+        /// When filtering by `governed_iam_policy.folders`, the supported operators
+        /// are `=` and `:`.
+        /// For example, filtering by `governed_iam_policy.folders:"folders/12345678"`
+        /// will return all the governed IAM policies under "folders/001".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3536,15 +3939,24 @@ namespace Google.Cloud.Asset.V1
         /// A pageable asynchronous sequence of <see cref="AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset"/>
         /// resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssetsAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AnalyzeOrgPolicyGovernedAssetsAsync(new AnalyzeOrgPolicyGovernedAssetsRequest
+        public virtual gax::PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> AnalyzeOrgPolicyGovernedAssetsAsync(string scope, string constraint, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
                 Constraint = gax::GaxPreconditions.CheckNotNullOrEmpty(constraint, nameof(constraint)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AnalyzeOrgPolicyGovernedAssetsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>
@@ -3609,7 +4021,11 @@ namespace Google.Cloud.Asset.V1
         {
             GrpcClient = grpcClient;
             AssetServiceSettings effectiveSettings = settings ?? AssetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ExportAssetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAssetsOperationsSettings, logger);
             AnalyzeIamPolicyLongrunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeIamPolicyLongrunningOperationsSettings, logger);
             _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>("ExportAssets", grpcClient.ExportAssetsAsync, grpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4179,8 +4595,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -4189,9 +4604,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4204,8 +4618,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -4214,9 +4627,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4435,22 +4847,52 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4467,22 +4909,52 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Analyzes organization policies governed assets (Google Cloud resources or
         /// policies) under a scope. This RPC supports custom constraints and the
-        /// following 10 canned constraints:
+        /// following canned constraints:
         /// 
-        /// * storage.uniformBucketLevelAccess
-        /// * iam.disableServiceAccountKeyCreation
-        /// * iam.allowedPolicyMemberDomains
-        /// * compute.vmExternalIpAccess
-        /// * appengine.enforceServiceAccountActAsCheck
-        /// * gcp.resourceLocations
-        /// * compute.trustedImageProjects
-        /// * compute.skipDefaultNetworkCreation
-        /// * compute.requireOsLogin
-        /// * compute.disableNestedVirtualization
+        /// * constraints/ainotebooks.accessMode
+        /// * constraints/ainotebooks.disableFileDownloads
+        /// * constraints/ainotebooks.disableRootAccess
+        /// * constraints/ainotebooks.disableTerminal
+        /// * constraints/ainotebooks.environmentOptions
+        /// * constraints/ainotebooks.requireAutoUpgradeSchedule
+        /// * constraints/ainotebooks.restrictVpcNetworks
+        /// * constraints/compute.disableGuestAttributesAccess
+        /// * constraints/compute.disableInstanceDataAccessApis
+        /// * constraints/compute.disableNestedVirtualization
+        /// * constraints/compute.disableSerialPortAccess
+        /// * constraints/compute.disableSerialPortLogging
+        /// * constraints/compute.disableVpcExternalIpv6
+        /// * constraints/compute.requireOsLogin
+        /// * constraints/compute.requireShieldedVm
+        /// * constraints/compute.restrictLoadBalancerCreationForTypes
+        /// * constraints/compute.restrictProtocolForwardingCreationForTypes
+        /// * constraints/compute.restrictXpnProjectLienRemoval
+        /// * constraints/compute.setNewProjectDefaultToZonalDNSOnly
+        /// * constraints/compute.skipDefaultNetworkCreation
+        /// * constraints/compute.trustedImageProjects
+        /// * constraints/compute.vmCanIpForward
+        /// * constraints/compute.vmExternalIpAccess
+        /// * constraints/gcp.detailedAuditLoggingMode
+        /// * constraints/gcp.resourceLocations
+        /// * constraints/iam.allowedPolicyMemberDomains
+        /// * constraints/iam.automaticIamGrantsForDefaultServiceAccounts
+        /// * constraints/iam.disableServiceAccountCreation
+        /// * constraints/iam.disableServiceAccountKeyCreation
+        /// * constraints/iam.disableServiceAccountKeyUpload
+        /// * constraints/iam.restrictCrossProjectServiceAccountLienRemoval
+        /// * constraints/iam.serviceAccountKeyExpiryHours
+        /// * constraints/resourcemanager.accessBoundaries
+        /// * constraints/resourcemanager.allowedExportDestinations
+        /// * constraints/sql.restrictAuthorizedNetworks
+        /// * constraints/sql.restrictNoncompliantDiagnosticDataAccess
+        /// * constraints/sql.restrictNoncompliantResourceCreation
+        /// * constraints/sql.restrictPublicIp
+        /// * constraints/storage.publicAccessPrevention
+        /// * constraints/storage.restrictAuthTypes
+        /// * constraints/storage.uniformBucketLevelAccess
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

@@ -98,6 +98,7 @@ namespace Grafeas.V1 {
   /// Provenance of a build. Contains all information needed to verify the full
   /// details about the build from source to completion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuildProvenance : pb::IMessage<BuildProvenance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -607,7 +608,7 @@ namespace Grafeas.V1 {
       if (other.TriggerId.Length != 0) {
         TriggerId = other.TriggerId;
       }
-      buildOptions_.Add(other.buildOptions_);
+      buildOptions_.MergeFrom(other.buildOptions_);
       if (other.BuilderVersion.Length != 0) {
         BuilderVersion = other.BuilderVersion;
       }
@@ -779,6 +780,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Source describes the location of the source used for the build.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Source : pb::IMessage<Source>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1006,7 +1008,7 @@ namespace Grafeas.V1 {
       if (other.ArtifactStorageSourceUri.Length != 0) {
         ArtifactStorageSourceUri = other.ArtifactStorageSourceUri;
       }
-      fileHashes_.Add(other.fileHashes_);
+      fileHashes_.MergeFrom(other.fileHashes_);
       if (other.context_ != null) {
         if (context_ == null) {
           Context = new global::Grafeas.V1.SourceContext();
@@ -1093,6 +1095,7 @@ namespace Grafeas.V1 {
   /// Container message for hashes of byte content of files, used in source
   /// messages to verify integrity of source input to the build.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileHashes : pb::IMessage<FileHashes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1277,6 +1280,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Container message for hash values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Hash : pb::IMessage<Hash>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1512,6 +1516,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Command describes a step performed as part of the build pipeline.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Command : pb::IMessage<Command>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1877,6 +1882,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Artifact describes a build product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Artifact : pb::IMessage<Artifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2148,6 +2154,7 @@ namespace Grafeas.V1 {
   /// A SourceContext is a reference to a tree of files. A SourceContext together
   /// with a path point to a unique revision of a single file or directory.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceContext : pb::IMessage<SourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2403,7 +2410,7 @@ namespace Grafeas.V1 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ContextCase) {
         case ContextOneofCase.CloudRepo:
           if (CloudRepo == null) {
@@ -2527,6 +2534,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// An alias to a repo revision.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AliasContext : pb::IMessage<AliasContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2794,6 +2802,7 @@ namespace Grafeas.V1 {
   /// A CloudRepoSourceContext denotes a particular revision in a Google Cloud
   /// Source Repo.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudRepoSourceContext : pb::IMessage<CloudRepoSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2870,10 +2879,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RevisionId {
-      get { return revisionCase_ == RevisionOneofCase.RevisionId ? (string) revision_ : ""; }
+      get { return HasRevisionId ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return revisionCase_ == RevisionOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearRevision();
       }
     }
 
@@ -2940,7 +2963,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (repoId_ != null) hash ^= RepoId.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.RevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
       if (revisionCase_ == RevisionOneofCase.AliasContext) hash ^= AliasContext.GetHashCode();
       hash ^= (int) revisionCase_;
       if (_unknownFields != null) {
@@ -2965,7 +2988,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(18);
         output.WriteString(RevisionId);
       }
@@ -2987,7 +3010,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(18);
         output.WriteString(RevisionId);
       }
@@ -3008,7 +3031,7 @@ namespace Grafeas.V1 {
       if (repoId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
       }
       if (revisionCase_ == RevisionOneofCase.AliasContext) {
@@ -3124,6 +3147,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// A SourceContext referring to a Gerrit project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GerritSourceContext : pb::IMessage<GerritSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3218,10 +3242,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RevisionId {
-      get { return revisionCase_ == RevisionOneofCase.RevisionId ? (string) revision_ : ""; }
+      get { return HasRevisionId ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return revisionCase_ == RevisionOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearRevision();
       }
     }
 
@@ -3290,7 +3328,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (HostUri.Length != 0) hash ^= HostUri.GetHashCode();
       if (GerritProject.Length != 0) hash ^= GerritProject.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.RevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
       if (revisionCase_ == RevisionOneofCase.AliasContext) hash ^= AliasContext.GetHashCode();
       hash ^= (int) revisionCase_;
       if (_unknownFields != null) {
@@ -3319,7 +3357,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(26);
         output.WriteString(RevisionId);
       }
@@ -3345,7 +3383,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(26);
         output.WriteString(RevisionId);
       }
@@ -3369,7 +3407,7 @@ namespace Grafeas.V1 {
       if (GerritProject.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
       }
       if (revisionCase_ == RevisionOneofCase.AliasContext) {
@@ -3488,6 +3526,7 @@ namespace Grafeas.V1 {
   /// A GitSourceContext denotes a particular revision in a third party Git
   /// repository (e.g., GitHub).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitSourceContext : pb::IMessage<GitSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3723,6 +3762,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// A unique identifier for a Cloud Repo.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RepoId : pb::IMessage<RepoId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3798,10 +3838,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uid {
-      get { return idCase_ == IdOneofCase.Uid ? (string) id_ : ""; }
+      get { return HasUid ? (string) id_ : ""; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         idCase_ = IdOneofCase.Uid;
+      }
+    }
+    /// <summary>Gets whether the "uid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUid {
+      get { return idCase_ == IdOneofCase.Uid; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uid" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUid() {
+      if (HasUid) {
+        ClearId();
       }
     }
 
@@ -3852,7 +3906,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (idCase_ == IdOneofCase.ProjectRepoId) hash ^= ProjectRepoId.GetHashCode();
-      if (idCase_ == IdOneofCase.Uid) hash ^= Uid.GetHashCode();
+      if (HasUid) hash ^= Uid.GetHashCode();
       hash ^= (int) idCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3876,7 +3930,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         output.WriteRawTag(18);
         output.WriteString(Uid);
       }
@@ -3894,7 +3948,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         output.WriteRawTag(18);
         output.WriteString(Uid);
       }
@@ -3911,7 +3965,7 @@ namespace Grafeas.V1 {
       if (idCase_ == IdOneofCase.ProjectRepoId) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
       if (_unknownFields != null) {
@@ -4005,6 +4059,7 @@ namespace Grafeas.V1 {
   /// Selects a repo using a Google Cloud Platform project ID (e.g.,
   /// winged-cargo-31) and a repo name within that project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectRepoId : pb::IMessage<ProjectRepoId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

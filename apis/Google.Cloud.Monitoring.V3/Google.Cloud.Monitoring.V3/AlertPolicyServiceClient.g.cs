@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -182,14 +182,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AlertPolicyServiceClient.Create(callInvoker, Settings, Logger);
+            return AlertPolicyServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AlertPolicyServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AlertPolicyServiceClient.Create(callInvoker, Settings, Logger);
+            return AlertPolicyServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -317,8 +317,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -338,20 +339,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -371,20 +382,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -404,20 +425,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -437,20 +468,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -470,20 +511,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -503,20 +554,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -536,20 +597,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -569,20 +640,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -602,20 +683,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPolicies(new ListAlertPoliciesRequest
+        public virtual gax::PagedEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPolicies(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing alerting policies for the workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose alert policies are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// alert policies are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -635,13 +726,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AlertPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAlertPoliciesAsync(new ListAlertPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAlertPoliciesResponse, AlertPolicy> ListAlertPoliciesAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAlertPoliciesRequest request = new ListAlertPoliciesRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAlertPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single alerting policy.
@@ -807,6 +907,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -816,6 +920,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -825,6 +933,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -834,10 +946,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -850,9 +967,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -865,10 +982,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -881,9 +1003,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -896,10 +1018,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -912,9 +1039,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -923,10 +1050,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -939,9 +1071,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -954,10 +1086,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -970,9 +1107,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -985,10 +1122,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1001,9 +1143,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1012,10 +1154,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1028,9 +1175,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1043,10 +1190,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1059,9 +1211,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1074,10 +1226,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1090,9 +1247,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1101,10 +1258,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1117,9 +1279,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1132,10 +1294,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1148,9 +1315,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1163,10 +1330,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1179,9 +1351,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1190,10 +1362,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1206,9 +1383,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1221,10 +1398,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1237,9 +1419,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1252,10 +1434,15 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the alerting policy. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the alerting policy. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1268,9 +1455,9 @@ namespace Google.Cloud.Monitoring.V3
         /// container.
         /// </param>
         /// <param name="alertPolicy">
-        /// Required. The requested alerting policy. You should omit the `name` field in this
-        /// policy. The name will be returned in the new policy, including
-        /// a new `[ALERT_POLICY_ID]` value.
+        /// Required. The requested alerting policy. You should omit the `name` field
+        /// in this policy. The name will be returned in the new policy, including a
+        /// new `[ALERT_POLICY_ID]` value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1279,6 +1466,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1288,6 +1479,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1297,6 +1492,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1306,6 +1505,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1324,6 +1527,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1342,6 +1549,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1357,6 +1568,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1375,6 +1590,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1393,6 +1612,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1408,6 +1631,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1426,6 +1653,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1444,6 +1675,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="name">
         /// Required. The alerting policy to delete. The format is:
@@ -1462,6 +1697,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1474,6 +1713,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1486,6 +1729,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1498,6 +1745,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="updateMask">
         /// Optional. A list of alerting policy field names. If this field is not
@@ -1542,6 +1793,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="updateMask">
         /// Optional. A list of alerting policy field names. If this field is not
@@ -1586,6 +1841,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="updateMask">
         /// Optional. A list of alerting policy field names. If this field is not
@@ -1656,7 +1915,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             AlertPolicyServiceSettings effectiveSettings = settings ?? AlertPolicyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListAlertPolicies = clientHelper.BuildApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse>("ListAlertPolicies", grpcClient.ListAlertPoliciesAsync, grpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListAlertPolicies);
             Modify_ListAlertPoliciesApiCall(ref _callListAlertPolicies);
@@ -1752,6 +2015,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1764,6 +2031,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1776,6 +2047,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1788,6 +2063,10 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Deletes an alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1803,6 +2082,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1818,6 +2101,10 @@ namespace Google.Cloud.Monitoring.V3
         /// a new one or replace only certain fields in the current alerting policy by
         /// specifying the fields to be updated via `updateMask`. Returns the
         /// updated alerting policy.
+        /// 
+        /// Design your application to single-thread API calls that modify the state of
+        /// alerting policies in a single project. This includes calls to
+        /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

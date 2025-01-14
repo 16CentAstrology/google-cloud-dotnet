@@ -1,5 +1,64 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2024-12-05
+
+### New features
+
+- Add `EmptyFilter` type to the Data API v1beta ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+- Add the `empty_filter` field to the `Filter` type ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+
+### Documentation improvements
+
+- Update documentation for the`RunReport` method ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+- Remove all references to 'GA4' in documentation ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+
+## Version 2.0.0-beta08, released 2024-08-05
+
+### New features
+
+- Add the `comparisons` field to the `Metadata` resource ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `comparisons` field to the `RunReportRequest`, `RunPivotReportRequest` resources ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `Comparison` type ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `ComparisonMetadata` type ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+
+### Documentation improvements
+
+- A comment for field `custom_definition` in message `DimensionMetadata` is changed ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+
+## Version 2.0.0-beta07, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-beta06, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta05, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.0.0-beta04, released 2023-12-11
+
+### Bug fixes
+
+- **BREAKING CHANGE** Add `optional` label to `consumed`, `remaining` fields of the `QuotaStatus` type ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+
+### New features
+
+- Add `CreateAudienceExport`, `QueryAudienceExport`, `GetAudienceExport`, `ListAudienceExports` methods to the Data API v1 beta ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Add `sampling_metadatas` field to `ResponseMetaData` ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Add `SamplingMetadata`, `AudienceExport`, `AudienceExportMetadata`, `AudienceDimensionValue` types ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+
+### Documentation improvements
+
+- Updated comments ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Minor formatting ([commit 8c49dd7](https://github.com/googleapis/google-cloud-dotnet/commit/8c49dd73c4e337e7e67db23a8726b5d01d073317))
+- Add clarifications ([commit 8c49dd7](https://github.com/googleapis/google-cloud-dotnet/commit/8c49dd73c4e337e7e67db23a8726b5d01d073317))
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features

@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.0.0-beta06, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-beta05, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta04, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.0.0-beta03, released 2023-08-23
+
+### New features
+
+- Supported project-level-budgets in Public Budget API V1Beta ([commit 24aa41e](https://github.com/googleapis/google-cloud-dotnet/commit/24aa41e808006adacba923c2b827dcaf6c4d35b6))
+- Added `enable_project_level_recipients` for project owner budget emails ([commit 24aa41e](https://github.com/googleapis/google-cloud-dotnet/commit/24aa41e808006adacba923c2b827dcaf6c4d35b6))
+
+## Version 2.0.0-beta02, released 2023-06-20
+
+### New features
+
+- Add resource_ancestors field to support filtering by folders & organizations ([commit 1690c59](https://github.com/googleapis/google-cloud-dotnet/commit/1690c591d780e0d63e818be8a2f6beb51463a633))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

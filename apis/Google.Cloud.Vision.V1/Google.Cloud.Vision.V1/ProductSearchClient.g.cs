@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Vision.V1
 {
@@ -530,14 +530,14 @@ namespace Google.Cloud.Vision.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProductSearchClient.Create(callInvoker, Settings, Logger);
+            return ProductSearchClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ProductSearchClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProductSearchClient.Create(callInvoker, Settings, Logger);
+            return ProductSearchClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -549,16 +549,18 @@ namespace Google.Cloud.Vision.V1
     /// Manages Products and ProductSets of reference images for use in product
     /// search. It uses the following resource model:
     /// 
-    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
-    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
-    /// products into groups to limit identification.
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet]
+    /// resources, named `projects/*/locations/*/productSets/*`, which acts as a way
+    /// to put different products into groups to limit identification.
     /// 
     /// In parallel,
     /// 
-    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product]
+    /// resources, named
     /// `projects/*/locations/*/products/*`
     /// 
-    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of
+    /// [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
     /// `projects/*/locations/*/products/*/referenceImages/*`
     /// </remarks>
     public abstract partial class ProductSearchClient
@@ -918,13 +920,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSets(new ListProductSetsRequest
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -949,13 +960,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSetsAsync(new ListProductSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -980,13 +1000,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSets(new ListProductSetsRequest
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ProductSets in an unspecified order.
@@ -1011,13 +1040,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ProductSet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductSetsAsync(new ListProductSetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductSetsRequest request = new ListProductSetsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductSetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a ProductSet.
@@ -1753,13 +1791,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1784,13 +1831,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1815,13 +1871,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProducts(new ListProductsRequest
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProducts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists products in an unspecified order.
@@ -1846,13 +1911,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsAsync(new ListProductsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsRequest request = new ListProductsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a Product.
@@ -2451,7 +2525,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2498,7 +2573,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2545,7 +2621,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2587,7 +2664,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2634,7 +2712,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2681,7 +2760,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2933,13 +3013,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImages(new ListReferenceImagesRequest
+        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -2966,13 +3055,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImagesAsync(new ListReferenceImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -2999,13 +3097,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImages(new ListReferenceImagesRequest
+        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists reference images.
@@ -3032,13 +3139,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReferenceImagesAsync(new ListReferenceImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReferenceImagesRequest request = new ListReferenceImagesRequest
             {
                 ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReferenceImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information associated with a ReferenceImage.
@@ -3462,7 +3578,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3486,7 +3603,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3510,7 +3628,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3530,7 +3649,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3554,7 +3674,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3578,7 +3699,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3643,13 +3765,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSet(new ListProductsInProductSetRequest
+        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSet(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3676,13 +3807,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSetAsync(new ListProductsInProductSetRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSetAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3709,13 +3849,22 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSet(new ListProductsInProductSetRequest
+        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSet(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Products in a ProductSet, in an unspecified order. If the
@@ -3742,20 +3891,29 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Product"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProductsInProductSetAsync(new ListProductsInProductSetRequest
+        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(ProductSetName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProductsInProductSetRequest request = new ListProductsInProductSetRequest
             {
                 ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProductsInProductSetAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3773,8 +3931,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3792,8 +3950,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3838,8 +3996,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3868,8 +4026,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3898,8 +4056,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3924,8 +4082,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3954,8 +4112,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3984,8 +4142,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -4028,8 +4186,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4060,8 +4218,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4092,8 +4250,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4150,8 +4308,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4189,8 +4347,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4228,8 +4386,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4264,8 +4422,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4303,8 +4461,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4342,8 +4500,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4362,16 +4520,18 @@ namespace Google.Cloud.Vision.V1
     /// Manages Products and ProductSets of reference images for use in product
     /// search. It uses the following resource model:
     /// 
-    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
-    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
-    /// products into groups to limit identification.
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet]
+    /// resources, named `projects/*/locations/*/productSets/*`, which acts as a way
+    /// to put different products into groups to limit identification.
     /// 
     /// In parallel,
     /// 
-    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product]
+    /// resources, named
     /// `projects/*/locations/*/products/*`
     /// 
-    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of
+    /// [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
     /// `projects/*/locations/*/products/*/referenceImages/*`
     /// </remarks>
     public sealed partial class ProductSearchClientImpl : ProductSearchClient
@@ -4424,7 +4584,11 @@ namespace Google.Cloud.Vision.V1
         {
             GrpcClient = grpcClient;
             ProductSearchSettings effectiveSettings = settings ?? ProductSearchSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportProductSetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings, logger);
             PurgeProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings, logger);
             _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>("CreateProductSet", grpcClient.CreateProductSetAsync, grpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -5193,8 +5357,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -5215,8 +5379,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -5258,8 +5422,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5293,8 +5457,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

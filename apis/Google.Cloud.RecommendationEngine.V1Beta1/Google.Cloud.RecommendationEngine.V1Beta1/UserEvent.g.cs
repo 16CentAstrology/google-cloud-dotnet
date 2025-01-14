@@ -101,6 +101,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// UserEvent captures all metadata information recommendation engine needs to
   /// know about how end users interact with customers' website.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -607,6 +608,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Information of end users.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserInfo : pb::IMessage<UserInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -981,6 +983,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// User event details shared by all recommendation types.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventDetail : pb::IMessage<EventDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1407,6 +1410,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// ProductEventDetail captures user event information specific to retail
   /// products.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductEventDetail : pb::IMessage<ProductEventDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1826,6 +1830,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// A transaction represents the entire purchase transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurchaseTransaction : pb::IMessage<PurchaseTransaction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2088,8 +2093,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.Revenue != 0F) {
         Revenue = other.Revenue;
       }
-      taxes_.Add(other.taxes_);
-      costs_.Add(other.costs_);
+      taxes_.MergeFrom(other.taxes_);
+      costs_.MergeFrom(other.costs_);
       if (other.CurrencyCode.Length != 0) {
         CurrencyCode = other.CurrencyCode;
       }
@@ -2173,6 +2178,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Detailed product information associated with a user event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductDetail : pb::IMessage<ProductDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

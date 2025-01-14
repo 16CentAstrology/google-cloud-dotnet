@@ -67,6 +67,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// Supported OSPolicy compliance states.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum OSPolicyComplianceState {
     /// <summary>
     /// Default value. This value is unused.
@@ -99,6 +100,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// to its desired state.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicyResourceConfigStep : pb::IMessage<OSPolicyResourceConfigStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -378,6 +380,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Supported configuration step types
       /// </summary>
+      [global::System.ObsoleteAttribute]
       public enum Type {
         /// <summary>
         /// Default value. This value is unused.
@@ -410,6 +413,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Supported outcomes for a configuration step.
       /// </summary>
+      [global::System.ObsoleteAttribute]
       public enum Outcome {
         /// <summary>
         /// Default value. This value is unused.
@@ -434,6 +438,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Compliance data for an OS policy resource.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicyResourceCompliance : pb::IMessage<OSPolicyResourceCompliance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -788,6 +793,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// ExecResource specific output.
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExecResourceOutput : pb::IMessage<ExecResourceOutput>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

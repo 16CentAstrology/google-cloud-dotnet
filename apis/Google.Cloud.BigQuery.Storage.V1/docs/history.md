@@ -1,5 +1,71 @@
 # Version history
 
+## Version 3.17.0, released 2024-10-14
+
+### New features
+
+- Add experimental ArrowData type and arrow_data field within AppendRowsRequest ([commit f556dca](https://github.com/googleapis/google-cloud-dotnet/commit/f556dca9d15fdbc3d8b93896f101b961f1b7b510))
+
+## Version 3.16.0, released 2024-09-26
+
+No API surface changes; just dependency updates.
+
+## Version 3.15.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.14.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.13.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 3.12.0, released 2024-02-20
+
+### New features
+
+- Add the RANGE type to the google.cloud.bigquery.storage.v1.TableFieldSchema ([commit 7867a64](https://github.com/googleapis/google-cloud-dotnet/commit/7867a6402a3216bc1387a9e5c44a99f0379c350b))
+
+## Version 3.11.0, released 2024-01-16
+
+### New features
+
+- Add ability to request compressed ReadRowsResponse rows ([commit 2f64e53](https://github.com/googleapis/google-cloud-dotnet/commit/2f64e5396d8aca9ac8da452a5c385d0283bdfefb))
+
+## Version 3.10.0, released 2023-08-16
+
+### New features
+
+- Add default_missing_value_interpretation field; indicate KMS_SERVICE_ERROR is retryable ([commit 6d11153](https://github.com/googleapis/google-cloud-dotnet/commit/6d1115399c4ea9a0478ec15b1b725c5cc8e91f12))
+
+## Version 3.9.0, released 2023-07-13
+
+### New features
+
+- Add ResourceExhausted to retryable error for Write API unary calls ([commit a1262a2](https://github.com/googleapis/google-cloud-dotnet/commit/a1262a25eb219cd79c04f9c36914a9cabeb910a4))
+
+### Documentation improvements
+
+- Add multiplexing documentation ([commit a1262a2](https://github.com/googleapis/google-cloud-dotnet/commit/a1262a25eb219cd79c04f9c36914a9cabeb910a4))
+
+## Version 3.8.0, released 2023-06-27
+
+### New features
+
+- Add estimated physical file sizes to ReadAPI v1 ([commit d0b88e9](https://github.com/googleapis/google-cloud-dotnet/commit/d0b88e9c69da74879df35f4b8b0a1a15fd6a7bd8))
+
+## Version 3.7.0, released 2023-05-26
+
+### New features
+
+- Add table sampling to ReadAPI v1 ([commit 954a186](https://github.com/googleapis/google-cloud-dotnet/commit/954a1867605844c1889aadb6bf4ff480c5eadd36))
+- Add storage error codes for KMS ([commit 954a186](https://github.com/googleapis/google-cloud-dotnet/commit/954a1867605844c1889aadb6bf4ff480c5eadd36))
 ## Version 3.6.0, released 2023-02-22
 
 ### New features

@@ -71,6 +71,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Auto-complete parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompleteQueryRequest : pb::IMessage<CompleteQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -582,6 +583,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Response of auto-complete query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompleteQueryResponse : pb::IMessage<CompleteQueryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -819,6 +821,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Resource that represents completion results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CompletionResult : pb::IMessage<CompletionResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -1,11 +1,11 @@
-﻿// Copyright 2020 Google Inc. All Rights Reserved.
-// 
+// Copyright 2020 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Xunit;
 using static Google.Cloud.Storage.V1.UrlSigner;
 
@@ -57,7 +58,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 var expiration = Options.FromExpiration(now);
 
                 var duration = expiration.WithDuration(TimeSpan.FromMinutes(1));
-                
+
                 Assert.NotSame(expiration, duration);
                 Assert.Null(duration.Expiration);
                 Assert.Equal(TimeSpan.FromMinutes(1), duration.Duration);
@@ -175,6 +176,109 @@ namespace Google.Cloud.Storage.V1.Tests
                 var options = Options.FromDuration(TimeSpan.FromMinutes(1));
 
                 Assert.Throws<ArgumentException>(() => options.WithScheme("ftp"));
+            }
+
+            [Fact]
+            public void Host_Defaults()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Equal("storage.googleapis.com", options.Host);
+            }
+
+            [Fact]
+            public void WithHost()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newHost = options.WithHost("another.custom.host");
+
+                Assert.NotSame(options, newHost);
+                Assert.Equal("another.custom.host", newHost.Host);
+            }
+
+            [Fact]
+            public void WithHost_Null()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                options = options.WithHost("another.custom.host");
+
+                var newOptions = options.WithHost(null);
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("storage.googleapis.com", newOptions.Host);
+            }
+
+            [Fact]
+            public void Port_Defaults()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Null(options.Port);
+            }
+
+            [Fact]
+            public void WithPort()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newPort = options.WithPort(443);
+
+                Assert.NotSame(options, newPort);
+                Assert.Equal(443, newPort.Port);
+            }
+
+            [Fact]
+            public void WithPort_Null()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                options = options.WithPort(443);
+
+                var newOptions = options.WithPort(null);
+
+                Assert.NotSame(options, newOptions);
+                Assert.Null(newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides_NullOverrideValues()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides(null, null, null));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal(Options.DefaultScheme, newOptions.Scheme);
+                Assert.Equal(Options.DefaultStorageHost, newOptions.Host);
+                Assert.Null(newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides("http", "overrideHost", 1234));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("http", newOptions.Scheme);
+                Assert.Equal("overrideHost", newOptions.Host);
+                Assert.Equal(1234, newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides_DoesNotOverrideExplicit()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1)).WithScheme("https").WithHost("explicitHost").WithPort(5678);
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides("http", "overrideHost", 1234));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("https", newOptions.Scheme);
+                Assert.Equal("explicitHost", newOptions.Host);
+                Assert.Equal(5678, newOptions.Port);
             }
         }
     }

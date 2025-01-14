@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Billing.Budgets.V1
 {
@@ -196,14 +196,14 @@ namespace Google.Cloud.Billing.Budgets.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BudgetServiceClient.Create(callInvoker, Settings, Logger);
+            return BudgetServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BudgetServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BudgetServiceClient.Create(callInvoker, Settings, Logger);
+            return BudgetServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -773,13 +773,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgets(new ListBudgetsRequest
+        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -803,13 +812,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgetsAsync(new ListBudgetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -833,13 +851,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgets(new ListBudgetsRequest
+        public virtual gax::PagedEnumerable<ListBudgetsResponse, Budget> ListBudgets(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgets(request, callSettings);
+        }
 
         /// <summary>
         /// Returns a list of budgets for a billing account.
@@ -863,13 +890,22 @@ namespace Google.Cloud.Billing.Budgets.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Budget"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBudgetsAsync(new ListBudgetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBudgetsResponse, Budget> ListBudgetsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBudgetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a budget. Returns successfully if already deleted.
@@ -1010,7 +1046,11 @@ namespace Google.Cloud.Billing.Budgets.V1
         {
             GrpcClient = grpcClient;
             BudgetServiceSettings effectiveSettings = settings ?? BudgetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateBudget = clientHelper.BuildApiCall<CreateBudgetRequest, Budget>("CreateBudget", grpcClient.CreateBudgetAsync, grpcClient.CreateBudget, effectiveSettings.CreateBudgetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBudget);
             Modify_CreateBudgetApiCall(ref _callCreateBudget);

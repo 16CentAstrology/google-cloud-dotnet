@@ -135,65 +135,65 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
             "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5M",
             "aXN0RGF0YUV4Y2hhbmdlc1JlcXVlc3QaRS5nb29nbGUuY2xvdWQuYmlncXVl",
             "cnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdERhdGFFeGNoYW5nZXNSZXNw",
-            "b25zZSJHgtPkkwI4EjYvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L2RhdGFFeGNoYW5nZXPaQQZwYXJlbnQSgwIKFExpc3RPcmdE",
+            "b25zZSJH2kEGcGFyZW50gtPkkwI4EjYvdjFiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2RhdGFFeGNoYW5nZXMSgwIKFExpc3RPcmdE",
             "YXRhRXhjaGFuZ2VzEkcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNo",
             "YW5nZS52MWJldGExLkxpc3RPcmdEYXRhRXhjaGFuZ2VzUmVxdWVzdBpILmdv",
             "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5MaXN0",
-            "T3JnRGF0YUV4Y2hhbmdlc1Jlc3BvbnNlIliC0+STAkMSQS92MWJldGExL3tv",
-            "cmdhbml6YXRpb249b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9kYXRh",
-            "RXhjaGFuZ2Vz2kEMb3JnYW5pemF0aW9uEtYBCg9HZXREYXRhRXhjaGFuZ2US",
+            "T3JnRGF0YUV4Y2hhbmdlc1Jlc3BvbnNlIljaQQxvcmdhbml6YXRpb26C0+ST",
+            "AkMSQS92MWJldGExL3tvcmdhbml6YXRpb249b3JnYW5pemF0aW9ucy8qL2xv",
+            "Y2F0aW9ucy8qfS9kYXRhRXhjaGFuZ2VzEtYBCg9HZXREYXRhRXhjaGFuZ2US",
             "Qi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEu",
             "R2V0RGF0YUV4Y2hhbmdlUmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EYXRhRXhjaGFuZ2UiRYLT5JMCOBI2",
-            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhj",
-            "aGFuZ2VzLyp92kEEbmFtZRL7AQoSQ3JlYXRlRGF0YUV4Y2hhbmdlEkUuZ29v",
+            "eS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5EYXRhRXhjaGFuZ2UiRdpBBG5hbWWC",
+            "0+STAjgSNi92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "ZGF0YUV4Y2hhbmdlcy8qfRL7AQoSQ3JlYXRlRGF0YUV4Y2hhbmdlEkUuZ29v",
             "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFleGNoYW5nZS52MWJldGExLkNyZWF0",
             "ZURhdGFFeGNoYW5nZVJlcXVlc3QaOC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "ZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGF0YUV4Y2hhbmdlImSC0+STAkciNi92",
-            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YUV4",
-            "Y2hhbmdlczoNZGF0YV9leGNoYW5nZdpBFHBhcmVudCxkYXRhX2V4Y2hhbmdl",
+            "ZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGF0YUV4Y2hhbmdlImTaQRRwYXJlbnQs",
+            "ZGF0YV9leGNoYW5nZYLT5JMCRyI2L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qfS9kYXRhRXhjaGFuZ2VzOg1kYXRhX2V4Y2hhbmdl",
             "Eo4CChJVcGRhdGVEYXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmlncXVl",
             "cnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuVXBkYXRlRGF0YUV4Y2hhbmdlUmVx",
             "dWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFi",
-            "ZXRhMS5EYXRhRXhjaGFuZ2Uid4LT5JMCVTJEL3YxYmV0YTEve2RhdGFfZXhj",
-            "aGFuZ2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5n",
-            "ZXMvKn06DWRhdGFfZXhjaGFuZ2XaQRlkYXRhX2V4Y2hhbmdlLHVwZGF0ZV9t",
-            "YXNrEroBChJEZWxldGVEYXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmln",
+            "ZXRhMS5EYXRhRXhjaGFuZ2Uid9pBGWRhdGFfZXhjaGFuZ2UsdXBkYXRlX21h",
+            "c2uC0+STAlUyRC92MWJldGExL3tkYXRhX2V4Y2hhbmdlLm5hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyp9Og1kYXRhX2V4Y2hh",
+            "bmdlEroBChJEZWxldGVEYXRhRXhjaGFuZ2USRS5nb29nbGUuY2xvdWQuYmln",
             "cXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuRGVsZXRlRGF0YUV4Y2hhbmdl",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJFgtPkkwI4KjYvdjFi",
-            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5n",
-            "ZXMvKn3aQQRuYW1lEuUBCgxMaXN0TGlzdGluZ3MSPy5nb29nbGUuY2xvdWQu",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJF2kEEbmFtZYLT5JMC",
+            "OCo2L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
+            "RXhjaGFuZ2VzLyp9EuUBCgxMaXN0TGlzdGluZ3MSPy5nb29nbGUuY2xvdWQu",
             "YmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuTGlzdExpc3RpbmdzUmVx",
             "dWVzdBpALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFi",
-            "ZXRhMS5MaXN0TGlzdGluZ3NSZXNwb25zZSJSgtPkkwJDEkEvdjFiZXRhMS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8q",
-            "fS9saXN0aW5nc9pBBnBhcmVudBLSAQoKR2V0TGlzdGluZxI9Lmdvb2dsZS5j",
+            "ZXRhMS5MaXN0TGlzdGluZ3NSZXNwb25zZSJS2kEGcGFyZW50gtPkkwJDEkEv",
+            "djFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4",
+            "Y2hhbmdlcy8qfS9saXN0aW5ncxLSAQoKR2V0TGlzdGluZxI9Lmdvb2dsZS5j",
             "bG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5HZXRMaXN0aW5n",
             "UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2Uu",
-            "djFiZXRhMS5MaXN0aW5nIlCC0+STAkMSQS92MWJldGExL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdlcy8qL2xpc3RpbmdzLyp9",
-            "2kEEbmFtZRLrAQoNQ3JlYXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdx",
+            "djFiZXRhMS5MaXN0aW5nIlDaQQRuYW1lgtPkkwJDEkEvdjFiZXRhMS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMvKi9saXN0",
+            "aW5ncy8qfRLrAQoNQ3JlYXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRhMS5DcmVhdGVMaXN0aW5nUmVxdWVz",
             "dBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhZXhjaGFuZ2UudjFiZXRh",
-            "MS5MaXN0aW5nImOC0+STAkwiQS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyp9L2xpc3RpbmdzOgdsaXN0",
-            "aW5n2kEOcGFyZW50LGxpc3RpbmcS+AEKDVVwZGF0ZUxpc3RpbmcSQC5nb29n",
+            "MS5MaXN0aW5nImPaQQ5wYXJlbnQsbGlzdGluZ4LT5JMCTCJBL3YxYmV0YTEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMv",
+            "Kn0vbGlzdGluZ3M6B2xpc3RpbmcS+AEKDVVwZGF0ZUxpc3RpbmcSQC5nb29n",
             "bGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuVXBkYXRl",
             "TGlzdGluZ1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4",
-            "Y2hhbmdlLnYxYmV0YTEuTGlzdGluZyJwgtPkkwJUMkkvdjFiZXRhMS97bGlz",
-            "dGluZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hhbmdl",
-            "cy8qL2xpc3RpbmdzLyp9OgdsaXN0aW5n2kETbGlzdGluZyx1cGRhdGVfbWFz",
-            "axK7AQoNRGVsZXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5k",
+            "Y2hhbmdlLnYxYmV0YTEuTGlzdGluZyJw2kETbGlzdGluZyx1cGRhdGVfbWFz",
+            "a4LT5JMCVDJJL3YxYmV0YTEve2xpc3RpbmcubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMvKi9saXN0aW5ncy8qfToHbGlzdGlu",
+            "ZxK7AQoNRGVsZXRlTGlzdGluZxJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5k",
             "YXRhZXhjaGFuZ2UudjFiZXRhMS5EZWxldGVMaXN0aW5nUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJQgtPkkwJDKkEvdjFiZXRhMS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFFeGNoYW5nZXMvKi9saXN0aW5n",
-            "cy8qfdpBBG5hbWUS/AEKEFN1YnNjcmliZUxpc3RpbmcSQy5nb29nbGUuY2xv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJQ2kEEbmFtZYLT5JMCQypBL3YxYmV0YTEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhRXhjaGFuZ2VzLyov",
+            "bGlzdGluZ3MvKn0S/AEKEFN1YnNjcmliZUxpc3RpbmcSQy5nb29nbGUuY2xv",
             "dWQuYmlncXVlcnkuZGF0YWV4Y2hhbmdlLnYxYmV0YTEuU3Vic2NyaWJlTGlz",
             "dGluZ1JlcXVlc3QaRC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YWV4Y2hh",
-            "bmdlLnYxYmV0YTEuU3Vic2NyaWJlTGlzdGluZ1Jlc3BvbnNlIl2C0+STAlAi",
-            "Sy92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4",
-            "Y2hhbmdlcy8qL2xpc3RpbmdzLyp9OnN1YnNjcmliZToBKtpBBG5hbWUS+AEK",
+            "bmdlLnYxYmV0YTEuU3Vic2NyaWJlTGlzdGluZ1Jlc3BvbnNlIl3aQQRuYW1l",
+            "gtPkkwJQIksvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2RhdGFFeGNoYW5nZXMvKi9saXN0aW5ncy8qfTpzdWJzY3JpYmU6ASoS+AEK",
             "DEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVx",
             "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IqwBgtPkkwKlASJHL3YxYmV0",
             "YTEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUV4Y2hh",
@@ -259,6 +259,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// descriptive information about the data exchange, it contains listings that
   /// reference shared datasets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataExchange : pb::IMessage<DataExchange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -708,6 +709,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Contains details of the data provider.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataProvider : pb::IMessage<DataProvider>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -944,6 +946,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Contains details of the listing publisher.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Publisher : pb::IMessage<Publisher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1180,6 +1183,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Contains the reference that identifies a destination bigquery dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationDatasetReference : pb::IMessage<DestinationDatasetReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1417,6 +1421,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Defines the destination bigquery dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationDataset : pb::IMessage<DestinationDataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1690,7 +1695,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
           Description = other.Description;
         }
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
@@ -1795,6 +1800,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// descriptive information that will help subscribers find and subscribe the
   /// data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Listing : pb::IMessage<Listing>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2549,6 +2555,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
       /// the subscriber's project. A Linked dataset is an opaque, read-only BigQuery
       /// dataset that serves as a _symbolic link_ to a shared dataset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BigQueryDatasetSource : pb::IMessage<BigQueryDatasetSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2750,6 +2757,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for requesting the list of data exchanges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataExchangesRequest : pb::IMessage<ListDataExchangesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3028,6 +3036,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for response to the list of data exchanges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataExchangesResponse : pb::IMessage<ListDataExchangesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3253,6 +3262,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// Message for requesting the list of data exchanges from projects in an
   /// organization and location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrgDataExchangesRequest : pb::IMessage<ListOrgDataExchangesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3532,6 +3542,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// Message for response to listing data exchanges in an organization and
   /// location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrgDataExchangesResponse : pb::IMessage<ListOrgDataExchangesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3756,6 +3767,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for getting a data exchange.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDataExchangeRequest : pb::IMessage<GetDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3952,6 +3964,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for creating a data exchange.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDataExchangeRequest : pb::IMessage<CreateDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4241,6 +4254,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for updating a data exchange.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDataExchangeRequest : pb::IMessage<UpdateDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4496,6 +4510,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for deleting a data exchange.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDataExchangeRequest : pb::IMessage<DeleteDataExchangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4692,6 +4707,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for requesting the list of listings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListListingsRequest : pb::IMessage<ListListingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4970,6 +4986,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for response to the list of Listings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListListingsResponse : pb::IMessage<ListListingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5194,6 +5211,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for getting a listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetListingRequest : pb::IMessage<GetListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5390,6 +5408,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for creating a listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateListingRequest : pb::IMessage<CreateListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5679,6 +5698,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for updating a Listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateListingRequest : pb::IMessage<UpdateListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5934,6 +5954,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for deleting a listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteListingRequest : pb::IMessage<DeleteListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6130,6 +6151,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for subscribing to a listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubscribeListingRequest : pb::IMessage<SubscribeListingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6409,6 +6431,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
   /// <summary>
   /// Message for response when you subscribe to a listing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubscribeListingResponse : pb::IMessage<SubscribeListingResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

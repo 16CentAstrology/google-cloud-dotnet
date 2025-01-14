@@ -66,37 +66,37 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "Y2US+wEKF0NyZWF0ZU1pZ3JhdGlvbldvcmtmbG93EkIuZ29vZ2xlLmNsb3Vk",
             "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5DcmVhdGVNaWdyYXRpb25Xb3JrZmxv",
             "d1JlcXVlc3QaNS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
-            "Lk1pZ3JhdGlvbldvcmtmbG93ImWC0+STAkMiLS92Mi97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L3dvcmtmbG93czoSbWlncmF0aW9uX3dvcmtm",
-            "bG932kEZcGFyZW50LG1pZ3JhdGlvbl93b3JrZmxvdxLMAQoUR2V0TWlncmF0",
+            "Lk1pZ3JhdGlvbldvcmtmbG93ImXaQRlwYXJlbnQsbWlncmF0aW9uX3dvcmtm",
+            "bG93gtPkkwJDIi0vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fS93b3JrZmxvd3M6Em1pZ3JhdGlvbl93b3JrZmxvdxLMAQoUR2V0TWlncmF0",
             "aW9uV29ya2Zsb3cSPy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
             "LnYyLkdldE1pZ3JhdGlvbldvcmtmbG93UmVxdWVzdBo1Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3ciPILT",
-            "5JMCLxItL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zs",
-            "b3dzLyp92kEEbmFtZRLfAQoWTGlzdE1pZ3JhdGlvbldvcmtmbG93cxJBLmdv",
+            "ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3ciPNpB",
+            "BG5hbWWC0+STAi8SLS92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3dvcmtmbG93cy8qfRLfAQoWTGlzdE1pZ3JhdGlvbldvcmtmbG93cxJBLmdv",
             "b2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTGlzdE1pZ3JhdGlv",
             "bldvcmtmbG93c1JlcXVlc3QaQi5nb29nbGUuY2xvdWQuYmlncXVlcnkubWln",
-            "cmF0aW9uLnYyLkxpc3RNaWdyYXRpb25Xb3JrZmxvd3NSZXNwb25zZSI+gtPk",
-            "kwIvEi0vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS93b3Jr",
-            "Zmxvd3PaQQZwYXJlbnQSswEKF0RlbGV0ZU1pZ3JhdGlvbldvcmtmbG93EkIu",
+            "cmF0aW9uLnYyLkxpc3RNaWdyYXRpb25Xb3JrZmxvd3NSZXNwb25zZSI+2kEG",
+            "cGFyZW50gtPkkwIvEi0vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS93b3JrZmxvd3MSswEKF0RlbGV0ZU1pZ3JhdGlvbldvcmtmbG93EkIu",
             "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5EZWxldGVNaWdy",
             "YXRpb25Xb3JrZmxvd1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "PILT5JMCLyotL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29y",
-            "a2Zsb3dzLyp92kEEbmFtZRK6AQoWU3RhcnRNaWdyYXRpb25Xb3JrZmxvdxJB",
+            "PNpBBG5hbWWC0+STAi8qLS92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3dvcmtmbG93cy8qfRK6AQoWU3RhcnRNaWdyYXRpb25Xb3JrZmxvdxJB",
             "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuU3RhcnRNaWdy",
             "YXRpb25Xb3JrZmxvd1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "RYLT5JMCOCIzL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29y",
-            "a2Zsb3dzLyp9OnN0YXJ0OgEq2kEEbmFtZRLUAQoTR2V0TWlncmF0aW9uU3Vi",
+            "RdpBBG5hbWWC0+STAjgiMy92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3dvcmtmbG93cy8qfTpzdGFydDoBKhLUAQoTR2V0TWlncmF0aW9uU3Vi",
             "dGFzaxI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuR2V0",
             "TWlncmF0aW9uU3VidGFza1JlcXVlc3QaNC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvblN1YnRhc2siR4LT5JMCOhI4L3Yy",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyovc3Vi",
-            "dGFza3MvKn3aQQRuYW1lEucBChVMaXN0TWlncmF0aW9uU3VidGFza3MSQC5n",
+            "cnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvblN1YnRhc2siR9pBBG5hbWWC0+ST",
+            "AjoSOC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93",
+            "cy8qL3N1YnRhc2tzLyp9EucBChVMaXN0TWlncmF0aW9uU3VidGFza3MSQC5n",
             "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLkxpc3RNaWdyYXRp",
             "b25TdWJ0YXNrc1JlcXVlc3QaQS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWln",
-            "cmF0aW9uLnYyLkxpc3RNaWdyYXRpb25TdWJ0YXNrc1Jlc3BvbnNlIkmC0+ST",
-            "AjoSOC92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zs",
-            "b3dzLyp9L3N1YnRhc2tz2kEGcGFyZW50GlTKQSBiaWdxdWVyeW1pZ3JhdGlv",
+            "cmF0aW9uLnYyLkxpc3RNaWdyYXRpb25TdWJ0YXNrc1Jlc3BvbnNlIknaQQZw",
+            "YXJlbnSC0+STAjoSOC92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyovd29ya2Zsb3dzLyp9L3N1YnRhc2tzGlTKQSBiaWdxdWVyeW1pZ3JhdGlv",
             "bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
             "L2F1dGgvY2xvdWQtcGxhdGZvcm1C0QEKJmNvbS5nb29nbGUuY2xvdWQuYmln",
             "cXVlcnkubWlncmF0aW9uLnYyQhVNaWdyYXRpb25TZXJ2aWNlUHJvdG9QAVpE",
@@ -125,6 +125,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Request to create a migration workflow resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateMigrationWorkflowRequest : pb::IMessage<CreateMigrationWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -370,6 +371,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to get a previously created migration workflow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetMigrationWorkflowRequest : pb::IMessage<GetMigrationWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -615,6 +617,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to list previously created migration workflows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMigrationWorkflowsRequest : pb::IMessage<ListMigrationWorkflowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -945,6 +948,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Response object for a `ListMigrationWorkflows` call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMigrationWorkflowsResponse : pb::IMessage<ListMigrationWorkflowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1170,6 +1174,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to delete a previously created migration workflow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteMigrationWorkflowRequest : pb::IMessage<DeleteMigrationWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1366,6 +1371,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to start a previously created migration workflow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartMigrationWorkflowRequest : pb::IMessage<StartMigrationWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1562,6 +1568,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to get a previously created migration subtasks.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetMigrationSubtaskRequest : pb::IMessage<GetMigrationSubtaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1807,6 +1814,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A request to list previously created migration subtasks.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMigrationSubtasksRequest : pb::IMessage<ListMigrationSubtasksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2179,6 +2187,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Response object for a `ListMigrationSubtasks` call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMigrationSubtasksResponse : pb::IMessage<ListMigrationSubtasksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

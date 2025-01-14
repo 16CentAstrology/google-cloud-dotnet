@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.DataCatalog.Lineage.V1
 {
@@ -48,6 +48,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         private LineageSettings(LineageSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ProcessOpenLineageRunEventSettings = existing.ProcessOpenLineageRunEventSettings;
             CreateProcessSettings = existing.CreateProcessSettings;
             UpdateProcessSettings = existing.UpdateProcessSettings;
             GetProcessSettings = existing.GetProcessSettings;
@@ -70,6 +71,24 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         }
 
         partial void OnCopy(LineageSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineageClient.ProcessOpenLineageRunEvent</c> and <c>LineageClient.ProcessOpenLineageRunEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ProcessOpenLineageRunEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LineageClient.CreateProcess</c>
@@ -437,14 +456,14 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LineageClient.Create(callInvoker, Settings, Logger);
+            return LineageClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<LineageClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LineageClient.Create(callInvoker, Settings, Logger);
+            return LineageClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -537,6 +556,107 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
 
         /// <summary>The underlying gRPC Lineage client</summary>
         public virtual Lineage.LineageClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest request, st::CancellationToken cancellationToken) =>
+            ProcessOpenLineageRunEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project and its location that should own the
+        /// process, run, and lineage event.
+        /// </param>
+        /// <param name="openLineage">
+        /// Required. OpenLineage message following OpenLineage format:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(string parent, wkt::Struct openLineage, gaxgrpc::CallSettings callSettings = null) =>
+            ProcessOpenLineageRunEvent(new ProcessOpenLineageRunEventRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OpenLineage = gax::GaxPreconditions.CheckNotNull(openLineage, nameof(openLineage)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project and its location that should own the
+        /// process, run, and lineage event.
+        /// </param>
+        /// <param name="openLineage">
+        /// Required. OpenLineage message following OpenLineage format:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(string parent, wkt::Struct openLineage, gaxgrpc::CallSettings callSettings = null) =>
+            ProcessOpenLineageRunEventAsync(new ProcessOpenLineageRunEventRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OpenLineage = gax::GaxPreconditions.CheckNotNull(openLineage, nameof(openLineage)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project and its location that should own the
+        /// process, run, and lineage event.
+        /// </param>
+        /// <param name="openLineage">
+        /// Required. OpenLineage message following OpenLineage format:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(string parent, wkt::Struct openLineage, st::CancellationToken cancellationToken) =>
+            ProcessOpenLineageRunEventAsync(parent, openLineage, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new process.
@@ -900,13 +1020,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcesses(new ListProcessesRequest
+        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcesses(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -926,13 +1055,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessesAsync(new ListProcessesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -952,13 +1090,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcesses(new ListProcessesRequest
+        public virtual gax::PagedEnumerable<ListProcessesResponse, Process> ListProcesses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcesses(request, callSettings);
+        }
 
         /// <summary>
         /// List processes in the given project and location. List order is descending
@@ -978,13 +1125,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Process"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProcessesAsync(new ListProcessesRequest
+        public virtual gax::PagedAsyncEnumerable<ListProcessesResponse, Process> ListProcessesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProcessesRequest request = new ListProcessesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProcessesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the process with the specified name.
@@ -1481,13 +1637,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuns(new ListRunsRequest
+        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1506,13 +1671,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRunsAsync(new ListRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1531,13 +1705,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuns(new ListRunsRequest
+        public virtual gax::PagedEnumerable<ListRunsResponse, Run> ListRuns(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 ParentAsProcessName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists runs in the given project and location. List order is descending by
@@ -1556,13 +1739,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Run"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRunsAsync(new ListRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRunsResponse, Run> ListRunsAsync(ProcessName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRunsRequest request = new ListRunsRequest
             {
                 ParentAsProcessName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the run with the specified name.
@@ -1965,13 +2157,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEvents(new ListLineageEventsRequest
+        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -1991,13 +2192,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEventsAsync(new ListLineageEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -2017,13 +2227,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEvents(new ListLineageEventsRequest
+        public virtual gax::PagedEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEvents(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Lists lineage events in the given project and location. The list order is
@@ -2043,13 +2262,22 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LineageEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListLineageEventsAsync(new ListLineageEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListLineageEventsResponse, LineageEvent> ListLineageEventsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLineageEventsRequest request = new ListLineageEventsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLineageEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the lineage event with the specified name.
@@ -2244,6 +2472,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
     /// </remarks>
     public sealed partial class LineageClientImpl : LineageClient
     {
+        private readonly gaxgrpc::ApiCall<ProcessOpenLineageRunEventRequest, ProcessOpenLineageRunEventResponse> _callProcessOpenLineageRunEvent;
+
         private readonly gaxgrpc::ApiCall<CreateProcessRequest, Process> _callCreateProcess;
 
         private readonly gaxgrpc::ApiCall<UpdateProcessRequest, Process> _callUpdateProcess;
@@ -2286,9 +2516,16 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         {
             GrpcClient = grpcClient;
             LineageSettings effectiveSettings = settings ?? LineageSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteProcessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProcessOperationsSettings, logger);
             DeleteRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRunOperationsSettings, logger);
+            _callProcessOpenLineageRunEvent = clientHelper.BuildApiCall<ProcessOpenLineageRunEventRequest, ProcessOpenLineageRunEventResponse>("ProcessOpenLineageRunEvent", grpcClient.ProcessOpenLineageRunEventAsync, grpcClient.ProcessOpenLineageRunEvent, effectiveSettings.ProcessOpenLineageRunEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callProcessOpenLineageRunEvent);
+            Modify_ProcessOpenLineageRunEventApiCall(ref _callProcessOpenLineageRunEvent);
             _callCreateProcess = clientHelper.BuildApiCall<CreateProcessRequest, Process>("CreateProcess", grpcClient.CreateProcessAsync, grpcClient.CreateProcess, effectiveSettings.CreateProcessSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProcess);
             Modify_CreateProcessApiCall(ref _callCreateProcess);
@@ -2342,6 +2579,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ProcessOpenLineageRunEventApiCall(ref gaxgrpc::ApiCall<ProcessOpenLineageRunEventRequest, ProcessOpenLineageRunEventResponse> call);
+
         partial void Modify_CreateProcessApiCall(ref gaxgrpc::ApiCall<CreateProcessRequest, Process> call);
 
         partial void Modify_UpdateProcessApiCall(ref gaxgrpc::ApiCall<UpdateProcessRequest, Process> call);
@@ -2379,6 +2618,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <summary>The underlying gRPC Lineage client</summary>
         public override Lineage.LineageClient GrpcClient { get; }
 
+        partial void Modify_ProcessOpenLineageRunEventRequest(ref ProcessOpenLineageRunEventRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateProcessRequest(ref CreateProcessRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateProcessRequest(ref UpdateProcessRequest request, ref gaxgrpc::CallSettings settings);
@@ -2410,6 +2651,36 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         partial void Modify_SearchLinksRequest(ref SearchLinksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchSearchLinkProcessesRequest(ref BatchSearchLinkProcessesRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ProcessOpenLineageRunEventRequest(ref request, ref callSettings);
+            return _callProcessOpenLineageRunEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates new lineage events together with their parents: process and run.
+        /// Updates the process and run if they already exist.
+        /// Mapped from Open Lineage specification:
+        /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ProcessOpenLineageRunEventRequest(ref request, ref callSettings);
+            return _callProcessOpenLineageRunEvent.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new process.

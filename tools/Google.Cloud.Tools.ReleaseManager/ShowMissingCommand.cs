@@ -12,11 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -30,12 +28,10 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
-            var catalog = ApiCatalog.Load();
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapis = Path.Combine(root, "googleapis");
-            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
+            var catalog = ApiCatalog.Load(RootLayout);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(RootLayout.Googleapis);
             var stabilityFilter = BuildStabilityFilter(args[0]);
 
             var ignoredOrGeneratedPaths = new HashSet<string>(catalog.IgnoredPaths.Keys);
@@ -51,6 +47,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"{api.Directory} => {api.DeriveCSharpNamespace()}");
             }
+            return 0;
         }
 
         private static Func<ApiIndex.V1.Api, bool> BuildStabilityFilter(string minStability) => minStability switch

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2_resourceNames]
+    // [START bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2_resourceNames]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
@@ -40,7 +40,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -53,5 +53,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // The response stream has completed
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2_resourceNames]
+    // [END bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2_resourceNames]
 }

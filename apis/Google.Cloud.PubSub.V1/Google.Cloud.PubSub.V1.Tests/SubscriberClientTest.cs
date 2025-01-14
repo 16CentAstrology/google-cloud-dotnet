@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Cloud.PubSub.V1.Tests.Tasks;
 using Google.Protobuf;
@@ -22,10 +23,10 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.PubSub.V1.StreamingPullResponse.Types;
 
 namespace Google.Cloud.PubSub.V1.Tests
 {
@@ -66,14 +67,21 @@ namespace Google.Cloud.PubSub.V1.Tests
             public RpcException MoveNextEx { get; }
             public RpcException CurrentEx { get; }
             public int? DeliveryAttempt { get; }
+
+            /// <summary>
+            /// Convenience method to create a sequence of server actions.
+            /// The return type helps when this is passed into LINQ methods.
+            /// </summary>
+            public static IEnumerable<ServerAction> Sequence(params ServerAction[] actions) => actions;
         }
 
         // Class to simulate exceptions in Acknowledgement and/or ModifyAcknowledgementDeadline calls.
         private class AckModifyAckDeadlineAction
         {
-            public static AckModifyAckDeadlineAction Data(Exception ex, int numberOfFailures, bool onAck, bool onModifyAckDeadline) => new AckModifyAckDeadlineAction(ex, numberOfFailures, onAck, onModifyAckDeadline);
-            public static AckModifyAckDeadlineAction BadAck(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, true, false);
-            public static AckModifyAckDeadlineAction BadModifyAckDeadline(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, false, true);
+            public static AckModifyAckDeadlineAction Data(Exception ex, int numberOfFailures, bool onAck, bool onNack, bool onExtend) => new AckModifyAckDeadlineAction(ex, numberOfFailures, onAck, onNack, onExtend);
+            public static AckModifyAckDeadlineAction BadAck(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, true, false, false);
+            public static AckModifyAckDeadlineAction BadNack(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, false, true, false);
+            public static AckModifyAckDeadlineAction BadExtend(Exception ex, int numberOfFailures) => new AckModifyAckDeadlineAction(ex, numberOfFailures, false, false, true);
 
             /// <summary>
             /// The exception to be thrown in Ack/ModifyAckDeadline call.
@@ -100,19 +108,28 @@ namespace Google.Cloud.PubSub.V1.Tests
             public bool OnAck { get; }
 
             /// <summary>
-            /// Gets a value indicating whether the exception should be thrown in ModifyAcknowledgementDeadline call.
+            /// Gets a value indicating whether the exception should be thrown in Nack (Negative acknowledgement) call.
             /// </summary>
             /// <value>
-            ///   <c>true</c> if [on modify ack deadline]; otherwise, <c>false</c>.
+            ///   <c>true</c> if [on nack]; otherwise, <c>false</c>.
             /// </value>
-            public bool OnModifyAckDeadline { get; }
+            public bool OnNack { get; }
 
-            private AckModifyAckDeadlineAction(Exception exception, int numberOfFailures, bool onAck, bool onModifyAckDeadline)
+            /// <summary>
+            /// Gets a value indicating whether the exception should be thrown in ModifyAcknowledgementDeadline call for extends.
+            /// </summary>
+            /// <value>
+            ///   <c>true</c> if [on extend]; otherwise, <c>false</c>.
+            /// </value>
+            public bool OnExtend { get; }
+
+            private AckModifyAckDeadlineAction(Exception exception, int numberOfFailures, bool onAck, bool onNack, bool onExtend)
             {
                 Exception = exception;
                 NumberOfFailures = numberOfFailures;
                 OnAck = onAck;
-                OnModifyAckDeadline = onModifyAckDeadline;
+                OnNack = onNack;
+                OnExtend = onExtend;
             }
         }
 
@@ -135,7 +152,9 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class En : IAsyncStreamReader<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery)
+                public En(
+                    IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock,
+                    bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
@@ -144,6 +163,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _useMsgAsId = useMsgAsId;
                     _ct = ct ?? CancellationToken.None;
                     _isExactlyOnceDelivery = isExactlyOnceDelivery;
+                    _messageOrderingEnabled = messageOrderingEnabled;
                 }
 
                 private readonly IScheduler _scheduler;
@@ -151,6 +171,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly IClock _clock;
                 private readonly bool _useMsgAsId;
                 private readonly bool _isExactlyOnceDelivery;
+                private readonly bool _messageOrderingEnabled;
                 private readonly CancellationToken _ct;
 
                 private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
@@ -187,13 +208,16 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             throw _msgsEn.Current.Action.CurrentEx;
                         }
+                        var messages = _msgsEn.Current.Action.Msgs.Select((s, i) =>
+                            MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt));
                         return new StreamingPullResponse
                         {
-                            ReceivedMessages = {
-                                _msgsEn.Current.Action.Msgs.Select((s, i) =>
-                                    MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt))
-                            },
-                            SubscriptionProperties = _isExactlyOnceDelivery ? new SubscriptionProperties { ExactlyOnceDeliveryEnabled = true} : null
+                            ReceivedMessages = { messages },
+                            SubscriptionProperties = new()
+                            {
+                                ExactlyOnceDeliveryEnabled = _isExactlyOnceDelivery,
+                                MessageOrderingEnabled = _messageOrderingEnabled
+                            }
                         };
                     }
                 }
@@ -207,13 +231,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes, List<DateTime> streamPings,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery)
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct,
+                    bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
-                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery);
-                    _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, null);
+                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery, messageOrderingEnabled);
+                    // Set disposeAction parameter of AsyncDuplexStreamingCall to No-op as it is called internally while disposing stream.
+                    _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, () => { });
                     _clock = clock;
                     _writeCompletes = writeCompletes;
                     _streamPings = streamPings;
@@ -261,7 +287,8 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
-                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId, AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery)
+                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId,
+                AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
@@ -272,6 +299,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 _ackModifyAckDeadlineAction = ackModifyAckDeadlineAction;
                 _numberOfAckModifyAckDeadlineFailures = 0;
                 _isExactlyOnceDelivery = isExactlyOnceDelivery;
+                _messageOrderingEnabled = messageOrderingEnabled;
             }
 
             private readonly object _lock = new object();
@@ -283,6 +311,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly bool _useMsgAsId;
             private readonly AckModifyAckDeadlineAction _ackModifyAckDeadlineAction; // Simulates Ack ModifyAckDeadline errors.
             private readonly bool _isExactlyOnceDelivery;
+            private readonly bool _messageOrderingEnabled;
             private int _numberOfAckModifyAckDeadlineFailures;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
@@ -290,16 +319,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly List<TimedId> _nacks = new List<TimedId>();
             private readonly List<DateTime> _writeCompletes = new List<DateTime>();
             private readonly List<DateTime> _streamPings = new List<DateTime>();
+            private readonly List<DateTime> _streamingPulls = new List<DateTime>();
 
             public IReadOnlyList<TimedId> Extends => _extends;
             public IReadOnlyList<TimedId> Acks => _acks;
             public IReadOnlyList<TimedId> Nacks => _nacks;
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
             public IReadOnlyList<DateTime> StreamPings => _streamPings;
+            public IReadOnlyList<DateTime> StreamingPulls => _streamingPulls;
 
             public override StreamingPullStream StreamingPull(
                 CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)
             {
+                lock (_lock)
+                {
+                    _streamingPulls.Add(_clock.GetCurrentDateTimeUtc());
+                }
                 lock (_msgsEn)
                 {
                     if (!_msgsEn.MoveNext())
@@ -308,7 +343,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     }
                     var msgs = _msgsEn.Current;
                     return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes, _streamPings,
-                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken, _isExactlyOnceDelivery);
+                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken,
+                        _isExactlyOnceDelivery, _messageOrderingEnabled);
                 }
             }
 
@@ -345,7 +381,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 // For non-exactly once delivery subscriptions, all gRPC exceptions from this method are fire and forget, so no exception should propagate to the caller.
                 // For exactly once delivery, no exception is propagated to the caller.
                 // Non-gRPC exceptions will propagate to the caller.
-                if (_ackModifyAckDeadlineAction?.Exception != null && _ackModifyAckDeadlineAction.OnModifyAckDeadline)
+                if (_ackModifyAckDeadlineAction?.Exception != null && ((ackDeadlineSeconds == 0 && _ackModifyAckDeadlineAction.OnNack)
+                    || (ackDeadlineSeconds != 0 && _ackModifyAckDeadlineAction.OnExtend)))
                 {
                     MaybeThrowException(ackIds);
                 }
@@ -360,17 +397,28 @@ namespace Google.Cloud.PubSub.V1.Tests
             /// <summary>
             /// This method does the following:
             /// <list type="bullet">
-            /// <item> If a non-gRPC exception is specified in <see cref="_ackModifyAckDeadlineAction.Exception"/>, it always throws exception for specified number of times.</item>
-            /// <item> If subscription under test is exactly once delivery, it checks if there are temporary or permanent failures associated with given <paramref name="ackIds"/> in the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>.
-            /// If not, it returns. Otherwise, it throws the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.</item>
-            /// <item> If subscription under test is not exactly once delivery, it will always throw the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.</item>
+            /// <item>
+            /// If a non-gRPC exception is specified in <see cref="_ackModifyAckDeadlineAction.Exception"/>,
+            /// it always throws exception for specified number of times.
+            /// </item>
+            /// <item>
+            /// If subscription under test is exactly once delivery, it checks if there are temporary or permanent failures
+            /// associated with given <paramref name="ackIds"/> in the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>.
+            /// If not, it returns. Otherwise, it throws the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>
+            /// for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.
+            /// </item>
+            /// <item>
+            /// If subscription under test is not exactly once delivery, it will always throw the specified exception
+            /// <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.
+            /// </item>
             /// </list>
             /// </summary>
             /// <param name="ackIds">The list of acknowledgement ids being processed.</param>
             private void MaybeThrowException(IEnumerable<string> ackIds)
             {
-                // This method simulates exception thrown from AcknowledgeAsync or ModifyDeadlineAsync methods based on available test parameters. 
-                // For non exactly once delivery, this method always throws an exception for the specified number of times as _numberOfAckModifyAckDeadlineFailures.
+                // This method simulates exception thrown from AcknowledgeAsync or ModifyDeadlineAsync methods based on available test parameters.
+                // For non exactly once delivery, this method always throws an exception for the specified number of times
+                // as _numberOfAckModifyAckDeadlineFailures.
                 // For exactly once delivery, this method should throw exception for following scenarios:
                 //  1. If the entire request failed based on gRPC status code.
                 //  2. There is a temporary or permanent failure associated with the message ID.
@@ -416,8 +464,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Responses = new List<AckNackResponse>();
             }
 
-            public override async Task<SubscriberClient.Reply> HandleMessage(PubsubMessage message, CancellationToken cancellationToken) =>
-                await Task.FromResult(_ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack);
+            public override Task<SubscriberClient.Reply> HandleMessage(PubsubMessage message, CancellationToken cancellationToken) =>
+                Task.FromResult(_ackOrNack ? SubscriberClient.Reply.Ack : SubscriberClient.Reply.Nack);
 
             public override void HandleAckResponses(IReadOnlyList<AckNackResponse> responses) =>
                 // For exactly once delivery, only messages that succeed or fail permanently appear here, i.e., only messages whose status is finalized.
@@ -441,21 +489,38 @@ namespace Google.Cloud.PubSub.V1.Tests
             public List<DateTime> ClientShutdowns { get; set; }
             public SubscriberClientImpl Subscriber { get; set; }
 
+            /// <summary>
+            /// Convenience method to call <see cref="Create"/> with a client count of 1, and a single sequence
+            /// of server actions.
+            /// </summary>
+            public static Fake CreateClientForSingleResponseStream(IEnumerable<ServerAction> msgs,
+                TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
+                int? flowMaxElements = null, int? flowMaxBytes = null,
+                int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null) =>
+                Create(new[] { msgs }, ackDeadline, ackExtendWindow, flowMaxElements, flowMaxBytes, clientCount: 1, threadCount,
+                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout);
+
             public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
-                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false, TimeSpan? disposeTimeout = null)
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery))
+                    .Select(_ => new FakeSubscriberServiceApiClient(
+                        msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId,
+                        ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
+                    Clock = scheduler.Clock,
                     Scheduler = scheduler,
                     AckDeadline = ackDeadline,
                     AckExtensionWindow = ackExtendWindow,
@@ -493,7 +558,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         /// which marks message id 2 as temporary failure and message id 3 as permanent failure.</param>
         /// <returns>The <see cref="RpcException"/> with temporary and permanent errors.</returns>
         /// <remarks>
-        /// This test method is useful to test exactly once subscription only. 
+        /// This test method is useful to test exactly once subscription only.
         /// </remarks>
         private static RpcException GetExactlyOnceDeliveryMixedException(Rpc.ErrorInfo errorInfo = null)
         {
@@ -536,7 +601,29 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Empty(fake.Subscribers[0].Nacks);
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
-                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Fact]
+        public void StopBeforeStart()
+        {
+            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    var exception = await Assert.ThrowsAsync<InvalidOperationException>(
+                        async () => await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                            () => fake.Subscriber.StopAsync(TimeSpan.FromHours(1))));
+                    Assert.Equal("Can only stop a started instance.", exception.Message);
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.ClientShutdowns);
                 });
             }
         }
@@ -546,7 +633,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Fact]
         public void Dispose()
         {
-            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            using (var fake = Fake.CreateClientForSingleResponseStream(new[] { ServerAction.Inf() }))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -555,7 +642,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new Exception("Should never get here");
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
-                    // Dispose the subscriber. 
+                    // Dispose the subscriber.
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(
                         () => fake.Subscriber.DisposeAsync().AsTask());
                     // Call DisposeAsync again. It shouldn't throw an exception.
@@ -570,7 +657,32 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Empty(fake.Subscribers[0].Nacks);
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
-                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Fact]
+        public void DisposeBeforeStart()
+        {
+            using (var fake = Fake.CreateClientForSingleResponseStream(new[] { ServerAction.Inf() }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    // Dispose the subscriber.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.DisposeAsync().AsTask());
+                    // Call DisposeAsync again. It shouldn't throw an exception.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                       () => fake.Subscriber.DisposeAsync().AsTask());
+
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.ClientShutdowns);
                 });
             }
         }
@@ -733,7 +845,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Fact]
         public void UserHandlerFaults()
         {
@@ -762,7 +874,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Theory, PairwiseData]
         public void ServerFaultsRecoverable(
             [CombinatorialValues(1, 3, 9, 14)] int threadCount)
@@ -793,7 +905,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Theory, PairwiseData]
         public void ServerFaultsUnrecoverable(
             [CombinatorialValues(true, false)] bool badMoveNext,
@@ -830,7 +942,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Fact]
         public void OnlyOneStart()
         {
@@ -850,15 +962,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        [Fact]
-        public void LeaseExtension()
+        [Theory, CombinatorialData]
+        public void LeaseExtension(bool isExactlyOnceDelivery)
         {
             var msgs = new[] { new[] {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
                 ServerAction.Inf()
             } };
-            using (var fake = Fake.Create(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
+            using (var fake = Fake.Create(msgs, isExactlyOnceDelivery: isExactlyOnceDelivery, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -878,21 +990,21 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        [Fact]
-        public void LeaseMaxExtension()
+        [Theory, CombinatorialData]
+        public void LeaseMaxExtension(bool isExactlyOnceDelivery)
         {
             var msgs = new[] { new[] {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Inf()
             } };
-            using (var fake = Fake.Create(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
+            using (var fake = Fake.Create(msgs, isExactlyOnceDelivery: isExactlyOnceDelivery, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
             {
                 fake.Scheduler.Run(async () =>
                 {
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
                         // Emulate a hanging message-processing task.
-                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(24), ct));
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(23), ct));
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(12), CancellationToken.None));
@@ -901,7 +1013,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(1, fake.Subscribers.Count);
                     // Check that the lease was extended for 60 minutes only.
                     // +1 is due to initial lease extension at time=0
-                    Assert.Equal((int)SubscriberClient.DefaultMaxTotalAckExtension.TotalSeconds / 20 + 1, fake.Subscribers[0].Extends.Count);
+                    Assert.Equal((int) SubscriberClient.DefaultMaxTotalAckExtension.TotalSeconds / 20 + 1, fake.Subscribers[0].Extends.Count);
                 });
             }
         }
@@ -976,7 +1088,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var rnd = new Random(rndSeed);
             var msgs = ServerAction.Data(TimeSpan.Zero, Enumerable.Range(0, msgCount).Select(i => $"order{i % orderingKeysCount}|{i}").ToList());
             var recvedMsgs = new List<string>();
-            using (var fake = Fake.Create(new[] { new[] { msgs, ServerAction.Inf() } }, flowMaxElements: flowMaxElements, threadCount: threadCount))
+            using (var fake = Fake.Create(new[] { new[] { msgs, ServerAction.Inf() } }, flowMaxElements: flowMaxElements, threadCount: threadCount, messageOrderingEnabled: true))
             {
                 var th = fake.TaskHelper;
                 fake.Scheduler.Run(async () =>
@@ -1001,7 +1113,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
             var expected = msgs.Msgs.GroupBy(x => x.Split('|')[0]).OrderBy(x => x.Key).ToList();
-            var actual = recvedMsgs.GroupBy(x => x.Split('|')[0]).OrderBy(x=>x.Key).ToList();
+            var actual = recvedMsgs.GroupBy(x => x.Split('|')[0]).OrderBy(x => x.Key).ToList();
             Assert.Equal(expected.Count, actual.Count);
             Assert.Equal(expected.Select(x => x.Key), actual.Select(x => x.Key));
             foreach (var pair in expected.Zip(actual, (e, a) => new { e, a }))
@@ -1043,7 +1155,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 AckExtensionWindow = SubscriberClient.MinimumAckExtensionWindow
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension1, null);
-            
+
             var settingsAckExtension2 = new SubscriberClient.Settings
             {
                 AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultAckDeadline.Ticks / 2)
@@ -1058,43 +1170,72 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void SilentlyFixedParameters()
+        public void MinimumDelayIsUsedWhenMinimumAckDeadlineIsSpecified()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
             var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
 
-            // Test MinimumLeaseExtensionDelay is honoured when minimum ack-deadline used.
-            var settingsAckExtension1 = new SubscriberClient.Settings
+            // Test that MinimumLeaseExtensionDelay is honoured when the ack-deadline is specified with the minimum possible value.
+            var settingsAckDeadline = new SubscriberClient.Settings
             {
                 AckDeadline = SubscriberClient.MinimumAckDeadline
             };
-            var sub1 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension1, null);
-            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, sub1.AutoExtendInterval);
 
-            // Test MinimumLeaseExtensionDelay is honoured when ack-deadline set to be equal to the default ack-extension window.
-            var settingsAckExtension2 = new SubscriberClient.Settings
+            var subscription = new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, subscription.AutoExtendDelay);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, subscription.AutoExtendDelayForExactlyOnceDelivery);
+        }
+
+        [Fact]
+        public void MinimumDelayIsUsedWhenAckDeadlineEqualsAckExtensionWindow()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
+
+            // Test that MinimumLeaseExtensionDelay is honoured when ack-deadline is set to be equal to the ack-extension window.
+            var settingsAckDeadline = new SubscriberClient.Settings
             {
                 AckDeadline = SubscriberClient.DefaultAckExtensionWindow
             };
-            var sub2 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension2, null);
-            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, sub2.AutoExtendInterval);
 
-            // Test ack-extension-window is honoured when ack-deadline is a larger value.
-            var settingsAckExtension3 = new SubscriberClient.Settings
+            var subscription = new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, subscription.AutoExtendDelay);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, subscription.AutoExtendDelayForExactlyOnceDelivery);
+        }
+
+        [Fact]
+        public void AckExtensionWindowIsHonouredWhenAckDeadlineIsLarger()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
+
+            // Test that ack-extension-window is honoured when ack-deadline is a larger value than AckExtensionWindow.
+            var settingsAckDeadline = new SubscriberClient.Settings
             {
                 AckDeadline = SubscriberClient.DefaultAckExtensionWindow + SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1)
             };
-            var sub3 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension3, null);
-            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1), sub3.AutoExtendInterval);
 
-            // Test ack-extension-window is honoured when both ack-deadline and ack-extension-window are set to valid values.
-            var settingsAckExtension4 = new SubscriberClient.Settings
+            var subscription = new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1), subscription.AutoExtendDelay);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1), subscription.AutoExtendDelayForExactlyOnceDelivery);
+        }
+
+        [Fact]
+        public void AckExtensionWindowIsHonouredWhenAckDeadlineAndAckExtensionWindowAreValid()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
+
+            // Test that ack-extension-window is honoured when both ack-deadline and ack-extension-window are set to valid values.
+            var settings = new SubscriberClient.Settings
             {
                 AckDeadline = TimeSpan.FromSeconds(60),
                 AckExtensionWindow = TimeSpan.FromSeconds(1)
             };
-            var sub4 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension4, null);
-            Assert.Equal(TimeSpan.FromSeconds(59), sub4.AutoExtendInterval);
+
+            var subsciption = new SubscriberClientImpl(subscriptionName, clients, settings, null);
+            Assert.Equal(TimeSpan.FromSeconds(59), subsciption.AutoExtendDelay);
+            Assert.Equal(TimeSpan.FromSeconds(59), subsciption.AutoExtendDelayForExactlyOnceDelivery);
         }
 
         [Fact]
@@ -1161,7 +1302,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ServerAction.Data(TimeSpan.Zero, new[] { "m" }, deliveryAttempt: 2),
                 ServerAction.Inf()
             };
-            using (var fake = Fake.Create(new[] { msgs }))
+            using (var fake = Fake.CreateClientForSingleResponseStream(msgs))
             {
                 fake.Scheduler.Run(async () =>
                 {
@@ -1182,7 +1323,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Theory, CombinatorialData]
         public void AckModifyAckDeadlineFault_NotThrown([CombinatorialValues(true, false, null)] bool? ackOrModifyAck)
         {
-            var msgs = new[] 
+            var msgs = new[]
             {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
@@ -1196,12 +1337,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrModifyAck is null, then both Acknowledge and ModifyAcknowledgeDeadline will throw the supplied RpcException, total 2 times.
             // If ackOrModifyAck is true, then Acknowledge will throw the supplied RpcException 2 times.
             // If ackOrModifyAck is false, then ModifyAcknowledgementDeadline will throw the supplied RpcException 2 times.
-            var ackModifyAckDeadlineAction = 
-                ackOrModifyAck == null ? AckModifyAckDeadlineAction.Data(rpcException, 2, true, true) 
-                : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2) 
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(rpcException, 2);
+            var ackModifyAckDeadlineAction =
+                ackOrModifyAck == null ? AckModifyAckDeadlineAction.BadExtend(rpcException, 2)
+                : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2)
+                : AckModifyAckDeadlineAction.BadNack(rpcException, 2);
 
-            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             fake.Scheduler.Run(async () =>
             {
                 var handledMsgs = new List<string>();
@@ -1210,7 +1351,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                     // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1223,7 +1364,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Theory, CombinatorialData]
         public void AckModifyAckDeadlineFault_Thrown([CombinatorialValues(true, false)] bool ackOrModifyAck)
         {
-            var msgs = new[] 
+            var msgs = new[]
             {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
@@ -1237,18 +1378,18 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrModifyAck is true, then Acknowledge will throw the supplied Exception.
             // If ackOrModifyAck is false, then ModifyAcknowledgeDeadline will throw the supplied Exception.
             // Since exception is thrown, the client will shutdown, so exception count is specified as 1.
-            var ackModifyAckDeadlineAction = 
-                ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1) 
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, 1);
+            var ackModifyAckDeadlineAction =
+                ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1)
+                : AckModifyAckDeadlineAction.BadExtend(exception, 1);
 
-            using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the call to ModifyAcknowledgeDeadline.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1278,9 +1419,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrModifyAck is false, then ModifyAcknowledgementDeadline will throw the supplied RpcException 1 time.
             var ackModifyAckDeadlineAction = ackOrModifyAck
                 ? AckModifyAckDeadlineAction.BadAck(rpcException, 1)
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(rpcException, 1);
+                : AckModifyAckDeadlineAction.BadNack(rpcException, 1);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
             var testSubscriptionHandler = new TestSubscriptionHandler(ackOrModifyAck);
             fake.Scheduler.Run(async () =>
             {
@@ -1310,9 +1451,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackNackOrExtends is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
             // If ackNackOrExtends is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction =
-                ackNackOrExtends == null ? AckModifyAckDeadlineAction.Data(exception, numberOfFailures: 10, onAck: false, onModifyAckDeadline: true)
+                ackNackOrExtends == null ? AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 3)
                 : ackNackOrExtends.Value ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 10)
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, numberOfFailures: 10);
+                : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 10);
 
             using var fake = Fake.Create(new[] { msgs }, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             fake.Scheduler.Run(async () =>
@@ -1327,7 +1468,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
                     }
 
-                    return await Task.FromResult(ackNackOrExtends == false ? SubscriberClient.Reply.Nack : SubscriberClient.Reply.Ack);
+                    return ackNackOrExtends == false ? SubscriberClient.Reply.Nack : SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1347,15 +1488,15 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
                 ServerAction.Inf()
             };
-                        
+
             var exception = new RpcException(new Status(StatusCode.FailedPrecondition, ""), "");
-            // If ackNackOrExtends is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
-            // If ackNackOrExtends is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
+            // If ackOrNack is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
+            // If ackOrNack is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction =
                 ackOrNack ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 10)
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, numberOfFailures: 10);
+                : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 10);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             var testSubscriptionHandler = new TestSubscriptionHandler(ackOrNack);
             fake.Scheduler.Run(async () =>
             {
@@ -1383,16 +1524,16 @@ namespace Google.Cloud.PubSub.V1.Tests
             // Any permanent failure in extend request should not be thrown to the client.
             var exception = new RpcException(new Status(StatusCode.FailedPrecondition, ""), "");
             // This is extend request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
-            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, numberOfFailures: 10);
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 10);
 
-            using var fake = Fake.Create(new[] { msgs }, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the extends.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1420,9 +1561,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrNack is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction =
                 ackOrNack ? AckModifyAckDeadlineAction.BadAck(exception, numberOfFailures: 1)
-                : AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, numberOfFailures: 1);
+                : AckModifyAckDeadlineAction.BadNack(exception, numberOfFailures: 1);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
 
             var testHandler = new TestSubscriptionHandler(ackOrNack);
             fake.Scheduler.Run(async () =>
@@ -1452,16 +1593,16 @@ namespace Google.Cloud.PubSub.V1.Tests
             // Message 1, 4 are success, 2 is temporary failure and 3 is permanent failure.
             var exception = GetExactlyOnceDeliveryMixedException();
             // This is an extend request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
-            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadModifyAckDeadline(exception, numberOfFailures: 1);
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 2);
 
-            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
             fake.Scheduler.Run(async () =>
             {
                 var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                 {
                     // Add delay greater than ackDeadline to simulate the extends.
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                    return await Task.FromResult(SubscriberClient.Reply.Ack);
+                    return SubscriberClient.Reply.Ack;
                 });
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(() => fake.Subscriber.StopAsync(CancellationToken.None));
@@ -1470,5 +1611,336 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Null(ex);
             });
         }
+
+        // All successful receipt ModAcks.
+        [Fact]
+        public void ExactlyOnceDelivery_ReceiptModAck()
+        {
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Receipt ModAck for message 1,2,3,4 is successful.
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.Data(null, 0, false, false, true);
+
+            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                // All 4 messages are handled.
+                Assert.Equal(4, handledMsgs.Count);
+                Assert.Equal(new[] { "1", "2", "3", "4" }, handledMsgs);
+            });
+        }
+
+        [Theory, CombinatorialData]
+        public void ExactlyOnceDelivery_ReceiptModAck_MixedFault([CombinatorialValues(true, false)] bool succeedOnRetry)
+        {
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Message 1,4 is success, 2 is temporary failure and 3 is permanent failure.
+            var exception = GetExactlyOnceDeliveryMixedException();
+            // We have both temporary and permanent failures.
+            // Temporary failure in extend request should be retried.
+            // Based on succeedOnRetry parameter, message 2 should either succeed or fail.
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 2 : 10);
+
+            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                // Permanently failed receipt ModAcks won't be passed to the user handler, so 3 is not handled.
+                // Temporary failed ModAck for message 2 becomes successful or permanent failure based on succeedOnRetry flag.
+                Assert.Equal(succeedOnRetry ? new[] { "1", "2", "4" } : new[] { "1", "4" }, handledMsgs);
+            });
+        }
+
+        [Fact]
+        public void ExactlyOnceDelivery_ReceiptModAck_PermanentFaults()
+        {
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Message 1,2,3,4 are all permanent failures.
+            var ackError = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata =
+                {
+                    { "1", "PERMANENT_FAILURE_INVALID_ACK_ID" },
+                    { "2", "PERMANENT_FAILURE_INVALID_ACK_ID" },
+                    { "3", "PERMANENT_FAILURE_INVALID_ACK_ID" },
+                    { "4", "PERMANENT_FAILURE_INVALID_ACK_ID" }
+                }
+            };
+
+            var exception = GetExactlyOnceDeliveryMixedException(ackError);
+
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 4);
+
+            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                // Permanently failed receipt ModAcks won't be passed to the user handler, so all 4 messages are not handled.
+                Assert.Equal(0, handledMsgs.Count);
+            });
+        }
+
+        [Theory, CombinatorialData]
+        public void ExactlyOnceDelivery_ReceiptModAck_TemporaryFaults([CombinatorialValues(true, false)] bool succeedOnRetry)
+        {
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "2" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "3" }),
+                ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
+                ServerAction.Inf()
+            };
+
+            // Message 1,2,3,4 are all temporary failures.
+            var ackError = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata =
+                {
+                    { "1", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "2", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "3", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "4", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" }
+                }
+            };
+
+            var exception = GetExactlyOnceDeliveryMixedException(ackError);
+
+            // 400 is a large arbitrary number to ensure that the retry is not successful.
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 3 : 400);
+
+            using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
+                    return SubscriberClient.Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                // Temporary failed receipt ModAcks can succeed after 1 retry or stay failed, so based on the succeedOnRetry flag, 4 or 0 messages are handled.
+                Assert.Equal(succeedOnRetry ? 4 : 0, handledMsgs.Count);
+                Assert.Equal(succeedOnRetry ? new[] { "1", "2", "3", "4" } : Array.Empty<string>(), handledMsgs);
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_GrpcNetClientAuthRelatedFailuresEventuallyFail()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.Internal, "Bang", new TokenResponseException(new TokenErrorResponse())));
+            TestAuthRelatedFailure(rpcEx);
+        }
+
+        [Fact]
+        public void StreamingPullRetry_GrpcCoreAuthRelatedFailuresEventuallyFail()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.Unavailable, "Getting metadata from plugin failed with error: Exception occurred in metadata credentials plugin. It went bang."));
+            TestAuthRelatedFailure(rpcEx);
+        }
+
+        private void TestAuthRelatedFailure(RpcException rpcEx)
+        {
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), rpcEx, 5, includeTrailing: false));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(rpcEx.Status, subscriberEx.Status);
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_NonRetriableException()
+        {
+            var rpcEx = new RpcException(new Status(StatusCode.NotFound, "No such topic"));
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(0), rpcEx, 1, includeTrailing: false));
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(rpcEx.Status, subscriberEx.Status);
+                // We should have failed immediately - but there's a two second delay in SubscriberClient.StopCompletionAsync
+                // to avoid a race condition.
+                Assert.Equal(start.AddSeconds(2), fake.Scheduler.Clock.GetCurrentDateTimeUtc());
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_InternalErrorContinuesRetrying()
+        {
+            // A regular internal failure that's not due to an auth error.
+            var exception = new RpcException(new Status(StatusCode.Internal, "Bang"));
+
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), exception, 5, includeTrailing: true));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+            });
+        }
+
+        [Fact]
+        public void StreamingPullRetry_RetriableErrorEventuallyFails()
+        {
+            // A regular internal failure that's not due to an auth error.
+            var exception = new RpcException(new Status(StatusCode.Internal, "Bang"));
+
+            // When we've reached a limit of the number of exceptions we're happy to retry, we'll eventually fail.
+            // (This will take a long time, with all the backoffs involved...)
+            using var fake = Fake.Create(CreateBadMoveNextSequence(TimeSpan.FromSeconds(1), exception, 100, includeTrailing: true));
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                var subscriberEx = await Assert.ThrowsAsync<RpcException>(() => subscriberTask);
+                Assert.Equal(exception.Status, subscriberEx.Status);
+            });
+        }
+
+        /// <summary>
+        /// If the streaming pull call fails in MoveNext after a short time (e.g. 10 seconds)
+        /// we should retry with backoff.
+        /// </summary>
+        [Fact]
+        public void StreamingPullRetry_UnavailableAfterShortDelayTriggersRetryWithBackoff()
+        {
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Stream terminated"));
+            TimeSpan streamDuration = TimeSpan.FromSeconds(30);
+            using var fake = Fake.Create(CreateBadMoveNextSequence(streamDuration, exception, 5, includeTrailing: true));
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+
+                // Check the pull times indicate a backoff.
+                var subscriber = fake.Subscribers.Single();
+                var pullTimes = subscriber.StreamingPulls;
+                Assert.Equal(6, subscriber.StreamingPulls.Count);
+                Assert.Equal(start, pullTimes[0]);
+                DateTime previousStart = start;
+                // The second call should be more than this long after the first,
+                // and each successive call should be delayed further.
+                TimeSpan previousTimeBetweenCalls = streamDuration;
+                foreach (var pullTime in pullTimes.Skip(1))
+                {
+                    var timeBetweenCalls = pullTime - previousStart;
+                    Assert.True(timeBetweenCalls > previousTimeBetweenCalls);
+                    previousTimeBetweenCalls = timeBetweenCalls;
+                    previousStart = pullTime;
+                }
+            });
+        }
+
+        /// <summary>
+        /// We *expect* the streaming pull to fail (in MoveNext) after about a minute... we should
+        /// retry immediately each time.
+        /// </summary>
+        [Fact]
+        public void StreamingPullRetry_UnavailableAfterLongDelayTriggersRetryWithoutBackoff()
+        {
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Stream terminated"));
+            TimeSpan streamDuration = TimeSpan.FromSeconds(60);
+            using var fake = Fake.Create(CreateBadMoveNextSequence(streamDuration, exception, 5, includeTrailing: true));
+
+            var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
+
+            fake.Scheduler.Run(async () =>
+            {
+                var subscriberTask = fake.Subscriber.StartAsync((msg, ct) => throw new Exception("No messages should be provided"));
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromMinutes(100), CancellationToken.None));
+                Assert.False(subscriberTask.IsCompleted);
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                await subscriberTask;
+
+                // Check the pull times indicate no backoff.
+                var subscriber = fake.Subscribers.Single();
+                var expectedPullTimes = Enumerable.Range(0, 6).Select(index => start + TimeSpan.FromTicks(streamDuration.Ticks * index)).ToList();
+                Assert.Equal(expectedPullTimes, subscriber.StreamingPulls);
+            });
+        }
+
+        /// <summary>
+        /// Creates a sequence of failing streaming pull responses, optionally followed by one "never responds" streaming pull.
+        /// The nested aspect is because each streaming pull can (theoretically) consist of multiple responses.
+        /// </summary>
+        private static IReadOnlyList<IEnumerable<ServerAction>> CreateBadMoveNextSequence(TimeSpan timeBeforeFailure, RpcException exception, int count, bool includeTrailing) =>
+            Enumerable.Repeat(ServerAction.Sequence(ServerAction.BadMoveNext(timeBeforeFailure, exception)), count)
+                .Concat(Enumerable.Repeat(ServerAction.Sequence(ServerAction.Inf()), includeTrailing ? 1 : 0))
+                .ToList();
     }
 }

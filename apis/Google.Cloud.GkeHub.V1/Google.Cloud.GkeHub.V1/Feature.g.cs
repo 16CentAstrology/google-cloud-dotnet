@@ -96,6 +96,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// <summary>
   /// Feature represents the settings and status of any Hub Feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -504,7 +505,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.resourceState_ != null) {
         if (resourceState_ == null) {
           ResourceState = new global::Google.Cloud.GkeHub.V1.FeatureResourceState();
@@ -517,14 +518,14 @@ namespace Google.Cloud.GkeHub.V1 {
         }
         Spec.MergeFrom(other.Spec);
       }
-      membershipSpecs_.Add(other.membershipSpecs_);
+      membershipSpecs_.MergeFrom(other.membershipSpecs_);
       if (other.state_ != null) {
         if (state_ == null) {
           State = new global::Google.Cloud.GkeHub.V1.CommonFeatureState();
         }
         State.MergeFrom(other.State);
       }
-      membershipStates_.Add(other.membershipStates_);
+      membershipStates_.MergeFrom(other.membershipStates_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -701,6 +702,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// GkeHub API. See `FeatureState` for the "running state" of the Feature in the
   /// Hub and across Memberships.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureResourceState : pb::IMessage<FeatureResourceState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -939,6 +941,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// describe a Feature's state at the environ-level, or per-membershop, depending
   /// on the context.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureState : pb::IMessage<FeatureState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1259,6 +1262,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// <summary>
   /// CommonFeatureSpec contains Hub-wide configuration information
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonFeatureSpec : pb::IMessage<CommonFeatureSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1497,6 +1501,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// <summary>
   /// CommonFeatureState contains Hub-wide Feature status information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonFeatureState : pb::IMessage<CommonFeatureState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1702,6 +1707,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// MembershipFeatureSpec contains configuration information for a single
   /// Membership.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MembershipFeatureSpec : pb::IMessage<MembershipFeatureSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1941,6 +1947,7 @@ namespace Google.Cloud.GkeHub.V1 {
   /// MembershipFeatureState contains Feature status information for a single
   /// Membership.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MembershipFeatureState : pb::IMessage<MembershipFeatureState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

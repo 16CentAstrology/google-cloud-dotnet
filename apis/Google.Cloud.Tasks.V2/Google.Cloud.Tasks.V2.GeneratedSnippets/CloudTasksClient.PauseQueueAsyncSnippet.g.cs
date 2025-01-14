@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_PauseQueue_async_flattened]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task PauseQueueAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = await cloudTasksClient.PauseQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.PauseQueueAsync(name);
         }
     }
     // [END cloudtasks_v2_generated_CloudTasks_PauseQueue_async_flattened]

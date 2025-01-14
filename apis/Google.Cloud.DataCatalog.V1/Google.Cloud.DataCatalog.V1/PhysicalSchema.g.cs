@@ -39,12 +39,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "ZW1hSAAaGgoKQXZyb1NjaGVtYRIMCgR0ZXh0GAEgASgJGhwKDFRocmlmdFNj",
             "aGVtYRIMCgR0ZXh0GAEgASgJGh4KDlByb3RvYnVmU2NoZW1hEgwKBHRleHQY",
             "ASABKAkaDwoNUGFycXVldFNjaGVtYRoLCglPcmNTY2hlbWEaCwoJQ3N2U2No",
-            "ZW1hQggKBnNjaGVtYULbAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
+            "ZW1hQggKBnNjaGVtYULYAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
             "Zy52MUITUGh5c2ljYWxTY2hlbWFQcm90b1ABWkFjbG91ZC5nb29nbGUuY29t",
             "L2dvL2RhdGFjYXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFs",
-            "b2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2ds",
-            "ZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFD",
-            "YXRhbG9nOjpWMWIGcHJvdG8z"));
+            "b2dwYqoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxD",
+            "bG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRh",
+            "bG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Native schema used by a resource represented as an entry. Used by query
   /// engines for deserializing and parsing source data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PhysicalSchema : pb::IMessage<PhysicalSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -585,6 +586,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Schema in Avro JSON format.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AvroSchema : pb::IMessage<AvroSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -780,6 +782,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Schema in Thrift format.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThriftSchema : pb::IMessage<ThriftSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -975,6 +978,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Schema in protocol buffer format.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ProtobufSchema : pb::IMessage<ProtobufSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1170,6 +1174,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Marks a Parquet-encoded data source.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ParquetSchema : pb::IMessage<ParquetSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1325,6 +1330,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Marks an ORC-encoded data source.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OrcSchema : pb::IMessage<OrcSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1480,6 +1486,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Marks a CSV-encoded data source.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CsvSchema : pb::IMessage<CsvSchema>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -32,6 +32,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         public StructuredVersion OldVersion { get; }
         public StructuredVersion NewVersion { get; }
         private HistoryFile ModifiedHistoryFile { get; }
+        public bool Completed { get; set; }
 
         /// <summary>
         /// The history file section being added, or null if this API does not have a version history.
@@ -58,18 +59,18 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         private ReleaseProposal(ApiMetadata api, StructuredVersion oldVersion, StructuredVersion newVersion, HistoryFile historyFile) =>
             (this.api, OldVersion, NewVersion, ModifiedHistoryFile) = (api, oldVersion, newVersion, historyFile);
 
-        public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
+        public static ReleaseProposal CreateFromHistory(RootLayout rootLayout, Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
         {
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(rootLayout);
             var api = catalog[id];
             var oldVersion = api.StructuredVersion;
             api.Version = newVersion.ToString();
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
-            string historyFilePath = HistoryFile.GetPathForPackage(api.Id);
+            string historyFilePath = HistoryFile.GetPathForPackage(rootLayout, api.Id);
             var historyFile = HistoryFile.Load(historyFilePath);
             if (!api.NoVersionHistory)
             {
-                var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage);
+                var sectionsInserted = historyFile.MergeReleases(rootLayout, releases, defaultMessage);
                 if (sectionsInserted.Count != 1)
                 {
                     throw new UserErrorException($"API {api.Id} would have {sectionsInserted.Count} new history sections");
@@ -78,7 +79,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             return new ReleaseProposal(api, oldVersion, newVersion, historyFile);
         }
 
-        public void Execute(BatchReleaseConfig config)
+        public void Execute(RootLayout rootLayout, BatchReleaseConfig config)
         {
             Console.WriteLine(this);
 
@@ -118,8 +119,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
 
             var original = repo.Head;
 
@@ -129,13 +129,20 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             Commands.Checkout(repo, releaseBranch);
 
             new SetVersionCommand().InternalExecute(Id, NewVersion.ToString(), quiet: true);
-            ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(Id));
+            ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(rootLayout, Id));
             new CommitCommand().InternalExecute();
-            new PushCommand().InternalExecute();
+
+            if (!config.DeferPush)
+            {
+                new PushCommand().InternalExecute();
+            }
 
             // Go back to our current branch
             Commands.Checkout(repo, original);
             Console.WriteLine();
+
+            // Remember that this proposal was completed (as far as the config goes).
+            Completed = true;
         }
 
         /// <summary>

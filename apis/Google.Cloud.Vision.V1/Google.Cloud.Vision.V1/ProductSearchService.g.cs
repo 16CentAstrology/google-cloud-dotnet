@@ -132,92 +132,93 @@ namespace Google.Cloud.Vision.V1 {
             "Z2xlYXBpcy5jb20vTG9jYXRpb24SDQoFZm9yY2UYBCABKAhCCAoGdGFyZ2V0",
             "MvQdCg1Qcm9kdWN0U2VhcmNoEtEBChBDcmVhdGVQcm9kdWN0U2V0Ei8uZ29v",
             "Z2xlLmNsb3VkLnZpc2lvbi52MS5DcmVhdGVQcm9kdWN0U2V0UmVxdWVzdBoi",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdFNldCJogtPkkwI+Ii8v",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9wcm9kdWN0U2V0",
-            "czoLcHJvZHVjdF9zZXTaQSFwYXJlbnQscHJvZHVjdF9zZXQscHJvZHVjdF9z",
-            "ZXRfaWQStAEKD0xpc3RQcm9kdWN0U2V0cxIuLmdvb2dsZS5jbG91ZC52aXNp",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdFNldCJo2kEhcGFyZW50",
+            "LHByb2R1Y3Rfc2V0LHByb2R1Y3Rfc2V0X2lkgtPkkwI+Ii8vdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9wcm9kdWN0U2V0czoLcHJvZHVj",
+            "dF9zZXQStAEKD0xpc3RQcm9kdWN0U2V0cxIuLmdvb2dsZS5jbG91ZC52aXNp",
             "b24udjEuTGlzdFByb2R1Y3RTZXRzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjEuTGlzdFByb2R1Y3RTZXRzUmVzcG9uc2UiQILT5JMCMRIvL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcHJvZHVjdFNldHPa",
-            "QQZwYXJlbnQSoQEKDUdldFByb2R1Y3RTZXQSLC5nb29nbGUuY2xvdWQudmlz",
+            "aXNpb24udjEuTGlzdFByb2R1Y3RTZXRzUmVzcG9uc2UiQNpBBnBhcmVudILT",
+            "5JMCMRIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcHJv",
+            "ZHVjdFNldHMSoQEKDUdldFByb2R1Y3RTZXQSLC5nb29nbGUuY2xvdWQudmlz",
             "aW9uLnYxLkdldFByb2R1Y3RTZXRSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLnZp",
-            "c2lvbi52MS5Qcm9kdWN0U2V0Ij6C0+STAjESLy92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3Byb2R1Y3RTZXRzLyp92kEEbmFtZRLTAQoQVXBk",
+            "c2lvbi52MS5Qcm9kdWN0U2V0Ij7aQQRuYW1lgtPkkwIxEi8vdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0U2V0cy8qfRLTAQoQVXBk",
             "YXRlUHJvZHVjdFNldBIvLmdvb2dsZS5jbG91ZC52aXNpb24udjEuVXBkYXRl",
             "UHJvZHVjdFNldFJlcXVlc3QaIi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlBy",
-            "b2R1Y3RTZXQiaoLT5JMCSjI7L3YxL3twcm9kdWN0X3NldC5uYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovcHJvZHVjdFNldHMvKn06C3Byb2R1Y3Rfc2V0",
-            "2kEXcHJvZHVjdF9zZXQsdXBkYXRlX21hc2sSmwEKEERlbGV0ZVByb2R1Y3RT",
+            "b2R1Y3RTZXQiatpBF3Byb2R1Y3Rfc2V0LHVwZGF0ZV9tYXNrgtPkkwJKMjsv",
+            "djEve3Byb2R1Y3Rfc2V0Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9w",
+            "cm9kdWN0U2V0cy8qfToLcHJvZHVjdF9zZXQSmwEKEERlbGV0ZVByb2R1Y3RT",
             "ZXQSLy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkRlbGV0ZVByb2R1Y3RTZXRS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij6C0+STAjEqLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2R1Y3RTZXRzLyp92kEE",
-            "bmFtZRK5AQoNQ3JlYXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC52aXNpb24u",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij7aQQRuYW1lgtPkkwIx",
+            "Ki8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0U2V0",
+            "cy8qfRK5AQoNQ3JlYXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC52aXNpb24u",
             "djEuQ3JlYXRlUHJvZHVjdFJlcXVlc3QaHy5nb29nbGUuY2xvdWQudmlzaW9u",
-            "LnYxLlByb2R1Y3QiWYLT5JMCNyIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vcHJvZHVjdHM6B3Byb2R1Y3TaQRlwYXJlbnQscHJvZHVj",
-            "dCxwcm9kdWN0X2lkEqgBCgxMaXN0UHJvZHVjdHMSKy5nb29nbGUuY2xvdWQu",
+            "LnYxLlByb2R1Y3QiWdpBGXBhcmVudCxwcm9kdWN0LHByb2R1Y3RfaWSC0+ST",
+            "AjciLC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Byb2R1",
+            "Y3RzOgdwcm9kdWN0EqgBCgxMaXN0UHJvZHVjdHMSKy5nb29nbGUuY2xvdWQu",
             "dmlzaW9uLnYxLkxpc3RQcm9kdWN0c1JlcXVlc3QaLC5nb29nbGUuY2xvdWQu",
-            "dmlzaW9uLnYxLkxpc3RQcm9kdWN0c1Jlc3BvbnNlIj2C0+STAi4SLC92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Byb2R1Y3Rz2kEGcGFy",
-            "ZW50EpUBCgpHZXRQcm9kdWN0EikuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5H",
+            "dmlzaW9uLnYxLkxpc3RQcm9kdWN0c1Jlc3BvbnNlIj3aQQZwYXJlbnSC0+ST",
+            "Ai4SLC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Byb2R1",
+            "Y3RzEpUBCgpHZXRQcm9kdWN0EikuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5H",
             "ZXRQcm9kdWN0UmVxdWVzdBofLmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJv",
-            "ZHVjdCI7gtPkkwIuEiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9wcm9kdWN0cy8qfdpBBG5hbWUSuwEKDVVwZGF0ZVByb2R1Y3QSLC5nb29n",
+            "ZHVjdCI72kEEbmFtZYLT5JMCLhIsL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovcHJvZHVjdHMvKn0SuwEKDVVwZGF0ZVByb2R1Y3QSLC5nb29n",
             "bGUuY2xvdWQudmlzaW9uLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0Gh8uZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Qcm9kdWN0IluC0+STAj8yNC92MS97cHJv",
-            "ZHVjdC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMvKn06",
-            "B3Byb2R1Y3TaQRNwcm9kdWN0LHVwZGF0ZV9tYXNrEpIBCg1EZWxldGVQcm9k",
+            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Qcm9kdWN0IlvaQRNwcm9kdWN0LHVwZGF0",
+            "ZV9tYXNrgtPkkwI/MjQvdjEve3Byb2R1Y3QubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3Byb2R1Y3RzLyp9Ogdwcm9kdWN0EpIBCg1EZWxldGVQcm9k",
             "dWN0EiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5EZWxldGVQcm9kdWN0UmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI7gtPkkwIuKiwvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0cy8qfdpBBG5hbWUS",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI72kEEbmFtZYLT5JMCLios",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMvKn0S",
             "+QEKFENyZWF0ZVJlZmVyZW5jZUltYWdlEjMuZ29vZ2xlLmNsb3VkLnZpc2lv",
             "bi52MS5DcmVhdGVSZWZlcmVuY2VJbWFnZVJlcXVlc3QaJi5nb29nbGUuY2xv",
-            "dWQudmlzaW9uLnYxLlJlZmVyZW5jZUltYWdlIoMBgtPkkwJRIj4vdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2R1Y3RzLyp9L3JlZmVy",
-            "ZW5jZUltYWdlczoPcmVmZXJlbmNlX2ltYWdl2kEpcGFyZW50LHJlZmVyZW5j",
-            "ZV9pbWFnZSxyZWZlcmVuY2VfaW1hZ2VfaWQSsgEKFERlbGV0ZVJlZmVyZW5j",
+            "dWQudmlzaW9uLnYxLlJlZmVyZW5jZUltYWdlIoMB2kEpcGFyZW50LHJlZmVy",
+            "ZW5jZV9pbWFnZSxyZWZlcmVuY2VfaW1hZ2VfaWSC0+STAlEiPi92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMvKn0vcmVmZXJl",
+            "bmNlSW1hZ2VzOg9yZWZlcmVuY2VfaW1hZ2USsgEKFERlbGV0ZVJlZmVyZW5j",
             "ZUltYWdlEjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5EZWxldGVSZWZlcmVu",
-            "Y2VJbWFnZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiTYLT5JMC",
-            "QCo+L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMv",
-            "Ki9yZWZlcmVuY2VJbWFnZXMvKn3aQQRuYW1lEs8BChNMaXN0UmVmZXJlbmNl",
+            "Y2VJbWFnZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiTdpBBG5h",
+            "bWWC0+STAkAqPi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3By",
+            "b2R1Y3RzLyovcmVmZXJlbmNlSW1hZ2VzLyp9Es8BChNMaXN0UmVmZXJlbmNl",
             "SW1hZ2VzEjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MaXN0UmVmZXJlbmNl",
             "SW1hZ2VzUmVxdWVzdBozLmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlzdFJl",
-            "ZmVyZW5jZUltYWdlc1Jlc3BvbnNlIk+C0+STAkASPi92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMvKn0vcmVmZXJlbmNlSW1h",
-            "Z2Vz2kEGcGFyZW50ErwBChFHZXRSZWZlcmVuY2VJbWFnZRIwLmdvb2dsZS5j",
+            "ZmVyZW5jZUltYWdlc1Jlc3BvbnNlIk/aQQZwYXJlbnSC0+STAkASPi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVjdHMvKn0vcmVm",
+            "ZXJlbmNlSW1hZ2VzErwBChFHZXRSZWZlcmVuY2VJbWFnZRIwLmdvb2dsZS5j",
             "bG91ZC52aXNpb24udjEuR2V0UmVmZXJlbmNlSW1hZ2VSZXF1ZXN0GiYuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5SZWZlcmVuY2VJbWFnZSJNgtPkkwJAEj4v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0cy8qL3Jl",
-            "ZmVyZW5jZUltYWdlcy8qfdpBBG5hbWUSvQEKFkFkZFByb2R1Y3RUb1Byb2R1",
+            "Z2xlLmNsb3VkLnZpc2lvbi52MS5SZWZlcmVuY2VJbWFnZSJN2kEEbmFtZYLT",
+            "5JMCQBI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJvZHVj",
+            "dHMvKi9yZWZlcmVuY2VJbWFnZXMvKn0SvQEKFkFkZFByb2R1Y3RUb1Byb2R1",
             "Y3RTZXQSNS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFkZFByb2R1Y3RUb1By",
-            "b2R1Y3RTZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IlSC0+ST",
-            "Aj8iOi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2R1Y3RT",
-            "ZXRzLyp9OmFkZFByb2R1Y3Q6ASraQQxuYW1lLHByb2R1Y3QSygEKG1JlbW92",
+            "b2R1Y3RTZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IlTaQQxu",
+            "YW1lLHByb2R1Y3SC0+STAj8iOi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3Byb2R1Y3RTZXRzLyp9OmFkZFByb2R1Y3Q6ASoSygEKG1JlbW92",
             "ZVByb2R1Y3RGcm9tUHJvZHVjdFNldBI6Lmdvb2dsZS5jbG91ZC52aXNpb24u",
             "djEuUmVtb3ZlUHJvZHVjdEZyb21Qcm9kdWN0U2V0UmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSJXgtPkkwJCIj0vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9wcm9kdWN0U2V0cy8qfTpyZW1vdmVQcm9kdWN0OgEq",
-            "2kEMbmFtZSxwcm9kdWN0EtYBChhMaXN0UHJvZHVjdHNJblByb2R1Y3RTZXQS",
+            "ZS5wcm90b2J1Zi5FbXB0eSJX2kEMbmFtZSxwcm9kdWN0gtPkkwJCIj0vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0U2V0cy8qfTpy",
+            "ZW1vdmVQcm9kdWN0OgEqEtYBChhMaXN0UHJvZHVjdHNJblByb2R1Y3RTZXQS",
             "Ny5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkxpc3RQcm9kdWN0c0luUHJvZHVj",
             "dFNldFJlcXVlc3QaOC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkxpc3RQcm9k",
-            "dWN0c0luUHJvZHVjdFNldFJlc3BvbnNlIkeC0+STAjoSOC92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2R1Y3RTZXRzLyp9L3Byb2R1Y3Rz",
-            "2kEEbmFtZRL0AQoRSW1wb3J0UHJvZHVjdFNldHMSMC5nb29nbGUuY2xvdWQu",
+            "dWN0c0luUHJvZHVjdFNldFJlc3BvbnNlIkfaQQRuYW1lgtPkkwI6EjgvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9kdWN0U2V0cy8qfS9w",
+            "cm9kdWN0cxL0AQoRSW1wb3J0UHJvZHVjdFNldHMSMC5nb29nbGUuY2xvdWQu",
             "dmlzaW9uLnYxLkltcG9ydFByb2R1Y3RTZXRzUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ijQGC0+STAjsiNi92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L3Byb2R1Y3RTZXRzOmltcG9ydDoBKtpB",
-            "E3BhcmVudCxpbnB1dF9jb25maWfKQTMKGUltcG9ydFByb2R1Y3RTZXRzUmVz",
-            "cG9uc2USFkJhdGNoT3BlcmF0aW9uTWV0YWRhdGES1gEKDVB1cmdlUHJvZHVj",
+            "b25ncnVubmluZy5PcGVyYXRpb24ijQHKQTMKGUltcG9ydFByb2R1Y3RTZXRz",
+            "UmVzcG9uc2USFkJhdGNoT3BlcmF0aW9uTWV0YWRhdGHaQRNwYXJlbnQsaW5w",
+            "dXRfY29uZmlngtPkkwI7IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9wcm9kdWN0U2V0czppbXBvcnQ6ASoS1gEKDVB1cmdlUHJvZHVj",
             "dHMSLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlB1cmdlUHJvZHVjdHNSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ4gtPkkwI3IjIv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9wcm9kdWN0czpw",
-            "dXJnZToBKtpBBnBhcmVudMpBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZC",
-            "YXRjaE9wZXJhdGlvbk1ldGFkYXRhGnbKQRV2aXNpb24uZ29vZ2xlYXBpcy5j",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ4ykEvChVnb29n",
+            "bGUucHJvdG9idWYuRW1wdHkSFkJhdGNoT3BlcmF0aW9uTWV0YWRhdGHaQQZw",
+            "YXJlbnSC0+STAjciMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3Byb2R1Y3RzOnB1cmdlOgEqGnbKQRV2aXNpb24uZ29vZ2xlYXBpcy5j",
             "b23SQVtodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
             "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "dmlzaW9uQncKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhlQcm9kdWN0",
-            "U2VhcmNoU2VydmljZVByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vdmlz",
-            "aW9uL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NWTmIGcHJvdG8z"));
+            "dmlzaW9uQnoKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhlQcm9kdWN0",
+            "U2VhcmNoU2VydmljZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vdmlz",
+            "aW9uL3YyL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NWTmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -261,6 +262,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A Product contains ReferenceImages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Product : pb::IMessage<Product>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -365,10 +367,11 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductCategoryFieldNumber = 4;
     private string productCategory_ = "";
     /// <summary>
-    /// Immutable. The category for the product identified by the reference image. This should
-    /// be one of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or
-    /// "general-v1". The legacy categories "homegoods", "apparel", and "toys" are
-    /// still supported, but these should not be used for new products.
+    /// Immutable. The category for the product identified by the reference image.
+    /// This should be one of "homegoods-v2", "apparel-v2", "toys-v2",
+    /// "packagedgoods-v1" or "general-v1". The legacy categories "homegoods",
+    /// "apparel", and "toys" are still supported, but these should not be used for
+    /// new products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -630,6 +633,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// A product label represented as a key-value pair.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class KeyValue : pb::IMessage<KeyValue>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -874,6 +878,7 @@ namespace Google.Cloud.Vision.V1 {
   /// million reference images. If the limit is exceeded, periodic indexing will
   /// fail.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSet : pb::IMessage<ProductSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1222,6 +1227,7 @@ namespace Google.Cloud.Vision.V1 {
   /// A `ReferenceImage` represents a product image and its associated metadata,
   /// such as bounding boxes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReferenceImage : pb::IMessage<ReferenceImage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1311,8 +1317,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.BoundingPoly.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.BoundingPoly> boundingPolys_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.BoundingPoly>();
     /// <summary>
-    /// Optional. Bounding polygons around the areas of interest in the reference image.
-    /// If this field is empty, the system will try to detect regions of
+    /// Optional. Bounding polygons around the areas of interest in the reference
+    /// image. If this field is empty, the system will try to detect regions of
     /// interest. At most 10 bounding polygons will be used.
     ///
     /// The provided shape is converted into a non-rotated rectangle. Once
@@ -1500,6 +1506,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `CreateProduct` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProductRequest : pb::IMessage<CreateProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1790,6 +1797,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `ListProducts` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductsRequest : pb::IMessage<ListProductsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2068,6 +2076,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response message for the `ListProducts` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductsResponse : pb::IMessage<ListProductsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2293,6 +2302,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `GetProduct` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProductRequest : pb::IMessage<GetProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2491,6 +2501,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `UpdateProduct` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProductRequest : pb::IMessage<UpdateProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2749,6 +2760,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `DeleteProduct` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProductRequest : pb::IMessage<DeleteProductRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2947,6 +2959,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `CreateProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProductSetRequest : pb::IMessage<CreateProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3236,6 +3249,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `ListProductSets` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductSetsRequest : pb::IMessage<ListProductSetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3513,6 +3527,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response message for the `ListProductSets` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductSetsResponse : pb::IMessage<ListProductSetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3738,6 +3753,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `GetProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProductSetRequest : pb::IMessage<GetProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3936,6 +3952,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `UpdateProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProductSetRequest : pb::IMessage<UpdateProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4192,6 +4209,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `DeleteProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProductSetRequest : pb::IMessage<DeleteProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4390,6 +4408,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `CreateReferenceImage` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateReferenceImageRequest : pb::IMessage<CreateReferenceImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4440,7 +4459,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the product in which to create the reference image.
+    /// Required. Resource name of the product in which to create the reference
+    /// image.
     ///
     /// Format is
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -4681,6 +4701,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `ListReferenceImages` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListReferenceImagesRequest : pb::IMessage<ListReferenceImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4962,6 +4983,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response message for the `ListReferenceImages` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListReferenceImagesResponse : pb::IMessage<ListReferenceImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5226,6 +5248,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `GetReferenceImage` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReferenceImageRequest : pb::IMessage<GetReferenceImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5424,6 +5447,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `DeleteReferenceImage` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteReferenceImageRequest : pb::IMessage<DeleteReferenceImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5622,6 +5646,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `AddProductToProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddProductToProductSetRequest : pb::IMessage<AddProductToProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5863,6 +5888,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `RemoveProductFromProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemoveProductFromProductSetRequest : pb::IMessage<RemoveProductFromProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5930,7 +5956,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductFieldNumber = 2;
     private string product_ = "";
     /// <summary>
-    /// Required. The resource name for the Product to be removed from this ProductSet.
+    /// Required. The resource name for the Product to be removed from this
+    /// ProductSet.
     ///
     /// Format is:
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -6104,6 +6131,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `ListProductsInProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductsInProductSetRequest : pb::IMessage<ListProductsInProductSetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6382,6 +6410,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response message for the `ListProductsInProductSet` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProductsInProductSetResponse : pb::IMessage<ListProductsInProductSetResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6608,6 +6637,7 @@ namespace Google.Cloud.Vision.V1 {
   /// The Google Cloud Storage location for a csv file which preserves a list of
   /// ImportProductSetRequests in each line.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductSetsGcsSource : pb::IMessage<ImportProductSetsGcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6681,15 +6711,17 @@ namespace Google.Cloud.Vision.V1 {
     /// `product-display-name` column refers to
     /// [display_name][google.cloud.vision.v1.Product.display_name], the
     /// `product-category` column refers to
-    /// [product_category][google.cloud.vision.v1.Product.product_category], and the
-    /// `labels` column refers to [product_labels][google.cloud.vision.v1.Product.product_labels].
+    /// [product_category][google.cloud.vision.v1.Product.product_category], and
+    /// the `labels` column refers to
+    /// [product_labels][google.cloud.vision.v1.Product.product_labels].
     ///
     /// The `image-id` column is optional but must be unique if provided. If it is
     /// empty, the system will automatically assign a unique id to the image.
     ///
     /// The `product-display-name` column is optional. If it is empty, the system
-    /// sets the [display_name][google.cloud.vision.v1.Product.display_name] field for the product to a
-    /// space (" "). You can update the `display_name` later by using the API.
+    /// sets the [display_name][google.cloud.vision.v1.Product.display_name] field
+    /// for the product to a space (" "). You can update the `display_name` later
+    /// by using the API.
     ///
     /// If a `Product` with the specified `product-id` already exists, then the
     /// system ignores the `product-display-name`, `product-category`, and `labels`
@@ -6863,6 +6895,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The input content for the `ImportProductSets` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductSetsInputConfig : pb::IMessage<ImportProductSetsInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7102,6 +7135,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `ImportProductSets` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductSetsRequest : pb::IMessage<ImportProductSetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7349,9 +7383,12 @@ namespace Google.Cloud.Vision.V1 {
   /// Response message for the `ImportProductSets` method.
   ///
   /// This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+  /// method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductSetsResponse : pb::IMessage<ImportProductSetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7573,6 +7610,7 @@ namespace Google.Cloud.Vision.V1 {
   /// This is included in the `metadata` field of the `Operation` returned by the
   /// `GetOperation` call of the `google::longrunning::Operations` service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchOperationMetadata : pb::IMessage<BatchOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7654,7 +7692,8 @@ namespace Google.Cloud.Vision.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The time when the batch request is finished and
-    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is set to true.
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7904,6 +7943,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Config to control which ProductSet contains the Products to be deleted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSetPurgeConfig : pb::IMessage<ProductSetPurgeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8101,6 +8141,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request message for the `PurgeProducts` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeProductsRequest : pb::IMessage<PurgeProductsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8179,10 +8220,24 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DeleteOrphanProducts {
-      get { return targetCase_ == TargetOneofCase.DeleteOrphanProducts ? (bool) target_ : false; }
+      get { return HasDeleteOrphanProducts ? (bool) target_ : false; }
       set {
         target_ = value;
         targetCase_ = TargetOneofCase.DeleteOrphanProducts;
+      }
+    }
+    /// <summary>Gets whether the "delete_orphan_products" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeleteOrphanProducts {
+      get { return targetCase_ == TargetOneofCase.DeleteOrphanProducts; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete_orphan_products" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeleteOrphanProducts() {
+      if (HasDeleteOrphanProducts) {
+        ClearTarget();
       }
     }
 
@@ -8268,7 +8323,7 @@ namespace Google.Cloud.Vision.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (targetCase_ == TargetOneofCase.ProductSetPurgeConfig) hash ^= ProductSetPurgeConfig.GetHashCode();
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) hash ^= DeleteOrphanProducts.GetHashCode();
+      if (HasDeleteOrphanProducts) hash ^= DeleteOrphanProducts.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Force != false) hash ^= Force.GetHashCode();
       hash ^= (int) targetCase_;
@@ -8298,7 +8353,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteOrphanProducts);
       }
@@ -8324,7 +8379,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteOrphanProducts);
       }
@@ -8345,7 +8400,7 @@ namespace Google.Cloud.Vision.V1 {
       if (targetCase_ == TargetOneofCase.ProductSetPurgeConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         size += 1 + 1;
       }
       if (Parent.Length != 0) {

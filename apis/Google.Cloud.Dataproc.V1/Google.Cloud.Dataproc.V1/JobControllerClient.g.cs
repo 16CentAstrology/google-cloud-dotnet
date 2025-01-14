@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataproc.V1
 {
@@ -263,14 +263,14 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobControllerClient.Create(callInvoker, Settings, Logger);
+            return JobControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<JobControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobControllerClient.Create(callInvoker, Settings, Logger);
+            return JobControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -702,14 +702,23 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists regions/{region}/jobs in a project.
@@ -731,14 +740,23 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists regions/{region}/jobs in a project.
@@ -776,15 +794,24 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists regions/{region}/jobs in a project.
@@ -822,15 +849,24 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a job in a project.
@@ -1102,7 +1138,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>("SubmitJob", grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);

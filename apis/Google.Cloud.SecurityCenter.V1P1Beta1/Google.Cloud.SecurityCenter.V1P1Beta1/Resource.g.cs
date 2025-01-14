@@ -52,6 +52,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// <summary>
   /// Information related to the Google Cloud resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Resource : pb::IMessage<Resource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ArtifactRegistry.V1
 {
@@ -77,13 +77,24 @@ namespace Google.Cloud.ArtifactRegistry.V1
             GetVersionSettings = existing.GetVersionSettings;
             DeleteVersionSettings = existing.DeleteVersionSettings;
             DeleteVersionOperationsSettings = existing.DeleteVersionOperationsSettings.Clone();
+            BatchDeleteVersionsSettings = existing.BatchDeleteVersionsSettings;
+            BatchDeleteVersionsOperationsSettings = existing.BatchDeleteVersionsOperationsSettings.Clone();
+            UpdateVersionSettings = existing.UpdateVersionSettings;
             ListFilesSettings = existing.ListFilesSettings;
             GetFileSettings = existing.GetFileSettings;
+            DeleteFileSettings = existing.DeleteFileSettings;
+            DeleteFileOperationsSettings = existing.DeleteFileOperationsSettings.Clone();
+            UpdateFileSettings = existing.UpdateFileSettings;
             ListTagsSettings = existing.ListTagsSettings;
             GetTagSettings = existing.GetTagSettings;
             CreateTagSettings = existing.CreateTagSettings;
             UpdateTagSettings = existing.UpdateTagSettings;
             DeleteTagSettings = existing.DeleteTagSettings;
+            CreateRuleSettings = existing.CreateRuleSettings;
+            ListRulesSettings = existing.ListRulesSettings;
+            GetRuleSettings = existing.GetRuleSettings;
+            UpdateRuleSettings = existing.UpdateRuleSettings;
+            DeleteRuleSettings = existing.DeleteRuleSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -91,6 +102,13 @@ namespace Google.Cloud.ArtifactRegistry.V1
             UpdateProjectSettingsSettings = existing.UpdateProjectSettingsSettings;
             GetVPCSCConfigSettings = existing.GetVPCSCConfigSettings;
             UpdateVPCSCConfigSettings = existing.UpdateVPCSCConfigSettings;
+            UpdatePackageSettings = existing.UpdatePackageSettings;
+            ListAttachmentsSettings = existing.ListAttachmentsSettings;
+            GetAttachmentSettings = existing.GetAttachmentSettings;
+            CreateAttachmentSettings = existing.CreateAttachmentSettings;
+            CreateAttachmentOperationsSettings = existing.CreateAttachmentOperationsSettings.Clone();
+            DeleteAttachmentSettings = existing.DeleteAttachmentSettings;
+            DeleteAttachmentOperationsSettings = existing.DeleteAttachmentOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -459,6 +477,49 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.BatchDeleteVersions</c> and <c>ArtifactRegistryClient.BatchDeleteVersionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.BatchDeleteVersions</c> and
+        /// <c>ArtifactRegistryClient.BatchDeleteVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteVersionsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdateVersion</c> and <c>ArtifactRegistryClient.UpdateVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ArtifactRegistryClient.ListFiles</c> and <c>ArtifactRegistryClient.ListFilesAsync</c>.
         /// </summary>
         /// <remarks>
@@ -480,6 +541,48 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.DeleteFile</c> and <c>ArtifactRegistryClient.DeleteFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.DeleteFile</c> and
+        /// <c>ArtifactRegistryClient.DeleteFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteFileOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdateFile</c> and <c>ArtifactRegistryClient.UpdateFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -540,6 +643,66 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.CreateRule</c> and <c>ArtifactRegistryClient.CreateRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ListRules</c> and <c>ArtifactRegistryClient.ListRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetRule</c> and <c>ArtifactRegistryClient.GetRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdateRule</c> and <c>ArtifactRegistryClient.UpdateRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.DeleteRule</c> and <c>ArtifactRegistryClient.DeleteRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -627,6 +790,102 @@ namespace Google.Cloud.ArtifactRegistry.V1
         public gaxgrpc::CallSettings UpdateVPCSCConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdatePackage</c> and <c>ArtifactRegistryClient.UpdatePackageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePackageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ListAttachments</c> and <c>ArtifactRegistryClient.ListAttachmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAttachmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetAttachment</c> and <c>ArtifactRegistryClient.GetAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAttachmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.CreateAttachment</c> and <c>ArtifactRegistryClient.CreateAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAttachmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.CreateAttachment</c> and
+        /// <c>ArtifactRegistryClient.CreateAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAttachmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.DeleteAttachment</c> and <c>ArtifactRegistryClient.DeleteAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAttachmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.DeleteAttachment</c> and
+        /// <c>ArtifactRegistryClient.DeleteAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAttachmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -674,14 +933,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ArtifactRegistryClient.Create(callInvoker, Settings, Logger);
+            return ArtifactRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ArtifactRegistryClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ArtifactRegistryClient.Create(callInvoker, Settings, Logger);
+            return ArtifactRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -824,13 +1083,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DockerImage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDockerImages(new ListDockerImagesRequest
+        public virtual gax::PagedEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDockerImagesRequest request = new ListDockerImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDockerImages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists docker images.
@@ -849,13 +1117,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DockerImage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDockerImagesAsync(new ListDockerImagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> ListDockerImagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDockerImagesRequest request = new ListDockerImagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDockerImagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a docker image.
@@ -997,13 +1274,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifacts(new ListMavenArtifactsRequest
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1022,13 +1308,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1047,13 +1342,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifacts(new ListMavenArtifactsRequest
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifacts(request, callSettings);
+        }
 
         /// <summary>
         /// Lists maven artifacts.
@@ -1072,13 +1376,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMavenArtifactsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a maven artifact.
@@ -1220,13 +1533,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackages(new ListNpmPackagesRequest
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1245,13 +1567,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackagesAsync(new ListNpmPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1270,13 +1601,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackages(new ListNpmPackagesRequest
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists npm packages.
@@ -1295,13 +1635,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNpmPackagesAsync(new ListNpmPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNpmPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a npm package.
@@ -1443,13 +1792,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackages(new ListPythonPackagesRequest
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1468,13 +1826,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackagesAsync(new ListPythonPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1493,13 +1860,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackages(new ListPythonPackagesRequest
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists python packages.
@@ -1518,13 +1894,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPythonPackagesAsync(new ListPythonPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPythonPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a python package.
@@ -1779,7 +2164,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1791,19 +2177,29 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1815,19 +2211,29 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1839,19 +2245,29 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1863,13 +2279,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a repository.
@@ -2037,13 +2462,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2051,8 +2477,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepository(new CreateRepositoryRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2060,13 +2486,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2074,8 +2501,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepositoryAsync(new CreateRepositoryRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2083,13 +2510,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2101,13 +2529,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2115,8 +2544,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepository(new CreateRepositoryRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2124,13 +2553,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2138,8 +2568,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepositoryAsync(new CreateRepositoryRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2147,13 +2577,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2426,13 +2857,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackages(new ListPackagesRequest
+        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2450,13 +2890,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackagesAsync(new ListPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2474,13 +2923,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackages(new ListPackagesRequest
+        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists packages.
@@ -2498,13 +2956,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Package"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPackagesAsync(new ListPackagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPackagesRequest request = new ListPackagesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPackagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a package.
@@ -2785,13 +3252,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVersionsResponse, Version> ListVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVersions(new ListVersionsRequest
+        public virtual gax::PagedEnumerable<ListVersionsResponse, Version> ListVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVersionsRequest request = new ListVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions.
@@ -2809,13 +3282,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Version"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVersionsResponse, Version> ListVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVersionsAsync(new ListVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVersionsResponse, Version> ListVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVersionsRequest request = new ListVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a version
@@ -2970,6 +3449,270 @@ namespace Google.Cloud.ArtifactRegistry.V1
             DeleteVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteVersions</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteVersionsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchDeleteVersions</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> PollOnceBatchDeleteVersions(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteVersionsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteVersions</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> PollOnceBatchDeleteVersionsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteVersionsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersions(new BatchDeleteVersionsRequest
+            {
+                Parent = parent ?? "",
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersionsAsync(new BatchDeleteVersionsRequest
+            {
+                Parent = parent ?? "",
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(PackageName parent, scg::IEnumerable<VersionName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersions(new BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = parent,
+                VersionNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(PackageName parent, scg::IEnumerable<VersionName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersionsAsync(new BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = parent,
+                VersionNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(PackageName parent, scg::IEnumerable<VersionName> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Version UpdateVersion(UpdateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Version> UpdateVersionAsync(UpdateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Version> UpdateVersionAsync(UpdateVersionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="version">
+        /// Required. The Version that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Version UpdateVersion(Version version, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateVersion(new UpdateVersionRequest
+            {
+                Version = gax::GaxPreconditions.CheckNotNull(version, nameof(version)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="version">
+        /// Required. The Version that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Version> UpdateVersionAsync(Version version, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateVersionAsync(new UpdateVersionRequest
+            {
+                Version = gax::GaxPreconditions.CheckNotNull(version, nameof(version)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="version">
+        /// Required. The Version that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Version> UpdateVersionAsync(Version version, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateVersionAsync(version, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists files.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3004,13 +3747,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFiles(new ListFilesRequest
+        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3029,13 +3781,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFilesAsync(new ListFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3054,13 +3815,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFiles(new ListFilesRequest
+        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFiles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists files.
@@ -3079,13 +3849,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="File"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFilesAsync(new ListFilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFilesRequest request = new ListFilesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a file.
@@ -3193,6 +3972,238 @@ namespace Google.Cloud.ArtifactRegistry.V1
             GetFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteFile(DeleteFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(DeleteFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(DeleteFileRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteFile</c>.</summary>
+        public virtual lro::OperationsClient DeleteFileOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteFile</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteFile(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFileOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteFile</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteFileAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFileOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteFile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFile(new DeleteFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileAsync(new DeleteFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteFile(FileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFile(new DeleteFileRequest
+            {
+                FileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(FileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFileAsync(new DeleteFileRequest
+            {
+                FileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(FileName name, st::CancellationToken cancellationToken) =>
+            DeleteFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual File UpdateFile(UpdateFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> UpdateFileAsync(UpdateFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> UpdateFileAsync(UpdateFileRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="file">
+        /// Required. The File that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual File UpdateFile(File file, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFile(new UpdateFileRequest
+            {
+                File = gax::GaxPreconditions.CheckNotNull(file, nameof(file)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="file">
+        /// Required. The File that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> UpdateFileAsync(File file, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFileAsync(new UpdateFileRequest
+            {
+                File = gax::GaxPreconditions.CheckNotNull(file, nameof(file)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="file">
+        /// Required. The File that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> UpdateFileAsync(File file, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFileAsync(file, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3214,7 +4225,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists tags.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose tags will be listed.
+        /// The name of the parent package whose tags will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1/packages/pkg1`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3226,19 +4239,27 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTags(new ListTagsRequest
+        public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagsRequest request = new ListTagsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTags(request, callSettings);
+        }
 
         /// <summary>
         /// Lists tags.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose tags will be listed.
+        /// The name of the parent package whose tags will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1/packages/pkg1`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3250,13 +4271,19 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagsAsync(new ListTagsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagsRequest request = new ListTagsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a tag.
@@ -3548,6 +4575,606 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteTagAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule CreateRule(CreateRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(CreateRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(CreateRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule CreateRule(string parent, Rule rule, string ruleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRule(new CreateRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RuleId = ruleId ?? "",
+                Rule = rule,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(string parent, Rule rule, string ruleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRuleAsync(new CreateRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RuleId = ruleId ?? "",
+                Rule = rule,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(string parent, Rule rule, string ruleId, st::CancellationToken cancellationToken) =>
+            CreateRuleAsync(parent, rule, ruleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule CreateRule(RepositoryName parent, Rule rule, string ruleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRule(new CreateRuleRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RuleId = ruleId ?? "",
+                Rule = rule,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(RepositoryName parent, Rule rule, string ruleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRuleAsync(new CreateRuleRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RuleId = ruleId ?? "",
+                Rule = rule,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the rule will be created.
+        /// </param>
+        /// <param name="rule">
+        /// The rule to be created.
+        /// </param>
+        /// <param name="ruleId">
+        /// The rule id to use for this repository.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> CreateRuleAsync(RepositoryName parent, Rule rule, string ruleId, st::CancellationToken cancellationToken) =>
+            CreateRuleAsync(parent, rule, ruleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRulesResponse, Rule> ListRules(ListRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRulesResponse, Rule> ListRulesAsync(ListRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent repository whose rules will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRulesResponse, Rule> ListRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRulesRequest request = new ListRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent repository whose rules will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRulesResponse, Rule> ListRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRulesRequest request = new ListRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent repository whose rules will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRulesResponse, Rule> ListRules(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRulesRequest request = new ListRulesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent repository whose rules will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Rule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRulesResponse, Rule> ListRulesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRulesRequest request = new ListRulesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule GetRule(GetRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(GetRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(GetRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule GetRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRule(new GetRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRuleAsync(new GetRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule GetRule(RuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRule(new GetRuleRequest
+            {
+                RuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(RuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRuleAsync(new GetRuleRequest
+            {
+                RuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> GetRuleAsync(RuleName name, st::CancellationToken cancellationToken) =>
+            GetRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule UpdateRule(UpdateRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> UpdateRuleAsync(UpdateRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> UpdateRuleAsync(UpdateRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="rule">
+        /// The rule that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Rule UpdateRule(Rule rule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRule(new UpdateRuleRequest
+            {
+                Rule = rule,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="rule">
+        /// The rule that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> UpdateRuleAsync(Rule rule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRuleAsync(new UpdateRuleRequest
+            {
+                Rule = rule,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="rule">
+        /// The rule that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Rule> UpdateRuleAsync(Rule rule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRuleAsync(rule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRule(DeleteRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(DeleteRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(DeleteRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRule(new DeleteRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRuleAsync(new DeleteRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteRule(RuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRule(new DeleteRuleRequest
+            {
+                RuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(RuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRuleAsync(new DeleteRuleRequest
+            {
+                RuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteRuleAsync(RuleName name, st::CancellationToken cancellationToken) =>
+            DeleteRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the IAM policy for a given resource.
@@ -3993,6 +5620,683 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(VPCSCConfig vpcscConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateVPCSCConfigAsync(vpcscConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Package UpdatePackage(UpdatePackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> UpdatePackageAsync(UpdatePackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> UpdatePackageAsync(UpdatePackageRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePackageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="package">
+        /// The package that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Package UpdatePackage(Package package, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePackage(new UpdatePackageRequest
+            {
+                Package = package,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="package">
+        /// The package that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> UpdatePackageAsync(Package package, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePackageAsync(new UpdatePackageRequest
+            {
+                Package = package,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="package">
+        /// The package that replaces the resource on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The update mask applies to the resource. For the `FieldMask` definition,
+        /// see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> UpdatePackageAsync(Package package, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePackageAsync(package, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(ListAttachmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(ListAttachmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose attachments will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose attachments will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose attachments will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose attachments will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachmentsRequest request = new ListAttachmentsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachment(new GetAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachmentAsync(new GetAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachment(new GetAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachmentAsync(new GetAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(AttachmentName name, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Attachment, OperationMetadata> CreateAttachment(CreateAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(CreateAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(CreateAttachmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateAttachmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAttachment</c>.</summary>
+        public virtual lro::OperationsClient CreateAttachmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAttachment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Attachment, OperationMetadata> PollOnceCreateAttachment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Attachment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAttachmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAttachment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> PollOnceCreateAttachmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Attachment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAttachmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Attachment, OperationMetadata> CreateAttachment(string parent, Attachment attachment, string attachmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAttachment(new CreateAttachmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AttachmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentId, nameof(attachmentId)),
+                Attachment = gax::GaxPreconditions.CheckNotNull(attachment, nameof(attachment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(string parent, Attachment attachment, string attachmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAttachmentAsync(new CreateAttachmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AttachmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentId, nameof(attachmentId)),
+                Attachment = gax::GaxPreconditions.CheckNotNull(attachment, nameof(attachment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(string parent, Attachment attachment, string attachmentId, st::CancellationToken cancellationToken) =>
+            CreateAttachmentAsync(parent, attachment, attachmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Attachment, OperationMetadata> CreateAttachment(RepositoryName parent, Attachment attachment, string attachmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAttachment(new CreateAttachmentRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AttachmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentId, nameof(attachmentId)),
+                Attachment = gax::GaxPreconditions.CheckNotNull(attachment, nameof(attachment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(RepositoryName parent, Attachment attachment, string attachmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAttachmentAsync(new CreateAttachmentRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AttachmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(attachmentId, nameof(attachmentId)),
+                Attachment = gax::GaxPreconditions.CheckNotNull(attachment, nameof(attachment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the attachment will be
+        /// created.
+        /// </param>
+        /// <param name="attachment">
+        /// Required. The attachment to be created.
+        /// </param>
+        /// <param name="attachmentId">
+        /// Required. The attachment id to use for this attachment.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(RepositoryName parent, Attachment attachment, string attachmentId, st::CancellationToken cancellationToken) =>
+            CreateAttachmentAsync(parent, attachment, attachmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAttachment(DeleteAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(DeleteAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(DeleteAttachmentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAttachmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAttachment</c>.</summary>
+        public virtual lro::OperationsClient DeleteAttachmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAttachment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAttachment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAttachmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAttachment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAttachmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAttachmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAttachment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAttachment(new DeleteAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAttachmentAsync(new DeleteAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAttachment(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAttachment(new DeleteAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAttachmentAsync(new DeleteAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(AttachmentName name, st::CancellationToken cancellationToken) =>
+            DeleteAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ArtifactRegistry client wrapper implementation, for convenient use.</summary>
@@ -4055,9 +6359,17 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         private readonly gaxgrpc::ApiCall<DeleteVersionRequest, lro::Operation> _callDeleteVersion;
 
+        private readonly gaxgrpc::ApiCall<BatchDeleteVersionsRequest, lro::Operation> _callBatchDeleteVersions;
+
+        private readonly gaxgrpc::ApiCall<UpdateVersionRequest, Version> _callUpdateVersion;
+
         private readonly gaxgrpc::ApiCall<ListFilesRequest, ListFilesResponse> _callListFiles;
 
         private readonly gaxgrpc::ApiCall<GetFileRequest, File> _callGetFile;
+
+        private readonly gaxgrpc::ApiCall<DeleteFileRequest, lro::Operation> _callDeleteFile;
+
+        private readonly gaxgrpc::ApiCall<UpdateFileRequest, File> _callUpdateFile;
 
         private readonly gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> _callListTags;
 
@@ -4068,6 +6380,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
         private readonly gaxgrpc::ApiCall<UpdateTagRequest, Tag> _callUpdateTag;
 
         private readonly gaxgrpc::ApiCall<DeleteTagRequest, wkt::Empty> _callDeleteTag;
+
+        private readonly gaxgrpc::ApiCall<CreateRuleRequest, Rule> _callCreateRule;
+
+        private readonly gaxgrpc::ApiCall<ListRulesRequest, ListRulesResponse> _callListRules;
+
+        private readonly gaxgrpc::ApiCall<GetRuleRequest, Rule> _callGetRule;
+
+        private readonly gaxgrpc::ApiCall<UpdateRuleRequest, Rule> _callUpdateRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteRuleRequest, wkt::Empty> _callDeleteRule;
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
@@ -4083,6 +6405,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         private readonly gaxgrpc::ApiCall<UpdateVPCSCConfigRequest, VPCSCConfig> _callUpdateVPCSCConfig;
 
+        private readonly gaxgrpc::ApiCall<UpdatePackageRequest, Package> _callUpdatePackage;
+
+        private readonly gaxgrpc::ApiCall<ListAttachmentsRequest, ListAttachmentsResponse> _callListAttachments;
+
+        private readonly gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> _callGetAttachment;
+
+        private readonly gaxgrpc::ApiCall<CreateAttachmentRequest, lro::Operation> _callCreateAttachment;
+
+        private readonly gaxgrpc::ApiCall<DeleteAttachmentRequest, lro::Operation> _callDeleteAttachment;
+
         /// <summary>
         /// Constructs a client wrapper for the ArtifactRegistry service, with the specified gRPC client and settings.
         /// </summary>
@@ -4093,13 +6425,21 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             GrpcClient = grpcClient;
             ArtifactRegistrySettings effectiveSettings = settings ?? ArtifactRegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportAptArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAptArtifactsOperationsSettings, logger);
             ImportYumArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportYumArtifactsOperationsSettings, logger);
             CreateRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRepositoryOperationsSettings, logger);
             DeleteRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryOperationsSettings, logger);
             DeletePackageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePackageOperationsSettings, logger);
             DeleteVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVersionOperationsSettings, logger);
+            BatchDeleteVersionsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteVersionsOperationsSettings, logger);
+            DeleteFileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFileOperationsSettings, logger);
+            CreateAttachmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAttachmentOperationsSettings, logger);
+            DeleteAttachmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAttachmentOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDockerImages = clientHelper.BuildApiCall<ListDockerImagesRequest, ListDockerImagesResponse>("ListDockerImages", grpcClient.ListDockerImagesAsync, grpcClient.ListDockerImages, effectiveSettings.ListDockerImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDockerImages);
@@ -4164,12 +6504,24 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callDeleteVersion = clientHelper.BuildApiCall<DeleteVersionRequest, lro::Operation>("DeleteVersion", grpcClient.DeleteVersionAsync, grpcClient.DeleteVersion, effectiveSettings.DeleteVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteVersion);
             Modify_DeleteVersionApiCall(ref _callDeleteVersion);
+            _callBatchDeleteVersions = clientHelper.BuildApiCall<BatchDeleteVersionsRequest, lro::Operation>("BatchDeleteVersions", grpcClient.BatchDeleteVersionsAsync, grpcClient.BatchDeleteVersions, effectiveSettings.BatchDeleteVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteVersions);
+            Modify_BatchDeleteVersionsApiCall(ref _callBatchDeleteVersions);
+            _callUpdateVersion = clientHelper.BuildApiCall<UpdateVersionRequest, Version>("UpdateVersion", grpcClient.UpdateVersionAsync, grpcClient.UpdateVersion, effectiveSettings.UpdateVersionSettings).WithGoogleRequestParam("version.name", request => request.Version?.Name);
+            Modify_ApiCall(ref _callUpdateVersion);
+            Modify_UpdateVersionApiCall(ref _callUpdateVersion);
             _callListFiles = clientHelper.BuildApiCall<ListFilesRequest, ListFilesResponse>("ListFiles", grpcClient.ListFilesAsync, grpcClient.ListFiles, effectiveSettings.ListFilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFiles);
             Modify_ListFilesApiCall(ref _callListFiles);
             _callGetFile = clientHelper.BuildApiCall<GetFileRequest, File>("GetFile", grpcClient.GetFileAsync, grpcClient.GetFile, effectiveSettings.GetFileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFile);
             Modify_GetFileApiCall(ref _callGetFile);
+            _callDeleteFile = clientHelper.BuildApiCall<DeleteFileRequest, lro::Operation>("DeleteFile", grpcClient.DeleteFileAsync, grpcClient.DeleteFile, effectiveSettings.DeleteFileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFile);
+            Modify_DeleteFileApiCall(ref _callDeleteFile);
+            _callUpdateFile = clientHelper.BuildApiCall<UpdateFileRequest, File>("UpdateFile", grpcClient.UpdateFileAsync, grpcClient.UpdateFile, effectiveSettings.UpdateFileSettings).WithGoogleRequestParam("file.name", request => request.File?.Name);
+            Modify_ApiCall(ref _callUpdateFile);
+            Modify_UpdateFileApiCall(ref _callUpdateFile);
             _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>("ListTags", grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTags);
             Modify_ListTagsApiCall(ref _callListTags);
@@ -4185,6 +6537,21 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callDeleteTag = clientHelper.BuildApiCall<DeleteTagRequest, wkt::Empty>("DeleteTag", grpcClient.DeleteTagAsync, grpcClient.DeleteTag, effectiveSettings.DeleteTagSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTag);
             Modify_DeleteTagApiCall(ref _callDeleteTag);
+            _callCreateRule = clientHelper.BuildApiCall<CreateRuleRequest, Rule>("CreateRule", grpcClient.CreateRuleAsync, grpcClient.CreateRule, effectiveSettings.CreateRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRule);
+            Modify_CreateRuleApiCall(ref _callCreateRule);
+            _callListRules = clientHelper.BuildApiCall<ListRulesRequest, ListRulesResponse>("ListRules", grpcClient.ListRulesAsync, grpcClient.ListRules, effectiveSettings.ListRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRules);
+            Modify_ListRulesApiCall(ref _callListRules);
+            _callGetRule = clientHelper.BuildApiCall<GetRuleRequest, Rule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRule);
+            Modify_GetRuleApiCall(ref _callGetRule);
+            _callUpdateRule = clientHelper.BuildApiCall<UpdateRuleRequest, Rule>("UpdateRule", grpcClient.UpdateRuleAsync, grpcClient.UpdateRule, effectiveSettings.UpdateRuleSettings).WithGoogleRequestParam("rule.name", request => request.Rule?.Name);
+            Modify_ApiCall(ref _callUpdateRule);
+            Modify_UpdateRuleApiCall(ref _callUpdateRule);
+            _callDeleteRule = clientHelper.BuildApiCall<DeleteRuleRequest, wkt::Empty>("DeleteRule", grpcClient.DeleteRuleAsync, grpcClient.DeleteRule, effectiveSettings.DeleteRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRule);
+            Modify_DeleteRuleApiCall(ref _callDeleteRule);
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
@@ -4206,6 +6573,21 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callUpdateVPCSCConfig = clientHelper.BuildApiCall<UpdateVPCSCConfigRequest, VPCSCConfig>("UpdateVPCSCConfig", grpcClient.UpdateVPCSCConfigAsync, grpcClient.UpdateVPCSCConfig, effectiveSettings.UpdateVPCSCConfigSettings).WithGoogleRequestParam("vpcsc_config.name", request => request.VpcscConfig?.Name);
             Modify_ApiCall(ref _callUpdateVPCSCConfig);
             Modify_UpdateVPCSCConfigApiCall(ref _callUpdateVPCSCConfig);
+            _callUpdatePackage = clientHelper.BuildApiCall<UpdatePackageRequest, Package>("UpdatePackage", grpcClient.UpdatePackageAsync, grpcClient.UpdatePackage, effectiveSettings.UpdatePackageSettings).WithGoogleRequestParam("package.name", request => request.Package?.Name);
+            Modify_ApiCall(ref _callUpdatePackage);
+            Modify_UpdatePackageApiCall(ref _callUpdatePackage);
+            _callListAttachments = clientHelper.BuildApiCall<ListAttachmentsRequest, ListAttachmentsResponse>("ListAttachments", grpcClient.ListAttachmentsAsync, grpcClient.ListAttachments, effectiveSettings.ListAttachmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAttachments);
+            Modify_ListAttachmentsApiCall(ref _callListAttachments);
+            _callGetAttachment = clientHelper.BuildApiCall<GetAttachmentRequest, Attachment>("GetAttachment", grpcClient.GetAttachmentAsync, grpcClient.GetAttachment, effectiveSettings.GetAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAttachment);
+            Modify_GetAttachmentApiCall(ref _callGetAttachment);
+            _callCreateAttachment = clientHelper.BuildApiCall<CreateAttachmentRequest, lro::Operation>("CreateAttachment", grpcClient.CreateAttachmentAsync, grpcClient.CreateAttachment, effectiveSettings.CreateAttachmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAttachment);
+            Modify_CreateAttachmentApiCall(ref _callCreateAttachment);
+            _callDeleteAttachment = clientHelper.BuildApiCall<DeleteAttachmentRequest, lro::Operation>("DeleteAttachment", grpcClient.DeleteAttachmentAsync, grpcClient.DeleteAttachment, effectiveSettings.DeleteAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAttachment);
+            Modify_DeleteAttachmentApiCall(ref _callDeleteAttachment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4253,9 +6635,17 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         partial void Modify_DeleteVersionApiCall(ref gaxgrpc::ApiCall<DeleteVersionRequest, lro::Operation> call);
 
+        partial void Modify_BatchDeleteVersionsApiCall(ref gaxgrpc::ApiCall<BatchDeleteVersionsRequest, lro::Operation> call);
+
+        partial void Modify_UpdateVersionApiCall(ref gaxgrpc::ApiCall<UpdateVersionRequest, Version> call);
+
         partial void Modify_ListFilesApiCall(ref gaxgrpc::ApiCall<ListFilesRequest, ListFilesResponse> call);
 
         partial void Modify_GetFileApiCall(ref gaxgrpc::ApiCall<GetFileRequest, File> call);
+
+        partial void Modify_DeleteFileApiCall(ref gaxgrpc::ApiCall<DeleteFileRequest, lro::Operation> call);
+
+        partial void Modify_UpdateFileApiCall(ref gaxgrpc::ApiCall<UpdateFileRequest, File> call);
 
         partial void Modify_ListTagsApiCall(ref gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> call);
 
@@ -4266,6 +6656,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_UpdateTagApiCall(ref gaxgrpc::ApiCall<UpdateTagRequest, Tag> call);
 
         partial void Modify_DeleteTagApiCall(ref gaxgrpc::ApiCall<DeleteTagRequest, wkt::Empty> call);
+
+        partial void Modify_CreateRuleApiCall(ref gaxgrpc::ApiCall<CreateRuleRequest, Rule> call);
+
+        partial void Modify_ListRulesApiCall(ref gaxgrpc::ApiCall<ListRulesRequest, ListRulesResponse> call);
+
+        partial void Modify_GetRuleApiCall(ref gaxgrpc::ApiCall<GetRuleRequest, Rule> call);
+
+        partial void Modify_UpdateRuleApiCall(ref gaxgrpc::ApiCall<UpdateRuleRequest, Rule> call);
+
+        partial void Modify_DeleteRuleApiCall(ref gaxgrpc::ApiCall<DeleteRuleRequest, wkt::Empty> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
 
@@ -4280,6 +6680,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_GetVPCSCConfigApiCall(ref gaxgrpc::ApiCall<GetVPCSCConfigRequest, VPCSCConfig> call);
 
         partial void Modify_UpdateVPCSCConfigApiCall(ref gaxgrpc::ApiCall<UpdateVPCSCConfigRequest, VPCSCConfig> call);
+
+        partial void Modify_UpdatePackageApiCall(ref gaxgrpc::ApiCall<UpdatePackageRequest, Package> call);
+
+        partial void Modify_ListAttachmentsApiCall(ref gaxgrpc::ApiCall<ListAttachmentsRequest, ListAttachmentsResponse> call);
+
+        partial void Modify_GetAttachmentApiCall(ref gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> call);
+
+        partial void Modify_CreateAttachmentApiCall(ref gaxgrpc::ApiCall<CreateAttachmentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAttachmentApiCall(ref gaxgrpc::ApiCall<DeleteAttachmentRequest, lro::Operation> call);
 
         partial void OnConstruction(ArtifactRegistry.ArtifactRegistryClient grpcClient, ArtifactRegistrySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4331,9 +6741,17 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         partial void Modify_DeleteVersionRequest(ref DeleteVersionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchDeleteVersionsRequest(ref BatchDeleteVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateVersionRequest(ref UpdateVersionRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListFilesRequest(ref ListFilesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetFileRequest(ref GetFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFileRequest(ref DeleteFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFileRequest(ref UpdateFileRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTagsRequest(ref ListTagsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4344,6 +6762,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_UpdateTagRequest(ref UpdateTagRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTagRequest(ref DeleteTagRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRuleRequest(ref CreateRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRulesRequest(ref ListRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRuleRequest(ref GetRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRuleRequest(ref UpdateRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRuleRequest(ref DeleteRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4358,6 +6786,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_GetVPCSCConfigRequest(ref GetVPCSCConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateVPCSCConfigRequest(ref UpdateVPCSCConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePackageRequest(ref UpdatePackageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAttachmentsRequest(ref ListAttachmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAttachmentRequest(ref GetAttachmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAttachmentRequest(ref CreateAttachmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAttachmentRequest(ref DeleteAttachmentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists docker images.
@@ -4903,6 +7341,59 @@ namespace Google.Cloud.ArtifactRegistry.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteVersion.Async(request, callSettings).ConfigureAwait(false), DeleteVersionOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>BatchDeleteVersions</c>.</summary>
+        public override lro::OperationsClient BatchDeleteVersionsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteVersionsRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>(_callBatchDeleteVersions.Sync(request, callSettings), BatchDeleteVersionsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteVersionsRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>(await _callBatchDeleteVersions.Async(request, callSettings).ConfigureAwait(false), BatchDeleteVersionsOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Version UpdateVersion(UpdateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateVersionRequest(ref request, ref callSettings);
+            return _callUpdateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Version> UpdateVersionAsync(UpdateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateVersionRequest(ref request, ref callSettings);
+            return _callUpdateVersion.Async(request, callSettings);
+        }
+
         /// <summary>
         /// Lists files.
         /// </summary>
@@ -4949,6 +7440,61 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Modify_GetFileRequest(ref request, ref callSettings);
             return _callGetFile.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteFile</c>.</summary>
+        public override lro::OperationsClient DeleteFileOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteFile(DeleteFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFileRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteFile.Sync(request, callSettings), DeleteFileOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a file and all of its content. It is only allowed on generic
+        /// repositories. The returned operation will complete once the file has been
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFileAsync(DeleteFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFileRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteFile.Async(request, callSettings).ConfigureAwait(false), DeleteFileOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override File UpdateFile(UpdateFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFileRequest(ref request, ref callSettings);
+            return _callUpdateFile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<File> UpdateFileAsync(UpdateFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFileRequest(ref request, ref callSettings);
+            return _callUpdateFile.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5069,6 +7615,126 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Modify_DeleteTagRequest(ref request, ref callSettings);
             return _callDeleteTag.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Rule CreateRule(CreateRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRuleRequest(ref request, ref callSettings);
+            return _callCreateRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Rule> CreateRuleAsync(CreateRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRuleRequest(ref request, ref callSettings);
+            return _callCreateRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Rule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRulesResponse, Rule> ListRules(ListRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRulesRequest, ListRulesResponse, Rule>(_callListRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Rule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRulesResponse, Rule> ListRulesAsync(ListRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRulesRequest, ListRulesResponse, Rule>(_callListRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Rule GetRule(GetRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRuleRequest(ref request, ref callSettings);
+            return _callGetRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Rule> GetRuleAsync(GetRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRuleRequest(ref request, ref callSettings);
+            return _callGetRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Rule UpdateRule(UpdateRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRuleRequest(ref request, ref callSettings);
+            return _callUpdateRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Rule> UpdateRuleAsync(UpdateRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRuleRequest(ref request, ref callSettings);
+            return _callUpdateRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteRule(DeleteRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRuleRequest(ref request, ref callSettings);
+            _callDeleteRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteRuleAsync(DeleteRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRuleRequest(ref request, ref callSettings);
+            return _callDeleteRule.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5238,6 +7904,138 @@ namespace Google.Cloud.ArtifactRegistry.V1
             Modify_UpdateVPCSCConfigRequest(ref request, ref callSettings);
             return _callUpdateVPCSCConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Package UpdatePackage(UpdatePackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePackageRequest(ref request, ref callSettings);
+            return _callUpdatePackage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Package> UpdatePackageAsync(UpdatePackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePackageRequest(ref request, ref callSettings);
+            return _callUpdatePackage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Attachment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAttachmentsResponse, Attachment> ListAttachments(ListAttachmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAttachmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAttachmentsRequest, ListAttachmentsResponse, Attachment>(_callListAttachments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists attachments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Attachment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAttachmentsResponse, Attachment> ListAttachmentsAsync(ListAttachmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAttachmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAttachmentsRequest, ListAttachmentsResponse, Attachment>(_callListAttachments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Attachment GetAttachment(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttachmentRequest(ref request, ref callSettings);
+            return _callGetAttachment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttachmentRequest(ref request, ref callSettings);
+            return _callGetAttachment.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAttachment</c>.</summary>
+        public override lro::OperationsClient CreateAttachmentOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Attachment, OperationMetadata> CreateAttachment(CreateAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAttachmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Attachment, OperationMetadata>(_callCreateAttachment.Sync(request, callSettings), CreateAttachmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an attachment. The returned Operation will finish once the
+        /// attachment has been created. Its response will be the created attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Attachment, OperationMetadata>> CreateAttachmentAsync(CreateAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAttachmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Attachment, OperationMetadata>(await _callCreateAttachment.Async(request, callSettings).ConfigureAwait(false), CreateAttachmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAttachment</c>.</summary>
+        public override lro::OperationsClient DeleteAttachmentOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAttachment(DeleteAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAttachmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAttachment.Sync(request, callSettings), DeleteAttachmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an attachment. The returned Operation will
+        /// finish once the attachments has been deleted. It will not have any
+        /// Operation metadata and will return a `google.protobuf.Empty` response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(DeleteAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAttachmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAttachment.Async(request, callSettings).ConfigureAwait(false), DeleteAttachmentOperationsClient);
+        }
     }
 
     public partial class ListDockerImagesRequest : gaxgrpc::IPageRequest
@@ -5273,6 +8071,14 @@ namespace Google.Cloud.ArtifactRegistry.V1
     }
 
     public partial class ListTagsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAttachmentsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5344,6 +8150,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Tag> GetEnumerator() => Tags.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRulesResponse : gaxgrpc::IPageResponse<Rule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Rule> GetEnumerator() => Rules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAttachmentsResponse : gaxgrpc::IPageResponse<Attachment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Attachment> GetEnumerator() => Attachments.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

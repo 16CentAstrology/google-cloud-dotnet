@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,21 +17,22 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Channel.V1
 {
     /// <summary>Settings for <see cref="CloudChannelReportsServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="CloudChannelReportsServiceSettings"/>.</summary>
@@ -123,6 +124,7 @@ namespace Google.Cloud.Channel.V1
     /// Builder class for <see cref="CloudChannelReportsServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceClientBuilder : gaxgrpc::ClientBuilderBase<CloudChannelReportsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -157,14 +159,14 @@ namespace Google.Cloud.Channel.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudChannelReportsServiceClient.Create(callInvoker, Settings, Logger);
+            return CloudChannelReportsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CloudChannelReportsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudChannelReportsServiceClient.Create(callInvoker, Settings, Logger);
+            return CloudChannelReportsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -175,9 +177,14 @@ namespace Google.Cloud.Channel.V1
     /// <remarks>
     /// CloudChannelReportsService lets Google Cloud resellers and
     /// distributors retrieve and combine a variety of data in Cloud Channel for
-    /// multiple products (Google Cloud Platform (GCP), Google Voice, and
-    /// Google Workspace.)
+    /// multiple products (Google Cloud, Google Voice, and Google Workspace.)
+    /// 
+    /// Deprecated: This service is being deprecated. Please use [Export Channel
+    /// Services data to
+    /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+    /// instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class CloudChannelReportsServiceClient
     {
         /// <summary>
@@ -287,11 +294,18 @@ namespace Google.Cloud.Channel.V1
         /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
         /// with the
         /// [RunReportJobResponse.report_job][google.cloud.channel.v1.RunReportJobResponse.report_job].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<RunReportJobResponse, OperationMetadata> RunReportJob(RunReportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -320,11 +334,18 @@ namespace Google.Cloud.Channel.V1
         /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
         /// with the
         /// [RunReportJobResponse.report_job][google.cloud.channel.v1.RunReportJobResponse.report_job].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<RunReportJobResponse, OperationMetadata>> RunReportJobAsync(RunReportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -353,11 +374,18 @@ namespace Google.Cloud.Channel.V1
         /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
         /// with the
         /// [RunReportJobResponse.report_job][google.cloud.channel.v1.RunReportJobResponse.report_job].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<RunReportJobResponse, OperationMetadata>> RunReportJobAsync(RunReportJobRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             RunReportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>RunReportJob</c>.</summary>
@@ -371,8 +399,11 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<RunReportJobResponse, OperationMetadata> PollOnceRunReportJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<RunReportJobResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunReportJobOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -383,32 +414,53 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<RunReportJobResponse, OperationMetadata>> PollOnceRunReportJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<RunReportJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunReportJobOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(FetchReportResultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(FetchReportResultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="reportJob">
         /// Required. The report job created by
@@ -426,17 +478,35 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(string reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchReportResults(new FetchReportResultsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(string reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            FetchReportResultsRequest request = new FetchReportResultsRequest
+#pragma warning restore CS0612
             {
                 ReportJob = gax::GaxPreconditions.CheckNotNullOrEmpty(reportJob, nameof(reportJob)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchReportResults(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="reportJob">
         /// Required. The report job created by
@@ -454,17 +524,35 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(string reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchReportResultsAsync(new FetchReportResultsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(string reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            FetchReportResultsRequest request = new FetchReportResultsRequest
+#pragma warning restore CS0612
             {
                 ReportJob = gax::GaxPreconditions.CheckNotNullOrEmpty(reportJob, nameof(reportJob)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchReportResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="reportJob">
         /// Required. The report job created by
@@ -482,17 +570,35 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(ReportJobName reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchReportResults(new FetchReportResultsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(ReportJobName reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            FetchReportResultsRequest request = new FetchReportResultsRequest
+#pragma warning restore CS0612
             {
                 ReportJobAsReportJobName = gax::GaxPreconditions.CheckNotNull(reportJob, nameof(reportJob)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchReportResults(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="reportJob">
         /// Required. The report job created by
@@ -510,37 +616,69 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(ReportJobName reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            FetchReportResultsAsync(new FetchReportResultsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(ReportJobName reportJob, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            FetchReportResultsRequest request = new FetchReportResultsRequest
+#pragma warning restore CS0612
             {
                 ReportJobAsReportJobName = gax::GaxPreconditions.CheckNotNull(reportJob, nameof(reportJob)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchReportResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Report"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(ListReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Report"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(ListReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the partner account to list available
@@ -556,17 +694,35 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReports(new ListReportsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedEnumerable<ListReportsResponse, Report> ListReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            ListReportsRequest request = new ListReportsRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the partner account to list available
@@ -582,29 +738,50 @@ namespace Google.Cloud.Channel.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Report"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReportsAsync(new ListReportsRequest
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
+        public virtual gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
+        {
+#pragma warning disable CS0612
+            ListReportsRequest request = new ListReportsRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportsAsync(request, callSettings);
+        }
     }
 
     /// <summary>CloudChannelReportsService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// CloudChannelReportsService lets Google Cloud resellers and
     /// distributors retrieve and combine a variety of data in Cloud Channel for
-    /// multiple products (Google Cloud Platform (GCP), Google Voice, and
-    /// Google Workspace.)
+    /// multiple products (Google Cloud, Google Voice, and Google Workspace.)
+    /// 
+    /// Deprecated: This service is being deprecated. Please use [Export Channel
+    /// Services data to
+    /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+    /// instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceClientImpl : CloudChannelReportsServiceClient
     {
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<RunReportJobRequest, lro::Operation> _callRunReportJob;
 
         private readonly gaxgrpc::ApiCall<FetchReportResultsRequest, FetchReportResultsResponse> _callFetchReportResults;
 
         private readonly gaxgrpc::ApiCall<ListReportsRequest, ListReportsResponse> _callListReports;
+#pragma warning restore CS0612
 
         /// <summary>
         /// Constructs a client wrapper for the CloudChannelReportsService service, with the specified gRPC client and
@@ -619,15 +796,25 @@ namespace Google.Cloud.Channel.V1
         {
             GrpcClient = grpcClient;
             CloudChannelReportsServiceSettings effectiveSettings = settings ?? CloudChannelReportsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunReportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunReportJobOperationsSettings, logger);
+#pragma warning disable CS0612
             _callRunReportJob = clientHelper.BuildApiCall<RunReportJobRequest, lro::Operation>("RunReportJob", grpcClient.RunReportJobAsync, grpcClient.RunReportJob, effectiveSettings.RunReportJobSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRunReportJob);
             Modify_RunReportJobApiCall(ref _callRunReportJob);
+#pragma warning disable CS0612
             _callFetchReportResults = clientHelper.BuildApiCall<FetchReportResultsRequest, FetchReportResultsResponse>("FetchReportResults", grpcClient.FetchReportResultsAsync, grpcClient.FetchReportResults, effectiveSettings.FetchReportResultsSettings).WithGoogleRequestParam("report_job", request => request.ReportJob);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callFetchReportResults);
             Modify_FetchReportResultsApiCall(ref _callFetchReportResults);
+#pragma warning disable CS0612
             _callListReports = clientHelper.BuildApiCall<ListReportsRequest, ListReportsResponse>("ListReports", grpcClient.ListReportsAsync, grpcClient.ListReports, effectiveSettings.ListReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListReports);
             Modify_ListReportsApiCall(ref _callListReports);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -635,22 +822,26 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+#pragma warning disable CS0612
         partial void Modify_RunReportJobApiCall(ref gaxgrpc::ApiCall<RunReportJobRequest, lro::Operation> call);
 
         partial void Modify_FetchReportResultsApiCall(ref gaxgrpc::ApiCall<FetchReportResultsRequest, FetchReportResultsResponse> call);
 
         partial void Modify_ListReportsApiCall(ref gaxgrpc::ApiCall<ListReportsRequest, ListReportsResponse> call);
+#pragma warning restore CS0612
 
         partial void OnConstruction(CloudChannelReportsService.CloudChannelReportsServiceClient grpcClient, CloudChannelReportsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudChannelReportsService client</summary>
         public override CloudChannelReportsService.CloudChannelReportsServiceClient GrpcClient { get; }
 
+#pragma warning disable CS0612
         partial void Modify_RunReportJobRequest(ref RunReportJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchReportResultsRequest(ref FetchReportResultsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReportsRequest(ref ListReportsRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         /// <summary>The long-running operations client for <c>RunReportJob</c>.</summary>
         public override lro::OperationsClient RunReportJobOperationsClient { get; }
@@ -681,14 +872,23 @@ namespace Google.Cloud.Channel.V1
         /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
         /// with the
         /// [RunReportJobResponse.report_job][google.cloud.channel.v1.RunReportJobResponse.report_job].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<RunReportJobResponse, OperationMetadata> RunReportJob(RunReportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_RunReportJobRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<RunReportJobResponse, OperationMetadata>(_callRunReportJob.Sync(request, callSettings), RunReportJobOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -717,66 +917,111 @@ namespace Google.Cloud.Channel.V1
         /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults]
         /// with the
         /// [RunReportJobResponse.report_job][google.cloud.channel.v1.RunReportJobResponse.report_job].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<RunReportJobResponse, OperationMetadata>> RunReportJobAsync(RunReportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_RunReportJobRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<RunReportJobResponse, OperationMetadata>(await _callRunReportJob.Async(request, callSettings).ConfigureAwait(false), RunReportJobOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<FetchReportResultsResponse, Row> FetchReportResults(FetchReportResultsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_FetchReportResultsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<FetchReportResultsRequest, FetchReportResultsResponse, Row>(_callFetchReportResults, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
         /// Retrieves data generated by
         /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<FetchReportResultsResponse, Row> FetchReportResultsAsync(FetchReportResultsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_FetchReportResultsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchReportResultsRequest, FetchReportResultsResponse, Row>(_callFetchReportResults, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Report"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListReportsResponse, Report> ListReports(ListReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListReportsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListReportsRequest, ListReportsResponse, Report>(_callListReports, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
         /// Lists the reports that RunReportJob can run. These reports include an ID,
         /// a description, and the list of columns that will be in the result.
+        /// 
+        /// Deprecated: Please use [Export Channel Services data to
+        /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Report"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListReportsResponse, Report> ListReportsAsync(ListReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListReportsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReportsRequest, ListReportsResponse, Report>(_callListReports, request, callSettings);
+#pragma warning restore CS0612
         }
     }
 
@@ -788,18 +1033,26 @@ namespace Google.Cloud.Channel.V1
     {
     }
 
+#pragma warning disable CS0612
     public partial class FetchReportResultsResponse : gaxgrpc::IPageResponse<Row>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<Row> GetEnumerator() => Rows.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+#pragma warning disable CS0612
     public partial class ListReportsResponse : gaxgrpc::IPageResponse<Report>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<Report> GetEnumerator() => Reports.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

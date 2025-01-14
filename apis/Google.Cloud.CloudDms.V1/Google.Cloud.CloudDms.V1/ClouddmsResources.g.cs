@@ -39,167 +39,307 @@ namespace Google.Cloud.CloudDms.V1 {
             "CUID4EECEhEKBHBvcnQYAiABKAVCA+BBAhIVCgh1c2VybmFtZRgDIAEoCUID",
             "4EECEhgKCHBhc3N3b3JkGAQgASgJQgbgQQTgQQISGQoMcGFzc3dvcmRfc2V0",
             "GAUgASgIQgPgQQMSMAoDc3NsGAYgASgLMiMuZ29vZ2xlLmNsb3VkLmNsb3Vk",
-            "ZG1zLnYxLlNzbENvbmZpZxIUCgxjbG91ZF9zcWxfaWQYByABKAki1wEKG1Bv",
+            "ZG1zLnYxLlNzbENvbmZpZxIUCgxjbG91ZF9zcWxfaWQYByABKAki+AMKG1Bv",
             "c3RncmVTcWxDb25uZWN0aW9uUHJvZmlsZRIRCgRob3N0GAEgASgJQgPgQQIS",
             "EQoEcG9ydBgCIAEoBUID4EECEhUKCHVzZXJuYW1lGAMgASgJQgPgQQISGAoI",
             "cGFzc3dvcmQYBCABKAlCBuBBBOBBAhIZCgxwYXNzd29yZF9zZXQYBSABKAhC",
             "A+BBAxIwCgNzc2wYBiABKAsyIy5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEu",
-            "U3NsQ29uZmlnEhQKDGNsb3VkX3NxbF9pZBgHIAEoCSKqAQoZQ2xvdWRTcWxD",
-            "b25uZWN0aW9uUHJvZmlsZRIZCgxjbG91ZF9zcWxfaWQYASABKAlCA+BBAxJB",
-            "CghzZXR0aW5ncxgCIAEoCzIqLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5D",
-            "bG91ZFNxbFNldHRpbmdzQgPgQQUSFwoKcHJpdmF0ZV9pcBgDIAEoCUID4EED",
-            "EhYKCXB1YmxpY19pcBgEIAEoCUID4EEDIpsBCgtTcWxBY2xFbnRyeRINCgV2",
-            "YWx1ZRgBIAEoCRIxCgtleHBpcmVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBIABItCgN0dGwYCyABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb25CA+BBBEgAEg0KBWxhYmVsGAMgASgJQgwKCmV4cGlyYXRp",
-            "b24izAEKC1NxbElwQ29uZmlnEi8KC2VuYWJsZV9pcHY0GAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkJvb2xWYWx1ZRIXCg9wcml2YXRlX25ldHdvcmsYAiAB",
-            "KAkSLwoLcmVxdWlyZV9zc2wYAyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9v",
-            "bFZhbHVlEkIKE2F1dGhvcml6ZWRfbmV0d29ya3MYBCADKAsyJS5nb29nbGUu",
-            "Y2xvdWQuY2xvdWRkbXMudjEuU3FsQWNsRW50cnki+gkKEENsb3VkU3FsU2V0",
-            "dGluZ3MSVwoQZGF0YWJhc2VfdmVyc2lvbhgBIAEoDjI9Lmdvb2dsZS5jbG91",
-            "ZC5jbG91ZGRtcy52MS5DbG91ZFNxbFNldHRpbmdzLlNxbERhdGFiYXNlVmVy",
-            "c2lvbhJPCgt1c2VyX2xhYmVscxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5jbG91",
-            "ZGRtcy52MS5DbG91ZFNxbFNldHRpbmdzLlVzZXJMYWJlbHNFbnRyeRIMCgR0",
-            "aWVyGAMgASgJEj4KGXN0b3JhZ2VfYXV0b19yZXNpemVfbGltaXQYBCABKAsy",
-            "Gy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZRJZChFhY3RpdmF0aW9uX3Bv",
-            "bGljeRgFIAEoDjI+Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5DbG91ZFNx",
-            "bFNldHRpbmdzLlNxbEFjdGl2YXRpb25Qb2xpY3kSOAoJaXBfY29uZmlnGAYg",
-            "ASgLMiUuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLlNxbElwQ29uZmlnEjkK",
-            "FWF1dG9fc3RvcmFnZV9pbmNyZWFzZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5Cb29sVmFsdWUSVQoOZGF0YWJhc2VfZmxhZ3MYCCADKAsyPS5nb29nbGUu",
-            "Y2xvdWQuY2xvdWRkbXMudjEuQ2xvdWRTcWxTZXR0aW5ncy5EYXRhYmFzZUZs",
-            "YWdzRW50cnkSUgoOZGF0YV9kaXNrX3R5cGUYCSABKA4yOi5nb29nbGUuY2xv",
-            "dWQuY2xvdWRkbXMudjEuQ2xvdWRTcWxTZXR0aW5ncy5TcWxEYXRhRGlza1R5",
-            "cGUSNgoRZGF0YV9kaXNrX3NpemVfZ2IYCiABKAsyGy5nb29nbGUucHJvdG9i",
-            "dWYuSW50NjRWYWx1ZRIMCgR6b25lGAsgASgJEhEKCXNvdXJjZV9pZBgMIAEo",
-            "CRIaCg1yb290X3Bhc3N3b3JkGA0gASgJQgPgQQQSHgoRcm9vdF9wYXNzd29y",
-            "ZF9zZXQYDiABKAhCA+BBAxIRCgljb2xsYXRpb24YDyABKAkaMQoPVXNlckxh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNAoS",
-            "RGF0YWJhc2VGbGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEiUwoTU3FsQWN0aXZhdGlvblBvbGljeRIlCiFTUUxfQUNUSVZBVElP",
-            "Tl9QT0xJQ1lfVU5TUEVDSUZJRUQQABIKCgZBTFdBWVMQARIJCgVORVZFUhAC",
-            "Ik0KD1NxbERhdGFEaXNrVHlwZRIiCh5TUUxfREFUQV9ESVNLX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIKCgZQRF9TU0QQARIKCgZQRF9IREQQAiK9AQoSU3FsRGF0",
-            "YWJhc2VWZXJzaW9uEiQKIFNRTF9EQVRBQkFTRV9WRVJTSU9OX1VOU1BFQ0lG",
-            "SUVEEAASDQoJTVlTUUxfNV82EAESDQoJTVlTUUxfNV83EAISEAoMUE9TVEdS",
-            "RVNfOV82EAMSDwoLUE9TVEdSRVNfMTEQBBIPCgtQT1NUR1JFU18xMBAFEg0K",
-            "CU1ZU1FMXzhfMBAGEg8KC1BPU1RHUkVTXzEyEAcSDwoLUE9TVEdSRVNfMTMQ",
-            "CCIWChRTdGF0aWNJcENvbm5lY3Rpdml0eSJbChZSZXZlcnNlU3NoQ29ubmVj",
-            "dGl2aXR5EhIKBXZtX2lwGAEgASgJQgPgQQISFAoHdm1fcG9ydBgCIAEoBUID",
-            "4EECEgoKAnZtGAMgASgJEgsKA3ZwYxgEIAEoCSIlChZWcGNQZWVyaW5nQ29u",
-            "bmVjdGl2aXR5EgsKA3ZwYxgBIAEoCSKGAQoMRGF0YWJhc2VUeXBlEjwKCHBy",
-            "b3ZpZGVyGAEgASgOMiouZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLkRhdGFi",
-            "YXNlUHJvdmlkZXISOAoGZW5naW5lGAIgASgOMiguZ29vZ2xlLmNsb3VkLmNs",
-            "b3VkZG1zLnYxLkRhdGFiYXNlRW5naW5lIuwMCgxNaWdyYXRpb25Kb2ISDAoE",
-            "bmFtZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJCCgZsYWJlbHMYBCADKAsy",
-            "Mi5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuTWlncmF0aW9uSm9iLkxhYmVs",
-            "c0VudHJ5EhQKDGRpc3BsYXlfbmFtZRgFIAEoCRI7CgVzdGF0ZRgGIAEoDjIs",
-            "Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5NaWdyYXRpb25Kb2IuU3RhdGUS",
-            "QAoFcGhhc2UYByABKA4yLC5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuTWln",
-            "cmF0aW9uSm9iLlBoYXNlQgPgQQMSPgoEdHlwZRgIIAEoDjIrLmdvb2dsZS5j",
-            "bG91ZC5jbG91ZGRtcy52MS5NaWdyYXRpb25Kb2IuVHlwZUID4EECEhEKCWR1",
-            "bXBfcGF0aBgJIAEoCRITCgZzb3VyY2UYCiABKAlCA+BBAhIYCgtkZXN0aW5h",
-            "dGlvbhgLIAEoCUID4EECElQKGHJldmVyc2Vfc3NoX2Nvbm5lY3Rpdml0eRhl",
-            "IAEoCzIwLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5SZXZlcnNlU3NoQ29u",
-            "bmVjdGl2aXR5SAASVAoYdnBjX3BlZXJpbmdfY29ubmVjdGl2aXR5GGYgASgL",
-            "MjAuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLlZwY1BlZXJpbmdDb25uZWN0",
-            "aXZpdHlIABJQChZzdGF0aWNfaXBfY29ubmVjdGl2aXR5GGcgASgLMi4uZ29v",
-            "Z2xlLmNsb3VkLmNsb3VkZG1zLnYxLlN0YXRpY0lwQ29ubmVjdGl2aXR5SAAS",
-            "MAoIZHVyYXRpb24YDCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25C",
-            "A+BBAxImCgVlcnJvchgNIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMS",
-            "PwoPc291cmNlX2RhdGFiYXNlGA4gASgLMiYuZ29vZ2xlLmNsb3VkLmNsb3Vk",
-            "ZG1zLnYxLkRhdGFiYXNlVHlwZRJEChRkZXN0aW5hdGlvbl9kYXRhYmFzZRgP",
-            "IAEoCzImLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5EYXRhYmFzZVR5cGUS",
-            "MQoIZW5kX3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASLxAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIPCgtN",
-            "QUlOVEVOQU5DRRABEgkKBURSQUZUEAISDAoIQ1JFQVRJTkcQAxIPCgtOT1Rf",
-            "U1RBUlRFRBAEEgsKB1JVTk5JTkcQBRIKCgZGQUlMRUQQBhINCglDT01QTEVU",
-            "RUQQBxIMCghERUxFVElORxAIEgwKCFNUT1BQSU5HEAkSCwoHU1RPUFBFRBAK",
-            "EgsKB0RFTEVURUQQCxIMCghVUERBVElORxAMEgwKCFNUQVJUSU5HEA0SDgoK",
-            "UkVTVEFSVElORxAOEgwKCFJFU1VNSU5HEA8ijgEKBVBoYXNlEhUKEVBIQVNF",
-            "X1VOU1BFQ0lGSUVEEAASDQoJRlVMTF9EVU1QEAESBwoDQ0RDEAISFwoTUFJP",
-            "TU9URV9JTl9QUk9HUkVTUxADEiUKIVdBSVRJTkdfRk9SX1NPVVJDRV9XUklU",
-            "RVNfVE9fU1RPUBAEEhYKElBSRVBBUklOR19USEVfRFVNUBAFIjoKBFR5cGUS",
-            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEgwKCE9ORV9USU1FEAESDgoKQ09OVElO",
-            "VU9VUxACOnXqQXIKKWRhdGFtaWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vTWln",
-            "cmF0aW9uSm9iEkVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vbWlncmF0aW9uSm9icy97bWlncmF0aW9uX2pvYn1CDgoMY29ubmVj",
-            "dGl2aXR5IrMHChFDb25uZWN0aW9uUHJvZmlsZRIMCgRuYW1lGAEgASgJEjQK",
-            "C2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEkcKBmxhYmVscxgEIAMoCzI3Lmdvb2dsZS5jbG91",
-            "ZC5jbG91ZGRtcy52MS5Db25uZWN0aW9uUHJvZmlsZS5MYWJlbHNFbnRyeRJA",
-            "CgVzdGF0ZRgFIAEoDjIxLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5Db25u",
-            "ZWN0aW9uUHJvZmlsZS5TdGF0ZRIUCgxkaXNwbGF5X25hbWUYBiABKAkSQQoF",
-            "bXlzcWwYZCABKAsyMC5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuTXlTcWxD",
-            "b25uZWN0aW9uUHJvZmlsZUgAEksKCnBvc3RncmVzcWwYZSABKAsyNS5nb29n",
-            "bGUuY2xvdWQuY2xvdWRkbXMudjEuUG9zdGdyZVNxbENvbm5lY3Rpb25Qcm9m",
-            "aWxlSAASRwoIY2xvdWRzcWwYZiABKAsyMy5nb29nbGUuY2xvdWQuY2xvdWRk",
-            "bXMudjEuQ2xvdWRTcWxDb25uZWN0aW9uUHJvZmlsZUgAEiYKBWVycm9yGAcg",
-            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxI8Cghwcm92aWRlchgIIAEo",
-            "DjIqLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5EYXRhYmFzZVByb3ZpZGVy",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEidwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVEUkFGVBAB",
-            "EgwKCENSRUFUSU5HEAISCQoFUkVBRFkQAxIMCghVUERBVElORxAEEgwKCERF",
-            "TEVUSU5HEAUSCwoHREVMRVRFRBAGEgoKBkZBSUxFRBAHOoUB6kGBAQouZGF0",
-            "YW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uUHJvZmlsZRJP",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5l",
-            "Y3Rpb25Qcm9maWxlcy97Y29ubmVjdGlvbl9wcm9maWxlfUIUChJjb25uZWN0",
-            "aW9uX3Byb2ZpbGUi0AYKHU1pZ3JhdGlvbkpvYlZlcmlmaWNhdGlvbkVycm9y",
-            "EloKCmVycm9yX2NvZGUYASABKA4yQS5nb29nbGUuY2xvdWQuY2xvdWRkbXMu",
-            "djEuTWlncmF0aW9uSm9iVmVyaWZpY2F0aW9uRXJyb3IuRXJyb3JDb2RlQgPg",
-            "QQMSGgoNZXJyb3JfbWVzc2FnZRgCIAEoCUID4EEDEiEKFGVycm9yX2RldGFp",
-            "bF9tZXNzYWdlGAMgASgJQgPgQQMikwUKCUVycm9yQ29kZRIaChZFUlJPUl9D",
-            "T0RFX1VOU1BFQ0lGSUVEEAASFgoSQ09OTkVDVElPTl9GQUlMVVJFEAESGgoW",
-            "QVVUSEVOVElDQVRJT05fRkFJTFVSRRACEiUKIUlOVkFMSURfQ09OTkVDVElP",
-            "Tl9QUk9GSUxFX0NPTkZJRxADEhsKF1ZFUlNJT05fSU5DT01QQVRJQklMSVRZ",
-            "EAQSLAooQ09OTkVDVElPTl9QUk9GSUxFX1RZUEVTX0lOQ09NUEFUSUJJTElU",
-            "WRAFEhoKFk5PX1BHTE9HSUNBTF9JTlNUQUxMRUQQBxIhCh1QR0xPR0lDQUxf",
-            "Tk9ERV9BTFJFQURZX0VYSVNUUxAIEhUKEUlOVkFMSURfV0FMX0xFVkVMEAkS",
-            "IgoeSU5WQUxJRF9TSEFSRURfUFJFTE9BRF9MSUJSQVJZEAoSJgoiSU5TVUZG",
-            "SUNJRU5UX01BWF9SRVBMSUNBVElPTl9TTE9UUxALEiAKHElOU1VGRklDSUVO",
-            "VF9NQVhfV0FMX1NFTkRFUlMQDBIlCiFJTlNVRkZJQ0lFTlRfTUFYX1dPUktF",
-            "Ul9QUk9DRVNTRVMQDRIaChZVTlNVUFBPUlRFRF9FWFRFTlNJT05TEA4SHgoa",
-            "VU5TVVBQT1JURURfTUlHUkFUSU9OX1RZUEUQDxIjCh9JTlZBTElEX1JEU19M",
-            "T0dJQ0FMX1JFUExJQ0FUSU9OEBASGQoVVU5TVVBQT1JURURfR1RJRF9NT0RF",
-            "EBESIAocVU5TVVBQT1JURURfVEFCTEVfREVGSU5JVElPThASEhcKE1VOU1VQ",
-            "UE9SVEVEX0RFRklORVIQExIiCh5DQU5UX1JFU1RBUlRfUlVOTklOR19NSUdS",
-            "QVRJT04QFSpMCg5EYXRhYmFzZUVuZ2luZRIfChtEQVRBQkFTRV9FTkdJTkVf",
-            "VU5TUEVDSUZJRUQQABIJCgVNWVNRTBABEg4KClBPU1RHUkVTUUwQAipMChBE",
-            "YXRhYmFzZVByb3ZpZGVyEiEKHURBVEFCQVNFX1BST1ZJREVSX1VOU1BFQ0lG",
-            "SUVEEAASDAoIQ0xPVURTUUwQARIHCgNSRFMQAkLGAQocY29tLmdvb2dsZS5j",
-            "bG91ZC5jbG91ZGRtcy52MUIWQ2xvdWRkbXNSZXNvdXJjZXNQcm90b1ABWjhj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkZG1zL2FwaXYxL2Nsb3VkZG1zcGI7",
-            "Y2xvdWRkbXNwYqoCGEdvb2dsZS5DbG91ZC5DbG91ZERtcy5WMcoCGEdvb2ds",
-            "ZVxDbG91ZFxDbG91ZERtc1xWMeoCG0dvb2dsZTo6Q2xvdWQ6OkNsb3VkRE1T",
-            "OjpWMWIGcHJvdG8z"));
+            "U3NsQ29uZmlnEhQKDGNsb3VkX3NxbF9pZBgHIAEoCRJQChRuZXR3b3JrX2Fy",
+            "Y2hpdGVjdHVyZRgIIAEoDjItLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5O",
+            "ZXR3b3JrQXJjaGl0ZWN0dXJlQgPgQQMSUAoWc3RhdGljX2lwX2Nvbm5lY3Rp",
+            "dml0eRhkIAEoCzIuLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5TdGF0aWNJ",
+            "cENvbm5lY3Rpdml0eUgAEmsKJHByaXZhdGVfc2VydmljZV9jb25uZWN0X2Nv",
+            "bm5lY3Rpdml0eRhlIAEoCzI7Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5Q",
+            "cml2YXRlU2VydmljZUNvbm5lY3RDb25uZWN0aXZpdHlIAEIOCgxjb25uZWN0",
+            "aXZpdHki+AMKF09yYWNsZUNvbm5lY3Rpb25Qcm9maWxlEhEKBGhvc3QYASAB",
+            "KAlCA+BBAhIRCgRwb3J0GAIgASgFQgPgQQISFQoIdXNlcm5hbWUYAyABKAlC",
+            "A+BBAhIYCghwYXNzd29yZBgEIAEoCUIG4EEE4EECEhkKDHBhc3N3b3JkX3Nl",
+            "dBgFIAEoCEID4EEDEh0KEGRhdGFiYXNlX3NlcnZpY2UYBiABKAlCA+BBAhIw",
+            "CgNzc2wYByABKAsyIy5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuU3NsQ29u",
+            "ZmlnEl8KHnN0YXRpY19zZXJ2aWNlX2lwX2Nvbm5lY3Rpdml0eRhkIAEoCzI1",
+            "Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5TdGF0aWNTZXJ2aWNlSXBDb25u",
+            "ZWN0aXZpdHlIABJaChhmb3J3YXJkX3NzaF9jb25uZWN0aXZpdHkYZSABKAsy",
+            "Ni5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuRm9yd2FyZFNzaFR1bm5lbENv",
+            "bm5lY3Rpdml0eUgAEk0KFHByaXZhdGVfY29ubmVjdGl2aXR5GGYgASgLMi0u",
+            "Z29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLlByaXZhdGVDb25uZWN0aXZpdHlI",
+            "AEIOCgxjb25uZWN0aXZpdHkizQEKGUNsb3VkU3FsQ29ubmVjdGlvblByb2Zp",
+            "bGUSGQoMY2xvdWRfc3FsX2lkGAEgASgJQgPgQQMSQQoIc2V0dGluZ3MYAiAB",
+            "KAsyKi5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuQ2xvdWRTcWxTZXR0aW5n",
+            "c0ID4EEFEhcKCnByaXZhdGVfaXAYAyABKAlCA+BBAxIWCglwdWJsaWNfaXAY",
+            "BCABKAlCA+BBAxIhChRhZGRpdGlvbmFsX3B1YmxpY19pcBgFIAEoCUID4EED",
+            "InUKGEFsbG95RGJDb25uZWN0aW9uUHJvZmlsZRIXCgpjbHVzdGVyX2lkGAEg",
+            "ASgJQgPgQQISQAoIc2V0dGluZ3MYAiABKAsyKS5nb29nbGUuY2xvdWQuY2xv",
+            "dWRkbXMudjEuQWxsb3lEYlNldHRpbmdzQgPgQQUimwEKC1NxbEFjbEVudHJ5",
+            "Eg0KBXZhbHVlGAEgASgJEjEKC2V4cGlyZV90aW1lGAogASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEgAEi0KA3R0bBgLIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkID4EEESAASDQoFbGFiZWwYAyABKAlCDAoKZXhw",
+            "aXJhdGlvbiLtAQoLU3FsSXBDb25maWcSLwoLZW5hYmxlX2lwdjQYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEhcKD3ByaXZhdGVfbmV0d29y",
+            "axgCIAEoCRIfChJhbGxvY2F0ZWRfaXBfcmFuZ2UYBSABKAlCA+BBARIvCgty",
+            "ZXF1aXJlX3NzbBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUS",
+            "QgoTYXV0aG9yaXplZF9uZXR3b3JrcxgEIAMoCzIlLmdvb2dsZS5jbG91ZC5j",
+            "bG91ZGRtcy52MS5TcWxBY2xFbnRyeSKaDQoQQ2xvdWRTcWxTZXR0aW5ncxJX",
+            "ChBkYXRhYmFzZV92ZXJzaW9uGAEgASgOMj0uZ29vZ2xlLmNsb3VkLmNsb3Vk",
+            "ZG1zLnYxLkNsb3VkU3FsU2V0dGluZ3MuU3FsRGF0YWJhc2VWZXJzaW9uEk8K",
+            "C3VzZXJfbGFiZWxzGAIgAygLMjouZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYx",
+            "LkNsb3VkU3FsU2V0dGluZ3MuVXNlckxhYmVsc0VudHJ5EgwKBHRpZXIYAyAB",
+            "KAkSPgoZc3RvcmFnZV9hdXRvX3Jlc2l6ZV9saW1pdBgEIAEoCzIbLmdvb2ds",
+            "ZS5wcm90b2J1Zi5JbnQ2NFZhbHVlElkKEWFjdGl2YXRpb25fcG9saWN5GAUg",
+            "ASgOMj4uZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLkNsb3VkU3FsU2V0dGlu",
+            "Z3MuU3FsQWN0aXZhdGlvblBvbGljeRI4CglpcF9jb25maWcYBiABKAsyJS5n",
+            "b29nbGUuY2xvdWQuY2xvdWRkbXMudjEuU3FsSXBDb25maWcSOQoVYXV0b19z",
+            "dG9yYWdlX2luY3JlYXNlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xW",
+            "YWx1ZRJVCg5kYXRhYmFzZV9mbGFncxgIIAMoCzI9Lmdvb2dsZS5jbG91ZC5j",
+            "bG91ZGRtcy52MS5DbG91ZFNxbFNldHRpbmdzLkRhdGFiYXNlRmxhZ3NFbnRy",
+            "eRJSCg5kYXRhX2Rpc2tfdHlwZRgJIAEoDjI6Lmdvb2dsZS5jbG91ZC5jbG91",
+            "ZGRtcy52MS5DbG91ZFNxbFNldHRpbmdzLlNxbERhdGFEaXNrVHlwZRI2ChFk",
+            "YXRhX2Rpc2tfc2l6ZV9nYhgKIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2",
+            "NFZhbHVlEgwKBHpvbmUYCyABKAkSGwoOc2Vjb25kYXJ5X3pvbmUYEiABKAlC",
+            "A+BBARIRCglzb3VyY2VfaWQYDCABKAkSGgoNcm9vdF9wYXNzd29yZBgNIAEo",
+            "CUID4EEEEh4KEXJvb3RfcGFzc3dvcmRfc2V0GA4gASgIQgPgQQMSEQoJY29s",
+            "bGF0aW9uGA8gASgJEhUKDWNtZWtfa2V5X25hbWUYECABKAkSXgoRYXZhaWxh",
+            "YmlsaXR5X3R5cGUYESABKA4yPi5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEu",
+            "Q2xvdWRTcWxTZXR0aW5ncy5TcWxBdmFpbGFiaWxpdHlUeXBlQgPgQQESSAoH",
+            "ZWRpdGlvbhgTIAEoDjIyLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5DbG91",
+            "ZFNxbFNldHRpbmdzLkVkaXRpb25CA+BBARoxCg9Vc2VyTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo0ChJEYXRhYmFzZUZs",
+            "YWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJTChNT",
+            "cWxBY3RpdmF0aW9uUG9saWN5EiUKIVNRTF9BQ1RJVkFUSU9OX1BPTElDWV9V",
+            "TlNQRUNJRklFRBAAEgoKBkFMV0FZUxABEgkKBU5FVkVSEAIiTQoPU3FsRGF0",
+            "YURpc2tUeXBlEiIKHlNRTF9EQVRBX0RJU0tfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EgoKBlBEX1NTRBABEgoKBlBEX0hERBACIt8BChJTcWxEYXRhYmFzZVZlcnNp",
+            "b24SJAogU1FMX0RBVEFCQVNFX1ZFUlNJT05fVU5TUEVDSUZJRUQQABINCglN",
+            "WVNRTF81XzYQARINCglNWVNRTF81XzcQAhIQCgxQT1NUR1JFU185XzYQAxIP",
+            "CgtQT1NUR1JFU18xMRAEEg8KC1BPU1RHUkVTXzEwEAUSDQoJTVlTUUxfOF8w",
+            "EAYSDwoLUE9TVEdSRVNfMTIQBxIPCgtQT1NUR1JFU18xMxAIEg8KC1BPU1RH",
+            "UkVTXzE0EBESDwoLUE9TVEdSRVNfMTUQEiJVChNTcWxBdmFpbGFiaWxpdHlU",
+            "eXBlEiUKIVNRTF9BVkFJTEFCSUxJVFlfVFlQRV9VTlNQRUNJRklFRBAAEgkK",
+            "BVpPTkFMEAESDAoIUkVHSU9OQUwQAiJHCgdFZGl0aW9uEhcKE0VESVRJT05f",
+            "VU5TUEVDSUZJRUQQABIOCgpFTlRFUlBSSVNFEAISEwoPRU5URVJQUklTRV9Q",
+            "TFVTEAMiswgKD0FsbG95RGJTZXR0aW5ncxJUCgxpbml0aWFsX3VzZXIYASAB",
+            "KAsyNi5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuQWxsb3lEYlNldHRpbmdz",
+            "LlVzZXJQYXNzd29yZEIG4EEC4EEEEhgKC3ZwY19uZXR3b3JrGAIgASgJQgPg",
+            "QQISRQoGbGFiZWxzGAMgAygLMjUuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYx",
+            "LkFsbG95RGJTZXR0aW5ncy5MYWJlbHNFbnRyeRJkChlwcmltYXJ5X2luc3Rh",
+            "bmNlX3NldHRpbmdzGAQgASgLMkEuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYx",
+            "LkFsbG95RGJTZXR0aW5ncy5QcmltYXJ5SW5zdGFuY2VTZXR0aW5ncxJaChFl",
+            "bmNyeXB0aW9uX2NvbmZpZxgFIAEoCzI6Lmdvb2dsZS5jbG91ZC5jbG91ZGRt",
+            "cy52MS5BbGxveURiU2V0dGluZ3MuRW5jcnlwdGlvbkNvbmZpZ0ID4EEBGkkK",
+            "DFVzZXJQYXNzd29yZBIMCgR1c2VyGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJ",
+            "EhkKDHBhc3N3b3JkX3NldBgDIAEoCEID4EEDGoIEChdQcmltYXJ5SW5zdGFu",
+            "Y2VTZXR0aW5ncxIPCgJpZBgBIAEoCUID4EECEmcKDm1hY2hpbmVfY29uZmln",
+            "GAIgASgLMk8uZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLkFsbG95RGJTZXR0",
+            "aW5ncy5QcmltYXJ5SW5zdGFuY2VTZXR0aW5ncy5NYWNoaW5lQ29uZmlnEmwK",
+            "DmRhdGFiYXNlX2ZsYWdzGAYgAygLMlQuZ29vZ2xlLmNsb3VkLmNsb3VkZG1z",
+            "LnYxLkFsbG95RGJTZXR0aW5ncy5QcmltYXJ5SW5zdGFuY2VTZXR0aW5ncy5E",
+            "YXRhYmFzZUZsYWdzRW50cnkSXQoGbGFiZWxzGAcgAygLMk0uZ29vZ2xlLmNs",
+            "b3VkLmNsb3VkZG1zLnYxLkFsbG95RGJTZXR0aW5ncy5QcmltYXJ5SW5zdGFu",
+            "Y2VTZXR0aW5ncy5MYWJlbHNFbnRyeRIXCgpwcml2YXRlX2lwGAggASgJQgPg",
+            "QQMaIgoNTWFjaGluZUNvbmZpZxIRCgljcHVfY291bnQYASABKAUaNAoSRGF0",
+            "YWJhc2VGbGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARooChBFbmNyeXB0aW9uQ29uZmlnEhQKDGttc19rZXlfbmFtZRgBIAEo",
+            "CRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIhYKFFN0YXRpY0lwQ29ubmVjdGl2aXR5IkQKIVByaXZhdGVTZXJ2aWNl",
+            "Q29ubmVjdENvbm5lY3Rpdml0eRIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYASAB",
+            "KAlCA+BBAiJbChZSZXZlcnNlU3NoQ29ubmVjdGl2aXR5EhIKBXZtX2lwGAEg",
+            "ASgJQgPgQQISFAoHdm1fcG9ydBgCIAEoBUID4EECEgoKAnZtGAMgASgJEgsK",
+            "A3ZwYxgEIAEoCSIlChZWcGNQZWVyaW5nQ29ubmVjdGl2aXR5EgsKA3ZwYxgB",
+            "IAEoCSKoAQocRm9yd2FyZFNzaFR1bm5lbENvbm5lY3Rpdml0eRIVCghob3N0",
+            "bmFtZRgBIAEoCUID4EECEhUKCHVzZXJuYW1lGAIgASgJQgPgQQISDAoEcG9y",
+            "dBgDIAEoBRIXCghwYXNzd29yZBhkIAEoCUID4EEESAASGgoLcHJpdmF0ZV9r",
+            "ZXkYZSABKAlCA+BBBEgAQhcKFWF1dGhlbnRpY2F0aW9uX21ldGhvZCIdChtT",
+            "dGF0aWNTZXJ2aWNlSXBDb25uZWN0aXZpdHkiNgoTUHJpdmF0ZUNvbm5lY3Rp",
+            "dml0eRIfChJwcml2YXRlX2Nvbm5lY3Rpb24YASABKAlCA+BBAiKGAQoMRGF0",
+            "YWJhc2VUeXBlEjwKCHByb3ZpZGVyGAEgASgOMiouZ29vZ2xlLmNsb3VkLmNs",
+            "b3VkZG1zLnYxLkRhdGFiYXNlUHJvdmlkZXISOAoGZW5naW5lGAIgASgOMigu",
+            "Z29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLkRhdGFiYXNlRW5naW5lItgRCgxN",
+            "aWdyYXRpb25Kb2ISDAoEbmFtZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJC",
+            "CgZsYWJlbHMYBCADKAsyMi5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuTWln",
+            "cmF0aW9uSm9iLkxhYmVsc0VudHJ5EhQKDGRpc3BsYXlfbmFtZRgFIAEoCRI7",
+            "CgVzdGF0ZRgGIAEoDjIsLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5NaWdy",
+            "YXRpb25Kb2IuU3RhdGUSQAoFcGhhc2UYByABKA4yLC5nb29nbGUuY2xvdWQu",
+            "Y2xvdWRkbXMudjEuTWlncmF0aW9uSm9iLlBoYXNlQgPgQQMSPgoEdHlwZRgI",
+            "IAEoDjIrLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5NaWdyYXRpb25Kb2Iu",
+            "VHlwZUID4EECEhEKCWR1bXBfcGF0aBgJIAEoCRJECgpkdW1wX2ZsYWdzGBEg",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLk1pZ3JhdGlvbkpvYi5E",
+            "dW1wRmxhZ3MSEwoGc291cmNlGAogASgJQgPgQQISGAoLZGVzdGluYXRpb24Y",
+            "CyABKAlCA+BBAhJUChhyZXZlcnNlX3NzaF9jb25uZWN0aXZpdHkYZSABKAsy",
+            "MC5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuUmV2ZXJzZVNzaENvbm5lY3Rp",
+            "dml0eUgAElQKGHZwY19wZWVyaW5nX2Nvbm5lY3Rpdml0eRhmIAEoCzIwLmdv",
+            "b2dsZS5jbG91ZC5jbG91ZGRtcy52MS5WcGNQZWVyaW5nQ29ubmVjdGl2aXR5",
+            "SAASUAoWc3RhdGljX2lwX2Nvbm5lY3Rpdml0eRhnIAEoCzIuLmdvb2dsZS5j",
+            "bG91ZC5jbG91ZGRtcy52MS5TdGF0aWNJcENvbm5lY3Rpdml0eUgAEjAKCGR1",
+            "cmF0aW9uGAwgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMS",
+            "JgoFZXJyb3IYDSABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEj8KD3Nv",
+            "dXJjZV9kYXRhYmFzZRgOIAEoCzImLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52",
+            "MS5EYXRhYmFzZVR5cGUSRAoUZGVzdGluYXRpb25fZGF0YWJhc2UYDyABKAsy",
+            "Ji5nb29nbGUuY2xvdWQuY2xvdWRkbXMudjEuRGF0YWJhc2VUeXBlEjEKCGVu",
+            "ZF90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "Ek8KFGNvbnZlcnNpb25fd29ya3NwYWNlGBIgASgLMjEuZ29vZ2xlLmNsb3Vk",
+            "LmNsb3VkZG1zLnYxLkNvbnZlcnNpb25Xb3Jrc3BhY2VJbmZvEg4KBmZpbHRl",
+            "chgUIAEoCRIVCg1jbWVrX2tleV9uYW1lGBUgASgJElkKEnBlcmZvcm1hbmNl",
+            "X2NvbmZpZxgWIAEoCzI4Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5NaWdy",
+            "YXRpb25Kb2IuUGVyZm9ybWFuY2VDb25maWdCA+BBARonCghEdW1wRmxhZxIM",
+            "CgRuYW1lGAEgASgJEg0KBXZhbHVlGAIgASgJGlAKCUR1bXBGbGFncxJDCgpk",
+            "dW1wX2ZsYWdzGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLk1p",
+            "Z3JhdGlvbkpvYi5EdW1wRmxhZxrVAQoRUGVyZm9ybWFuY2VDb25maWcSZwoT",
+            "ZHVtcF9wYXJhbGxlbF9sZXZlbBgBIAEoDjJKLmdvb2dsZS5jbG91ZC5jbG91",
+            "ZGRtcy52MS5NaWdyYXRpb25Kb2IuUGVyZm9ybWFuY2VDb25maWcuRHVtcFBh",
+            "cmFsbGVsTGV2ZWwiVwoRRHVtcFBhcmFsbGVsTGV2ZWwSIwofRFVNUF9QQVJB",
+            "TExFTF9MRVZFTF9VTlNQRUNJRklFRBAAEgcKA01JThABEgsKB09QVElNQUwQ",
+            "AhIHCgNNQVgQAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBIvEBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "Eg8KC01BSU5URU5BTkNFEAESCQoFRFJBRlQQAhIMCghDUkVBVElORxADEg8K",
+            "C05PVF9TVEFSVEVEEAQSCwoHUlVOTklORxAFEgoKBkZBSUxFRBAGEg0KCUNP",
+            "TVBMRVRFRBAHEgwKCERFTEVUSU5HEAgSDAoIU1RPUFBJTkcQCRILCgdTVE9Q",
+            "UEVEEAoSCwoHREVMRVRFRBALEgwKCFVQREFUSU5HEAwSDAoIU1RBUlRJTkcQ",
+            "DRIOCgpSRVNUQVJUSU5HEA4SDAoIUkVTVU1JTkcQDyKOAQoFUGhhc2USFQoR",
+            "UEhBU0VfVU5TUEVDSUZJRUQQABINCglGVUxMX0RVTVAQARIHCgNDREMQAhIX",
+            "ChNQUk9NT1RFX0lOX1BST0dSRVNTEAMSJQohV0FJVElOR19GT1JfU09VUkNF",
+            "X1dSSVRFU19UT19TVE9QEAQSFgoSUFJFUEFSSU5HX1RIRV9EVU1QEAUiOgoE",
+            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIT05FX1RJTUUQARIOCgpD",
+            "T05USU5VT1VTEAI6depBcgopZGF0YW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNv",
+            "bS9NaWdyYXRpb25Kb2ISRXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9taWdyYXRpb25Kb2JzL3ttaWdyYXRpb25fam9ifUIOCgxj",
+            "b25uZWN0aXZpdHkiOgoXQ29udmVyc2lvbldvcmtzcGFjZUluZm8SDAoEbmFt",
+            "ZRgBIAEoCRIRCgljb21taXRfaWQYAiABKAkivwgKEUNvbm5lY3Rpb25Qcm9m",
+            "aWxlEgwKBG5hbWUYASABKAkSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRwoGbGFiZWxz",
+            "GAQgAygLMjcuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLkNvbm5lY3Rpb25Q",
+            "cm9maWxlLkxhYmVsc0VudHJ5EkAKBXN0YXRlGAUgASgOMjEuZ29vZ2xlLmNs",
+            "b3VkLmNsb3VkZG1zLnYxLkNvbm5lY3Rpb25Qcm9maWxlLlN0YXRlEhQKDGRp",
+            "c3BsYXlfbmFtZRgGIAEoCRJBCgVteXNxbBhkIAEoCzIwLmdvb2dsZS5jbG91",
+            "ZC5jbG91ZGRtcy52MS5NeVNxbENvbm5lY3Rpb25Qcm9maWxlSAASSwoKcG9z",
+            "dGdyZXNxbBhlIAEoCzI1Lmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5Qb3N0",
+            "Z3JlU3FsQ29ubmVjdGlvblByb2ZpbGVIABJDCgZvcmFjbGUYaCABKAsyMS5n",
+            "b29nbGUuY2xvdWQuY2xvdWRkbXMudjEuT3JhY2xlQ29ubmVjdGlvblByb2Zp",
+            "bGVIABJHCghjbG91ZHNxbBhmIAEoCzIzLmdvb2dsZS5jbG91ZC5jbG91ZGRt",
+            "cy52MS5DbG91ZFNxbENvbm5lY3Rpb25Qcm9maWxlSAASRQoHYWxsb3lkYhhp",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5BbGxveURiQ29ubmVj",
+            "dGlvblByb2ZpbGVIABImCgVlcnJvchgHIAEoCzISLmdvb2dsZS5ycGMuU3Rh",
+            "dHVzQgPgQQMSPAoIcHJvdmlkZXIYCCABKA4yKi5nb29nbGUuY2xvdWQuY2xv",
+            "dWRkbXMudjEuRGF0YWJhc2VQcm92aWRlchotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIncKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCQoFRFJBRlQQARIMCghDUkVBVElORxACEgkKBVJF",
+            "QURZEAMSDAoIVVBEQVRJTkcQBBIMCghERUxFVElORxAFEgsKB0RFTEVURUQQ",
+            "BhIKCgZGQUlMRUQQBzqFAepBgQEKLmRhdGFtaWdyYXRpb24uZ29vZ2xlYXBp",
+            "cy5jb20vQ29ubmVjdGlvblByb2ZpbGUST3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9uUHJvZmlsZXMve2Nvbm5l",
+            "Y3Rpb25fcHJvZmlsZX1CFAoSY29ubmVjdGlvbl9wcm9maWxlItUICh1NaWdy",
+            "YXRpb25Kb2JWZXJpZmljYXRpb25FcnJvchJaCgplcnJvcl9jb2RlGAEgASgO",
+            "MkEuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLk1pZ3JhdGlvbkpvYlZlcmlm",
+            "aWNhdGlvbkVycm9yLkVycm9yQ29kZUID4EEDEhoKDWVycm9yX21lc3NhZ2UY",
+            "AiABKAlCA+BBAxIhChRlcnJvcl9kZXRhaWxfbWVzc2FnZRgDIAEoCUID4EED",
+            "IpgHCglFcnJvckNvZGUSGgoWRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEhYK",
+            "EkNPTk5FQ1RJT05fRkFJTFVSRRABEhoKFkFVVEhFTlRJQ0FUSU9OX0ZBSUxV",
+            "UkUQAhIlCiFJTlZBTElEX0NPTk5FQ1RJT05fUFJPRklMRV9DT05GSUcQAxIb",
+            "ChdWRVJTSU9OX0lOQ09NUEFUSUJJTElUWRAEEiwKKENPTk5FQ1RJT05fUFJP",
+            "RklMRV9UWVBFU19JTkNPTVBBVElCSUxJVFkQBRIaChZOT19QR0xPR0lDQUxf",
+            "SU5TVEFMTEVEEAcSIQodUEdMT0dJQ0FMX05PREVfQUxSRUFEWV9FWElTVFMQ",
+            "CBIVChFJTlZBTElEX1dBTF9MRVZFTBAJEiIKHklOVkFMSURfU0hBUkVEX1BS",
+            "RUxPQURfTElCUkFSWRAKEiYKIklOU1VGRklDSUVOVF9NQVhfUkVQTElDQVRJ",
+            "T05fU0xPVFMQCxIgChxJTlNVRkZJQ0lFTlRfTUFYX1dBTF9TRU5ERVJTEAwS",
+            "JQohSU5TVUZGSUNJRU5UX01BWF9XT1JLRVJfUFJPQ0VTU0VTEA0SGgoWVU5T",
+            "VVBQT1JURURfRVhURU5TSU9OUxAOEh4KGlVOU1VQUE9SVEVEX01JR1JBVElP",
+            "Tl9UWVBFEA8SIwofSU5WQUxJRF9SRFNfTE9HSUNBTF9SRVBMSUNBVElPThAQ",
+            "EhkKFVVOU1VQUE9SVEVEX0dUSURfTU9ERRAREiAKHFVOU1VQUE9SVEVEX1RB",
+            "QkxFX0RFRklOSVRJT04QEhIXChNVTlNVUFBPUlRFRF9ERUZJTkVSEBMSIgoe",
+            "Q0FOVF9SRVNUQVJUX1JVTk5JTkdfTUlHUkFUSU9OEBUSGAoUU09VUkNFX0FM",
+            "UkVBRFlfU0VUVVAQFxIfChtUQUJMRVNfV0lUSF9MSU1JVEVEX1NVUFBPUlQQ",
+            "GBIfChtVTlNVUFBPUlRFRF9EQVRBQkFTRV9MT0NBTEUQGRIjCh9VTlNVUFBP",
+            "UlRFRF9EQVRBQkFTRV9GRFdfQ09ORklHEBoSDwoLRVJST1JfUkRCTVMQGxIh",
+            "Ch1TT1VSQ0VfU0laRV9FWENFRURTX1RIUkVTSE9MRBAcEiIKHkVYSVNUSU5H",
+            "X0NPTkZMSUNUSU5HX0RBVEFCQVNFUxAdEioKJlBBUkFMTEVMX0lNUE9SVF9J",
+            "TlNVRkZJQ0lFTlRfUFJJVklMRUdFEB4i5AUKEVByaXZhdGVDb25uZWN0aW9u",
+            "EgwKBG5hbWUYASABKAkSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRwoGbGFiZWxzGAQg",
+            "AygLMjcuZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxLlByaXZhdGVDb25uZWN0",
+            "aW9uLkxhYmVsc0VudHJ5EhQKDGRpc3BsYXlfbmFtZRgFIAEoCRJFCgVzdGF0",
+            "ZRgGIAEoDjIxLmdvb2dsZS5jbG91ZC5jbG91ZGRtcy52MS5Qcml2YXRlQ29u",
+            "bmVjdGlvbi5TdGF0ZUID4EEDEiYKBWVycm9yGAcgASgLMhIuZ29vZ2xlLnJw",
+            "Yy5TdGF0dXNCA+BBAxJIChJ2cGNfcGVlcmluZ19jb25maWcYZCABKAsyKi5n",
+            "b29nbGUuY2xvdWQuY2xvdWRkbXMudjEuVnBjUGVlcmluZ0NvbmZpZ0gAGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "dgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxAB",
+            "EgsKB0NSRUFURUQQAhIKCgZGQUlMRUQQAxIMCghERUxFVElORxAEEhQKEEZB",
+            "SUxFRF9UT19ERUxFVEUQBRILCgdERUxFVEVEEAY6hQHqQYEBCi5kYXRhbWln",
+            "cmF0aW9uLmdvb2dsZWFwaXMuY29tL1ByaXZhdGVDb25uZWN0aW9uEk9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJpdmF0ZUNv",
+            "bm5lY3Rpb25zL3twcml2YXRlX2Nvbm5lY3Rpb259Qg4KDGNvbm5lY3Rpdml0",
+            "eSJiChBWcGNQZWVyaW5nQ29uZmlnEjkKCHZwY19uYW1lGAEgASgJQifgQQL6",
+            "QSEKH2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29ya3MSEwoGc3VibmV0",
+            "GAIgASgJQgPgQQIqkwEKE05ldHdvcmtBcmNoaXRlY3R1cmUSJAogTkVUV09S",
+            "S19BUkNISVRFQ1RVUkVfVU5TUEVDSUZJRUQQABIqCiZORVRXT1JLX0FSQ0hJ",
+            "VEVDVFVSRV9PTERfQ1NRTF9QUk9EVUNFUhABEioKJk5FVFdPUktfQVJDSElU",
+            "RUNUVVJFX05FV19DU1FMX1BST0RVQ0VSEAIqWAoORGF0YWJhc2VFbmdpbmUS",
+            "HwobREFUQUJBU0VfRU5HSU5FX1VOU1BFQ0lGSUVEEAASCQoFTVlTUUwQARIO",
+            "CgpQT1NUR1JFU1FMEAISCgoGT1JBQ0xFEAQqZQoQRGF0YWJhc2VQcm92aWRl",
+            "chIhCh1EQVRBQkFTRV9QUk9WSURFUl9VTlNQRUNJRklFRBAAEgwKCENMT1VE",
+            "U1FMEAESBwoDUkRTEAISCgoGQVVST1JBEAMSCwoHQUxMT1lEQhAEQpgCChxj",
+            "b20uZ29vZ2xlLmNsb3VkLmNsb3VkZG1zLnYxQhZDbG91ZGRtc1Jlc291cmNl",
+            "c1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRkbXMvYXBpdjEv",
+            "Y2xvdWRkbXNwYjtjbG91ZGRtc3BiqgIYR29vZ2xlLkNsb3VkLkNsb3VkRG1z",
+            "LlYxygIYR29vZ2xlXENsb3VkXENsb3VkRG1zXFYx6gIbR29vZ2xlOjpDbG91",
+            "ZDo6Q2xvdWRETVM6OlYx6kFPCh9jb21wdXRlLmdvb2dsZWFwaXMuY29tL05l",
+            "dHdvcmtzEixwcm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tu",
+            "ZXR3b3JrfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudDms.V1.DatabaseEngine), typeof(global::Google.Cloud.CloudDms.V1.DatabaseProvider), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudDms.V1.NetworkArchitecture), typeof(global::Google.Cloud.CloudDms.V1.DatabaseEngine), typeof(global::Google.Cloud.CloudDms.V1.DatabaseProvider), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.SslConfig), global::Google.Cloud.CloudDms.V1.SslConfig.Parser, new[]{ "Type", "ClientKey", "ClientCertificate", "CaCertificate" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MySqlConnectionProfile), global::Google.Cloud.CloudDms.V1.MySqlConnectionProfile.Parser, new[]{ "Host", "Port", "Username", "Password", "PasswordSet", "Ssl", "CloudSqlId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile), global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile.Parser, new[]{ "Host", "Port", "Username", "Password", "PasswordSet", "Ssl", "CloudSqlId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile), global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile.Parser, new[]{ "CloudSqlId", "Settings", "PrivateIp", "PublicIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile), global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile.Parser, new[]{ "Host", "Port", "Username", "Password", "PasswordSet", "Ssl", "CloudSqlId", "NetworkArchitecture", "StaticIpConnectivity", "PrivateServiceConnectConnectivity" }, new[]{ "Connectivity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.OracleConnectionProfile), global::Google.Cloud.CloudDms.V1.OracleConnectionProfile.Parser, new[]{ "Host", "Port", "Username", "Password", "PasswordSet", "DatabaseService", "Ssl", "StaticServiceIpConnectivity", "ForwardSshConnectivity", "PrivateConnectivity" }, new[]{ "Connectivity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile), global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile.Parser, new[]{ "CloudSqlId", "Settings", "PrivateIp", "PublicIp", "AdditionalPublicIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile), global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile.Parser, new[]{ "ClusterId", "Settings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.SqlAclEntry), global::Google.Cloud.CloudDms.V1.SqlAclEntry.Parser, new[]{ "Value", "ExpireTime", "Ttl", "Label" }, new[]{ "Expiration" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.SqlIpConfig), global::Google.Cloud.CloudDms.V1.SqlIpConfig.Parser, new[]{ "EnableIpv4", "PrivateNetwork", "RequireSsl", "AuthorizedNetworks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings), global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Parser, new[]{ "DatabaseVersion", "UserLabels", "Tier", "StorageAutoResizeLimit", "ActivationPolicy", "IpConfig", "AutoStorageIncrease", "DatabaseFlags", "DataDiskType", "DataDiskSizeGb", "Zone", "SourceId", "RootPassword", "RootPasswordSet", "Collation" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlActivationPolicy), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.SqlIpConfig), global::Google.Cloud.CloudDms.V1.SqlIpConfig.Parser, new[]{ "EnableIpv4", "PrivateNetwork", "AllocatedIpRange", "RequireSsl", "AuthorizedNetworks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings), global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Parser, new[]{ "DatabaseVersion", "UserLabels", "Tier", "StorageAutoResizeLimit", "ActivationPolicy", "IpConfig", "AutoStorageIncrease", "DatabaseFlags", "DataDiskType", "DataDiskSizeGb", "Zone", "SecondaryZone", "SourceId", "RootPassword", "RootPasswordSet", "Collation", "CmekKeyName", "AvailabilityType", "Edition" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlActivationPolicy), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType), typeof(global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbSettings), global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Parser, new[]{ "InitialUser", "VpcNetwork", "Labels", "PrimaryInstanceSettings", "EncryptionConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword), global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword.Parser, new[]{ "User", "Password", "PasswordSet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings), global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Parser, new[]{ "Id", "MachineConfig", "DatabaseFlags", "Labels", "PrivateIp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig), global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig.Parser, new[]{ "CpuCount" }, null, null, null, null),
+            null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig), global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.StaticIpConnectivity), global::Google.Cloud.CloudDms.V1.StaticIpConnectivity.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity), global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity.Parser, new[]{ "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.ReverseSshConnectivity), global::Google.Cloud.CloudDms.V1.ReverseSshConnectivity.Parser, new[]{ "VmIp", "VmPort", "Vm", "Vpc" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.VpcPeeringConnectivity), global::Google.Cloud.CloudDms.V1.VpcPeeringConnectivity.Parser, new[]{ "Vpc" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity), global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity.Parser, new[]{ "Hostname", "Username", "Port", "Password", "PrivateKey" }, new[]{ "AuthenticationMethod" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity), global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.PrivateConnectivity), global::Google.Cloud.CloudDms.V1.PrivateConnectivity.Parser, new[]{ "PrivateConnection" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.DatabaseType), global::Google.Cloud.CloudDms.V1.DatabaseType.Parser, new[]{ "Provider", "Engine" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJob), global::Google.Cloud.CloudDms.V1.MigrationJob.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "DisplayName", "State", "Phase", "Type", "DumpPath", "Source", "Destination", "ReverseSshConnectivity", "VpcPeeringConnectivity", "StaticIpConnectivity", "Duration", "Error", "SourceDatabase", "DestinationDatabase", "EndTime" }, new[]{ "Connectivity" }, new[]{ typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.State), typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Phase), typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.ConnectionProfile), global::Google.Cloud.CloudDms.V1.ConnectionProfile.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "State", "DisplayName", "Mysql", "Postgresql", "Cloudsql", "Error", "Provider" }, new[]{ "ConnectionProfile" }, new[]{ typeof(global::Google.Cloud.CloudDms.V1.ConnectionProfile.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError), global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Parser, new[]{ "ErrorCode", "ErrorMessage", "ErrorDetailMessage" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJob), global::Google.Cloud.CloudDms.V1.MigrationJob.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "DisplayName", "State", "Phase", "Type", "DumpPath", "DumpFlags", "Source", "Destination", "ReverseSshConnectivity", "VpcPeeringConnectivity", "StaticIpConnectivity", "Duration", "Error", "SourceDatabase", "DestinationDatabase", "EndTime", "ConversionWorkspace", "Filter", "CmekKeyName", "PerformanceConfig" }, new[]{ "Connectivity" }, new[]{ typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.State), typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Phase), typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag), global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag.Parser, new[]{ "Name", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags), global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags.Parser, new[]{ "DumpFlags_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig), global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Parser, new[]{ "DumpParallelLevel" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel) }, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo), global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo.Parser, new[]{ "Name", "CommitId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.ConnectionProfile), global::Google.Cloud.CloudDms.V1.ConnectionProfile.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "State", "DisplayName", "Mysql", "Postgresql", "Oracle", "Cloudsql", "Alloydb", "Error", "Provider" }, new[]{ "ConnectionProfile" }, new[]{ typeof(global::Google.Cloud.CloudDms.V1.ConnectionProfile.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError), global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Parser, new[]{ "ErrorCode", "ErrorMessage", "ErrorDetailMessage" }, null, new[]{ typeof(global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.PrivateConnection), global::Google.Cloud.CloudDms.V1.PrivateConnection.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "DisplayName", "State", "Error", "VpcPeeringConfig" }, new[]{ "Connectivity" }, new[]{ typeof(global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudDms.V1.VpcPeeringConfig), global::Google.Cloud.CloudDms.V1.VpcPeeringConfig.Parser, new[]{ "VpcName", "Subnet" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
+  public enum NetworkArchitecture {
+    [pbr::OriginalName("NETWORK_ARCHITECTURE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Instance is in Cloud SQL's old producer network architecture.
+    /// </summary>
+    [pbr::OriginalName("NETWORK_ARCHITECTURE_OLD_CSQL_PRODUCER")] OldCsqlProducer = 1,
+    /// <summary>
+    /// Instance is in Cloud SQL's new producer network architecture.
+    /// </summary>
+    [pbr::OriginalName("NETWORK_ARCHITECTURE_NEW_CSQL_PRODUCER")] NewCsqlProducer = 2,
+  }
+
   /// <summary>
   /// The database engine types.
   /// </summary>
@@ -216,6 +356,10 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The source engine is PostgreSQL.
     /// </summary>
     [pbr::OriginalName("POSTGRESQL")] Postgresql = 2,
+    /// <summary>
+    /// The source engine is Oracle.
+    /// </summary>
+    [pbr::OriginalName("ORACLE")] Oracle = 4,
   }
 
   /// <summary>
@@ -234,6 +378,14 @@ namespace Google.Cloud.CloudDms.V1 {
     /// RDS runs the database.
     /// </summary>
     [pbr::OriginalName("RDS")] Rds = 2,
+    /// <summary>
+    /// Amazon Aurora.
+    /// </summary>
+    [pbr::OriginalName("AURORA")] Aurora = 3,
+    /// <summary>
+    /// AlloyDB.
+    /// </summary>
+    [pbr::OriginalName("ALLOYDB")] Alloydb = 4,
   }
 
   #endregion
@@ -242,6 +394,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// SSL configuration information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SslConfig : pb::IMessage<SslConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -293,8 +446,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int TypeFieldNumber = 1;
     private global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType type_ = global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType.Unspecified;
     /// <summary>
-    /// Output only. The ssl config type according to 'client_key', 'client_certificate' and
-    /// 'ca_certificate'.
+    /// Output only. The ssl config type according to 'client_key',
+    /// 'client_certificate' and 'ca_certificate'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -309,9 +462,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int ClientKeyFieldNumber = 2;
     private string clientKey_ = "";
     /// <summary>
-    /// Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with
-    /// the Client Certificate. If this field is used then the 'client_certificate'
-    /// field is mandatory.
+    /// Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key
+    /// associated with the Client Certificate. If this field is used then the
+    /// 'client_certificate' field is mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,9 +479,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int ClientCertificateFieldNumber = 3;
     private string clientCertificate_ = "";
     /// <summary>
-    /// Input only. The x509 PEM-encoded certificate that will be used by the replica to
-    /// authenticate against the source database server.If this field is used then
-    /// the 'client_key' field is mandatory.
+    /// Input only. The x509 PEM-encoded certificate that will be used by the
+    /// replica to authenticate against the source database server.If this field is
+    /// used then the 'client_key' field is mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -343,9 +496,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int CaCertificateFieldNumber = 4;
     private string caCertificate_ = "";
     /// <summary>
-    /// Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database
-    /// server's certificate. The replica will use this certificate to verify
-    /// it's connecting to the right host.
+    /// Required. Input only. The x509 PEM-encoded certificate of the CA that
+    /// signed the source database server's certificate. The replica will use this
+    /// certificate to verify it's connecting to the right host.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -591,6 +744,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// Specifies connection parameters required specifically for MySQL databases.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MySqlConnectionProfile : pb::IMessage<MySqlConnectionProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -675,8 +829,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int UsernameFieldNumber = 3;
     private string username_ = "";
     /// <summary>
-    /// Required. The username that Database Migration Service will use to connect to the
-    /// database. The value is encrypted when stored in Database Migration Service.
+    /// Required. The username that Database Migration Service will use to connect
+    /// to the database. The value is encrypted when stored in Database Migration
+    /// Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -691,9 +846,10 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int PasswordFieldNumber = 4;
     private string password_ = "";
     /// <summary>
-    /// Required. Input only. The password for the user that Database Migration Service will be using to
-    /// connect to the database. This field is not returned on request, and the
-    /// value is encrypted when stored in Database Migration Service.
+    /// Required. Input only. The password for the user that Database Migration
+    /// Service will be using to connect to the database. This field is not
+    /// returned on request, and the value is encrypted when stored in Database
+    /// Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1040,6 +1196,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// Specifies connection parameters required specifically for PostgreSQL
   /// databases.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostgreSqlConnectionProfile : pb::IMessage<PostgreSqlConnectionProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1081,6 +1238,16 @@ namespace Google.Cloud.CloudDms.V1 {
       passwordSet_ = other.passwordSet_;
       ssl_ = other.ssl_ != null ? other.ssl_.Clone() : null;
       cloudSqlId_ = other.cloudSqlId_;
+      networkArchitecture_ = other.networkArchitecture_;
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.StaticIpConnectivity:
+          StaticIpConnectivity = other.StaticIpConnectivity.Clone();
+          break;
+        case ConnectivityOneofCase.PrivateServiceConnectConnectivity:
+          PrivateServiceConnectConnectivity = other.PrivateServiceConnectConnectivity.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1124,8 +1291,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int UsernameFieldNumber = 3;
     private string username_ = "";
     /// <summary>
-    /// Required. The username that Database Migration Service will use to connect to the
-    /// database. The value is encrypted when stored in Database Migration Service.
+    /// Required. The username that Database Migration Service will use to connect
+    /// to the database. The value is encrypted when stored in Database Migration
+    /// Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1140,9 +1308,10 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int PasswordFieldNumber = 4;
     private string password_ = "";
     /// <summary>
-    /// Required. Input only. The password for the user that Database Migration Service will be using to
-    /// connect to the database. This field is not returned on request, and the
-    /// value is encrypted when stored in Database Migration Service.
+    /// Required. Input only. The password for the user that Database Migration
+    /// Service will be using to connect to the database. This field is not
+    /// returned on request, and the value is encrypted when stored in Database
+    /// Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1199,6 +1368,73 @@ namespace Google.Cloud.CloudDms.V1 {
       }
     }
 
+    /// <summary>Field number for the "network_architecture" field.</summary>
+    public const int NetworkArchitectureFieldNumber = 8;
+    private global::Google.Cloud.CloudDms.V1.NetworkArchitecture networkArchitecture_ = global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified;
+    /// <summary>
+    /// Output only. If the source is a Cloud SQL database, this field indicates
+    /// the network architecture it's associated with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.NetworkArchitecture NetworkArchitecture {
+      get { return networkArchitecture_; }
+      set {
+        networkArchitecture_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "static_ip_connectivity" field.</summary>
+    public const int StaticIpConnectivityFieldNumber = 100;
+    /// <summary>
+    /// Static ip connectivity data (default, no additional details needed).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.StaticIpConnectivity StaticIpConnectivity {
+      get { return connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity ? (global::Google.Cloud.CloudDms.V1.StaticIpConnectivity) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.StaticIpConnectivity;
+      }
+    }
+
+    /// <summary>Field number for the "private_service_connect_connectivity" field.</summary>
+    public const int PrivateServiceConnectConnectivityFieldNumber = 101;
+    /// <summary>
+    /// Private service connect connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity PrivateServiceConnectConnectivity {
+      get { return connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity ? (global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.PrivateServiceConnectConnectivity;
+      }
+    }
+
+    private object connectivity_;
+    /// <summary>Enum of possible cases for the "connectivity" oneof.</summary>
+    public enum ConnectivityOneofCase {
+      None = 0,
+      StaticIpConnectivity = 100,
+      PrivateServiceConnectConnectivity = 101,
+    }
+    private ConnectivityOneofCase connectivityCase_ = ConnectivityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectivityOneofCase ConnectivityCase {
+      get { return connectivityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectivity() {
+      connectivityCase_ = ConnectivityOneofCase.None;
+      connectivity_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1221,6 +1457,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (PasswordSet != other.PasswordSet) return false;
       if (!object.Equals(Ssl, other.Ssl)) return false;
       if (CloudSqlId != other.CloudSqlId) return false;
+      if (NetworkArchitecture != other.NetworkArchitecture) return false;
+      if (!object.Equals(StaticIpConnectivity, other.StaticIpConnectivity)) return false;
+      if (!object.Equals(PrivateServiceConnectConnectivity, other.PrivateServiceConnectConnectivity)) return false;
+      if (ConnectivityCase != other.ConnectivityCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1235,6 +1475,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (PasswordSet != false) hash ^= PasswordSet.GetHashCode();
       if (ssl_ != null) hash ^= Ssl.GetHashCode();
       if (CloudSqlId.Length != 0) hash ^= CloudSqlId.GetHashCode();
+      if (NetworkArchitecture != global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified) hash ^= NetworkArchitecture.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) hash ^= StaticIpConnectivity.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) hash ^= PrivateServiceConnectConnectivity.GetHashCode();
+      hash ^= (int) connectivityCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1281,6 +1525,18 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(58);
         output.WriteString(CloudSqlId);
       }
+      if (NetworkArchitecture != global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) NetworkArchitecture);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(StaticIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) {
+        output.WriteRawTag(170, 6);
+        output.WriteMessage(PrivateServiceConnectConnectivity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1319,6 +1575,18 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(58);
         output.WriteString(CloudSqlId);
       }
+      if (NetworkArchitecture != global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) NetworkArchitecture);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(StaticIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) {
+        output.WriteRawTag(170, 6);
+        output.WriteMessage(PrivateServiceConnectConnectivity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1349,6 +1617,15 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (CloudSqlId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudSqlId);
+      }
+      if (NetworkArchitecture != global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NetworkArchitecture);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StaticIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrivateServiceConnectConnectivity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1386,6 +1663,24 @@ namespace Google.Cloud.CloudDms.V1 {
       if (other.CloudSqlId.Length != 0) {
         CloudSqlId = other.CloudSqlId;
       }
+      if (other.NetworkArchitecture != global::Google.Cloud.CloudDms.V1.NetworkArchitecture.Unspecified) {
+        NetworkArchitecture = other.NetworkArchitecture;
+      }
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.StaticIpConnectivity:
+          if (StaticIpConnectivity == null) {
+            StaticIpConnectivity = new global::Google.Cloud.CloudDms.V1.StaticIpConnectivity();
+          }
+          StaticIpConnectivity.MergeFrom(other.StaticIpConnectivity);
+          break;
+        case ConnectivityOneofCase.PrivateServiceConnectConnectivity:
+          if (PrivateServiceConnectConnectivity == null) {
+            PrivateServiceConnectConnectivity = new global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity();
+          }
+          PrivateServiceConnectConnectivity.MergeFrom(other.PrivateServiceConnectConnectivity);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1430,6 +1725,28 @@ namespace Google.Cloud.CloudDms.V1 {
           }
           case 58: {
             CloudSqlId = input.ReadString();
+            break;
+          }
+          case 64: {
+            NetworkArchitecture = (global::Google.Cloud.CloudDms.V1.NetworkArchitecture) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.StaticIpConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.StaticIpConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) {
+              subBuilder.MergeFrom(StaticIpConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            StaticIpConnectivity = subBuilder;
+            break;
+          }
+          case 810: {
+            global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) {
+              subBuilder.MergeFrom(PrivateServiceConnectConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            PrivateServiceConnectConnectivity = subBuilder;
             break;
           }
         }
@@ -1478,6 +1795,677 @@ namespace Google.Cloud.CloudDms.V1 {
             CloudSqlId = input.ReadString();
             break;
           }
+          case 64: {
+            NetworkArchitecture = (global::Google.Cloud.CloudDms.V1.NetworkArchitecture) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.StaticIpConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.StaticIpConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity) {
+              subBuilder.MergeFrom(StaticIpConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            StaticIpConnectivity = subBuilder;
+            break;
+          }
+          case 810: {
+            global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.PrivateServiceConnectConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.PrivateServiceConnectConnectivity) {
+              subBuilder.MergeFrom(PrivateServiceConnectConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            PrivateServiceConnectConnectivity = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Specifies connection parameters required specifically for Oracle
+  /// databases.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OracleConnectionProfile : pb::IMessage<OracleConnectionProfile>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OracleConnectionProfile> _parser = new pb::MessageParser<OracleConnectionProfile>(() => new OracleConnectionProfile());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OracleConnectionProfile> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OracleConnectionProfile() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OracleConnectionProfile(OracleConnectionProfile other) : this() {
+      host_ = other.host_;
+      port_ = other.port_;
+      username_ = other.username_;
+      password_ = other.password_;
+      passwordSet_ = other.passwordSet_;
+      databaseService_ = other.databaseService_;
+      ssl_ = other.ssl_ != null ? other.ssl_.Clone() : null;
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.StaticServiceIpConnectivity:
+          StaticServiceIpConnectivity = other.StaticServiceIpConnectivity.Clone();
+          break;
+        case ConnectivityOneofCase.ForwardSshConnectivity:
+          ForwardSshConnectivity = other.ForwardSshConnectivity.Clone();
+          break;
+        case ConnectivityOneofCase.PrivateConnectivity:
+          PrivateConnectivity = other.PrivateConnectivity.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OracleConnectionProfile Clone() {
+      return new OracleConnectionProfile(this);
+    }
+
+    /// <summary>Field number for the "host" field.</summary>
+    public const int HostFieldNumber = 1;
+    private string host_ = "";
+    /// <summary>
+    /// Required. The IP or hostname of the source Oracle database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Host {
+      get { return host_; }
+      set {
+        host_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 2;
+    private int port_;
+    /// <summary>
+    /// Required. The network port of the source Oracle database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "username" field.</summary>
+    public const int UsernameFieldNumber = 3;
+    private string username_ = "";
+    /// <summary>
+    /// Required. The username that Database Migration Service will use to connect
+    /// to the database. The value is encrypted when stored in Database Migration
+    /// Service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "password" field.</summary>
+    public const int PasswordFieldNumber = 4;
+    private string password_ = "";
+    /// <summary>
+    /// Required. Input only. The password for the user that Database Migration
+    /// Service will be using to connect to the database. This field is not
+    /// returned on request, and the value is encrypted when stored in Database
+    /// Migration Service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Password {
+      get { return password_; }
+      set {
+        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "password_set" field.</summary>
+    public const int PasswordSetFieldNumber = 5;
+    private bool passwordSet_;
+    /// <summary>
+    /// Output only. Indicates whether a new password is included in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PasswordSet {
+      get { return passwordSet_; }
+      set {
+        passwordSet_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database_service" field.</summary>
+    public const int DatabaseServiceFieldNumber = 6;
+    private string databaseService_ = "";
+    /// <summary>
+    /// Required. Database service for the Oracle connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatabaseService {
+      get { return databaseService_; }
+      set {
+        databaseService_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ssl" field.</summary>
+    public const int SslFieldNumber = 7;
+    private global::Google.Cloud.CloudDms.V1.SslConfig ssl_;
+    /// <summary>
+    /// SSL configuration for the connection to the source Oracle database.
+    ///
+    ///  * Only `SERVER_ONLY` configuration is supported for Oracle SSL.
+    ///  * SSL is supported for Oracle versions 12 and above.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.SslConfig Ssl {
+      get { return ssl_; }
+      set {
+        ssl_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "static_service_ip_connectivity" field.</summary>
+    public const int StaticServiceIpConnectivityFieldNumber = 100;
+    /// <summary>
+    /// Static Service IP connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity StaticServiceIpConnectivity {
+      get { return connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity ? (global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.StaticServiceIpConnectivity;
+      }
+    }
+
+    /// <summary>Field number for the "forward_ssh_connectivity" field.</summary>
+    public const int ForwardSshConnectivityFieldNumber = 101;
+    /// <summary>
+    /// Forward SSH tunnel connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity ForwardSshConnectivity {
+      get { return connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity ? (global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.ForwardSshConnectivity;
+      }
+    }
+
+    /// <summary>Field number for the "private_connectivity" field.</summary>
+    public const int PrivateConnectivityFieldNumber = 102;
+    /// <summary>
+    /// Private connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.PrivateConnectivity PrivateConnectivity {
+      get { return connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity ? (global::Google.Cloud.CloudDms.V1.PrivateConnectivity) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.PrivateConnectivity;
+      }
+    }
+
+    private object connectivity_;
+    /// <summary>Enum of possible cases for the "connectivity" oneof.</summary>
+    public enum ConnectivityOneofCase {
+      None = 0,
+      StaticServiceIpConnectivity = 100,
+      ForwardSshConnectivity = 101,
+      PrivateConnectivity = 102,
+    }
+    private ConnectivityOneofCase connectivityCase_ = ConnectivityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectivityOneofCase ConnectivityCase {
+      get { return connectivityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectivity() {
+      connectivityCase_ = ConnectivityOneofCase.None;
+      connectivity_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OracleConnectionProfile);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OracleConnectionProfile other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Host != other.Host) return false;
+      if (Port != other.Port) return false;
+      if (Username != other.Username) return false;
+      if (Password != other.Password) return false;
+      if (PasswordSet != other.PasswordSet) return false;
+      if (DatabaseService != other.DatabaseService) return false;
+      if (!object.Equals(Ssl, other.Ssl)) return false;
+      if (!object.Equals(StaticServiceIpConnectivity, other.StaticServiceIpConnectivity)) return false;
+      if (!object.Equals(ForwardSshConnectivity, other.ForwardSshConnectivity)) return false;
+      if (!object.Equals(PrivateConnectivity, other.PrivateConnectivity)) return false;
+      if (ConnectivityCase != other.ConnectivityCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Host.Length != 0) hash ^= Host.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
+      if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (PasswordSet != false) hash ^= PasswordSet.GetHashCode();
+      if (DatabaseService.Length != 0) hash ^= DatabaseService.GetHashCode();
+      if (ssl_ != null) hash ^= Ssl.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) hash ^= StaticServiceIpConnectivity.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) hash ^= ForwardSshConnectivity.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) hash ^= PrivateConnectivity.GetHashCode();
+      hash ^= (int) connectivityCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Host.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Host);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Port);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Username);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Password);
+      }
+      if (PasswordSet != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(PasswordSet);
+      }
+      if (DatabaseService.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DatabaseService);
+      }
+      if (ssl_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Ssl);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(StaticServiceIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) {
+        output.WriteRawTag(170, 6);
+        output.WriteMessage(ForwardSshConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(PrivateConnectivity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Host.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Host);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Port);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Username);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Password);
+      }
+      if (PasswordSet != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(PasswordSet);
+      }
+      if (DatabaseService.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DatabaseService);
+      }
+      if (ssl_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Ssl);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(StaticServiceIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) {
+        output.WriteRawTag(170, 6);
+        output.WriteMessage(ForwardSshConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(PrivateConnectivity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Host.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Host);
+      }
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      }
+      if (Password.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      if (PasswordSet != false) {
+        size += 1 + 1;
+      }
+      if (DatabaseService.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatabaseService);
+      }
+      if (ssl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ssl);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StaticServiceIpConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ForwardSshConnectivity);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrivateConnectivity);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OracleConnectionProfile other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Host.Length != 0) {
+        Host = other.Host;
+      }
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
+      if (other.Username.Length != 0) {
+        Username = other.Username;
+      }
+      if (other.Password.Length != 0) {
+        Password = other.Password;
+      }
+      if (other.PasswordSet != false) {
+        PasswordSet = other.PasswordSet;
+      }
+      if (other.DatabaseService.Length != 0) {
+        DatabaseService = other.DatabaseService;
+      }
+      if (other.ssl_ != null) {
+        if (ssl_ == null) {
+          Ssl = new global::Google.Cloud.CloudDms.V1.SslConfig();
+        }
+        Ssl.MergeFrom(other.Ssl);
+      }
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.StaticServiceIpConnectivity:
+          if (StaticServiceIpConnectivity == null) {
+            StaticServiceIpConnectivity = new global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity();
+          }
+          StaticServiceIpConnectivity.MergeFrom(other.StaticServiceIpConnectivity);
+          break;
+        case ConnectivityOneofCase.ForwardSshConnectivity:
+          if (ForwardSshConnectivity == null) {
+            ForwardSshConnectivity = new global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity();
+          }
+          ForwardSshConnectivity.MergeFrom(other.ForwardSshConnectivity);
+          break;
+        case ConnectivityOneofCase.PrivateConnectivity:
+          if (PrivateConnectivity == null) {
+            PrivateConnectivity = new global::Google.Cloud.CloudDms.V1.PrivateConnectivity();
+          }
+          PrivateConnectivity.MergeFrom(other.PrivateConnectivity);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Host = input.ReadString();
+            break;
+          }
+          case 16: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            Username = input.ReadString();
+            break;
+          }
+          case 34: {
+            Password = input.ReadString();
+            break;
+          }
+          case 40: {
+            PasswordSet = input.ReadBool();
+            break;
+          }
+          case 50: {
+            DatabaseService = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (ssl_ == null) {
+              Ssl = new global::Google.Cloud.CloudDms.V1.SslConfig();
+            }
+            input.ReadMessage(Ssl);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) {
+              subBuilder.MergeFrom(StaticServiceIpConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            StaticServiceIpConnectivity = subBuilder;
+            break;
+          }
+          case 810: {
+            global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) {
+              subBuilder.MergeFrom(ForwardSshConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            ForwardSshConnectivity = subBuilder;
+            break;
+          }
+          case 818: {
+            global::Google.Cloud.CloudDms.V1.PrivateConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.PrivateConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) {
+              subBuilder.MergeFrom(PrivateConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            PrivateConnectivity = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Host = input.ReadString();
+            break;
+          }
+          case 16: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            Username = input.ReadString();
+            break;
+          }
+          case 34: {
+            Password = input.ReadString();
+            break;
+          }
+          case 40: {
+            PasswordSet = input.ReadBool();
+            break;
+          }
+          case 50: {
+            DatabaseService = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (ssl_ == null) {
+              Ssl = new global::Google.Cloud.CloudDms.V1.SslConfig();
+            }
+            input.ReadMessage(Ssl);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.StaticServiceIpConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity) {
+              subBuilder.MergeFrom(StaticServiceIpConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            StaticServiceIpConnectivity = subBuilder;
+            break;
+          }
+          case 810: {
+            global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.ForwardSshTunnelConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity) {
+              subBuilder.MergeFrom(ForwardSshConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            ForwardSshConnectivity = subBuilder;
+            break;
+          }
+          case 818: {
+            global::Google.Cloud.CloudDms.V1.PrivateConnectivity subBuilder = new global::Google.Cloud.CloudDms.V1.PrivateConnectivity();
+            if (connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity) {
+              subBuilder.MergeFrom(PrivateConnectivity);
+            }
+            input.ReadMessage(subBuilder);
+            PrivateConnectivity = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1489,6 +2477,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// Specifies required connection parameters, and, optionally, the parameters
   /// required to create a Cloud SQL destination database instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlConnectionProfile : pb::IMessage<CloudSqlConnectionProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1503,7 +2492,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1527,6 +2516,7 @@ namespace Google.Cloud.CloudDms.V1 {
       settings_ = other.settings_ != null ? other.settings_.Clone() : null;
       privateIp_ = other.privateIp_;
       publicIp_ = other.publicIp_;
+      additionalPublicIp_ = other.additionalPublicIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1540,7 +2530,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int CloudSqlIdFieldNumber = 1;
     private string cloudSqlId_ = "";
     /// <summary>
-    /// Output only. The Cloud SQL instance ID that this connection profile is associated with.
+    /// Output only. The Cloud SQL instance ID that this connection profile is
+    /// associated with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1596,6 +2587,23 @@ namespace Google.Cloud.CloudDms.V1 {
       }
     }
 
+    /// <summary>Field number for the "additional_public_ip" field.</summary>
+    public const int AdditionalPublicIpFieldNumber = 5;
+    private string additionalPublicIp_ = "";
+    /// <summary>
+    /// Output only. The Cloud SQL database instance's additional (outgoing) public
+    /// IP. Used when the Cloud SQL database availability type is REGIONAL (i.e.
+    /// multiple zones / highly available).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdditionalPublicIp {
+      get { return additionalPublicIp_; }
+      set {
+        additionalPublicIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1615,6 +2623,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (!object.Equals(Settings, other.Settings)) return false;
       if (PrivateIp != other.PrivateIp) return false;
       if (PublicIp != other.PublicIp) return false;
+      if (AdditionalPublicIp != other.AdditionalPublicIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1626,6 +2635,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (settings_ != null) hash ^= Settings.GetHashCode();
       if (PrivateIp.Length != 0) hash ^= PrivateIp.GetHashCode();
       if (PublicIp.Length != 0) hash ^= PublicIp.GetHashCode();
+      if (AdditionalPublicIp.Length != 0) hash ^= AdditionalPublicIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1660,6 +2670,10 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(34);
         output.WriteString(PublicIp);
       }
+      if (AdditionalPublicIp.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AdditionalPublicIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1686,6 +2700,10 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(34);
         output.WriteString(PublicIp);
       }
+      if (AdditionalPublicIp.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AdditionalPublicIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1707,6 +2725,9 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (PublicIp.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PublicIp);
+      }
+      if (AdditionalPublicIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdditionalPublicIp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1734,6 +2755,9 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (other.PublicIp.Length != 0) {
         PublicIp = other.PublicIp;
+      }
+      if (other.AdditionalPublicIp.Length != 0) {
+        AdditionalPublicIp = other.AdditionalPublicIp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1767,6 +2791,10 @@ namespace Google.Cloud.CloudDms.V1 {
           }
           case 34: {
             PublicIp = input.ReadString();
+            break;
+          }
+          case 42: {
+            AdditionalPublicIp = input.ReadString();
             break;
           }
         }
@@ -1803,6 +2831,257 @@ namespace Google.Cloud.CloudDms.V1 {
             PublicIp = input.ReadString();
             break;
           }
+          case 42: {
+            AdditionalPublicIp = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Specifies required connection parameters, and the parameters
+  /// required to create an AlloyDB destination cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AlloyDbConnectionProfile : pb::IMessage<AlloyDbConnectionProfile>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AlloyDbConnectionProfile> _parser = new pb::MessageParser<AlloyDbConnectionProfile>(() => new AlloyDbConnectionProfile());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AlloyDbConnectionProfile> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbConnectionProfile() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbConnectionProfile(AlloyDbConnectionProfile other) : this() {
+      clusterId_ = other.clusterId_;
+      settings_ = other.settings_ != null ? other.settings_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbConnectionProfile Clone() {
+      return new AlloyDbConnectionProfile(this);
+    }
+
+    /// <summary>Field number for the "cluster_id" field.</summary>
+    public const int ClusterIdFieldNumber = 1;
+    private string clusterId_ = "";
+    /// <summary>
+    /// Required. The AlloyDB cluster ID that this connection profile is associated
+    /// with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClusterId {
+      get { return clusterId_; }
+      set {
+        clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "settings" field.</summary>
+    public const int SettingsFieldNumber = 2;
+    private global::Google.Cloud.CloudDms.V1.AlloyDbSettings settings_;
+    /// <summary>
+    /// Immutable. Metadata used to create the destination AlloyDB cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.AlloyDbSettings Settings {
+      get { return settings_; }
+      set {
+        settings_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AlloyDbConnectionProfile);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AlloyDbConnectionProfile other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClusterId != other.ClusterId) return false;
+      if (!object.Equals(Settings, other.Settings)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (settings_ != null) hash ^= Settings.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ClusterId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClusterId);
+      }
+      if (settings_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Settings);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ClusterId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClusterId);
+      }
+      if (settings_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Settings);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ClusterId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (settings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Settings);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AlloyDbConnectionProfile other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ClusterId.Length != 0) {
+        ClusterId = other.ClusterId;
+      }
+      if (other.settings_ != null) {
+        if (settings_ == null) {
+          Settings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings();
+        }
+        Settings.MergeFrom(other.Settings);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClusterId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (settings_ == null) {
+              Settings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings();
+            }
+            input.ReadMessage(Settings);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ClusterId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (settings_ == null) {
+              Settings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings();
+            }
+            input.ReadMessage(Settings);
+            break;
+          }
         }
       }
     }
@@ -1813,6 +3092,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// An entry for an Access Control list.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SqlAclEntry : pb::IMessage<SqlAclEntry>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1827,7 +3107,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2189,6 +3469,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// IP Management configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SqlIpConfig : pb::IMessage<SqlIpConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2203,7 +3484,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2225,6 +3506,7 @@ namespace Google.Cloud.CloudDms.V1 {
     public SqlIpConfig(SqlIpConfig other) : this() {
       EnableIpv4 = other.EnableIpv4;
       privateNetwork_ = other.privateNetwork_;
+      allocatedIpRange_ = other.allocatedIpRange_;
       RequireSsl = other.RequireSsl;
       authorizedNetworks_ = other.authorizedNetworks_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2268,6 +3550,26 @@ namespace Google.Cloud.CloudDms.V1 {
       get { return privateNetwork_; }
       set {
         privateNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "allocated_ip_range" field.</summary>
+    public const int AllocatedIpRangeFieldNumber = 5;
+    private string allocatedIpRange_ = "";
+    /// <summary>
+    /// Optional. The name of the allocated IP address range for the private IP
+    /// Cloud SQL instance. This name refers to an already allocated IP range
+    /// address. If set, the instance IP address will be created in the allocated
+    /// range. Note that this IP address range can't be modified after the instance
+    /// is created. If you change the VPC when configuring connectivity settings
+    /// for the migration job, this field is not relevant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AllocatedIpRange {
+      get { return allocatedIpRange_; }
+      set {
+        allocatedIpRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2322,6 +3624,7 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (EnableIpv4 != other.EnableIpv4) return false;
       if (PrivateNetwork != other.PrivateNetwork) return false;
+      if (AllocatedIpRange != other.AllocatedIpRange) return false;
       if (RequireSsl != other.RequireSsl) return false;
       if(!authorizedNetworks_.Equals(other.authorizedNetworks_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2333,6 +3636,7 @@ namespace Google.Cloud.CloudDms.V1 {
       int hash = 1;
       if (enableIpv4_ != null) hash ^= EnableIpv4.GetHashCode();
       if (PrivateNetwork.Length != 0) hash ^= PrivateNetwork.GetHashCode();
+      if (AllocatedIpRange.Length != 0) hash ^= AllocatedIpRange.GetHashCode();
       if (requireSsl_ != null) hash ^= RequireSsl.GetHashCode();
       hash ^= authorizedNetworks_.GetHashCode();
       if (_unknownFields != null) {
@@ -2364,6 +3668,10 @@ namespace Google.Cloud.CloudDms.V1 {
         _single_requireSsl_codec.WriteTagAndValue(output, RequireSsl);
       }
       authorizedNetworks_.WriteTo(output, _repeated_authorizedNetworks_codec);
+      if (AllocatedIpRange.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AllocatedIpRange);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2385,6 +3693,10 @@ namespace Google.Cloud.CloudDms.V1 {
         _single_requireSsl_codec.WriteTagAndValue(ref output, RequireSsl);
       }
       authorizedNetworks_.WriteTo(ref output, _repeated_authorizedNetworks_codec);
+      if (AllocatedIpRange.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AllocatedIpRange);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2400,6 +3712,9 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (PrivateNetwork.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrivateNetwork);
+      }
+      if (AllocatedIpRange.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AllocatedIpRange);
       }
       if (requireSsl_ != null) {
         size += _single_requireSsl_codec.CalculateSizeWithTag(RequireSsl);
@@ -2424,6 +3739,9 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (other.PrivateNetwork.Length != 0) {
         PrivateNetwork = other.PrivateNetwork;
+      }
+      if (other.AllocatedIpRange.Length != 0) {
+        AllocatedIpRange = other.AllocatedIpRange;
       }
       if (other.requireSsl_ != null) {
         if (requireSsl_ == null || other.RequireSsl != false) {
@@ -2468,6 +3786,10 @@ namespace Google.Cloud.CloudDms.V1 {
             authorizedNetworks_.AddEntriesFrom(input, _repeated_authorizedNetworks_codec);
             break;
           }
+          case 42: {
+            AllocatedIpRange = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2505,6 +3827,10 @@ namespace Google.Cloud.CloudDms.V1 {
             authorizedNetworks_.AddEntriesFrom(ref input, _repeated_authorizedNetworks_codec);
             break;
           }
+          case 42: {
+            AllocatedIpRange = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2515,6 +3841,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// Settings for creating a Cloud SQL database instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlSettings : pb::IMessage<CloudSqlSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2529,7 +3856,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2560,10 +3887,14 @@ namespace Google.Cloud.CloudDms.V1 {
       dataDiskType_ = other.dataDiskType_;
       DataDiskSizeGb = other.DataDiskSizeGb;
       zone_ = other.zone_;
+      secondaryZone_ = other.secondaryZone_;
       sourceId_ = other.sourceId_;
       rootPassword_ = other.rootPassword_;
       rootPasswordSet_ = other.rootPasswordSet_;
       collation_ = other.collation_;
+      cmekKeyName_ = other.cmekKeyName_;
+      availabilityType_ = other.availabilityType_;
+      edition_ = other.edition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2757,7 +4088,7 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int ZoneFieldNumber = 11;
     private string zone_ = "";
     /// <summary>
-    /// The Google Cloud Platform zone where your Cloud SQL datdabse instance is
+    /// The Google Cloud Platform zone where your Cloud SQL database instance is
     /// located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2766,6 +4097,23 @@ namespace Google.Cloud.CloudDms.V1 {
       get { return zone_; }
       set {
         zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "secondary_zone" field.</summary>
+    public const int SecondaryZoneFieldNumber = 18;
+    private string secondaryZone_ = "";
+    /// <summary>
+    /// Optional. The Google Cloud Platform zone where the failover Cloud SQL
+    /// database instance is located. Used when the Cloud SQL database availability
+    /// type is REGIONAL (i.e. multiple zones / highly available).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SecondaryZone {
+      get { return secondaryZone_; }
+      set {
+        secondaryZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2831,6 +4179,55 @@ namespace Google.Cloud.CloudDms.V1 {
       }
     }
 
+    /// <summary>Field number for the "cmek_key_name" field.</summary>
+    public const int CmekKeyNameFieldNumber = 16;
+    private string cmekKeyName_ = "";
+    /// <summary>
+    /// The KMS key name used for the csql instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CmekKeyName {
+      get { return cmekKeyName_; }
+      set {
+        cmekKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "availability_type" field.</summary>
+    public const int AvailabilityTypeFieldNumber = 17;
+    private global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType availabilityType_ = global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified;
+    /// <summary>
+    /// Optional. Availability type. Potential values:
+    /// *  `ZONAL`: The instance serves data from only one zone. Outages in that
+    /// zone affect data availability.
+    /// *  `REGIONAL`: The instance can serve data from more than one zone in a
+    /// region (it is highly available).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType AvailabilityType {
+      get { return availabilityType_; }
+      set {
+        availabilityType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "edition" field.</summary>
+    public const int EditionFieldNumber = 19;
+    private global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition edition_ = global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified;
+    /// <summary>
+    /// Optional. The edition of the given Cloud SQL instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition Edition {
+      get { return edition_; }
+      set {
+        edition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2857,10 +4254,14 @@ namespace Google.Cloud.CloudDms.V1 {
       if (DataDiskType != other.DataDiskType) return false;
       if (DataDiskSizeGb != other.DataDiskSizeGb) return false;
       if (Zone != other.Zone) return false;
+      if (SecondaryZone != other.SecondaryZone) return false;
       if (SourceId != other.SourceId) return false;
       if (RootPassword != other.RootPassword) return false;
       if (RootPasswordSet != other.RootPasswordSet) return false;
       if (Collation != other.Collation) return false;
+      if (CmekKeyName != other.CmekKeyName) return false;
+      if (AvailabilityType != other.AvailabilityType) return false;
+      if (Edition != other.Edition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2879,10 +4280,14 @@ namespace Google.Cloud.CloudDms.V1 {
       if (DataDiskType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType.Unspecified) hash ^= DataDiskType.GetHashCode();
       if (dataDiskSizeGb_ != null) hash ^= DataDiskSizeGb.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (SecondaryZone.Length != 0) hash ^= SecondaryZone.GetHashCode();
       if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
       if (RootPassword.Length != 0) hash ^= RootPassword.GetHashCode();
       if (RootPasswordSet != false) hash ^= RootPasswordSet.GetHashCode();
       if (Collation.Length != 0) hash ^= Collation.GetHashCode();
+      if (CmekKeyName.Length != 0) hash ^= CmekKeyName.GetHashCode();
+      if (AvailabilityType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified) hash ^= AvailabilityType.GetHashCode();
+      if (Edition != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified) hash ^= Edition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2952,6 +4357,22 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(122);
         output.WriteString(Collation);
       }
+      if (CmekKeyName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(CmekKeyName);
+      }
+      if (AvailabilityType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) AvailabilityType);
+      }
+      if (SecondaryZone.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(SecondaryZone);
+      }
+      if (Edition != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) Edition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3013,6 +4434,22 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(122);
         output.WriteString(Collation);
       }
+      if (CmekKeyName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(CmekKeyName);
+      }
+      if (AvailabilityType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) AvailabilityType);
+      }
+      if (SecondaryZone.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(SecondaryZone);
+      }
+      if (Edition != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) Edition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3052,6 +4489,9 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
       }
+      if (SecondaryZone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(SecondaryZone);
+      }
       if (SourceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
       }
@@ -3063,6 +4503,15 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (Collation.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Collation);
+      }
+      if (CmekKeyName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CmekKeyName);
+      }
+      if (AvailabilityType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AvailabilityType);
+      }
+      if (Edition != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Edition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3079,7 +4528,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (other.DatabaseVersion != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion.Unspecified) {
         DatabaseVersion = other.DatabaseVersion;
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       if (other.Tier.Length != 0) {
         Tier = other.Tier;
       }
@@ -3102,7 +4551,7 @@ namespace Google.Cloud.CloudDms.V1 {
           AutoStorageIncrease = other.AutoStorageIncrease;
         }
       }
-      databaseFlags_.Add(other.databaseFlags_);
+      databaseFlags_.MergeFrom(other.databaseFlags_);
       if (other.DataDiskType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType.Unspecified) {
         DataDiskType = other.DataDiskType;
       }
@@ -3113,6 +4562,9 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.SecondaryZone.Length != 0) {
+        SecondaryZone = other.SecondaryZone;
       }
       if (other.SourceId.Length != 0) {
         SourceId = other.SourceId;
@@ -3125,6 +4577,15 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (other.Collation.Length != 0) {
         Collation = other.Collation;
+      }
+      if (other.CmekKeyName.Length != 0) {
+        CmekKeyName = other.CmekKeyName;
+      }
+      if (other.AvailabilityType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType.Unspecified) {
+        AvailabilityType = other.AvailabilityType;
+      }
+      if (other.Edition != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition.Unspecified) {
+        Edition = other.Edition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3211,6 +4672,22 @@ namespace Google.Cloud.CloudDms.V1 {
           }
           case 122: {
             Collation = input.ReadString();
+            break;
+          }
+          case 130: {
+            CmekKeyName = input.ReadString();
+            break;
+          }
+          case 136: {
+            AvailabilityType = (global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            SecondaryZone = input.ReadString();
+            break;
+          }
+          case 152: {
+            Edition = (global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition) input.ReadEnum();
             break;
           }
         }
@@ -3300,6 +4777,22 @@ namespace Google.Cloud.CloudDms.V1 {
             Collation = input.ReadString();
             break;
           }
+          case 130: {
+            CmekKeyName = input.ReadString();
+            break;
+          }
+          case 136: {
+            AvailabilityType = (global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlAvailabilityType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            SecondaryZone = input.ReadString();
+            break;
+          }
+          case 152: {
+            Edition = (global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.Edition) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -3386,6 +4879,51 @@ namespace Google.Cloud.CloudDms.V1 {
         /// PostgreSQL 13.
         /// </summary>
         [pbr::OriginalName("POSTGRES_13")] Postgres13 = 8,
+        /// <summary>
+        /// PostgreSQL 14.
+        /// </summary>
+        [pbr::OriginalName("POSTGRES_14")] Postgres14 = 17,
+        /// <summary>
+        /// PostgreSQL 15.
+        /// </summary>
+        [pbr::OriginalName("POSTGRES_15")] Postgres15 = 18,
+      }
+
+      /// <summary>
+      /// The availability type of the given Cloud SQL instance.
+      /// </summary>
+      public enum SqlAvailabilityType {
+        /// <summary>
+        /// This is an unknown Availability type.
+        /// </summary>
+        [pbr::OriginalName("SQL_AVAILABILITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Zonal availablility instance.
+        /// </summary>
+        [pbr::OriginalName("ZONAL")] Zonal = 1,
+        /// <summary>
+        /// Regional availability instance.
+        /// </summary>
+        [pbr::OriginalName("REGIONAL")] Regional = 2,
+      }
+
+      /// <summary>
+      /// The edition of the given Cloud SQL instance.
+      /// Can be ENTERPRISE or ENTERPRISE_PLUS.
+      /// </summary>
+      public enum Edition {
+        /// <summary>
+        /// The instance did not specify the edition.
+        /// </summary>
+        [pbr::OriginalName("EDITION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The instance is an enterprise edition.
+        /// </summary>
+        [pbr::OriginalName("ENTERPRISE")] Enterprise = 2,
+        /// <summary>
+        /// The instance is an enterprise plus edition.
+        /// </summary>
+        [pbr::OriginalName("ENTERPRISE_PLUS")] EnterprisePlus = 3,
       }
 
     }
@@ -3394,11 +4932,1428 @@ namespace Google.Cloud.CloudDms.V1 {
   }
 
   /// <summary>
-  /// The source database will allow incoming connections from the destination
-  /// database's public IP. You can retrieve the Cloud SQL instance's public IP
-  /// from the Cloud SQL console or using Cloud SQL APIs. No additional
+  /// Settings for creating an AlloyDB cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AlloyDbSettings : pb::IMessage<AlloyDbSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AlloyDbSettings> _parser = new pb::MessageParser<AlloyDbSettings>(() => new AlloyDbSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AlloyDbSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbSettings(AlloyDbSettings other) : this() {
+      initialUser_ = other.initialUser_ != null ? other.initialUser_.Clone() : null;
+      vpcNetwork_ = other.vpcNetwork_;
+      labels_ = other.labels_.Clone();
+      primaryInstanceSettings_ = other.primaryInstanceSettings_ != null ? other.primaryInstanceSettings_.Clone() : null;
+      encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AlloyDbSettings Clone() {
+      return new AlloyDbSettings(this);
+    }
+
+    /// <summary>Field number for the "initial_user" field.</summary>
+    public const int InitialUserFieldNumber = 1;
+    private global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword initialUser_;
+    /// <summary>
+    /// Required. Input only. Initial user to setup during cluster creation.
+    /// Required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword InitialUser {
+      get { return initialUser_; }
+      set {
+        initialUser_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vpc_network" field.</summary>
+    public const int VpcNetworkFieldNumber = 2;
+    private string vpcNetwork_ = "";
+    /// <summary>
+    /// Required. The resource link for the VPC network in which cluster resources
+    /// are created and from which they are accessible via Private IP. The network
+    /// must belong to the same project as the cluster. It is specified in the
+    /// form: "projects/{project_number}/global/networks/{network_id}". This is
+    /// required to create a cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcNetwork {
+      get { return vpcNetwork_; }
+      set {
+        vpcNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels for the AlloyDB cluster created by DMS. An object containing a list
+    /// of 'key', 'value' pairs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "primary_instance_settings" field.</summary>
+    public const int PrimaryInstanceSettingsFieldNumber = 4;
+    private global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings primaryInstanceSettings_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings PrimaryInstanceSettings {
+      get { return primaryInstanceSettings_; }
+      set {
+        primaryInstanceSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_config" field.</summary>
+    public const int EncryptionConfigFieldNumber = 5;
+    private global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig encryptionConfig_;
+    /// <summary>
+    /// Optional. The encryption config can be specified to encrypt the data disks
+    /// and other persistent data resources of a cluster with a
+    /// customer-managed encryption key (CMEK). When this field is not
+    /// specified, the cluster will then use default encryption scheme to
+    /// protect the user data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig EncryptionConfig {
+      get { return encryptionConfig_; }
+      set {
+        encryptionConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AlloyDbSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AlloyDbSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InitialUser, other.InitialUser)) return false;
+      if (VpcNetwork != other.VpcNetwork) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(PrimaryInstanceSettings, other.PrimaryInstanceSettings)) return false;
+      if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (initialUser_ != null) hash ^= InitialUser.GetHashCode();
+      if (VpcNetwork.Length != 0) hash ^= VpcNetwork.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (primaryInstanceSettings_ != null) hash ^= PrimaryInstanceSettings.GetHashCode();
+      if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (initialUser_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InitialUser);
+      }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VpcNetwork);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (primaryInstanceSettings_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PrimaryInstanceSettings);
+      }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EncryptionConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (initialUser_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InitialUser);
+      }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VpcNetwork);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (primaryInstanceSettings_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PrimaryInstanceSettings);
+      }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EncryptionConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (initialUser_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InitialUser);
+      }
+      if (VpcNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcNetwork);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (primaryInstanceSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimaryInstanceSettings);
+      }
+      if (encryptionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AlloyDbSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.initialUser_ != null) {
+        if (initialUser_ == null) {
+          InitialUser = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword();
+        }
+        InitialUser.MergeFrom(other.InitialUser);
+      }
+      if (other.VpcNetwork.Length != 0) {
+        VpcNetwork = other.VpcNetwork;
+      }
+      labels_.MergeFrom(other.labels_);
+      if (other.primaryInstanceSettings_ != null) {
+        if (primaryInstanceSettings_ == null) {
+          PrimaryInstanceSettings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings();
+        }
+        PrimaryInstanceSettings.MergeFrom(other.PrimaryInstanceSettings);
+      }
+      if (other.encryptionConfig_ != null) {
+        if (encryptionConfig_ == null) {
+          EncryptionConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig();
+        }
+        EncryptionConfig.MergeFrom(other.EncryptionConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (initialUser_ == null) {
+              InitialUser = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword();
+            }
+            input.ReadMessage(InitialUser);
+            break;
+          }
+          case 18: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
+          case 26: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 34: {
+            if (primaryInstanceSettings_ == null) {
+              PrimaryInstanceSettings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings();
+            }
+            input.ReadMessage(PrimaryInstanceSettings);
+            break;
+          }
+          case 42: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (initialUser_ == null) {
+              InitialUser = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.UserPassword();
+            }
+            input.ReadMessage(InitialUser);
+            break;
+          }
+          case 18: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
+          case 26: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 34: {
+            if (primaryInstanceSettings_ == null) {
+              PrimaryInstanceSettings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings();
+            }
+            input.ReadMessage(PrimaryInstanceSettings);
+            break;
+          }
+          case 42: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AlloyDbSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The username/password for a database user. Used for specifying initial
+      /// users at cluster creation time.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UserPassword : pb::IMessage<UserPassword>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UserPassword> _parser = new pb::MessageParser<UserPassword>(() => new UserPassword());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UserPassword> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserPassword() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserPassword(UserPassword other) : this() {
+          user_ = other.user_;
+          password_ = other.password_;
+          passwordSet_ = other.passwordSet_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserPassword Clone() {
+          return new UserPassword(this);
+        }
+
+        /// <summary>Field number for the "user" field.</summary>
+        public const int UserFieldNumber = 1;
+        private string user_ = "";
+        /// <summary>
+        /// The database username.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string User {
+          get { return user_; }
+          set {
+            user_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "password" field.</summary>
+        public const int PasswordFieldNumber = 2;
+        private string password_ = "";
+        /// <summary>
+        /// The initial password for the user.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Password {
+          get { return password_; }
+          set {
+            password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "password_set" field.</summary>
+        public const int PasswordSetFieldNumber = 3;
+        private bool passwordSet_;
+        /// <summary>
+        /// Output only. Indicates if the initial_user.password field has been set.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PasswordSet {
+          get { return passwordSet_; }
+          set {
+            passwordSet_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UserPassword);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UserPassword other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (User != other.User) return false;
+          if (Password != other.Password) return false;
+          if (PasswordSet != other.PasswordSet) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (User.Length != 0) hash ^= User.GetHashCode();
+          if (Password.Length != 0) hash ^= Password.GetHashCode();
+          if (PasswordSet != false) hash ^= PasswordSet.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (User.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(User);
+          }
+          if (Password.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Password);
+          }
+          if (PasswordSet != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(PasswordSet);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (User.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(User);
+          }
+          if (Password.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Password);
+          }
+          if (PasswordSet != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(PasswordSet);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (User.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
+          }
+          if (Password.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+          }
+          if (PasswordSet != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UserPassword other) {
+          if (other == null) {
+            return;
+          }
+          if (other.User.Length != 0) {
+            User = other.User;
+          }
+          if (other.Password.Length != 0) {
+            Password = other.Password;
+          }
+          if (other.PasswordSet != false) {
+            PasswordSet = other.PasswordSet;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                User = input.ReadString();
+                break;
+              }
+              case 18: {
+                Password = input.ReadString();
+                break;
+              }
+              case 24: {
+                PasswordSet = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                User = input.ReadString();
+                break;
+              }
+              case 18: {
+                Password = input.ReadString();
+                break;
+              }
+              case 24: {
+                PasswordSet = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Settings for the cluster's primary instance
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PrimaryInstanceSettings : pb::IMessage<PrimaryInstanceSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PrimaryInstanceSettings> _parser = new pb::MessageParser<PrimaryInstanceSettings>(() => new PrimaryInstanceSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PrimaryInstanceSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PrimaryInstanceSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PrimaryInstanceSettings(PrimaryInstanceSettings other) : this() {
+          id_ = other.id_;
+          machineConfig_ = other.machineConfig_ != null ? other.machineConfig_.Clone() : null;
+          databaseFlags_ = other.databaseFlags_.Clone();
+          labels_ = other.labels_.Clone();
+          privateIp_ = other.privateIp_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PrimaryInstanceSettings Clone() {
+          return new PrimaryInstanceSettings(this);
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 1;
+        private string id_ = "";
+        /// <summary>
+        /// Required. The ID of the AlloyDB primary instance. The ID must satisfy the
+        /// regex expression "[a-z0-9-]+".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "machine_config" field.</summary>
+        public const int MachineConfigFieldNumber = 2;
+        private global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig machineConfig_;
+        /// <summary>
+        /// Configuration for the machines that host the underlying
+        /// database engine.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig MachineConfig {
+          get { return machineConfig_; }
+          set {
+            machineConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "database_flags" field.</summary>
+        public const int DatabaseFlagsFieldNumber = 6;
+        private static readonly pbc::MapField<string, string>.Codec _map_databaseFlags_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+        private readonly pbc::MapField<string, string> databaseFlags_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Database flags to pass to AlloyDB when DMS is creating the AlloyDB
+        /// cluster and instances. See the AlloyDB documentation for how these can be
+        /// used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> DatabaseFlags {
+          get { return databaseFlags_; }
+        }
+
+        /// <summary>Field number for the "labels" field.</summary>
+        public const int LabelsFieldNumber = 7;
+        private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+        private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Labels for the AlloyDB primary instance created by DMS. An object
+        /// containing a list of 'key', 'value' pairs.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> Labels {
+          get { return labels_; }
+        }
+
+        /// <summary>Field number for the "private_ip" field.</summary>
+        public const int PrivateIpFieldNumber = 8;
+        private string privateIp_ = "";
+        /// <summary>
+        /// Output only. The private IP address for the Instance.
+        /// This is the connection endpoint for an end-user application.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PrivateIp {
+          get { return privateIp_; }
+          set {
+            privateIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PrimaryInstanceSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PrimaryInstanceSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Id != other.Id) return false;
+          if (!object.Equals(MachineConfig, other.MachineConfig)) return false;
+          if (!DatabaseFlags.Equals(other.DatabaseFlags)) return false;
+          if (!Labels.Equals(other.Labels)) return false;
+          if (PrivateIp != other.PrivateIp) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (machineConfig_ != null) hash ^= MachineConfig.GetHashCode();
+          hash ^= DatabaseFlags.GetHashCode();
+          hash ^= Labels.GetHashCode();
+          if (PrivateIp.Length != 0) hash ^= PrivateIp.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (machineConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MachineConfig);
+          }
+          databaseFlags_.WriteTo(output, _map_databaseFlags_codec);
+          labels_.WriteTo(output, _map_labels_codec);
+          if (PrivateIp.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(PrivateIp);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (machineConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MachineConfig);
+          }
+          databaseFlags_.WriteTo(ref output, _map_databaseFlags_codec);
+          labels_.WriteTo(ref output, _map_labels_codec);
+          if (PrivateIp.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(PrivateIp);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (machineConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MachineConfig);
+          }
+          size += databaseFlags_.CalculateSize(_map_databaseFlags_codec);
+          size += labels_.CalculateSize(_map_labels_codec);
+          if (PrivateIp.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PrivateIp);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PrimaryInstanceSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          if (other.machineConfig_ != null) {
+            if (machineConfig_ == null) {
+              MachineConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig();
+            }
+            MachineConfig.MergeFrom(other.MachineConfig);
+          }
+          databaseFlags_.MergeFrom(other.databaseFlags_);
+          labels_.MergeFrom(other.labels_);
+          if (other.PrivateIp.Length != 0) {
+            PrivateIp = other.PrivateIp;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (machineConfig_ == null) {
+                  MachineConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig();
+                }
+                input.ReadMessage(MachineConfig);
+                break;
+              }
+              case 50: {
+                databaseFlags_.AddEntriesFrom(input, _map_databaseFlags_codec);
+                break;
+              }
+              case 58: {
+                labels_.AddEntriesFrom(input, _map_labels_codec);
+                break;
+              }
+              case 66: {
+                PrivateIp = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (machineConfig_ == null) {
+                  MachineConfig = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Types.MachineConfig();
+                }
+                input.ReadMessage(MachineConfig);
+                break;
+              }
+              case 50: {
+                databaseFlags_.AddEntriesFrom(ref input, _map_databaseFlags_codec);
+                break;
+              }
+              case 58: {
+                labels_.AddEntriesFrom(ref input, _map_labels_codec);
+                break;
+              }
+              case 66: {
+                PrivateIp = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the PrimaryInstanceSettings message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// MachineConfig describes the configuration of a machine.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MachineConfig : pb::IMessage<MachineConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MachineConfig> _parser = new pb::MessageParser<MachineConfig>(() => new MachineConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MachineConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MachineConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MachineConfig(MachineConfig other) : this() {
+              cpuCount_ = other.cpuCount_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MachineConfig Clone() {
+              return new MachineConfig(this);
+            }
+
+            /// <summary>Field number for the "cpu_count" field.</summary>
+            public const int CpuCountFieldNumber = 1;
+            private int cpuCount_;
+            /// <summary>
+            /// The number of CPU's in the VM instance.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CpuCount {
+              get { return cpuCount_; }
+              set {
+                cpuCount_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MachineConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MachineConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (CpuCount != other.CpuCount) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (CpuCount != 0) hash ^= CpuCount.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (CpuCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(CpuCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (CpuCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(CpuCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (CpuCount != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuCount);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MachineConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.CpuCount != 0) {
+                CpuCount = other.CpuCount;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    CpuCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    CpuCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// EncryptionConfig describes the encryption config of a cluster that is
+      /// encrypted with a CMEK (customer-managed encryption key).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EncryptionConfig> _parser = new pb::MessageParser<EncryptionConfig>(() => new EncryptionConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EncryptionConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EncryptionConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EncryptionConfig(EncryptionConfig other) : this() {
+          kmsKeyName_ = other.kmsKeyName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EncryptionConfig Clone() {
+          return new EncryptionConfig(this);
+        }
+
+        /// <summary>Field number for the "kms_key_name" field.</summary>
+        public const int KmsKeyNameFieldNumber = 1;
+        private string kmsKeyName_ = "";
+        /// <summary>
+        /// The fully-qualified resource name of the KMS key.
+        /// Each Cloud KMS key is regionalized and has the following format:
+        /// projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string KmsKeyName {
+          get { return kmsKeyName_; }
+          set {
+            kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EncryptionConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EncryptionConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (KmsKeyName != other.KmsKeyName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (KmsKeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (KmsKeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (KmsKeyName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EncryptionConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.KmsKeyName.Length != 0) {
+            KmsKeyName = other.KmsKeyName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                KmsKeyName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                KmsKeyName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The source database will allow incoming connections from the public IP of the
+  /// destination database. You can retrieve the public IP of the Cloud SQL
+  /// instance from the Cloud SQL console or using Cloud SQL APIs. No additional
   /// configuration is required.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StaticIpConnectivity : pb::IMessage<StaticIpConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3413,7 +6368,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3552,6 +6507,205 @@ namespace Google.Cloud.CloudDms.V1 {
   }
 
   /// <summary>
+  /// [Private Service Connect
+  /// connectivity](https://cloud.google.com/vpc/docs/private-service-connect#service-attachments)
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PrivateServiceConnectConnectivity : pb::IMessage<PrivateServiceConnectConnectivity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrivateServiceConnectConnectivity> _parser = new pb::MessageParser<PrivateServiceConnectConnectivity>(() => new PrivateServiceConnectConnectivity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PrivateServiceConnectConnectivity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateServiceConnectConnectivity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity other) : this() {
+      serviceAttachment_ = other.serviceAttachment_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateServiceConnectConnectivity Clone() {
+      return new PrivateServiceConnectConnectivity(this);
+    }
+
+    /// <summary>Field number for the "service_attachment" field.</summary>
+    public const int ServiceAttachmentFieldNumber = 1;
+    private string serviceAttachment_ = "";
+    /// <summary>
+    /// Required. A service attachment that exposes a database, and has the
+    /// following format:
+    /// projects/{project}/regions/{region}/serviceAttachments/{service_attachment_name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAttachment {
+      get { return serviceAttachment_; }
+      set {
+        serviceAttachment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateServiceConnectConnectivity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PrivateServiceConnectConnectivity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAttachment != other.ServiceAttachment) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAttachment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAttachment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAttachment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PrivateServiceConnectConnectivity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAttachment.Length != 0) {
+        ServiceAttachment = other.ServiceAttachment;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServiceAttachment = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServiceAttachment = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The details needed to configure a reverse SSH tunnel between the source and
   /// destination databases. These details will be used when calling the
   /// generateSshScript method (see
@@ -3559,6 +6713,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// to produce the script that will help set up the reverse SSH tunnel, and to
   /// set up the VPC peering between the Cloud SQL private network and the VPC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReverseSshConnectivity : pb::IMessage<ReverseSshConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3573,7 +6728,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3610,8 +6765,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int VmIpFieldNumber = 1;
     private string vmIp_ = "";
     /// <summary>
-    /// Required. The IP of the virtual machine (Compute Engine) used as the bastion server
-    /// for the SSH tunnel.
+    /// Required. The IP of the virtual machine (Compute Engine) used as the
+    /// bastion server for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3626,8 +6781,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int VmPortFieldNumber = 2;
     private int vmPort_;
     /// <summary>
-    /// Required. The forwarding port of the virtual machine (Compute Engine) used as the
-    /// bastion server for the SSH tunnel.
+    /// Required. The forwarding port of the virtual machine (Compute Engine) used
+    /// as the bastion server for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3879,6 +7034,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// We will use this information to set up the VPC peering connection between
   /// Cloud SQL and this VPC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpcPeeringConnectivity : pb::IMessage<VpcPeeringConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3893,7 +7049,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4072,8 +7228,778 @@ namespace Google.Cloud.CloudDms.V1 {
   }
 
   /// <summary>
+  /// Forward SSH Tunnel connectivity.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ForwardSshTunnelConnectivity : pb::IMessage<ForwardSshTunnelConnectivity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ForwardSshTunnelConnectivity> _parser = new pb::MessageParser<ForwardSshTunnelConnectivity>(() => new ForwardSshTunnelConnectivity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ForwardSshTunnelConnectivity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardSshTunnelConnectivity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardSshTunnelConnectivity(ForwardSshTunnelConnectivity other) : this() {
+      hostname_ = other.hostname_;
+      username_ = other.username_;
+      port_ = other.port_;
+      switch (other.AuthenticationMethodCase) {
+        case AuthenticationMethodOneofCase.Password:
+          Password = other.Password;
+          break;
+        case AuthenticationMethodOneofCase.PrivateKey:
+          PrivateKey = other.PrivateKey;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForwardSshTunnelConnectivity Clone() {
+      return new ForwardSshTunnelConnectivity(this);
+    }
+
+    /// <summary>Field number for the "hostname" field.</summary>
+    public const int HostnameFieldNumber = 1;
+    private string hostname_ = "";
+    /// <summary>
+    /// Required. Hostname for the SSH tunnel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Hostname {
+      get { return hostname_; }
+      set {
+        hostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "username" field.</summary>
+    public const int UsernameFieldNumber = 2;
+    private string username_ = "";
+    /// <summary>
+    /// Required. Username for the SSH tunnel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 3;
+    private int port_;
+    /// <summary>
+    /// Port for the SSH tunnel, default value is 22.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "password" field.</summary>
+    public const int PasswordFieldNumber = 100;
+    /// <summary>
+    /// Input only. SSH password.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Password {
+      get { return HasPassword ? (string) authenticationMethod_ : ""; }
+      set {
+        authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        authenticationMethodCase_ = AuthenticationMethodOneofCase.Password;
+      }
+    }
+    /// <summary>Gets whether the "password" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassword {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "password" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassword() {
+      if (HasPassword) {
+        ClearAuthenticationMethod();
+      }
+    }
+
+    /// <summary>Field number for the "private_key" field.</summary>
+    public const int PrivateKeyFieldNumber = 101;
+    /// <summary>
+    /// Input only. SSH private key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrivateKey {
+      get { return HasPrivateKey ? (string) authenticationMethod_ : ""; }
+      set {
+        authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        authenticationMethodCase_ = AuthenticationMethodOneofCase.PrivateKey;
+      }
+    }
+    /// <summary>Gets whether the "private_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrivateKey {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "private_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrivateKey() {
+      if (HasPrivateKey) {
+        ClearAuthenticationMethod();
+      }
+    }
+
+    private object authenticationMethod_;
+    /// <summary>Enum of possible cases for the "authentication_method" oneof.</summary>
+    public enum AuthenticationMethodOneofCase {
+      None = 0,
+      Password = 100,
+      PrivateKey = 101,
+    }
+    private AuthenticationMethodOneofCase authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuthenticationMethodOneofCase AuthenticationMethodCase {
+      get { return authenticationMethodCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAuthenticationMethod() {
+      authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
+      authenticationMethod_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ForwardSshTunnelConnectivity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ForwardSshTunnelConnectivity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Hostname != other.Hostname) return false;
+      if (Username != other.Username) return false;
+      if (Port != other.Port) return false;
+      if (Password != other.Password) return false;
+      if (PrivateKey != other.PrivateKey) return false;
+      if (AuthenticationMethodCase != other.AuthenticationMethodCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
+      if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
+      if (HasPassword) hash ^= Password.GetHashCode();
+      if (HasPrivateKey) hash ^= PrivateKey.GetHashCode();
+      hash ^= (int) authenticationMethodCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Hostname);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Username);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Port);
+      }
+      if (HasPassword) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Password);
+      }
+      if (HasPrivateKey) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(PrivateKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Hostname);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Username);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Port);
+      }
+      if (HasPassword) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Password);
+      }
+      if (HasPrivateKey) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(PrivateKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Hostname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Hostname);
+      }
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      }
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
+      if (HasPassword) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      if (HasPrivateKey) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivateKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ForwardSshTunnelConnectivity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Hostname.Length != 0) {
+        Hostname = other.Hostname;
+      }
+      if (other.Username.Length != 0) {
+        Username = other.Username;
+      }
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
+      switch (other.AuthenticationMethodCase) {
+        case AuthenticationMethodOneofCase.Password:
+          Password = other.Password;
+          break;
+        case AuthenticationMethodOneofCase.PrivateKey:
+          PrivateKey = other.PrivateKey;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 18: {
+            Username = input.ReadString();
+            break;
+          }
+          case 24: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 802: {
+            Password = input.ReadString();
+            break;
+          }
+          case 810: {
+            PrivateKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 18: {
+            Username = input.ReadString();
+            break;
+          }
+          case 24: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 802: {
+            Password = input.ReadString();
+            break;
+          }
+          case 810: {
+            PrivateKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Static IP address connectivity configured on service project.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StaticServiceIpConnectivity : pb::IMessage<StaticServiceIpConnectivity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StaticServiceIpConnectivity> _parser = new pb::MessageParser<StaticServiceIpConnectivity>(() => new StaticServiceIpConnectivity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StaticServiceIpConnectivity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StaticServiceIpConnectivity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StaticServiceIpConnectivity(StaticServiceIpConnectivity other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StaticServiceIpConnectivity Clone() {
+      return new StaticServiceIpConnectivity(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StaticServiceIpConnectivity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StaticServiceIpConnectivity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StaticServiceIpConnectivity other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Private Connectivity.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PrivateConnectivity : pb::IMessage<PrivateConnectivity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrivateConnectivity> _parser = new pb::MessageParser<PrivateConnectivity>(() => new PrivateConnectivity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PrivateConnectivity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnectivity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnectivity(PrivateConnectivity other) : this() {
+      privateConnection_ = other.privateConnection_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnectivity Clone() {
+      return new PrivateConnectivity(this);
+    }
+
+    /// <summary>Field number for the "private_connection" field.</summary>
+    public const int PrivateConnectionFieldNumber = 1;
+    private string privateConnection_ = "";
+    /// <summary>
+    /// Required. The resource name (URI) of the private connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrivateConnection {
+      get { return privateConnection_; }
+      set {
+        privateConnection_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateConnectivity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PrivateConnectivity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PrivateConnection != other.PrivateConnection) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PrivateConnection.Length != 0) hash ^= PrivateConnection.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PrivateConnection.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PrivateConnection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PrivateConnection.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PrivateConnection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PrivateConnection.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrivateConnection);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PrivateConnectivity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PrivateConnection.Length != 0) {
+        PrivateConnection = other.PrivateConnection;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PrivateConnection = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PrivateConnection = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A message defining the database engine and provider.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatabaseType : pb::IMessage<DatabaseType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4088,7 +8014,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4309,6 +8235,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// Represents a Database Migration Service migration job object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrationJob : pb::IMessage<MigrationJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4323,7 +8250,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4352,6 +8279,7 @@ namespace Google.Cloud.CloudDms.V1 {
       phase_ = other.phase_;
       type_ = other.type_;
       dumpPath_ = other.dumpPath_;
+      dumpFlags_ = other.dumpFlags_ != null ? other.dumpFlags_.Clone() : null;
       source_ = other.source_;
       destination_ = other.destination_;
       duration_ = other.duration_ != null ? other.duration_.Clone() : null;
@@ -4359,6 +8287,10 @@ namespace Google.Cloud.CloudDms.V1 {
       sourceDatabase_ = other.sourceDatabase_ != null ? other.sourceDatabase_.Clone() : null;
       destinationDatabase_ = other.destinationDatabase_ != null ? other.destinationDatabase_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      conversionWorkspace_ = other.conversionWorkspace_ != null ? other.conversionWorkspace_.Clone() : null;
+      filter_ = other.filter_;
+      cmekKeyName_ = other.cmekKeyName_;
+      performanceConfig_ = other.performanceConfig_ != null ? other.performanceConfig_.Clone() : null;
       switch (other.ConnectivityCase) {
         case ConnectivityOneofCase.ReverseSshConnectivity:
           ReverseSshConnectivity = other.ReverseSshConnectivity.Clone();
@@ -4385,7 +8317,7 @@ namespace Google.Cloud.CloudDms.V1 {
     private string name_ = "";
     /// <summary>
     /// The name (URI) of this migration job resource, in the form of:
-    /// projects/{project}/locations/{location}/instances/{instance}.
+    /// projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4417,8 +8349,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int UpdateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The timestamp when the migration job resource was last updated.
-    /// A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+    /// Output only. The timestamp when the migration job resource was last
+    /// updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
     /// Example: "2014-10-02T15:01:23.045123456Z".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4514,6 +8446,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// <summary>
     /// The path to the dump file in Google Cloud Storage,
     /// in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+    /// This field and the "dump_flags" field are mutually exclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4521,6 +8454,22 @@ namespace Google.Cloud.CloudDms.V1 {
       get { return dumpPath_; }
       set {
         dumpPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dump_flags" field.</summary>
+    public const int DumpFlagsFieldNumber = 17;
+    private global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags dumpFlags_;
+    /// <summary>
+    /// The initial dump flags.
+    /// This field and the "dump_path" field are mutually exclusive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags DumpFlags {
+      get { return dumpFlags_; }
+      set {
+        dumpFlags_ = value;
       }
     }
 
@@ -4604,8 +8553,9 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int DurationFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Duration duration_;
     /// <summary>
-    /// Output only. The duration of the migration job (in seconds). A duration in seconds
-    /// with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+    /// Output only. The duration of the migration job (in seconds). A duration in
+    /// seconds with up to nine fractional digits, terminated by 's'. Example:
+    /// "3.5s".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4665,7 +8615,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int EndTimeFieldNumber = 16;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. If the migration job is completed, the time when it was completed.
+    /// Output only. If the migration job is completed, the time when it was
+    /// completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4673,6 +8624,81 @@ namespace Google.Cloud.CloudDms.V1 {
       get { return endTime_; }
       set {
         endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "conversion_workspace" field.</summary>
+    public const int ConversionWorkspaceFieldNumber = 18;
+    private global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo conversionWorkspace_;
+    /// <summary>
+    /// The conversion workspace used by the migration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo ConversionWorkspace {
+      get { return conversionWorkspace_; }
+      set {
+        conversionWorkspace_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 20;
+    private string filter_ = "";
+    /// <summary>
+    /// This field can be used to select the entities to migrate as part of
+    /// the migration job. It uses AIP-160 notation to select a subset of the
+    /// entities configured on the associated conversion-workspace. This field
+    /// should not be set on migration-jobs that are not associated with a
+    /// conversion workspace.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cmek_key_name" field.</summary>
+    public const int CmekKeyNameFieldNumber = 21;
+    private string cmekKeyName_ = "";
+    /// <summary>
+    /// The CMEK (customer-managed encryption key) fully qualified key name used
+    /// for the migration job.
+    /// This field supports all migration jobs types except for:
+    /// * Mysql to Mysql (use the cmek field in the cloudsql connection profile
+    /// instead).
+    /// * PostrgeSQL to PostgreSQL (use the cmek field in the cloudsql
+    /// connection profile instead).
+    /// * PostgreSQL to AlloyDB (use the kms_key_name field in the alloydb
+    /// connection profile instead).
+    /// Each Cloud CMEK key has the following format:
+    /// projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CmekKeyName {
+      get { return cmekKeyName_; }
+      set {
+        cmekKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "performance_config" field.</summary>
+    public const int PerformanceConfigFieldNumber = 22;
+    private global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig performanceConfig_;
+    /// <summary>
+    /// Optional. Data dump parallelism settings used by the migration.
+    /// Currently applicable only for MySQL to Cloud SQL for MySQL migrations only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig PerformanceConfig {
+      get { return performanceConfig_; }
+      set {
+        performanceConfig_ = value;
       }
     }
 
@@ -4722,6 +8748,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Phase != other.Phase) return false;
       if (Type != other.Type) return false;
       if (DumpPath != other.DumpPath) return false;
+      if (!object.Equals(DumpFlags, other.DumpFlags)) return false;
       if (Source != other.Source) return false;
       if (Destination != other.Destination) return false;
       if (!object.Equals(ReverseSshConnectivity, other.ReverseSshConnectivity)) return false;
@@ -4732,6 +8759,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (!object.Equals(SourceDatabase, other.SourceDatabase)) return false;
       if (!object.Equals(DestinationDatabase, other.DestinationDatabase)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(ConversionWorkspace, other.ConversionWorkspace)) return false;
+      if (Filter != other.Filter) return false;
+      if (CmekKeyName != other.CmekKeyName) return false;
+      if (!object.Equals(PerformanceConfig, other.PerformanceConfig)) return false;
       if (ConnectivityCase != other.ConnectivityCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4749,6 +8780,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Phase != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Phase.Unspecified) hash ^= Phase.GetHashCode();
       if (Type != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (DumpPath.Length != 0) hash ^= DumpPath.GetHashCode();
+      if (dumpFlags_ != null) hash ^= DumpFlags.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
       if (Destination.Length != 0) hash ^= Destination.GetHashCode();
       if (connectivityCase_ == ConnectivityOneofCase.ReverseSshConnectivity) hash ^= ReverseSshConnectivity.GetHashCode();
@@ -4759,6 +8791,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (sourceDatabase_ != null) hash ^= SourceDatabase.GetHashCode();
       if (destinationDatabase_ != null) hash ^= DestinationDatabase.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (conversionWorkspace_ != null) hash ^= ConversionWorkspace.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (CmekKeyName.Length != 0) hash ^= CmekKeyName.GetHashCode();
+      if (performanceConfig_ != null) hash ^= PerformanceConfig.GetHashCode();
       hash ^= (int) connectivityCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4838,6 +8874,26 @@ namespace Google.Cloud.CloudDms.V1 {
       if (endTime_ != null) {
         output.WriteRawTag(130, 1);
         output.WriteMessage(EndTime);
+      }
+      if (dumpFlags_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(DumpFlags);
+      }
+      if (conversionWorkspace_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ConversionWorkspace);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Filter);
+      }
+      if (CmekKeyName.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(CmekKeyName);
+      }
+      if (performanceConfig_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(PerformanceConfig);
       }
       if (connectivityCase_ == ConnectivityOneofCase.ReverseSshConnectivity) {
         output.WriteRawTag(170, 6);
@@ -4922,6 +8978,26 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(EndTime);
       }
+      if (dumpFlags_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(DumpFlags);
+      }
+      if (conversionWorkspace_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ConversionWorkspace);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Filter);
+      }
+      if (CmekKeyName.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(CmekKeyName);
+      }
+      if (performanceConfig_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(PerformanceConfig);
+      }
       if (connectivityCase_ == ConnectivityOneofCase.ReverseSshConnectivity) {
         output.WriteRawTag(170, 6);
         output.WriteMessage(ReverseSshConnectivity);
@@ -4969,6 +9045,9 @@ namespace Google.Cloud.CloudDms.V1 {
       if (DumpPath.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DumpPath);
       }
+      if (dumpFlags_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DumpFlags);
+      }
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
@@ -4999,6 +9078,18 @@ namespace Google.Cloud.CloudDms.V1 {
       if (endTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
+      if (conversionWorkspace_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConversionWorkspace);
+      }
+      if (Filter.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (CmekKeyName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CmekKeyName);
+      }
+      if (performanceConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PerformanceConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5026,7 +9117,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -5041,6 +9132,12 @@ namespace Google.Cloud.CloudDms.V1 {
       }
       if (other.DumpPath.Length != 0) {
         DumpPath = other.DumpPath;
+      }
+      if (other.dumpFlags_ != null) {
+        if (dumpFlags_ == null) {
+          DumpFlags = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags();
+        }
+        DumpFlags.MergeFrom(other.DumpFlags);
       }
       if (other.Source.Length != 0) {
         Source = other.Source;
@@ -5077,6 +9174,24 @@ namespace Google.Cloud.CloudDms.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.conversionWorkspace_ != null) {
+        if (conversionWorkspace_ == null) {
+          ConversionWorkspace = new global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo();
+        }
+        ConversionWorkspace.MergeFrom(other.ConversionWorkspace);
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.CmekKeyName.Length != 0) {
+        CmekKeyName = other.CmekKeyName;
+      }
+      if (other.performanceConfig_ != null) {
+        if (performanceConfig_ == null) {
+          PerformanceConfig = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig();
+        }
+        PerformanceConfig.MergeFrom(other.PerformanceConfig);
       }
       switch (other.ConnectivityCase) {
         case ConnectivityOneofCase.ReverseSshConnectivity:
@@ -5197,6 +9312,35 @@ namespace Google.Cloud.CloudDms.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 138: {
+            if (dumpFlags_ == null) {
+              DumpFlags = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags();
+            }
+            input.ReadMessage(DumpFlags);
+            break;
+          }
+          case 146: {
+            if (conversionWorkspace_ == null) {
+              ConversionWorkspace = new global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo();
+            }
+            input.ReadMessage(ConversionWorkspace);
+            break;
+          }
+          case 162: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 170: {
+            CmekKeyName = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (performanceConfig_ == null) {
+              PerformanceConfig = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig();
+            }
+            input.ReadMessage(PerformanceConfig);
             break;
           }
           case 810: {
@@ -5324,6 +9468,35 @@ namespace Google.Cloud.CloudDms.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 138: {
+            if (dumpFlags_ == null) {
+              DumpFlags = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlags();
+            }
+            input.ReadMessage(DumpFlags);
+            break;
+          }
+          case 146: {
+            if (conversionWorkspace_ == null) {
+              ConversionWorkspace = new global::Google.Cloud.CloudDms.V1.ConversionWorkspaceInfo();
+            }
+            input.ReadMessage(ConversionWorkspace);
+            break;
+          }
+          case 162: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 170: {
+            CmekKeyName = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (performanceConfig_ == null) {
+              PerformanceConfig = new global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig();
+            }
+            input.ReadMessage(PerformanceConfig);
             break;
           }
           case 810: {
@@ -5481,14 +9654,898 @@ namespace Google.Cloud.CloudDms.V1 {
         [pbr::OriginalName("CONTINUOUS")] Continuous = 2,
       }
 
+      /// <summary>
+      /// Dump flag definition.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DumpFlag : pb::IMessage<DumpFlag>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DumpFlag> _parser = new pb::MessageParser<DumpFlag>(() => new DumpFlag());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DumpFlag> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.MigrationJob.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlag() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlag(DumpFlag other) : this() {
+          name_ = other.name_;
+          value_ = other.value_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlag Clone() {
+          return new DumpFlag(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The name of the flag
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 2;
+        private string value_ = "";
+        /// <summary>
+        /// The value of the flag.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Value {
+          get { return value_; }
+          set {
+            value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DumpFlag);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DumpFlag other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Value != other.Value) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Value.Length != 0) hash ^= Value.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Value.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DumpFlag other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Value.Length != 0) {
+            Value = other.Value;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Dump flags definition.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DumpFlags : pb::IMessage<DumpFlags>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DumpFlags> _parser = new pb::MessageParser<DumpFlags>(() => new DumpFlags());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DumpFlags> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.MigrationJob.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlags() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlags(DumpFlags other) : this() {
+          dumpFlags_ = other.dumpFlags_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DumpFlags Clone() {
+          return new DumpFlags(this);
+        }
+
+        /// <summary>Field number for the "dump_flags" field.</summary>
+        public const int DumpFlags_FieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag> _repeated_dumpFlags_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag> dumpFlags_ = new pbc::RepeatedField<global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag>();
+        /// <summary>
+        /// The flags for the initial dump.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.CloudDms.V1.MigrationJob.Types.DumpFlag> DumpFlags_ {
+          get { return dumpFlags_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DumpFlags);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DumpFlags other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!dumpFlags_.Equals(other.dumpFlags_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= dumpFlags_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          dumpFlags_.WriteTo(output, _repeated_dumpFlags_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          dumpFlags_.WriteTo(ref output, _repeated_dumpFlags_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += dumpFlags_.CalculateSize(_repeated_dumpFlags_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DumpFlags other) {
+          if (other == null) {
+            return;
+          }
+          dumpFlags_.Add(other.dumpFlags_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                dumpFlags_.AddEntriesFrom(input, _repeated_dumpFlags_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                dumpFlags_.AddEntriesFrom(ref input, _repeated_dumpFlags_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Performance configuration definition.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PerformanceConfig : pb::IMessage<PerformanceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PerformanceConfig> _parser = new pb::MessageParser<PerformanceConfig>(() => new PerformanceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PerformanceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudDms.V1.MigrationJob.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerformanceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerformanceConfig(PerformanceConfig other) : this() {
+          dumpParallelLevel_ = other.dumpParallelLevel_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerformanceConfig Clone() {
+          return new PerformanceConfig(this);
+        }
+
+        /// <summary>Field number for the "dump_parallel_level" field.</summary>
+        public const int DumpParallelLevelFieldNumber = 1;
+        private global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel dumpParallelLevel_ = global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified;
+        /// <summary>
+        /// Initial dump parallelism level.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel DumpParallelLevel {
+          get { return dumpParallelLevel_; }
+          set {
+            dumpParallelLevel_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PerformanceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PerformanceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DumpParallelLevel != other.DumpParallelLevel) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DumpParallelLevel != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified) hash ^= DumpParallelLevel.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DumpParallelLevel != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DumpParallelLevel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DumpParallelLevel != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DumpParallelLevel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DumpParallelLevel != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DumpParallelLevel);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PerformanceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DumpParallelLevel != global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel.Unspecified) {
+            DumpParallelLevel = other.DumpParallelLevel;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DumpParallelLevel = (global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DumpParallelLevel = (global::Google.Cloud.CloudDms.V1.MigrationJob.Types.PerformanceConfig.Types.DumpParallelLevel) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the PerformanceConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Describes the parallelism level during initial dump.
+          /// </summary>
+          public enum DumpParallelLevel {
+            /// <summary>
+            /// Unknown dump parallel level. Will be defaulted to OPTIMAL.
+            /// </summary>
+            [pbr::OriginalName("DUMP_PARALLEL_LEVEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Minimal parallel level.
+            /// </summary>
+            [pbr::OriginalName("MIN")] Min = 1,
+            /// <summary>
+            /// Optimal parallel level.
+            /// </summary>
+            [pbr::OriginalName("OPTIMAL")] Optimal = 2,
+            /// <summary>
+            /// Maximum parallel level.
+            /// </summary>
+            [pbr::OriginalName("MAX")] Max = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
   }
 
   /// <summary>
+  /// A conversion workspace's version.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ConversionWorkspaceInfo : pb::IMessage<ConversionWorkspaceInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConversionWorkspaceInfo> _parser = new pb::MessageParser<ConversionWorkspaceInfo>(() => new ConversionWorkspaceInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConversionWorkspaceInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionWorkspaceInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionWorkspaceInfo(ConversionWorkspaceInfo other) : this() {
+      name_ = other.name_;
+      commitId_ = other.commitId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionWorkspaceInfo Clone() {
+      return new ConversionWorkspaceInfo(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The resource name (URI) of the conversion workspace.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "commit_id" field.</summary>
+    public const int CommitIdFieldNumber = 2;
+    private string commitId_ = "";
+    /// <summary>
+    /// The commit ID of the conversion workspace.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CommitId {
+      get { return commitId_; }
+      set {
+        commitId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConversionWorkspaceInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConversionWorkspaceInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (CommitId != other.CommitId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (CommitId.Length != 0) hash ^= CommitId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (CommitId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CommitId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (CommitId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CommitId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (CommitId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommitId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConversionWorkspaceInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.CommitId.Length != 0) {
+        CommitId = other.CommitId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            CommitId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            CommitId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A connection profile definition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConnectionProfile : pb::IMessage<ConnectionProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5503,7 +10560,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5538,8 +10595,14 @@ namespace Google.Cloud.CloudDms.V1 {
         case ConnectionProfileOneofCase.Postgresql:
           Postgresql = other.Postgresql.Clone();
           break;
+        case ConnectionProfileOneofCase.Oracle:
+          Oracle = other.Oracle.Clone();
+          break;
         case ConnectionProfileOneofCase.Cloudsql:
           Cloudsql = other.Cloudsql.Clone();
+          break;
+        case ConnectionProfileOneofCase.Alloydb:
+          Alloydb = other.Alloydb.Clone();
           break;
       }
 
@@ -5557,7 +10620,7 @@ namespace Google.Cloud.CloudDms.V1 {
     private string name_ = "";
     /// <summary>
     /// The name of this connection profile resource in the form of
-    /// projects/{project}/locations/{location}/instances/{instance}.
+    /// projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5680,6 +10743,21 @@ namespace Google.Cloud.CloudDms.V1 {
       }
     }
 
+    /// <summary>Field number for the "oracle" field.</summary>
+    public const int OracleFieldNumber = 104;
+    /// <summary>
+    /// An Oracle database connection profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.OracleConnectionProfile Oracle {
+      get { return connectionProfileCase_ == ConnectionProfileOneofCase.Oracle ? (global::Google.Cloud.CloudDms.V1.OracleConnectionProfile) connectionProfile_ : null; }
+      set {
+        connectionProfile_ = value;
+        connectionProfileCase_ = value == null ? ConnectionProfileOneofCase.None : ConnectionProfileOneofCase.Oracle;
+      }
+    }
+
     /// <summary>Field number for the "cloudsql" field.</summary>
     public const int CloudsqlFieldNumber = 102;
     /// <summary>
@@ -5692,6 +10770,21 @@ namespace Google.Cloud.CloudDms.V1 {
       set {
         connectionProfile_ = value;
         connectionProfileCase_ = value == null ? ConnectionProfileOneofCase.None : ConnectionProfileOneofCase.Cloudsql;
+      }
+    }
+
+    /// <summary>Field number for the "alloydb" field.</summary>
+    public const int AlloydbFieldNumber = 105;
+    /// <summary>
+    /// An AlloyDB cluster connection profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile Alloydb {
+      get { return connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb ? (global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile) connectionProfile_ : null; }
+      set {
+        connectionProfile_ = value;
+        connectionProfileCase_ = value == null ? ConnectionProfileOneofCase.None : ConnectionProfileOneofCase.Alloydb;
       }
     }
 
@@ -5731,7 +10824,9 @@ namespace Google.Cloud.CloudDms.V1 {
       None = 0,
       Mysql = 100,
       Postgresql = 101,
+      Oracle = 104,
       Cloudsql = 102,
+      Alloydb = 105,
     }
     private ConnectionProfileOneofCase connectionProfileCase_ = ConnectionProfileOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5770,7 +10865,9 @@ namespace Google.Cloud.CloudDms.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(Mysql, other.Mysql)) return false;
       if (!object.Equals(Postgresql, other.Postgresql)) return false;
+      if (!object.Equals(Oracle, other.Oracle)) return false;
       if (!object.Equals(Cloudsql, other.Cloudsql)) return false;
+      if (!object.Equals(Alloydb, other.Alloydb)) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (Provider != other.Provider) return false;
       if (ConnectionProfileCase != other.ConnectionProfileCase) return false;
@@ -5789,7 +10886,9 @@ namespace Google.Cloud.CloudDms.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (connectionProfileCase_ == ConnectionProfileOneofCase.Mysql) hash ^= Mysql.GetHashCode();
       if (connectionProfileCase_ == ConnectionProfileOneofCase.Postgresql) hash ^= Postgresql.GetHashCode();
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) hash ^= Oracle.GetHashCode();
       if (connectionProfileCase_ == ConnectionProfileOneofCase.Cloudsql) hash ^= Cloudsql.GetHashCode();
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) hash ^= Alloydb.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (Provider != global::Google.Cloud.CloudDms.V1.DatabaseProvider.Unspecified) hash ^= Provider.GetHashCode();
       hash ^= (int) connectionProfileCase_;
@@ -5852,6 +10951,14 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(178, 6);
         output.WriteMessage(Cloudsql);
       }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) {
+        output.WriteRawTag(194, 6);
+        output.WriteMessage(Oracle);
+      }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) {
+        output.WriteRawTag(202, 6);
+        output.WriteMessage(Alloydb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5903,6 +11010,14 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(178, 6);
         output.WriteMessage(Cloudsql);
       }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) {
+        output.WriteRawTag(194, 6);
+        output.WriteMessage(Oracle);
+      }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) {
+        output.WriteRawTag(202, 6);
+        output.WriteMessage(Alloydb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5935,8 +11050,14 @@ namespace Google.Cloud.CloudDms.V1 {
       if (connectionProfileCase_ == ConnectionProfileOneofCase.Postgresql) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Postgresql);
       }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Oracle);
+      }
       if (connectionProfileCase_ == ConnectionProfileOneofCase.Cloudsql) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Cloudsql);
+      }
+      if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Alloydb);
       }
       if (error_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
@@ -5971,7 +11092,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.CloudDms.V1.ConnectionProfile.Types.State.Unspecified) {
         State = other.State;
       }
@@ -6000,11 +11121,23 @@ namespace Google.Cloud.CloudDms.V1 {
           }
           Postgresql.MergeFrom(other.Postgresql);
           break;
+        case ConnectionProfileOneofCase.Oracle:
+          if (Oracle == null) {
+            Oracle = new global::Google.Cloud.CloudDms.V1.OracleConnectionProfile();
+          }
+          Oracle.MergeFrom(other.Oracle);
+          break;
         case ConnectionProfileOneofCase.Cloudsql:
           if (Cloudsql == null) {
             Cloudsql = new global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile();
           }
           Cloudsql.MergeFrom(other.Cloudsql);
+          break;
+        case ConnectionProfileOneofCase.Alloydb:
+          if (Alloydb == null) {
+            Alloydb = new global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile();
+          }
+          Alloydb.MergeFrom(other.Alloydb);
           break;
       }
 
@@ -6091,6 +11224,24 @@ namespace Google.Cloud.CloudDms.V1 {
             Cloudsql = subBuilder;
             break;
           }
+          case 834: {
+            global::Google.Cloud.CloudDms.V1.OracleConnectionProfile subBuilder = new global::Google.Cloud.CloudDms.V1.OracleConnectionProfile();
+            if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) {
+              subBuilder.MergeFrom(Oracle);
+            }
+            input.ReadMessage(subBuilder);
+            Oracle = subBuilder;
+            break;
+          }
+          case 842: {
+            global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile subBuilder = new global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile();
+            if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) {
+              subBuilder.MergeFrom(Alloydb);
+            }
+            input.ReadMessage(subBuilder);
+            Alloydb = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -6174,6 +11325,24 @@ namespace Google.Cloud.CloudDms.V1 {
             Cloudsql = subBuilder;
             break;
           }
+          case 834: {
+            global::Google.Cloud.CloudDms.V1.OracleConnectionProfile subBuilder = new global::Google.Cloud.CloudDms.V1.OracleConnectionProfile();
+            if (connectionProfileCase_ == ConnectionProfileOneofCase.Oracle) {
+              subBuilder.MergeFrom(Oracle);
+            }
+            input.ReadMessage(subBuilder);
+            Oracle = subBuilder;
+            break;
+          }
+          case 842: {
+            global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile subBuilder = new global::Google.Cloud.CloudDms.V1.AlloyDbConnectionProfile();
+            if (connectionProfileCase_ == ConnectionProfileOneofCase.Alloydb) {
+              subBuilder.MergeFrom(Alloydb);
+            }
+            input.ReadMessage(subBuilder);
+            Alloydb = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -6230,6 +11399,7 @@ namespace Google.Cloud.CloudDms.V1 {
   /// <summary>
   /// Error message of a verification Migration job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrationJobVerificationError : pb::IMessage<MigrationJobVerificationError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6244,7 +11414,7 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6295,7 +11465,8 @@ namespace Google.Cloud.CloudDms.V1 {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// Output only. A formatted message with further details about the error and a CTA.
+    /// Output only. A formatted message with further details about the error and a
+    /// CTA.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6592,10 +11763,862 @@ namespace Google.Cloud.CloudDms.V1 {
         /// Migration is already running at the time of restart request.
         /// </summary>
         [pbr::OriginalName("CANT_RESTART_RUNNING_MIGRATION")] CantRestartRunningMigration = 21,
+        /// <summary>
+        /// The source already has a replication setup.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_ALREADY_SETUP")] SourceAlreadySetup = 23,
+        /// <summary>
+        /// The source has tables with limited support.
+        /// E.g. PostgreSQL tables without primary keys.
+        /// </summary>
+        [pbr::OriginalName("TABLES_WITH_LIMITED_SUPPORT")] TablesWithLimitedSupport = 24,
+        /// <summary>
+        /// The source uses an unsupported locale.
+        /// </summary>
+        [pbr::OriginalName("UNSUPPORTED_DATABASE_LOCALE")] UnsupportedDatabaseLocale = 25,
+        /// <summary>
+        /// The source uses an unsupported Foreign Data Wrapper configuration.
+        /// </summary>
+        [pbr::OriginalName("UNSUPPORTED_DATABASE_FDW_CONFIG")] UnsupportedDatabaseFdwConfig = 26,
+        /// <summary>
+        /// There was an underlying RDBMS error.
+        /// </summary>
+        [pbr::OriginalName("ERROR_RDBMS")] ErrorRdbms = 27,
+        /// <summary>
+        /// The source DB size in Bytes exceeds a certain threshold. The migration
+        /// might require an increase of quota, or might not be supported.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_SIZE_EXCEEDS_THRESHOLD")] SourceSizeExceedsThreshold = 28,
+        /// <summary>
+        /// The destination DB contains existing databases that are conflicting with
+        /// those in the source DB.
+        /// </summary>
+        [pbr::OriginalName("EXISTING_CONFLICTING_DATABASES")] ExistingConflictingDatabases = 29,
+        /// <summary>
+        /// Insufficient privilege to enable the parallelism configuration.
+        /// </summary>
+        [pbr::OriginalName("PARALLEL_IMPORT_INSUFFICIENT_PRIVILEGE")] ParallelImportInsufficientPrivilege = 30,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// The PrivateConnection resource is used to establish private connectivity
+  /// with the customer's network.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PrivateConnection : pb::IMessage<PrivateConnection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrivateConnection> _parser = new pb::MessageParser<PrivateConnection>(() => new PrivateConnection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PrivateConnection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection(PrivateConnection other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      labels_ = other.labels_.Clone();
+      displayName_ = other.displayName_;
+      state_ = other.state_;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.VpcPeeringConfig:
+          VpcPeeringConfig = other.VpcPeeringConfig.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection Clone() {
+      return new PrivateConnection(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The create time of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The last update time of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The resource labels for private connections to use to annotate any related
+    /// underlying resources such as Compute Engine VMs. An object containing a
+    /// list of "key": "value" pairs.
+    ///
+    /// Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 5;
+    private string displayName_ = "";
+    /// <summary>
+    /// The private connection display name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 6;
+    private global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State state_ = global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the private connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 7;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. The error details in case of state FAILED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vpc_peering_config" field.</summary>
+    public const int VpcPeeringConfigFieldNumber = 100;
+    /// <summary>
+    /// VPC peering configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudDms.V1.VpcPeeringConfig VpcPeeringConfig {
+      get { return connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig ? (global::Google.Cloud.CloudDms.V1.VpcPeeringConfig) connectivity_ : null; }
+      set {
+        connectivity_ = value;
+        connectivityCase_ = value == null ? ConnectivityOneofCase.None : ConnectivityOneofCase.VpcPeeringConfig;
+      }
+    }
+
+    private object connectivity_;
+    /// <summary>Enum of possible cases for the "connectivity" oneof.</summary>
+    public enum ConnectivityOneofCase {
+      None = 0,
+      VpcPeeringConfig = 100,
+    }
+    private ConnectivityOneofCase connectivityCase_ = ConnectivityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectivityOneofCase ConnectivityCase {
+      get { return connectivityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectivity() {
+      connectivityCase_ = ConnectivityOneofCase.None;
+      connectivity_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateConnection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PrivateConnection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      if (!object.Equals(VpcPeeringConfig, other.VpcPeeringConfig)) return false;
+      if (ConnectivityCase != other.ConnectivityCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (State != global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
+      if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) hash ^= VpcPeeringConfig.GetHashCode();
+      hash ^= (int) connectivityCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Error);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(VpcPeeringConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Error);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(VpcPeeringConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (State != global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VpcPeeringConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PrivateConnection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      labels_.MergeFrom(other.labels_);
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.State != global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
+      }
+      switch (other.ConnectivityCase) {
+        case ConnectivityOneofCase.VpcPeeringConfig:
+          if (VpcPeeringConfig == null) {
+            VpcPeeringConfig = new global::Google.Cloud.CloudDms.V1.VpcPeeringConfig();
+          }
+          VpcPeeringConfig.MergeFrom(other.VpcPeeringConfig);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.VpcPeeringConfig subBuilder = new global::Google.Cloud.CloudDms.V1.VpcPeeringConfig();
+            if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) {
+              subBuilder.MergeFrom(VpcPeeringConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VpcPeeringConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.CloudDms.V1.PrivateConnection.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.CloudDms.V1.VpcPeeringConfig subBuilder = new global::Google.Cloud.CloudDms.V1.VpcPeeringConfig();
+            if (connectivityCase_ == ConnectivityOneofCase.VpcPeeringConfig) {
+              subBuilder.MergeFrom(VpcPeeringConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VpcPeeringConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PrivateConnection message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Private Connection state.
+      /// </summary>
+      public enum State {
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The private connection is in creation state - creating resources.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 1,
+        /// <summary>
+        /// The private connection has been created with all of its resources.
+        /// </summary>
+        [pbr::OriginalName("CREATED")] Created = 2,
+        /// <summary>
+        /// The private connection creation has failed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// The private connection is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+        /// <summary>
+        /// Delete request has failed, resource is in invalid state.
+        /// </summary>
+        [pbr::OriginalName("FAILED_TO_DELETE")] FailedToDelete = 5,
+        /// <summary>
+        /// The private connection has been deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETED")] Deleted = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The VPC peering configuration is used to create VPC peering with the
+  /// consumer's VPC.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VpcPeeringConfig : pb::IMessage<VpcPeeringConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VpcPeeringConfig> _parser = new pb::MessageParser<VpcPeeringConfig>(() => new VpcPeeringConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VpcPeeringConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VpcPeeringConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VpcPeeringConfig(VpcPeeringConfig other) : this() {
+      vpcName_ = other.vpcName_;
+      subnet_ = other.subnet_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VpcPeeringConfig Clone() {
+      return new VpcPeeringConfig(this);
+    }
+
+    /// <summary>Field number for the "vpc_name" field.</summary>
+    public const int VpcNameFieldNumber = 1;
+    private string vpcName_ = "";
+    /// <summary>
+    /// Required. Fully qualified name of the VPC that Database Migration Service
+    /// will peer to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcName {
+      get { return vpcName_; }
+      set {
+        vpcName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "subnet" field.</summary>
+    public const int SubnetFieldNumber = 2;
+    private string subnet_ = "";
+    /// <summary>
+    /// Required. A free subnet for peering. (CIDR of /29)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Subnet {
+      get { return subnet_; }
+      set {
+        subnet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VpcPeeringConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VpcPeeringConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VpcName != other.VpcName) return false;
+      if (Subnet != other.Subnet) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VpcName.Length != 0) hash ^= VpcName.GetHashCode();
+      if (Subnet.Length != 0) hash ^= Subnet.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VpcName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VpcName);
+      }
+      if (Subnet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Subnet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VpcName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VpcName);
+      }
+      if (Subnet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Subnet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VpcName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcName);
+      }
+      if (Subnet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subnet);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VpcPeeringConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VpcName.Length != 0) {
+        VpcName = other.VpcName;
+      }
+      if (other.Subnet.Length != 0) {
+        Subnet = other.Subnet;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VpcName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Subnet = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VpcName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Subnet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

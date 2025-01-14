@@ -1,5 +1,100 @@
 # Version history
 
+## Version 4.14.0, released 2024-10-14
+
+### New features
+
+- Add FindNearest API to the stable branch ([commit 6ffb6fc](https://github.com/googleapis/google-cloud-dotnet/commit/6ffb6fc4a24412e92502f27759c2c75b0f4452cb))
+- Support for field update operators in the Datastore API and resolution strategies when there is a conflict at write time ([commit fbdfc79](https://github.com/googleapis/google-cloud-dotnet/commit/fbdfc79f108f64af5caae1ba32bb43954a59b39d))
+
+## Version 4.13.0, released 2024-08-13
+
+### New features
+
+- Update Go Datastore import path ([commit eb3a95f](https://github.com/googleapis/google-cloud-dotnet/commit/eb3a95f79d6af2ca0b183f6d63ea2a60fdca279c))
+- Update Go Bigtable import path ([commit eb3a95f](https://github.com/googleapis/google-cloud-dotnet/commit/eb3a95f79d6af2ca0b183f6d63ea2a60fdca279c))
+
+## Version 4.12.0, released 2024-05-30
+
+### New features
+
+- New PropertyMask field which allows partial commits, lookups, and query results ([commit d2d3c83](https://github.com/googleapis/google-cloud-dotnet/commit/d2d3c83729068ac7fa329b3cea1281519f16adec))
+
+## Version 4.11.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 4.10.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 4.9.0, released 2024-03-21
+
+### New features
+
+- Add new types ExplainOptions, ExplainMetrics, PlanSummary, ExecutionStats ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainOptions field to RunQueryRequest ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainMetrics field to RunQueryResponse ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainOptions field to RunAggregationQueryRequest ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainMetrics field to RunAggregationQueryResponse ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+
+## Version 4.8.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 4.7.0, released 2024-01-30
+
+### New features
+
+Multiple database support is now GA.
+
+### Bug fixes (from beta)
+
+- The new features released in 4.7.0-beta03 have been removed. This
+  is a breaking change, but the features were never available to
+  customers in terms of server interactions (only protos) and were
+  not published in a stable release.
+
+## Version 4.7.0-beta03, released 2024-01-08
+
+### New features
+
+- Add new types QueryMode, QueryPlan, ResultSetStats ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add QueryMode field to RunQueryRequest ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add ResultSetStats field to RunQueryResponse ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add QueryMode field to RunAggregationQueryRequest ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add ResultSetStats field to RunAggregationQueryResponse ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+
+## Version 4.7.0-beta02, released 2023-12-05
+
+### Bug fixes
+
+- Specify the database ID in transaction-oriented operations. Fixes [issue 11375](https://github.com/googleapis/google-cloud-dotnet/issues/11375). ([commit 715167e](https://github.com/googleapis/google-cloud-dotnet/commit/715167eee78a8c129f0dd2b21714ebecda6310ba))
+
+## Version 4.7.0-beta01, released 2023-11-29
+
+Note: this is a beta release as multiple database support in Datastore is still in preview. We don't expect the API surface to change between now and the final release, but we don't guarantee that.
+
+### New features
+
+- Multi-db support in Datastore. ([commit 4e7700f](https://github.com/googleapis/google-cloud-dotnet/commit/4e7700ffb1850e405654a4893ad1a3fe87ed5c2f))
+
+## Version 4.6.0, released 2023-08-22
+
+### New features
+
+- Add sum and average aggregates ([commit 4b253b0](https://github.com/googleapis/google-cloud-dotnet/commit/4b253b0d2b2c09a379142e59481f3ce8a3643b1e))
+- Publish proto definitions for SUM/AVG ([commit ab0464e](https://github.com/googleapis/google-cloud-dotnet/commit/ab0464e993fbacc50d91f80c6f6d7b87ff8682da))
+
+### Documentation improvements
+
+- Update property requirement specifications ([commit 11b3f20](https://github.com/googleapis/google-cloud-dotnet/commit/11b3f208b70651234d2bfef07460b98220ed23a7))
+- Minor comment update for Entity message ([commit 1d662d5](https://github.com/googleapis/google-cloud-dotnet/commit/1d662d52c880b995c733f1a2b0d70f8957fb5bf1))
+
 ## Version 4.5.0, released 2023-03-13
 
 ### New features

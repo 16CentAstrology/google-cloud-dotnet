@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataproc.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataproc_v1_generated_ClusterController_DiagnoseCluster_sync]
     using Google.Cloud.Dataproc.V1;
     using Google.LongRunning;
+    using Google.Type;
 
     public sealed partial class GeneratedClusterControllerClientSnippets
     {
@@ -40,6 +41,11 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 ProjectId = "",
                 ClusterName = "",
                 Region = "",
+                TarballGcsDir = "",
+                TarballAccess = DiagnoseClusterRequest.Types.TarballAccess.Unspecified,
+                DiagnosisInterval = new Interval(),
+                Jobs = { "", },
+                YarnApplicationIds = { "", },
             };
             // Make the request
             Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = clusterControllerClient.DiagnoseCluster(request);

@@ -1,5 +1,96 @@
 # Version history
 
+## Version 3.15.0, released 2024-10-29
+
+### New features
+
+- Add feature flags proto for Direct Access ([commit 70094ae](https://github.com/googleapis/google-cloud-dotnet/commit/70094aea955279d55e675a50ee723b76ff65e4c8))
+
+## Version 3.14.0, released 2024-07-22
+
+### New features
+
+- Add MergeToCell to Mutation APIs ([commit df73f37](https://github.com/googleapis/google-cloud-dotnet/commit/df73f3746e5e6f88b8d27dfea7218c76420ae0fe))
+- Update Go Datastore import path ([commit 7f6db1c](https://github.com/googleapis/google-cloud-dotnet/commit/7f6db1c7b5315efdb47d6c76cec97c096e47d45c))
+- Update Go Bigtable import path ([commit 7f6db1c](https://github.com/googleapis/google-cloud-dotnet/commit/7f6db1c7b5315efdb47d6c76cec97c096e47d45c))
+- Publish ProtoRows Message ([commit 2a57721](https://github.com/googleapis/google-cloud-dotnet/commit/2a57721fa79603917f627877bded42820a015d05))
+- Publish the Cloud Bigtable ExecuteQuery API ([commit 92257e9](https://github.com/googleapis/google-cloud-dotnet/commit/92257e9e856a0266eac59f9174c89ccbcf92b229))
+## Version 3.13.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.12.0, released 2024-03-28
+
+### New features
+
+- Add feature flag for client side metrics ([commit 1f14edf](https://github.com/googleapis/google-cloud-dotnet/commit/1f14edf5d46734175e945ff69f28be3f2e7b0767))
+
+## Version 3.11.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 7707366](https://github.com/googleapis/google-cloud-dotnet/commit/77073662b153c73c7f9a869ede1376f4c7a12661))
+
+## Version 3.10.0, released 2024-03-12
+
+### New features
+
+- Publish new bigtable APIs for types and aggregates ([commit 47a6ffd](https://github.com/googleapis/google-cloud-dotnet/commit/47a6ffdfeb169ed5c08eb0243b7810bb42e9bf29))
+- Add authorized view bindings to Cloud Bigtable data APIs and messages ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- (From 3.10.0-beta01) Bigtable supports universe domain ([commit c3610f9](https://github.com/googleapis/google-cloud-dotnet/commit/c3610f97235f1582376e3a124b9531dc01a43a77))
+
+### Documentation improvements
+
+- The field `table_name` in message `.google.bigtable.v2.ReadRowsRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.SampleRowKeysRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.MutateRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.MutateRowsRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.CheckAndMutateRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.ReadModifyWriteRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+
+## Version 3.10.0-beta01, released 2024-02-08
+
+### New features
+
+- Bigtable supports universe domain ([commit c3610f9](https://github.com/googleapis/google-cloud-dotnet/commit/c3610f97235f1582376e3a124b9531dc01a43a77))
+
+## Version 3.9.0, released 2024-01-08
+
+### New features
+
+- Adding feature flags for routing cookie and retry info ([commit af7aca5](https://github.com/googleapis/google-cloud-dotnet/commit/af7aca508568fba8e04d3d037ed6485f1dba1b12))
+
+## Version 3.8.0, released 2023-09-18
+
+### Bug fixes
+
+- Add feature flag for improved mutate rows throttling ([commit ecb32d7](https://github.com/googleapis/google-cloud-dotnet/commit/ecb32d7dd57e3eaa044e470889df2fbbb7422d06))
+
+## Version 3.7.0, released 2023-08-04
+
+### New features
+
+- Add last_scanned_row_key feature ([commit 8ed082d](https://github.com/googleapis/google-cloud-dotnet/commit/8ed082d39a3cf87df915b5f294fc0099a7941129))
+- Add experimental reverse scan for public preview ([commit 132fa75](https://github.com/googleapis/google-cloud-dotnet/commit/132fa75640c28dc851d2da10f6ff0b696bd249b1))
+
+### Documentation improvements
+
+- Fix formatting for reversed order field example ([commit 5b10786](https://github.com/googleapis/google-cloud-dotnet/commit/5b107861e31136cb169dc84b070227d15cbbdc4b))
+
+## Version 3.6.0, released 2023-05-26
+
+### Bug fixes
+
+- Bigtable disposal of gRPC streaming call. ([commit 2a12927](https://github.com/googleapis/google-cloud-dotnet/commit/2a1292746e30e4dabc6ae5eddbb63fecf75521db))
+
+## Version 3.5.0, released 2023-05-03
+
+### New features
+
+- Publish RateLimitInfo and FeatureFlag protos ([commit b1efbfe](https://github.com/googleapis/google-cloud-dotnet/commit/b1efbfeabdbe21c90b7a5028828d935b75fa1b15))
+
 ## Version 3.4.0, released 2023-03-01
 
 ### Bug fixes

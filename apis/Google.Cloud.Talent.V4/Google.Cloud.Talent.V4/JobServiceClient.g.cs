@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,19 +17,19 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Talent.V4
 {
@@ -262,10 +262,10 @@ namespace Google.Cloud.Talent.V4
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SearchJobsForAlertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+        public gaxgrpc::CallSettings SearchJobsForAlertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="JobServiceSettings"/> object.</returns>
@@ -309,14 +309,14 @@ namespace Google.Cloud.Talent.V4
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobServiceClient.Create(callInvoker, Settings, Logger);
+            return JobServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<JobServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobServiceClient.Create(callInvoker, Settings, Logger);
+            return JobServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1658,14 +1658,23 @@ namespace Google.Cloud.Talent.V4
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs by filter.
@@ -1711,14 +1720,23 @@ namespace Google.Cloud.Talent.V4
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs by filter.
@@ -1764,14 +1782,23 @@ namespace Google.Cloud.Talent.V4
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobs(new ListJobsRequest
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists jobs by filter.
@@ -1817,14 +1844,23 @@ namespace Google.Cloud.Talent.V4
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Job"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListJobsAsync(new ListJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(TenantName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListJobsRequest request = new ListJobsRequest
             {
                 ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches for jobs using the provided
@@ -1968,7 +2004,11 @@ namespace Google.Cloud.Talent.V4
         {
             GrpcClient = grpcClient;
             JobServiceSettings effectiveSettings = settings ?? JobServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BatchCreateJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateJobsOperationsSettings, logger);
             BatchUpdateJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchUpdateJobsOperationsSettings, logger);
             BatchDeleteJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteJobsOperationsSettings, logger);

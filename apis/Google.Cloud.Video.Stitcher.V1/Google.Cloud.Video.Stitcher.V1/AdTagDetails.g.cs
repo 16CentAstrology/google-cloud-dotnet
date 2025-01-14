@@ -67,8 +67,11 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
   #region Messages
   /// <summary>
-  /// Container for a live session's ad tag detail.
+  /// Information related to the details for one ad tag. This resource is only
+  /// available for live sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LiveAdTagDetail : pb::IMessage<LiveAdTagDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -292,8 +295,11 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
 
   /// <summary>
-  /// Information related to the details for one ad tag.
+  /// Information related to the details for one ad tag. This resource is only
+  /// available for VOD sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodAdTagDetail : pb::IMessage<VodAdTagDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -519,6 +525,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Details of an ad request to an ad server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdRequest : pb::IMessage<AdRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -812,6 +819,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for an ad request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestMetadata : pb::IMessage<RequestMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1016,6 +1024,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for the response of an ad request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseMetadata : pb::IMessage<ResponseMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -57,6 +57,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [ServingConfig][google.cloud.retail.v2.ServingConfig] and affect search or
   /// recommendation results at serving time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Control : pb::IMessage<Control>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

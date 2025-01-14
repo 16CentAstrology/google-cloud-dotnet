@@ -71,6 +71,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -528,6 +529,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Represents the custom metadata of the RunWorkflow long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunWorkflowCustomOperationMetadata : pb::IMessage<RunWorkflowCustomOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

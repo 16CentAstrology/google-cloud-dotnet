@@ -43,7 +43,6 @@ namespace Google.Cloud.Tools.Common
         // Pattern to extract the underlying API version from the package name.
         private static readonly Regex PackageIdVersionPattern = new Regex(@"\.V[1-9]\d*[-A-Za-z0-9]*$");
         private static readonly Regex PrereleaseApiPattern = new Regex(@"^V[1-9]\d*[^\d]+.*$");
-        private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
         public string Id { get; set; }
         public string Version { get; set; }
@@ -51,6 +50,11 @@ namespace Google.Cloud.Tools.Common
         public ApiType Type { get; set; }
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
+
+        /// <summary>
+        /// If non-null, this gives the reason to not release until the property has been removed.
+        /// </summary>
+        public string BlockRelease { get; set; }
 
         /// <summary>
         /// The type to include as library_type in the .repo-metadata.json file, when the defaulting
@@ -126,28 +130,6 @@ namespace Google.Cloud.Tools.Common
         /// The type of generator used to generate source code for this API.
         /// </summary>
         public GeneratorType Generator { get; set; }
-
-        /// <summary>
-        /// The autogenerator type used to maintain this API, when specified explicitly.
-        /// </summary>
-        public AutoGeneratorType? AutoGenerator { get; set; }
-
-        /// <summary>
-        /// Determines the autogenerator type for this API based on what's explicitly configured,
-        /// and sensible defaults otherwise.
-        /// </summary>
-        public AutoGeneratorType DetermineAutoGeneratorType()
-        {
-            if (AutoGenerator != null)
-            {
-                return AutoGenerator.Value;
-            }
-
-            // Default to OwlBot, now that almost everything supports it.
-            // Anything else should be specified explicitly.
-            // (This only applies to generated APIs, however.)
-            return Generator == GeneratorType.None ? AutoGeneratorType.None : AutoGeneratorType.OwlBot;
-        }
         
         /// <summary>
         /// The path within googleapis for the API protos.
@@ -175,10 +157,38 @@ namespace Google.Cloud.Tools.Common
         public string EffectivePackageOwner => PackageOwner ?? (Id.StartsWith("Google.Cloud") ? "google-cloud" : "google-apis-packages");
 
         [JsonIgnore]
-        public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
-
-        [JsonIgnore]
         public StructuredVersion StructuredVersion => StructuredVersion.FromString(Version);
+
+        /// <summary>
+        /// Projects that exist in a non-predictable fashion.
+        /// Only the suffix is required - so for "Google.Cloud.Storage.V2.IntegrationTests" in "Google.Cloud.Storage.V2", this
+        /// would just have "IntegrationTests". Where the suffix doesn't match, a leading caret (^) is used to indicate this.
+        /// </summary>
+        public string[] Projects { get; set; }
+
+        /// <summary>
+        /// Derives the expected list of projects for the API. The full project names are returned.
+        /// Exmaples: "Google.Cloud.Storage.V2", "Google.Cloud.Storage.V2.IntegrationTests".
+        /// </summary>
+        /// <remarks>
+        /// We always expect a library with the same name as <see cref="Id">.
+        /// GAPIC libraries always have Snippets and GeneratedSnippets. Any other projects must be specified in <see cref="Projects"/>.
+        /// </remarks>
+        public IEnumerable<string> DeriveProjects()
+        {
+            yield return Id;
+            if (Generator == GeneratorType.Micro)
+            {
+                yield return $"{Id}.Snippets";
+                yield return $"{Id}.GeneratedSnippets";
+            }
+            foreach (var explicitProject in Projects ?? new string[0])
+            {
+                yield return explicitProject.StartsWith("^")
+                    ? explicitProject[1..]
+                    : $"{Id}.{explicitProject}";
+            }
+        }
 
         /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one
@@ -208,6 +218,14 @@ namespace Google.Cloud.Tools.Common
         /// <param name="package">The name of the package, e.g. Google.Cloud.Storage.V1</param>
         public static bool IsCloudPackage(string package) => package.StartsWith("Google.Cloud.") || PseudoCloudPackages.Contains(package);
 
+        /// <summary>
+        /// Whether or not to include the common resources proto when generating. This is true for
+        /// most-but-not-all Cloud APIs, and false for most-but-not-all non-Cloud APIs.
+        /// This property is nullable in order to be able to detect whether or not it's been explicitly set.
+        /// It *should* be explicitly set for all GAPIC APIs.
+        /// </summary>
+        public bool? IncludeCommonResourcesProto { get; set; }
+
         // TODO: Optimize to do this lazily if it's ever an issue
         [JsonIgnore]
         public bool CanHaveGaRelease
@@ -230,7 +248,7 @@ namespace Google.Cloud.Tools.Common
         /// the token is part of <see cref="ApiCatalog.Json"/>.
         /// </summary>
         [JsonIgnore]
-        public JToken Json { get; set; }
+        public JObject Json { get; set; }
 
         /// <summary>
         /// The package group that this package is part of. This is populated

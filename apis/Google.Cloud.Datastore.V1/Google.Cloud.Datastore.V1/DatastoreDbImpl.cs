@@ -43,6 +43,9 @@ namespace Google.Cloud.Datastore.V1
         /// <inheritdoc/>
         public override string NamespaceId { get; }
 
+        /// <inheritdoc/>
+        public override string DatabaseId { get; }
+
         private readonly PartitionId _partitionId;
 
         /// <summary>
@@ -54,17 +57,28 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="namespaceId">The namespace ID. Must not be null.</param>
         /// <param name="client">The client to use for underlying operations. Must not be null.</param>
-        public DatastoreDbImpl(string projectId, string namespaceId, DatastoreClient client) : base()
+        public DatastoreDbImpl(string projectId, string namespaceId, DatastoreClient client) : this(projectId, namespaceId, DefaultDatabaseId, client)
+        { }
+
+        /// <summary>
+        /// Constructs an instance from the given project ID, namespace ID and client.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="namespaceId">The namespace ID. Must not be null.</param>
+        /// <param name="databaseId">The database ID. Must not be null.</param>
+        /// <param name="client">The client to use for underlying operations. Must not be null.</param>
+        public DatastoreDbImpl(string projectId, string namespaceId, string databaseId, DatastoreClient client) : base()
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             NamespaceId = GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId));
-            _partitionId = new PartitionId(projectId, namespaceId);
+            DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+            _partitionId = new PartitionId(projectId, namespaceId, databaseId);
             Client = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
         /// <inheritdoc/>
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
-        
+
         /// <inheritdoc/>
         public override LazyDatastoreQuery RunQueryLazily(
             Query query,
@@ -75,6 +89,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = GetReadOptions(readConsistency)
@@ -90,6 +105,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 AggregationQuery = query,
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 ReadOptions = GetReadOptions(readConsistency)
             };
@@ -104,6 +120,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 GqlQuery = query,
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 ReadOptions = GetReadOptions(readConsistency)
             };
@@ -118,6 +135,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 AggregationQuery = query,
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 ReadOptions = GetReadOptions(readConsistency)
             };
@@ -132,6 +150,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 GqlQuery = query,
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 ReadOptions = GetReadOptions(readConsistency)
             };
@@ -149,6 +168,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = GetReadOptions(readConsistency)
@@ -167,6 +187,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = GetReadOptions(readConsistency)
@@ -185,6 +206,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
                 PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = GetReadOptions(readConsistency)
@@ -194,30 +216,35 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null) =>
-            DatastoreTransaction.Create(Client, ProjectId, NamespaceId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
+        public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId };
+            var response = Client.BeginTransaction(request, callSettings);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
+        }
 
         /// <inheritdoc/>
         public override async Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
         {
-            var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
-            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId };
+            var response = await Client.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
         }
 
         /// <inheritdoc/>
         public override DatastoreTransaction BeginTransaction(TransactionOptions options, CallSettings callSettings = null)
         {
-            var request = new BeginTransactionRequest { ProjectId = ProjectId, TransactionOptions = options };
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId, TransactionOptions = options };
             var response = Client.BeginTransaction(request, callSettings);
-            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
         }
 
         /// <inheritdoc/>
         public override async Task<DatastoreTransaction> BeginTransactionAsync(TransactionOptions options, CallSettings callSettings = null)
         {
-            var request = new BeginTransactionRequest { ProjectId = ProjectId, TransactionOptions = options };
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId, TransactionOptions = options };
             var response = await Client.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
-            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
         }
 
         /// <inheritdoc/>
@@ -226,7 +253,13 @@ namespace Google.Cloud.Datastore.V1
             // TODO: Validation. All keys should be non-null, and have a filled in path element
             // until the final one, which should just have a kind. Or we could just let the server validate...
             keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
-            var response = Client.AllocateIds(ProjectId, keys, callSettings);
+            var allocateIdsRequest = new AllocateIdsRequest
+            {
+                ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
+                Keys = { keys, }
+            };
+            var response = Client.AllocateIds(allocateIdsRequest, callSettings);
             return response.Keys.ToList();
         }
 
@@ -236,79 +269,101 @@ namespace Google.Cloud.Datastore.V1
             // TODO: Validation. All keys should be non-null, and have a filled in path element
             // until the final one, which should just have a kind. Or we could just let the server validate...
             keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
-            var response = await Client.AllocateIdsAsync(ProjectId, keys, callSettings).ConfigureAwait(false);
+            var allocateIdsRequest = new AllocateIdsRequest
+            {
+                ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
+                Keys = { keys, }
+            };
+            var response = await Client.AllocateIdsAsync(allocateIdsRequest, callSettings).ConfigureAwait(false);
             return response.Keys.ToList();
         }
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-            => LookupImpl(Client, ProjectId, GetReadOptions(readConsistency), keys, callSettings);
+        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            LookupImpl(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
 
         /// <inheritdoc/>
-        public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-            => LookupImplAsync(Client, ProjectId, GetReadOptions(readConsistency), keys, callSettings);
+        public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            LookupImplAsync(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
 
         // Non-transactional mutations
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToInsert(), SetKey, nameof(entities), callSettings);
+            Commit(entities, e => e.ToInsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override Task<IReadOnlyList<Key>> InsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToInsert(), SetKey, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToInsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToUpsert(), SetKey, nameof(entities), callSettings);
+            Commit(entities, e => e.ToUpsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override Task<IReadOnlyList<Key>> UpsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToUpsert(), SetKey, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToUpsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override void Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToUpdate(), null, nameof(entities), callSettings);
+            Commit(entities, e => e.ToUpdate(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToUpdate(), null, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToUpdate(), null, callSettings);
 
         /// <inheritdoc/>
         public override void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToDelete(), null, nameof(entities), callSettings);
+            Commit(entities, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task DeleteAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToDelete(), null, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override void Delete(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            Commit(keys, e => e.ToDelete(), null, nameof(keys), callSettings);
+            Commit(keys, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task DeleteAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            CommitAsync(keys, e => e.ToDelete(), null, nameof(keys), callSettings);
+            CommitAsync(keys, e => e.ToDelete(), null,callSettings);
 
-        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, string parameterName, CallSettings callSettings)
+        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, CallSettings callSettings)
         {
-            // TODO: Validation
-
             // Ensure we only iterate over values once
             var valuesList = values.ToList();
-            var response = Client.Commit(ProjectId, Mode.NonTransactional, valuesList.Select(conversion), callSettings);
+            var commitRequest = new CommitRequest
+            {
+                ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
+                Mode = Mode.NonTransactional,
+                Mutations =
+                {
+                    valuesList.Select(conversion) ?? Enumerable.Empty<Mutation>(),
+                },
+            };
+            var response = Client.Commit(commitRequest, callSettings);
             PropagateKeys(valuesList, response, keyPropagation);
 
             return response.MutationResults.Select(mr => mr.Key).ToList();
         }
 
-        private async Task<IReadOnlyList<Key>> CommitAsync<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, string parameterName, CallSettings callSettings)
+        private async Task<IReadOnlyList<Key>> CommitAsync<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, CallSettings callSettings)
         {
-            // TODO: Validation
-
             // Ensure we only iterate over values once
             var valuesList = values.ToList();
-            var response = await Client.CommitAsync(ProjectId, Mode.NonTransactional, values.Select(conversion), callSettings).ConfigureAwait(false);
+            var commitRequest = new CommitRequest
+            {
+                ProjectId = ProjectId,
+                DatabaseId = DatabaseId,
+                Mode = Mode.NonTransactional,
+                Mutations =
+                {
+                    valuesList.Select(conversion) ?? Enumerable.Empty<Mutation>(),
+                },
+            };
+            var response = await Client.CommitAsync(commitRequest, callSettings).ConfigureAwait(false);
             PropagateKeys(valuesList, response, keyPropagation);
 
             return response.MutationResults.Select(mr => mr.Key).ToList();

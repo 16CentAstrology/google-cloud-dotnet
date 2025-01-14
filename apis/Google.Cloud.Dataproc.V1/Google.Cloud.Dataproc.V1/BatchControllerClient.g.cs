@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataproc.V1
 {
@@ -174,14 +174,14 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BatchControllerClient.Create(callInvoker, Settings, Logger);
+            return BatchControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BatchControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BatchControllerClient.Create(callInvoker, Settings, Logger);
+            return BatchControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -619,13 +619,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Batch"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBatchesResponse, Batch> ListBatches(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatches(new ListBatchesRequest
+        public virtual gax::PagedEnumerable<ListBatchesResponse, Batch> ListBatches(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchesRequest request = new ListBatchesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatches(request, callSettings);
+        }
 
         /// <summary>
         /// Lists batch workloads.
@@ -643,13 +652,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Batch"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBatchesResponse, Batch> ListBatchesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchesAsync(new ListBatchesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBatchesResponse, Batch> ListBatchesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchesRequest request = new ListBatchesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists batch workloads.
@@ -667,13 +685,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Batch"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBatchesResponse, Batch> ListBatches(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatches(new ListBatchesRequest
+        public virtual gax::PagedEnumerable<ListBatchesResponse, Batch> ListBatches(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchesRequest request = new ListBatchesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatches(request, callSettings);
+        }
 
         /// <summary>
         /// Lists batch workloads.
@@ -691,13 +718,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Batch"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBatchesResponse, Batch> ListBatchesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBatchesAsync(new ListBatchesRequest
+        public virtual gax::PagedAsyncEnumerable<ListBatchesResponse, Batch> ListBatchesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBatchesRequest request = new ListBatchesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBatchesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the batch workload resource. If the batch is not in terminal state,
@@ -850,7 +886,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             BatchControllerSettings effectiveSettings = settings ?? BatchControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBatchOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateBatch = clientHelper.BuildApiCall<CreateBatchRequest, lro::Operation>("CreateBatch", grpcClient.CreateBatchAsync, grpcClient.CreateBatch, effectiveSettings.CreateBatchSettings).WithGoogleRequestParam("parent", request => request.Parent);

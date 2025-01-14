@@ -53,6 +53,7 @@ namespace Google.Apps.Script.Type.Sheets {
   /// <summary>
   /// Sheets add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SheetsAddOnManifest : pb::IMessage<SheetsAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -308,6 +309,7 @@ namespace Google.Apps.Script.Type.Sheets {
   /// <summary>
   /// Common format for declaring a Sheets add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SheetsExtensionPoint : pb::IMessage<SheetsExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

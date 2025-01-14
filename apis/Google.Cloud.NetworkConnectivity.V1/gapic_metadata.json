@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "HubServiceClient",
           "rpcs": {
+            "AcceptHubSpoke": {
+              "methods": [
+                "AcceptHubSpoke",
+                "AcceptHubSpokeAsync"
+              ]
+            },
             "CreateHub": {
               "methods": [
                 "CreateHub",
@@ -34,10 +40,28 @@
                 "DeleteSpokeAsync"
               ]
             },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
             "GetHub": {
               "methods": [
                 "GetHub",
                 "GetHubAsync"
+              ]
+            },
+            "GetRoute": {
+              "methods": [
+                "GetRoute",
+                "GetRouteAsync"
+              ]
+            },
+            "GetRouteTable": {
+              "methods": [
+                "GetRouteTable",
+                "GetRouteTableAsync"
               ]
             },
             "GetSpoke": {
@@ -46,16 +70,58 @@
                 "GetSpokeAsync"
               ]
             },
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "ListHubSpokes": {
+              "methods": [
+                "ListHubSpokes",
+                "ListHubSpokesAsync"
+              ]
+            },
             "ListHubs": {
               "methods": [
                 "ListHubs",
                 "ListHubsAsync"
               ]
             },
+            "ListRouteTables": {
+              "methods": [
+                "ListRouteTables",
+                "ListRouteTablesAsync"
+              ]
+            },
+            "ListRoutes": {
+              "methods": [
+                "ListRoutes",
+                "ListRoutesAsync"
+              ]
+            },
             "ListSpokes": {
               "methods": [
                 "ListSpokes",
                 "ListSpokesAsync"
+              ]
+            },
+            "QueryHubStatus": {
+              "methods": [
+                "QueryHubStatus",
+                "QueryHubStatusAsync"
+              ]
+            },
+            "RejectHubSpoke": {
+              "methods": [
+                "RejectHubSpoke",
+                "RejectHubSpokeAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
               ]
             },
             "UpdateHub": {
@@ -68,6 +134,39 @@
               "methods": [
                 "UpdateSpoke",
                 "UpdateSpokeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyBasedRoutingService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyBasedRoutingServiceClient",
+          "rpcs": {
+            "CreatePolicyBasedRoute": {
+              "methods": [
+                "CreatePolicyBasedRoute",
+                "CreatePolicyBasedRouteAsync"
+              ]
+            },
+            "DeletePolicyBasedRoute": {
+              "methods": [
+                "DeletePolicyBasedRoute",
+                "DeletePolicyBasedRouteAsync"
+              ]
+            },
+            "GetPolicyBasedRoute": {
+              "methods": [
+                "GetPolicyBasedRoute",
+                "GetPolicyBasedRouteAsync"
+              ]
+            },
+            "ListPolicyBasedRoutes": {
+              "methods": [
+                "ListPolicyBasedRoutes",
+                "ListPolicyBasedRoutesAsync"
               ]
             }
           }

@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.Data
     /// <see cref="Add(string, SpannerParameterCollection)"/> or <see cref="Add(SpannerCommand)"/> methods.
     /// </para>
     /// <para>
-    /// For batched DML commands use <see cref="ExecuteNonQueryAsync(CancellationToken)"/> or 
+    /// For batched DML commands use <see cref="ExecuteNonQueryAsync(CancellationToken)"/> or
     /// <see cref="ExecuteNonQuery" /> to execute the batched commands.
     /// </para>
     /// </summary>
@@ -39,6 +39,7 @@ namespace Google.Cloud.Spanner.Data
     {
         private int _commandTimeout;
         private SpannerBatchCommandType _commandType;
+        private TimeSpan? _maxCommitDelay;
 
         internal SpannerBatchCommand(SpannerConnection connection)
         {
@@ -107,6 +108,36 @@ namespace Google.Cloud.Spanner.Data
         /// The RPC priority to use for this command. The default priority is Unspecified.
         /// </summary>
         public Priority Priority { get; set; }
+
+        /// <summary>
+        /// The maximum amount of time the commit of the implicit transaction associated with this command, if any,
+        /// may be delayed server side for batching with other commits.
+        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
+        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
+        /// May be null, in which case commits will continue to be batched as they had been before this configuration
+        /// option was made available to Spanner API consumers.
+        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
+        /// </summary>
+        /// <remarks>
+        /// When a batch command is executed with no explicit or ambient transaction, an implicit transaction is created
+        /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
+        /// if there is any. Otherwise, this value will be ignored.
+        /// </remarks>
+        public TimeSpan? MaxCommitDelay
+        {
+            get => _maxCommitDelay;
+            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
+        }
+
+        /// <summary>
+        /// Options to be used for creating the ephemeral transaction under which this command will be executed
+        /// if no explicit or ambient transaction is set.
+        /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
+        /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
+        /// and similar methods.
+        /// May be null, in which case appropriate defaults will be used when needed.
+        /// </summary>
+        public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
 
         /// <summary>
         /// Adds a command to the collection of batch commands to be executed by this <see cref="SpannerBatchCommand"/>.
@@ -180,7 +211,7 @@ namespace Google.Cloud.Spanner.Data
         /// Executes the batch commands sequentially. The execution of this method overall is asynchronous.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
-        /// <returns>A task that once completed will indicate the number of rows 
+        /// <returns>A task that once completed will indicate the number of rows
         /// affected by each of the executed commands.
         /// If a command fails, execution is halted and this method will return a faulted task with an <see cref="SpannerBatchNonQueryException"/>
         /// containing information about the failure and the number of affected rows by each of the commands

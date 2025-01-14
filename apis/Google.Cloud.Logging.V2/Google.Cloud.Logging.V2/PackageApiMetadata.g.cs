@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Logging.V2
@@ -38,8 +38,8 @@ namespace Google.Cloud.Logging.V2
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v2/{name=*/*/locations/*/operations/*}", "additionalBindings": [ { "get": "/v2/{name=projects/*/locations/*/operations/*}" }, { "get": "/v2/{name=organizations/*/locations/*/operations/*}" }, { "get": "/v2/{name=folders/*/locations/*/operations/*}" }, { "get": "/v2/{name=billingAccounts/*/operations/*}" } ] }
-                    proto::ByteString.FromBase64("EicvdjIve25hbWU9Ki8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aMBIuL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfVo1EjMvdjIve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aLxItL3YyL3tuYW1lPWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9WisSKS92Mi97bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9vcGVyYXRpb25zLyp9")
+                    // { "get": "/v2/{name=*/*/locations/*/operations/*}", "additionalBindings": [ { "get": "/v2/{name=projects/*/locations/*/operations/*}" }, { "get": "/v2/{name=organizations/*/locations/*/operations/*}" }, { "get": "/v2/{name=folders/*/locations/*/operations/*}" }, { "get": "/v2/{name=billingAccounts/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EicvdjIve25hbWU9Ki8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aMBIuL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfVo1EjMvdjIve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn1aLxItL3YyL3tuYW1lPWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9WjcSNS92Mi97bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",

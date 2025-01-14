@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gclv = Google.Cloud.Logging.V2;
 using sys = System;
 
@@ -408,10 +408,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(LogBucketName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LogBucketName a, LogBucketName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LogBucketName a, LogBucketName b) => !(a == b);
     }
 
@@ -850,10 +862,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(LogViewName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LogViewName a, LogViewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LogViewName a, LogViewName b) => !(a == b);
     }
 
@@ -1196,11 +1220,475 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(LogSinkName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LogSinkName a, LogSinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LogSinkName a, LogSinkName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>Link</c> resource.</summary>
+    public sealed partial class LinkName : gax::IResourceName, sys::IEquatable<LinkName>
+    {
+        /// <summary>The possible contents of <see cref="LinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>
+            /// .
+            /// </summary>
+            ProjectLocationBucketLink = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+            /// </summary>
+            OrganizationLocationBucketLink = 2,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+            /// </summary>
+            FolderLocationBucketLink = 3,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+            /// </summary>
+            BillingAccountLocationBucketLink = 4,
+        }
+
+        private static gax::PathTemplate s_projectLocationBucketLink = new gax::PathTemplate("projects/{project}/locations/{location}/buckets/{bucket}/links/{link}");
+
+        private static gax::PathTemplate s_organizationLocationBucketLink = new gax::PathTemplate("organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}");
+
+        private static gax::PathTemplate s_folderLocationBucketLink = new gax::PathTemplate("folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}");
+
+        private static gax::PathTemplate s_billingAccountLocationBucketLink = new gax::PathTemplate("billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}");
+
+        /// <summary>Creates a <see cref="LinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="LinkName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static LinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="LinkName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LinkName"/> constructed from the provided ids.</returns>
+        public static LinkName FromProjectLocationBucketLink(string projectId, string locationId, string bucketId, string linkId) =>
+            new LinkName(ResourceNameType.ProjectLocationBucketLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), linkId: gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Creates a <see cref="LinkName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LinkName"/> constructed from the provided ids.</returns>
+        public static LinkName FromOrganizationLocationBucketLink(string organizationId, string locationId, string bucketId, string linkId) =>
+            new LinkName(ResourceNameType.OrganizationLocationBucketLink, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), linkId: gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Creates a <see cref="LinkName"/> with the pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LinkName"/> constructed from the provided ids.</returns>
+        public static LinkName FromFolderLocationBucketLink(string folderId, string locationId, string bucketId, string linkId) =>
+            new LinkName(ResourceNameType.FolderLocationBucketLink, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), linkId: gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Creates a <see cref="LinkName"/> with the pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LinkName"/> constructed from the provided ids.</returns>
+        public static LinkName FromBillingAccountLocationBucketLink(string billingAccountId, string locationId, string bucketId, string linkId) =>
+            new LinkName(ResourceNameType.BillingAccountLocationBucketLink, billingAccountId: gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), linkId: gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string bucketId, string linkId) =>
+            FormatProjectLocationBucketLink(projectId, locationId, bucketId, linkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </returns>
+        public static string FormatProjectLocationBucketLink(string projectId, string locationId, string bucketId, string linkId) =>
+            s_projectLocationBucketLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LinkName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LinkName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationBucketLink(string organizationId, string locationId, string bucketId, string linkId) =>
+            s_organizationLocationBucketLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LinkName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LinkName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </returns>
+        public static string FormatFolderLocationBucketLink(string folderId, string locationId, string bucketId, string linkId) =>
+            s_folderLocationBucketLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LinkName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LinkName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>.
+        /// </returns>
+        public static string FormatBillingAccountLocationBucketLink(string billingAccountId, string locationId, string bucketId, string linkId) =>
+            s_billingAccountLocationBucketLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="LinkName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="linkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LinkName"/> if successful.</returns>
+        public static LinkName Parse(string linkName) => Parse(linkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="LinkName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="linkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="LinkName"/> if successful.</returns>
+        public static LinkName Parse(string linkName, bool allowUnparsed) =>
+            TryParse(linkName, allowUnparsed, out LinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>Tries to parse the given resource name string into a new <see cref="LinkName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="linkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string linkName, out LinkName result) => TryParse(linkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/links/{link}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="linkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string linkName, bool allowUnparsed, out LinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(linkName, nameof(linkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationBucketLink.TryParseName(linkName, out resourceName))
+            {
+                result = FromProjectLocationBucketLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_organizationLocationBucketLink.TryParseName(linkName, out resourceName))
+            {
+                result = FromOrganizationLocationBucketLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_folderLocationBucketLink.TryParseName(linkName, out resourceName))
+            {
+                result = FromFolderLocationBucketLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_billingAccountLocationBucketLink.TryParseName(linkName, out resourceName))
+            {
+                result = FromBillingAccountLocationBucketLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(linkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private LinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string billingAccountId = null, string bucketId = null, string folderId = null, string linkId = null, string locationId = null, string organizationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BillingAccountId = billingAccountId;
+            BucketId = bucketId;
+            FolderId = folderId;
+            LinkId = linkId;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="LinkName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/links/{link}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="linkId">The <c>Link</c> ID. Must not be <c>null</c> or empty.</param>
+        public LinkName(string projectId, string locationId, string bucketId, string linkId) : this(ResourceNameType.ProjectLocationBucketLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), linkId: gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>BillingAccount</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string BillingAccountId { get; }
+
+        /// <summary>
+        /// The <c>Bucket</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string BucketId { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Link</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LinkId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationBucketLink: return s_projectLocationBucketLink.Expand(ProjectId, LocationId, BucketId, LinkId);
+                case ResourceNameType.OrganizationLocationBucketLink: return s_organizationLocationBucketLink.Expand(OrganizationId, LocationId, BucketId, LinkId);
+                case ResourceNameType.FolderLocationBucketLink: return s_folderLocationBucketLink.Expand(FolderId, LocationId, BucketId, LinkId);
+                case ResourceNameType.BillingAccountLocationBucketLink: return s_billingAccountLocationBucketLink.Expand(BillingAccountId, LocationId, BucketId, LinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as LinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(LinkName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(LinkName a, LinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(LinkName a, LinkName b) => !(a == b);
     }
 
     /// <summary>Resource name for the <c>LogExclusion</c> resource.</summary>
@@ -1550,10 +2038,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(LogExclusionName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(LogExclusionName a, LogExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(LogExclusionName a, LogExclusionName b) => !(a == b);
     }
 
@@ -1883,10 +2383,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(CmekSettingsName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(CmekSettingsName a, CmekSettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(CmekSettingsName a, CmekSettingsName b) => !(a == b);
     }
 
@@ -2209,10 +2721,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(SettingsName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(SettingsName a, SettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(SettingsName a, SettingsName b) => !(a == b);
     }
 
@@ -2438,10 +2962,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(OrganizationLocationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(OrganizationLocationName a, OrganizationLocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(OrganizationLocationName a, OrganizationLocationName b) => !(a == b);
     }
 
@@ -2657,10 +3193,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(FolderLocationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(FolderLocationName a, FolderLocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(FolderLocationName a, FolderLocationName b) => !(a == b);
     }
 
@@ -2886,10 +3434,22 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         public bool Equals(BillingAccountLocationName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(BillingAccountLocationName a, BillingAccountLocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(BillingAccountLocationName a, BillingAccountLocationName b) => !(a == b);
     }
 
@@ -2935,6 +3495,18 @@ namespace Google.Cloud.Logging.V2
         {
             get => string.IsNullOrEmpty(Destination) ? null : gax::UnparsedResourceName.Parse(Destination);
             set => Destination = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Link
+    {
+        /// <summary>
+        /// <see cref="gclv::LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LinkName LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -3327,6 +3899,54 @@ namespace Google.Cloud.Logging.V2
         {
             get => string.IsNullOrEmpty(SinkName) ? null : LogSinkName.Parse(SinkName, allowUnparsed: true);
             set => SinkName = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateLinkRequest
+    {
+        /// <summary>
+        /// <see cref="LogBucketName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LogBucketName ParentAsLogBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LogBucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LinkName LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListLinksRequest
+    {
+        /// <summary>
+        /// <see cref="LogBucketName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LogBucketName ParentAsLogBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LogBucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LinkName LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

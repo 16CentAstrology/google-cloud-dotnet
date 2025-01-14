@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Dialogflow.V2;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -1059,6 +1061,141 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
             // Make the request
             SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSummary</summary>
+        public void GenerateStatelessSummaryRequestObject()
+        {
+            // Snippet: GenerateStatelessSummary(GenerateStatelessSummaryRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateStatelessSummaryRequest request = new GenerateStatelessSummaryRequest
+            {
+                StatelessConversation = new GenerateStatelessSummaryRequest.Types.MinimalConversation(),
+                ConversationProfile = new ConversationProfile(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                MaxContextSize = 0,
+            };
+            // Make the request
+            GenerateStatelessSummaryResponse response = conversationsClient.GenerateStatelessSummary(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSummaryAsync</summary>
+        public async Task GenerateStatelessSummaryRequestObjectAsync()
+        {
+            // Snippet: GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest, CallSettings)
+            // Additional: GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateStatelessSummaryRequest request = new GenerateStatelessSummaryRequest
+            {
+                StatelessConversation = new GenerateStatelessSummaryRequest.Types.MinimalConversation(),
+                ConversationProfile = new ConversationProfile(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                MaxContextSize = 0,
+            };
+            // Make the request
+            GenerateStatelessSummaryResponse response = await conversationsClient.GenerateStatelessSummaryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSuggestion</summary>
+        public void GenerateStatelessSuggestionRequestObject()
+        {
+            // Snippet: GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSuggestionAsync</summary>
+        public async Task GenerateStatelessSuggestionRequestObjectAsync()
+        {
+            // Snippet: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CallSettings)
+            // Additional: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = await conversationsClient.GenerateStatelessSuggestionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchKnowledge</summary>
+        public void SearchKnowledgeRequestObject()
+        {
+            // Snippet: SearchKnowledge(SearchKnowledgeRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            SearchKnowledgeRequest request = new SearchKnowledgeRequest
+            {
+                Query = new TextInput(),
+                ConversationProfileAsConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
+                SessionId = "",
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                Parent = "",
+                QuerySource = SearchKnowledgeRequest.Types.QuerySource.Unspecified,
+                EndUserMetadata = new Struct(),
+                SearchConfig = new SearchKnowledgeRequest.Types.SearchConfig(),
+                ExactSearch = false,
+            };
+            // Make the request
+            SearchKnowledgeResponse response = conversationsClient.SearchKnowledge(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchKnowledgeAsync</summary>
+        public async Task SearchKnowledgeRequestObjectAsync()
+        {
+            // Snippet: SearchKnowledgeAsync(SearchKnowledgeRequest, CallSettings)
+            // Additional: SearchKnowledgeAsync(SearchKnowledgeRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchKnowledgeRequest request = new SearchKnowledgeRequest
+            {
+                Query = new TextInput(),
+                ConversationProfileAsConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
+                SessionId = "",
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                Parent = "",
+                QuerySource = SearchKnowledgeRequest.Types.QuerySource.Unspecified,
+                EndUserMetadata = new Struct(),
+                SearchConfig = new SearchKnowledgeRequest.Types.SearchConfig(),
+                ExactSearch = false,
+            };
+            // Make the request
+            SearchKnowledgeResponse response = await conversationsClient.SearchKnowledgeAsync(request);
             // End snippet
         }
     }

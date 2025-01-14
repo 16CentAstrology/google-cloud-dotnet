@@ -54,7 +54,12 @@ public abstract partial class PublisherClient : IAsyncDisposable
     public static TimeSpan DefaultDisposeTimeout { get; } = TimeSpan.FromSeconds(5);
 
     /// <summary>
-    /// The associated <see cref="TopicName"/>. 
+    /// The default <see cref="Settings.CompressionBytesThreshold"/> of 240 bytes for the publisher message compression.
+    /// </summary>
+    public static long DefaultCompressionBytesThreshold { get; } = 240;
+
+    /// <summary>
+    /// The associated <see cref="TopicName"/>.
     /// </summary>
     public virtual TopicName TopicName => throw new NotImplementedException();
 

@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.2.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.1.1, released 2024-02-29
+
+Purely a release-process patch, re-releasing 3.1.0 which failed to
+release.
+
+## Version 3.1.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 3.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

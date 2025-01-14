@@ -1,5 +1,31 @@
 # Version history
 
+## Version 2.5.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.4.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.3.0, released 2024-02-29
+
+### Documentation improvements
+
+- Update formatting for `Purpose` class documentation ([commit 162977d](https://github.com/googleapis/google-cloud-dotnet/commit/162977db9e125b809c8758ef7a176d36717ca166))
+- Add documentation for additional acceptable formats for `namespaced_tag_key` and `namespaced_tag_value`in `EffectiveTag`, `parent` in `ListTagKeysRequest`, `parent` in `TagKey`, and `namespaced_name` in `TagValue` ([commit 162977d](https://github.com/googleapis/google-cloud-dotnet/commit/162977db9e125b809c8758ef7a176d36717ca166))
+- Update the table format in SearchProjects docs ([commit 6e0900b](https://github.com/googleapis/google-cloud-dotnet/commit/6e0900b77422408914a86baeae4d672168c1173f))
+
+## Version 2.2.0, released 2023-04-21
+
+### New features
+
+- Add TagHolds, GetNamespacedTagKey, and GetNamespacedTagValue APIs. Adds support for project parented tags ([commit debfa3e](https://github.com/googleapis/google-cloud-dotnet/commit/debfa3ec0e61495e9001a76da7fc8dd09d082675))
+
 ## Version 2.1.0, released 2023-01-18
 
 ### New features

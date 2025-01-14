@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_FeaturestoreOnlineServingService_StreamingReadFeatureValues_sync_flattened]
     using Google.Api.Gax.Grpc;
@@ -38,7 +38,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Initialize request argument(s)
             string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

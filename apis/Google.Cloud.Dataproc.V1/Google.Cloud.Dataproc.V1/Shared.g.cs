@@ -28,108 +28,131 @@ namespace Google.Cloud.Dataproc.V1 {
             "bGUuY2xvdWQuZGF0YXByb2MudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
             "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9w",
             "cm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byLIAQoNUnVudGltZUNvbmZpZxIUCgd2ZXJzaW9uGAEgASgJ",
+            "dGFtcC5wcm90byL1AgoNUnVudGltZUNvbmZpZxIUCgd2ZXJzaW9uGAEgASgJ",
             "QgPgQQESHAoPY29udGFpbmVyX2ltYWdlGAIgASgJQgPgQQESUAoKcHJvcGVy",
             "dGllcxgDIAMoCzI3Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5SdW50aW1l",
-            "Q29uZmlnLlByb3BlcnRpZXNFbnRyeUID4EEBGjEKD1Byb3BlcnRpZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqsBChFFbnZpcm9u",
-            "bWVudENvbmZpZxJIChBleGVjdXRpb25fY29uZmlnGAEgASgLMikuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwcm9jLnYxLkV4ZWN1dGlvbkNvbmZpZ0ID4EEBEkwKEnBl",
-            "cmlwaGVyYWxzX2NvbmZpZxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
-            "Yy52MS5QZXJpcGhlcmFsc0NvbmZpZ0ID4EEBIvABCg9FeGVjdXRpb25Db25m",
-            "aWcSHAoPc2VydmljZV9hY2NvdW50GAIgASgJQgPgQQESGgoLbmV0d29ya191",
-            "cmkYBCABKAlCA+BBAUgAEh0KDnN1Ym5ldHdvcmtfdXJpGAUgASgJQgPgQQFI",
-            "ABIZCgxuZXR3b3JrX3RhZ3MYBiADKAlCA+BBARIUCgdrbXNfa2V5GAcgASgJ",
-            "QgPgQQESKwoDdHRsGAkgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "QgPgQQESGwoOc3RhZ2luZ19idWNrZXQYCiABKAlCA+BBAUIJCgduZXR3b3Jr",
-            "IjkKGFNwYXJrSGlzdG9yeVNlcnZlckNvbmZpZxIdChBkYXRhcHJvY19jbHVz",
-            "dGVyGAEgASgJQgPgQQEitgEKEVBlcmlwaGVyYWxzQ29uZmlnEkMKEW1ldGFz",
-            "dG9yZV9zZXJ2aWNlGAEgASgJQijgQQH6QSIKIG1ldGFzdG9yZS5nb29nbGVh",
-            "cGlzLmNvbS9TZXJ2aWNlElwKG3NwYXJrX2hpc3Rvcnlfc2VydmVyX2NvbmZp",
-            "ZxgCIAEoCzIyLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5TcGFya0hpc3Rv",
-            "cnlTZXJ2ZXJDb25maWdCA+BBASLXAgoLUnVudGltZUluZm8STAoJZW5kcG9p",
-            "bnRzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlJ1bnRpbWVJ",
-            "bmZvLkVuZHBvaW50c0VudHJ5QgPgQQMSFwoKb3V0cHV0X3VyaRgCIAEoCUID",
-            "4EEDEiIKFWRpYWdub3N0aWNfb3V0cHV0X3VyaRgDIAEoCUID4EEDEkYKEWFw",
-            "cHJveGltYXRlX3VzYWdlGAYgASgLMiYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
-            "LnYxLlVzYWdlTWV0cmljc0ID4EEDEkMKDWN1cnJlbnRfdXNhZ2UYByABKAsy",
-            "Jy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuVXNhZ2VTbmFwc2hvdEID4EED",
-            "GjAKDkVuZHBvaW50c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEiVwoMVXNhZ2VNZXRyaWNzEh4KEW1pbGxpX2RjdV9zZWNvbmRzGAEg",
-            "ASgDQgPgQQESJwoac2h1ZmZsZV9zdG9yYWdlX2diX3NlY29uZHMYAiABKANC",
-            "A+BBASKAAQoNVXNhZ2VTbmFwc2hvdBIWCgltaWxsaV9kY3UYASABKANCA+BB",
-            "ARIfChJzaHVmZmxlX3N0b3JhZ2VfZ2IYAiABKANCA+BBARI2Cg1zbmFwc2hv",
-            "dF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEB",
-            "IqQBChBHa2VDbHVzdGVyQ29uZmlnEkQKEmdrZV9jbHVzdGVyX3RhcmdldBgC",
-            "IAEoCUIo4EEB+kEiCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3Rl",
-            "chJKChBub2RlX3Bvb2xfdGFyZ2V0GAMgAygLMisuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLkdrZU5vZGVQb29sVGFyZ2V0QgPgQQEi8gEKF0t1YmVybmV0",
-            "ZXNDbHVzdGVyQ29uZmlnEiEKFGt1YmVybmV0ZXNfbmFtZXNwYWNlGAEgASgJ",
-            "QgPgQQESTQoSZ2tlX2NsdXN0ZXJfY29uZmlnGAIgASgLMiouZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLkdrZUNsdXN0ZXJDb25maWdCA+BBAkgAElsKGmt1",
-            "YmVybmV0ZXNfc29mdHdhcmVfY29uZmlnGAMgASgLMjIuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkt1YmVybmV0ZXNTb2Z0d2FyZUNvbmZpZ0ID4EEBQggK",
-            "BmNvbmZpZyLDAgoYS3ViZXJuZXRlc1NvZnR3YXJlQ29uZmlnEmMKEWNvbXBv",
-            "bmVudF92ZXJzaW9uGAEgAygLMkguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "Lkt1YmVybmV0ZXNTb2Z0d2FyZUNvbmZpZy5Db21wb25lbnRWZXJzaW9uRW50",
-            "cnkSVgoKcHJvcGVydGllcxgCIAMoCzJCLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
-            "Yy52MS5LdWJlcm5ldGVzU29mdHdhcmVDb25maWcuUHJvcGVydGllc0VudHJ5",
-            "GjcKFUNvbXBvbmVudFZlcnNpb25FbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBGjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIp4CChFHa2VOb2RlUG9vbFRhcmdldBIWCglu",
-            "b2RlX3Bvb2wYASABKAlCA+BBAhJECgVyb2xlcxgCIAMoDjIwLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5Ha2VOb2RlUG9vbFRhcmdldC5Sb2xlQgPgQQIS",
-            "SgoQbm9kZV9wb29sX2NvbmZpZxgDIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cHJvYy52MS5Ha2VOb2RlUG9vbENvbmZpZ0ID4EEEIl8KBFJvbGUSFAoQUk9M",
-            "RV9VTlNQRUNJRklFRBAAEgsKB0RFRkFVTFQQARIOCgpDT05UUk9MTEVSEAIS",
-            "EAoMU1BBUktfRFJJVkVSEAMSEgoOU1BBUktfRVhFQ1VUT1IQBCK8BQoRR2tl",
-            "Tm9kZVBvb2xDb25maWcSTgoGY29uZmlnGAIgASgLMjkuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkdrZU5vZGVQb29sQ29uZmlnLkdrZU5vZGVDb25maWdC",
-            "A+BBARIWCglsb2NhdGlvbnMYDSADKAlCA+BBARJiCgthdXRvc2NhbGluZxgE",
-            "IAEoCzJILmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ha2VOb2RlUG9vbENv",
-            "bmZpZy5Ha2VOb2RlUG9vbEF1dG9zY2FsaW5nQ29uZmlnQgPgQQEamQIKDUdr",
-            "ZU5vZGVDb25maWcSGQoMbWFjaGluZV90eXBlGAEgASgJQgPgQQESHAoPbG9j",
-            "YWxfc3NkX2NvdW50GAcgASgFQgPgQQESGAoLcHJlZW1wdGlibGUYCiABKAhC",
-            "A+BBARJjCgxhY2NlbGVyYXRvcnMYCyADKAsySC5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuR2tlTm9kZVBvb2xDb25maWcuR2tlTm9kZVBvb2xBY2NlbGVy",
-            "YXRvckNvbmZpZ0ID4EEBEh0KEG1pbl9jcHVfcGxhdGZvcm0YDSABKAlCA+BB",
-            "ARIeChFib290X2Rpc2tfa21zX2tleRgXIAEoCUID4EEBEhEKBHNwb3QYICAB",
-            "KAhCA+BBARpvChxHa2VOb2RlUG9vbEFjY2VsZXJhdG9yQ29uZmlnEhkKEWFj",
-            "Y2VsZXJhdG9yX2NvdW50GAEgASgDEhgKEGFjY2VsZXJhdG9yX3R5cGUYAiAB",
-            "KAkSGgoSZ3B1X3BhcnRpdGlvbl9zaXplGAMgASgJGk4KHEdrZU5vZGVQb29s",
-            "QXV0b3NjYWxpbmdDb25maWcSFgoObWluX25vZGVfY291bnQYAiABKAUSFgoO",
-            "bWF4X25vZGVfY291bnQYAyABKAUq1AEKCUNvbXBvbmVudBIZChVDT01QT05F",
-            "TlRfVU5TUEVDSUZJRUQQABIMCghBTkFDT05EQRAFEgoKBkRPQ0tFUhANEgkK",
-            "BURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFTRRALEhAKDEhJVkVfV0VCSENB",
-            "VBADEggKBEhVREkQEhILCgdKVVBZVEVSEAESCgoGUFJFU1RPEAYSCQoFVFJJ",
-            "Tk8QERIKCgZSQU5HRVIQDBIICgRTT0xSEAoSDAoIWkVQUEVMSU4QBBINCgla",
-            "T09LRUVQRVIQCCpKCg1GYWlsdXJlQWN0aW9uEh4KGkZBSUxVUkVfQUNUSU9O",
-            "X1VOU1BFQ0lGSUVEEAASDQoJTk9fQUNUSU9OEAESCgoGREVMRVRFEAJCqQIK",
-            "HGNvbS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjFCC1NoYXJlZFByb3RvUAFa",
-            "OGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2MvYXBpdjEvZGF0YXByb2Nw",
-            "YjtkYXRhcHJvY3Bi6kFeCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1",
-            "c3RlchI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2NsdXN0ZXJzL3tjbHVzdGVyfepBXgogbWV0YXN0b3JlLmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
+            "Q29uZmlnLlByb3BlcnRpZXNFbnRyeUID4EEBEkoKEXJlcG9zaXRvcnlfY29u",
+            "ZmlnGAUgASgLMiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlJlcG9zaXRv",
+            "cnlDb25maWdCA+BBARJKChFhdXRvdHVuaW5nX2NvbmZpZxgGIAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5BdXRvdHVuaW5nQ29uZmlnQgPgQQES",
+            "EwoGY29ob3J0GAcgASgJQgPgQQEaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiqwEKEUVudmlyb25tZW50Q29u",
+            "ZmlnEkgKEGV4ZWN1dGlvbl9jb25maWcYASABKAsyKS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuRXhlY3V0aW9uQ29uZmlnQgPgQQESTAoScGVyaXBoZXJh",
+            "bHNfY29uZmlnGAIgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlBl",
+            "cmlwaGVyYWxzQ29uZmlnQgPgQQEiogIKD0V4ZWN1dGlvbkNvbmZpZxIcCg9z",
+            "ZXJ2aWNlX2FjY291bnQYAiABKAlCA+BBARIaCgtuZXR3b3JrX3VyaRgEIAEo",
+            "CUID4EEBSAASHQoOc3VibmV0d29ya191cmkYBSABKAlCA+BBAUgAEhkKDG5l",
+            "dHdvcmtfdGFncxgGIAMoCUID4EEBEhQKB2ttc19rZXkYByABKAlCA+BBARIw",
+            "CghpZGxlX3R0bBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
+            "4EEBEisKA3R0bBgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
+            "4EEBEhsKDnN0YWdpbmdfYnVja2V0GAogASgJQgPgQQFCCQoHbmV0d29yayI5",
+            "ChhTcGFya0hpc3RvcnlTZXJ2ZXJDb25maWcSHQoQZGF0YXByb2NfY2x1c3Rl",
+            "chgBIAEoCUID4EEBIrYBChFQZXJpcGhlcmFsc0NvbmZpZxJDChFtZXRhc3Rv",
+            "cmVfc2VydmljZRgBIAEoCUIo4EEB+kEiCiBtZXRhc3RvcmUuZ29vZ2xlYXBp",
+            "cy5jb20vU2VydmljZRJcChtzcGFya19oaXN0b3J5X3NlcnZlcl9jb25maWcY",
+            "AiABKAsyMi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU3BhcmtIaXN0b3J5",
+            "U2VydmVyQ29uZmlnQgPgQQEi1wIKC1J1bnRpbWVJbmZvEkwKCWVuZHBvaW50",
+            "cxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5SdW50aW1lSW5m",
+            "by5FbmRwb2ludHNFbnRyeUID4EEDEhcKCm91dHB1dF91cmkYAiABKAlCA+BB",
+            "AxIiChVkaWFnbm9zdGljX291dHB1dF91cmkYAyABKAlCA+BBAxJGChFhcHBy",
+            "b3hpbWF0ZV91c2FnZRgGIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5Vc2FnZU1ldHJpY3NCA+BBAxJDCg1jdXJyZW50X3VzYWdlGAcgASgLMicu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVzYWdlU25hcHNob3RCA+BBAxow",
+            "Cg5FbmRwb2ludHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIp4BCgxVc2FnZU1ldHJpY3MSHgoRbWlsbGlfZGN1X3NlY29uZHMYASAB",
+            "KANCA+BBARInChpzaHVmZmxlX3N0b3JhZ2VfZ2Jfc2Vjb25kcxgCIAEoA0ID",
+            "4EEBEiYKGW1pbGxpX2FjY2VsZXJhdG9yX3NlY29uZHMYAyABKANCA+BBARId",
+            "ChBhY2NlbGVyYXRvcl90eXBlGAQgASgJQgPgQQEiiAIKDVVzYWdlU25hcHNo",
+            "b3QSFgoJbWlsbGlfZGN1GAEgASgDQgPgQQESHwoSc2h1ZmZsZV9zdG9yYWdl",
+            "X2diGAIgASgDQgPgQQESHgoRbWlsbGlfZGN1X3ByZW1pdW0YBCABKANCA+BB",
+            "ARInChpzaHVmZmxlX3N0b3JhZ2VfZ2JfcHJlbWl1bRgFIAEoA0ID4EEBEh4K",
+            "EW1pbGxpX2FjY2VsZXJhdG9yGAYgASgDQgPgQQESHQoQYWNjZWxlcmF0b3Jf",
+            "dHlwZRgHIAEoCUID4EEBEjYKDXNuYXBzaG90X3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQEipAEKEEdrZUNsdXN0ZXJDb25m",
+            "aWcSRAoSZ2tlX2NsdXN0ZXJfdGFyZ2V0GAIgASgJQijgQQH6QSIKIGNvbnRh",
+            "aW5lci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEkoKEG5vZGVfcG9vbF90YXJn",
+            "ZXQYAyADKAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuR2tlTm9kZVBv",
+            "b2xUYXJnZXRCA+BBASLyAQoXS3ViZXJuZXRlc0NsdXN0ZXJDb25maWcSIQoU",
+            "a3ViZXJuZXRlc19uYW1lc3BhY2UYASABKAlCA+BBARJNChJna2VfY2x1c3Rl",
+            "cl9jb25maWcYAiABKAsyKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuR2tl",
+            "Q2x1c3RlckNvbmZpZ0ID4EECSAASWwoaa3ViZXJuZXRlc19zb2Z0d2FyZV9j",
+            "b25maWcYAyABKAsyMi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuS3ViZXJu",
+            "ZXRlc1NvZnR3YXJlQ29uZmlnQgPgQQFCCAoGY29uZmlnIsMCChhLdWJlcm5l",
+            "dGVzU29mdHdhcmVDb25maWcSYwoRY29tcG9uZW50X3ZlcnNpb24YASADKAsy",
+            "SC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuS3ViZXJuZXRlc1NvZnR3YXJl",
+            "Q29uZmlnLkNvbXBvbmVudFZlcnNpb25FbnRyeRJWCgpwcm9wZXJ0aWVzGAIg",
+            "AygLMkIuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkt1YmVybmV0ZXNTb2Z0",
+            "d2FyZUNvbmZpZy5Qcm9wZXJ0aWVzRW50cnkaNwoVQ29tcG9uZW50VmVyc2lv",
+            "bkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPUHJv",
+            "cGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "ngIKEUdrZU5vZGVQb29sVGFyZ2V0EhYKCW5vZGVfcG9vbBgBIAEoCUID4EEC",
+            "EkQKBXJvbGVzGAIgAygOMjAuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdr",
+            "ZU5vZGVQb29sVGFyZ2V0LlJvbGVCA+BBAhJKChBub2RlX3Bvb2xfY29uZmln",
+            "GAMgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdrZU5vZGVQb29s",
+            "Q29uZmlnQgPgQQQiXwoEUm9sZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASCwoH",
+            "REVGQVVMVBABEg4KCkNPTlRST0xMRVIQAhIQCgxTUEFSS19EUklWRVIQAxIS",
+            "Cg5TUEFSS19FWEVDVVRPUhAEIrwFChFHa2VOb2RlUG9vbENvbmZpZxJOCgZj",
+            "b25maWcYAiABKAsyOS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuR2tlTm9k",
+            "ZVBvb2xDb25maWcuR2tlTm9kZUNvbmZpZ0ID4EEBEhYKCWxvY2F0aW9ucxgN",
+            "IAMoCUID4EEBEmIKC2F1dG9zY2FsaW5nGAQgASgLMkguZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkdrZU5vZGVQb29sQ29uZmlnLkdrZU5vZGVQb29sQXV0",
+            "b3NjYWxpbmdDb25maWdCA+BBARqZAgoNR2tlTm9kZUNvbmZpZxIZCgxtYWNo",
+            "aW5lX3R5cGUYASABKAlCA+BBARIcCg9sb2NhbF9zc2RfY291bnQYByABKAVC",
+            "A+BBARIYCgtwcmVlbXB0aWJsZRgKIAEoCEID4EEBEmMKDGFjY2VsZXJhdG9y",
+            "cxgLIAMoCzJILmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ha2VOb2RlUG9v",
+            "bENvbmZpZy5Ha2VOb2RlUG9vbEFjY2VsZXJhdG9yQ29uZmlnQgPgQQESHQoQ",
+            "bWluX2NwdV9wbGF0Zm9ybRgNIAEoCUID4EEBEh4KEWJvb3RfZGlza19rbXNf",
+            "a2V5GBcgASgJQgPgQQESEQoEc3BvdBggIAEoCEID4EEBGm8KHEdrZU5vZGVQ",
+            "b29sQWNjZWxlcmF0b3JDb25maWcSGQoRYWNjZWxlcmF0b3JfY291bnQYASAB",
+            "KAMSGAoQYWNjZWxlcmF0b3JfdHlwZRgCIAEoCRIaChJncHVfcGFydGl0aW9u",
+            "X3NpemUYAyABKAkaTgocR2tlTm9kZVBvb2xBdXRvc2NhbGluZ0NvbmZpZxIW",
+            "Cg5taW5fbm9kZV9jb3VudBgCIAEoBRIWCg5tYXhfbm9kZV9jb3VudBgDIAEo",
+            "BSK3AQoQQXV0b3R1bmluZ0NvbmZpZxJLCglzY2VuYXJpb3MYAiADKA4yMy5n",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3R1bmluZ0NvbmZpZy5TY2Vu",
+            "YXJpb0ID4EEBIlYKCFNjZW5hcmlvEhgKFFNDRU5BUklPX1VOU1BFQ0lGSUVE",
+            "EAASCwoHU0NBTElORxACEhcKE0JST0FEQ0FTVF9IQVNIX0pPSU4QAxIKCgZN",
+            "RU1PUlkQBCJnChBSZXBvc2l0b3J5Q29uZmlnElMKFnB5cGlfcmVwb3NpdG9y",
+            "eV9jb25maWcYASABKAsyLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuUHlQ",
+            "aVJlcG9zaXRvcnlDb25maWdCA+BBASI0ChRQeVBpUmVwb3NpdG9yeUNvbmZp",
+            "ZxIcCg9weXBpX3JlcG9zaXRvcnkYASABKAlCA+BBASrUAQoJQ29tcG9uZW50",
+            "EhkKFUNPTVBPTkVOVF9VTlNQRUNJRklFRBAAEgwKCEFOQUNPTkRBEAUSCgoG",
+            "RE9DS0VSEA0SCQoFRFJVSUQQCRIJCgVGTElOSxAOEgkKBUhCQVNFEAsSEAoM",
+            "SElWRV9XRUJIQ0FUEAMSCAoESFVESRASEgsKB0pVUFlURVIQARIKCgZQUkVT",
+            "VE8QBhIJCgVUUklOTxAREgoKBlJBTkdFUhAMEggKBFNPTFIQChIMCghaRVBQ",
+            "RUxJThAEEg0KCVpPT0tFRVBFUhAIKkoKDUZhaWx1cmVBY3Rpb24SHgoaRkFJ",
+            "TFVSRV9BQ1RJT05fVU5TUEVDSUZJRUQQABINCglOT19BQ1RJT04QARIKCgZE",
+            "RUxFVEUQAkKnAwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUILU2hh",
+            "cmVkUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJvYy92Mi9h",
+            "cGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGLqQV4KIGNvbnRhaW5lci5nb29n",
+            "bGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ96kFeCiBtZXRhc3Rv",
+            "cmUuZ29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfepBeAoh",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9y",
+            "aW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeConfig), global::Google.Cloud.Dataproc.V1.RuntimeConfig.Parser, new[]{ "Version", "ContainerImage", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeConfig), global::Google.Cloud.Dataproc.V1.RuntimeConfig.Parser, new[]{ "Version", "ContainerImage", "Properties", "RepositoryConfig", "AutotuningConfig", "Cohort" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.EnvironmentConfig), global::Google.Cloud.Dataproc.V1.EnvironmentConfig.Parser, new[]{ "ExecutionConfig", "PeripheralsConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ExecutionConfig), global::Google.Cloud.Dataproc.V1.ExecutionConfig.Parser, new[]{ "ServiceAccount", "NetworkUri", "SubnetworkUri", "NetworkTags", "KmsKey", "Ttl", "StagingBucket" }, new[]{ "Network" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ExecutionConfig), global::Google.Cloud.Dataproc.V1.ExecutionConfig.Parser, new[]{ "ServiceAccount", "NetworkUri", "SubnetworkUri", "NetworkTags", "KmsKey", "IdleTtl", "Ttl", "StagingBucket" }, new[]{ "Network" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig), global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig.Parser, new[]{ "DataprocCluster" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PeripheralsConfig), global::Google.Cloud.Dataproc.V1.PeripheralsConfig.Parser, new[]{ "MetastoreService", "SparkHistoryServerConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeInfo), global::Google.Cloud.Dataproc.V1.RuntimeInfo.Parser, new[]{ "Endpoints", "OutputUri", "DiagnosticOutputUri", "ApproximateUsage", "CurrentUsage" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UsageMetrics), global::Google.Cloud.Dataproc.V1.UsageMetrics.Parser, new[]{ "MilliDcuSeconds", "ShuffleStorageGbSeconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UsageSnapshot), global::Google.Cloud.Dataproc.V1.UsageSnapshot.Parser, new[]{ "MilliDcu", "ShuffleStorageGb", "SnapshotTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UsageMetrics), global::Google.Cloud.Dataproc.V1.UsageMetrics.Parser, new[]{ "MilliDcuSeconds", "ShuffleStorageGbSeconds", "MilliAcceleratorSeconds", "AcceleratorType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UsageSnapshot), global::Google.Cloud.Dataproc.V1.UsageSnapshot.Parser, new[]{ "MilliDcu", "ShuffleStorageGb", "MilliDcuPremium", "ShuffleStorageGbPremium", "MilliAccelerator", "AcceleratorType", "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeClusterConfig), global::Google.Cloud.Dataproc.V1.GkeClusterConfig.Parser, new[]{ "GkeClusterTarget", "NodePoolTarget" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.KubernetesClusterConfig), global::Google.Cloud.Dataproc.V1.KubernetesClusterConfig.Parser, new[]{ "KubernetesNamespace", "GkeClusterConfig", "KubernetesSoftwareConfig" }, new[]{ "Config" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig), global::Google.Cloud.Dataproc.V1.KubernetesSoftwareConfig.Parser, new[]{ "ComponentVersion", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget), global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Parser, new[]{ "NodePool", "Roles", "NodePoolConfig" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolTarget.Types.Role) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Parser, new[]{ "Config", "Locations", "Autoscaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodeConfig.Parser, new[]{ "MachineType", "LocalSsdCount", "Preemptible", "Accelerators", "MinCpuPlatform", "BootDiskKmsKey", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAcceleratorConfig.Parser, new[]{ "AcceleratorCount", "AcceleratorType", "GpuPartitionSize" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig), global::Google.Cloud.Dataproc.V1.GkeNodePoolConfig.Types.GkeNodePoolAutoscalingConfig.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AutotuningConfig), global::Google.Cloud.Dataproc.V1.AutotuningConfig.Parser, new[]{ "Scenarios" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RepositoryConfig), global::Google.Cloud.Dataproc.V1.RepositoryConfig.Parser, new[]{ "PypiRepositoryConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig), global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig.Parser, new[]{ "PypiRepository" }, null, null, null, null)
           }));
     }
     #endregion
@@ -145,11 +168,11 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("COMPONENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The Anaconda python distribution. The Anaconda component is not supported
-    /// in the Dataproc
-    /// &lt;a
-    /// href="/dataproc/docs/concepts/versioning/dataproc-release-2.0">2.0
-    /// image&lt;/a>. The 2.0 image is pre-installed with Miniconda.
+    /// The Anaconda component is no longer supported or applicable to
+    /// [supported Dataproc on Compute Engine image versions]
+    /// (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-version-clusters#supported-dataproc-image-versions).
+    /// It cannot be activated on clusters created with supported Dataproc on
+    /// Compute Engine image versions.
     /// </summary>
     [pbr::OriginalName("ANACONDA")] Anaconda = 5,
     /// <summary>
@@ -231,6 +254,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Runtime configuration for a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RuntimeConfig : pb::IMessage<RuntimeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -268,6 +292,9 @@ namespace Google.Cloud.Dataproc.V1 {
       version_ = other.version_;
       containerImage_ = other.containerImage_;
       properties_ = other.properties_.Clone();
+      repositoryConfig_ = other.repositoryConfig_ != null ? other.repositoryConfig_.Clone() : null;
+      autotuningConfig_ = other.autotuningConfig_ != null ? other.autotuningConfig_.Clone() : null;
+      cohort_ = other.cohort_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -323,6 +350,52 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return properties_; }
     }
 
+    /// <summary>Field number for the "repository_config" field.</summary>
+    public const int RepositoryConfigFieldNumber = 5;
+    private global::Google.Cloud.Dataproc.V1.RepositoryConfig repositoryConfig_;
+    /// <summary>
+    /// Optional. Dependency repository configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.RepositoryConfig RepositoryConfig {
+      get { return repositoryConfig_; }
+      set {
+        repositoryConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "autotuning_config" field.</summary>
+    public const int AutotuningConfigFieldNumber = 6;
+    private global::Google.Cloud.Dataproc.V1.AutotuningConfig autotuningConfig_;
+    /// <summary>
+    /// Optional. Autotuning configuration of the workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.AutotuningConfig AutotuningConfig {
+      get { return autotuningConfig_; }
+      set {
+        autotuningConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cohort" field.</summary>
+    public const int CohortFieldNumber = 7;
+    private string cohort_ = "";
+    /// <summary>
+    /// Optional. Cohort identifier. Identifies families of the workloads having
+    /// the same shape, e.g. daily ETL jobs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cohort {
+      get { return cohort_; }
+      set {
+        cohort_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -341,6 +414,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Version != other.Version) return false;
       if (ContainerImage != other.ContainerImage) return false;
       if (!Properties.Equals(other.Properties)) return false;
+      if (!object.Equals(RepositoryConfig, other.RepositoryConfig)) return false;
+      if (!object.Equals(AutotuningConfig, other.AutotuningConfig)) return false;
+      if (Cohort != other.Cohort) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -351,6 +427,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (ContainerImage.Length != 0) hash ^= ContainerImage.GetHashCode();
       hash ^= Properties.GetHashCode();
+      if (repositoryConfig_ != null) hash ^= RepositoryConfig.GetHashCode();
+      if (autotuningConfig_ != null) hash ^= AutotuningConfig.GetHashCode();
+      if (Cohort.Length != 0) hash ^= Cohort.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -378,6 +457,18 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteString(ContainerImage);
       }
       properties_.WriteTo(output, _map_properties_codec);
+      if (repositoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RepositoryConfig);
+      }
+      if (autotuningConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AutotuningConfig);
+      }
+      if (Cohort.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Cohort);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -397,6 +488,18 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteString(ContainerImage);
       }
       properties_.WriteTo(ref output, _map_properties_codec);
+      if (repositoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RepositoryConfig);
+      }
+      if (autotuningConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AutotuningConfig);
+      }
+      if (Cohort.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Cohort);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -414,6 +517,15 @@ namespace Google.Cloud.Dataproc.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ContainerImage);
       }
       size += properties_.CalculateSize(_map_properties_codec);
+      if (repositoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RepositoryConfig);
+      }
+      if (autotuningConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutotuningConfig);
+      }
+      if (Cohort.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cohort);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -432,7 +544,22 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContainerImage.Length != 0) {
         ContainerImage = other.ContainerImage;
       }
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
+      if (other.repositoryConfig_ != null) {
+        if (repositoryConfig_ == null) {
+          RepositoryConfig = new global::Google.Cloud.Dataproc.V1.RepositoryConfig();
+        }
+        RepositoryConfig.MergeFrom(other.RepositoryConfig);
+      }
+      if (other.autotuningConfig_ != null) {
+        if (autotuningConfig_ == null) {
+          AutotuningConfig = new global::Google.Cloud.Dataproc.V1.AutotuningConfig();
+        }
+        AutotuningConfig.MergeFrom(other.AutotuningConfig);
+      }
+      if (other.Cohort.Length != 0) {
+        Cohort = other.Cohort;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -458,6 +585,24 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+          case 42: {
+            if (repositoryConfig_ == null) {
+              RepositoryConfig = new global::Google.Cloud.Dataproc.V1.RepositoryConfig();
+            }
+            input.ReadMessage(RepositoryConfig);
+            break;
+          }
+          case 50: {
+            if (autotuningConfig_ == null) {
+              AutotuningConfig = new global::Google.Cloud.Dataproc.V1.AutotuningConfig();
+            }
+            input.ReadMessage(AutotuningConfig);
+            break;
+          }
+          case 58: {
+            Cohort = input.ReadString();
             break;
           }
         }
@@ -487,6 +632,24 @@ namespace Google.Cloud.Dataproc.V1 {
             properties_.AddEntriesFrom(ref input, _map_properties_codec);
             break;
           }
+          case 42: {
+            if (repositoryConfig_ == null) {
+              RepositoryConfig = new global::Google.Cloud.Dataproc.V1.RepositoryConfig();
+            }
+            input.ReadMessage(RepositoryConfig);
+            break;
+          }
+          case 50: {
+            if (autotuningConfig_ == null) {
+              AutotuningConfig = new global::Google.Cloud.Dataproc.V1.AutotuningConfig();
+            }
+            input.ReadMessage(AutotuningConfig);
+            break;
+          }
+          case 58: {
+            Cohort = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -497,6 +660,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Environment configuration for a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvironmentConfig : pb::IMessage<EnvironmentConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -750,6 +914,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Execution configuration for a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionConfig : pb::IMessage<ExecutionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -787,6 +952,7 @@ namespace Google.Cloud.Dataproc.V1 {
       serviceAccount_ = other.serviceAccount_;
       networkTags_ = other.networkTags_.Clone();
       kmsKey_ = other.kmsKey_;
+      idleTtl_ = other.idleTtl_ != null ? other.idleTtl_.Clone() : null;
       ttl_ = other.ttl_ != null ? other.ttl_.Clone() : null;
       stagingBucket_ = other.stagingBucket_;
       switch (other.NetworkCase) {
@@ -830,10 +996,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NetworkUri {
-      get { return networkCase_ == NetworkOneofCase.NetworkUri ? (string) network_ : ""; }
+      get { return HasNetworkUri ? (string) network_ : ""; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         networkCase_ = NetworkOneofCase.NetworkUri;
+      }
+    }
+    /// <summary>Gets whether the "network_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetworkUri {
+      get { return networkCase_ == NetworkOneofCase.NetworkUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "network_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetworkUri() {
+      if (HasNetworkUri) {
+        ClearNetwork();
       }
     }
 
@@ -845,10 +1025,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SubnetworkUri {
-      get { return networkCase_ == NetworkOneofCase.SubnetworkUri ? (string) network_ : ""; }
+      get { return HasSubnetworkUri ? (string) network_ : ""; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         networkCase_ = NetworkOneofCase.SubnetworkUri;
+      }
+    }
+    /// <summary>Gets whether the "subnetwork_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSubnetworkUri {
+      get { return networkCase_ == NetworkOneofCase.SubnetworkUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "subnetwork_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSubnetworkUri() {
+      if (HasSubnetworkUri) {
+        ClearNetwork();
       }
     }
 
@@ -881,20 +1075,48 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "idle_ttl" field.</summary>
+    public const int IdleTtlFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Duration idleTtl_;
+    /// <summary>
+    /// Optional. Applies to sessions only. The duration to keep the session alive
+    /// while it's idling. Exceeding this threshold causes the session to
+    /// terminate. This field cannot be set on a batch workload. Minimum value is
+    /// 10 minutes; maximum value is 14 days (see JSON representation of
+    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// Defaults to 1 hour if not set.
+    /// If both `ttl` and `idle_ttl` are specified for an interactive session,
+    /// the conditions are treated as `OR` conditions: the workload will be
+    /// terminated when it has been idle for `idle_ttl` or when `ttl` has been
+    /// exceeded, whichever occurs first.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration IdleTtl {
+      get { return idleTtl_; }
+      set {
+        idleTtl_ = value;
+      }
+    }
+
     /// <summary>Field number for the "ttl" field.</summary>
     public const int TtlFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Duration ttl_;
     /// <summary>
-    /// Optional. The duration after which the workload will be terminated.
-    /// When the workload passes this ttl, it will be unconditionally killed
-    /// without waiting for ongoing work to finish.
-    /// Minimum value is 10 minutes; maximum value is 14 days (see JSON
-    /// representation of
-    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
-    /// If both ttl and idle_ttl are specified, the conditions are treated as
-    /// and OR: the workload will be terminated when it has been idle for idle_ttl
-    /// or when the ttl has passed, whichever comes first.
-    /// If ttl is not specified for a session, it defaults to 24h.
+    /// Optional. The duration after which the workload will be terminated,
+    /// specified as the JSON representation for
+    /// [Duration](https://protobuf.dev/programming-guides/proto3/#json).
+    /// When the workload exceeds this duration, it will be unconditionally
+    /// terminated without waiting for ongoing work to finish. If `ttl` is not
+    /// specified for a batch workload, the workload will be allowed to run until
+    /// it exits naturally (or run forever without exiting). If `ttl` is not
+    /// specified for an interactive session, it defaults to 24 hours. If `ttl` is
+    /// not specified for a batch that uses 2.1+ runtime version, it defaults to 4
+    /// hours. Minimum value is 10 minutes; maximum value is 14 days. If both `ttl`
+    /// and `idle_ttl` are specified (for an interactive session), the conditions
+    /// are treated as `OR` conditions: the workload will be terminated when it has
+    /// been idle for `idle_ttl` or when `ttl` has been exceeded, whichever occurs
+    /// first.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -968,6 +1190,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (SubnetworkUri != other.SubnetworkUri) return false;
       if(!networkTags_.Equals(other.networkTags_)) return false;
       if (KmsKey != other.KmsKey) return false;
+      if (!object.Equals(IdleTtl, other.IdleTtl)) return false;
       if (!object.Equals(Ttl, other.Ttl)) return false;
       if (StagingBucket != other.StagingBucket) return false;
       if (NetworkCase != other.NetworkCase) return false;
@@ -979,10 +1202,11 @@ namespace Google.Cloud.Dataproc.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
-      if (networkCase_ == NetworkOneofCase.NetworkUri) hash ^= NetworkUri.GetHashCode();
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) hash ^= SubnetworkUri.GetHashCode();
+      if (HasNetworkUri) hash ^= NetworkUri.GetHashCode();
+      if (HasSubnetworkUri) hash ^= SubnetworkUri.GetHashCode();
       hash ^= networkTags_.GetHashCode();
       if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
+      if (idleTtl_ != null) hash ^= IdleTtl.GetHashCode();
       if (ttl_ != null) hash ^= Ttl.GetHashCode();
       if (StagingBucket.Length != 0) hash ^= StagingBucket.GetHashCode();
       hash ^= (int) networkCase_;
@@ -1008,11 +1232,11 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         output.WriteRawTag(34);
         output.WriteString(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         output.WriteRawTag(42);
         output.WriteString(SubnetworkUri);
       }
@@ -1020,6 +1244,10 @@ namespace Google.Cloud.Dataproc.V1 {
       if (KmsKey.Length != 0) {
         output.WriteRawTag(58);
         output.WriteString(KmsKey);
+      }
+      if (idleTtl_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(IdleTtl);
       }
       if (ttl_ != null) {
         output.WriteRawTag(74);
@@ -1043,11 +1271,11 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         output.WriteRawTag(34);
         output.WriteString(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         output.WriteRawTag(42);
         output.WriteString(SubnetworkUri);
       }
@@ -1055,6 +1283,10 @@ namespace Google.Cloud.Dataproc.V1 {
       if (KmsKey.Length != 0) {
         output.WriteRawTag(58);
         output.WriteString(KmsKey);
+      }
+      if (idleTtl_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(IdleTtl);
       }
       if (ttl_ != null) {
         output.WriteRawTag(74);
@@ -1077,15 +1309,18 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SubnetworkUri);
       }
       size += networkTags_.CalculateSize(_repeated_networkTags_codec);
       if (KmsKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (idleTtl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdleTtl);
       }
       if (ttl_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ttl);
@@ -1111,6 +1346,12 @@ namespace Google.Cloud.Dataproc.V1 {
       networkTags_.Add(other.networkTags_);
       if (other.KmsKey.Length != 0) {
         KmsKey = other.KmsKey;
+      }
+      if (other.idleTtl_ != null) {
+        if (idleTtl_ == null) {
+          IdleTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        IdleTtl.MergeFrom(other.IdleTtl);
       }
       if (other.ttl_ != null) {
         if (ttl_ == null) {
@@ -1165,6 +1406,13 @@ namespace Google.Cloud.Dataproc.V1 {
             KmsKey = input.ReadString();
             break;
           }
+          case 66: {
+            if (idleTtl_ == null) {
+              IdleTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(IdleTtl);
+            break;
+          }
           case 74: {
             if (ttl_ == null) {
               Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -1211,6 +1459,13 @@ namespace Google.Cloud.Dataproc.V1 {
             KmsKey = input.ReadString();
             break;
           }
+          case 66: {
+            if (idleTtl_ == null) {
+              IdleTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(IdleTtl);
+            break;
+          }
           case 74: {
             if (ttl_ == null) {
               Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -1232,6 +1487,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Spark History Server configuration for the workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkHistoryServerConfig : pb::IMessage<SparkHistoryServerConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1432,6 +1688,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Auxiliary services configuration for a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PeripheralsConfig : pb::IMessage<PeripheralsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1680,6 +1937,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Runtime information about workload execution.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RuntimeInfo : pb::IMessage<RuntimeInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1778,9 +2036,17 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ApproximateUsageFieldNumber = 6;
     private global::Google.Cloud.Dataproc.V1.UsageMetrics approximateUsage_;
     /// <summary>
-    /// Output only. Approximate workload resource usage calculated after workload
-    /// finishes (see [Dataproc Serverless pricing]
+    /// Output only. Approximate workload resource usage, calculated when
+    /// the workload completes (see [Dataproc Serverless pricing]
     /// (https://cloud.google.com/dataproc-serverless/pricing)).
+    ///
+    /// **Note:** This metric calculation may change in the future, for
+    /// example, to capture cumulative workload resource
+    /// consumption during workload execution (see the
+    /// [Dataproc Serverless release notes]
+    /// (https://cloud.google.com/dataproc-serverless/docs/release-notes)
+    /// for announcements, changes, fixes
+    /// and other Dataproc developments).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1935,7 +2201,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      endpoints_.Add(other.endpoints_);
+      endpoints_.MergeFrom(other.endpoints_);
       if (other.OutputUri.Length != 0) {
         OutputUri = other.OutputUri;
       }
@@ -2046,6 +2312,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Usage metrics represent approximate total resources consumed by a workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UsageMetrics : pb::IMessage<UsageMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2082,6 +2349,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public UsageMetrics(UsageMetrics other) : this() {
       milliDcuSeconds_ = other.milliDcuSeconds_;
       shuffleStorageGbSeconds_ = other.shuffleStorageGbSeconds_;
+      milliAcceleratorSeconds_ = other.milliAcceleratorSeconds_;
+      acceleratorType_ = other.acceleratorType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2125,6 +2394,38 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "milli_accelerator_seconds" field.</summary>
+    public const int MilliAcceleratorSecondsFieldNumber = 3;
+    private long milliAcceleratorSeconds_;
+    /// <summary>
+    /// Optional. Accelerator usage in (`milliAccelerator` x `seconds`) (see
+    /// [Dataproc Serverless pricing]
+    /// (https://cloud.google.com/dataproc-serverless/pricing)).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MilliAcceleratorSeconds {
+      get { return milliAcceleratorSeconds_; }
+      set {
+        milliAcceleratorSeconds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "accelerator_type" field.</summary>
+    public const int AcceleratorTypeFieldNumber = 4;
+    private string acceleratorType_ = "";
+    /// <summary>
+    /// Optional. Accelerator type being used, if any
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AcceleratorType {
+      get { return acceleratorType_; }
+      set {
+        acceleratorType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2142,6 +2443,8 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (MilliDcuSeconds != other.MilliDcuSeconds) return false;
       if (ShuffleStorageGbSeconds != other.ShuffleStorageGbSeconds) return false;
+      if (MilliAcceleratorSeconds != other.MilliAcceleratorSeconds) return false;
+      if (AcceleratorType != other.AcceleratorType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2151,6 +2454,8 @@ namespace Google.Cloud.Dataproc.V1 {
       int hash = 1;
       if (MilliDcuSeconds != 0L) hash ^= MilliDcuSeconds.GetHashCode();
       if (ShuffleStorageGbSeconds != 0L) hash ^= ShuffleStorageGbSeconds.GetHashCode();
+      if (MilliAcceleratorSeconds != 0L) hash ^= MilliAcceleratorSeconds.GetHashCode();
+      if (AcceleratorType.Length != 0) hash ^= AcceleratorType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2177,6 +2482,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(ShuffleStorageGbSeconds);
       }
+      if (MilliAcceleratorSeconds != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(MilliAcceleratorSeconds);
+      }
+      if (AcceleratorType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AcceleratorType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2195,6 +2508,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(ShuffleStorageGbSeconds);
       }
+      if (MilliAcceleratorSeconds != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(MilliAcceleratorSeconds);
+      }
+      if (AcceleratorType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AcceleratorType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2210,6 +2531,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (ShuffleStorageGbSeconds != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ShuffleStorageGbSeconds);
+      }
+      if (MilliAcceleratorSeconds != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MilliAcceleratorSeconds);
+      }
+      if (AcceleratorType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AcceleratorType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2228,6 +2555,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.ShuffleStorageGbSeconds != 0L) {
         ShuffleStorageGbSeconds = other.ShuffleStorageGbSeconds;
+      }
+      if (other.MilliAcceleratorSeconds != 0L) {
+        MilliAcceleratorSeconds = other.MilliAcceleratorSeconds;
+      }
+      if (other.AcceleratorType.Length != 0) {
+        AcceleratorType = other.AcceleratorType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2250,6 +2583,14 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 16: {
             ShuffleStorageGbSeconds = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            MilliAcceleratorSeconds = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            AcceleratorType = input.ReadString();
             break;
           }
         }
@@ -2275,6 +2616,14 @@ namespace Google.Cloud.Dataproc.V1 {
             ShuffleStorageGbSeconds = input.ReadInt64();
             break;
           }
+          case 24: {
+            MilliAcceleratorSeconds = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            AcceleratorType = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2283,9 +2632,10 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// The usage snaphot represents the resources consumed by a workload at a
+  /// The usage snapshot represents the resources consumed by a workload at a
   /// specified time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UsageSnapshot : pb::IMessage<UsageSnapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2322,6 +2672,10 @@ namespace Google.Cloud.Dataproc.V1 {
     public UsageSnapshot(UsageSnapshot other) : this() {
       milliDcu_ = other.milliDcu_;
       shuffleStorageGb_ = other.shuffleStorageGb_;
+      milliDcuPremium_ = other.milliDcuPremium_;
+      shuffleStorageGbPremium_ = other.shuffleStorageGbPremium_;
+      milliAccelerator_ = other.milliAccelerator_;
+      acceleratorType_ = other.acceleratorType_;
       snapshotTime_ = other.snapshotTime_ != null ? other.snapshotTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2365,6 +2719,71 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "milli_dcu_premium" field.</summary>
+    public const int MilliDcuPremiumFieldNumber = 4;
+    private long milliDcuPremium_;
+    /// <summary>
+    /// Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) charged at
+    /// premium tier (see [Dataproc Serverless pricing]
+    /// (https://cloud.google.com/dataproc-serverless/pricing)).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MilliDcuPremium {
+      get { return milliDcuPremium_; }
+      set {
+        milliDcuPremium_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shuffle_storage_gb_premium" field.</summary>
+    public const int ShuffleStorageGbPremiumFieldNumber = 5;
+    private long shuffleStorageGbPremium_;
+    /// <summary>
+    /// Optional. Shuffle Storage in gigabytes (GB) charged at premium tier. (see
+    /// [Dataproc Serverless pricing]
+    /// (https://cloud.google.com/dataproc-serverless/pricing))
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ShuffleStorageGbPremium {
+      get { return shuffleStorageGbPremium_; }
+      set {
+        shuffleStorageGbPremium_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "milli_accelerator" field.</summary>
+    public const int MilliAcceleratorFieldNumber = 6;
+    private long milliAccelerator_;
+    /// <summary>
+    /// Optional. Milli (one-thousandth) accelerator. (see [Dataproc
+    /// Serverless pricing] (https://cloud.google.com/dataproc-serverless/pricing))
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MilliAccelerator {
+      get { return milliAccelerator_; }
+      set {
+        milliAccelerator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "accelerator_type" field.</summary>
+    public const int AcceleratorTypeFieldNumber = 7;
+    private string acceleratorType_ = "";
+    /// <summary>
+    /// Optional. Accelerator type being used, if any
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AcceleratorType {
+      get { return acceleratorType_; }
+      set {
+        acceleratorType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "snapshot_time" field.</summary>
     public const int SnapshotTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp snapshotTime_;
@@ -2397,6 +2816,10 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (MilliDcu != other.MilliDcu) return false;
       if (ShuffleStorageGb != other.ShuffleStorageGb) return false;
+      if (MilliDcuPremium != other.MilliDcuPremium) return false;
+      if (ShuffleStorageGbPremium != other.ShuffleStorageGbPremium) return false;
+      if (MilliAccelerator != other.MilliAccelerator) return false;
+      if (AcceleratorType != other.AcceleratorType) return false;
       if (!object.Equals(SnapshotTime, other.SnapshotTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2407,6 +2830,10 @@ namespace Google.Cloud.Dataproc.V1 {
       int hash = 1;
       if (MilliDcu != 0L) hash ^= MilliDcu.GetHashCode();
       if (ShuffleStorageGb != 0L) hash ^= ShuffleStorageGb.GetHashCode();
+      if (MilliDcuPremium != 0L) hash ^= MilliDcuPremium.GetHashCode();
+      if (ShuffleStorageGbPremium != 0L) hash ^= ShuffleStorageGbPremium.GetHashCode();
+      if (MilliAccelerator != 0L) hash ^= MilliAccelerator.GetHashCode();
+      if (AcceleratorType.Length != 0) hash ^= AcceleratorType.GetHashCode();
       if (snapshotTime_ != null) hash ^= SnapshotTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2438,6 +2865,22 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(SnapshotTime);
       }
+      if (MilliDcuPremium != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(MilliDcuPremium);
+      }
+      if (ShuffleStorageGbPremium != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ShuffleStorageGbPremium);
+      }
+      if (MilliAccelerator != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(MilliAccelerator);
+      }
+      if (AcceleratorType.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AcceleratorType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2460,6 +2903,22 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(SnapshotTime);
       }
+      if (MilliDcuPremium != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(MilliDcuPremium);
+      }
+      if (ShuffleStorageGbPremium != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ShuffleStorageGbPremium);
+      }
+      if (MilliAccelerator != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(MilliAccelerator);
+      }
+      if (AcceleratorType.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AcceleratorType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2475,6 +2934,18 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (ShuffleStorageGb != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ShuffleStorageGb);
+      }
+      if (MilliDcuPremium != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MilliDcuPremium);
+      }
+      if (ShuffleStorageGbPremium != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ShuffleStorageGbPremium);
+      }
+      if (MilliAccelerator != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MilliAccelerator);
+      }
+      if (AcceleratorType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AcceleratorType);
       }
       if (snapshotTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SnapshotTime);
@@ -2496,6 +2967,18 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.ShuffleStorageGb != 0L) {
         ShuffleStorageGb = other.ShuffleStorageGb;
+      }
+      if (other.MilliDcuPremium != 0L) {
+        MilliDcuPremium = other.MilliDcuPremium;
+      }
+      if (other.ShuffleStorageGbPremium != 0L) {
+        ShuffleStorageGbPremium = other.ShuffleStorageGbPremium;
+      }
+      if (other.MilliAccelerator != 0L) {
+        MilliAccelerator = other.MilliAccelerator;
+      }
+      if (other.AcceleratorType.Length != 0) {
+        AcceleratorType = other.AcceleratorType;
       }
       if (other.snapshotTime_ != null) {
         if (snapshotTime_ == null) {
@@ -2533,6 +3016,22 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(SnapshotTime);
             break;
           }
+          case 32: {
+            MilliDcuPremium = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            ShuffleStorageGbPremium = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            MilliAccelerator = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            AcceleratorType = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2563,6 +3062,22 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(SnapshotTime);
             break;
           }
+          case 32: {
+            MilliDcuPremium = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            ShuffleStorageGbPremium = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            MilliAccelerator = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            AcceleratorType = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2573,6 +3088,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The cluster's GKE config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GkeClusterConfig : pb::IMessage<GkeClusterConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2805,6 +3321,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The configuration for running the Dataproc cluster on Kubernetes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KubernetesClusterConfig : pb::IMessage<KubernetesClusterConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3136,6 +3653,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The software configuration for this Dataproc cluster running on Kubernetes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KubernetesSoftwareConfig : pb::IMessage<KubernetesSoftwareConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3303,8 +3821,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      componentVersion_.Add(other.componentVersion_);
-      properties_.Add(other.properties_);
+      componentVersion_.MergeFrom(other.componentVersion_);
+      properties_.MergeFrom(other.properties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3361,6 +3879,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// GKE node pools that Dataproc workloads run on.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GkeNodePoolTarget : pb::IMessage<GkeNodePoolTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3693,6 +4212,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// The configuration of a GKE node pool used by a [Dataproc-on-GKE
   /// cluster](https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GkeNodePoolConfig : pb::IMessage<GkeNodePoolConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3989,6 +4509,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Parameters that describe cluster nodes.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GkeNodeConfig : pb::IMessage<GkeNodeConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4445,6 +4966,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// A GkeNodeConfigAcceleratorConfig represents a Hardware Accelerator request
       /// for a node pool.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GkeNodePoolAcceleratorConfig : pb::IMessage<GkeNodePoolAcceleratorConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4723,6 +5245,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// GkeNodePoolAutoscaling contains information the cluster autoscaler needs to
       /// adjust the size of the node pool to the current cluster usage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GkeNodePoolAutoscalingConfig : pb::IMessage<GkeNodePoolAutoscalingConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4960,6 +5483,625 @@ namespace Google.Cloud.Dataproc.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Autotuning configuration of the workload.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutotuningConfig : pb::IMessage<AutotuningConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutotuningConfig> _parser = new pb::MessageParser<AutotuningConfig>(() => new AutotuningConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutotuningConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutotuningConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutotuningConfig(AutotuningConfig other) : this() {
+      scenarios_ = other.scenarios_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutotuningConfig Clone() {
+      return new AutotuningConfig(this);
+    }
+
+    /// <summary>Field number for the "scenarios" field.</summary>
+    public const int ScenariosFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario> _repeated_scenarios_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario> scenarios_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario>();
+    /// <summary>
+    /// Optional. Scenarios for which tunings are applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AutotuningConfig.Types.Scenario> Scenarios {
+      get { return scenarios_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutotuningConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutotuningConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!scenarios_.Equals(other.scenarios_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= scenarios_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      scenarios_.WriteTo(output, _repeated_scenarios_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      scenarios_.WriteTo(ref output, _repeated_scenarios_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += scenarios_.CalculateSize(_repeated_scenarios_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutotuningConfig other) {
+      if (other == null) {
+        return;
+      }
+      scenarios_.Add(other.scenarios_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18:
+          case 16: {
+            scenarios_.AddEntriesFrom(input, _repeated_scenarios_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18:
+          case 16: {
+            scenarios_.AddEntriesFrom(ref input, _repeated_scenarios_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutotuningConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Scenario represents a specific goal that autotuning will attempt to achieve
+      /// by modifying workloads.
+      /// </summary>
+      public enum Scenario {
+        /// <summary>
+        /// Default value.
+        /// </summary>
+        [pbr::OriginalName("SCENARIO_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Scaling recommendations such as initialExecutors.
+        /// </summary>
+        [pbr::OriginalName("SCALING")] Scaling = 2,
+        /// <summary>
+        /// Adding hints for potential relation broadcasts.
+        /// </summary>
+        [pbr::OriginalName("BROADCAST_HASH_JOIN")] BroadcastHashJoin = 3,
+        /// <summary>
+        /// Memory management for workloads.
+        /// </summary>
+        [pbr::OriginalName("MEMORY")] Memory = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Configuration for dependency repositories
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RepositoryConfig : pb::IMessage<RepositoryConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RepositoryConfig> _parser = new pb::MessageParser<RepositoryConfig>(() => new RepositoryConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RepositoryConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepositoryConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepositoryConfig(RepositoryConfig other) : this() {
+      pypiRepositoryConfig_ = other.pypiRepositoryConfig_ != null ? other.pypiRepositoryConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RepositoryConfig Clone() {
+      return new RepositoryConfig(this);
+    }
+
+    /// <summary>Field number for the "pypi_repository_config" field.</summary>
+    public const int PypiRepositoryConfigFieldNumber = 1;
+    private global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig pypiRepositoryConfig_;
+    /// <summary>
+    /// Optional. Configuration for PyPi repository.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig PypiRepositoryConfig {
+      get { return pypiRepositoryConfig_; }
+      set {
+        pypiRepositoryConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RepositoryConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RepositoryConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PypiRepositoryConfig, other.PypiRepositoryConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (pypiRepositoryConfig_ != null) hash ^= PypiRepositoryConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (pypiRepositoryConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PypiRepositoryConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (pypiRepositoryConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PypiRepositoryConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (pypiRepositoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PypiRepositoryConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RepositoryConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.pypiRepositoryConfig_ != null) {
+        if (pypiRepositoryConfig_ == null) {
+          PypiRepositoryConfig = new global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig();
+        }
+        PypiRepositoryConfig.MergeFrom(other.PypiRepositoryConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (pypiRepositoryConfig_ == null) {
+              PypiRepositoryConfig = new global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig();
+            }
+            input.ReadMessage(PypiRepositoryConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (pypiRepositoryConfig_ == null) {
+              PypiRepositoryConfig = new global::Google.Cloud.Dataproc.V1.PyPiRepositoryConfig();
+            }
+            input.ReadMessage(PypiRepositoryConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for PyPi repository
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PyPiRepositoryConfig : pb::IMessage<PyPiRepositoryConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PyPiRepositoryConfig> _parser = new pb::MessageParser<PyPiRepositoryConfig>(() => new PyPiRepositoryConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PyPiRepositoryConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PyPiRepositoryConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PyPiRepositoryConfig(PyPiRepositoryConfig other) : this() {
+      pypiRepository_ = other.pypiRepository_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PyPiRepositoryConfig Clone() {
+      return new PyPiRepositoryConfig(this);
+    }
+
+    /// <summary>Field number for the "pypi_repository" field.</summary>
+    public const int PypiRepositoryFieldNumber = 1;
+    private string pypiRepository_ = "";
+    /// <summary>
+    /// Optional. PyPi repository address
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PypiRepository {
+      get { return pypiRepository_; }
+      set {
+        pypiRepository_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PyPiRepositoryConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PyPiRepositoryConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PypiRepository != other.PypiRepository) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PypiRepository.Length != 0) hash ^= PypiRepository.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PypiRepository.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PypiRepository);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PypiRepository.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PypiRepository);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PypiRepository.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PypiRepository);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PyPiRepositoryConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PypiRepository.Length != 0) {
+        PypiRepository = other.PypiRepository;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PypiRepository = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PypiRepository = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

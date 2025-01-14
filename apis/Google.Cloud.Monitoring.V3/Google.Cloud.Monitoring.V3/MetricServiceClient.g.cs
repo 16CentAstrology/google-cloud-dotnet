@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,20 +16,20 @@
 
 #pragma warning disable CS8981
 using ga = Google.Api;
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -254,14 +254,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MetricServiceClient.Create(callInvoker, Settings, Logger);
+            return MetricServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<MetricServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MetricServiceClient.Create(callInvoker, Settings, Logger);
+            return MetricServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -360,7 +360,7 @@ namespace Google.Cloud.Monitoring.V3
         public virtual MetricService.MetricServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -369,7 +369,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -380,11 +380,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -398,20 +399,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -427,20 +438,30 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -454,20 +475,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -483,20 +514,30 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -510,20 +551,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -539,20 +590,30 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -566,20 +627,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -595,20 +666,30 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -622,20 +703,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptors(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -651,16 +742,25 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ga::MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMonitoredResourceDescriptorsAsync(new ListMonitoredResourceDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, ga::MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMonitoredResourceDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -669,7 +769,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -678,7 +778,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -687,7 +787,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -706,7 +806,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -725,7 +825,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -741,7 +841,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -760,7 +860,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -779,7 +879,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -795,7 +895,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -814,7 +914,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -833,7 +933,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -849,7 +949,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -858,7 +958,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -867,11 +967,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -885,20 +986,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -912,20 +1023,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -939,20 +1060,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -966,20 +1097,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -993,20 +1134,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1020,20 +1171,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1047,20 +1208,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1074,20 +1245,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1101,20 +1282,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptors(new ListMetricDescriptorsRequest
+        public virtual gax::PagedEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptors(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptors(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1128,16 +1319,25 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MetricDescriptor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetricDescriptorsAsync(new ListMetricDescriptorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetricDescriptorsResponse, ga::MetricDescriptor> ListMetricDescriptorsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetricDescriptorsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1146,7 +1346,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1155,7 +1355,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1164,10 +1364,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1183,10 +1384,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1202,10 +1404,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1218,10 +1421,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1237,10 +1441,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1256,10 +1461,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1272,10 +1478,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1291,10 +1498,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1310,10 +1518,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1327,10 +1536,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1340,10 +1550,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1353,10 +1564,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1366,20 +1578,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1392,20 +1606,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1418,20 +1634,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1440,20 +1658,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1466,20 +1686,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1492,20 +1714,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1514,20 +1738,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1540,20 +1766,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1566,20 +1794,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1588,20 +1818,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1614,20 +1846,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1640,20 +1874,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1662,20 +1898,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1688,20 +1926,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1714,20 +1954,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1773,7 +2015,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1794,7 +2037,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1815,7 +2059,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1833,7 +2078,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1854,7 +2100,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1875,7 +2122,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1893,7 +2141,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1914,7 +2163,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1935,7 +2185,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1948,7 +2199,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1957,7 +2208,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1966,10 +2217,11 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -1977,18 +2229,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2003,22 +2256,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2026,18 +2289,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2052,22 +2316,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2075,18 +2349,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2101,22 +2376,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2124,18 +2409,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2150,22 +2436,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2173,18 +2469,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2199,22 +2496,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2222,18 +2529,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2248,22 +2556,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2271,18 +2589,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2297,22 +2616,32 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeries(new ListTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeries(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2320,18 +2649,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2346,22 +2676,34 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTimeSeriesAsync(new ListTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates or adds data to one or more time series.
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2374,6 +2716,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2386,6 +2731,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2398,10 +2746,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2431,10 +2783,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2464,10 +2820,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2490,10 +2850,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2523,10 +2887,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2556,10 +2924,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2640,8 +3012,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2678,8 +3051,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2716,8 +3090,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2747,8 +3122,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2785,8 +3161,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2823,8 +3200,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2878,7 +3256,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             MetricServiceSettings effectiveSettings = settings ?? MetricServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>("ListMonitoredResourceDescriptors", grpcClient.ListMonitoredResourceDescriptorsAsync, grpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListMonitoredResourceDescriptors);
             Modify_ListMonitoredResourceDescriptorsApiCall(ref _callListMonitoredResourceDescriptors);
@@ -2951,7 +3333,7 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2963,7 +3345,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2977,7 +3359,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2989,7 +3371,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3001,7 +3383,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3013,7 +3395,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3025,7 +3407,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3037,7 +3419,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3050,10 +3432,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3066,10 +3449,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3109,7 +3493,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3121,7 +3505,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3137,6 +3521,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3152,6 +3539,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

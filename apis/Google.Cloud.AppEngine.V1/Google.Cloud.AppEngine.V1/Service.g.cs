@@ -63,6 +63,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// collection of versions that define a specific set of code used to
   /// implement the functionality of that service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,7 +344,7 @@ namespace Google.Cloud.AppEngine.V1 {
         }
         Split.MergeFrom(other.Split);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.networkSettings_ != null) {
         if (networkSettings_ == null) {
           NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
@@ -443,6 +444,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Traffic routing configuration for versions within a single service. Traffic
   /// splits define how traffic directed to the service is assigned to versions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrafficSplit : pb::IMessage<TrafficSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -619,7 +621,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other.ShardBy != global::Google.Cloud.AppEngine.V1.TrafficSplit.Types.ShardBy.Unspecified) {
         ShardBy = other.ShardBy;
       }
-      allocations_.Add(other.allocations_);
+      allocations_.MergeFrom(other.allocations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

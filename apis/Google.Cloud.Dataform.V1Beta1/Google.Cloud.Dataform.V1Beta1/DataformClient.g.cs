@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataform.V1Beta1
 {
@@ -54,6 +54,11 @@ namespace Google.Cloud.Dataform.V1Beta1
             CreateRepositorySettings = existing.CreateRepositorySettings;
             UpdateRepositorySettings = existing.UpdateRepositorySettings;
             DeleteRepositorySettings = existing.DeleteRepositorySettings;
+            CommitRepositoryChangesSettings = existing.CommitRepositoryChangesSettings;
+            ReadRepositoryFileSettings = existing.ReadRepositoryFileSettings;
+            QueryRepositoryDirectoryContentsSettings = existing.QueryRepositoryDirectoryContentsSettings;
+            FetchRepositoryHistorySettings = existing.FetchRepositoryHistorySettings;
+            ComputeRepositoryAccessTokenStatusSettings = existing.ComputeRepositoryAccessTokenStatusSettings;
             FetchRemoteBranchesSettings = existing.FetchRemoteBranchesSettings;
             ListWorkspacesSettings = existing.ListWorkspacesSettings;
             GetWorkspaceSettings = existing.GetWorkspaceSettings;
@@ -75,10 +80,20 @@ namespace Google.Cloud.Dataform.V1Beta1
             RemoveFileSettings = existing.RemoveFileSettings;
             MoveFileSettings = existing.MoveFileSettings;
             WriteFileSettings = existing.WriteFileSettings;
+            ListReleaseConfigsSettings = existing.ListReleaseConfigsSettings;
+            GetReleaseConfigSettings = existing.GetReleaseConfigSettings;
+            CreateReleaseConfigSettings = existing.CreateReleaseConfigSettings;
+            UpdateReleaseConfigSettings = existing.UpdateReleaseConfigSettings;
+            DeleteReleaseConfigSettings = existing.DeleteReleaseConfigSettings;
             ListCompilationResultsSettings = existing.ListCompilationResultsSettings;
             GetCompilationResultSettings = existing.GetCompilationResultSettings;
             CreateCompilationResultSettings = existing.CreateCompilationResultSettings;
             QueryCompilationResultActionsSettings = existing.QueryCompilationResultActionsSettings;
+            ListWorkflowConfigsSettings = existing.ListWorkflowConfigsSettings;
+            GetWorkflowConfigSettings = existing.GetWorkflowConfigSettings;
+            CreateWorkflowConfigSettings = existing.CreateWorkflowConfigSettings;
+            UpdateWorkflowConfigSettings = existing.UpdateWorkflowConfigSettings;
+            DeleteWorkflowConfigSettings = existing.DeleteWorkflowConfigSettings;
             ListWorkflowInvocationsSettings = existing.ListWorkflowInvocationsSettings;
             GetWorkflowInvocationSettings = existing.GetWorkflowInvocationSettings;
             CreateWorkflowInvocationSettings = existing.CreateWorkflowInvocationSettings;
@@ -151,6 +166,68 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRepositorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CommitRepositoryChanges</c> and <c>DataformClient.CommitRepositoryChangesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CommitRepositoryChangesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.ReadRepositoryFile</c> and <c>DataformClient.ReadRepositoryFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadRepositoryFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.QueryRepositoryDirectoryContents</c> and
+        /// <c>DataformClient.QueryRepositoryDirectoryContentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryRepositoryDirectoryContentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.FetchRepositoryHistory</c> and <c>DataformClient.FetchRepositoryHistoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchRepositoryHistorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.ComputeRepositoryAccessTokenStatus</c> and
+        /// <c>DataformClient.ComputeRepositoryAccessTokenStatusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ComputeRepositoryAccessTokenStatusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -406,6 +483,66 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.ListReleaseConfigs</c> and <c>DataformClient.ListReleaseConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListReleaseConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.GetReleaseConfig</c> and <c>DataformClient.GetReleaseConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetReleaseConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CreateReleaseConfig</c> and <c>DataformClient.CreateReleaseConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateReleaseConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.UpdateReleaseConfig</c> and <c>DataformClient.UpdateReleaseConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateReleaseConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteReleaseConfig</c> and <c>DataformClient.DeleteReleaseConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteReleaseConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataformClient.ListCompilationResults</c> and <c>DataformClient.ListCompilationResultsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -452,6 +589,66 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryCompilationResultActionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.ListWorkflowConfigs</c> and <c>DataformClient.ListWorkflowConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWorkflowConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.GetWorkflowConfig</c> and <c>DataformClient.GetWorkflowConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetWorkflowConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CreateWorkflowConfig</c> and <c>DataformClient.CreateWorkflowConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateWorkflowConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.UpdateWorkflowConfig</c> and <c>DataformClient.UpdateWorkflowConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateWorkflowConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteWorkflowConfig</c> and <c>DataformClient.DeleteWorkflowConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteWorkflowConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -578,14 +775,14 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataformClient.Create(callInvoker, Settings, Logger);
+            return DataformClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataformClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataformClient.Create(callInvoker, Settings, Logger);
+            return DataformClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -718,13 +915,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -743,13 +949,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -768,13 +983,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -793,13 +1017,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single Repository.
@@ -937,15 +1170,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -961,15 +1194,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -985,15 +1218,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1004,15 +1237,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1028,15 +1261,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1052,15 +1285,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Repository in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location in which to create the repository. Must be in the format
-        /// `projects/*/locations/*`.
+        /// Required. The location in which to create the repository. Must be in the
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="repository">
         /// Required. The repository to create.
         /// </param>
         /// <param name="repositoryId">
-        /// Required. The ID to use for the repository, which will become the final component of
-        /// the repository's resource name.
+        /// Required. The ID to use for the repository, which will become the final
+        /// component of the repository's resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1101,8 +1334,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Required. The repository to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Specifies the fields to be updated in the repository. If left unset,
-        /// all fields will be updated.
+        /// Optional. Specifies the fields to be updated in the repository. If left
+        /// unset, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1120,8 +1353,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Required. The repository to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Specifies the fields to be updated in the repository. If left unset,
-        /// all fields will be updated.
+        /// Optional. Specifies the fields to be updated in the repository. If left
+        /// unset, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1139,8 +1372,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Required. The repository to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Specifies the fields to be updated in the repository. If left unset,
-        /// all fields will be updated.
+        /// Optional. Specifies the fields to be updated in the repository. If left
+        /// unset, all fields will be updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1253,6 +1486,133 @@ namespace Google.Cloud.Dataform.V1Beta1
             DeleteRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Applies a Git commit to a Repository. The Repository must not have a value
+        /// for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Applies a Git commit to a Repository. The Repository must not have a value
+        /// for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Applies a Git commit to a Repository. The Repository must not have a value
+        /// for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, st::CancellationToken cancellationToken) =>
+            CommitRepositoryChangesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the contents of a file (inside a Repository). The Repository
+        /// must not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadRepositoryFileResponse ReadRepositoryFile(ReadRepositoryFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a file (inside a Repository). The Repository
+        /// must not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadRepositoryFileResponse> ReadRepositoryFileAsync(ReadRepositoryFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a file (inside a Repository). The Repository
+        /// must not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadRepositoryFileResponse> ReadRepositoryFileAsync(ReadRepositoryFileRequest request, st::CancellationToken cancellationToken) =>
+            ReadRepositoryFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the contents of a given Repository directory. The Repository must
+        /// not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> QueryRepositoryDirectoryContents(QueryRepositoryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the contents of a given Repository directory. The Repository must
+        /// not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> QueryRepositoryDirectoryContentsAsync(QueryRepositoryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a Repository's history of commits.  The Repository must not have a
+        /// value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> FetchRepositoryHistory(FetchRepositoryHistoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a Repository's history of commits.  The Repository must not have a
+        /// value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> FetchRepositoryHistoryAsync(FetchRepositoryHistoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Computes a Repository's Git access token status.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ComputeRepositoryAccessTokenStatusResponse ComputeRepositoryAccessTokenStatus(ComputeRepositoryAccessTokenStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Computes a Repository's Git access token status.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ComputeRepositoryAccessTokenStatusResponse> ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Computes a Repository's Git access token status.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ComputeRepositoryAccessTokenStatusResponse> ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest request, st::CancellationToken cancellationToken) =>
+            ComputeRepositoryAccessTokenStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Fetches a Repository's remote branches.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1314,13 +1674,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspaces(new ListWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1339,13 +1708,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspacesAsync(new ListWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1364,13 +1742,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspaces(new ListWorkspacesRequest
+        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspaces(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Workspaces in a given Repository.
@@ -1389,13 +1776,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkspacesAsync(new ListWorkspacesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkspacesRequest request = new ListWorkspacesRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkspacesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single Workspace.
@@ -1533,15 +1929,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1557,15 +1953,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1581,15 +1977,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1600,15 +1996,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1624,15 +2020,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1648,15 +2044,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new Workspace in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workspace. Must be in the format
-        /// `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workspace">
         /// Required. The workspace to create.
         /// </param>
         /// <param name="workspaceId">
-        /// Required. The ID to use for the workspace, which will become the final component of
-        /// the workspace's resource name.
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1989,10 +2385,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="QueryDirectoryContentsResponse.Types.DirectoryEntry"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> QueryDirectoryContents(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> QueryDirectoryContents(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2000,11 +2394,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="QueryDirectoryContentsResponse.Types.DirectoryEntry"/>
-        /// resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> QueryDirectoryContentsAsync(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> QueryDirectoryContentsAsync(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2200,6 +2591,611 @@ namespace Google.Cloud.Dataform.V1Beta1
             WriteFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(ListReleaseConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(ListReleaseConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list release configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list release configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list release configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list release configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReleaseConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig GetReleaseConfig(GetReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(GetReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(GetReleaseConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetReleaseConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig GetReleaseConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReleaseConfig(new GetReleaseConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReleaseConfigAsync(new GetReleaseConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetReleaseConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig GetReleaseConfig(ReleaseConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReleaseConfig(new GetReleaseConfigRequest
+            {
+                ReleaseConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(ReleaseConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReleaseConfigAsync(new GetReleaseConfigRequest
+            {
+                ReleaseConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> GetReleaseConfigAsync(ReleaseConfigName name, st::CancellationToken cancellationToken) =>
+            GetReleaseConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig CreateReleaseConfig(CreateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(CreateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(CreateReleaseConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateReleaseConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig CreateReleaseConfig(string parent, ReleaseConfig releaseConfig, string releaseConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReleaseConfig(new CreateReleaseConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+                ReleaseConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(string parent, ReleaseConfig releaseConfig, string releaseConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReleaseConfigAsync(new CreateReleaseConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+                ReleaseConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(string parent, ReleaseConfig releaseConfig, string releaseConfigId, st::CancellationToken cancellationToken) =>
+            CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig CreateReleaseConfig(RepositoryName parent, ReleaseConfig releaseConfig, string releaseConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReleaseConfig(new CreateReleaseConfigRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+                ReleaseConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(RepositoryName parent, ReleaseConfig releaseConfig, string releaseConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReleaseConfigAsync(new CreateReleaseConfigRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+                ReleaseConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the release config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="releaseConfig">
+        /// Required. The release config to create.
+        /// </param>
+        /// <param name="releaseConfigId">
+        /// Required. The ID to use for the release config, which will become the final
+        /// component of the release config's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> CreateReleaseConfigAsync(RepositoryName parent, ReleaseConfig releaseConfig, string releaseConfigId, st::CancellationToken cancellationToken) =>
+            CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig UpdateReleaseConfig(UpdateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> UpdateReleaseConfigAsync(UpdateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> UpdateReleaseConfigAsync(UpdateReleaseConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateReleaseConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="releaseConfig">
+        /// Required. The release config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the release config. If left
+        /// unset, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReleaseConfig UpdateReleaseConfig(ReleaseConfig releaseConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReleaseConfig(new UpdateReleaseConfigRequest
+            {
+                UpdateMask = updateMask,
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="releaseConfig">
+        /// Required. The release config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the release config. If left
+        /// unset, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> UpdateReleaseConfigAsync(ReleaseConfig releaseConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReleaseConfigAsync(new UpdateReleaseConfigRequest
+            {
+                UpdateMask = updateMask,
+                ReleaseConfig = gax::GaxPreconditions.CheckNotNull(releaseConfig, nameof(releaseConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="releaseConfig">
+        /// Required. The release config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the release config. If left
+        /// unset, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReleaseConfig> UpdateReleaseConfigAsync(ReleaseConfig releaseConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateReleaseConfigAsync(releaseConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReleaseConfig(DeleteReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(DeleteReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(DeleteReleaseConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteReleaseConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReleaseConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReleaseConfig(new DeleteReleaseConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReleaseConfigAsync(new DeleteReleaseConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteReleaseConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReleaseConfig(ReleaseConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReleaseConfig(new DeleteReleaseConfigRequest
+            {
+                ReleaseConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(ReleaseConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReleaseConfigAsync(new DeleteReleaseConfigRequest
+            {
+                ReleaseConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The release config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReleaseConfigAsync(ReleaseConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteReleaseConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2221,8 +3217,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to list compilation results. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to list compilation results. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2234,20 +3230,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResults(new ListCompilationResultsRequest
+        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to list compilation results. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to list compilation results. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2259,20 +3264,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResultsAsync(new ListCompilationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to list compilation results. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to list compilation results. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2284,20 +3298,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResults(new ListCompilationResultsRequest
+        public virtual gax::PagedEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResults(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResults(request, callSettings);
+        }
 
         /// <summary>
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to list compilation results. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to list compilation results. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2309,13 +3332,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CompilationResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompilationResultsAsync(new ListCompilationResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> ListCompilationResultsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCompilationResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single CompilationResult.
@@ -2453,8 +3485,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2472,8 +3504,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2491,8 +3523,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2506,8 +3538,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2525,8 +3557,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2544,8 +3576,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new CompilationResult in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the compilation result. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="compilationResult">
         /// Required. The compilation result to create.
@@ -2574,6 +3606,611 @@ namespace Google.Cloud.Dataform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(ListWorkflowConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(ListWorkflowConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list workflow configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list workflow configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list workflow configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to list workflow configs. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig GetWorkflowConfig(GetWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(GetWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(GetWorkflowConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetWorkflowConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig GetWorkflowConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkflowConfig(new GetWorkflowConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkflowConfigAsync(new GetWorkflowConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetWorkflowConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig GetWorkflowConfig(WorkflowConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkflowConfig(new GetWorkflowConfigRequest
+            {
+                WorkflowConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(WorkflowConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkflowConfigAsync(new GetWorkflowConfigRequest
+            {
+                WorkflowConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> GetWorkflowConfigAsync(WorkflowConfigName name, st::CancellationToken cancellationToken) =>
+            GetWorkflowConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig CreateWorkflowConfig(CreateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(CreateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(CreateWorkflowConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateWorkflowConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig CreateWorkflowConfig(string parent, WorkflowConfig workflowConfig, string workflowConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowConfig(new CreateWorkflowConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+                WorkflowConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(string parent, WorkflowConfig workflowConfig, string workflowConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowConfigAsync(new CreateWorkflowConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+                WorkflowConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(string parent, WorkflowConfig workflowConfig, string workflowConfigId, st::CancellationToken cancellationToken) =>
+            CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig CreateWorkflowConfig(RepositoryName parent, WorkflowConfig workflowConfig, string workflowConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowConfig(new CreateWorkflowConfigRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+                WorkflowConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(RepositoryName parent, WorkflowConfig workflowConfig, string workflowConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkflowConfigAsync(new CreateWorkflowConfigRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+                WorkflowConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workflow config. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to create.
+        /// </param>
+        /// <param name="workflowConfigId">
+        /// Required. The ID to use for the workflow config, which will become the
+        /// final component of the workflow config's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(RepositoryName parent, WorkflowConfig workflowConfig, string workflowConfigId, st::CancellationToken cancellationToken) =>
+            CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig UpdateWorkflowConfig(UpdateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateWorkflowConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the workflow config. If
+        /// left unset, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkflowConfig UpdateWorkflowConfig(WorkflowConfig workflowConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWorkflowConfig(new UpdateWorkflowConfigRequest
+            {
+                UpdateMask = updateMask,
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the workflow config. If
+        /// left unset, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> UpdateWorkflowConfigAsync(WorkflowConfig workflowConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWorkflowConfigAsync(new UpdateWorkflowConfigRequest
+            {
+                UpdateMask = updateMask,
+                WorkflowConfig = gax::GaxPreconditions.CheckNotNull(workflowConfig, nameof(workflowConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="workflowConfig">
+        /// Required. The workflow config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the workflow config. If
+        /// left unset, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkflowConfig> UpdateWorkflowConfigAsync(WorkflowConfig workflowConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateWorkflowConfigAsync(workflowConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteWorkflowConfig(DeleteWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteWorkflowConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteWorkflowConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkflowConfig(new DeleteWorkflowConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkflowConfigAsync(new DeleteWorkflowConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteWorkflowConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteWorkflowConfig(WorkflowConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkflowConfig(new DeleteWorkflowConfigRequest
+            {
+                WorkflowConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(WorkflowConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkflowConfigAsync(new DeleteWorkflowConfigRequest
+            {
+                WorkflowConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The workflow config's name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteWorkflowConfigAsync(WorkflowConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteWorkflowConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2595,8 +4232,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Lists WorkflowInvocations in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the WorkflowInvocation type. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The parent resource of the WorkflowInvocation type. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2608,20 +4245,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocations(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the WorkflowInvocation type. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The parent resource of the WorkflowInvocation type. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2633,20 +4279,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocationsAsync(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the WorkflowInvocation type. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The parent resource of the WorkflowInvocation type. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2658,20 +4313,29 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocations(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocations(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists WorkflowInvocations in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the WorkflowInvocation type. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The parent resource of the WorkflowInvocation type. Must be in
+        /// the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2683,13 +4347,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowInvocation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowInvocationsAsync(new ListWorkflowInvocationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> ListWorkflowInvocationsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowInvocationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a single WorkflowInvocation.
@@ -2827,8 +4500,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -2846,8 +4519,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -2865,8 +4538,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -2880,8 +4553,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -2899,8 +4572,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -2918,8 +4591,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Creates a new WorkflowInvocation in a given Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The repository in which to create the workflow invocation. Must be in the
-        /// format `projects/*/locations/*/repositories/*`.
+        /// Required. The repository in which to create the workflow invocation. Must
+        /// be in the format `projects/*/locations/*/repositories/*`.
         /// </param>
         /// <param name="workflowInvocation">
         /// Required. The workflow invocation resource to create.
@@ -3097,6 +4770,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> _callDeleteRepository;
 
+        private readonly gaxgrpc::ApiCall<CommitRepositoryChangesRequest, wkt::Empty> _callCommitRepositoryChanges;
+
+        private readonly gaxgrpc::ApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse> _callReadRepositoryFile;
+
+        private readonly gaxgrpc::ApiCall<QueryRepositoryDirectoryContentsRequest, QueryRepositoryDirectoryContentsResponse> _callQueryRepositoryDirectoryContents;
+
+        private readonly gaxgrpc::ApiCall<FetchRepositoryHistoryRequest, FetchRepositoryHistoryResponse> _callFetchRepositoryHistory;
+
+        private readonly gaxgrpc::ApiCall<ComputeRepositoryAccessTokenStatusRequest, ComputeRepositoryAccessTokenStatusResponse> _callComputeRepositoryAccessTokenStatus;
+
         private readonly gaxgrpc::ApiCall<FetchRemoteBranchesRequest, FetchRemoteBranchesResponse> _callFetchRemoteBranches;
 
         private readonly gaxgrpc::ApiCall<ListWorkspacesRequest, ListWorkspacesResponse> _callListWorkspaces;
@@ -3139,6 +4822,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<WriteFileRequest, WriteFileResponse> _callWriteFile;
 
+        private readonly gaxgrpc::ApiCall<ListReleaseConfigsRequest, ListReleaseConfigsResponse> _callListReleaseConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetReleaseConfigRequest, ReleaseConfig> _callGetReleaseConfig;
+
+        private readonly gaxgrpc::ApiCall<CreateReleaseConfigRequest, ReleaseConfig> _callCreateReleaseConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateReleaseConfigRequest, ReleaseConfig> _callUpdateReleaseConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteReleaseConfigRequest, wkt::Empty> _callDeleteReleaseConfig;
+
         private readonly gaxgrpc::ApiCall<ListCompilationResultsRequest, ListCompilationResultsResponse> _callListCompilationResults;
 
         private readonly gaxgrpc::ApiCall<GetCompilationResultRequest, CompilationResult> _callGetCompilationResult;
@@ -3146,6 +4839,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         private readonly gaxgrpc::ApiCall<CreateCompilationResultRequest, CompilationResult> _callCreateCompilationResult;
 
         private readonly gaxgrpc::ApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse> _callQueryCompilationResultActions;
+
+        private readonly gaxgrpc::ApiCall<ListWorkflowConfigsRequest, ListWorkflowConfigsResponse> _callListWorkflowConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetWorkflowConfigRequest, WorkflowConfig> _callGetWorkflowConfig;
+
+        private readonly gaxgrpc::ApiCall<CreateWorkflowConfigRequest, WorkflowConfig> _callCreateWorkflowConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateWorkflowConfigRequest, WorkflowConfig> _callUpdateWorkflowConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteWorkflowConfigRequest, wkt::Empty> _callDeleteWorkflowConfig;
 
         private readonly gaxgrpc::ApiCall<ListWorkflowInvocationsRequest, ListWorkflowInvocationsResponse> _callListWorkflowInvocations;
 
@@ -3169,7 +4872,11 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             GrpcClient = grpcClient;
             DataformSettings effectiveSettings = settings ?? DataformSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListRepositories = clientHelper.BuildApiCall<ListRepositoriesRequest, ListRepositoriesResponse>("ListRepositories", grpcClient.ListRepositoriesAsync, grpcClient.ListRepositories, effectiveSettings.ListRepositoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -3187,6 +4894,21 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteRepository = clientHelper.BuildApiCall<DeleteRepositoryRequest, wkt::Empty>("DeleteRepository", grpcClient.DeleteRepositoryAsync, grpcClient.DeleteRepository, effectiveSettings.DeleteRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRepository);
             Modify_DeleteRepositoryApiCall(ref _callDeleteRepository);
+            _callCommitRepositoryChanges = clientHelper.BuildApiCall<CommitRepositoryChangesRequest, wkt::Empty>("CommitRepositoryChanges", grpcClient.CommitRepositoryChangesAsync, grpcClient.CommitRepositoryChanges, effectiveSettings.CommitRepositoryChangesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCommitRepositoryChanges);
+            Modify_CommitRepositoryChangesApiCall(ref _callCommitRepositoryChanges);
+            _callReadRepositoryFile = clientHelper.BuildApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse>("ReadRepositoryFile", grpcClient.ReadRepositoryFileAsync, grpcClient.ReadRepositoryFile, effectiveSettings.ReadRepositoryFileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callReadRepositoryFile);
+            Modify_ReadRepositoryFileApiCall(ref _callReadRepositoryFile);
+            _callQueryRepositoryDirectoryContents = clientHelper.BuildApiCall<QueryRepositoryDirectoryContentsRequest, QueryRepositoryDirectoryContentsResponse>("QueryRepositoryDirectoryContents", grpcClient.QueryRepositoryDirectoryContentsAsync, grpcClient.QueryRepositoryDirectoryContents, effectiveSettings.QueryRepositoryDirectoryContentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callQueryRepositoryDirectoryContents);
+            Modify_QueryRepositoryDirectoryContentsApiCall(ref _callQueryRepositoryDirectoryContents);
+            _callFetchRepositoryHistory = clientHelper.BuildApiCall<FetchRepositoryHistoryRequest, FetchRepositoryHistoryResponse>("FetchRepositoryHistory", grpcClient.FetchRepositoryHistoryAsync, grpcClient.FetchRepositoryHistory, effectiveSettings.FetchRepositoryHistorySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchRepositoryHistory);
+            Modify_FetchRepositoryHistoryApiCall(ref _callFetchRepositoryHistory);
+            _callComputeRepositoryAccessTokenStatus = clientHelper.BuildApiCall<ComputeRepositoryAccessTokenStatusRequest, ComputeRepositoryAccessTokenStatusResponse>("ComputeRepositoryAccessTokenStatus", grpcClient.ComputeRepositoryAccessTokenStatusAsync, grpcClient.ComputeRepositoryAccessTokenStatus, effectiveSettings.ComputeRepositoryAccessTokenStatusSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callComputeRepositoryAccessTokenStatus);
+            Modify_ComputeRepositoryAccessTokenStatusApiCall(ref _callComputeRepositoryAccessTokenStatus);
             _callFetchRemoteBranches = clientHelper.BuildApiCall<FetchRemoteBranchesRequest, FetchRemoteBranchesResponse>("FetchRemoteBranches", grpcClient.FetchRemoteBranchesAsync, grpcClient.FetchRemoteBranches, effectiveSettings.FetchRemoteBranchesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchRemoteBranches);
             Modify_FetchRemoteBranchesApiCall(ref _callFetchRemoteBranches);
@@ -3250,6 +4972,21 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callWriteFile = clientHelper.BuildApiCall<WriteFileRequest, WriteFileResponse>("WriteFile", grpcClient.WriteFileAsync, grpcClient.WriteFile, effectiveSettings.WriteFileSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callWriteFile);
             Modify_WriteFileApiCall(ref _callWriteFile);
+            _callListReleaseConfigs = clientHelper.BuildApiCall<ListReleaseConfigsRequest, ListReleaseConfigsResponse>("ListReleaseConfigs", grpcClient.ListReleaseConfigsAsync, grpcClient.ListReleaseConfigs, effectiveSettings.ListReleaseConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListReleaseConfigs);
+            Modify_ListReleaseConfigsApiCall(ref _callListReleaseConfigs);
+            _callGetReleaseConfig = clientHelper.BuildApiCall<GetReleaseConfigRequest, ReleaseConfig>("GetReleaseConfig", grpcClient.GetReleaseConfigAsync, grpcClient.GetReleaseConfig, effectiveSettings.GetReleaseConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetReleaseConfig);
+            Modify_GetReleaseConfigApiCall(ref _callGetReleaseConfig);
+            _callCreateReleaseConfig = clientHelper.BuildApiCall<CreateReleaseConfigRequest, ReleaseConfig>("CreateReleaseConfig", grpcClient.CreateReleaseConfigAsync, grpcClient.CreateReleaseConfig, effectiveSettings.CreateReleaseConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateReleaseConfig);
+            Modify_CreateReleaseConfigApiCall(ref _callCreateReleaseConfig);
+            _callUpdateReleaseConfig = clientHelper.BuildApiCall<UpdateReleaseConfigRequest, ReleaseConfig>("UpdateReleaseConfig", grpcClient.UpdateReleaseConfigAsync, grpcClient.UpdateReleaseConfig, effectiveSettings.UpdateReleaseConfigSettings).WithGoogleRequestParam("release_config.name", request => request.ReleaseConfig?.Name);
+            Modify_ApiCall(ref _callUpdateReleaseConfig);
+            Modify_UpdateReleaseConfigApiCall(ref _callUpdateReleaseConfig);
+            _callDeleteReleaseConfig = clientHelper.BuildApiCall<DeleteReleaseConfigRequest, wkt::Empty>("DeleteReleaseConfig", grpcClient.DeleteReleaseConfigAsync, grpcClient.DeleteReleaseConfig, effectiveSettings.DeleteReleaseConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteReleaseConfig);
+            Modify_DeleteReleaseConfigApiCall(ref _callDeleteReleaseConfig);
             _callListCompilationResults = clientHelper.BuildApiCall<ListCompilationResultsRequest, ListCompilationResultsResponse>("ListCompilationResults", grpcClient.ListCompilationResultsAsync, grpcClient.ListCompilationResults, effectiveSettings.ListCompilationResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCompilationResults);
             Modify_ListCompilationResultsApiCall(ref _callListCompilationResults);
@@ -3262,6 +4999,21 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callQueryCompilationResultActions = clientHelper.BuildApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse>("QueryCompilationResultActions", grpcClient.QueryCompilationResultActionsAsync, grpcClient.QueryCompilationResultActions, effectiveSettings.QueryCompilationResultActionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callQueryCompilationResultActions);
             Modify_QueryCompilationResultActionsApiCall(ref _callQueryCompilationResultActions);
+            _callListWorkflowConfigs = clientHelper.BuildApiCall<ListWorkflowConfigsRequest, ListWorkflowConfigsResponse>("ListWorkflowConfigs", grpcClient.ListWorkflowConfigsAsync, grpcClient.ListWorkflowConfigs, effectiveSettings.ListWorkflowConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListWorkflowConfigs);
+            Modify_ListWorkflowConfigsApiCall(ref _callListWorkflowConfigs);
+            _callGetWorkflowConfig = clientHelper.BuildApiCall<GetWorkflowConfigRequest, WorkflowConfig>("GetWorkflowConfig", grpcClient.GetWorkflowConfigAsync, grpcClient.GetWorkflowConfig, effectiveSettings.GetWorkflowConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetWorkflowConfig);
+            Modify_GetWorkflowConfigApiCall(ref _callGetWorkflowConfig);
+            _callCreateWorkflowConfig = clientHelper.BuildApiCall<CreateWorkflowConfigRequest, WorkflowConfig>("CreateWorkflowConfig", grpcClient.CreateWorkflowConfigAsync, grpcClient.CreateWorkflowConfig, effectiveSettings.CreateWorkflowConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateWorkflowConfig);
+            Modify_CreateWorkflowConfigApiCall(ref _callCreateWorkflowConfig);
+            _callUpdateWorkflowConfig = clientHelper.BuildApiCall<UpdateWorkflowConfigRequest, WorkflowConfig>("UpdateWorkflowConfig", grpcClient.UpdateWorkflowConfigAsync, grpcClient.UpdateWorkflowConfig, effectiveSettings.UpdateWorkflowConfigSettings).WithGoogleRequestParam("workflow_config.name", request => request.WorkflowConfig?.Name);
+            Modify_ApiCall(ref _callUpdateWorkflowConfig);
+            Modify_UpdateWorkflowConfigApiCall(ref _callUpdateWorkflowConfig);
+            _callDeleteWorkflowConfig = clientHelper.BuildApiCall<DeleteWorkflowConfigRequest, wkt::Empty>("DeleteWorkflowConfig", grpcClient.DeleteWorkflowConfigAsync, grpcClient.DeleteWorkflowConfig, effectiveSettings.DeleteWorkflowConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteWorkflowConfig);
+            Modify_DeleteWorkflowConfigApiCall(ref _callDeleteWorkflowConfig);
             _callListWorkflowInvocations = clientHelper.BuildApiCall<ListWorkflowInvocationsRequest, ListWorkflowInvocationsResponse>("ListWorkflowInvocations", grpcClient.ListWorkflowInvocationsAsync, grpcClient.ListWorkflowInvocations, effectiveSettings.ListWorkflowInvocationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkflowInvocations);
             Modify_ListWorkflowInvocationsApiCall(ref _callListWorkflowInvocations);
@@ -3294,6 +5046,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryApiCall(ref gaxgrpc::ApiCall<UpdateRepositoryRequest, Repository> call);
 
         partial void Modify_DeleteRepositoryApiCall(ref gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> call);
+
+        partial void Modify_CommitRepositoryChangesApiCall(ref gaxgrpc::ApiCall<CommitRepositoryChangesRequest, wkt::Empty> call);
+
+        partial void Modify_ReadRepositoryFileApiCall(ref gaxgrpc::ApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse> call);
+
+        partial void Modify_QueryRepositoryDirectoryContentsApiCall(ref gaxgrpc::ApiCall<QueryRepositoryDirectoryContentsRequest, QueryRepositoryDirectoryContentsResponse> call);
+
+        partial void Modify_FetchRepositoryHistoryApiCall(ref gaxgrpc::ApiCall<FetchRepositoryHistoryRequest, FetchRepositoryHistoryResponse> call);
+
+        partial void Modify_ComputeRepositoryAccessTokenStatusApiCall(ref gaxgrpc::ApiCall<ComputeRepositoryAccessTokenStatusRequest, ComputeRepositoryAccessTokenStatusResponse> call);
 
         partial void Modify_FetchRemoteBranchesApiCall(ref gaxgrpc::ApiCall<FetchRemoteBranchesRequest, FetchRemoteBranchesResponse> call);
 
@@ -3337,6 +5099,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_WriteFileApiCall(ref gaxgrpc::ApiCall<WriteFileRequest, WriteFileResponse> call);
 
+        partial void Modify_ListReleaseConfigsApiCall(ref gaxgrpc::ApiCall<ListReleaseConfigsRequest, ListReleaseConfigsResponse> call);
+
+        partial void Modify_GetReleaseConfigApiCall(ref gaxgrpc::ApiCall<GetReleaseConfigRequest, ReleaseConfig> call);
+
+        partial void Modify_CreateReleaseConfigApiCall(ref gaxgrpc::ApiCall<CreateReleaseConfigRequest, ReleaseConfig> call);
+
+        partial void Modify_UpdateReleaseConfigApiCall(ref gaxgrpc::ApiCall<UpdateReleaseConfigRequest, ReleaseConfig> call);
+
+        partial void Modify_DeleteReleaseConfigApiCall(ref gaxgrpc::ApiCall<DeleteReleaseConfigRequest, wkt::Empty> call);
+
         partial void Modify_ListCompilationResultsApiCall(ref gaxgrpc::ApiCall<ListCompilationResultsRequest, ListCompilationResultsResponse> call);
 
         partial void Modify_GetCompilationResultApiCall(ref gaxgrpc::ApiCall<GetCompilationResultRequest, CompilationResult> call);
@@ -3344,6 +5116,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_CreateCompilationResultApiCall(ref gaxgrpc::ApiCall<CreateCompilationResultRequest, CompilationResult> call);
 
         partial void Modify_QueryCompilationResultActionsApiCall(ref gaxgrpc::ApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse> call);
+
+        partial void Modify_ListWorkflowConfigsApiCall(ref gaxgrpc::ApiCall<ListWorkflowConfigsRequest, ListWorkflowConfigsResponse> call);
+
+        partial void Modify_GetWorkflowConfigApiCall(ref gaxgrpc::ApiCall<GetWorkflowConfigRequest, WorkflowConfig> call);
+
+        partial void Modify_CreateWorkflowConfigApiCall(ref gaxgrpc::ApiCall<CreateWorkflowConfigRequest, WorkflowConfig> call);
+
+        partial void Modify_UpdateWorkflowConfigApiCall(ref gaxgrpc::ApiCall<UpdateWorkflowConfigRequest, WorkflowConfig> call);
+
+        partial void Modify_DeleteWorkflowConfigApiCall(ref gaxgrpc::ApiCall<DeleteWorkflowConfigRequest, wkt::Empty> call);
 
         partial void Modify_ListWorkflowInvocationsApiCall(ref gaxgrpc::ApiCall<ListWorkflowInvocationsRequest, ListWorkflowInvocationsResponse> call);
 
@@ -3377,6 +5159,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryRequest(ref UpdateRepositoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRepositoryRequest(ref DeleteRepositoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CommitRepositoryChangesRequest(ref CommitRepositoryChangesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadRepositoryFileRequest(ref ReadRepositoryFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryRepositoryDirectoryContentsRequest(ref QueryRepositoryDirectoryContentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchRepositoryHistoryRequest(ref FetchRepositoryHistoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ComputeRepositoryAccessTokenStatusRequest(ref ComputeRepositoryAccessTokenStatusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchRemoteBranchesRequest(ref FetchRemoteBranchesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3420,6 +5212,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_WriteFileRequest(ref WriteFileRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListReleaseConfigsRequest(ref ListReleaseConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetReleaseConfigRequest(ref GetReleaseConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateReleaseConfigRequest(ref CreateReleaseConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateReleaseConfigRequest(ref UpdateReleaseConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteReleaseConfigRequest(ref DeleteReleaseConfigRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListCompilationResultsRequest(ref ListCompilationResultsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetCompilationResultRequest(ref GetCompilationResultRequest request, ref gaxgrpc::CallSettings settings);
@@ -3427,6 +5229,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_CreateCompilationResultRequest(ref CreateCompilationResultRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryCompilationResultActionsRequest(ref QueryCompilationResultActionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWorkflowConfigsRequest(ref ListWorkflowConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetWorkflowConfigRequest(ref GetWorkflowConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateWorkflowConfigRequest(ref CreateWorkflowConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateWorkflowConfigRequest(ref UpdateWorkflowConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteWorkflowConfigRequest(ref DeleteWorkflowConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListWorkflowInvocationsRequest(ref ListWorkflowInvocationsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3558,6 +5370,134 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_DeleteRepositoryRequest(ref request, ref callSettings);
             return _callDeleteRepository.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Applies a Git commit to a Repository. The Repository must not have a value
+        /// for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CommitRepositoryChangesRequest(ref request, ref callSettings);
+            _callCommitRepositoryChanges.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Applies a Git commit to a Repository. The Repository must not have a value
+        /// for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CommitRepositoryChangesRequest(ref request, ref callSettings);
+            return _callCommitRepositoryChanges.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a file (inside a Repository). The Repository
+        /// must not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadRepositoryFileResponse ReadRepositoryFile(ReadRepositoryFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadRepositoryFileRequest(ref request, ref callSettings);
+            return _callReadRepositoryFile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a file (inside a Repository). The Repository
+        /// must not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadRepositoryFileResponse> ReadRepositoryFileAsync(ReadRepositoryFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadRepositoryFileRequest(ref request, ref callSettings);
+            return _callReadRepositoryFile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Repository directory. The Repository must
+        /// not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> QueryRepositoryDirectoryContents(QueryRepositoryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryRepositoryDirectoryContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryRepositoryDirectoryContentsRequest, QueryRepositoryDirectoryContentsResponse, DirectoryEntry>(_callQueryRepositoryDirectoryContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the contents of a given Repository directory. The Repository must
+        /// not have a value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> QueryRepositoryDirectoryContentsAsync(QueryRepositoryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryRepositoryDirectoryContentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryRepositoryDirectoryContentsRequest, QueryRepositoryDirectoryContentsResponse, DirectoryEntry>(_callQueryRepositoryDirectoryContents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a Repository's history of commits.  The Repository must not have a
+        /// value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> FetchRepositoryHistory(FetchRepositoryHistoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchRepositoryHistoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchRepositoryHistoryRequest, FetchRepositoryHistoryResponse, CommitLogEntry>(_callFetchRepositoryHistory, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a Repository's history of commits.  The Repository must not have a
+        /// value for `git_remote_settings.url`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> FetchRepositoryHistoryAsync(FetchRepositoryHistoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchRepositoryHistoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchRepositoryHistoryRequest, FetchRepositoryHistoryResponse, CommitLogEntry>(_callFetchRepositoryHistory, request, callSettings);
+        }
+
+        /// <summary>
+        /// Computes a Repository's Git access token status.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ComputeRepositoryAccessTokenStatusResponse ComputeRepositoryAccessTokenStatus(ComputeRepositoryAccessTokenStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ComputeRepositoryAccessTokenStatusRequest(ref request, ref callSettings);
+            return _callComputeRepositoryAccessTokenStatus.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Computes a Repository's Git access token status.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ComputeRepositoryAccessTokenStatusResponse> ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ComputeRepositoryAccessTokenStatusRequest(ref request, ref callSettings);
+            return _callComputeRepositoryAccessTokenStatus.Async(request, callSettings);
         }
 
         /// <summary>
@@ -3877,13 +5817,11 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="QueryDirectoryContentsResponse.Types.DirectoryEntry"/> resources.
-        /// </returns>
-        public override gax::PagedEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> QueryDirectoryContents(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> QueryDirectoryContents(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_QueryDirectoryContentsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry>(_callQueryDirectoryContents, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse, DirectoryEntry>(_callQueryDirectoryContents, request, callSettings);
         }
 
         /// <summary>
@@ -3891,14 +5829,11 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="QueryDirectoryContentsResponse.Types.DirectoryEntry"/>
-        /// resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> QueryDirectoryContentsAsync(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryEntry"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> QueryDirectoryContentsAsync(QueryDirectoryContentsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_QueryDirectoryContentsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry>(_callQueryDirectoryContents, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse, DirectoryEntry>(_callQueryDirectoryContents, request, callSettings);
         }
 
         /// <summary>
@@ -4072,6 +6007,126 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
 
         /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigs(ListReleaseConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReleaseConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListReleaseConfigsRequest, ListReleaseConfigsResponse, ReleaseConfig>(_callListReleaseConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ReleaseConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReleaseConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> ListReleaseConfigsAsync(ListReleaseConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReleaseConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReleaseConfigsRequest, ListReleaseConfigsResponse, ReleaseConfig>(_callListReleaseConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReleaseConfig GetReleaseConfig(GetReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReleaseConfigRequest(ref request, ref callSettings);
+            return _callGetReleaseConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReleaseConfig> GetReleaseConfigAsync(GetReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReleaseConfigRequest(ref request, ref callSettings);
+            return _callGetReleaseConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReleaseConfig CreateReleaseConfig(CreateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReleaseConfigRequest(ref request, ref callSettings);
+            return _callCreateReleaseConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new ReleaseConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReleaseConfig> CreateReleaseConfigAsync(CreateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReleaseConfigRequest(ref request, ref callSettings);
+            return _callCreateReleaseConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReleaseConfig UpdateReleaseConfig(UpdateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReleaseConfigRequest(ref request, ref callSettings);
+            return _callUpdateReleaseConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReleaseConfig> UpdateReleaseConfigAsync(UpdateReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReleaseConfigRequest(ref request, ref callSettings);
+            return _callUpdateReleaseConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteReleaseConfig(DeleteReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReleaseConfigRequest(ref request, ref callSettings);
+            _callDeleteReleaseConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single ReleaseConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteReleaseConfigAsync(DeleteReleaseConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReleaseConfigRequest(ref request, ref callSettings);
+            return _callDeleteReleaseConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Lists CompilationResults in a given Repository.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4165,6 +6220,126 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_QueryCompilationResultActionsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse, CompilationResultAction>(_callQueryCompilationResultActions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigs(ListWorkflowConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkflowConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWorkflowConfigsRequest, ListWorkflowConfigsResponse, WorkflowConfig>(_callListWorkflowConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists WorkflowConfigs in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkflowConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> ListWorkflowConfigsAsync(ListWorkflowConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkflowConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkflowConfigsRequest, ListWorkflowConfigsResponse, WorkflowConfig>(_callListWorkflowConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WorkflowConfig GetWorkflowConfig(GetWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWorkflowConfigRequest(ref request, ref callSettings);
+            return _callGetWorkflowConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WorkflowConfig> GetWorkflowConfigAsync(GetWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWorkflowConfigRequest(ref request, ref callSettings);
+            return _callGetWorkflowConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WorkflowConfig CreateWorkflowConfig(CreateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWorkflowConfigRequest(ref request, ref callSettings);
+            return _callCreateWorkflowConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new WorkflowConfig in a given Repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WorkflowConfig> CreateWorkflowConfigAsync(CreateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWorkflowConfigRequest(ref request, ref callSettings);
+            return _callCreateWorkflowConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WorkflowConfig UpdateWorkflowConfig(UpdateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateWorkflowConfigRequest(ref request, ref callSettings);
+            return _callUpdateWorkflowConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WorkflowConfig> UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateWorkflowConfigRequest(ref request, ref callSettings);
+            return _callUpdateWorkflowConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteWorkflowConfig(DeleteWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWorkflowConfigRequest(ref request, ref callSettings);
+            _callDeleteWorkflowConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single WorkflowConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWorkflowConfigRequest(ref request, ref callSettings);
+            return _callDeleteWorkflowConfig.Async(request, callSettings);
         }
 
         /// <summary>
@@ -4316,6 +6491,14 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
     }
 
+    public partial class QueryRepositoryDirectoryContentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchRepositoryHistoryRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListWorkspacesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -4324,11 +6507,19 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
     }
 
+    public partial class ListReleaseConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListCompilationResultsRequest : gaxgrpc::IPageRequest
     {
     }
 
     public partial class QueryCompilationResultActionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListWorkflowConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4348,6 +6539,22 @@ namespace Google.Cloud.Dataform.V1Beta1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class QueryRepositoryDirectoryContentsResponse : gaxgrpc::IPageResponse<DirectoryEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DirectoryEntry> GetEnumerator() => DirectoryEntries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchRepositoryHistoryResponse : gaxgrpc::IPageResponse<CommitLogEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CommitLogEntry> GetEnumerator() => Commits.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListWorkspacesResponse : gaxgrpc::IPageResponse<Workspace>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -4356,10 +6563,18 @@ namespace Google.Cloud.Dataform.V1Beta1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class QueryDirectoryContentsResponse : gaxgrpc::IPageResponse<QueryDirectoryContentsResponse.Types.DirectoryEntry>
+    public partial class QueryDirectoryContentsResponse : gaxgrpc::IPageResponse<DirectoryEntry>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Types.DirectoryEntry> GetEnumerator() => DirectoryEntries.GetEnumerator();
+        public scg::IEnumerator<DirectoryEntry> GetEnumerator() => DirectoryEntries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListReleaseConfigsResponse : gaxgrpc::IPageResponse<ReleaseConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ReleaseConfig> GetEnumerator() => ReleaseConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -4376,6 +6591,14 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<CompilationResultAction> GetEnumerator() => CompilationResultActions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWorkflowConfigsResponse : gaxgrpc::IPageResponse<WorkflowConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<WorkflowConfig> GetEnumerator() => WorkflowConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

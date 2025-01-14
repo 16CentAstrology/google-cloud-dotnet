@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,6 +34,9 @@ namespace Google.Cloud.BigQuery.Migration.V2
             yield return MigrationMetricsReflection.Descriptor;
             yield return MigrationServiceReflection.Descriptor;
             yield return TranslationConfigReflection.Descriptor;
+            yield return TranslationDetailsReflection.Descriptor;
+            yield return TranslationSuggestionReflection.Descriptor;
+            yield return TranslationUsabilityReflection.Descriptor;
         }
     }
 }

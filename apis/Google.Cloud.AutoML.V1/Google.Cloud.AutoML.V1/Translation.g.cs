@@ -56,6 +56,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata that is specific to translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslationDatasetMetadata : pb::IMessage<TranslationDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -291,6 +292,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Evaluation metrics for the dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslationEvaluationMetrics : pb::IMessage<TranslationEvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -526,6 +528,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata that is specific to translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslationModelMetadata : pb::IMessage<TranslationModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -806,6 +809,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Annotation details specific to translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslationAnnotation : pb::IMessage<TranslationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

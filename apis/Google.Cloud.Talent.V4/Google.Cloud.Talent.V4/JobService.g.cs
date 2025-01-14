@@ -50,7 +50,7 @@ namespace Google.Cloud.Talent.V4 {
             "TGlzdEpvYnNSZXNwb25zZRIpCgRqb2JzGAEgAygLMhsuZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NC5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEjoKCG1l",
             "dGFkYXRhGAMgASgLMiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5SZXNwb25z",
-            "ZU1ldGFkYXRhIrwLChFTZWFyY2hKb2JzUmVxdWVzdBIvCgZwYXJlbnQYASAB",
+            "ZU1ldGFkYXRhIp0NChFTZWFyY2hKb2JzUmVxdWVzdBIvCgZwYXJlbnQYASAB",
             "KAlCH+BBAvpBGRIXam9icy5nb29nbGVhcGlzLmNvbS9Kb2ISSQoLc2VhcmNo",
             "X21vZGUYAiABKA4yNC5nb29nbGUuY2xvdWQudGFsZW50LnY0LlNlYXJjaEpv",
             "YnNSZXF1ZXN0LlNlYXJjaE1vZGUSRgoQcmVxdWVzdF9tZXRhZGF0YRgDIAEo",
@@ -68,21 +68,26 @@ namespace Google.Cloud.Talent.V4 {
             "bVJhbmtpbmdJbmZvEiEKFWRpc2FibGVfa2V5d29yZF9tYXRjaBgQIAEoCEIC",
             "GAESVgoSa2V5d29yZF9tYXRjaF9tb2RlGBIgASgOMjouZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NC5TZWFyY2hKb2JzUmVxdWVzdC5LZXl3b3JkTWF0Y2hNb2Rl",
-            "GpUCChFDdXN0b21SYW5raW5nSW5mbxJqChBpbXBvcnRhbmNlX2xldmVsGAEg",
-            "ASgOMksuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5TZWFyY2hKb2JzUmVxdWVz",
-            "dC5DdXN0b21SYW5raW5nSW5mby5JbXBvcnRhbmNlTGV2ZWxCA+BBAhIfChJy",
-            "YW5raW5nX2V4cHJlc3Npb24YAiABKAlCA+BBAiJzCg9JbXBvcnRhbmNlTGV2",
-            "ZWwSIAocSU1QT1JUQU5DRV9MRVZFTF9VTlNQRUNJRklFRBAAEggKBE5PTkUQ",
-            "ARIHCgNMT1cQAhIICgRNSUxEEAMSCgoGTUVESVVNEAQSCAoESElHSBAFEgsK",
-            "B0VYVFJFTUUQBiJSCgpTZWFyY2hNb2RlEhsKF1NFQVJDSF9NT0RFX1VOU1BF",
-            "Q0lGSUVEEAASDgoKSk9CX1NFQVJDSBABEhcKE0ZFQVRVUkVEX0pPQl9TRUFS",
-            "Q0gQAiKlAQoURGl2ZXJzaWZpY2F0aW9uTGV2ZWwSJQohRElWRVJTSUZJQ0FU",
-            "SU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARIKCgZTSU1Q",
-            "TEUQAhITCg9PTkVfUEVSX0NPTVBBTlkQAxITCg9UV09fUEVSX0NPTVBBTlkQ",
-            "BBIiCh5ESVZFUlNJRllfQllfTE9PU0VSX1NJTUlMQVJJVFkQBSKHAQoQS2V5",
-            "d29yZE1hdGNoTW9kZRIiCh5LRVlXT1JEX01BVENIX01PREVfVU5TUEVDSUZJ",
-            "RUQQABIaChZLRVlXT1JEX01BVENIX0RJU0FCTEVEEAESFQoRS0VZV09SRF9N",
-            "QVRDSF9BTEwQAhIcChhLRVlXT1JEX01BVENIX1RJVExFX09OTFkQAyKRBgoS",
+            "El4KE3JlbGV2YW5jZV90aHJlc2hvbGQYEyABKA4yPC5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0LlNlYXJjaEpvYnNSZXF1ZXN0LlJlbGV2YW5jZVRocmVzaG9s",
+            "ZEID4EEBGpUCChFDdXN0b21SYW5raW5nSW5mbxJqChBpbXBvcnRhbmNlX2xl",
+            "dmVsGAEgASgOMksuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5TZWFyY2hKb2Jz",
+            "UmVxdWVzdC5DdXN0b21SYW5raW5nSW5mby5JbXBvcnRhbmNlTGV2ZWxCA+BB",
+            "AhIfChJyYW5raW5nX2V4cHJlc3Npb24YAiABKAlCA+BBAiJzCg9JbXBvcnRh",
+            "bmNlTGV2ZWwSIAocSU1QT1JUQU5DRV9MRVZFTF9VTlNQRUNJRklFRBAAEggK",
+            "BE5PTkUQARIHCgNMT1cQAhIICgRNSUxEEAMSCgoGTUVESVVNEAQSCAoESElH",
+            "SBAFEgsKB0VYVFJFTUUQBiJSCgpTZWFyY2hNb2RlEhsKF1NFQVJDSF9NT0RF",
+            "X1VOU1BFQ0lGSUVEEAASDgoKSk9CX1NFQVJDSBABEhcKE0ZFQVRVUkVEX0pP",
+            "Ql9TRUFSQ0gQAiLAAQoURGl2ZXJzaWZpY2F0aW9uTGV2ZWwSJQohRElWRVJT",
+            "SUZJQ0FUSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARIK",
+            "CgZTSU1QTEUQAhITCg9PTkVfUEVSX0NPTVBBTlkQAxITCg9UV09fUEVSX0NP",
+            "TVBBTlkQBBIZChVNQVhfVEhSRUVfUEVSX0NPTVBBTlkQBhIiCh5ESVZFUlNJ",
+            "RllfQllfTE9PU0VSX1NJTUlMQVJJVFkQBSKHAQoQS2V5d29yZE1hdGNoTW9k",
+            "ZRIiCh5LRVlXT1JEX01BVENIX01PREVfVU5TUEVDSUZJRUQQABIaChZLRVlX",
+            "T1JEX01BVENIX0RJU0FCTEVEEAESFQoRS0VZV09SRF9NQVRDSF9BTEwQAhIc",
+            "ChhLRVlXT1JEX01BVENIX1RJVExFX09OTFkQAyJkChJSZWxldmFuY2VUaHJl",
+            "c2hvbGQSIwofUkVMRVZBTkNFX1RIUkVTSE9MRF9VTlNQRUNJRklFRBAAEgoK",
+            "BkxPV0VTVBABEgcKA0xPVxACEgoKBk1FRElVTRADEggKBEhJR0gQBCKRBgoS",
             "U2VhcmNoSm9ic1Jlc3BvbnNlEk0KDW1hdGNoaW5nX2pvYnMYASADKAsyNi5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0LlNlYXJjaEpvYnNSZXNwb25zZS5NYXRj",
             "aGluZ0pvYhJNChdoaXN0b2dyYW1fcXVlcnlfcmVzdWx0cxgCIAMoCzIsLmdv",
@@ -122,36 +127,36 @@ namespace Google.Cloud.Talent.V4 {
             "TBACEhIKDkpPQl9WSUVXX1NNQUxMEAMSEQoNSk9CX1ZJRVdfRlVMTBAEMtwO",
             "CgpKb2JTZXJ2aWNlEpQBCglDcmVhdGVKb2ISKC5nb29nbGUuY2xvdWQudGFs",
             "ZW50LnY0LkNyZWF0ZUpvYlJlcXVlc3QaGy5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0LkpvYiJAgtPkkwItIiYvdjQve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFu",
-            "dHMvKn0vam9iczoDam9i2kEKcGFyZW50LGpvYhLhAQoPQmF0Y2hDcmVhdGVK",
+            "LnY0LkpvYiJA2kEKcGFyZW50LGpvYoLT5JMCLSImL3Y0L3twYXJlbnQ9cHJv",
+            "amVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6A2pvYhLhAQoPQmF0Y2hDcmVhdGVK",
             "b2JzEi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5CYXRjaENyZWF0ZUpvYnNS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ/gtPkkwI3",
-            "IjIvdjQve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpiYXRj",
-            "aENyZWF0ZToBKtpBC3BhcmVudCxqb2JzykExChdCYXRjaENyZWF0ZUpvYnNS",
-            "ZXNwb25zZRIWQmF0Y2hPcGVyYXRpb25NZXRhZGF0YRKDAQoGR2V0Sm9iEiUu",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ/ykExChdC",
+            "YXRjaENyZWF0ZUpvYnNSZXNwb25zZRIWQmF0Y2hPcGVyYXRpb25NZXRhZGF0",
+            "YdpBC3BhcmVudCxqb2JzgtPkkwI3IjIvdjQve3BhcmVudD1wcm9qZWN0cy8q",
+            "L3RlbmFudHMvKn0vam9iczpiYXRjaENyZWF0ZToBKhKDAQoGR2V0Sm9iEiUu",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NC5HZXRKb2JSZXF1ZXN0GhsuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NC5Kb2IiNYLT5JMCKBImL3Y0L3tuYW1lPXByb2pl",
-            "Y3RzLyovdGVuYW50cy8qL2pvYnMvKn3aQQRuYW1lEp0BCglVcGRhdGVKb2IS",
+            "LmNsb3VkLnRhbGVudC52NC5Kb2IiNdpBBG5hbWWC0+STAigSJi92NC97bmFt",
+            "ZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9qb2JzLyp9Ep0BCglVcGRhdGVKb2IS",
             "KC5nb29nbGUuY2xvdWQudGFsZW50LnY0LlVwZGF0ZUpvYlJlcXVlc3QaGy5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0LkpvYiJJgtPkkwIxMiovdjQve2pvYi5u",
-            "YW1lPXByb2plY3RzLyovdGVuYW50cy8qL2pvYnMvKn06A2pvYtpBD2pvYix1",
-            "cGRhdGVfbWFzaxLhAQoPQmF0Y2hVcGRhdGVKb2JzEi4uZ29vZ2xlLmNsb3Vk",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0LkpvYiJJ2kEPam9iLHVwZGF0ZV9tYXNr",
+            "gtPkkwIxMiovdjQve2pvYi5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2pv",
+            "YnMvKn06A2pvYhLhAQoPQmF0Y2hVcGRhdGVKb2JzEi4uZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NC5CYXRjaFVwZGF0ZUpvYnNSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJ/gtPkkwI3IjIvdjQve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL3RlbmFudHMvKn0vam9iczpiYXRjaFVwZGF0ZToBKtpBC3BhcmVu",
-            "dCxqb2JzykExChdCYXRjaFVwZGF0ZUpvYnNSZXNwb25zZRIWQmF0Y2hPcGVy",
-            "YXRpb25NZXRhZGF0YRKEAQoJRGVsZXRlSm9iEiguZ29vZ2xlLmNsb3VkLnRh",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJ/ykExChdCYXRjaFVwZGF0ZUpvYnNSZXNw",
+            "b25zZRIWQmF0Y2hPcGVyYXRpb25NZXRhZGF0YdpBC3BhcmVudCxqb2JzgtPk",
+            "kwI3IjIvdjQve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpi",
+            "YXRjaFVwZGF0ZToBKhKEAQoJRGVsZXRlSm9iEiguZ29vZ2xlLmNsb3VkLnRh",
             "bGVudC52NC5EZWxldGVKb2JSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IjWC0+STAigqJi92NC97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9q",
-            "b2JzLyp92kEEbmFtZRLjAQoPQmF0Y2hEZWxldGVKb2JzEi4uZ29vZ2xlLmNs",
+            "cHR5IjXaQQRuYW1lgtPkkwIoKiYvdjQve25hbWU9cHJvamVjdHMvKi90ZW5h",
+            "bnRzLyovam9icy8qfRLjAQoPQmF0Y2hEZWxldGVKb2JzEi4uZ29vZ2xlLmNs",
             "b3VkLnRhbGVudC52NC5CYXRjaERlbGV0ZUpvYnNSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKAAYLT5JMCNyIyL3Y0L3twYXJlbnQ9",
-            "cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6YmF0Y2hEZWxldGU6ASraQQxw",
-            "YXJlbnQsbmFtZXPKQTEKF0JhdGNoRGVsZXRlSm9ic1Jlc3BvbnNlEhZCYXRj",
-            "aE9wZXJhdGlvbk1ldGFkYXRhEp0BCghMaXN0Sm9icxInLmdvb2dsZS5jbG91",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKAAcpBMQoXQmF0Y2hEZWxldGVKb2Jz",
+            "UmVzcG9uc2USFkJhdGNoT3BlcmF0aW9uTWV0YWRhdGHaQQxwYXJlbnQsbmFt",
+            "ZXOC0+STAjciMi92NC97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9q",
+            "b2JzOmJhdGNoRGVsZXRlOgEqEp0BCghMaXN0Sm9icxInLmdvb2dsZS5jbG91",
             "ZC50YWxlbnQudjQuTGlzdEpvYnNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NC5MaXN0Sm9ic1Jlc3BvbnNlIj6C0+STAigSJi92NC97cGFyZW50",
-            "PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2Jz2kENcGFyZW50LGZpbHRlchKd",
+            "bGVudC52NC5MaXN0Sm9ic1Jlc3BvbnNlIj7aQQ1wYXJlbnQsZmlsdGVygtPk",
+            "kwIoEiYvdjQve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9icxKd",
             "AQoKU2VhcmNoSm9icxIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuU2VhcmNo",
             "Sm9ic1JlcXVlc3QaKi5nb29nbGUuY2xvdWQudGFsZW50LnY0LlNlYXJjaEpv",
             "YnNSZXNwb25zZSI4gtPkkwIyIi0vdjQve3BhcmVudD1wcm9qZWN0cy8qL3Rl",
@@ -174,7 +179,7 @@ namespace Google.Cloud.Talent.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.DeleteJobRequest), global::Google.Cloud.Talent.V4.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.ListJobsRequest), global::Google.Cloud.Talent.V4.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "PageToken", "PageSize", "JobView" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.ListJobsResponse), global::Google.Cloud.Talent.V4.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Metadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest), global::Google.Cloud.Talent.V4.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "HistogramQueries", "JobView", "Offset", "MaxPageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch", "KeywordMatchMode" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.DiversificationLevel), typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest), global::Google.Cloud.Talent.V4.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "HistogramQueries", "JobView", "Offset", "MaxPageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch", "KeywordMatchMode", "RelevanceThreshold" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.DiversificationLevel), typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode), typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsResponse), global::Google.Cloud.Talent.V4.SearchJobsResponse.Parser, new[]{ "MatchingJobs", "HistogramQueryResults", "NextPageToken", "LocationFilters", "TotalSize", "Metadata", "BroadenedQueryJobsCount", "SpellCorrection" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsResponse.Types.MatchingJob), global::Google.Cloud.Talent.V4.SearchJobsResponse.Types.MatchingJob.Parser, new[]{ "Job", "JobSummary", "JobTitleSnippet", "SearchTextSnippet", "CommuteInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.BatchCreateJobsRequest), global::Google.Cloud.Talent.V4.BatchCreateJobsRequest.Parser, new[]{ "Parent", "Jobs" }, null, null, null, null),
@@ -242,6 +247,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Create job request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -489,6 +495,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Get job request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -688,6 +695,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Update job request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -949,6 +957,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Delete job request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1148,6 +1157,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// List jobs request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1538,6 +1548,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// List jobs response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1815,6 +1826,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The Request body of the `SearchJobs` call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchJobsRequest : pb::IMessage<SearchJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1864,6 +1876,7 @@ namespace Google.Cloud.Talent.V4 {
       customRankingInfo_ = other.customRankingInfo_ != null ? other.customRankingInfo_.Clone() : null;
       disableKeywordMatch_ = other.disableKeywordMatch_;
       keywordMatchMode_ = other.keywordMatchMode_;
+      relevanceThreshold_ = other.relevanceThreshold_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2340,6 +2353,25 @@ namespace Google.Cloud.Talent.V4 {
       }
     }
 
+    /// <summary>Field number for the "relevance_threshold" field.</summary>
+    public const int RelevanceThresholdFieldNumber = 19;
+    private global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold relevanceThreshold_ = global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified;
+    /// <summary>
+    /// Optional. The relevance threshold of the search results.
+    ///
+    /// Default to Google defined threshold, leveraging a balance of
+    /// precision and recall to deliver both highly accurate results and
+    /// comprehensive coverage of relevant information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold RelevanceThreshold {
+      get { return relevanceThreshold_; }
+      set {
+        relevanceThreshold_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2370,6 +2402,7 @@ namespace Google.Cloud.Talent.V4 {
       if (!object.Equals(CustomRankingInfo, other.CustomRankingInfo)) return false;
       if (DisableKeywordMatch != other.DisableKeywordMatch) return false;
       if (KeywordMatchMode != other.KeywordMatchMode) return false;
+      if (RelevanceThreshold != other.RelevanceThreshold) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2392,6 +2425,7 @@ namespace Google.Cloud.Talent.V4 {
       if (customRankingInfo_ != null) hash ^= CustomRankingInfo.GetHashCode();
       if (DisableKeywordMatch != false) hash ^= DisableKeywordMatch.GetHashCode();
       if (KeywordMatchMode != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) hash ^= KeywordMatchMode.GetHashCode();
+      if (RelevanceThreshold != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified) hash ^= RelevanceThreshold.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2467,6 +2501,10 @@ namespace Google.Cloud.Talent.V4 {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) KeywordMatchMode);
       }
+      if (RelevanceThreshold != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) RelevanceThreshold);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2534,6 +2572,10 @@ namespace Google.Cloud.Talent.V4 {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) KeywordMatchMode);
       }
+      if (RelevanceThreshold != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) RelevanceThreshold);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2586,6 +2628,9 @@ namespace Google.Cloud.Talent.V4 {
       }
       if (KeywordMatchMode != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) KeywordMatchMode);
+      }
+      if (RelevanceThreshold != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RelevanceThreshold);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2650,6 +2695,9 @@ namespace Google.Cloud.Talent.V4 {
       }
       if (other.KeywordMatchMode != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode.Unspecified) {
         KeywordMatchMode = other.KeywordMatchMode;
+      }
+      if (other.RelevanceThreshold != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold.Unspecified) {
+        RelevanceThreshold = other.RelevanceThreshold;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2733,6 +2781,10 @@ namespace Google.Cloud.Talent.V4 {
           }
           case 144: {
             KeywordMatchMode = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            RelevanceThreshold = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold) input.ReadEnum();
             break;
           }
         }
@@ -2819,6 +2871,10 @@ namespace Google.Cloud.Talent.V4 {
             KeywordMatchMode = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.KeywordMatchMode) input.ReadEnum();
             break;
           }
+          case 152: {
+            RelevanceThreshold = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.RelevanceThreshold) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -2897,6 +2953,12 @@ namespace Google.Cloud.Talent.V4 {
         /// </summary>
         [pbr::OriginalName("TWO_PER_COMPANY")] TwoPerCompany = 4,
         /// <summary>
+        /// Similar to ONE_PER_COMPANY, but it allows at most three jobs in the
+        /// same company to be shown at once, the other jobs under same company are
+        /// dropped.
+        /// </summary>
+        [pbr::OriginalName("MAX_THREE_PER_COMPANY")] MaxThreePerCompany = 6,
+        /// <summary>
         /// The result list is ordered such that somewhat similar results are pushed
         /// to the end of the last page of the search results. This option is
         /// recommended if SIMPLE diversification does not diversify enough.
@@ -2954,9 +3016,39 @@ namespace Google.Cloud.Talent.V4 {
       }
 
       /// <summary>
+      /// The relevance threshold of the search results. The higher relevance
+      /// threshold is, the higher relevant results are shown and the less number of
+      /// results are returned.
+      /// </summary>
+      public enum RelevanceThreshold {
+        /// <summary>
+        /// Default value. In this case, server behavior defaults to Google defined
+        /// threshold.
+        /// </summary>
+        [pbr::OriginalName("RELEVANCE_THRESHOLD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Lowest relevance threshold.
+        /// </summary>
+        [pbr::OriginalName("LOWEST")] Lowest = 1,
+        /// <summary>
+        /// Low relevance threshold.
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 2,
+        /// <summary>
+        /// Medium relevance threshold.
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 3,
+        /// <summary>
+        /// High relevance threshold.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 4,
+      }
+
+      /// <summary>
       /// Custom ranking information for
       /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CustomRankingInfo : pb::IMessage<CustomRankingInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3278,6 +3370,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Response for SearchJob method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchJobsResponse : pb::IMessage<SearchJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3757,6 +3850,7 @@ namespace Google.Cloud.Talent.V4 {
       /// Job entry with metadata inside
       /// [SearchJobsResponse][google.cloud.talent.v4.SearchJobsResponse].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MatchingJob : pb::IMessage<MatchingJob>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4140,6 +4234,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Commute details related to this job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CommuteInfo : pb::IMessage<CommuteInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4401,6 +4496,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to create a batch of jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateJobsRequest : pb::IMessage<BatchCreateJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4629,6 +4725,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to update a batch of jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateJobsRequest : pb::IMessage<BatchUpdateJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4724,7 +4821,7 @@ namespace Google.Cloud.Talent.V4 {
     ///
     /// If [update_mask][google.cloud.talent.v4.BatchUpdateJobsRequest.update_mask]
     /// is provided, The [Job][google.cloud.talent.v4.Job] inside
-    /// [JobResult][JobOperationResult.JobResult]
+    /// [JobResult][google.cloud.talent.v4.JobResult]
     /// will only contains fields that is updated, plus the Id of the Job.
     /// Otherwise,  [Job][google.cloud.talent.v4.Job] will include all fields,
     /// which can yield a very large response.
@@ -4921,6 +5018,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to delete a batch of jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDeleteJobsRequest : pb::IMessage<BatchDeleteJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5155,6 +5253,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Mutation result of a job from a batch operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobResult : pb::IMessage<JobResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5418,6 +5517,7 @@ namespace Google.Cloud.Talent.V4 {
   /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
   /// in case of success.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateJobsResponse : pb::IMessage<BatchCreateJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5607,6 +5707,7 @@ namespace Google.Cloud.Talent.V4 {
   /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
   /// in case of success.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateJobsResponse : pb::IMessage<BatchUpdateJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5796,6 +5897,7 @@ namespace Google.Cloud.Talent.V4 {
   /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
   /// in case of success.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDeleteJobsResponse : pb::IMessage<BatchDeleteJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

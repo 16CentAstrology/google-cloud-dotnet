@@ -65,6 +65,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// An Instance resource is the computing unit that App Engine uses to
   /// automatically scale an application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -932,6 +933,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <summary>
       /// Wrapper for LivenessState enum.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Liveness : pb::IMessage<Liveness>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Metastore.V1
@@ -57,6 +57,11 @@ namespace Google.Cloud.Metastore.V1
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
                     // { "post": "/v1/{resource=projects/*/locations/*/services/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/federations/*}:testIamPermissions", "body": "*" } ] }
                     proto::ByteString.FromBase64("IkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWksiRi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRlcmF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
+                },
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",

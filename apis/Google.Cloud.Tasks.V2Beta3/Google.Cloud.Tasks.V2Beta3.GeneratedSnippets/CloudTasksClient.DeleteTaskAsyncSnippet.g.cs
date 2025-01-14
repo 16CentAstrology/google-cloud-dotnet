@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_async_flattened]
     using System.Threading.Tasks;
@@ -35,7 +35,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task DeleteTaskAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request

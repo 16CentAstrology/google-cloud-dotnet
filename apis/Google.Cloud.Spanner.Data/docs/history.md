@@ -1,5 +1,158 @@
 # Version history
 
+## Version 5.0.0-beta05, released 2024-11-07
+
+### New features
+
+- Add support for Cloud Spanner Default Backup Schedules ([commit a456d8c](https://github.com/googleapis/google-cloud-dotnet/commit/a456d8cb3888c61360e3361bec4568c95807e312))
+- Define ReplicaComputeCapacity and AsymmetricAutoscalingOption ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- Add new QueryMode enum values (WITH_STATS, WITH_PLAN_AND_STATS) ([commit 16d3bbb](https://github.com/googleapis/google-cloud-dotnet/commit/16d3bbbdce35809697b8e47338cbd3369b5f8865))
+- Add INTERVAL API ([commit 9f9efe6](https://github.com/googleapis/google-cloud-dotnet/commit/9f9efe6dc4ff1ec59ac506585e26c0a40ce75552))
+
+### Documentation improvements
+
+- A comment for field `node_count` in message `spanner.admin.instance.v1.Instance` is changed ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- A comment for field `processing_units` in message `spanner.admin.instance.v1.Instance` is changed ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- Update comment for PROFILE QueryMode ([commit 16d3bbb](https://github.com/googleapis/google-cloud-dotnet/commit/16d3bbbdce35809697b8e47338cbd3369b5f8865))
+
+## Version 5.0.0-beta04, released 2024-08-13
+
+### Bug fixes
+
+- Retriable transactions should be released after successful commit ([commit f2c7840](https://github.com/googleapis/google-cloud-dotnet/commit/f2c78404d6d1ee99bcaef082c8bf925ba98c4f47))
+- Partitioned updates are only executed on an ephemeral transaction ([commit d88a807](https://github.com/googleapis/google-cloud-dotnet/commit/d88a80788f89e6d74a96c506718769c88dd1a05d))
+- Timestamp bound reads and queries are only executed on an ephemeral transaction ([commit f8f8235](https://github.com/googleapis/google-cloud-dotnet/commit/f8f8235bff3ecd1e7dc063827bbf974415cee9cd))
+
+### New features
+
+- Add resource reference annotation to backup schedules ([commit 8403eb4](https://github.com/googleapis/google-cloud-dotnet/commit/8403eb449930743ba57bb941bf9d329ab243051e))
+- Add edition field to the instance proto ([commit 2b59065](https://github.com/googleapis/google-cloud-dotnet/commit/2b590658f970c1eea63b665277fd0b42220daac1))
+- **BREAKING CHANGE** Fully support SpannerTransactionCreationOptoins ([commit 34a25d3](https://github.com/googleapis/google-cloud-dotnet/commit/34a25d3ad1f828fe8a525edf65b10a0ea2b7916e))
+- Support excluding a transaction from change streams ([commit 9e3ec98](https://github.com/googleapis/google-cloud-dotnet/commit/9e3ec986e54d0d0a8a74351fd671f7596437a2e0))
+- Add protobuf column support for the data layer ([commit 8646000](https://github.com/googleapis/google-cloud-dotnet/commit/8646000144c4e661a4a0b0d18b16765cbd18429c))
+- Add support for protobuf typed colums for DDL ([commit 551d519](https://github.com/googleapis/google-cloud-dotnet/commit/551d519f3088310272cb0380c51a0bb3f2bc1140))
+- Add support for Cloud Spanner Incremental Backups ([commit aa5a584](https://github.com/googleapis/google-cloud-dotnet/commit/aa5a584c2d0b704d5c50164c3ab5e76147b9efd1))
+- Add support for Cloud Spanner Scheduled Backups ([commit ac15c11](https://github.com/googleapis/google-cloud-dotnet/commit/ac15c11c2a4c1d4b77510556ff863079ac5567f0))
+- **BREAKING CHANGE** Commit/Rollback releases sessions to the pool ([commit 86fa6a6](https://github.com/googleapis/google-cloud-dotnet/commit/86fa6a69c8732be25cc7c95b567ab4f358f76007))
+- **BREAKING CHANGE** Support detached sessions/transactions ([commit cfa961e](https://github.com/googleapis/google-cloud-dotnet/commit/cfa961e9bf2a8987c4573afa9815d99295c6eb2c))
+- Add field order_by in spanner.proto ([commit a5f7b22](https://github.com/googleapis/google-cloud-dotnet/commit/a5f7b229a89681c1a884fc8ee72d6835882353da))
+- Add field lock_hint in spanner.proto ([commit a5f7b22](https://github.com/googleapis/google-cloud-dotnet/commit/a5f7b229a89681c1a884fc8ee72d6835882353da))
+- Add support for multi region encryption config ([commit bb95bbf](https://github.com/googleapis/google-cloud-dotnet/commit/bb95bbf3c64499e17a4dcfc27fa6e6a789e5cb79))
+- Add `RESOURCE_EXHAUSTED` to the list of retryable error codes ([commit fbb0099](https://github.com/googleapis/google-cloud-dotnet/commit/fbb0099a03371b08c194e2fada0ca63bd98fec00))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Add an example to filter backups based on schedule name ([commit 8403eb4](https://github.com/googleapis/google-cloud-dotnet/commit/8403eb449930743ba57bb941bf9d329ab243051e))
+- Clarify documentation around session acquisition vs. transaction creation ([commit 9aae25e](https://github.com/googleapis/google-cloud-dotnet/commit/9aae25e896a9034845142792de2df69e55b6105b))
+- Fix linting for several doc comments ([commit bb95bbf](https://github.com/googleapis/google-cloud-dotnet/commit/bb95bbf3c64499e17a4dcfc27fa6e6a789e5cb79))
+
+### Breaking changes
+
+- Some SpannerConnection begin transaction methods that had only been released in beta versions of the library have been removed. ([commit 34a25d3](https://github.com/googleapis/google-cloud-dotnet/commit/34a25d3ad1f828fe8a525edf65b10a0ea2b7916e))
+- The AmbientTransactionOptions class is split in SpannerTransactionCreationOptions and SpannerTransactionOptions, with all original options moving to one or the other. The SpannerConnection.Open set of methods that received an AmbientTransactionOptions before now receive one SpannerTransactionCreationOptions and one SpannerTransactionOptions. ([commit 1541b99](https://github.com/googleapis/google-cloud-dotnet/commit/1541b99ee7b835b27d9329d91a2477b8461d739a))
+- After a successfull commit or rollback, the transaction is disposed and may not be used again. See the Google.Cloud.Spanner.Data.SpannerTransaction.DisposeBehavior documentation for more information. ([commit 86fa6a6](https://github.com/googleapis/google-cloud-dotnet/commit/86fa6a69c8732be25cc7c95b567ab4f358f76007))
+
+## Version 5.0.0-beta03, released 2024-04-19
+
+### New features
+
+- Add support for FLOAT32 ([commit 83700dd](https://github.com/googleapis/google-cloud-dotnet/commit/83700dd7c2b05bb3b598ecb7fe43de255cd5fdc8))
+
+### Breaking changes
+
+- The default mapping for values of CLR type decimal was FLOAT64 and it is now Numeric. ([commit 9824a9c](https://github.com/googleapis/google-cloud-dotnet/commit/9824a9c3580e79e95a7bed5af12bcdb15ffbe4cc))
+- The default mapping for values of CLR type float was FLOAT64 and it is now FLOAT32. ([commit 83700dd](https://github.com/googleapis/google-cloud-dotnet/commit/83700dd7c2b05bb3b598ecb7fe43de255cd5fdc8))
+- Support for specifying a maximum commit delay was added in v5.0.0-beta02. Unfortunately properties and methods for this feature were erroneously named using "commit delay" instead of "max commit delay". All such names are being corrected in this commit. ([commit 03e66d7](https://github.com/googleapis/google-cloud-dotnet/commit/03e66d73b165fe10f945924f5e70498d378042d2))
+- Remove Obsolete code that had been introduced before v5.0.0-beta01. ([commit fdc4bff](https://github.com/googleapis/google-cloud-dotnet/commit/fdc4bff6a932d39e8d6c51f9efad040e427face8))
+
+## Version 5.0.0-beta02, released 2024-04-04
+
+### New features
+
+- Ambient transactions support commit delays ([commit f4b4208](https://github.com/googleapis/google-cloud-dotnet/commit/f4b4208eb3d9b1ef9ce1c984d57e920c7ce0b5f1))
+- Implicit transactions support commit delay ([commit af15aaf](https://github.com/googleapis/google-cloud-dotnet/commit/af15aafce40ac46d20256cec0b47ca965c51a6e2))
+- Explicit transactions support commit delays ([commit 4934cfd](https://github.com/googleapis/google-cloud-dotnet/commit/4934cfd23e0d02376a1950bd825f72e1b388fc20))
+- Adding `EXPECTED_FULFILLMENT_PERIOD` to the indicate instance creation times (with `FULFILLMENT_PERIOD_NORMAL` or `FULFILLMENT_PERIOD_EXTENDED` ENUM) with the extended instance creation time triggered by On-Demand Capacity Feature ([commit 20bb7e7](https://github.com/googleapis/google-cloud-dotnet/commit/20bb7e736ffbcff1d9eb4f77cc5bea000d295fdc))
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- SpannerCommand supports directed reads ([commit dfeb2c0](https://github.com/googleapis/google-cloud-dotnet/commit/dfeb2c0de7889679320ffa71ef99b114511a7fbb))
+- SpannerConnection supports directed reads ([commit d7620e5](https://github.com/googleapis/google-cloud-dotnet/commit/d7620e524a3173904e4bb298615b16c2f7d13d8a))
+- PooledSession supports directed reads ([commit e26c8aa](https://github.com/googleapis/google-cloud-dotnet/commit/e26c8aab85cac8ab3bd1d9c9e286b706a43a2ec4))
+- Add PG.OID support ([commit 43818f3](https://github.com/googleapis/google-cloud-dotnet/commit/43818f3ccb9943ec83d84f3c300505cd58073532))
+- Update TransactionOptions to include new option exclude_txn_from_change_streams ([commit 89764a0](https://github.com/googleapis/google-cloud-dotnet/commit/89764a08f8fe1133bee9f89ef6fd02b8d5ce8f1d))
+- Add field for multiplexed session in spanner.proto ([commit 4bdb639](https://github.com/googleapis/google-cloud-dotnet/commit/4bdb639fe97f720a42f55305e40f6c355f109914))
+
+### Documentation improvements
+
+- Fix typo ([commit ce1be02](https://github.com/googleapis/google-cloud-dotnet/commit/ce1be0278bed346a12533f0f00c85588f3454136))
+- Update comments ([commit 4bdb639](https://github.com/googleapis/google-cloud-dotnet/commit/4bdb639fe97f720a42f55305e40f6c355f109914))
+
+### Other changes
+
+- Deprecate ambient transaction creation overloads ([commit 50f5f65](https://github.com/googleapis/google-cloud-dotnet/commit/50f5f654eb122e06fc0e0c25fcd089c2bbfac681))
+
+(This isn't a breaking change unless code is compiled with warnings as errors, but we do expect to remove these methods entirely in v6.0 of this library.)
+
+## Version 5.0.0-beta01, released 2024-02-09
+
+### Bug fixes
+
+- Have SpannerTransaction check if it has been disposed before executing commands. ([commit c97a70a](https://github.com/googleapis/google-cloud-dotnet/commit/c97a70adaf559f68b7b980bd018485d99fa080a7))
+
+### New features
+
+- Add leader routing support. ([commit eb2157a](https://github.com/googleapis/google-cloud-dotnet/commit/eb2157ac35bff3f4424bc443b2067474755bf26c))
+- Add FLOAT32 enum to TypeCode ([commit 18e6491](https://github.com/googleapis/google-cloud-dotnet/commit/18e6491b92ee1042550bb20632acf14be52e43c0))
+- Add proto descriptors for proto and enum types in create/update/get database ddl requests ([commit 7085e3f](https://github.com/googleapis/google-cloud-dotnet/commit/7085e3fb785d8cd342145c716a80680ab5e1b98a))
+- Add max_commit_delay API ([commit 3984609](https://github.com/googleapis/google-cloud-dotnet/commit/39846090bcb63a4608f378ab340b0384bd7d892e))
+- Add proto and enum types ([commit ea75989](https://github.com/googleapis/google-cloud-dotnet/commit/ea7598963d2967bed059c897973a9e62544442d8))
+- **BREAKING CHANGE** Support inline transactions. ([#11360](https://github.com/googleapis/google-cloud-dotnet/pull/11360))
+- Add directed_read_option in spanner.proto ([commit 3b374e0](https://github.com/googleapis/google-cloud-dotnet/commit/3b374e03f91e267ad2ed52fdb5814d4be95c2ae6))
+- Add PG.OID type cod annotation ([commit a8662dc](https://github.com/googleapis/google-cloud-dotnet/commit/a8662dc1e7153f5657f64860396d3504c14cb7a0))
+- Add autoscaling config to the instance proto ([commit 07022a6](https://github.com/googleapis/google-cloud-dotnet/commit/07022a6249358c9dba35fbedebc44068e86413f0))
+- Add BatchWrite API ([commit 7a127d0](https://github.com/googleapis/google-cloud-dotnet/commit/7a127d0b59cb7a86bb4b14e489ad0f1ba2b70455))
+
+### Documentation improvements
+
+- Update the comment regarding eligible SQL shapes for PartitionQuery ([commit 1eb3d3e](https://github.com/googleapis/google-cloud-dotnet/commit/1eb3d3eca7d973633374f4e6cd56fe4a60995a63))
+- Updated comment formatting ([commit 3b374e0](https://github.com/googleapis/google-cloud-dotnet/commit/3b374e03f91e267ad2ed52fdb5814d4be95c2ae6))
+
+BREAKING CHANGE: In supporting inline transactions the main breaking change is behavioral: transactions are not prewarmed, instead they are acquired
+as needed, mainly through inlining transaction creation in the first command that attempts to use a transaction. The method
+`Google.Cloud.Spanner.V1.PooledSession.WithFreshTransactionOrNewAsync` has been removed, as a transaction is not created by the session until command execution.
+Use instead `Google.Cloud.Spanner.V1.PooledSession.RefreshedOrNewAsync` which returns a new PooledSession instance that either represents the same
+session but with no transaction associated to it or a newly acquired session. Since transactions are not prewarmed, the session pool does not need
+to distinguish between read-only and read-write session/transaction pairs. In the statistics classes that may be used for diagnostic purposes all
+properties distinguising between read-only and read-write statistics have been removed. Similarly, `Google.Cloud.Spanner.V1.SessionPoolOptions.WriteSessionsFraction`
+has bee removed.
+
+## Version 4.6.0, released 2023-06-26
+
+### Bug fixes
+
+- Makes transactions marked as DisposedBehaviour.Detach actually detach from the session pool. ([commit ab7526f](https://github.com/googleapis/google-cloud-dotnet/commit/ab7526f4d8fed91a5913c0558cfe2bf60516feba))
+- Dispose result streams ([commit d92f88e](https://github.com/googleapis/google-cloud-dotnet/commit/d92f88e681ef91fd92d7155cadf515a0cdfbad78))
+
+### New features
+
+- Support `dataBoostEnabled` field in partitioned read and execute SQL operations. ([commit 25531f2](https://github.com/googleapis/google-cloud-dotnet/commit/25531f25d938b5f680059059d34a72654393c71e))
+- Add DdlStatementActionInfo and add actions to UpdateDatabaseDdlMetadata ([commit 2bdd8bc](https://github.com/googleapis/google-cloud-dotnet/commit/2bdd8bc563477f49203bb78b41a744e696f40e3b))
+- Add support for UpdateDatabase in Cloud Spanner ([commit 3b98d26](https://github.com/googleapis/google-cloud-dotnet/commit/3b98d2699a164b0ad4ee775c96c4c3b2b4598ecb))
+
+### Documentation improvements
+
+- Improvements on DataBoostEnabled docs. ([commit 5791342](https://github.com/googleapis/google-cloud-dotnet/commit/5791342c544ecb49039457e76a9220c36c9f7957))
+
+## Version 4.5.0, released 2023-05-04
+
+### New features
+
+- Introduce data_boost_enabled; this is currently not exposed via Google.Cloud.Spanner.Data ([commit 983fbe6](https://github.com/googleapis/google-cloud-dotnet/commit/983fbe610e7ef79eb447d970aa28e1944feee833))
+
+### Documentation improvements
+
+- Formatting fix for the logging documentation
+
 ## Version 4.4.0, released 2023-03-09
 
 ### New features

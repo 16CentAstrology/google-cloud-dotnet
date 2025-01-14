@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -55,6 +55,7 @@ namespace Google.Cloud.Spanner.Data
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
         private const string DatabaseRoleKeyword = "DatabaseRole";
+        private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -89,7 +90,7 @@ namespace Google.Cloud.Spanner.Data
         /// the requested type is not compatible with that value. For arrays and structs, the behavior is slightly different.
         /// A null value is used for an array or struct value where the target type permits such a value. Attempting to convert
         /// an array value that contains a null element into a .NET array type with a non-nullable element type will
-        /// cause an <see cref="InvalidCastException"/> to be thrown. To avoid this, where array elements may be null for value types, 
+        /// cause an <see cref="InvalidCastException"/> to be thrown. To avoid this, where array elements may be null for value types,
         /// use an array with a nullable element type. This allows code to distinguish between a null element in the original
         /// data and a value of 0, false etc.
         /// </para>
@@ -164,26 +165,26 @@ namespace Google.Cloud.Spanner.Data
         /// are not explicitly provided. Currently only <see cref="decimal"/> and <see cref="DateTime"/> CLR types are supported.
         /// </summary>
         /// <remarks>
-        /// The valid type mappings for decimal are: 
-        /// <para><c>DecimalToFloat64</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Float64"/>, 
+        /// The valid type mappings for decimal are:
+        /// <para><c>DecimalToFloat64</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Float64"/>,
         /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
         /// </para>
-        /// <para><c>DecimalToNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Numeric"/>, 
-        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>. 
+        /// <para><c>DecimalToNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.Numeric"/>,
+        /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
         /// This should be used while working with Google Standard SQL dialect only.
         /// </para>
-        /// <para><c>DecimalToPgNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.PgNumeric"/>, 
+        /// <para><c>DecimalToPgNumeric</c> - <see cref="decimal"/> CLR type will map to <see cref="SpannerDbType.PgNumeric"/>,
         /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
         /// This should be used while working with PostgreSQL dialect only.
         /// </para>
-        /// The valid type mappings for DateTime are: 
-        /// <para><c>DateTimeToDate</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Date"/>, 
+        /// The valid type mappings for DateTime are:
+        /// <para><c>DateTimeToDate</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Date"/>,
         /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
         /// </para>
-        /// <para><c>DateTimeToTimestamp</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Timestamp"/>, 
+        /// <para><c>DateTimeToTimestamp</c> - <see cref="DateTime"/> CLR type will map to <see cref="SpannerDbType.Timestamp"/>,
         /// if <see cref="SpannerDbType"/> and <see cref="System.Data.DbType"/> is not explicitly provided for the <see cref="SpannerParameter"/>.
         /// </para>
-        /// The mapping can be provided as comma separated values. Only one mapping for a type must be provided. 
+        /// The mapping can be provided as comma separated values. Only one mapping for a type must be provided.
         /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>. Few examples of valid values are:
         /// <para>
         /// DecimalToFloat64,DateTimeToDate
@@ -209,19 +210,19 @@ namespace Google.Cloud.Spanner.Data
         /// Option to configure the default SpannerDbType to CLR type mappings. This option comes into picture
         /// only if CLR type of the value being read is not explicitly provided while reading the data from the database.
         /// Currently only <see cref="SpannerDbType.Date"/> is supported.
-        /// </summary>        
-        /// <remarks>        
-        /// The valid type mappings for Date are: 
+        /// </summary>
+        /// <remarks>
+        /// The valid type mappings for Date are:
         /// <para>
-        /// <c>DateToDateTime</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="DateTime"/>, 
+        /// <c>DateToDateTime</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="DateTime"/>,
         /// if CLR type of the value being read is not explicitly provided.
         /// </para>
         /// <para>
-        /// <c>DateToSpannerDate</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="SpannerDate"/>, 
+        /// <c>DateToSpannerDate</c> - <see cref="SpannerDbType.Date"/> will map to <see cref="SpannerDate"/>,
         /// if CLR type of the value being read is not explicitly provided.
         /// </para>
-        /// The mapping can be provided as comma separated values. Only one mapping for a SpannerDbType must be provided. 
-        /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>. 
+        /// The mapping can be provided as comma separated values. Only one mapping for a SpannerDbType must be provided.
+        /// Providing mutiple mapping for a type, or providing invalid mapping or providing whitespaces will result in <see cref="ArgumentException"/>.
         /// Few examples of valid values are:
         /// <para>
         /// DateToDateTime
@@ -436,6 +437,35 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        /// <summary>
+        /// Options to control leader routing. This is true by default.
+        /// </summary>
+        /// <remarks>
+        /// If this value is true some operations will always be explicitly routed to the leader,
+        /// some operations will never be explicitly routed to the leader, and some operations will
+        /// be routed to the leader depending on the transaction type they are using.
+        /// </remarks>
+        public bool EnableLeaderRouting
+        {
+            get => GetValueOrDefault(EnableLeaderRoutingKeyword, "True").Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[EnableLeaderRoutingKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
+        }
+
+        /// <summary>
+        /// Specifies which replicas or regions should be used for non-transactional reads or queries. May be null.
+        /// When set, all queries and reads executed on this connection within a read-only or single-use transaction
+        /// will include these options. If a query or read command specifies directed read options itself
+        /// then those have precedence over these.
+        /// For other operations or for non read-only or single-use transactions, these options are ignored.
+        /// </summary>
+        /// <remarks>
+        /// These options are not settable through the connection string actual string value.
+        /// Instead they are only settable via code on <see cref="SpannerConnectionStringBuilder"/> instances.
+        /// This may change in the future and directed read options may be made available through the actual string
+        /// value of the connection string.
+        /// </remarks>
+        public DirectedReadOptions DirectedReadOptions { get; set; }
+
         // Credential overrides: at most one will be non-null.
         internal ChannelCredentials CredentialOverride { get; }
         internal GoogleCredential GoogleCredential { get; }
@@ -470,6 +500,7 @@ namespace Google.Cloud.Spanner.Data
             GoogleCredential = other.GoogleCredential;
             SessionPoolManager = other.SessionPoolManager;
             EnvironmentVariableProvider = other.EnvironmentVariableProvider;
+            DirectedReadOptions = other.DirectedReadOptions?.Clone();
             // Note: ConversionOptions is populated by the connection string.
         }
 
@@ -511,23 +542,6 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
-        /// connection string, optional credential, and session pool manager.
-        /// </summary>
-        /// <param name="connectionString">>A connection string of the form
-        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
-        /// Must not be null.</param>
-        /// <param name="credentials">The credential to use for the connection. May be null.</param>
-        /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
-        [Obsolete($"Use overloads accepting credentials, then set the {nameof(SessionPoolManager)} property", error: false)]
-        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager) : this()
-        {
-            ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
-            CredentialOverride = credentials;
-            SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
-        }
-
-        /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
         public SpannerConnectionStringBuilder() => ConversionOptions = SpannerConversionOptions.Default;
@@ -562,7 +576,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return parsed >= minValue && parsed <= maxValue ? parsed : defaultValue;
             }
-            return defaultValue;            
+            return defaultValue;
         }
 
         private void SetInt32WithValidation(string key, int minValue, int maxValue, int value)

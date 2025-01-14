@@ -28,16 +28,40 @@
                 "ApproveRolloutAsync"
               ]
             },
+            "CancelAutomationRun": {
+              "methods": [
+                "CancelAutomationRun",
+                "CancelAutomationRunAsync"
+              ]
+            },
             "CancelRollout": {
               "methods": [
                 "CancelRollout",
                 "CancelRolloutAsync"
               ]
             },
+            "CreateAutomation": {
+              "methods": [
+                "CreateAutomation",
+                "CreateAutomationAsync"
+              ]
+            },
+            "CreateCustomTargetType": {
+              "methods": [
+                "CreateCustomTargetType",
+                "CreateCustomTargetTypeAsync"
+              ]
+            },
             "CreateDeliveryPipeline": {
               "methods": [
                 "CreateDeliveryPipeline",
                 "CreateDeliveryPipelineAsync"
+              ]
+            },
+            "CreateDeployPolicy": {
+              "methods": [
+                "CreateDeployPolicy",
+                "CreateDeployPolicyAsync"
               ]
             },
             "CreateRelease": {
@@ -58,10 +82,28 @@
                 "CreateTargetAsync"
               ]
             },
+            "DeleteAutomation": {
+              "methods": [
+                "DeleteAutomation",
+                "DeleteAutomationAsync"
+              ]
+            },
+            "DeleteCustomTargetType": {
+              "methods": [
+                "DeleteCustomTargetType",
+                "DeleteCustomTargetTypeAsync"
+              ]
+            },
             "DeleteDeliveryPipeline": {
               "methods": [
                 "DeleteDeliveryPipeline",
                 "DeleteDeliveryPipelineAsync"
+              ]
+            },
+            "DeleteDeployPolicy": {
+              "methods": [
+                "DeleteDeployPolicy",
+                "DeleteDeployPolicyAsync"
               ]
             },
             "DeleteTarget": {
@@ -70,16 +112,40 @@
                 "DeleteTargetAsync"
               ]
             },
+            "GetAutomation": {
+              "methods": [
+                "GetAutomation",
+                "GetAutomationAsync"
+              ]
+            },
+            "GetAutomationRun": {
+              "methods": [
+                "GetAutomationRun",
+                "GetAutomationRunAsync"
+              ]
+            },
             "GetConfig": {
               "methods": [
                 "GetConfig",
                 "GetConfigAsync"
               ]
             },
+            "GetCustomTargetType": {
+              "methods": [
+                "GetCustomTargetType",
+                "GetCustomTargetTypeAsync"
+              ]
+            },
             "GetDeliveryPipeline": {
               "methods": [
                 "GetDeliveryPipeline",
                 "GetDeliveryPipelineAsync"
+              ]
+            },
+            "GetDeployPolicy": {
+              "methods": [
+                "GetDeployPolicy",
+                "GetDeployPolicyAsync"
               ]
             },
             "GetJobRun": {
@@ -112,10 +178,34 @@
                 "IgnoreJobAsync"
               ]
             },
+            "ListAutomationRuns": {
+              "methods": [
+                "ListAutomationRuns",
+                "ListAutomationRunsAsync"
+              ]
+            },
+            "ListAutomations": {
+              "methods": [
+                "ListAutomations",
+                "ListAutomationsAsync"
+              ]
+            },
+            "ListCustomTargetTypes": {
+              "methods": [
+                "ListCustomTargetTypes",
+                "ListCustomTargetTypesAsync"
+              ]
+            },
             "ListDeliveryPipelines": {
               "methods": [
                 "ListDeliveryPipelines",
                 "ListDeliveryPipelinesAsync"
+              ]
+            },
+            "ListDeployPolicies": {
+              "methods": [
+                "ListDeployPolicies",
+                "ListDeployPoliciesAsync"
               ]
             },
             "ListJobRuns": {
@@ -148,16 +238,40 @@
                 "RetryJobAsync"
               ]
             },
+            "RollbackTarget": {
+              "methods": [
+                "RollbackTarget",
+                "RollbackTargetAsync"
+              ]
+            },
             "TerminateJobRun": {
               "methods": [
                 "TerminateJobRun",
                 "TerminateJobRunAsync"
               ]
             },
+            "UpdateAutomation": {
+              "methods": [
+                "UpdateAutomation",
+                "UpdateAutomationAsync"
+              ]
+            },
+            "UpdateCustomTargetType": {
+              "methods": [
+                "UpdateCustomTargetType",
+                "UpdateCustomTargetTypeAsync"
+              ]
+            },
             "UpdateDeliveryPipeline": {
               "methods": [
                 "UpdateDeliveryPipeline",
                 "UpdateDeliveryPipelineAsync"
+              ]
+            },
+            "UpdateDeployPolicy": {
+              "methods": [
+                "UpdateDeployPolicy",
+                "UpdateDeployPolicyAsync"
               ]
             },
             "UpdateTarget": {

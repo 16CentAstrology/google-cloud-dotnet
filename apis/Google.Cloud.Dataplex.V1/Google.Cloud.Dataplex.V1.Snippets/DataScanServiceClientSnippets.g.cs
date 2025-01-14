@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -23,6 +25,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcdv = Google.Cloud.Dataplex.V1;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedDataScanServiceClientSnippets
@@ -32,31 +35,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateDataScan(CreateDataScanRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            CreateDataScanRequest request = new CreateDataScanRequest
+            gcdv::CreateDataScanRequest request = new gcdv::CreateDataScanRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DataScan = new DataScan(),
+                DataScan = new gcdv::DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
-            Operation<DataScan, OperationMetadata> response = dataScanServiceClient.CreateDataScan(request);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.CreateDataScan(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -67,31 +71,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateDataScanAsync(CreateDataScanRequest, CallSettings)
             // Additional: CreateDataScanAsync(CreateDataScanRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateDataScanRequest request = new CreateDataScanRequest
+            gcdv::CreateDataScanRequest request = new gcdv::CreateDataScanRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DataScan = new DataScan(),
+                DataScan = new gcdv::DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -101,28 +106,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateDataScan(string, DataScan, string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             string dataScanId = "";
             // Make the request
-            Operation<DataScan, OperationMetadata> response = dataScanServiceClient.CreateDataScan(parent, dataScan, dataScanId);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.CreateDataScan(parent, dataScan, dataScanId);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -133,28 +138,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateDataScanAsync(string, DataScan, string, CallSettings)
             // Additional: CreateDataScanAsync(string, DataScan, string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             string dataScanId = "";
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(parent, dataScan, dataScanId);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(parent, dataScan, dataScanId);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -164,28 +169,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateDataScan(LocationName, DataScan, string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             string dataScanId = "";
             // Make the request
-            Operation<DataScan, OperationMetadata> response = dataScanServiceClient.CreateDataScan(parent, dataScan, dataScanId);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.CreateDataScan(parent, dataScan, dataScanId);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceCreateDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -196,28 +201,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateDataScanAsync(LocationName, DataScan, string, CallSettings)
             // Additional: CreateDataScanAsync(LocationName, DataScan, string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             string dataScanId = "";
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(parent, dataScan, dataScanId);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(parent, dataScan, dataScanId);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -227,30 +232,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateDataScan(UpdateDataScanRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            UpdateDataScanRequest request = new UpdateDataScanRequest
+            gcdv::UpdateDataScanRequest request = new gcdv::UpdateDataScanRequest
             {
-                DataScan = new DataScan(),
+                DataScan = new gcdv::DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
-            Operation<DataScan, OperationMetadata> response = dataScanServiceClient.UpdateDataScan(request);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.UpdateDataScan(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceUpdateDataScan(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceUpdateDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -261,30 +267,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateDataScanAsync(UpdateDataScanRequest, CallSettings)
             // Additional: UpdateDataScanAsync(UpdateDataScanRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateDataScanRequest request = new UpdateDataScanRequest
+            gcdv::UpdateDataScanRequest request = new gcdv::UpdateDataScanRequest
             {
-                DataScan = new DataScan(),
+                DataScan = new gcdv::DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(request);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceUpdateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceUpdateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -294,27 +301,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateDataScan(DataScan, FieldMask, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<DataScan, OperationMetadata> response = dataScanServiceClient.UpdateDataScan(dataScan, updateMask);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.UpdateDataScan(dataScan, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceUpdateDataScan(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceUpdateDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -325,27 +332,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateDataScanAsync(DataScan, FieldMask, CallSettings)
             // Additional: UpdateDataScanAsync(DataScan, FieldMask, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScan dataScan = new DataScan();
+            gcdv::DataScan dataScan = new gcdv::DataScan();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(dataScan, updateMask);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(dataScan, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceUpdateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceUpdateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -355,24 +362,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteDataScan(DeleteDataScanRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DeleteDataScanRequest request = new DeleteDataScanRequest
+            gcdv::DeleteDataScanRequest request = new gcdv::DeleteDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Force = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataScanServiceClient.DeleteDataScan(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataScanServiceClient.DeleteDataScan(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -388,24 +396,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteDataScanAsync(DeleteDataScanRequest, CallSettings)
             // Additional: DeleteDataScanAsync(DeleteDataScanRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteDataScanRequest request = new DeleteDataScanRequest
+            gcdv::DeleteDataScanRequest request = new gcdv::DeleteDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Force = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -420,21 +429,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteDataScan(string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataScanServiceClient.DeleteDataScan(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataScanServiceClient.DeleteDataScan(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -450,21 +459,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteDataScanAsync(string, CallSettings)
             // Additional: DeleteDataScanAsync(string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -479,21 +488,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteDataScan(DataScanName, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataScanServiceClient.DeleteDataScan(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataScanServiceClient.DeleteDataScan(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataScanServiceClient.PollOnceDeleteDataScan(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -509,21 +518,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteDataScanAsync(DataScanName, CallSettings)
             // Additional: DeleteDataScanAsync(DataScanName, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -538,15 +547,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScan(GetDataScanRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            GetDataScanRequest request = new GetDataScanRequest
+            gcdv::GetDataScanRequest request = new gcdv::GetDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
-                View = GetDataScanRequest.Types.DataScanView.Unspecified,
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                View = gcdv::GetDataScanRequest.Types.DataScanView.Unspecified,
             };
             // Make the request
-            DataScan response = dataScanServiceClient.GetDataScan(request);
+            gcdv::DataScan response = dataScanServiceClient.GetDataScan(request);
             // End snippet
         }
 
@@ -556,15 +565,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanAsync(GetDataScanRequest, CallSettings)
             // Additional: GetDataScanAsync(GetDataScanRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetDataScanRequest request = new GetDataScanRequest
+            gcdv::GetDataScanRequest request = new gcdv::GetDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
-                View = GetDataScanRequest.Types.DataScanView.Unspecified,
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                View = gcdv::GetDataScanRequest.Types.DataScanView.Unspecified,
             };
             // Make the request
-            DataScan response = await dataScanServiceClient.GetDataScanAsync(request);
+            gcdv::DataScan response = await dataScanServiceClient.GetDataScanAsync(request);
             // End snippet
         }
 
@@ -573,11 +582,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScan(string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            DataScan response = dataScanServiceClient.GetDataScan(name);
+            gcdv::DataScan response = dataScanServiceClient.GetDataScan(name);
             // End snippet
         }
 
@@ -587,11 +596,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanAsync(string, CallSettings)
             // Additional: GetDataScanAsync(string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
+            gcdv::DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
             // End snippet
         }
 
@@ -600,11 +609,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScan(DataScanName, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            DataScan response = dataScanServiceClient.GetDataScan(name);
+            gcdv::DataScan response = dataScanServiceClient.GetDataScan(name);
             // End snippet
         }
 
@@ -614,11 +623,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanAsync(DataScanName, CallSettings)
             // Additional: GetDataScanAsync(DataScanName, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
+            gcdv::DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
             // End snippet
         }
 
@@ -627,30 +636,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScans(ListDataScansRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            ListDataScansRequest request = new ListDataScansRequest
+            gcdv::ListDataScansRequest request = new gcdv::ListDataScansRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScans(request);
+            PagedEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScans(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScan item in response)
+            foreach (gcdv::DataScan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScansResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -659,10 +668,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScan> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -677,30 +686,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScansAsync(ListDataScansRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListDataScansRequest request = new ListDataScansRequest
+            gcdv::ListDataScansRequest request = new gcdv::ListDataScansRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScansAsync(request);
+            PagedAsyncEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScansAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScan item) =>
+            await response.ForEachAsync((gcdv::DataScan item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScansResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScansResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -709,10 +718,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScan> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -727,25 +736,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScans(string, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScans(parent);
+            PagedEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScans(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScan item in response)
+            foreach (gcdv::DataScan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScansResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -754,10 +763,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScan> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -772,25 +781,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScansAsync(string, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScansAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScansAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScan item) =>
+            await response.ForEachAsync((gcdv::DataScan item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScansResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScansResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -799,10 +808,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScan> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -817,25 +826,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScans(LocationName, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScans(parent);
+            PagedEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScans(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScan item in response)
+            foreach (gcdv::DataScan item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScansResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScansResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -844,10 +853,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScan> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -862,25 +871,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScansAsync(LocationName, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListDataScansResponse, DataScan> response = dataScanServiceClient.ListDataScansAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListDataScansResponse, gcdv::DataScan> response = dataScanServiceClient.ListDataScansAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScan item) =>
+            await response.ForEachAsync((gcdv::DataScan item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScansResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScansResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScan item in page)
+                foreach (gcdv::DataScan item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -889,10 +898,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScan> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScan> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScan item in singlePage)
+            foreach (gcdv::DataScan item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -907,14 +916,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: RunDataScan(RunDataScanRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            RunDataScanRequest request = new RunDataScanRequest
+            gcdv::RunDataScanRequest request = new gcdv::RunDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
             };
             // Make the request
-            RunDataScanResponse response = dataScanServiceClient.RunDataScan(request);
+            gcdv::RunDataScanResponse response = dataScanServiceClient.RunDataScan(request);
             // End snippet
         }
 
@@ -924,14 +933,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: RunDataScanAsync(RunDataScanRequest, CallSettings)
             // Additional: RunDataScanAsync(RunDataScanRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunDataScanRequest request = new RunDataScanRequest
+            gcdv::RunDataScanRequest request = new gcdv::RunDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
             };
             // Make the request
-            RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(request);
+            gcdv::RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(request);
             // End snippet
         }
 
@@ -940,11 +949,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: RunDataScan(string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            RunDataScanResponse response = dataScanServiceClient.RunDataScan(name);
+            gcdv::RunDataScanResponse response = dataScanServiceClient.RunDataScan(name);
             // End snippet
         }
 
@@ -954,11 +963,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: RunDataScanAsync(string, CallSettings)
             // Additional: RunDataScanAsync(string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
+            gcdv::RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
             // End snippet
         }
 
@@ -967,11 +976,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: RunDataScan(DataScanName, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            RunDataScanResponse response = dataScanServiceClient.RunDataScan(name);
+            gcdv::RunDataScanResponse response = dataScanServiceClient.RunDataScan(name);
             // End snippet
         }
 
@@ -981,11 +990,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: RunDataScanAsync(DataScanName, CallSettings)
             // Additional: RunDataScanAsync(DataScanName, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
+            gcdv::RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
             // End snippet
         }
 
@@ -994,15 +1003,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScanJob(GetDataScanJobRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            GetDataScanJobRequest request = new GetDataScanJobRequest
+            gcdv::GetDataScanJobRequest request = new gcdv::GetDataScanJobRequest
             {
-                DataScanJobName = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
-                View = GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
+                DataScanJobName = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
+                View = gcdv::GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
             };
             // Make the request
-            DataScanJob response = dataScanServiceClient.GetDataScanJob(request);
+            gcdv::DataScanJob response = dataScanServiceClient.GetDataScanJob(request);
             // End snippet
         }
 
@@ -1012,15 +1021,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanJobAsync(GetDataScanJobRequest, CallSettings)
             // Additional: GetDataScanJobAsync(GetDataScanJobRequest, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetDataScanJobRequest request = new GetDataScanJobRequest
+            gcdv::GetDataScanJobRequest request = new gcdv::GetDataScanJobRequest
             {
-                DataScanJobName = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
-                View = GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
+                DataScanJobName = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
+                View = gcdv::GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
             };
             // Make the request
-            DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(request);
+            gcdv::DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(request);
             // End snippet
         }
 
@@ -1029,11 +1038,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScanJob(string, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]/jobs/[JOB]";
             // Make the request
-            DataScanJob response = dataScanServiceClient.GetDataScanJob(name);
+            gcdv::DataScanJob response = dataScanServiceClient.GetDataScanJob(name);
             // End snippet
         }
 
@@ -1043,11 +1052,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanJobAsync(string, CallSettings)
             // Additional: GetDataScanJobAsync(string, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]/jobs/[JOB]";
             // Make the request
-            DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
+            gcdv::DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
             // End snippet
         }
 
@@ -1056,11 +1065,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetDataScanJob(DataScanJobName, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScanJobName name = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
+            gcdv::DataScanJobName name = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
             // Make the request
-            DataScanJob response = dataScanServiceClient.GetDataScanJob(name);
+            gcdv::DataScanJob response = dataScanServiceClient.GetDataScanJob(name);
             // End snippet
         }
 
@@ -1070,11 +1079,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetDataScanJobAsync(DataScanJobName, CallSettings)
             // Additional: GetDataScanJobAsync(DataScanJobName, CancellationToken)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanJobName name = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
+            gcdv::DataScanJobName name = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
             // Make the request
-            DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
+            gcdv::DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
             // End snippet
         }
 
@@ -1083,28 +1092,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobs(ListDataScanJobsRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            ListDataScanJobsRequest request = new ListDataScanJobsRequest
+            gcdv::ListDataScanJobsRequest request = new gcdv::ListDataScanJobsRequest
             {
-                ParentAsDataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                ParentAsDataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobs(request);
+            PagedEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScanJob item in response)
+            foreach (gcdv::DataScanJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScanJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScanJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1113,10 +1123,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScanJob> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1131,28 +1141,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobsAsync(ListDataScanJobsRequest, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListDataScanJobsRequest request = new ListDataScanJobsRequest
+            gcdv::ListDataScanJobsRequest request = new gcdv::ListDataScanJobsRequest
             {
-                ParentAsDataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                ParentAsDataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScanJob item) =>
+            await response.ForEachAsync((gcdv::DataScanJob item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScanJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScanJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1161,10 +1172,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1179,25 +1190,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobs(string, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            PagedEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobs(parent);
+            PagedEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScanJob item in response)
+            foreach (gcdv::DataScanJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScanJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScanJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1206,10 +1217,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScanJob> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1224,25 +1235,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobsAsync(string, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScanJob item) =>
+            await response.ForEachAsync((gcdv::DataScanJob item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScanJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScanJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1251,10 +1262,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1269,25 +1280,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobs(DataScanName, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
             // Initialize request argument(s)
-            DataScanName parent = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName parent = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            PagedEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobs(parent);
+            PagedEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DataScanJob item in response)
+            foreach (gcdv::DataScanJob item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDataScanJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListDataScanJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1296,10 +1307,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::DataScanJob> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1314,25 +1325,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListDataScanJobsAsync(DataScanName, string, int?, CallSettings)
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanName parent = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName parent = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            PagedAsyncEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DataScanJob item) =>
+            await response.ForEachAsync((gcdv::DataScanJob item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDataScanJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListDataScanJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DataScanJob item in page)
+                foreach (gcdv::DataScanJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1341,16 +1352,70 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::DataScanJob> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DataScanJob item in singlePage)
+            foreach (gcdv::DataScanJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRules</summary>
+        public void GenerateDataQualityRulesRequestObject()
+        {
+            // Snippet: GenerateDataQualityRules(GenerateDataQualityRulesRequest, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::GenerateDataQualityRulesRequest request = new gcdv::GenerateDataQualityRulesRequest { Name = "", };
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = dataScanServiceClient.GenerateDataQualityRules(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRulesAsync</summary>
+        public async Task GenerateDataQualityRulesRequestObjectAsync()
+        {
+            // Snippet: GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest, CallSettings)
+            // Additional: GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GenerateDataQualityRulesRequest request = new gcdv::GenerateDataQualityRulesRequest { Name = "", };
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = await dataScanServiceClient.GenerateDataQualityRulesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRules</summary>
+        public void GenerateDataQualityRules()
+        {
+            // Snippet: GenerateDataQualityRules(string, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = dataScanServiceClient.GenerateDataQualityRules(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRulesAsync</summary>
+        public async Task GenerateDataQualityRulesAsync()
+        {
+            // Snippet: GenerateDataQualityRulesAsync(string, CallSettings)
+            // Additional: GenerateDataQualityRulesAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = await dataScanServiceClient.GenerateDataQualityRulesAsync(name);
             // End snippet
         }
     }

@@ -119,123 +119,133 @@ namespace Google.Cloud.Dataproc.V1 {
             "djEuVHJpbm9Kb2IuUHJvcGVydGllc0VudHJ5QgPgQQESRAoObG9nZ2luZ19j",
             "b25maWcYByABKAsyJy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTG9nZ2lu",
             "Z0NvbmZpZ0ID4EEBGjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBQgkKB3F1ZXJpZXMi0gEKDEpvYlBsYWNlbWVu",
-            "dBIZCgxjbHVzdGVyX25hbWUYASABKAlCA+BBAhIZCgxjbHVzdGVyX3V1aWQY",
-            "AiABKAlCA+BBAxJWCg5jbHVzdGVyX2xhYmVscxgDIAMoCzI5Lmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5Kb2JQbGFjZW1lbnQuQ2x1c3RlckxhYmVsc0Vu",
-            "dHJ5QgPgQQEaNAoSQ2x1c3RlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEi2QMKCUpvYlN0YXR1cxI9CgVzdGF0ZRgBIAEo",
-            "DjIpLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JTdGF0dXMuU3RhdGVC",
-            "A+BBAxIXCgdkZXRhaWxzGAIgASgJQgbgQQPgQQESOQoQc3RhdGVfc3RhcnRf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJD",
-            "CghzdWJzdGF0ZRgHIAEoDjIsLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5K",
-            "b2JTdGF0dXMuU3Vic3RhdGVCA+BBAyKpAQoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABILCgdQRU5ESU5HEAESDgoKU0VUVVBfRE9ORRAIEgsKB1JV",
-            "Tk5JTkcQAhISCg5DQU5DRUxfUEVORElORxADEhIKDkNBTkNFTF9TVEFSVEVE",
-            "EAcSDQoJQ0FOQ0VMTEVEEAQSCAoERE9ORRAFEgkKBUVSUk9SEAYSEwoPQVRU",
-            "RU1QVF9GQUlMVVJFEAkiSAoIU3Vic3RhdGUSDwoLVU5TUEVDSUZJRUQQABIN",
-            "CglTVUJNSVRURUQQARIKCgZRVUVVRUQQAhIQCgxTVEFMRV9TVEFUVVMQAyI8",
-            "CgxKb2JSZWZlcmVuY2USFwoKcHJvamVjdF9pZBgBIAEoCUID4EEBEhMKBmpv",
-            "Yl9pZBgCIAEoCUID4EEBIqUCCg9ZYXJuQXBwbGljYXRpb24SEQoEbmFtZRgB",
-            "IAEoCUID4EECEkMKBXN0YXRlGAIgASgOMi8uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLllhcm5BcHBsaWNhdGlvbi5TdGF0ZUID4EECEhUKCHByb2dyZXNz",
-            "GAMgASgCQgPgQQISGQoMdHJhY2tpbmdfdXJsGAQgASgJQgPgQQEihwEKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESDgoKTkVXX1NB",
-            "VklORxACEg0KCVNVQk1JVFRFRBADEgwKCEFDQ0VQVEVEEAQSCwoHUlVOTklO",
-            "RxAFEgwKCEZJTklTSEVEEAYSCgoGRkFJTEVEEAcSCgoGS0lMTEVEEAgilgoK",
-            "A0pvYhI+CglyZWZlcmVuY2UYASABKAsyJi5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuSm9iUmVmZXJlbmNlQgPgQQESPgoJcGxhY2VtZW50GAIgASgLMiYu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYlBsYWNlbWVudEID4EECEj4K",
-            "CmhhZG9vcF9qb2IYAyABKAsyIy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "SGFkb29wSm9iQgPgQQFIABI8CglzcGFya19qb2IYBCABKAsyIi5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuU3BhcmtKb2JCA+BBAUgAEkAKC3B5c3Bhcmtf",
-            "am9iGAUgASgLMiQuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlB5U3BhcmtK",
-            "b2JCA+BBAUgAEjoKCGhpdmVfam9iGAYgASgLMiEuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLkhpdmVKb2JCA+BBAUgAEjgKB3BpZ19qb2IYByABKAsyIC5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuUGlnSm9iQgPgQQFIABI/CgtzcGFy",
-            "a19yX2pvYhgVIAEoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5TcGFy",
-            "a1JKb2JCA+BBAUgAEkMKDXNwYXJrX3NxbF9qb2IYDCABKAsyJS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuU3BhcmtTcWxKb2JCA+BBAUgAEj4KCnByZXN0",
-            "b19qb2IYFyABKAsyIy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuUHJlc3Rv",
-            "Sm9iQgPgQQFIABI8Cgl0cmlub19qb2IYHCABKAsyIi5nb29nbGUuY2xvdWQu",
-            "ZGF0YXByb2MudjEuVHJpbm9Kb2JCA+BBAUgAEjgKBnN0YXR1cxgIIAEoCzIj",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JTdGF0dXNCA+BBAxJACg5z",
-            "dGF0dXNfaGlzdG9yeRgNIAMoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
-            "MS5Kb2JTdGF0dXNCA+BBAxJJChF5YXJuX2FwcGxpY2F0aW9ucxgJIAMoCzIp",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5ZYXJuQXBwbGljYXRpb25CA+BB",
-            "AxInChpkcml2ZXJfb3V0cHV0X3Jlc291cmNlX3VyaRgRIAEoCUID4EEDEiUK",
-            "GGRyaXZlcl9jb250cm9sX2ZpbGVzX3VyaRgPIAEoCUID4EEDEj4KBmxhYmVs",
-            "cxgSIAMoCzIpLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2IuTGFiZWxz",
-            "RW50cnlCA+BBARJACgpzY2hlZHVsaW5nGBQgASgLMicuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkpvYlNjaGVkdWxpbmdCA+BBARIVCghqb2JfdXVpZBgW",
-            "IAEoCUID4EEDEhEKBGRvbmUYGCABKAhCA+BBAxJXChhkcml2ZXJfc2NoZWR1",
-            "bGluZ19jb25maWcYGyABKAsyMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "RHJpdmVyU2NoZWR1bGluZ0NvbmZpZ0ID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCgoIdHlwZV9qb2IiRQoW",
-            "RHJpdmVyU2NoZWR1bGluZ0NvbmZpZxIWCgltZW1vcnlfbWIYASABKAVCA+BB",
-            "AhITCgZ2Y29yZXMYAiABKAVCA+BBAiJUCg1Kb2JTY2hlZHVsaW5nEiIKFW1h",
-            "eF9mYWlsdXJlc19wZXJfaG91chgBIAEoBUID4EEBEh8KEm1heF9mYWlsdXJl",
-            "c190b3RhbBgCIAEoBUID4EEBIooBChBTdWJtaXRKb2JSZXF1ZXN0EhcKCnBy",
-            "b2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhIvCgNq",
-            "b2IYAiABKAsyHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iQgPgQQIS",
-            "FwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIq4BCgtKb2JNZXRhZGF0YRITCgZq",
-            "b2JfaWQYASABKAlCA+BBAxI4CgZzdGF0dXMYAiABKAsyIy5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuSm9iU3RhdHVzQgPgQQMSGwoOb3BlcmF0aW9uX3R5",
-            "cGUYAyABKAlCA+BBAxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDIlIKDUdldEpvYlJlcXVlc3QSFwoKcHJv",
-            "amVjdF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEhMKBmpv",
-            "Yl9pZBgCIAEoCUID4EECIrMCCg9MaXN0Sm9ic1JlcXVlc3QSFwoKcHJvamVj",
-            "dF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgGIAEoCUID4EECEhYKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARIZCgxj",
-            "bHVzdGVyX25hbWUYBCABKAlCA+BBARJZChFqb2Jfc3RhdGVfbWF0Y2hlchgF",
-            "IAEoDjI5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1JlcXVl",
-            "c3QuSm9iU3RhdGVNYXRjaGVyQgPgQQESEwoGZmlsdGVyGAcgASgJQgPgQQEi",
-            "NgoPSm9iU3RhdGVNYXRjaGVyEgcKA0FMTBAAEgoKBkFDVElWRRABEg4KCk5P",
-            "Tl9BQ1RJVkUQAiK8AQoQVXBkYXRlSm9iUmVxdWVzdBIXCgpwcm9qZWN0X2lk",
-            "GAEgASgJQgPgQQISEwoGcmVnaW9uGAIgASgJQgPgQQISEwoGam9iX2lkGAMg",
-            "ASgJQgPgQQISLwoDam9iGAQgASgLMh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
-            "LnYxLkpvYkID4EECEjQKC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFza0ID4EECImIKEExpc3RKb2JzUmVzcG9uc2USMAoE",
-            "am9icxgBIAMoCzIdLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JCA+BB",
-            "AxIcCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BBASJVChBDYW5jZWxKb2JS",
-            "ZXF1ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyAB",
-            "KAlCA+BBAhITCgZqb2JfaWQYAiABKAlCA+BBAiJVChBEZWxldGVKb2JSZXF1",
-            "ZXN0EhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlC",
-            "A+BBAhITCgZqb2JfaWQYAiABKAlCA+BBAjL8CgoNSm9iQ29udHJvbGxlchKx",
-            "AQoJU3VibWl0Sm9iEiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlN1Ym1p",
-            "dEpvYlJlcXVlc3QaHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIlmC",
-            "0+STAjsiNi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVn",
-            "aW9ufS9qb2JzOnN1Ym1pdDoBKtpBFXByb2plY3RfaWQscmVnaW9uLGpvYhLe",
-            "AQoUU3VibWl0Sm9iQXNPcGVyYXRpb24SKi5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuU3VibWl0Sm9iUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24ie4LT5JMCRiJBL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9y",
-            "ZWdpb25zL3tyZWdpb259L2pvYnM6c3VibWl0QXNPcGVyYXRpb246ASraQRdw",
-            "cm9qZWN0X2lkLCByZWdpb24sIGpvYspBEgoDSm9iEgtKb2JNZXRhZGF0YRKt",
-            "AQoGR2V0Sm9iEicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldEpvYlJl",
-            "cXVlc3QaHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIluC0+STAjoS",
-            "OC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9q",
-            "b2JzL3tqb2JfaWR92kEYcHJvamVjdF9pZCxyZWdpb24sam9iX2lkEskBCghM",
-            "aXN0Sm9icxIpLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1Jl",
-            "cXVlc3QaKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlzdEpvYnNSZXNw",
-            "b25zZSJmgtPkkwIxEi8vdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lv",
-            "bnMve3JlZ2lvbn0vam9ic9pBEXByb2plY3RfaWQscmVnaW9u2kEYcHJvamVj",
-            "dF9pZCxyZWdpb24sZmlsdGVyEp0BCglVcGRhdGVKb2ISKi5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuVXBkYXRlSm9iUmVxdWVzdBodLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5Kb2IiRYLT5JMCPzI4L3YxL3Byb2plY3RzL3twcm9q",
-            "ZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pvYl9pZH06A2pvYhK9",
-            "AQoJQ2FuY2VsSm9iEiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNhbmNl",
-            "bEpvYlJlcXVlc3QaHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iImWC",
-            "0+STAkQiPy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVn",
-            "aW9ufS9qb2JzL3tqb2JfaWR9OmNhbmNlbDoBKtpBGHByb2plY3RfaWQscmVn",
-            "aW9uLGpvYl9pZBKsAQoJRGVsZXRlSm9iEiouZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiW4LT5JMCOio4L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25z",
-            "L3tyZWdpb259L2pvYnMve2pvYl9pZH3aQRhwcm9qZWN0X2lkLHJlZ2lvbixq",
-            "b2JfaWQaS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJlChxjb20u",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQglKb2JzUHJvdG9QAVo4Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kYXRhcHJvYy9hcGl2MS9kYXRhcHJvY3BiO2RhdGFw",
-            "cm9jcGJiBnByb3RvMw=="));
+            "DQoFdmFsdWUYAiABKAk6AjgBQgkKB3F1ZXJpZXMi2AIKCEZsaW5rSm9iEhsK",
+            "EW1haW5famFyX2ZpbGVfdXJpGAEgASgJSAASFAoKbWFpbl9jbGFzcxgCIAEo",
+            "CUgAEhEKBGFyZ3MYAyADKAlCA+BBARIaCg1qYXJfZmlsZV91cmlzGAQgAygJ",
+            "QgPgQQESGgoNc2F2ZXBvaW50X3VyaRgJIAEoCUID4EEBEksKCnByb3BlcnRp",
+            "ZXMYByADKAsyMi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRmxpbmtKb2Iu",
+            "UHJvcGVydGllc0VudHJ5QgPgQQESRAoObG9nZ2luZ19jb25maWcYCCABKAsy",
+            "Jy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTG9nZ2luZ0NvbmZpZ0ID4EEB",
+            "GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBQggKBmRyaXZlciLSAQoMSm9iUGxhY2VtZW50EhkKDGNsdXN0ZXJf",
+            "bmFtZRgBIAEoCUID4EECEhkKDGNsdXN0ZXJfdXVpZBgCIAEoCUID4EEDElYK",
+            "DmNsdXN0ZXJfbGFiZWxzGAMgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkpvYlBsYWNlbWVudC5DbHVzdGVyTGFiZWxzRW50cnlCA+BBARo0ChJD",
+            "bHVzdGVyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASLZAwoJSm9iU3RhdHVzEj0KBXN0YXRlGAEgASgOMikuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkpvYlN0YXR1cy5TdGF0ZUID4EEDEhcKB2RldGFp",
+            "bHMYAiABKAlCBuBBA+BBARI5ChBzdGF0ZV9zdGFydF90aW1lGAYgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkMKCHN1YnN0YXRlGAcg",
+            "ASgOMiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYlN0YXR1cy5TdWJz",
+            "dGF0ZUID4EEDIqkBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
+            "B1BFTkRJTkcQARIOCgpTRVRVUF9ET05FEAgSCwoHUlVOTklORxACEhIKDkNB",
+            "TkNFTF9QRU5ESU5HEAMSEgoOQ0FOQ0VMX1NUQVJURUQQBxINCglDQU5DRUxM",
+            "RUQQBBIICgRET05FEAUSCQoFRVJST1IQBhITCg9BVFRFTVBUX0ZBSUxVUkUQ",
+            "CSJICghTdWJzdGF0ZRIPCgtVTlNQRUNJRklFRBAAEg0KCVNVQk1JVFRFRBAB",
+            "EgoKBlFVRVVFRBACEhAKDFNUQUxFX1NUQVRVUxADIjwKDEpvYlJlZmVyZW5j",
+            "ZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQESEwoGam9iX2lkGAIgASgJQgPg",
+            "QQEipQIKD1lhcm5BcHBsaWNhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQISQwoF",
+            "c3RhdGUYAiABKA4yLy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuWWFybkFw",
+            "cGxpY2F0aW9uLlN0YXRlQgPgQQISFQoIcHJvZ3Jlc3MYAyABKAJCA+BBAhIZ",
+            "Cgx0cmFja2luZ191cmwYBCABKAlCA+BBASKHAQoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIHCgNORVcQARIOCgpORVdfU0FWSU5HEAISDQoJU1VC",
+            "TUlUVEVEEAMSDAoIQUNDRVBURUQQBBILCgdSVU5OSU5HEAUSDAoIRklOSVNI",
+            "RUQQBhIKCgZGQUlMRUQQBxIKCgZLSUxMRUQQCCLUCgoDSm9iEj4KCXJlZmVy",
+            "ZW5jZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2JSZWZl",
+            "cmVuY2VCA+BBARI+CglwbGFjZW1lbnQYAiABKAsyJi5nb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuSm9iUGxhY2VtZW50QgPgQQISPgoKaGFkb29wX2pvYhgD",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5IYWRvb3BKb2JCA+BB",
+            "AUgAEjwKCXNwYXJrX2pvYhgEIAEoCzIiLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5TcGFya0pvYkID4EEBSAASQAoLcHlzcGFya19qb2IYBSABKAsyJC5n",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuUHlTcGFya0pvYkID4EEBSAASOgoI",
+            "aGl2ZV9qb2IYBiABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSGl2",
+            "ZUpvYkID4EEBSAASOAoHcGlnX2pvYhgHIAEoCzIgLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MS5QaWdKb2JCA+BBAUgAEj8KC3NwYXJrX3Jfam9iGBUgASgL",
+            "MiMuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlNwYXJrUkpvYkID4EEBSAAS",
+            "QwoNc3Bhcmtfc3FsX2pvYhgMIAEoCzIlLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5TcGFya1NxbEpvYkID4EEBSAASPgoKcHJlc3RvX2pvYhgXIAEoCzIj",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5QcmVzdG9Kb2JCA+BBAUgAEjwK",
+            "CXRyaW5vX2pvYhgcIAEoCzIiLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5U",
+            "cmlub0pvYkID4EEBSAASPAoJZmxpbmtfam9iGB0gASgLMiIuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkZsaW5rSm9iQgPgQQFIABI4CgZzdGF0dXMYCCAB",
+            "KAsyIy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iU3RhdHVzQgPgQQMS",
+            "QAoOc3RhdHVzX2hpc3RvcnkYDSADKAsyIy5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuSm9iU3RhdHVzQgPgQQMSSQoReWFybl9hcHBsaWNhdGlvbnMYCSAD",
+            "KAsyKS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuWWFybkFwcGxpY2F0aW9u",
+            "QgPgQQMSJwoaZHJpdmVyX291dHB1dF9yZXNvdXJjZV91cmkYESABKAlCA+BB",
+            "AxIlChhkcml2ZXJfY29udHJvbF9maWxlc191cmkYDyABKAlCA+BBAxI+CgZs",
+            "YWJlbHMYEiADKAsyKS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iLkxh",
+            "YmVsc0VudHJ5QgPgQQESQAoKc2NoZWR1bGluZxgUIAEoCzInLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5Kb2JTY2hlZHVsaW5nQgPgQQESFQoIam9iX3V1",
+            "aWQYFiABKAlCA+BBAxIRCgRkb25lGBggASgIQgPgQQMSVwoYZHJpdmVyX3Nj",
+            "aGVkdWxpbmdfY29uZmlnGBsgASgLMjAuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkRyaXZlclNjaGVkdWxpbmdDb25maWdCA+BBARotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCHR5cGVfam9i",
+            "IkUKFkRyaXZlclNjaGVkdWxpbmdDb25maWcSFgoJbWVtb3J5X21iGAEgASgF",
+            "QgPgQQISEwoGdmNvcmVzGAIgASgFQgPgQQIiVAoNSm9iU2NoZWR1bGluZxIi",
+            "ChVtYXhfZmFpbHVyZXNfcGVyX2hvdXIYASABKAVCA+BBARIfChJtYXhfZmFp",
+            "bHVyZXNfdG90YWwYAiABKAVCA+BBASKKAQoQU3VibWl0Sm9iUmVxdWVzdBIX",
+            "Cgpwcm9qZWN0X2lkGAEgASgJQgPgQQISEwoGcmVnaW9uGAMgASgJQgPgQQIS",
+            "LwoDam9iGAIgASgLMh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYkID",
+            "4EECEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASKuAQoLSm9iTWV0YWRhdGES",
+            "EwoGam9iX2lkGAEgASgJQgPgQQMSOAoGc3RhdHVzGAIgASgLMiMuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwcm9jLnYxLkpvYlN0YXR1c0ID4EEDEhsKDm9wZXJhdGlv",
+            "bl90eXBlGAMgASgJQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJSCg1HZXRKb2JSZXF1ZXN0EhcK",
+            "CnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhIT",
+            "CgZqb2JfaWQYAiABKAlCA+BBAiKzAgoPTGlzdEpvYnNSZXF1ZXN0EhcKCnBy",
+            "b2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YBiABKAlCA+BBAhIWCglw",
+            "YWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQES",
+            "GQoMY2x1c3Rlcl9uYW1lGAQgASgJQgPgQQESWQoRam9iX3N0YXRlX21hdGNo",
+            "ZXIYBSABKA4yOS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlzdEpvYnNS",
+            "ZXF1ZXN0LkpvYlN0YXRlTWF0Y2hlckID4EEBEhMKBmZpbHRlchgHIAEoCUID",
+            "4EEBIjYKD0pvYlN0YXRlTWF0Y2hlchIHCgNBTEwQABIKCgZBQ1RJVkUQARIO",
+            "CgpOT05fQUNUSVZFEAIivAEKEFVwZGF0ZUpvYlJlcXVlc3QSFwoKcHJvamVj",
+            "dF9pZBgBIAEoCUID4EECEhMKBnJlZ2lvbhgCIAEoCUID4EECEhMKBmpvYl9p",
+            "ZBgDIAEoCUID4EECEi8KA2pvYhgEIAEoCzIdLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cHJvYy52MS5Kb2JCA+BBAhI0Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJ8ChBMaXN0Sm9ic1Jlc3BvbnNl",
+            "EjAKBGpvYnMYASADKAsyHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9i",
+            "QgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQESGAoLdW5yZWFj",
+            "aGFibGUYAyADKAlCA+BBAyJVChBDYW5jZWxKb2JSZXF1ZXN0EhcKCnByb2pl",
+            "Y3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhITCgZqb2Jf",
+            "aWQYAiABKAlCA+BBAiJVChBEZWxldGVKb2JSZXF1ZXN0EhcKCnByb2plY3Rf",
+            "aWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhITCgZqb2JfaWQY",
+            "AiABKAlCA+BBAjL8CgoNSm9iQ29udHJvbGxlchKxAQoJU3VibWl0Sm9iEiou",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlN1Ym1pdEpvYlJlcXVlc3QaHS5n",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIlnaQRVwcm9qZWN0X2lkLHJl",
+            "Z2lvbixqb2KC0+STAjsiNi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVn",
+            "aW9ucy97cmVnaW9ufS9qb2JzOnN1Ym1pdDoBKhLeAQoUU3VibWl0Sm9iQXNP",
+            "cGVyYXRpb24SKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU3VibWl0Sm9i",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ie8pBEgoD",
+            "Sm9iEgtKb2JNZXRhZGF0YdpBF3Byb2plY3RfaWQsIHJlZ2lvbiwgam9igtPk",
+            "kwJGIkEvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lv",
+            "bn0vam9iczpzdWJtaXRBc09wZXJhdGlvbjoBKhKtAQoGR2V0Sm9iEicuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldEpvYlJlcXVlc3QaHS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjEuSm9iIlvaQRhwcm9qZWN0X2lkLHJlZ2lvbixq",
+            "b2JfaWSC0+STAjoSOC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9u",
+            "cy97cmVnaW9ufS9qb2JzL3tqb2JfaWR9EskBCghMaXN0Sm9icxIpLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1JlcXVlc3QaKi5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjEuTGlzdEpvYnNSZXNwb25zZSJm2kERcHJvamVj",
+            "dF9pZCxyZWdpb27aQRhwcm9qZWN0X2lkLHJlZ2lvbixmaWx0ZXKC0+STAjES",
+            "Ly92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9q",
+            "b2JzEp0BCglVcGRhdGVKb2ISKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "VXBkYXRlSm9iUmVxdWVzdBodLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5K",
+            "b2IiRYLT5JMCPzI4L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25z",
+            "L3tyZWdpb259L2pvYnMve2pvYl9pZH06A2pvYhK9AQoJQ2FuY2VsSm9iEiou",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNhbmNlbEpvYlJlcXVlc3QaHS5n",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iImXaQRhwcm9qZWN0X2lkLHJl",
+            "Z2lvbixqb2JfaWSC0+STAkQiPy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0v",
+            "cmVnaW9ucy97cmVnaW9ufS9qb2JzL3tqb2JfaWR9OmNhbmNlbDoBKhKsAQoJ",
+            "RGVsZXRlSm9iEiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRlbGV0ZUpv",
+            "YlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiW9pBGHByb2plY3Rf",
+            "aWQscmVnaW9uLGpvYl9pZILT5JMCOio4L3YxL3Byb2plY3RzL3twcm9qZWN0",
+            "X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pvYl9pZH0aS8pBF2RhdGFw",
+            "cm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJoChxjb20uZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwcm9jLnYxQglKb2JzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "YXRhcHJvYy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -250,11 +260,12 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkRJob), global::Google.Cloud.Dataproc.V1.SparkRJob.Parser, new[]{ "MainRFileUri", "Args", "FileUris", "ArchiveUris", "Properties", "LoggingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PrestoJob), global::Google.Cloud.Dataproc.V1.PrestoJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "OutputFormat", "ClientTags", "Properties", "LoggingConfig" }, new[]{ "Queries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.TrinoJob), global::Google.Cloud.Dataproc.V1.TrinoJob.Parser, new[]{ "QueryFileUri", "QueryList", "ContinueOnFailure", "OutputFormat", "ClientTags", "Properties", "LoggingConfig" }, new[]{ "Queries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.FlinkJob), global::Google.Cloud.Dataproc.V1.FlinkJob.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "SavepointUri", "Properties", "LoggingConfig" }, new[]{ "Driver" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobPlacement), global::Google.Cloud.Dataproc.V1.JobPlacement.Parser, new[]{ "ClusterName", "ClusterUuid", "ClusterLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobStatus), global::Google.Cloud.Dataproc.V1.JobStatus.Parser, new[]{ "State", "Details", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobReference), global::Google.Cloud.Dataproc.V1.JobReference.Parser, new[]{ "ProjectId", "JobId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.YarnApplication), global::Google.Cloud.Dataproc.V1.YarnApplication.Parser, new[]{ "Name", "State", "Progress", "TrackingUrl" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkRJob", "SparkSqlJob", "PrestoJob", "TrinoJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid", "Done", "DriverSchedulingConfig" }, new[]{ "TypeJob" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkRJob", "SparkSqlJob", "PrestoJob", "TrinoJob", "FlinkJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid", "Done", "DriverSchedulingConfig" }, new[]{ "TypeJob" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig), global::Google.Cloud.Dataproc.V1.DriverSchedulingConfig.Parser, new[]{ "MemoryMb", "Vcores" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobScheduling), global::Google.Cloud.Dataproc.V1.JobScheduling.Parser, new[]{ "MaxFailuresPerHour", "MaxFailuresTotal" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job", "RequestId" }, null, null, null, null),
@@ -262,7 +273,7 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetJobRequest), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser, new[]{ "ProjectId", "Region", "PageSize", "PageToken", "ClusterName", "JobStateMatcher", "Filter" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateJobRequest), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId", "Job", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsResponse), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsResponse), global::Google.Cloud.Dataproc.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CancelJobRequest), global::Google.Cloud.Dataproc.V1.CancelJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteJobRequest), global::Google.Cloud.Dataproc.V1.DeleteJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null, null)
           }));
@@ -274,6 +285,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The runtime logging config of the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoggingConfig : pb::IMessage<LoggingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -324,10 +336,12 @@ namespace Google.Cloud.Dataproc.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level) x, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level.Unspecified), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level> driverLogLevels_ = new pbc::MapField<string, global::Google.Cloud.Dataproc.V1.LoggingConfig.Types.Level>();
     /// <summary>
-    /// The per-package log levels for the driver. This may include
+    /// The per-package log levels for the driver. This can include
     /// "root" package name to configure rootLogger.
     /// Examples:
-    ///   'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+    /// - 'com.google = FATAL'
+    /// - 'root = INFO'
+    /// - 'org.apache = DEBUG'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -412,7 +426,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      driverLogLevels_.Add(other.driverLogLevels_);
+      driverLogLevels_.MergeFrom(other.driverLogLevels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -517,6 +531,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// jobs on [Apache Hadoop
   /// YARN](https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HadoopJob : pb::IMessage<HadoopJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -587,10 +602,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainJarFileUri {
-      get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
       }
     }
 
@@ -603,10 +632,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainClass {
-      get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+      get { return HasMainClass ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
       }
     }
 
@@ -618,7 +661,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. The arguments to pass to the driver. Do not
     /// include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as
-    /// job properties, since a collision may occur that causes an incorrect job
+    /// job properties, since a collision might occur that causes an incorrect job
     /// submission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -681,8 +724,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Hadoop.
-    /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site and
+    /// Properties that conflict with values set by the Dataproc API might be
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site` and
     /// classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -758,8 +801,8 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-      if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
       hash ^= args_.GetHashCode();
       hash ^= jarFileUris_.GetHashCode();
       hash ^= fileUris_.GetHashCode();
@@ -785,11 +828,11 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -812,11 +855,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -839,10 +882,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
       }
       size += args_.CalculateSize(_repeated_args_codec);
@@ -869,7 +912,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -996,6 +1039,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// A Dataproc job for running [Apache Spark](https://spark.apache.org/)
   /// applications on YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkJob : pb::IMessage<SparkJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1062,10 +1106,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainJarFileUri {
-      get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
       }
     }
 
@@ -1073,15 +1131,30 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MainClassFieldNumber = 2;
     /// <summary>
     /// The name of the driver's main class. The jar file that contains the class
-    /// must be in the default CLASSPATH or specified in `jar_file_uris`.
+    /// must be in the default CLASSPATH or specified in
+    /// SparkJob.jar_file_uris.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainClass {
-      get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+      get { return HasMainClass ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
       }
     }
 
@@ -1154,7 +1227,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Spark.
-    /// Properties that conflict with values set by the Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API might be
     /// overwritten. Can include properties set in
     /// /etc/spark/conf/spark-defaults.conf and classes in user code.
     /// </summary>
@@ -1231,8 +1304,8 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-      if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
       hash ^= args_.GetHashCode();
       hash ^= jarFileUris_.GetHashCode();
       hash ^= fileUris_.GetHashCode();
@@ -1258,11 +1331,11 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -1285,11 +1358,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -1312,10 +1385,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
       }
       size += args_.CalculateSize(_repeated_args_codec);
@@ -1342,7 +1415,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -1471,6 +1544,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// PySpark](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
   /// applications on YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PySparkJob : pb::IMessage<PySparkJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1622,7 +1696,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure PySpark.
-    /// Properties that conflict with values set by the Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API might be
     /// overwritten. Can include properties set in
     /// /etc/spark/conf/spark-defaults.conf and classes in user code.
     /// </summary>
@@ -1783,7 +1857,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -1900,6 +1974,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A list of queries to run on a cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryList : pb::IMessage<QueryList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2098,6 +2173,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// A Dataproc job for running [Apache Hive](https://hive.apache.org/)
   /// queries on YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HiveJob : pb::IMessage<HiveJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2162,10 +2238,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -2223,8 +2313,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names and values, used to configure Hive.
-    /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
+    /// Properties that conflict with values set by the Dataproc API might be
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site.xml`,
     /// /etc/hive/conf/hive-site.xml, and classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2299,7 +2389,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
@@ -2324,7 +2414,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2349,7 +2439,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2374,7 +2464,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -2401,8 +2491,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContinueOnFailure != false) {
         ContinueOnFailure = other.ContinueOnFailure;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       switch (other.QueriesCase) {
         case QueriesOneofCase.QueryFileUri:
@@ -2515,6 +2605,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// A Dataproc job for running [Apache Spark
   /// SQL](https://spark.apache.org/sql/) queries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkSqlJob : pb::IMessage<SparkSqlJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2579,10 +2670,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -2624,7 +2729,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure
     /// Spark SQL's SparkConf. Properties that conflict with values set by the
-    /// Dataproc API may be overwritten.
+    /// Dataproc API might be overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2711,7 +2816,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
       hash ^= Properties.GetHashCode();
@@ -2736,7 +2841,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2761,7 +2866,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2786,7 +2891,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -2810,8 +2915,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
@@ -2936,6 +3041,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// A Dataproc job for running [Apache Pig](https://pig.apache.org/)
   /// queries on YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PigJob : pb::IMessage<PigJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3001,10 +3107,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -3062,8 +3182,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Pig.
-    /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
+    /// Properties that conflict with values set by the Dataproc API might be
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site.xml`,
     /// /etc/pig/conf/pig.properties, and classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3153,7 +3273,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
@@ -3179,7 +3299,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -3208,7 +3328,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -3237,7 +3357,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -3267,8 +3387,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContinueOnFailure != false) {
         ContinueOnFailure = other.ContinueOnFailure;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
@@ -3402,6 +3522,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// [Apache SparkR](https://spark.apache.org/docs/latest/sparkr.html)
   /// applications on YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkRJob : pb::IMessage<SparkRJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3521,7 +3642,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure SparkR.
-    /// Properties that conflict with values set by the Dataproc API may be
+    /// Properties that conflict with values set by the Dataproc API might be
     /// overwritten. Can include properties set in
     /// /etc/spark/conf/spark-defaults.conf and classes in user code.
     /// </summary>
@@ -3670,7 +3791,7 @@ namespace Google.Cloud.Dataproc.V1 {
       args_.Add(other.args_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -3775,6 +3896,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// must be enabled when the cluster is created to submit a Presto job to the
   /// cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrestoJob : pb::IMessage<PrestoJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3840,10 +3962,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -3991,7 +4127,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       if (OutputFormat.Length != 0) hash ^= OutputFormat.GetHashCode();
@@ -4017,7 +4153,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4049,7 +4185,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4081,7 +4217,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -4117,7 +4253,7 @@ namespace Google.Cloud.Dataproc.V1 {
         OutputFormat = other.OutputFormat;
       }
       clientTags_.Add(other.clientTags_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -4252,6 +4388,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// must be enabled when the cluster is created to submit a Trino job to the
   /// cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrinoJob : pb::IMessage<TrinoJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4317,10 +4454,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -4468,7 +4619,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       if (OutputFormat.Length != 0) hash ^= OutputFormat.GetHashCode();
@@ -4494,7 +4645,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4526,7 +4677,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4558,7 +4709,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -4594,7 +4745,7 @@ namespace Google.Cloud.Dataproc.V1 {
         OutputFormat = other.OutputFormat;
       }
       clientTags_.Add(other.clientTags_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -4723,8 +4874,491 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
+  /// A Dataproc job for running Apache Flink applications on YARN.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FlinkJob : pb::IMessage<FlinkJob>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FlinkJob> _parser = new pb::MessageParser<FlinkJob>(() => new FlinkJob());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FlinkJob> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlinkJob() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlinkJob(FlinkJob other) : this() {
+      args_ = other.args_.Clone();
+      jarFileUris_ = other.jarFileUris_.Clone();
+      savepointUri_ = other.savepointUri_;
+      properties_ = other.properties_.Clone();
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
+      switch (other.DriverCase) {
+        case DriverOneofCase.MainJarFileUri:
+          MainJarFileUri = other.MainJarFileUri;
+          break;
+        case DriverOneofCase.MainClass:
+          MainClass = other.MainClass;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlinkJob Clone() {
+      return new FlinkJob(this);
+    }
+
+    /// <summary>Field number for the "main_jar_file_uri" field.</summary>
+    public const int MainJarFileUriFieldNumber = 1;
+    /// <summary>
+    /// The HCFS URI of the jar file that contains the main class.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MainJarFileUri {
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
+      set {
+        driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
+      }
+    }
+
+    /// <summary>Field number for the "main_class" field.</summary>
+    public const int MainClassFieldNumber = 2;
+    /// <summary>
+    /// The name of the driver's main class. The jar file that contains the class
+    /// must be in the default CLASSPATH or specified in
+    /// [jarFileUris][google.cloud.dataproc.v1.FlinkJob.jar_file_uris].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MainClass {
+      get { return HasMainClass ? (string) driver_ : ""; }
+      set {
+        driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
+      }
+    }
+
+    /// <summary>Field number for the "args" field.</summary>
+    public const int ArgsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_args_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> args_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The arguments to pass to the driver. Do not include arguments,
+    /// such as `--conf`, that can be set as job properties, since a collision
+    /// might occur that causes an incorrect job submission.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Args {
+      get { return args_; }
+    }
+
+    /// <summary>Field number for the "jar_file_uris" field.</summary>
+    public const int JarFileUrisFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_jarFileUris_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> jarFileUris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. HCFS URIs of jar files to add to the CLASSPATHs of the
+    /// Flink driver and tasks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> JarFileUris {
+      get { return jarFileUris_; }
+    }
+
+    /// <summary>Field number for the "savepoint_uri" field.</summary>
+    public const int SavepointUriFieldNumber = 9;
+    private string savepointUri_ = "";
+    /// <summary>
+    /// Optional. HCFS URI of the savepoint, which contains the last saved progress
+    /// for starting the current job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SavepointUri {
+      get { return savepointUri_; }
+      set {
+        savepointUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "properties" field.</summary>
+    public const int PropertiesFieldNumber = 7;
+    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. A mapping of property names to values, used to configure Flink.
+    /// Properties that conflict with values set by the Dataproc API might be
+    /// overwritten. Can include properties set in
+    /// `/etc/flink/conf/flink-defaults.conf` and classes in user code.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Properties {
+      get { return properties_; }
+    }
+
+    /// <summary>Field number for the "logging_config" field.</summary>
+    public const int LoggingConfigFieldNumber = 8;
+    private global::Google.Cloud.Dataproc.V1.LoggingConfig loggingConfig_;
+    /// <summary>
+    /// Optional. The runtime log config for job execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.LoggingConfig LoggingConfig {
+      get { return loggingConfig_; }
+      set {
+        loggingConfig_ = value;
+      }
+    }
+
+    private object driver_;
+    /// <summary>Enum of possible cases for the "driver" oneof.</summary>
+    public enum DriverOneofCase {
+      None = 0,
+      MainJarFileUri = 1,
+      MainClass = 2,
+    }
+    private DriverOneofCase driverCase_ = DriverOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DriverOneofCase DriverCase {
+      get { return driverCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDriver() {
+      driverCase_ = DriverOneofCase.None;
+      driver_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FlinkJob);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FlinkJob other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MainJarFileUri != other.MainJarFileUri) return false;
+      if (MainClass != other.MainClass) return false;
+      if(!args_.Equals(other.args_)) return false;
+      if(!jarFileUris_.Equals(other.jarFileUris_)) return false;
+      if (SavepointUri != other.SavepointUri) return false;
+      if (!Properties.Equals(other.Properties)) return false;
+      if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
+      if (DriverCase != other.DriverCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
+      hash ^= args_.GetHashCode();
+      hash ^= jarFileUris_.GetHashCode();
+      if (SavepointUri.Length != 0) hash ^= SavepointUri.GetHashCode();
+      hash ^= Properties.GetHashCode();
+      if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
+      hash ^= (int) driverCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasMainJarFileUri) {
+        output.WriteRawTag(10);
+        output.WriteString(MainJarFileUri);
+      }
+      if (HasMainClass) {
+        output.WriteRawTag(18);
+        output.WriteString(MainClass);
+      }
+      args_.WriteTo(output, _repeated_args_codec);
+      jarFileUris_.WriteTo(output, _repeated_jarFileUris_codec);
+      properties_.WriteTo(output, _map_properties_codec);
+      if (loggingConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LoggingConfig);
+      }
+      if (SavepointUri.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(SavepointUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasMainJarFileUri) {
+        output.WriteRawTag(10);
+        output.WriteString(MainJarFileUri);
+      }
+      if (HasMainClass) {
+        output.WriteRawTag(18);
+        output.WriteString(MainClass);
+      }
+      args_.WriteTo(ref output, _repeated_args_codec);
+      jarFileUris_.WriteTo(ref output, _repeated_jarFileUris_codec);
+      properties_.WriteTo(ref output, _map_properties_codec);
+      if (loggingConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LoggingConfig);
+      }
+      if (SavepointUri.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(SavepointUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasMainJarFileUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
+      }
+      if (HasMainClass) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
+      }
+      size += args_.CalculateSize(_repeated_args_codec);
+      size += jarFileUris_.CalculateSize(_repeated_jarFileUris_codec);
+      if (SavepointUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SavepointUri);
+      }
+      size += properties_.CalculateSize(_map_properties_codec);
+      if (loggingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoggingConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FlinkJob other) {
+      if (other == null) {
+        return;
+      }
+      args_.Add(other.args_);
+      jarFileUris_.Add(other.jarFileUris_);
+      if (other.SavepointUri.Length != 0) {
+        SavepointUri = other.SavepointUri;
+      }
+      properties_.MergeFrom(other.properties_);
+      if (other.loggingConfig_ != null) {
+        if (loggingConfig_ == null) {
+          LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+        }
+        LoggingConfig.MergeFrom(other.LoggingConfig);
+      }
+      switch (other.DriverCase) {
+        case DriverOneofCase.MainJarFileUri:
+          MainJarFileUri = other.MainJarFileUri;
+          break;
+        case DriverOneofCase.MainClass:
+          MainClass = other.MainClass;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MainJarFileUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            MainClass = input.ReadString();
+            break;
+          }
+          case 26: {
+            args_.AddEntriesFrom(input, _repeated_args_codec);
+            break;
+          }
+          case 34: {
+            jarFileUris_.AddEntriesFrom(input, _repeated_jarFileUris_codec);
+            break;
+          }
+          case 58: {
+            properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+          case 66: {
+            if (loggingConfig_ == null) {
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+            }
+            input.ReadMessage(LoggingConfig);
+            break;
+          }
+          case 74: {
+            SavepointUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MainJarFileUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            MainClass = input.ReadString();
+            break;
+          }
+          case 26: {
+            args_.AddEntriesFrom(ref input, _repeated_args_codec);
+            break;
+          }
+          case 34: {
+            jarFileUris_.AddEntriesFrom(ref input, _repeated_jarFileUris_codec);
+            break;
+          }
+          case 58: {
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+          case 66: {
+            if (loggingConfig_ == null) {
+              LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
+            }
+            input.ReadMessage(LoggingConfig);
+            break;
+          }
+          case 74: {
+            SavepointUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Dataproc job config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobPlacement : pb::IMessage<JobPlacement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4739,7 +5373,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4926,7 +5560,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ClusterUuid.Length != 0) {
         ClusterUuid = other.ClusterUuid;
       }
-      clusterLabels_.Add(other.clusterLabels_);
+      clusterLabels_.MergeFrom(other.clusterLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4991,6 +5625,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Dataproc job status.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobStatus : pb::IMessage<JobStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5005,7 +5640,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5058,7 +5693,7 @@ namespace Google.Cloud.Dataproc.V1 {
     private string details_ = "";
     /// <summary>
     /// Optional. Output only. Job state details, such as an error
-    /// description if the state is &lt;code>ERROR&lt;/code>.
+    /// description if the state is `ERROR`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5383,7 +6018,7 @@ namespace Google.Cloud.Dataproc.V1 {
         /// </summary>
         [pbr::OriginalName("SUBMITTED")] Submitted = 1,
         /// <summary>
-        /// The Job has been received and is awaiting execution (it may be waiting
+        /// The Job has been received and is awaiting execution (it might be waiting
         /// for a condition to be met). See the "details" field for the reason for
         /// the delay.
         ///
@@ -5391,7 +6026,7 @@ namespace Google.Cloud.Dataproc.V1 {
         /// </summary>
         [pbr::OriginalName("QUEUED")] Queued = 2,
         /// <summary>
-        /// The agent-reported status is out of date, which may be caused by a
+        /// The agent-reported status is out of date, which can be caused by a
         /// loss of communication between the agent and Dataproc. If the
         /// agent does not send a timely update, the job will fail.
         ///
@@ -5408,6 +6043,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Encapsulates the full scoping used to reference a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobReference : pb::IMessage<JobReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5422,7 +6058,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5653,6 +6289,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// **Beta Feature**: This report is available for testing purposes only. It may
   /// be changed before final release.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class YarnApplication : pb::IMessage<YarnApplication>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5667,7 +6304,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6022,6 +6659,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A Dataproc job resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6036,7 +6674,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6095,6 +6733,9 @@ namespace Google.Cloud.Dataproc.V1 {
           break;
         case TypeJobOneofCase.TrinoJob:
           TrinoJob = other.TrinoJob.Clone();
+          break;
+        case TypeJobOneofCase.FlinkJob:
+          FlinkJob = other.FlinkJob.Clone();
           break;
       }
 
@@ -6276,12 +6917,27 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "flink_job" field.</summary>
+    public const int FlinkJobFieldNumber = 29;
+    /// <summary>
+    /// Optional. Job is a Flink job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.FlinkJob FlinkJob {
+      get { return typeJobCase_ == TypeJobOneofCase.FlinkJob ? (global::Google.Cloud.Dataproc.V1.FlinkJob) typeJob_ : null; }
+      set {
+        typeJob_ = value;
+        typeJobCase_ = value == null ? TypeJobOneofCase.None : TypeJobOneofCase.FlinkJob;
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
     private global::Google.Cloud.Dataproc.V1.JobStatus status_;
     /// <summary>
     /// Output only. The job status. Additional application-specific
-    /// status information may be contained in the &lt;code>type_job&lt;/code>
+    /// status information might be contained in the &lt;code>type_job&lt;/code>
     /// and &lt;code>yarn_applications&lt;/code> fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6316,7 +6972,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The collection of YARN applications spun up by this job.
     ///
     /// **Beta** Feature: This report is available for testing purposes only. It
-    /// may be changed before final release.
+    /// might be changed before final release.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6345,8 +7001,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private string driverControlFilesUri_ = "";
     /// <summary>
     /// Output only. If present, the location of miscellaneous control files
-    /// which may be used as part of job setup and handling. If not present,
-    /// control files may be placed in the same location as `driver_output_uri`.
+    /// which can be used as part of job setup and handling. If not present,
+    /// control files might be placed in the same location as `driver_output_uri`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6366,7 +7022,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. The labels to associate with this job.
     /// Label **keys** must contain 1 to 63 characters, and must conform to
     /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
-    /// Label **values** may be empty, but, if present, must contain 1 to 63
+    /// Label **values** can be empty, but, if present, must contain 1 to 63
     /// characters, and must conform to [RFC
     /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
     /// associated with a job.
@@ -6398,7 +7054,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Output only. A UUID that uniquely identifies a job within the project
     /// over time. This is in contrast to a user-settable reference.job_id that
-    /// may be reused over time.
+    /// might be reused over time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6455,6 +7111,7 @@ namespace Google.Cloud.Dataproc.V1 {
       SparkSqlJob = 12,
       PrestoJob = 23,
       TrinoJob = 28,
+      FlinkJob = 29,
     }
     private TypeJobOneofCase typeJobCase_ = TypeJobOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6496,6 +7153,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(SparkSqlJob, other.SparkSqlJob)) return false;
       if (!object.Equals(PrestoJob, other.PrestoJob)) return false;
       if (!object.Equals(TrinoJob, other.TrinoJob)) return false;
+      if (!object.Equals(FlinkJob, other.FlinkJob)) return false;
       if (!object.Equals(Status, other.Status)) return false;
       if(!statusHistory_.Equals(other.statusHistory_)) return false;
       if(!yarnApplications_.Equals(other.yarnApplications_)) return false;
@@ -6525,6 +7183,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (typeJobCase_ == TypeJobOneofCase.SparkSqlJob) hash ^= SparkSqlJob.GetHashCode();
       if (typeJobCase_ == TypeJobOneofCase.PrestoJob) hash ^= PrestoJob.GetHashCode();
       if (typeJobCase_ == TypeJobOneofCase.TrinoJob) hash ^= TrinoJob.GetHashCode();
+      if (typeJobCase_ == TypeJobOneofCase.FlinkJob) hash ^= FlinkJob.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= statusHistory_.GetHashCode();
       hash ^= yarnApplications_.GetHashCode();
@@ -6629,6 +7288,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(TrinoJob);
       }
+      if (typeJobCase_ == TypeJobOneofCase.FlinkJob) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlinkJob);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6714,6 +7377,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(TrinoJob);
       }
+      if (typeJobCase_ == TypeJobOneofCase.FlinkJob) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlinkJob);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6756,6 +7423,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (typeJobCase_ == TypeJobOneofCase.TrinoJob) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrinoJob);
+      }
+      if (typeJobCase_ == TypeJobOneofCase.FlinkJob) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FlinkJob);
       }
       if (status_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
@@ -6819,7 +7489,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.DriverControlFilesUri.Length != 0) {
         DriverControlFilesUri = other.DriverControlFilesUri;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.scheduling_ != null) {
         if (scheduling_ == null) {
           Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
@@ -6892,6 +7562,12 @@ namespace Google.Cloud.Dataproc.V1 {
             TrinoJob = new global::Google.Cloud.Dataproc.V1.TrinoJob();
           }
           TrinoJob.MergeFrom(other.TrinoJob);
+          break;
+        case TypeJobOneofCase.FlinkJob:
+          if (FlinkJob == null) {
+            FlinkJob = new global::Google.Cloud.Dataproc.V1.FlinkJob();
+          }
+          FlinkJob.MergeFrom(other.FlinkJob);
           break;
       }
 
@@ -7054,6 +7730,15 @@ namespace Google.Cloud.Dataproc.V1 {
             TrinoJob = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.Cloud.Dataproc.V1.FlinkJob subBuilder = new global::Google.Cloud.Dataproc.V1.FlinkJob();
+            if (typeJobCase_ == TypeJobOneofCase.FlinkJob) {
+              subBuilder.MergeFrom(FlinkJob);
+            }
+            input.ReadMessage(subBuilder);
+            FlinkJob = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7213,6 +7898,15 @@ namespace Google.Cloud.Dataproc.V1 {
             TrinoJob = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.Cloud.Dataproc.V1.FlinkJob subBuilder = new global::Google.Cloud.Dataproc.V1.FlinkJob();
+            if (typeJobCase_ == TypeJobOneofCase.FlinkJob) {
+              subBuilder.MergeFrom(FlinkJob);
+            }
+            input.ReadMessage(subBuilder);
+            FlinkJob = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -7223,6 +7917,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Driver scheduling configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DriverSchedulingConfig : pb::IMessage<DriverSchedulingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7237,7 +7932,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7458,6 +8153,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Job scheduling options.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobScheduling : pb::IMessage<JobScheduling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7472,7 +8168,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7507,12 +8203,12 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MaxFailuresPerHourFieldNumber = 1;
     private int maxFailuresPerHour_;
     /// <summary>
-    /// Optional. Maximum number of times per hour a driver may be restarted as
+    /// Optional. Maximum number of times per hour a driver can be restarted as
     /// a result of driver exiting with non-zero code before job is
     /// reported failed.
     ///
-    /// A job may be reported as thrashing if the driver exits with a non-zero code
-    /// four times within a 10-minute window.
+    /// A job might be reported as thrashing if the driver exits with a non-zero
+    /// code four times within a 10-minute window.
     ///
     /// Maximum value is 10.
     ///
@@ -7533,7 +8229,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MaxFailuresTotalFieldNumber = 2;
     private int maxFailuresTotal_;
     /// <summary>
-    /// Optional. Maximum total number of times a driver may be restarted as a
+    /// Optional. Maximum total number of times a driver can be restarted as a
     /// result of the driver exiting with a non-zero code. After the maximum number
     /// is reached, the job will be reported as failed.
     ///
@@ -7713,6 +8409,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to submit a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubmitJobRequest : pb::IMessage<SubmitJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7727,7 +8424,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8049,6 +8746,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Job Operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobMetadata : pb::IMessage<JobMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8063,7 +8761,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8382,6 +9080,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to get the resource representation for a job in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8396,7 +9095,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8658,6 +9357,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to list jobs in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8672,7 +9372,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9139,6 +9839,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to update a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9153,7 +9854,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9518,6 +10219,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A list of jobs in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9532,7 +10234,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9554,6 +10256,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public ListJobsResponse(ListJobsResponse other) : this() {
       jobs_ = other.jobs_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9594,6 +10297,23 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. List of jobs with
+    /// [kms_key][google.cloud.dataproc.v1.EncryptionConfig.kms_key]-encrypted
+    /// parameters that could not be decrypted. A response to a `jobs.get` request
+    /// may indicate the reason for the decryption failure for a specific job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9611,6 +10331,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if(!jobs_.Equals(other.jobs_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9620,6 +10341,7 @@ namespace Google.Cloud.Dataproc.V1 {
       int hash = 1;
       hash ^= jobs_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9643,6 +10365,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9658,6 +10381,7 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9672,6 +10396,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9688,6 +10413,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9709,6 +10435,10 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -9734,6 +10464,10 @@ namespace Google.Cloud.Dataproc.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     }
@@ -9744,6 +10478,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to cancel a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelJobRequest : pb::IMessage<CancelJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9758,7 +10493,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10020,6 +10755,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to delete a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10034,7 +10770,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Dataproc.V1.JobsReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vw",
             "cy97Y29sbGVjdGlvbn0vZmllbGRzL3tmaWVsZH1C2QEKHWNvbS5nb29nbGUu",
             "ZmlyZXN0b3JlLmFkbWluLnYxQgpGaWVsZFByb3RvUAFaOWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FwaXYxcGI7YXBpdjFw",
+            "ZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FkbWlucGI7YWRtaW5w",
             "YqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIf",
             "R29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xv",
             "dWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
@@ -61,8 +61,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Represents a single field in the database.
   ///
   /// Fields are grouped by their "Collection Group", which represent all
-  /// collections in the database with the same id.
+  /// collections in the database with the same ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Field : pb::IMessage<Field>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -113,26 +114,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. A field name of the form
+    /// Required. A field name of the form:
     /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
     ///
-    /// A field path may be a simple field name, e.g. `address` or a path to fields
-    /// within map_value , e.g. `address.city`,
+    /// A field path can be a simple field name, e.g. `address` or a path to fields
+    /// within `map_value` , e.g. `address.city`,
     /// or a special field path. The only valid special field is `*`, which
     /// represents any field.
     ///
-    /// Field paths may be quoted using ` (backtick). The only character that needs
-    /// to be escaped within a quoted field path is the backtick character itself,
-    /// escaped using a backslash. Special characters in field paths that
+    /// Field paths can be quoted using `` ` `` (backtick). The only character that
+    /// must be escaped within a quoted field path is the backtick character
+    /// itself, escaped using a backslash. Special characters in field paths that
     /// must be quoted include: `*`, `.`,
-    /// ``` (backtick), `[`, `]`, as well as any ascii symbolic characters.
+    /// `` ` `` (backtick), `[`, `]`, as well as any ascii symbolic characters.
     ///
     /// Examples:
-    /// (Note: Comments here are written in markdown syntax, so there is an
-    ///  additional layer of backticks to represent a code block)
-    /// `\`address.city\`` represents a field named `address.city`, not the map key
-    /// `city` in the field `address`.
-    /// `\`*\`` represents a field named `*`, not any field.
+    /// `` `address.city` `` represents a field named `address.city`, not the map
+    /// key `city` in the field `address`. `` `*` `` represents a field named `*`,
+    /// not any field.
     ///
     /// A special `Field` contains the default indexing settings for all fields.
     /// This field's resource name is:
@@ -389,6 +388,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// The index configuration for this field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IndexConfig : pb::IMessage<IndexConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -471,8 +471,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         public const int AncestorFieldFieldNumber = 3;
         private string ancestorField_ = "";
         /// <summary>
-        /// Output only. Specifies the resource name of the `Field` from which this field's
-        /// index configuration is set (when `uses_ancestor_config` is true),
+        /// Output only. Specifies the resource name of the `Field` from which this
+        /// field's index configuration is set (when `uses_ancestor_config` is true),
         /// or from which it *would* be set if this field had no index configuration
         /// (when `uses_ancestor_config` is false).
         /// </summary>
@@ -702,10 +702,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// The TTL (time-to-live) configuration for documents that have this `Field`
       /// set.
+      ///
       /// Storing a timestamp value into a TTL-enabled field will be treated as
-      /// the document's absolute expiration time. Using any other data type or
-      /// leaving the field absent will disable the TTL for the individual document.
+      /// the document's absolute expiration time. Timestamp values in the past
+      /// indicate that the document is eligible for immediate expiration. Using any
+      /// other data type or leaving the field absent will disable expiration for the
+      /// individual document.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TtlConfig : pb::IMessage<TtlConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

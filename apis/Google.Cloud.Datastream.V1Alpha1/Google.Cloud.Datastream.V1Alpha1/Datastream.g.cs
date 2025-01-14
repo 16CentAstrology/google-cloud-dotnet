@@ -141,33 +141,33 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
             "dENvbm5lY3Rpb25Qcm9maWxlcxI/Lmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFt",
             "LnYxYWxwaGExLkxpc3RDb25uZWN0aW9uUHJvZmlsZXNSZXF1ZXN0GkAuZ29v",
             "Z2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuTGlzdENvbm5lY3Rpb25Q",
-            "cm9maWxlc1Jlc3BvbnNlIk2C0+STAj4SPC92MWFscGhhMS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25Qcm9maWxlc9pBBnBh",
-            "cmVudBLXAQoUR2V0Q29ubmVjdGlvblByb2ZpbGUSPS5nb29nbGUuY2xvdWQu",
+            "cm9maWxlc1Jlc3BvbnNlIk3aQQZwYXJlbnSC0+STAj4SPC92MWFscGhhMS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25Qcm9m",
+            "aWxlcxLXAQoUR2V0Q29ubmVjdGlvblByb2ZpbGUSPS5nb29nbGUuY2xvdWQu",
             "ZGF0YXN0cmVhbS52MWFscGhhMS5HZXRDb25uZWN0aW9uUHJvZmlsZVJlcXVl",
             "c3QaMy5nb29nbGUuY2xvdWQuZGF0YXN0cmVhbS52MWFscGhhMS5Db25uZWN0",
-            "aW9uUHJvZmlsZSJLgtPkkwI+EjwvdjFhbHBoYTEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9jb25uZWN0aW9uUHJvZmlsZXMvKn3aQQRuYW1lErAC",
+            "aW9uUHJvZmlsZSJL2kEEbmFtZYLT5JMCPhI8L3YxYWxwaGExL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvblByb2ZpbGVzLyp9ErAC",
             "ChdDcmVhdGVDb25uZWN0aW9uUHJvZmlsZRJALmdvb2dsZS5jbG91ZC5kYXRh",
             "c3RyZWFtLnYxYWxwaGExLkNyZWF0ZUNvbm5lY3Rpb25Qcm9maWxlUmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iswGC0+STAlIiPC92",
-            "MWFscGhhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5l",
-            "Y3Rpb25Qcm9maWxlczoSY29ubmVjdGlvbl9wcm9maWxl2kEvcGFyZW50LGNv",
-            "bm5lY3Rpb25fcHJvZmlsZSxjb25uZWN0aW9uX3Byb2ZpbGVfaWTKQSYKEUNv",
-            "bm5lY3Rpb25Qcm9maWxlEhFPcGVyYXRpb25NZXRhZGF0YRKyAgoXVXBkYXRl",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iswHKQSYKEUNvbm5l",
+            "Y3Rpb25Qcm9maWxlEhFPcGVyYXRpb25NZXRhZGF0YdpBL3BhcmVudCxjb25u",
+            "ZWN0aW9uX3Byb2ZpbGUsY29ubmVjdGlvbl9wcm9maWxlX2lkgtPkkwJSIjwv",
+            "djFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb25u",
+            "ZWN0aW9uUHJvZmlsZXM6EmNvbm5lY3Rpb25fcHJvZmlsZRKyAgoXVXBkYXRl",
             "Q29ubmVjdGlvblByb2ZpbGUSQC5nb29nbGUuY2xvdWQuZGF0YXN0cmVhbS52",
             "MWFscGhhMS5VcGRhdGVDb25uZWN0aW9uUHJvZmlsZVJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrUBgtPkkwJlMk8vdjFhbHBoYTEv",
-            "e2Nvbm5lY3Rpb25fcHJvZmlsZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovY29ubmVjdGlvblByb2ZpbGVzLyp9OhJjb25uZWN0aW9uX3Byb2ZpbGXa",
-            "QR5jb25uZWN0aW9uX3Byb2ZpbGUsdXBkYXRlX21hc2vKQSYKEUNvbm5lY3Rp",
-            "b25Qcm9maWxlEhFPcGVyYXRpb25NZXRhZGF0YRL0AQoXRGVsZXRlQ29ubmVj",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrUBykEmChFDb25uZWN0aW9uUHJv",
+            "ZmlsZRIRT3BlcmF0aW9uTWV0YWRhdGHaQR5jb25uZWN0aW9uX3Byb2ZpbGUs",
+            "dXBkYXRlX21hc2uC0+STAmUyTy92MWFscGhhMS97Y29ubmVjdGlvbl9wcm9m",
+            "aWxlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9uUHJv",
+            "ZmlsZXMvKn06EmNvbm5lY3Rpb25fcHJvZmlsZRL0AQoXRGVsZXRlQ29ubmVj",
             "dGlvblByb2ZpbGUSQC5nb29nbGUuY2xvdWQuZGF0YXN0cmVhbS52MWFscGhh",
             "MS5EZWxldGVDb25uZWN0aW9uUHJvZmlsZVJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIniC0+STAj4qPC92MWFscGhhMS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25Qcm9maWxlcy8qfdpB",
-            "BG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGES9gEKGURpc2NvdmVyQ29ubmVjdGlvblByb2ZpbGUSQi5nb29nbGUu",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uInjKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwI+KjwvdjFhbHBoYTEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9uUHJvZmls",
+            "ZXMvKn0S9gEKGURpc2NvdmVyQ29ubmVjdGlvblByb2ZpbGUSQi5nb29nbGUu",
             "Y2xvdWQuZGF0YXN0cmVhbS52MWFscGhhMS5EaXNjb3ZlckNvbm5lY3Rpb25Q",
             "cm9maWxlUmVxdWVzdBpDLmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYxYWxw",
             "aGExLkRpc2NvdmVyQ29ubmVjdGlvblByb2ZpbGVSZXNwb25zZSJQgtPkkwJK",
@@ -175,78 +175,78 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
             "b25uZWN0aW9uUHJvZmlsZXM6ZGlzY292ZXI6ASoSvgEKC0xpc3RTdHJlYW1z",
             "EjQuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuTGlzdFN0cmVh",
             "bXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEu",
-            "TGlzdFN0cmVhbXNSZXNwb25zZSJCgtPkkwIzEjEvdjFhbHBoYTEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zdHJlYW1z2kEGcGFyZW50EqsB",
+            "TGlzdFN0cmVhbXNSZXNwb25zZSJC2kEGcGFyZW50gtPkkwIzEjEvdjFhbHBo",
+            "YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zdHJlYW1zEqsB",
             "CglHZXRTdHJlYW0SMi5nb29nbGUuY2xvdWQuZGF0YXN0cmVhbS52MWFscGhh",
             "MS5HZXRTdHJlYW1SZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0u",
-            "djFhbHBoYTEuU3RyZWFtIkCC0+STAjMSMS92MWFscGhhMS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3N0cmVhbXMvKn3aQQRuYW1lEt8BCgxDcmVh",
+            "djFhbHBoYTEuU3RyZWFtIkDaQQRuYW1lgtPkkwIzEjEvdjFhbHBoYTEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zdHJlYW1zLyp9Et8BCgxDcmVh",
             "dGVTdHJlYW0SNS5nb29nbGUuY2xvdWQuZGF0YXN0cmVhbS52MWFscGhhMS5D",
             "cmVhdGVTdHJlYW1SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJ5gtPkkwI7IjEvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9zdHJlYW1zOgZzdHJlYW3aQRdwYXJlbnQsc3RyZWFtLHN0",
-            "cmVhbV9pZMpBGwoGU3RyZWFtEhFPcGVyYXRpb25NZXRhZGF0YRLhAQoMVXBk",
+            "dGlvbiJ5ykEbCgZTdHJlYW0SEU9wZXJhdGlvbk1ldGFkYXRh2kEXcGFyZW50",
+            "LHN0cmVhbSxzdHJlYW1faWSC0+STAjsiMS92MWFscGhhMS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L3N0cmVhbXM6BnN0cmVhbRLhAQoMVXBk",
             "YXRlU3RyZWFtEjUuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEu",
             "VXBkYXRlU3RyZWFtUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ie4LT5JMCQjI4L3YxYWxwaGExL3tzdHJlYW0ubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3N0cmVhbXMvKn06BnN0cmVhbdpBEnN0cmVhbSx1",
-            "cGRhdGVfbWFza8pBGwoGU3RyZWFtEhFPcGVyYXRpb25NZXRhZGF0YRLTAQoM",
+            "YXRpb24ie8pBGwoGU3RyZWFtEhFPcGVyYXRpb25NZXRhZGF0YdpBEnN0cmVh",
+            "bSx1cGRhdGVfbWFza4LT5JMCQjI4L3YxYWxwaGExL3tzdHJlYW0ubmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3N0cmVhbXMvKn06BnN0cmVhbRLTAQoM",
             "RGVsZXRlU3RyZWFtEjUuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBo",
             "YTEuRGVsZXRlU3RyZWFtUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24ibYLT5JMCMyoxL3YxYWxwaGExL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovc3RyZWFtcy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES2QEKC0ZldGNoRXJyb3Jz",
+            "cGVyYXRpb24ibcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRp",
+            "b25NZXRhZGF0YdpBBG5hbWWC0+STAjMqMS92MWFscGhhMS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3N0cmVhbXMvKn0S2QEKC0ZldGNoRXJyb3Jz",
             "EjQuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuRmV0Y2hFcnJv",
-            "cnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ1gtPk",
-            "kwJEIj8vdjFhbHBoYTEve3N0cmVhbT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L3N0cmVhbXMvKn06ZmV0Y2hFcnJvcnM6ASrKQSgKE0ZldGNoRXJyb3JzUmVz",
-            "cG9uc2USEU9wZXJhdGlvbk1ldGFkYXRhEsoBCg5GZXRjaFN0YXRpY0lwcxI3",
+            "cnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ1ykEo",
+            "ChNGZXRjaEVycm9yc1Jlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YYLT5JMC",
+            "RCI/L3YxYWxwaGExL3tzdHJlYW09cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
+            "dHJlYW1zLyp9OmZldGNoRXJyb3JzOgEqEsoBCg5GZXRjaFN0YXRpY0lwcxI3",
             "Lmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYxYWxwaGExLkZldGNoU3RhdGlj",
             "SXBzUmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYxYWxwaGEx",
-            "LkZldGNoU3RhdGljSXBzUmVzcG9uc2UiRYLT5JMCOBI2L3YxYWxwaGExL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyp9OmZldGNoU3RhdGljSXBz2kEE",
-            "bmFtZRKwAgoXQ3JlYXRlUHJpdmF0ZUNvbm5lY3Rpb24SQC5nb29nbGUuY2xv",
+            "LkZldGNoU3RhdGljSXBzUmVzcG9uc2UiRdpBBG5hbWWC0+STAjgSNi92MWFs",
+            "cGhhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpmZXRjaFN0YXRp",
+            "Y0lwcxKwAgoXQ3JlYXRlUHJpdmF0ZUNvbm5lY3Rpb24SQC5nb29nbGUuY2xv",
             "dWQuZGF0YXN0cmVhbS52MWFscGhhMS5DcmVhdGVQcml2YXRlQ29ubmVjdGlv",
-            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrMBgtPk",
-            "kwJSIjwvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS9wcml2YXRlQ29ubmVjdGlvbnM6EnByaXZhdGVfY29ubmVjdGlvbtpBL3Bh",
-            "cmVudCxwcml2YXRlX2Nvbm5lY3Rpb24scHJpdmF0ZV9jb25uZWN0aW9uX2lk",
-            "ykEmChFQcml2YXRlQ29ubmVjdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGES1wEK",
+            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrMBykEm",
+            "ChFQcml2YXRlQ29ubmVjdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGHaQS9wYXJl",
+            "bnQscHJpdmF0ZV9jb25uZWN0aW9uLHByaXZhdGVfY29ubmVjdGlvbl9pZILT",
+            "5JMCUiI8L3YxYWxwaGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Kn0vcHJpdmF0ZUNvbm5lY3Rpb25zOhJwcml2YXRlX2Nvbm5lY3Rpb24S1wEK",
             "FEdldFByaXZhdGVDb25uZWN0aW9uEj0uZ29vZ2xlLmNsb3VkLmRhdGFzdHJl",
             "YW0udjFhbHBoYTEuR2V0UHJpdmF0ZUNvbm5lY3Rpb25SZXF1ZXN0GjMuZ29v",
             "Z2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuUHJpdmF0ZUNvbm5lY3Rp",
-            "b24iS4LT5JMCPhI8L3YxYWxwaGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcHJpdmF0ZUNvbm5lY3Rpb25zLyp92kEEbmFtZRLqAQoWTGlzdFBy",
+            "b24iS9pBBG5hbWWC0+STAj4SPC92MWFscGhhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3ByaXZhdGVDb25uZWN0aW9ucy8qfRLqAQoWTGlzdFBy",
             "aXZhdGVDb25uZWN0aW9ucxI/Lmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYx",
             "YWxwaGExLkxpc3RQcml2YXRlQ29ubmVjdGlvbnNSZXF1ZXN0GkAuZ29vZ2xl",
             "LmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuTGlzdFByaXZhdGVDb25uZWN0",
-            "aW9uc1Jlc3BvbnNlIk2C0+STAj4SPC92MWFscGhhMS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L3ByaXZhdGVDb25uZWN0aW9uc9pBBnBhcmVu",
-            "dBL0AQoXRGVsZXRlUHJpdmF0ZUNvbm5lY3Rpb24SQC5nb29nbGUuY2xvdWQu",
+            "aW9uc1Jlc3BvbnNlIk3aQQZwYXJlbnSC0+STAj4SPC92MWFscGhhMS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3ByaXZhdGVDb25uZWN0aW9u",
+            "cxL0AQoXRGVsZXRlUHJpdmF0ZUNvbm5lY3Rpb24SQC5nb29nbGUuY2xvdWQu",
             "ZGF0YXN0cmVhbS52MWFscGhhMS5EZWxldGVQcml2YXRlQ29ubmVjdGlvblJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIniC0+STAj4q",
-            "PC92MWFscGhhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3ByaXZh",
-            "dGVDb25uZWN0aW9ucy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES7gEKC0NyZWF0ZVJvdXRlEjQuZ29v",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInjKQSoKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
+            "gtPkkwI+KjwvdjFhbHBoYTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9wcml2YXRlQ29ubmVjdGlvbnMvKn0S7gEKC0NyZWF0ZVJvdXRlEjQuZ29v",
             "Z2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuQ3JlYXRlUm91dGVSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKJAYLT5JMCTiJF",
-            "L3YxYWxwaGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcml2",
-            "YXRlQ29ubmVjdGlvbnMvKn0vcm91dGVzOgVyb3V0ZdpBFXBhcmVudCxyb3V0",
-            "ZSxyb3V0ZV9pZMpBGgoFUm91dGUSEU9wZXJhdGlvbk1ldGFkYXRhErwBCghH",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKJAcpBGgoFUm91",
+            "dGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEVcGFyZW50LHJvdXRlLHJvdXRlX2lk",
+            "gtPkkwJOIkUvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3ByaXZhdGVDb25uZWN0aW9ucy8qfS9yb3V0ZXM6BXJvdXRlErwBCghH",
             "ZXRSb3V0ZRIxLmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYxYWxwaGExLkdl",
             "dFJvdXRlUmVxdWVzdBonLmdvb2dsZS5jbG91ZC5kYXRhc3RyZWFtLnYxYWxw",
-            "aGExLlJvdXRlIlSC0+STAkcSRS92MWFscGhhMS97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL3ByaXZhdGVDb25uZWN0aW9ucy8qL3JvdXRlcy8qfdpB",
-            "BG5hbWUSzwEKCkxpc3RSb3V0ZXMSMy5nb29nbGUuY2xvdWQuZGF0YXN0cmVh",
+            "aGExLlJvdXRlIlTaQQRuYW1lgtPkkwJHEkUvdjFhbHBoYTEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9wcml2YXRlQ29ubmVjdGlvbnMvKi9yb3V0",
+            "ZXMvKn0SzwEKCkxpc3RSb3V0ZXMSMy5nb29nbGUuY2xvdWQuZGF0YXN0cmVh",
             "bS52MWFscGhhMS5MaXN0Um91dGVzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5k",
-            "YXRhc3RyZWFtLnYxYWxwaGExLkxpc3RSb3V0ZXNSZXNwb25zZSJWgtPkkwJH",
-            "EkUvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3By",
-            "aXZhdGVDb25uZWN0aW9ucy8qfS9yb3V0ZXPaQQZwYXJlbnQS5gEKC0RlbGV0",
+            "YXRhc3RyZWFtLnYxYWxwaGExLkxpc3RSb3V0ZXNSZXNwb25zZSJW2kEGcGFy",
+            "ZW50gtPkkwJHEkUvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3ByaXZhdGVDb25uZWN0aW9ucy8qfS9yb3V0ZXMS5gEKC0RlbGV0",
             "ZVJvdXRlEjQuZ29vZ2xlLmNsb3VkLmRhdGFzdHJlYW0udjFhbHBoYTEuRGVs",
             "ZXRlUm91dGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKBAYLT5JMCRypFL3YxYWxwaGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcHJpdmF0ZUNvbm5lY3Rpb25zLyovcm91dGVzLyp92kEEbmFtZcpB",
-            "KgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRpN",
+            "biKBAcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRh",
+            "ZGF0YdpBBG5hbWWC0+STAkcqRS92MWFscGhhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3ByaXZhdGVDb25uZWN0aW9ucy8qL3JvdXRlcy8qfRpN",
             "ykEZZGF0YXN0cmVhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C9wEKJGNvbS5nb29n",
             "bGUuY2xvdWQuZGF0YXN0cmVhbS52MWFscGhhMUIbQ2xvdWREYXRhc3RyZWFt",
@@ -296,6 +296,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Request message for 'discover' ConnectionProfile request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoverConnectionProfileRequest : pb::IMessage<DiscoverConnectionProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -406,10 +407,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConnectionProfileName {
-      get { return targetCase_ == TargetOneofCase.ConnectionProfileName ? (string) target_ : ""; }
+      get { return HasConnectionProfileName ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.ConnectionProfileName;
+      }
+    }
+    /// <summary>Gets whether the "connection_profile_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConnectionProfileName {
+      get { return targetCase_ == TargetOneofCase.ConnectionProfileName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "connection_profile_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectionProfileName() {
+      if (HasConnectionProfileName) {
+        ClearTarget();
       }
     }
 
@@ -422,10 +437,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Recursive {
-      get { return depthCase_ == DepthOneofCase.Recursive ? (bool) depth_ : false; }
+      get { return HasRecursive ? (bool) depth_ : false; }
       set {
         depth_ = value;
         depthCase_ = DepthOneofCase.Recursive;
+      }
+    }
+    /// <summary>Gets whether the "recursive" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRecursive {
+      get { return depthCase_ == DepthOneofCase.Recursive; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "recursive" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecursive() {
+      if (HasRecursive) {
+        ClearDepth();
       }
     }
 
@@ -437,10 +466,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RecursionDepth {
-      get { return depthCase_ == DepthOneofCase.RecursionDepth ? (int) depth_ : 0; }
+      get { return HasRecursionDepth ? (int) depth_ : 0; }
       set {
         depth_ = value;
         depthCase_ = DepthOneofCase.RecursionDepth;
+      }
+    }
+    /// <summary>Gets whether the "recursion_depth" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRecursionDepth {
+      get { return depthCase_ == DepthOneofCase.RecursionDepth; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "recursion_depth" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecursionDepth() {
+      if (HasRecursionDepth) {
+        ClearDepth();
       }
     }
 
@@ -571,9 +614,9 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (targetCase_ == TargetOneofCase.ConnectionProfile) hash ^= ConnectionProfile.GetHashCode();
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
-      if (depthCase_ == DepthOneofCase.Recursive) hash ^= Recursive.GetHashCode();
-      if (depthCase_ == DepthOneofCase.RecursionDepth) hash ^= RecursionDepth.GetHashCode();
+      if (HasConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
+      if (HasRecursive) hash ^= Recursive.GetHashCode();
+      if (HasRecursionDepth) hash ^= RecursionDepth.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) hash ^= OracleRdbms.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.MysqlRdbms) hash ^= MysqlRdbms.GetHashCode();
       hash ^= (int) targetCase_;
@@ -601,11 +644,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         output.WriteRawTag(24);
         output.WriteBool(Recursive);
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(RecursionDepth);
       }
@@ -621,7 +664,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -639,11 +682,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         output.WriteRawTag(24);
         output.WriteBool(Recursive);
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(RecursionDepth);
       }
@@ -659,7 +702,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -679,13 +722,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (targetCase_ == TargetOneofCase.ConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ConnectionProfileName);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         size += 1 + 1;
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RecursionDepth);
       }
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) {
@@ -868,6 +911,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoverConnectionProfileResponse : pb::IMessage<DiscoverConnectionProfileResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1162,6 +1206,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Request message for 'FetchStaticIps' request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchStaticIpsRequest : pb::IMessage<FetchStaticIpsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1439,6 +1484,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Response message for a 'FetchStaticIps' response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchStaticIpsResponse : pb::IMessage<FetchStaticIpsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1664,6 +1710,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Request message for 'FetchErrors' request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchErrorsRequest : pb::IMessage<FetchErrorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1859,6 +1906,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Response message for a 'FetchErrors' response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchErrorsResponse : pb::IMessage<FetchErrorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2040,6 +2088,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionProfilesRequest : pb::IMessage<ListConnectionProfilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2398,6 +2447,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionProfilesResponse : pb::IMessage<ListConnectionProfilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2649,6 +2699,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetConnectionProfileRequest : pb::IMessage<GetConnectionProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2841,6 +2892,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateConnectionProfileRequest : pb::IMessage<CreateConnectionProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3174,6 +3226,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateConnectionProfileRequest : pb::IMessage<UpdateConnectionProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3480,6 +3533,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteConnectionProfileRequest : pb::IMessage<DeleteConnectionProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3724,6 +3778,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListStreamsRequest : pb::IMessage<ListStreamsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4082,6 +4137,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListStreamsResponse : pb::IMessage<ListStreamsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4333,6 +4389,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetStreamRequest : pb::IMessage<GetStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4525,6 +4582,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateStreamRequest : pb::IMessage<CreateStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4939,6 +4997,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateStreamRequest : pb::IMessage<UpdateStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5326,6 +5385,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteStreamRequest : pb::IMessage<DeleteStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5573,6 +5633,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6075,6 +6136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePrivateConnectionRequest : pb::IMessage<CreatePrivateConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6408,6 +6470,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPrivateConnectionsRequest : pb::IMessage<ListPrivateConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6768,6 +6831,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPrivateConnectionsResponse : pb::IMessage<ListPrivateConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7019,6 +7083,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePrivateConnectionRequest : pb::IMessage<DeletePrivateConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7304,6 +7369,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPrivateConnectionRequest : pb::IMessage<GetPrivateConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7499,6 +7565,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// route creation request
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRouteRequest : pb::IMessage<CreateRouteRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7835,6 +7902,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// route list request
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRoutesRequest : pb::IMessage<ListRoutesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8198,6 +8266,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// route list response
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRoutesResponse : pb::IMessage<ListRoutesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8452,6 +8521,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// route deletion request
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRouteRequest : pb::IMessage<DeleteRouteRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8699,6 +8769,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// route get request
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRouteRequest : pb::IMessage<GetRouteRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

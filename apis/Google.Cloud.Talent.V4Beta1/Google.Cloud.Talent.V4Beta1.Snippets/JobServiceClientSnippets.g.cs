@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Talent.V4Beta1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1413,6 +1414,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = jobServiceClient.SearchJobs(request);
@@ -1447,6 +1449,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = await jobServiceClient.SearchJobsAsync(request);
@@ -1478,6 +1481,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             PagedEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> response = jobServiceClient.SearchJobsForAlert(request);
@@ -1541,6 +1545,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<SearchJobsResponse, SearchJobsResponse.Types.MatchingJob> response = jobServiceClient.SearchJobsForAlertAsync(request);

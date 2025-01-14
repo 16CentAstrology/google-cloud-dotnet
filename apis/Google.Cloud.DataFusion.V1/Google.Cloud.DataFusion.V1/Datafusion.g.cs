@@ -121,8 +121,8 @@ namespace Google.Cloud.DataFusion.V1 {
             "CkRhdGFGdXNpb24SywEKFUxpc3RBdmFpbGFibGVWZXJzaW9ucxI4Lmdvb2ds",
             "ZS5jbG91ZC5kYXRhZnVzaW9uLnYxLkxpc3RBdmFpbGFibGVWZXJzaW9uc1Jl",
             "cXVlc3QaOS5nb29nbGUuY2xvdWQuZGF0YWZ1c2lvbi52MS5MaXN0QXZhaWxh",
-            "YmxlVmVyc2lvbnNSZXNwb25zZSI9gtPkkwIuEiwvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS92ZXJzaW9uc9pBBnBhcmVudBKrAQoNTGlz",
+            "YmxlVmVyc2lvbnNSZXNwb25zZSI92kEGcGFyZW50gtPkkwIuEiwvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS92ZXJzaW9ucxKrAQoNTGlz",
             "dEluc3RhbmNlcxIwLmdvb2dsZS5jbG91ZC5kYXRhZnVzaW9uLnYxLkxpc3RJ",
             "bnN0YW5jZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmRhdGFmdXNpb24udjEu",
             "TGlzdEluc3RhbmNlc1Jlc3BvbnNlIjWC0+STAi8SLS92MS97cGFyZW50PXBy",
@@ -132,24 +132,24 @@ namespace Google.Cloud.DataFusion.V1 {
             "gtPkkwIvEi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
             "YW5jZXMvKn0S4QEKDkNyZWF0ZUluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLmRh",
             "dGFmdXNpb24udjEuQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJ9gtPkkwI5Ii0vdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXM6CGluc3RhbmNl2kEbcGFy",
-            "ZW50LGluc3RhbmNlLGluc3RhbmNlX2lkykEdCghJbnN0YW5jZRIRT3BlcmF0",
-            "aW9uTWV0YWRhdGESzQEKDkRlbGV0ZUluc3RhbmNlEjEuZ29vZ2xlLmNsb3Vk",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJ9ykEdCghJbnN0YW5jZRIRT3BlcmF0aW9u",
+            "TWV0YWRhdGHaQRtwYXJlbnQsaW5zdGFuY2UsaW5zdGFuY2VfaWSC0+STAjki",
+            "LS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNl",
+            "czoIaW5zdGFuY2USzQEKDkRlbGV0ZUluc3RhbmNlEjEuZ29vZ2xlLmNsb3Vk",
             "LmRhdGFmdXNpb24udjEuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJpgtPkkwIvKi0vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lykEqChVn",
-            "b29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRhEuMBCg5V",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJpykEqChVnb29nbGUucHJvdG9idWYu",
+            "RW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCLyotL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9EuMBCg5V",
             "cGRhdGVJbnN0YW5jZRIxLmdvb2dsZS5jbG91ZC5kYXRhZnVzaW9uLnYxLlVw",
             "ZGF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24if4LT5JMCQjI2L3YxL3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZdpBFGluc3RhbmNl",
-            "LHVwZGF0ZV9tYXNrykEdCghJbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "YXRpb24if8pBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRh2kEUaW5z",
+            "dGFuY2UsdXBkYXRlX21hc2uC0+STAkIyNi92MS97aW5zdGFuY2UubmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfToIaW5zdGFuY2US",
             "xgEKD1Jlc3RhcnRJbnN0YW5jZRIyLmdvb2dsZS5jbG91ZC5kYXRhZnVzaW9u",
             "LnYxLlJlc3RhcnRJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uImCC0+STAjoiNS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2luc3RhbmNlcy8qfTpyZXN0YXJ0OgEqykEdCghJbnN0YW5j",
-            "ZRIRT3BlcmF0aW9uTWV0YWRhdGEaTcpBGWRhdGFmdXNpb24uZ29vZ2xlYXBp",
+            "bmcuT3BlcmF0aW9uImDKQR0KCEluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0",
+            "YYLT5JMCOiI1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5z",
+            "dGFuY2VzLyp9OnJlc3RhcnQ6ASoaTcpBGWRhdGFmdXNpb24uZ29vZ2xlYXBp",
             "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtQrcCCh5jb20uZ29vZ2xlLmNsb3VkLmRhdGFmdXNpb24udjFQ",
             "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhZnVzaW9uL2FwaXYxL2RhdGFm",
@@ -191,6 +191,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// while accessing the customer resources from managed Data Fusion instance
   /// nodes, as well as access to the customer on-prem resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -432,6 +433,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// The Data Fusion version. This proto message stores information about certain
   /// Data Fusion version, which is used for Data Fusion version upgrade.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -762,6 +764,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Identifies Data Fusion accelerators for an instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Accelerator : pb::IMessage<Accelerator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1055,6 +1058,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// The crypto key configuration. This field is used by the Customer-managed
   /// encryption keys (CMEK) feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CryptoKeyConfig : pb::IMessage<CryptoKeyConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1252,6 +1256,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Represents a Data Fusion instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2174,8 +2179,8 @@ namespace Google.Cloud.DataFusion.V1 {
         }
         NetworkConfig.MergeFrom(other.NetworkConfig);
       }
-      labels_.Add(other.labels_);
-      options_.Add(other.options_);
+      labels_.MergeFrom(other.labels_);
+      options_.MergeFrom(other.options_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -2630,6 +2635,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for listing Data Fusion instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2989,6 +2995,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Response message for the list instance request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3243,6 +3250,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for the list available versions request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAvailableVersionsRequest : pb::IMessage<ListAvailableVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3562,6 +3570,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Response message for the list available versions request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAvailableVersionsResponse : pb::IMessage<ListAvailableVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3787,6 +3796,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for getting details about a Data Fusion instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3983,6 +3993,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for creating a Data Fusion instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4268,6 +4279,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for deleting a Data Fusion instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4466,6 +4478,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// Data Fusion allows updating the labels, options, and stack driver settings.
   /// This is also used for CDF version upgrade.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4726,6 +4739,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Request message for restarting a Data Fusion instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestartInstanceRequest : pb::IMessage<RestartInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4922,6 +4936,7 @@ namespace Google.Cloud.DataFusion.V1 {
   /// <summary>
   /// Represents the metadata of a long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5293,7 +5308,7 @@ namespace Google.Cloud.DataFusion.V1 {
       if (other.ApiVersion.Length != 0) {
         ApiVersion = other.ApiVersion;
       }
-      additionalStatus_.Add(other.additionalStatus_);
+      additionalStatus_.MergeFrom(other.additionalStatus_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

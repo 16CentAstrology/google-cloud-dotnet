@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,6 +25,13 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class ApiCatalog
     {
+        private const string CatalogFile = "apis.json";
+
+        /// <summary>
+        /// The path of the API catalog within the google-cloud-dotnet repository.
+        /// </summary>
+        public const string PathInRepository = $"{RootLayout.GeneratorInputName}/{CatalogFile}";
+
         /// <summary>
         /// Groups of related packages which need to be released together.
         /// </summary>
@@ -70,16 +77,6 @@ namespace Google.Cloud.Tools.Common
         }
 
         /// <summary>
-        /// The path to the API catalog (apis.json).
-        /// </summary>
-        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), RelativeCatalogPath);
-
-        /// <summary>
-        /// The relative path to the catalog path, e.g. for use when fetching from GitHub.
-        /// </summary>
-        public static string RelativeCatalogPath => "apis/apis.json";
-
-        /// <summary>
         /// Creates a hash set of the IDs of all the APIs in the catalog.
         /// </summary>
         /// <returns>A hash set of IDs.</returns>
@@ -91,10 +88,13 @@ namespace Google.Cloud.Tools.Common
         public Dictionary<string, string> CreateRawVersionMap() => Apis.ToDictionary(api => api.Id, api => api.Version);
 
         /// <summary>
-        /// Loads the API catalog from the local disk, automatically determining the location.
+        /// Returns the path to the API catalog for the given root layout.
         /// </summary>
-        /// <returns></returns>
-        public static ApiCatalog Load() => FromJson(File.ReadAllText(CatalogPath));
+        private static string GetCatalogPath(RootLayout layout) => Path.Combine(layout.GeneratorInput, CatalogFile);
+
+        public static ApiCatalog Load(RootLayout layout) => FromJson(File.ReadAllText(GetCatalogPath(layout)));
+
+        public void Save(RootLayout layout) => File.WriteAllText(GetCatalogPath(layout), FormatJson());
 
         /// <summary>
         /// Loads the API catalog from the given JSON.

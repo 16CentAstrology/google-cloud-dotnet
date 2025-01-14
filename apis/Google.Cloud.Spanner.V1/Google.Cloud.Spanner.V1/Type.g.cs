@@ -25,29 +25,31 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvEhFnb29nbGUuc3Bhbm5l",
-            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byLfAQoEVHlw",
+            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byL3AQoEVHlw",
             "ZRIuCgRjb2RlGAEgASgOMhsuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZUNvZGVC",
             "A+BBAhIzChJhcnJheV9lbGVtZW50X3R5cGUYAiABKAsyFy5nb29nbGUuc3Bh",
             "bm5lci52MS5UeXBlEjIKC3N0cnVjdF90eXBlGAMgASgLMh0uZ29vZ2xlLnNw",
             "YW5uZXIudjEuU3RydWN0VHlwZRI+Cg90eXBlX2Fubm90YXRpb24YBCABKA4y",
-            "JS5nb29nbGUuc3Bhbm5lci52MS5UeXBlQW5ub3RhdGlvbkNvZGUifwoKU3Ry",
-            "dWN0VHlwZRIzCgZmaWVsZHMYASADKAsyIy5nb29nbGUuc3Bhbm5lci52MS5T",
-            "dHJ1Y3RUeXBlLkZpZWxkGjwKBUZpZWxkEgwKBG5hbWUYASABKAkSJQoEdHlw",
-            "ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGUqpQEKCFR5cGVDb2Rl",
-            "EhkKFVRZUEVfQ09ERV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2",
-            "NBACEgsKB0ZMT0FUNjQQAxINCglUSU1FU1RBTVAQBBIICgREQVRFEAUSCgoG",
-            "U1RSSU5HEAYSCQoFQllURVMQBxIJCgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsK",
-            "B05VTUVSSUMQChIICgRKU09OEAsqWAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
-            "IFRZUEVfQU5OT1RBVElPTl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVN",
-            "RVJJQxACEgwKCFBHX0pTT05CEANCrAEKFWNvbS5nb29nbGUuc3Bhbm5lci52",
-            "MUIJVHlwZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9h",
-            "cGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5u",
-            "ZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xv",
-            "dWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
+            "JS5nb29nbGUuc3Bhbm5lci52MS5UeXBlQW5ub3RhdGlvbkNvZGUSFgoOcHJv",
+            "dG9fdHlwZV9mcW4YBSABKAkifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASAD",
+            "KAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZp",
+            "ZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlR5cGUq3wEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
+            "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxILCgdG",
+            "TE9BVDMyEA8SDQoJVElNRVNUQU1QEAQSCAoEREFURRAFEgoKBlNUUklORxAG",
+            "EgkKBUJZVEVTEAcSCQoFQVJSQVkQCBIKCgZTVFJVQ1QQCRILCgdOVU1FUklD",
+            "EAoSCAoESlNPThALEgkKBVBST1RPEA0SCAoERU5VTRAOEgwKCElOVEVSVkFM",
+            "EBASCAoEVVVJRBARKmQKElR5cGVBbm5vdGF0aW9uQ29kZRIkCiBUWVBFX0FO",
+            "Tk9UQVRJT05fQ09ERV9VTlNQRUNJRklFRBAAEg4KClBHX05VTUVSSUMQAhIM",
+            "CghQR19KU09OQhADEgoKBlBHX09JRBAEQqwBChVjb20uZ29vZ2xlLnNwYW5u",
+            "ZXIudjFCCVR5cGVQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5u",
+            "ZXIvYXBpdjEvc3Bhbm5lcnBiO3NwYW5uZXJwYqoCF0dvb2dsZS5DbG91ZC5T",
+            "cGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6",
+            "OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType", "TypeAnnotation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType", "TypeAnnotation", "ProtoTypeFqn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null, null)})
           }));
     }
@@ -82,6 +84,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// `"-Infinity"`.
     /// </summary>
     [pbr::OriginalName("FLOAT64")] Float64 = 3,
+    /// <summary>
+    /// Encoded as `number`, or the strings `"NaN"`, `"Infinity"`, or
+    /// `"-Infinity"`.
+    /// </summary>
+    [pbr::OriginalName("FLOAT32")] Float32 = 15,
     /// <summary>
     /// Encoded as `string` in RFC 3339 timestamp format. The time zone
     /// must be present, and must be `"Z"`.
@@ -119,14 +126,14 @@ namespace Google.Cloud.Spanner.V1 {
     [pbr::OriginalName("STRUCT")] Struct = 9,
     /// <summary>
     /// Encoded as `string`, in decimal format or scientific notation format.
-    /// &lt;br>Decimal format:
-    /// &lt;br>`[+-]Digits[.[Digits]]` or
-    /// &lt;br>`[+-][Digits].Digits`
+    /// Decimal format:
+    /// `[+-]Digits[.[Digits]]` or
+    /// `[+-][Digits].Digits`
     ///
     /// Scientific notation:
-    /// &lt;br>`[+-]Digits[.[Digits]][ExponentIndicator[+-]Digits]` or
-    /// &lt;br>`[+-][Digits].Digits[ExponentIndicator[+-]Digits]`
-    /// &lt;br>(ExponentIndicator is `"e"` or `"E"`)
+    /// `[+-]Digits[.[Digits]][ExponentIndicator[+-]Digits]` or
+    /// `[+-][Digits].Digits[ExponentIndicator[+-]Digits]`
+    /// (ExponentIndicator is `"e"` or `"E"`)
     /// </summary>
     [pbr::OriginalName("NUMERIC")] Numeric = 10,
     /// <summary>
@@ -140,6 +147,28 @@ namespace Google.Cloud.Spanner.V1 {
     /// - JSON array elements will have their order preserved.
     /// </summary>
     [pbr::OriginalName("JSON")] Json = 11,
+    /// <summary>
+    /// Encoded as a base64-encoded `string`, as described in RFC 4648,
+    /// section 4.
+    /// </summary>
+    [pbr::OriginalName("PROTO")] Proto = 13,
+    /// <summary>
+    /// Encoded as `string`, in decimal format.
+    /// </summary>
+    [pbr::OriginalName("ENUM")] Enum = 14,
+    /// <summary>
+    /// Encoded as `string`, in `ISO8601` duration format -
+    /// `P[n]Y[n]M[n]DT[n]H[n]M[n[.fraction]]S`
+    /// where `n` is an integer.
+    /// For example, `P1Y2M3DT4H5M6.5S` represents time duration of 1 year, 2
+    /// months, 3 days, 4 hours, 5 minutes, and 6.5 seconds.
+    /// </summary>
+    [pbr::OriginalName("INTERVAL")] Interval = 16,
+    /// <summary>
+    /// Encoded as `string`, in lower-case hexa-decimal format, as described
+    /// in RFC 9562, section 4.
+    /// </summary>
+    [pbr::OriginalName("UUID")] Uuid = 17,
   }
 
   /// <summary>
@@ -156,22 +185,29 @@ namespace Google.Cloud.Spanner.V1 {
     [pbr::OriginalName("TYPE_ANNOTATION_CODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// PostgreSQL compatible NUMERIC type. This annotation needs to be applied to
-    /// [Type][google.spanner.v1.Type] instances having [NUMERIC][google.spanner.v1.TypeCode.NUMERIC]
-    /// type code to specify that values of this type should be treated as
-    /// PostgreSQL NUMERIC values. Currently this annotation is always needed for
-    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] when a client interacts with PostgreSQL-enabled
-    /// Spanner databases.
+    /// [Type][google.spanner.v1.Type] instances having
+    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] type code to specify that
+    /// values of this type should be treated as PostgreSQL NUMERIC values.
+    /// Currently this annotation is always needed for
+    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] when a client interacts with
+    /// PostgreSQL-enabled Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_NUMERIC")] PgNumeric = 2,
     /// <summary>
     /// PostgreSQL compatible JSONB type. This annotation needs to be applied to
-    /// [Type][google.spanner.v1.Type] instances having [JSON][google.spanner.v1.TypeCode.JSON]
-    /// type code to specify that values of this type should be treated as
-    /// PostgreSQL JSONB values. Currently this annotation is always needed for
-    /// [JSON][google.spanner.v1.TypeCode.JSON] when a client interacts with PostgreSQL-enabled
-    /// Spanner databases.
+    /// [Type][google.spanner.v1.Type] instances having
+    /// [JSON][google.spanner.v1.TypeCode.JSON] type code to specify that values of
+    /// this type should be treated as PostgreSQL JSONB values. Currently this
+    /// annotation is always needed for [JSON][google.spanner.v1.TypeCode.JSON]
+    /// when a client interacts with PostgreSQL-enabled Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_JSONB")] PgJsonb = 3,
+    /// <summary>
+    /// PostgreSQL compatible OID type. This annotation can be used by a client
+    /// interacting with PostgreSQL-enabled Spanner database to specify that a
+    /// value should be treated using the semantics of the OID type.
+    /// </summary>
+    [pbr::OriginalName("PG_OID")] PgOid = 4,
   }
 
   #endregion
@@ -181,6 +217,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// `Type` indicates the type of a Cloud Spanner value, as might be stored in a
   /// table cell or returned from an SQL query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Type : pb::IMessage<Type>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -219,6 +256,7 @@ namespace Google.Cloud.Spanner.V1 {
       arrayElementType_ = other.arrayElementType_ != null ? other.arrayElementType_.Clone() : null;
       structType_ = other.structType_ != null ? other.structType_.Clone() : null;
       typeAnnotation_ = other.typeAnnotation_;
+      protoTypeFqn_ = other.protoTypeFqn_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -247,8 +285,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ArrayElementTypeFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Type arrayElementType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] == [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type`
-    /// is the type of the array elements.
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type` is the
+    /// type of the array elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,8 +302,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StructTypeFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.StructType structType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] == [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type`
-    /// provides type information for the struct's fields.
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type` provides
+    /// type information for the struct's fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -279,12 +319,14 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TypeAnnotationFieldNumber = 4;
     private global::Google.Cloud.Spanner.V1.TypeAnnotationCode typeAnnotation_ = global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified;
     /// <summary>
-    /// The [TypeAnnotationCode][google.spanner.v1.TypeAnnotationCode] that disambiguates SQL type that Spanner will
-    /// use to represent values of this type during query processing. This is
-    /// necessary for some type codes because a single [TypeCode][google.spanner.v1.TypeCode] can be mapped
-    /// to different SQL types depending on the SQL dialect. [type_annotation][google.spanner.v1.Type.type_annotation]
-    /// typically is not needed to process the content of a value (it doesn't
-    /// affect serialization) and clients can ignore it on the read path.
+    /// The [TypeAnnotationCode][google.spanner.v1.TypeAnnotationCode] that
+    /// disambiguates SQL type that Spanner will use to represent values of this
+    /// type during query processing. This is necessary for some type codes because
+    /// a single [TypeCode][google.spanner.v1.TypeCode] can be mapped to different
+    /// SQL types depending on the SQL dialect.
+    /// [type_annotation][google.spanner.v1.Type.type_annotation] typically is not
+    /// needed to process the content of a value (it doesn't affect serialization)
+    /// and clients can ignore it on the read path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -292,6 +334,25 @@ namespace Google.Cloud.Spanner.V1 {
       get { return typeAnnotation_; }
       set {
         typeAnnotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "proto_type_fqn" field.</summary>
+    public const int ProtoTypeFqnFieldNumber = 5;
+    private string protoTypeFqn_ = "";
+    /// <summary>
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [PROTO][google.spanner.v1.TypeCode.PROTO] or
+    /// [code][google.spanner.v1.Type.code] ==
+    /// [ENUM][google.spanner.v1.TypeCode.ENUM], then `proto_type_fqn` is the fully
+    /// qualified name of the proto type representing the proto/enum definition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProtoTypeFqn {
+      get { return protoTypeFqn_; }
+      set {
+        protoTypeFqn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -314,6 +375,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(ArrayElementType, other.ArrayElementType)) return false;
       if (!object.Equals(StructType, other.StructType)) return false;
       if (TypeAnnotation != other.TypeAnnotation) return false;
+      if (ProtoTypeFqn != other.ProtoTypeFqn) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -325,6 +387,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (arrayElementType_ != null) hash ^= ArrayElementType.GetHashCode();
       if (structType_ != null) hash ^= StructType.GetHashCode();
       if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) hash ^= TypeAnnotation.GetHashCode();
+      if (ProtoTypeFqn.Length != 0) hash ^= ProtoTypeFqn.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -359,6 +422,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) TypeAnnotation);
       }
+      if (ProtoTypeFqn.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ProtoTypeFqn);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -385,6 +452,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) TypeAnnotation);
       }
+      if (ProtoTypeFqn.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ProtoTypeFqn);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -406,6 +477,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TypeAnnotation);
+      }
+      if (ProtoTypeFqn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProtoTypeFqn);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -436,6 +510,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
         TypeAnnotation = other.TypeAnnotation;
+      }
+      if (other.ProtoTypeFqn.Length != 0) {
+        ProtoTypeFqn = other.ProtoTypeFqn;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -472,6 +549,10 @@ namespace Google.Cloud.Spanner.V1 {
           }
           case 32: {
             TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            ProtoTypeFqn = input.ReadString();
             break;
           }
         }
@@ -511,6 +592,10 @@ namespace Google.Cloud.Spanner.V1 {
             TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
             break;
           }
+          case 42: {
+            ProtoTypeFqn = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -519,8 +604,10 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// `StructType` defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
+  /// `StructType` defines the fields of a
+  /// [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructType : pb::IMessage<StructType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -574,9 +661,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// The list of fields that make up this struct. Order is
     /// significant, because values of this struct type are represented as
     /// lists, where the order of field values matches the order of
-    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the order of fields
-    /// matches the order of columns in a read request, or the order of
-    /// fields in the `SELECT` clause of a query.
+    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the
+    /// order of fields matches the order of columns in a read request, or the
+    /// order of fields in the `SELECT` clause of a query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -713,6 +800,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <summary>
       /// Message representing a single field of a struct.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Field : pb::IMessage<Field>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

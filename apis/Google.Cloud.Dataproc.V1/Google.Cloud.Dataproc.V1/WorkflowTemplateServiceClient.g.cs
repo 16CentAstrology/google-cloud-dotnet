@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataproc.V1
 {
@@ -290,14 +290,14 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowTemplateServiceClient.Create(callInvoker, Settings, Logger);
+            return WorkflowTemplateServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<WorkflowTemplateServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowTemplateServiceClient.Create(callInvoker, Settings, Logger);
+            return WorkflowTemplateServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -2176,13 +2176,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplates(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows that match the specified filter in the request.
@@ -2209,13 +2218,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows that match the specified filter in the request.
@@ -2242,13 +2260,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplates(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows that match the specified filter in the request.
@@ -2275,13 +2302,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(RegionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows that match the specified filter in the request.
@@ -2308,13 +2344,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplates(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists workflows that match the specified filter in the request.
@@ -2341,13 +2386,22 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkflowTemplatesAsync(new ListWorkflowTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkflowTemplatesRequest request = new ListWorkflowTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkflowTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a workflow template. It does not cancel in-progress workflows.
@@ -2543,7 +2597,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             WorkflowTemplateServiceSettings effectiveSettings = settings ?? WorkflowTemplateServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             InstantiateWorkflowTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InstantiateWorkflowTemplateOperationsSettings, logger);
             InstantiateInlineWorkflowTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InstantiateInlineWorkflowTemplateOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);

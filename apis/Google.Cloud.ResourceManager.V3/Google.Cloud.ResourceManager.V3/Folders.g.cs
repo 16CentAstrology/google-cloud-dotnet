@@ -73,46 +73,46 @@ namespace Google.Cloud.ResourceManager.V3 {
             "IhgKFlVuZGVsZXRlRm9sZGVyTWV0YWRhdGEy3g8KB0ZvbGRlcnMSjAEKCUdl",
             "dEZvbGRlchIxLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuR2V0",
             "Rm9sZGVyUmVxdWVzdBonLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIu",
-            "djMuRm9sZGVyIiOC0+STAhYSFC92My97bmFtZT1mb2xkZXJzLyp92kEEbmFt",
-            "ZRKWAQoLTGlzdEZvbGRlcnMSMy5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5h",
+            "djMuRm9sZGVyIiPaQQRuYW1lgtPkkwIWEhQvdjMve25hbWU9Zm9sZGVycy8q",
+            "fRKWAQoLTGlzdEZvbGRlcnMSMy5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5h",
             "Z2VyLnYzLkxpc3RGb2xkZXJzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5yZXNv",
-            "dXJjZW1hbmFnZXIudjMuTGlzdEZvbGRlcnNSZXNwb25zZSIcgtPkkwINEgsv",
-            "djMvZm9sZGVyc9pBBnBhcmVudBKiAQoNU2VhcmNoRm9sZGVycxI1Lmdvb2ds",
+            "dXJjZW1hbmFnZXIudjMuTGlzdEZvbGRlcnNSZXNwb25zZSIc2kEGcGFyZW50",
+            "gtPkkwINEgsvdjMvZm9sZGVycxKiAQoNU2VhcmNoRm9sZGVycxI1Lmdvb2ds",
             "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuU2VhcmNoRm9sZGVyc1JlcXVl",
             "c3QaNi5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLlNlYXJjaEZv",
-            "bGRlcnNSZXNwb25zZSIigtPkkwIUEhIvdjMvZm9sZGVyczpzZWFyY2jaQQVx",
-            "dWVyeRKqAQoMQ3JlYXRlRm9sZGVyEjQuZ29vZ2xlLmNsb3VkLnJlc291cmNl",
+            "bGRlcnNSZXNwb25zZSIi2kEFcXVlcnmC0+STAhQSEi92My9mb2xkZXJzOnNl",
+            "YXJjaBKqAQoMQ3JlYXRlRm9sZGVyEjQuZ29vZ2xlLmNsb3VkLnJlc291cmNl",
             "bWFuYWdlci52My5DcmVhdGVGb2xkZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiJFgtPkkwIVIgsvdjMvZm9sZGVyczoGZm9sZGVy",
-            "2kEGZm9sZGVyykEeCgZGb2xkZXISFENyZWF0ZUZvbGRlck1ldGFkYXRhEsYB",
+            "dW5uaW5nLk9wZXJhdGlvbiJFykEeCgZGb2xkZXISFENyZWF0ZUZvbGRlck1l",
+            "dGFkYXRh2kEGZm9sZGVygtPkkwIVIgsvdjMvZm9sZGVyczoGZm9sZGVyEsYB",
             "CgxVcGRhdGVGb2xkZXISNC5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2Vy",
             "LnYzLlVwZGF0ZUZvbGRlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uImGC0+STAiUyGy92My97Zm9sZGVyLm5hbWU9Zm9sZGVycy8q",
-            "fToGZm9sZGVy2kESZm9sZGVyLHVwZGF0ZV9tYXNrykEeCgZGb2xkZXISFFVw",
-            "ZGF0ZUZvbGRlck1ldGFkYXRhEr4BCgpNb3ZlRm9sZGVyEjIuZ29vZ2xlLmNs",
+            "T3BlcmF0aW9uImHKQR4KBkZvbGRlchIUVXBkYXRlRm9sZGVyTWV0YWRhdGHa",
+            "QRJmb2xkZXIsdXBkYXRlX21hc2uC0+STAiUyGy92My97Zm9sZGVyLm5hbWU9",
+            "Zm9sZGVycy8qfToGZm9sZGVyEr4BCgpNb3ZlRm9sZGVyEjIuZ29vZ2xlLmNs",
             "b3VkLnJlc291cmNlbWFuYWdlci52My5Nb3ZlRm9sZGVyUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iXYLT5JMCHiIZL3YzL3tuYW1l",
-            "PWZvbGRlcnMvKn06bW92ZToBKtpBF25hbWUsZGVzdGluYXRpb25fcGFyZW50",
-            "ykEcCgZGb2xkZXISEk1vdmVGb2xkZXJNZXRhZGF0YRKpAQoMRGVsZXRlRm9s",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iXcpBHAoGRm9sZGVyEhJNb3Zl",
+            "Rm9sZGVyTWV0YWRhdGHaQRduYW1lLGRlc3RpbmF0aW9uX3BhcmVudILT5JMC",
+            "HiIZL3YzL3tuYW1lPWZvbGRlcnMvKn06bW92ZToBKhKpAQoMRGVsZXRlRm9s",
             "ZGVyEjQuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5EZWxldGVG",
             "b2xkZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJE",
-            "gtPkkwIWKhQvdjMve25hbWU9Zm9sZGVycy8qfdpBBG5hbWXKQR4KBkZvbGRl",
-            "chIURGVsZXRlRm9sZGVyTWV0YWRhdGESuwEKDlVuZGVsZXRlRm9sZGVyEjYu",
+            "ykEeCgZGb2xkZXISFERlbGV0ZUZvbGRlck1ldGFkYXRh2kEEbmFtZYLT5JMC",
+            "FioUL3YzL3tuYW1lPWZvbGRlcnMvKn0SuwEKDlVuZGVsZXRlRm9sZGVyEjYu",
             "Z29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5VbmRlbGV0ZUZvbGRl",
-            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlKC0+ST",
-            "AiIiHS92My97bmFtZT1mb2xkZXJzLyp9OnVuZGVsZXRlOgEq2kEEbmFtZcpB",
-            "IAoGRm9sZGVyEhZVbmRlbGV0ZUZvbGRlck1ldGFkYXRhEoYBCgxHZXRJYW1Q",
+            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlLKQSAK",
+            "BkZvbGRlchIWVW5kZWxldGVGb2xkZXJNZXRhZGF0YdpBBG5hbWWC0+STAiIi",
+            "HS92My97bmFtZT1mb2xkZXJzLyp9OnVuZGVsZXRlOgEqEoYBCgxHZXRJYW1Q",
             "b2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5n",
-            "b29nbGUuaWFtLnYxLlBvbGljeSI7gtPkkwIqIiUvdjMve3Jlc291cmNlPWZv",
-            "bGRlcnMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2USjQEKDFNldElh",
+            "b29nbGUuaWFtLnYxLlBvbGljeSI72kEIcmVzb3VyY2WC0+STAioiJS92My97",
+            "cmVzb3VyY2U9Zm9sZGVycy8qfTpnZXRJYW1Qb2xpY3k6ASoSjQEKDFNldElh",
             "bVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoV",
-            "Lmdvb2dsZS5pYW0udjEuUG9saWN5IkKC0+STAioiJS92My97cmVzb3VyY2U9",
-            "Zm9sZGVycy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS",
+            "Lmdvb2dsZS5pYW0udjEuUG9saWN5IkLaQQ9yZXNvdXJjZSxwb2xpY3mC0+ST",
+            "AioiJS92My97cmVzb3VyY2U9Zm9sZGVycy8qfTpzZXRJYW1Qb2xpY3k6ASoS",
             "uAEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElh",
             "bVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBl",
-            "cm1pc3Npb25zUmVzcG9uc2UiTYLT5JMCMCIrL3YzL3tyZXNvdXJjZT1mb2xk",
-            "ZXJzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291cmNlLHBlcm1p",
-            "c3Npb25zGpABykEjY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "cm1pc3Npb25zUmVzcG9uc2UiTdpBFHJlc291cmNlLHBlcm1pc3Npb25zgtPk",
+            "kwIwIisvdjMve3Jlc291cmNlPWZvbGRlcnMvKn06dGVzdElhbVBlcm1pc3Np",
+            "b25zOgEqGpABykEjY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5j",
             "b23SQWdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
             "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
             "cGxhdGZvcm0ucmVhZC1vbmx5Qu0BCiNjb20uZ29vZ2xlLmNsb3VkLnJlc291",
@@ -150,6 +150,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A folder in an organization's resource hierarchy, used to
   /// organize that organization's resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Folder : pb::IMessage<Folder>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -322,9 +323,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the folder
-    /// resource. This may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the folder resource. This may be sent on update and delete requests to
+    /// ensure the client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -692,6 +693,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The GetFolder request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFolderRequest : pb::IMessage<GetFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -888,6 +890,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The ListFolders request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFoldersRequest : pb::IMessage<ListFoldersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -939,9 +942,13 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the organization or folder whose folders are
-    /// being listed.
-    /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+    /// Required. The name of the parent resource whose folders are being listed.
+    /// Only children of this parent resource are listed; descendants are not
+    /// listed.
+    ///
+    /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+    /// parent is an organization, use the value `organizations/{org_id}`.
+    ///
     /// Access to this method is controlled by checking the
     /// `resourcemanager.folders.list` permission on the `parent`.
     /// </summary>
@@ -958,8 +965,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of folders to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// Optional. The maximum number of folders to return in the response. The
+    /// server can return fewer folders than requested. If unspecified, server
+    /// picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1211,6 +1219,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The ListFolders response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFoldersResponse : pb::IMessage<ListFoldersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1437,6 +1446,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The request message for searching folders.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchFoldersRequest : pb::IMessage<SearchFoldersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1487,8 +1497,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 1;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of folders to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// Optional. The maximum number of folders to return in the response. The
+    /// server can return fewer folders than requested. If unspecified, server
+    /// picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1503,8 +1514,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `SearchFolders`
-    /// that indicates from where search should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// `SearchFolders` that indicates from where search should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1744,6 +1755,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The response message for searching folders.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchFoldersResponse : pb::IMessage<SearchFoldersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1970,6 +1982,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The CreateFolder request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFolderRequest : pb::IMessage<CreateFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2018,8 +2031,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int FolderFieldNumber = 2;
     private global::Google.Cloud.ResourceManager.V3.Folder folder_;
     /// <summary>
-    /// Required. The folder being created, only the display name and parent will be
-    /// consulted. All other fields will be ignored.
+    /// Required. The folder being created, only the display name and parent will
+    /// be consulted. All other fields will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2175,6 +2188,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// Metadata pertaining to the Folder creation process.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFolderMetadata : pb::IMessage<CreateFolderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2418,6 +2432,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// [MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder] method to
   /// change the `parent` field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFolderRequest : pb::IMessage<UpdateFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2467,8 +2482,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int FolderFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.Folder folder_;
     /// <summary>
-    /// Required. The new definition of the Folder. It must include the `name` field, which
-    /// cannot be changed.
+    /// Required. The new definition of the Folder. It must include the `name`
+    /// field, which cannot be changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2674,6 +2689,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by UpdateFolder.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFolderMetadata : pb::IMessage<UpdateFolderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2829,6 +2845,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The MoveFolder request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveFolderRequest : pb::IMessage<MoveFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2894,9 +2911,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int DestinationParentFieldNumber = 2;
     private string destinationParent_ = "";
     /// <summary>
-    /// Required. The resource name of the folder or organization which should be the
-    /// folder's new parent.
-    /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+    /// Required. The resource name of the folder or organization which should be
+    /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+    /// `organizations/{org_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3067,6 +3084,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// Metadata pertaining to the folder move process.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveFolderMetadata : pb::IMessage<MoveFolderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3342,6 +3360,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The DeleteFolder request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFolderRequest : pb::IMessage<DeleteFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3539,6 +3558,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the `Operation`
   /// returned by `DeleteFolder`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFolderMetadata : pb::IMessage<DeleteFolderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3694,6 +3714,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The UndeleteFolder request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteFolderRequest : pb::IMessage<UndeleteFolderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3891,6 +3912,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the `Operation`
   /// returned by `UndeleteFolder`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteFolderMetadata : pb::IMessage<UndeleteFolderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

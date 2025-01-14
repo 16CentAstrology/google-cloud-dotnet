@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Orchestration.Airflow.Service.V1
 {
@@ -106,14 +106,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ImageVersionsClient.Create(callInvoker, Settings, Logger);
+            return ImageVersionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ImageVersionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ImageVersionsClient.Create(callInvoker, Settings, Logger);
+            return ImageVersionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -239,13 +239,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImageVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImageVersions(new ListImageVersionsRequest
+        public virtual gax::PagedEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageVersionsRequest request = new ListImageVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageVersions(request, callSettings);
+        }
 
         /// <summary>
         /// List ImageVersions for provided location.
@@ -264,13 +270,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImageVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImageVersionsAsync(new ListImageVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImageVersionsResponse, ImageVersion> ListImageVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageVersionsRequest request = new ListImageVersionsRequest { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageVersionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ImageVersions client wrapper implementation, for convenient use.</summary>
@@ -291,7 +303,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             GrpcClient = grpcClient;
             ImageVersionsSettings effectiveSettings = settings ?? ImageVersionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListImageVersions = clientHelper.BuildApiCall<ListImageVersionsRequest, ListImageVersionsResponse>("ListImageVersions", grpcClient.ListImageVersionsAsync, grpcClient.ListImageVersions, effectiveSettings.ListImageVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListImageVersions);
             Modify_ListImageVersionsApiCall(ref _callListImageVersions);

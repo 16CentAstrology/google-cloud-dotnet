@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Api.Gax;
@@ -27,20 +27,11 @@ namespace Google.Cloud.PubSub.V1;
 /// </summary>
 public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
 {
-    private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
-        .WithMaxReceiveMessageSize(int.MaxValue)
-        .WithMaxSendMessageSize(int.MaxValue)
-        // Set max metadata size to 4 MB i.e., 4194304 bytes.
-        .WithCustomOption("grpc.max_metadata_size", 4194304);
-
     /// <summary>
     /// The name of the topic that the publisher publishes to.
     /// This must be non-null by the time <see cref="Build"/> or <see cref="BuildAsync(CancellationToken)"/> is called.
     /// </summary>
-    public TopicName TopicName
-    {
-        get; set;
-    }
+    public TopicName TopicName {  get; set; }
 
     private int? _clientCount;
 
@@ -65,6 +56,11 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
         }
     }
 
+    /// <summary>
+    /// Whether the <see cref="PublisherServiceApiClient"/>s may share gRPC connections or not.
+    /// Defaults to false, meaning, each client has its own gRPC connection.
+    /// </summary>
+    public bool ShareClientConnections { get; set; }
 
     /// <summary>
     /// Additional settings for batching, message ordering etc. Default settings will be used if this is null.
@@ -72,7 +68,7 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
     public PublisherClient.Settings Settings { get; set; }
 
     /// <summary>
-    /// The settings to use when creating<see cref= "PublisherServiceApiClient" /> instances.
+    /// The settings to use when creating <see cref= "PublisherServiceApiClient" /> instances.
     /// Default settings will be used if this is null.
     /// </summary>
     public PublisherServiceApiSettings ApiSettings { get; set; }
@@ -114,19 +110,18 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
         var clientCount = ClientCount ?? Environment.ProcessorCount;
         var clients = new PublisherServiceApiClient[clientCount];
         var settings = Settings?.Clone() ?? new PublisherClient.Settings();
+        settings.Logger = Logger;
         var shutdowns = new Func<Task>[clientCount];
         for (int i = 0; i < clientCount; i++)
         {
-            // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-            var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
-                .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
+            var grpcChannelOptions = ClientBuilderChannelHelper.GetUnlimitedSendReceiveChannelOptions(ShareClientConnections);
 
             var builder = new PublisherServiceApiClientBuilder(this, grpcChannelOptions);
             clients[i] = isAsync
                 ? await builder.BuildAsync(cancellationToken).ConfigureAwait(false)
                 : builder.Build();
             var channel = builder.LastCreatedChannel;
-            shutdowns[i] = channel is null ? () => Task.CompletedTask : channel.ShutdownAsync;
+            shutdowns[i] = () => ClientBuilderChannelHelper.DisposeChannelAsync(channel);
         }
         Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
         return new PublisherClientImpl(TopicName, clients, settings, shutdown);

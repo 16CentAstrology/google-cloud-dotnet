@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.PubSub.V1
 {
@@ -70,11 +70,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -82,11 +88,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -94,11 +106,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListSchemasSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -106,11 +124,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListSchemaRevisionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListSchemaRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -118,11 +142,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CommitSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CommitSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -130,11 +160,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RollbackSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings RollbackSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -142,11 +178,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSchemaRevisionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteSchemaRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -154,11 +196,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -166,11 +214,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ValidateSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ValidateSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -178,11 +232,17 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ValidateMessageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ValidateMessageSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
@@ -232,14 +292,14 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SchemaServiceClient.Create(callInvoker, Settings, Logger);
+            return SchemaServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SchemaServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SchemaServiceClient.Create(callInvoker, Settings, Logger);
+            return SchemaServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -380,8 +440,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -411,8 +471,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -442,8 +502,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -468,8 +528,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -499,8 +559,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -530,8 +590,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -684,13 +744,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemas(new ListSchemasRequest
+        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -709,13 +778,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemasAsync(new ListSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -734,13 +812,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemas(new ListSchemasRequest
+        public virtual gax::PagedEnumerable<ListSchemasResponse, Schema> ListSchemas(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemas(request, callSettings);
+        }
 
         /// <summary>
         /// Lists schemas in a project.
@@ -759,13 +846,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemasAsync(new ListSchemasRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemasResponse, Schema> ListSchemasAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemasRequest request = new ListSchemasRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemasAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -801,13 +897,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisions(new ListSchemaRevisionsRequest
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -825,13 +930,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -849,13 +963,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisions(new ListSchemaRevisionsRequest
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all schema revisions for the named schema.
@@ -873,13 +996,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Commits a new schema revision to an existing schema.
@@ -1630,7 +1762,11 @@ namespace Google.Cloud.PubSub.V1
         {
             GrpcClient = grpcClient;
             SchemaServiceSettings effectiveSettings = settings ?? SchemaServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSchema = clientHelper.BuildApiCall<CreateSchemaRequest, Schema>("CreateSchema", grpcClient.CreateSchemaAsync, grpcClient.CreateSchema, effectiveSettings.CreateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSchema);

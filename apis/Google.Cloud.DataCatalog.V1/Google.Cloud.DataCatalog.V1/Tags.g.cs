@@ -27,58 +27,65 @@ namespace Google.Cloud.DataCatalog.V1 {
             "CiZnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvdGFncy5wcm90bxIbZ29v",
             "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoYDCgNUYWcSDAoEbmFtZRgB",
-            "IAEoCRIVCgh0ZW1wbGF0ZRgCIAEoCUID4EECEiIKFXRlbXBsYXRlX2Rpc3Bs",
-            "YXlfbmFtZRgFIAEoCUID4EEDEhAKBmNvbHVtbhgEIAEoCUgAEkEKBmZpZWxk",
-            "cxgDIAMoCzIsLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWcuRmll",
-            "bGRzRW50cnlCA+BBAhpUCgtGaWVsZHNFbnRyeRILCgNrZXkYASABKAkSNAoF",
-            "dmFsdWUYAiABKAsyJS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFn",
-            "RmllbGQ6AjgBOoEB6kF+Ch5kYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9U",
-            "YWcSXHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9l",
-            "bnRyeUdyb3Vwcy97ZW50cnlfZ3JvdXB9L2VudHJpZXMve2VudHJ5fS90YWdz",
-            "L3t0YWd9QgcKBXNjb3BlIsICCghUYWdGaWVsZBIZCgxkaXNwbGF5X25hbWUY",
-            "ASABKAlCA+BBAxIWCgxkb3VibGVfdmFsdWUYAiABKAFIABIWCgxzdHJpbmdf",
-            "dmFsdWUYAyABKAlIABIUCgpib29sX3ZhbHVlGAQgASgISAASNQoPdGltZXN0",
-            "YW1wX3ZhbHVlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgA",
-            "EkUKCmVudW1fdmFsdWUYBiABKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuVGFnRmllbGQuRW51bVZhbHVlSAASGAoOcmljaHRleHRfdmFsdWUY",
-            "CCABKAlIABISCgVvcmRlchgHIAEoBUID4EEDGiEKCUVudW1WYWx1ZRIUCgxk",
-            "aXNwbGF5X25hbWUYASABKAlCBgoEa2luZCLqAgoLVGFnVGVtcGxhdGUSDAoE",
-            "bmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSHAoUaXNfcHVibGlj",
-            "bHlfcmVhZGFibGUYBSABKAgSSQoGZmllbGRzGAMgAygLMjQuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlLkZpZWxkc0VudHJ5QgPg",
-            "QQIaXAoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEjwKBXZhbHVlGAIgASgL",
-            "Mi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlRmll",
-            "bGQ6AjgBOnDqQW0KJmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1Rl",
-            "bXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9IrcCChBUYWdUZW1wbGF0",
-            "ZUZpZWxkEhEKBG5hbWUYBiABKAlCA+BBAxIUCgxkaXNwbGF5X25hbWUYASAB",
-            "KAkSOQoEdHlwZRgCIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
-            "MS5GaWVsZFR5cGVCA+BBAhITCgtpc19yZXF1aXJlZBgDIAEoCBITCgtkZXNj",
-            "cmlwdGlvbhgEIAEoCRINCgVvcmRlchgFIAEoBTqFAepBgQEKK2RhdGFjYXRh",
-            "bG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSUnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWdUZW1wbGF0ZXMv",
-            "e3RhZ190ZW1wbGF0ZX0vZmllbGRzL3tmaWVsZH0ipgMKCUZpZWxkVHlwZRJO",
-            "Cg5wcmltaXRpdmVfdHlwZRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5GaWVsZFR5cGUuUHJpbWl0aXZlVHlwZUgAEkQKCWVudW1fdHlw",
-            "ZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5GaWVsZFR5",
-            "cGUuRW51bVR5cGVIABqFAQoIRW51bVR5cGUSUQoOYWxsb3dlZF92YWx1ZXMY",
-            "ASADKAsyOS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBl",
-            "LkVudW1UeXBlLkVudW1WYWx1ZRomCglFbnVtVmFsdWUSGQoMZGlzcGxheV9u",
-            "YW1lGAEgASgJQgPgQQIibgoNUHJpbWl0aXZlVHlwZRIeChpQUklNSVRJVkVf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEgoKBkRPVUJMRRABEgoKBlNUUklORxACEggK",
-            "BEJPT0wQAxINCglUSU1FU1RBTVAQBBIMCghSSUNIVEVYVBAFQgsKCXR5cGVf",
-            "ZGVjbELGAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkFj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2RhdGFjYXRh",
-            "bG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0",
-            "YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2ds",
-            "ZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvMDCgNUYWcSEQoEbmFtZRgB",
+            "IAEoCUID4EEIEhUKCHRlbXBsYXRlGAIgASgJQgPgQQISIgoVdGVtcGxhdGVf",
+            "ZGlzcGxheV9uYW1lGAUgASgJQgPgQQMSEAoGY29sdW1uGAQgASgJSAASQQoG",
+            "ZmllbGRzGAMgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
+            "Zy5GaWVsZHNFbnRyeUID4EECEmYKGGRhdGFwbGV4X3RyYW5zZmVyX3N0YXR1",
+            "cxgHIAEoDjI/Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1w",
+            "bGF0ZS5EYXRhcGxleFRyYW5zZmVyU3RhdHVzQgPgQQMaVAoLRmllbGRzRW50",
+            "cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLnYxLlRhZ0ZpZWxkOgI4ATqBAepBfgoeZGF0YWNhdGFs",
+            "b2cuZ29vZ2xlYXBpcy5jb20vVGFnElxwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vZW50cnlHcm91cHMve2VudHJ5X2dyb3VwfS9l",
+            "bnRyaWVzL3tlbnRyeX0vdGFncy97dGFnfUIHCgVzY29wZSLCAgoIVGFnRmll",
+            "bGQSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQMSFgoMZG91YmxlX3ZhbHVl",
+            "GAIgASgBSAASFgoMc3RyaW5nX3ZhbHVlGAMgASgJSAASFAoKYm9vbF92YWx1",
+            "ZRgEIAEoCEgAEjUKD3RpbWVzdGFtcF92YWx1ZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBIABJFCgplbnVtX3ZhbHVlGAYgASgLMi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ0ZpZWxkLkVudW1WYWx1ZUgA",
+            "EhgKDnJpY2h0ZXh0X3ZhbHVlGAggASgJSAASEgoFb3JkZXIYByABKAVCA+BB",
+            "AxohCglFbnVtVmFsdWUSFAoMZGlzcGxheV9uYW1lGAEgASgJQgYKBGtpbmQi",
+            "vgQKC1RhZ1RlbXBsYXRlEhEKBG5hbWUYASABKAlCA+BBCBIUCgxkaXNwbGF5",
+            "X25hbWUYAiABKAkSHAoUaXNfcHVibGljbHlfcmVhZGFibGUYBSABKAgSSQoG",
+            "ZmllbGRzGAMgAygLMjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
+            "Z1RlbXBsYXRlLkZpZWxkc0VudHJ5QgPgQQISZgoYZGF0YXBsZXhfdHJhbnNm",
+            "ZXJfc3RhdHVzGAcgASgOMj8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "LlRhZ1RlbXBsYXRlLkRhdGFwbGV4VHJhbnNmZXJTdGF0dXNCA+BBARpcCgtG",
+            "aWVsZHNFbnRyeRILCgNrZXkYASABKAkSPAoFdmFsdWUYAiABKAsyLS5nb29n",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnVGVtcGxhdGVGaWVsZDoCOAEi",
+            "ZQoWRGF0YXBsZXhUcmFuc2ZlclN0YXR1cxIoCiREQVRBUExFWF9UUkFOU0ZF",
+            "Ul9TVEFUVVNfVU5TUEVDSUZJRUQQABIQCghNSUdSQVRFRBABGgIIARIPCgtU",
+            "UkFOU0ZFUlJFRBACOnDqQW0KJmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29t",
+            "L1RhZ1RlbXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9IrcCChBUYWdU",
+            "ZW1wbGF0ZUZpZWxkEhEKBG5hbWUYBiABKAlCA+BBCBIUCgxkaXNwbGF5X25h",
+            "bWUYASABKAkSOQoEdHlwZRgCIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
+            "YWxvZy52MS5GaWVsZFR5cGVCA+BBAhITCgtpc19yZXF1aXJlZBgDIAEoCBIT",
+            "CgtkZXNjcmlwdGlvbhgEIAEoCRINCgVvcmRlchgFIAEoBTqFAepBgQEKK2Rh",
+            "dGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSUnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWdUZW1w",
+            "bGF0ZXMve3RhZ190ZW1wbGF0ZX0vZmllbGRzL3tmaWVsZH0ipgMKCUZpZWxk",
+            "VHlwZRJOCg5wcmltaXRpdmVfdHlwZRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy52MS5GaWVsZFR5cGUuUHJpbWl0aXZlVHlwZUgAEkQKCWVu",
+            "dW1fdHlwZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5G",
+            "aWVsZFR5cGUuRW51bVR5cGVIABqFAQoIRW51bVR5cGUSUQoOYWxsb3dlZF92",
+            "YWx1ZXMYASADKAsyOS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmll",
+            "bGRUeXBlLkVudW1UeXBlLkVudW1WYWx1ZRomCglFbnVtVmFsdWUSGQoMZGlz",
+            "cGxheV9uYW1lGAEgASgJQgPgQQIibgoNUHJpbWl0aXZlVHlwZRIeChpQUklN",
+            "SVRJVkVfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkRPVUJMRRABEgoKBlNUUklO",
+            "RxACEggKBEJPT0wQAxINCglUSU1FU1RBTVAQBBIMCghSSUNIVEVYVBAFQgsK",
+            "CXR5cGVfZGVjbELDAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MVABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2Rh",
+            "dGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYqoCG0dvb2dsZS5DbG91ZC5EYXRh",
+            "Q2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdv",
+            "b2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields", "DataplexTransferStatus" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField), global::Google.Cloud.DataCatalog.V1.TagField.Parser, new[]{ "DisplayName", "DoubleValue", "StringValue", "BoolValue", "TimestampValue", "EnumValue", "RichtextValue", "Order" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "IsPubliclyReadable", "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "IsPubliclyReadable", "Fields", "DataplexTransferStatus" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplateField), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser, new[]{ "Name", "DisplayName", "Type", "IsRequired", "Description", "Order" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType), global::Google.Cloud.DataCatalog.V1.FieldType.Parser, new[]{ "PrimitiveType", "EnumType" }, new[]{ "TypeDecl" }, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Parser, new[]{ "AllowedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)})})
           }));
@@ -95,6 +102,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// IAM](https://cloud.google.com/data-catalog/docs/concepts/iam) for information
   /// on the permissions needed to create or view tags.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tag : pb::IMessage<Tag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -133,6 +141,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       template_ = other.template_;
       templateDisplayName_ = other.templateDisplayName_;
       fields_ = other.fields_.Clone();
+      dataplexTransferStatus_ = other.dataplexTransferStatus_;
       switch (other.ScopeCase) {
         case ScopeOneofCase.Column:
           Column = other.Column;
@@ -152,7 +161,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the tag in URL format where tag ID is a
+    /// Identifier. The resource name of the tag in URL format where tag ID is a
     /// system-generated identifier.
     ///
     /// Note: The tag itself might not be stored in the location specified in its
@@ -213,10 +222,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Column {
-      get { return scopeCase_ == ScopeOneofCase.Column ? (string) scope_ : ""; }
+      get { return HasColumn ? (string) scope_ : ""; }
       set {
         scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         scopeCase_ = ScopeOneofCase.Column;
+      }
+    }
+    /// <summary>Gets whether the "column" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasColumn {
+      get { return scopeCase_ == ScopeOneofCase.Column; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "column" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearColumn() {
+      if (HasColumn) {
+        ClearScope();
       }
     }
 
@@ -236,6 +259,21 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField> Fields {
       get { return fields_; }
+    }
+
+    /// <summary>Field number for the "dataplex_transfer_status" field.</summary>
+    public const int DataplexTransferStatusFieldNumber = 7;
+    private global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus dataplexTransferStatus_ = global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified;
+    /// <summary>
+    /// Output only. Denotes the transfer status of the Tag Template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus DataplexTransferStatus {
+      get { return dataplexTransferStatus_; }
+      set {
+        dataplexTransferStatus_ = value;
+      }
     }
 
     private object scope_;
@@ -278,6 +316,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (TemplateDisplayName != other.TemplateDisplayName) return false;
       if (Column != other.Column) return false;
       if (!Fields.Equals(other.Fields)) return false;
+      if (DataplexTransferStatus != other.DataplexTransferStatus) return false;
       if (ScopeCase != other.ScopeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -289,8 +328,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Template.Length != 0) hash ^= Template.GetHashCode();
       if (TemplateDisplayName.Length != 0) hash ^= TemplateDisplayName.GetHashCode();
-      if (scopeCase_ == ScopeOneofCase.Column) hash ^= Column.GetHashCode();
+      if (HasColumn) hash ^= Column.GetHashCode();
       hash ^= Fields.GetHashCode();
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) hash ^= DataplexTransferStatus.GetHashCode();
       hash ^= (int) scopeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -319,13 +359,17 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Template);
       }
       fields_.WriteTo(output, _map_fields_codec);
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         output.WriteRawTag(34);
         output.WriteString(Column);
       }
       if (TemplateDisplayName.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(TemplateDisplayName);
+      }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -346,13 +390,17 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Template);
       }
       fields_.WriteTo(ref output, _map_fields_codec);
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         output.WriteRawTag(34);
         output.WriteString(Column);
       }
       if (TemplateDisplayName.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(TemplateDisplayName);
+      }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -373,10 +421,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (TemplateDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TemplateDisplayName);
       }
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Column);
       }
       size += fields_.CalculateSize(_map_fields_codec);
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -398,7 +449,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.TemplateDisplayName.Length != 0) {
         TemplateDisplayName = other.TemplateDisplayName;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
+      if (other.DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        DataplexTransferStatus = other.DataplexTransferStatus;
+      }
       switch (other.ScopeCase) {
         case ScopeOneofCase.Column:
           Column = other.Column;
@@ -440,6 +494,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             TemplateDisplayName = input.ReadString();
             break;
           }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -475,6 +533,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             TemplateDisplayName = input.ReadString();
             break;
           }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -486,6 +548,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Contains the value and additional information on a field within
   /// a [Tag][google.cloud.datacatalog.v1.Tag].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TagField : pb::IMessage<TagField>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -575,10 +638,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return kindCase_ == KindOneofCase.DoubleValue ? (double) kind_ : 0D; }
+      get { return HasDoubleValue ? (double) kind_ : 0D; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return kindCase_ == KindOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearKind();
       }
     }
 
@@ -592,10 +669,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
+      get { return HasStringValue ? (string) kind_ : ""; }
       set {
         kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         kindCase_ = KindOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return kindCase_ == KindOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearKind();
       }
     }
 
@@ -607,10 +698,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return kindCase_ == KindOneofCase.BoolValue ? (bool) kind_ : false; }
+      get { return HasBoolValue ? (bool) kind_ : false; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return kindCase_ == KindOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearKind();
       }
     }
 
@@ -658,10 +763,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RichtextValue {
-      get { return kindCase_ == KindOneofCase.RichtextValue ? (string) kind_ : ""; }
+      get { return HasRichtextValue ? (string) kind_ : ""; }
       set {
         kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         kindCase_ = KindOneofCase.RichtextValue;
+      }
+    }
+    /// <summary>Gets whether the "richtext_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRichtextValue {
+      get { return kindCase_ == KindOneofCase.RichtextValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "richtext_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRichtextValue() {
+      if (HasRichtextValue) {
+        ClearKind();
       }
     }
 
@@ -743,12 +862,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (kindCase_ == KindOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
-      if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       if (kindCase_ == KindOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (kindCase_ == KindOneofCase.EnumValue) hash ^= EnumValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.RichtextValue) hash ^= RichtextValue.GetHashCode();
+      if (HasRichtextValue) hash ^= RichtextValue.GetHashCode();
       if (Order != 0) hash ^= Order.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
@@ -773,15 +892,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(32);
         output.WriteBool(BoolValue);
       }
@@ -797,7 +916,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         output.WriteRawTag(66);
         output.WriteString(RichtextValue);
       }
@@ -815,15 +934,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(32);
         output.WriteBool(BoolValue);
       }
@@ -839,7 +958,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         output.WriteRawTag(66);
         output.WriteString(RichtextValue);
       }
@@ -856,13 +975,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (kindCase_ == KindOneofCase.TimestampValue) {
@@ -871,7 +990,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (kindCase_ == KindOneofCase.EnumValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnumValue);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RichtextValue);
       }
       if (Order != 0) {
@@ -1049,6 +1168,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// An enum value.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EnumValue : pb::IMessage<EnumValue>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1257,6 +1377,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// (https://cloud.google.com/data-catalog/docs/how-to/template-user) role
   /// that includes a permission to use the tag template to tag resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TagTemplate : pb::IMessage<TagTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1295,6 +1416,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       displayName_ = other.displayName_;
       isPubliclyReadable_ = other.isPubliclyReadable_;
       fields_ = other.fields_.Clone();
+      dataplexTransferStatus_ = other.dataplexTransferStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1308,7 +1430,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the tag template in URL format.
+    /// Identifier. The resource name of the tag template in URL format.
     ///
     /// Note: The tag template itself and its child resources might not be
     /// stored in the location specified in its name.
@@ -1347,7 +1469,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Indicates whether tags created with this template are public. Public tags
     /// do not require tag template access to appear in
-    /// [ListTags][google.cloud.datacatalog.v1.ListTags] API response.
+    /// [ListTags][google.cloud.datacatalog.v1.DataCatalog.ListTags] API response.
     ///
     /// Additionally, you can search for a public tag by value with a
     /// simple search query in addition to using a ``tag:`` predicate.
@@ -1385,6 +1507,21 @@ namespace Google.Cloud.DataCatalog.V1 {
       get { return fields_; }
     }
 
+    /// <summary>Field number for the "dataplex_transfer_status" field.</summary>
+    public const int DataplexTransferStatusFieldNumber = 7;
+    private global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus dataplexTransferStatus_ = global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified;
+    /// <summary>
+    /// Optional. Transfer status of the TagTemplate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus DataplexTransferStatus {
+      get { return dataplexTransferStatus_; }
+      set {
+        dataplexTransferStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1404,6 +1541,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (IsPubliclyReadable != other.IsPubliclyReadable) return false;
       if (!Fields.Equals(other.Fields)) return false;
+      if (DataplexTransferStatus != other.DataplexTransferStatus) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1415,6 +1553,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (IsPubliclyReadable != false) hash ^= IsPubliclyReadable.GetHashCode();
       hash ^= Fields.GetHashCode();
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) hash ^= DataplexTransferStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1446,6 +1585,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(40);
         output.WriteBool(IsPubliclyReadable);
       }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1469,6 +1612,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(40);
         output.WriteBool(IsPubliclyReadable);
       }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1489,6 +1636,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         size += 1 + 1;
       }
       size += fields_.CalculateSize(_map_fields_codec);
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1510,7 +1660,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.IsPubliclyReadable != false) {
         IsPubliclyReadable = other.IsPubliclyReadable;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
+      if (other.DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        DataplexTransferStatus = other.DataplexTransferStatus;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1540,6 +1693,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 40: {
             IsPubliclyReadable = input.ReadBool();
+            break;
+          }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
             break;
           }
         }
@@ -1573,16 +1730,53 @@ namespace Google.Cloud.DataCatalog.V1 {
             IsPubliclyReadable = input.ReadBool();
             break;
           }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TagTemplate message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// This enum describes TagTemplate transfer status to Dataplex service.
+      /// </summary>
+      public enum DataplexTransferStatus {
+        /// <summary>
+        /// Default value. TagTemplate and its tags are only visible and editable in
+        /// DataCatalog.
+        /// </summary>
+        [pbr::OriginalName("DATAPLEX_TRANSFER_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// TagTemplate and its tags are auto-copied to Dataplex service.
+        /// Visible in both services. Editable in DataCatalog, read-only in Dataplex.
+        /// Deprecated: Individual TagTemplate migration is deprecated in favor of
+        /// organization or project wide TagTemplate migration opt-in.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("MIGRATED")] Migrated = 1,
+        /// <summary>
+        /// TagTemplate and its tags are auto-copied to Dataplex service.
+        /// Visible in both services. Editable in Dataplex, read-only in DataCatalog.
+        /// </summary>
+        [pbr::OriginalName("TRANSFERRED")] Transferred = 2,
+      }
+
+    }
+    #endregion
 
   }
 
   /// <summary>
   /// The template for an individual field within a tag template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TagTemplateField : pb::IMessage<TagTemplateField>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1636,7 +1830,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 6;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the tag template field in URL format.
+    /// Identifier. The resource name of the tag template field in URL format.
     /// Example:
     ///
     /// `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}`
@@ -2003,6 +2197,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldType : pb::IMessage<FieldType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2063,10 +2258,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType PrimitiveType {
-      get { return typeDeclCase_ == TypeDeclOneofCase.PrimitiveType ? (global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) typeDecl_ : global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType.Unspecified; }
+      get { return HasPrimitiveType ? (global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) typeDecl_ : global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType.Unspecified; }
       set {
         typeDecl_ = value;
         typeDeclCase_ = TypeDeclOneofCase.PrimitiveType;
+      }
+    }
+    /// <summary>Gets whether the "primitive_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrimitiveType {
+      get { return typeDeclCase_ == TypeDeclOneofCase.PrimitiveType; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "primitive_type" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrimitiveType() {
+      if (HasPrimitiveType) {
+        ClearTypeDecl();
       }
     }
 
@@ -2131,7 +2340,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) hash ^= PrimitiveType.GetHashCode();
+      if (HasPrimitiveType) hash ^= PrimitiveType.GetHashCode();
       if (typeDeclCase_ == TypeDeclOneofCase.EnumType) hash ^= EnumType.GetHashCode();
       hash ^= (int) typeDeclCase_;
       if (_unknownFields != null) {
@@ -2152,7 +2361,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PrimitiveType);
       }
@@ -2170,7 +2379,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PrimitiveType);
       }
@@ -2188,7 +2397,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PrimitiveType);
       }
       if (typeDeclCase_ == TypeDeclOneofCase.EnumType) {
@@ -2313,6 +2522,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         [pbr::OriginalName("RICHTEXT")] Richtext = 5,
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EnumType : pb::IMessage<EnumType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2505,6 +2715,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class EnumValue : pb::IMessage<EnumValue>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

@@ -91,72 +91,72 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "HgoTUmVnaXN0cmF0aW9uU2VydmljZRLbAQoPQ3JlYXRlTmFtZXNwYWNlEjgu",
             "Z29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuQ3JlYXRlTmFtZXNw",
             "YWNlUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYx",
-            "Lk5hbWVzcGFjZSJhgtPkkwI7Ii4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9uYW1lc3BhY2VzOgluYW1lc3BhY2XaQR1wYXJlbnQsbmFt",
-            "ZXNwYWNlLG5hbWVzcGFjZV9pZBLEAQoOTGlzdE5hbWVzcGFjZXMSNy5nb29n",
+            "Lk5hbWVzcGFjZSJh2kEdcGFyZW50LG5hbWVzcGFjZSxuYW1lc3BhY2VfaWSC",
+            "0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L25h",
+            "bWVzcGFjZXM6CW5hbWVzcGFjZRLEAQoOTGlzdE5hbWVzcGFjZXMSNy5nb29n",
             "bGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MS5MaXN0TmFtZXNwYWNlc1Jl",
             "cXVlc3QaOC5nb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MS5MaXN0",
-            "TmFtZXNwYWNlc1Jlc3BvbnNlIj+C0+STAjASLi92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L25hbWVzcGFjZXPaQQZwYXJlbnQSsQEKDEdl",
+            "TmFtZXNwYWNlc1Jlc3BvbnNlIj/aQQZwYXJlbnSC0+STAjASLi92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L25hbWVzcGFjZXMSsQEKDEdl",
             "dE5hbWVzcGFjZRI1Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYx",
             "LkdldE5hbWVzcGFjZVJlcXVlc3QaKy5nb29nbGUuY2xvdWQuc2VydmljZWRp",
-            "cmVjdG9yeS52MS5OYW1lc3BhY2UiPYLT5JMCMBIuL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovbmFtZXNwYWNlcy8qfdpBBG5hbWUS3QEKD1Vw",
+            "cmVjdG9yeS52MS5OYW1lc3BhY2UiPdpBBG5hbWWC0+STAjASLi92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKn0S3QEKD1Vw",
             "ZGF0ZU5hbWVzcGFjZRI4Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5",
             "LnYxLlVwZGF0ZU5hbWVzcGFjZVJlcXVlc3QaKy5nb29nbGUuY2xvdWQuc2Vy",
-            "dmljZWRpcmVjdG9yeS52MS5OYW1lc3BhY2UiY4LT5JMCRTI4L3YxL3tuYW1l",
-            "c3BhY2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMv",
-            "Kn06CW5hbWVzcGFjZdpBFW5hbWVzcGFjZSx1cGRhdGVfbWFzaxKiAQoPRGVs",
+            "dmljZWRpcmVjdG9yeS52MS5OYW1lc3BhY2UiY9pBFW5hbWVzcGFjZSx1cGRh",
+            "dGVfbWFza4LT5JMCRTI4L3YxL3tuYW1lc3BhY2UubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKn06CW5hbWVzcGFjZRKiAQoPRGVs",
             "ZXRlTmFtZXNwYWNlEjguZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3Rvcnku",
             "djEuRGVsZXRlTmFtZXNwYWNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSI9gtPkkwIwKi4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9uYW1lc3BhY2VzLyp92kEEbmFtZRLaAQoNQ3JlYXRlU2VydmljZRI2Lmdv",
+            "bXB0eSI92kEEbmFtZYLT5JMCMCouL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovbmFtZXNwYWNlcy8qfRLaAQoNQ3JlYXRlU2VydmljZRI2Lmdv",
             "b2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxLkNyZWF0ZVNlcnZpY2VS",
             "ZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuU2Vy",
-            "dmljZSJmgtPkkwJEIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL25hbWVzcGFjZXMvKn0vc2VydmljZXM6B3NlcnZpY2XaQRlwYXJlbnQs",
-            "c2VydmljZSxzZXJ2aWNlX2lkEskBCgxMaXN0U2VydmljZXMSNS5nb29nbGUu",
+            "dmljZSJm2kEZcGFyZW50LHNlcnZpY2Usc2VydmljZV9pZILT5JMCRCI5L3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2VzLyp9",
+            "L3NlcnZpY2VzOgdzZXJ2aWNlEskBCgxMaXN0U2VydmljZXMSNS5nb29nbGUu",
             "Y2xvdWQuc2VydmljZWRpcmVjdG9yeS52MS5MaXN0U2VydmljZXNSZXF1ZXN0",
             "GjYuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuTGlzdFNlcnZp",
-            "Y2VzUmVzcG9uc2UiSoLT5JMCOxI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9uYW1lc3BhY2VzLyp9L3NlcnZpY2Vz2kEGcGFyZW50ErYB",
+            "Y2VzUmVzcG9uc2UiStpBBnBhcmVudILT5JMCOxI5L3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2VzLyp9L3NlcnZpY2VzErYB",
             "CgpHZXRTZXJ2aWNlEjMuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3Rvcnku",
             "djEuR2V0U2VydmljZVJlcXVlc3QaKS5nb29nbGUuY2xvdWQuc2VydmljZWRp",
-            "cmVjdG9yeS52MS5TZXJ2aWNlIkiC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNlcy8qfdpBBG5h",
-            "bWUS3AEKDVVwZGF0ZVNlcnZpY2USNi5nb29nbGUuY2xvdWQuc2VydmljZWRp",
+            "cmVjdG9yeS52MS5TZXJ2aWNlIkjaQQRuYW1lgtPkkwI7EjkvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2VzLyovc2VydmljZXMv",
+            "Kn0S3AEKDVVwZGF0ZVNlcnZpY2USNi5nb29nbGUuY2xvdWQuc2VydmljZWRp",
             "cmVjdG9yeS52MS5VcGRhdGVTZXJ2aWNlUmVxdWVzdBopLmdvb2dsZS5jbG91",
-            "ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxLlNlcnZpY2UiaILT5JMCTDJBL3YxL3tz",
-            "ZXJ2aWNlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2Vz",
-            "Lyovc2VydmljZXMvKn06B3NlcnZpY2XaQRNzZXJ2aWNlLHVwZGF0ZV9tYXNr",
+            "ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxLlNlcnZpY2UiaNpBE3NlcnZpY2UsdXBk",
+            "YXRlX21hc2uC0+STAkwyQS92MS97c2VydmljZS5uYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovbmFtZXNwYWNlcy8qL3NlcnZpY2VzLyp9OgdzZXJ2aWNl",
             "EqkBCg1EZWxldGVTZXJ2aWNlEjYuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJl",
             "Y3RvcnkudjEuRGVsZXRlU2VydmljZVJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiSILT5JMCOyo5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovbmFtZXNwYWNlcy8qL3NlcnZpY2VzLyp92kEEbmFtZRLsAQoOQ3Jl",
+            "dWYuRW1wdHkiSNpBBG5hbWWC0+STAjsqOS92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNlcy8qfRLsAQoOQ3Jl",
             "YXRlRW5kcG9pbnQSNy5nb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52",
             "MS5DcmVhdGVFbmRwb2ludFJlcXVlc3QaKi5nb29nbGUuY2xvdWQuc2Vydmlj",
-            "ZWRpcmVjdG9yeS52MS5FbmRwb2ludCJ1gtPkkwJRIkUvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNlcy8q",
-            "fS9lbmRwb2ludHM6CGVuZHBvaW502kEbcGFyZW50LGVuZHBvaW50LGVuZHBv",
-            "aW50X2lkEtgBCg1MaXN0RW5kcG9pbnRzEjYuZ29vZ2xlLmNsb3VkLnNlcnZp",
+            "ZWRpcmVjdG9yeS52MS5FbmRwb2ludCJ12kEbcGFyZW50LGVuZHBvaW50LGVu",
+            "ZHBvaW50X2lkgtPkkwJRIkUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNlcy8qfS9lbmRwb2ludHM6CGVu",
+            "ZHBvaW50EtgBCg1MaXN0RW5kcG9pbnRzEjYuZ29vZ2xlLmNsb3VkLnNlcnZp",
             "Y2VkaXJlY3RvcnkudjEuTGlzdEVuZHBvaW50c1JlcXVlc3QaNy5nb29nbGUu",
             "Y2xvdWQuc2VydmljZWRpcmVjdG9yeS52MS5MaXN0RW5kcG9pbnRzUmVzcG9u",
-            "c2UiVoLT5JMCRxJFL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9uYW1lc3BhY2VzLyovc2VydmljZXMvKn0vZW5kcG9pbnRz2kEGcGFyZW50",
+            "c2UiVtpBBnBhcmVudILT5JMCRxJFL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9uYW1lc3BhY2VzLyovc2VydmljZXMvKn0vZW5kcG9pbnRz",
             "EsUBCgtHZXRFbmRwb2ludBI0Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0",
             "b3J5LnYxLkdldEVuZHBvaW50UmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5zZXJ2",
-            "aWNlZGlyZWN0b3J5LnYxLkVuZHBvaW50IlSC0+STAkcSRS92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNlcy8q",
-            "L2VuZHBvaW50cy8qfdpBBG5hbWUS7gEKDlVwZGF0ZUVuZHBvaW50EjcuZ29v",
+            "aWNlZGlyZWN0b3J5LnYxLkVuZHBvaW50IlTaQQRuYW1lgtPkkwJHEkUvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2VzLyovc2Vy",
+            "dmljZXMvKi9lbmRwb2ludHMvKn0S7gEKDlVwZGF0ZUVuZHBvaW50EjcuZ29v",
             "Z2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuVXBkYXRlRW5kcG9pbnRS",
             "ZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuRW5k",
-            "cG9pbnQid4LT5JMCWjJOL3YxL3tlbmRwb2ludC5uYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovbmFtZXNwYWNlcy8qL3NlcnZpY2VzLyovZW5kcG9pbnRz",
-            "Lyp9OghlbmRwb2ludNpBFGVuZHBvaW50LHVwZGF0ZV9tYXNrErcBCg5EZWxl",
+            "cG9pbnQid9pBFGVuZHBvaW50LHVwZGF0ZV9tYXNrgtPkkwJaMk4vdjEve2Vu",
+            "ZHBvaW50Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2Vz",
+            "Lyovc2VydmljZXMvKi9lbmRwb2ludHMvKn06CGVuZHBvaW50ErcBCg5EZWxl",
             "dGVFbmRwb2ludBI3Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYx",
             "LkRlbGV0ZUVuZHBvaW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJUgtPkkwJHKkUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9u",
-            "YW1lc3BhY2VzLyovc2VydmljZXMvKi9lbmRwb2ludHMvKn3aQQRuYW1lEugB",
+            "eSJU2kEEbmFtZYLT5JMCRypFL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbmFtZXNwYWNlcy8qL3NlcnZpY2VzLyovZW5kcG9pbnRzLyp9EugB",
             "CgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJl",
             "cXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKcAYLT5JMClQEiPy92MS97",
             "cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9uYW1lc3BhY2VzLyp9",
@@ -175,13 +175,13 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL25hbWVzcGFjZXMvKi9zZXJ2aWNl",
             "cy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASoaU8pBH3NlcnZpY2VkaXJlY3Rv",
             "cnkuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoMCCiRjb20uZ29vZ2xlLmNsb3VkLnNl",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoACCiRjb20uZ29vZ2xlLmNsb3VkLnNl",
             "cnZpY2VkaXJlY3RvcnkudjFCGFJlZ2lzdHJhdGlvblNlcnZpY2VQcm90b1AB",
             "WlBjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2VkaXJlY3RvcnkvYXBpdjEv",
-            "c2VydmljZWRpcmVjdG9yeXBiO3NlcnZpY2VkaXJlY3RvcnlwYvgBAaoCIEdv",
-            "b2dsZS5DbG91ZC5TZXJ2aWNlRGlyZWN0b3J5LlYxygIgR29vZ2xlXENsb3Vk",
-            "XFNlcnZpY2VEaXJlY3RvcnlcVjHqAiNHb29nbGU6OkNsb3VkOjpTZXJ2aWNl",
-            "RGlyZWN0b3J5OjpWMWIGcHJvdG8z"));
+            "c2VydmljZWRpcmVjdG9yeXBiO3NlcnZpY2VkaXJlY3RvcnlwYqoCIEdvb2ds",
+            "ZS5DbG91ZC5TZXJ2aWNlRGlyZWN0b3J5LlYxygIgR29vZ2xlXENsb3VkXFNl",
+            "cnZpY2VEaXJlY3RvcnlcVjHqAiNHb29nbGU6OkNsb3VkOjpTZXJ2aWNlRGly",
+            "ZWN0b3J5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1.EndpointReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1.NamespaceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1.ServiceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -213,6 +213,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.CreateNamespace][google.cloud.servicedirectory.v1.RegistrationService.CreateNamespace].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateNamespaceRequest : pb::IMessage<CreateNamespaceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -505,6 +506,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.ListNamespaces][google.cloud.servicedirectory.v1.RegistrationService.ListNamespaces].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNamespacesRequest : pb::IMessage<ListNamespacesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -558,7 +560,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the project and location whose namespaces
-    /// we'd like to list.
+    /// you'd like to list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -604,29 +606,34 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. The filter to list result by.
+    /// Optional. The filter to list results by.
     ///
-    /// General filter string syntax:
-    /// &lt;field> &lt;operator> &lt;value> (&lt;logical connector>)
-    /// &lt;field> can be "name", or "labels.&lt;key>" for map field.
-    /// &lt;operator> can be "&lt;, >, &lt;=, >=, !=, =, :". Of which ":" means HAS, and
-    /// is roughly the same as "=".
-    /// &lt;value> must be the same data type as field.
-    /// &lt;logical connector> can be "AND, OR, NOT".
+    /// General `filter` string syntax:
+    /// `&lt;field> &lt;operator> &lt;value> (&lt;logical connector>)`
+    ///
+    /// *   `&lt;field>` can be `name` or `labels.&lt;key>` for map field
+    /// *   `&lt;operator>` can be `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, `:`. Of which `:`
+    ///     means `HAS`, and is roughly the same as `=`
+    /// *   `&lt;value>` must be the same data type as field
+    /// *   `&lt;logical connector>` can be `AND`, `OR`, `NOT`
     ///
     /// Examples of valid filters:
-    /// * "labels.owner" returns Namespaces that have a label with the key "owner"
-    ///   this is the same as "labels:owner".
-    /// * "labels.protocol=gRPC" returns Namespaces that have key/value
-    ///   "protocol=gRPC".
-    /// * "name>projects/my-project/locations/us-east/namespaces/namespace-c"
-    ///   returns Namespaces that have name that is alphabetically later than the
-    ///   string, so "namespace-e" will be returned but "namespace-a" will not be.
-    /// * "labels.owner!=sd AND labels.foo=bar" returns Namespaces that have
-    ///   "owner" in label key but value is not "sd" AND have key/value foo=bar.
-    /// * "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't
-    ///   have a field called "doesnotexist". Since the filter does not match any
-    ///   Namespaces, it returns no results.
+    ///
+    /// *   `labels.owner` returns namespaces that have a label with the key
+    ///     `owner`, this is the same as `labels:owner`
+    /// *   `labels.owner=sd` returns namespaces that have key/value
+    ///     `owner=sd`
+    /// *   `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
+    ///     returns namespaces that have name that is alphabetically later than the
+    ///     string, so "namespace-e" is returned but "namespace-a" is not
+    /// *   `labels.owner!=sd AND labels.foo=bar` returns namespaces that have
+    ///     `owner` in label key but value is not `sd` AND have key/value `foo=bar`
+    /// *   `doesnotexist.foo=bar` returns an empty list. Note that namespace
+    ///     doesn't have a field called "doesnotexist". Since the filter does not
+    ///     match any namespaces, it returns no results
+    ///
+    /// For more information about filtering, see
+    /// [API Filtering](https://aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -641,15 +648,16 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. The order to list result by.
+    /// Optional. The order to list results by.
     ///
-    /// General order by string syntax:
-    /// &lt;field> (&lt;asc|desc>) (,)
-    /// &lt;field> allows values {"name"}
-    /// &lt;asc/desc> ascending or descending order by &lt;field>. If this is left
-    /// blank, "asc" is used.
-    /// Note that an empty order_by string result in default order, which is order
-    /// by name in ascending order.
+    /// General `order_by` string syntax: `&lt;field> (&lt;asc|desc>) (,)`
+    ///
+    /// *   `&lt;field>` allows value: `name`
+    /// *   `&lt;asc|desc>` ascending or descending order by `&lt;field>`. If this is
+    ///     left blank, `asc` is used
+    ///
+    /// Note that an empty `order_by` string results in default order, which is
+    /// order by `name` in ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -893,6 +901,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The response message for
   /// [RegistrationService.ListNamespaces][google.cloud.servicedirectory.v1.RegistrationService.ListNamespaces].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNamespacesResponse : pb::IMessage<ListNamespacesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1119,6 +1128,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.GetNamespace][google.cloud.servicedirectory.v1.RegistrationService.GetNamespace].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNamespaceRequest : pb::IMessage<GetNamespaceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1315,6 +1325,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.UpdateNamespace][google.cloud.servicedirectory.v1.RegistrationService.UpdateNamespace].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateNamespaceRequest : pb::IMessage<UpdateNamespaceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1569,6 +1580,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.DeleteNamespace][google.cloud.servicedirectory.v1.RegistrationService.DeleteNamespace].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteNamespaceRequest : pb::IMessage<DeleteNamespaceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1765,6 +1777,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.CreateService][google.cloud.servicedirectory.v1.RegistrationService.CreateService].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServiceRequest : pb::IMessage<CreateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2056,6 +2069,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.ListServices][google.cloud.servicedirectory.v1.RegistrationService.ListServices].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2108,7 +2122,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the namespace whose services we'd
+    /// Required. The resource name of the namespace whose services you'd
     /// like to list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2155,29 +2169,36 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. The filter to list result by.
+    /// Optional. The filter to list results by.
     ///
-    /// General filter string syntax:
-    /// &lt;field> &lt;operator> &lt;value> (&lt;logical connector>)
-    /// &lt;field> can be "name", or "metadata.&lt;key>" for map field.
-    /// &lt;operator> can be "&lt;, >, &lt;=, >=, !=, =, :". Of which ":" means HAS, and
-    /// is roughly the same as "=".
-    /// &lt;value> must be the same data type as field.
-    /// &lt;logical connector> can be "AND, OR, NOT".
+    /// General `filter` string syntax:
+    /// `&lt;field> &lt;operator> &lt;value> (&lt;logical connector>)`
+    ///
+    /// *   `&lt;field>` can be `name` or `annotations.&lt;key>` for map field
+    /// *   `&lt;operator>` can be `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, `:`. Of which `:`
+    ///     means `HAS`, and is roughly the same as `=`
+    /// *   `&lt;value>` must be the same data type as field
+    /// *   `&lt;logical connector>` can be `AND`, `OR`, `NOT`
     ///
     /// Examples of valid filters:
-    /// * "metadata.owner" returns Services that have a label with the key "owner"
-    ///   this is the same as "metadata:owner".
-    /// * "metadata.protocol=gRPC" returns Services that have key/value
-    ///   "protocol=gRPC".
-    /// * "name>projects/my-project/locations/us-east/namespaces/my-namespace/services/service-c"
-    ///   returns Services that have name that is alphabetically later than the
-    ///   string, so "service-e" will be returned but "service-a" will not be.
-    /// * "metadata.owner!=sd AND metadata.foo=bar" returns Services that have
-    ///   "owner" in label key but value is not "sd" AND have key/value foo=bar.
-    /// * "doesnotexist.foo=bar" returns an empty list. Note that Service doesn't
-    ///   have a field called "doesnotexist". Since the filter does not match any
-    ///   Services, it returns no results.
+    ///
+    /// *   `annotations.owner` returns services that have a annotation with the
+    ///     key `owner`, this is the same as `annotations:owner`
+    /// *   `annotations.protocol=gRPC` returns services that have key/value
+    ///     `protocol=gRPC`
+    /// *
+    /// `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/service-c`
+    ///     returns services that have name that is alphabetically later than the
+    ///     string, so "service-e" is returned but "service-a" is not
+    /// *   `annotations.owner!=sd AND annotations.foo=bar` returns services that
+    ///     have `owner` in annotation key but value is not `sd` AND have
+    ///     key/value `foo=bar`
+    /// *   `doesnotexist.foo=bar` returns an empty list. Note that service
+    ///     doesn't have a field called "doesnotexist". Since the filter does not
+    ///     match any services, it returns no results
+    ///
+    /// For more information about filtering, see
+    /// [API Filtering](https://aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2192,7 +2213,16 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. The order to list result by.
+    /// Optional. The order to list results by.
+    ///
+    /// General `order_by` string syntax: `&lt;field> (&lt;asc|desc>) (,)`
+    ///
+    /// *   `&lt;field>` allows value: `name`
+    /// *   `&lt;asc|desc>` ascending or descending order by `&lt;field>`. If this is
+    ///     left blank, `asc` is used
+    ///
+    /// Note that an empty `order_by` string results in default order, which is
+    /// order by `name` in ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2436,6 +2466,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The response message for
   /// [RegistrationService.ListServices][google.cloud.servicedirectory.v1.RegistrationService.ListServices].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2661,9 +2692,10 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// <summary>
   /// The request message for
   /// [RegistrationService.GetService][google.cloud.servicedirectory.v1.RegistrationService.GetService].
-  /// This should not be used for looking up a service. Insead, use the `resolve`
-  /// method as it will contain all endpoints and associated metadata.
+  /// This should not be used for looking up a service. Instead, use the `resolve`
+  /// method as it contains all endpoints and associated annotations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceRequest : pb::IMessage<GetServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2860,6 +2892,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.UpdateService][google.cloud.servicedirectory.v1.RegistrationService.UpdateService].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateServiceRequest : pb::IMessage<UpdateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3114,6 +3147,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.DeleteService][google.cloud.servicedirectory.v1.RegistrationService.DeleteService].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServiceRequest : pb::IMessage<DeleteServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3310,6 +3344,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.CreateEndpoint][google.cloud.servicedirectory.v1.RegistrationService.CreateEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEndpointRequest : pb::IMessage<CreateEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3601,6 +3636,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.ListEndpoints][google.cloud.servicedirectory.v1.RegistrationService.ListEndpoints].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEndpointsRequest : pb::IMessage<ListEndpointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3653,7 +3689,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the service whose endpoints we'd like to
+    /// Required. The resource name of the service whose endpoints you'd like to
     /// list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3700,31 +3736,39 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. The filter to list result by.
+    /// Optional. The filter to list results by.
     ///
-    /// General filter string syntax:
-    /// &lt;field> &lt;operator> &lt;value> (&lt;logical connector>)
-    /// &lt;field> can be "name", "address", "port" or "metadata.&lt;key>" for map field.
-    /// &lt;operator> can be "&lt;, >, &lt;=, >=, !=, =, :". Of which ":" means HAS, and
-    /// is roughly the same as "=".
-    /// &lt;value> must be the same data type as field.
-    /// &lt;logical connector> can be "AND, OR, NOT".
+    /// General `filter` string syntax:
+    /// `&lt;field> &lt;operator> &lt;value> (&lt;logical connector>)`
+    ///
+    /// *   `&lt;field>` can be `name`, `address`, `port`, or `annotations.&lt;key>` for
+    ///      map field
+    /// *   `&lt;operator>` can be `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, `:`. Of which `:`
+    ///     means `HAS`, and is roughly the same as `=`
+    /// *   `&lt;value>` must be the same data type as field
+    /// *   `&lt;logical connector>` can be `AND`, `OR`, `NOT`
     ///
     /// Examples of valid filters:
-    /// * "metadata.owner" returns Endpoints that have a label with the key "owner"
-    ///   this is the same as "metadata:owner".
-    /// * "metadata.protocol=gRPC" returns Endpoints that have key/value
-    ///   "protocol=gRPC".
-    /// * "address=192.108.1.105" returns Endpoints that have this address.
-    /// * "port>8080" returns Endpoints that have port number larger than 8080.
-    /// * "name>projects/my-project/locations/us-east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c"
-    ///   returns Endpoints that have name that is alphabetically later than the
-    ///   string, so "endpoint-e" will be returned but "endpoint-a" will not be.
-    /// * "metadata.owner!=sd AND metadata.foo=bar" returns Endpoints that have
-    ///   "owner" in label key but value is not "sd" AND have key/value foo=bar.
-    /// * "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't
-    ///   have a field called "doesnotexist". Since the filter does not match any
-    ///   Endpoints, it returns no results.
+    ///
+    /// *   `annotations.owner` returns endpoints that have a annotation with the
+    ///     key `owner`, this is the same as `annotations:owner`
+    /// *   `annotations.protocol=gRPC` returns endpoints that have key/value
+    ///     `protocol=gRPC`
+    /// *   `address=192.108.1.105` returns endpoints that have this address
+    /// *   `port>8080` returns endpoints that have port number larger than 8080
+    /// *
+    /// `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-service/endpoints/endpoint-c`
+    ///     returns endpoints that have name that is alphabetically later than the
+    ///     string, so "endpoint-e" is returned but "endpoint-a" is not
+    /// *   `annotations.owner!=sd AND annotations.foo=bar` returns endpoints that
+    ///     have `owner` in annotation key but value is not `sd` AND have
+    ///     key/value `foo=bar`
+    /// *   `doesnotexist.foo=bar` returns an empty list. Note that endpoint
+    ///     doesn't have a field called "doesnotexist". Since the filter does not
+    ///     match any endpoints, it returns no results
+    ///
+    /// For more information about filtering, see
+    /// [API Filtering](https://aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3739,7 +3783,16 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. The order to list result by.
+    /// Optional. The order to list results by.
+    ///
+    /// General `order_by` string syntax: `&lt;field> (&lt;asc|desc>) (,)`
+    ///
+    /// *   `&lt;field>` allows values: `name`, `address`, `port`
+    /// *   `&lt;asc|desc>` ascending or descending order by `&lt;field>`. If this is
+    ///     left blank, `asc` is used
+    ///
+    /// Note that an empty `order_by` string results in default order, which is
+    /// order by `name` in ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3983,6 +4036,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The response message for
   /// [RegistrationService.ListEndpoints][google.cloud.servicedirectory.v1.RegistrationService.ListEndpoints].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEndpointsResponse : pb::IMessage<ListEndpointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4211,6 +4265,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// This should not be used to lookup endpoints at runtime. Instead, use
   /// the `resolve` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEndpointRequest : pb::IMessage<GetEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4407,6 +4462,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.UpdateEndpoint][google.cloud.servicedirectory.v1.RegistrationService.UpdateEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEndpointRequest : pb::IMessage<UpdateEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4661,6 +4717,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The request message for
   /// [RegistrationService.DeleteEndpoint][google.cloud.servicedirectory.v1.RegistrationService.DeleteEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEndpointRequest : pb::IMessage<DeleteEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

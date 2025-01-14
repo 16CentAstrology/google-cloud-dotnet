@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudDms.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_UpdateConnectionProfile_async]
     using Google.Cloud.CloudDms.V1;
@@ -42,6 +42,8 @@ namespace Google.Cloud.CloudDms.V1.Snippets
                 UpdateMask = new FieldMask(),
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = await dataMigrationServiceClient.UpdateConnectionProfileAsync(request);

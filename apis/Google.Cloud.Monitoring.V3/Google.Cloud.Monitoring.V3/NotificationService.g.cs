@@ -45,93 +45,93 @@ namespace Google.Cloud.Monitoring.V3 {
             "IAEoCUI14EEC+kEvEi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlm",
             "aWNhdGlvbkNoYW5uZWwSTAoUbm90aWZpY2F0aW9uX2NoYW5uZWwYAiABKAsy",
             "KS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsQgPg",
-            "QQIirwEKH0xpc3ROb3RpZmljYXRpb25DaGFubmVsc1JlcXVlc3QSQwoEbmFt",
+            "QQIiwwEKH0xpc3ROb3RpZmljYXRpb25DaGFubmVsc1JlcXVlc3QSQwoEbmFt",
             "ZRgFIAEoCUI14EEC+kEvEi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05v",
-            "dGlmaWNhdGlvbkNoYW5uZWwSDgoGZmlsdGVyGAYgASgJEhAKCG9yZGVyX2J5",
-            "GAcgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJ",
-            "IpkBCiBMaXN0Tm90aWZpY2F0aW9uQ2hhbm5lbHNSZXNwb25zZRJIChVub3Rp",
-            "ZmljYXRpb25fY2hhbm5lbHMYAyADKAsyKS5nb29nbGUubW9uaXRvcmluZy52",
-            "My5Ob3RpZmljYXRpb25DaGFubmVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CRISCgp0b3RhbF9zaXplGAQgASgFImQKHUdldE5vdGlmaWNhdGlvbkNoYW5u",
-            "ZWxSZXF1ZXN0EkMKBG5hbWUYAyABKAlCNeBBAvpBLwotbW9uaXRvcmluZy5n",
-            "b29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsIqEBCiBVcGRhdGVO",
-            "b3RpZmljYXRpb25DaGFubmVsUmVxdWVzdBIvCgt1cGRhdGVfbWFzaxgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSTAoUbm90aWZpY2F0aW9u",
-            "X2NoYW5uZWwYAyABKAsyKS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmlj",
-            "YXRpb25DaGFubmVsQgPgQQIidgogRGVsZXRlTm90aWZpY2F0aW9uQ2hhbm5l",
-            "bFJlcXVlc3QSQwoEbmFtZRgDIAEoCUI14EEC+kEvCi1tb25pdG9yaW5nLmdv",
-            "b2dsZWFwaXMuY29tL05vdGlmaWNhdGlvbkNoYW5uZWwSDQoFZm9yY2UYBSAB",
-            "KAgidQouU2VuZE5vdGlmaWNhdGlvbkNoYW5uZWxWZXJpZmljYXRpb25Db2Rl",
-            "UmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW1vbml0b3JpbmcuZ29v",
-            "Z2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbCKlAQotR2V0Tm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbFZlcmlmaWNhdGlvbkNvZGVSZXF1ZXN0EkMKBG5hbWUY",
-            "ASABKAlCNeBBAvpBLwotbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Ob3Rp",
-            "ZmljYXRpb25DaGFubmVsEi8KC2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcCJvCi5HZXROb3RpZmljYXRpb25DaGFubmVs",
-            "VmVyaWZpY2F0aW9uQ29kZVJlc3BvbnNlEgwKBGNvZGUYASABKAkSLwoLZXhw",
-            "aXJlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInoK",
-            "IFZlcmlmeU5vdGlmaWNhdGlvbkNoYW5uZWxSZXF1ZXN0EkMKBG5hbWUYASAB",
+            "dGlmaWNhdGlvbkNoYW5uZWwSEwoGZmlsdGVyGAYgASgJQgPgQQESFQoIb3Jk",
+            "ZXJfYnkYByABKAlCA+BBARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpw",
+            "YWdlX3Rva2VuGAQgASgJQgPgQQEimQEKIExpc3ROb3RpZmljYXRpb25DaGFu",
+            "bmVsc1Jlc3BvbnNlEkgKFW5vdGlmaWNhdGlvbl9jaGFubmVscxgDIAMoCzIp",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5uZWwSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYBCABKAUiZAod",
+            "R2V0Tm90aWZpY2F0aW9uQ2hhbm5lbFJlcXVlc3QSQwoEbmFtZRgDIAEoCUI1",
+            "4EEC+kEvCi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlmaWNhdGlv",
+            "bkNoYW5uZWwipgEKIFVwZGF0ZU5vdGlmaWNhdGlvbkNoYW5uZWxSZXF1ZXN0",
+            "EjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFza0ID4EEBEkwKFG5vdGlmaWNhdGlvbl9jaGFubmVsGAMgASgLMikuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbEID4EECInYK",
+            "IERlbGV0ZU5vdGlmaWNhdGlvbkNoYW5uZWxSZXF1ZXN0EkMKBG5hbWUYAyAB",
             "KAlCNeBBAvpBLwotbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Ob3RpZmlj",
-            "YXRpb25DaGFubmVsEhEKBGNvZGUYAiABKAlCA+BBAjLqEgoaTm90aWZpY2F0",
-            "aW9uQ2hhbm5lbFNlcnZpY2US7AEKIkxpc3ROb3RpZmljYXRpb25DaGFubmVs",
-            "RGVzY3JpcHRvcnMSPy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0Tm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzUmVxdWVzdBpALmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLkxpc3ROb3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvcnNS",
-            "ZXNwb25zZSJDgtPkkwI2EjQvdjMve25hbWU9cHJvamVjdHMvKn0vbm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbERlc2NyaXB0b3Jz2kEEbmFtZRLdAQogR2V0Tm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbERlc2NyaXB0b3ISPS5nb29nbGUubW9uaXRvcmluZy52",
-            "My5HZXROb3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRvclJlcXVlc3QaMy5n",
-            "b29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsRGVzY3Jp",
-            "cHRvciJFgtPkkwI4EjYvdjMve25hbWU9cHJvamVjdHMvKi9ub3RpZmljYXRp",
-            "b25DaGFubmVsRGVzY3JpcHRvcnMvKn3aQQRuYW1lEsQBChhMaXN0Tm90aWZp",
-            "Y2F0aW9uQ2hhbm5lbHMSNS5nb29nbGUubW9uaXRvcmluZy52My5MaXN0Tm90",
-            "aWZpY2F0aW9uQ2hhbm5lbHNSZXF1ZXN0GjYuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuTGlzdE5vdGlmaWNhdGlvbkNoYW5uZWxzUmVzcG9uc2UiOYLT5JMCLBIq",
-            "L3YzL3tuYW1lPXByb2plY3RzLyp9L25vdGlmaWNhdGlvbkNoYW5uZWxz2kEE",
-            "bmFtZRK1AQoWR2V0Tm90aWZpY2F0aW9uQ2hhbm5lbBIzLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLkdldE5vdGlmaWNhdGlvbkNoYW5uZWxSZXF1ZXN0GikuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5lbCI7gtPkkwIu",
-            "EiwvdjMve25hbWU9cHJvamVjdHMvKi9ub3RpZmljYXRpb25DaGFubmVscy8q",
-            "fdpBBG5hbWUS5AEKGUNyZWF0ZU5vdGlmaWNhdGlvbkNoYW5uZWwSNi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5DcmVhdGVOb3RpZmljYXRpb25DaGFubmVsUmVx",
-            "dWVzdBopLmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5u",
-            "ZWwiZILT5JMCQiIqL3YzL3tuYW1lPXByb2plY3RzLyp9L25vdGlmaWNhdGlv",
-            "bkNoYW5uZWxzOhRub3RpZmljYXRpb25fY2hhbm5lbNpBGW5hbWUsbm90aWZp",
-            "Y2F0aW9uX2NoYW5uZWwSgwIKGVVwZGF0ZU5vdGlmaWNhdGlvbkNoYW5uZWwS",
-            "Ni5nb29nbGUubW9uaXRvcmluZy52My5VcGRhdGVOb3RpZmljYXRpb25DaGFu",
-            "bmVsUmVxdWVzdBopLmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlv",
-            "bkNoYW5uZWwiggGC0+STAlkyQS92My97bm90aWZpY2F0aW9uX2NoYW5uZWwu",
-            "bmFtZT1wcm9qZWN0cy8qL25vdGlmaWNhdGlvbkNoYW5uZWxzLyp9OhRub3Rp",
-            "ZmljYXRpb25fY2hhbm5lbNpBIHVwZGF0ZV9tYXNrLG5vdGlmaWNhdGlvbl9j",
-            "aGFubmVsEq4BChlEZWxldGVOb3RpZmljYXRpb25DaGFubmVsEjYuZ29vZ2xl",
-            "Lm1vbml0b3JpbmcudjMuRGVsZXRlTm90aWZpY2F0aW9uQ2hhbm5lbFJlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQYLT5JMCLiosL3YzL3tuYW1l",
-            "PXByb2plY3RzLyovbm90aWZpY2F0aW9uQ2hhbm5lbHMvKn3aQQpuYW1lLGZv",
-            "cmNlEtwBCidTZW5kTm90aWZpY2F0aW9uQ2hhbm5lbFZlcmlmaWNhdGlvbkNv",
-            "ZGUSRC5nb29nbGUubW9uaXRvcmluZy52My5TZW5kTm90aWZpY2F0aW9uQ2hh",
-            "bm5lbFZlcmlmaWNhdGlvbkNvZGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IlOC0+STAkYiQS92My97bmFtZT1wcm9qZWN0cy8qL25vdGlmaWNh",
-            "dGlvbkNoYW5uZWxzLyp9OnNlbmRWZXJpZmljYXRpb25Db2RlOgEq2kEEbmFt",
-            "ZRKHAgomR2V0Tm90aWZpY2F0aW9uQ2hhbm5lbFZlcmlmaWNhdGlvbkNvZGUS",
-            "Qy5nb29nbGUubW9uaXRvcmluZy52My5HZXROb3RpZmljYXRpb25DaGFubmVs",
-            "VmVyaWZpY2F0aW9uQ29kZVJlcXVlc3QaRC5nb29nbGUubW9uaXRvcmluZy52",
-            "My5HZXROb3RpZmljYXRpb25DaGFubmVsVmVyaWZpY2F0aW9uQ29kZVJlc3Bv",
-            "bnNlIlKC0+STAkUiQC92My97bmFtZT1wcm9qZWN0cy8qL25vdGlmaWNhdGlv",
-            "bkNoYW5uZWxzLyp9OmdldFZlcmlmaWNhdGlvbkNvZGU6ASraQQRuYW1lEsoB",
-            "ChlWZXJpZnlOb3RpZmljYXRpb25DaGFubmVsEjYuZ29vZ2xlLm1vbml0b3Jp",
-            "bmcudjMuVmVyaWZ5Tm90aWZpY2F0aW9uQ2hhbm5lbFJlcXVlc3QaKS5nb29n",
-            "bGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsIkqC0+STAjgi",
-            "My92My97bmFtZT1wcm9qZWN0cy8qL25vdGlmaWNhdGlvbkNoYW5uZWxzLyp9",
-            "OnZlcmlmeToBKtpBCW5hbWUsY29kZRqpAcpBGW1vbml0b3JpbmcuZ29vZ2xl",
-            "YXBpcy5jb23SQYkBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L21vbml0b3JpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9t",
-            "b25pdG9yaW5nLnJlYWRC0AEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IY",
-            "Tm90aWZpY2F0aW9uU2VydmljZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5n",
-            "qgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRc",
-            "TW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYz",
-            "YgZwcm90bzM="));
+            "YXRpb25DaGFubmVsEg0KBWZvcmNlGAUgASgIInUKLlNlbmROb3RpZmljYXRp",
+            "b25DaGFubmVsVmVyaWZpY2F0aW9uQ29kZVJlcXVlc3QSQwoEbmFtZRgBIAEo",
+            "CUI14EEC+kEvCi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlmaWNh",
+            "dGlvbkNoYW5uZWwipQEKLUdldE5vdGlmaWNhdGlvbkNoYW5uZWxWZXJpZmlj",
+            "YXRpb25Db2RlUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW1vbml0",
+            "b3JpbmcuZ29vZ2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbBIvCgtl",
+            "eHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "bwouR2V0Tm90aWZpY2F0aW9uQ2hhbm5lbFZlcmlmaWNhdGlvbkNvZGVSZXNw",
+            "b25zZRIMCgRjb2RlGAEgASgJEi8KC2V4cGlyZV90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCJ6CiBWZXJpZnlOb3RpZmljYXRpb25D",
+            "aGFubmVsUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW1vbml0b3Jp",
+            "bmcuZ29vZ2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbBIRCgRjb2Rl",
+            "GAIgASgJQgPgQQIy6hIKGk5vdGlmaWNhdGlvbkNoYW5uZWxTZXJ2aWNlEuwB",
+            "CiJMaXN0Tm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzEj8uZ29vZ2xl",
+            "Lm1vbml0b3JpbmcudjMuTGlzdE5vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlw",
+            "dG9yc1JlcXVlc3QaQC5nb29nbGUubW9uaXRvcmluZy52My5MaXN0Tm90aWZp",
+            "Y2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzUmVzcG9uc2UiQ9pBBG5hbWWC0+ST",
+            "AjYSNC92My97bmFtZT1wcm9qZWN0cy8qfS9ub3RpZmljYXRpb25DaGFubmVs",
+            "RGVzY3JpcHRvcnMS3QEKIEdldE5vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlw",
+            "dG9yEj0uZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0Tm90aWZpY2F0aW9uQ2hh",
+            "bm5lbERlc2NyaXB0b3JSZXF1ZXN0GjMuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "Tm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3IiRdpBBG5hbWWC0+STAjgS",
+            "Ni92My97bmFtZT1wcm9qZWN0cy8qL25vdGlmaWNhdGlvbkNoYW5uZWxEZXNj",
+            "cmlwdG9ycy8qfRLEAQoYTGlzdE5vdGlmaWNhdGlvbkNoYW5uZWxzEjUuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuTGlzdE5vdGlmaWNhdGlvbkNoYW5uZWxzUmVx",
+            "dWVzdBo2Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3ROb3RpZmljYXRpb25D",
+            "aGFubmVsc1Jlc3BvbnNlIjnaQQRuYW1lgtPkkwIsEiovdjMve25hbWU9cHJv",
+            "amVjdHMvKn0vbm90aWZpY2F0aW9uQ2hhbm5lbHMStQEKFkdldE5vdGlmaWNh",
+            "dGlvbkNoYW5uZWwSMy5nb29nbGUubW9uaXRvcmluZy52My5HZXROb3RpZmlj",
+            "YXRpb25DaGFubmVsUmVxdWVzdBopLmdvb2dsZS5tb25pdG9yaW5nLnYzLk5v",
+            "dGlmaWNhdGlvbkNoYW5uZWwiO9pBBG5hbWWC0+STAi4SLC92My97bmFtZT1w",
+            "cm9qZWN0cy8qL25vdGlmaWNhdGlvbkNoYW5uZWxzLyp9EuQBChlDcmVhdGVO",
+            "b3RpZmljYXRpb25DaGFubmVsEjYuZ29vZ2xlLm1vbml0b3JpbmcudjMuQ3Jl",
+            "YXRlTm90aWZpY2F0aW9uQ2hhbm5lbFJlcXVlc3QaKS5nb29nbGUubW9uaXRv",
+            "cmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsImTaQRluYW1lLG5vdGlmaWNh",
+            "dGlvbl9jaGFubmVsgtPkkwJCIiovdjMve25hbWU9cHJvamVjdHMvKn0vbm90",
+            "aWZpY2F0aW9uQ2hhbm5lbHM6FG5vdGlmaWNhdGlvbl9jaGFubmVsEoMCChlV",
+            "cGRhdGVOb3RpZmljYXRpb25DaGFubmVsEjYuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuVXBkYXRlTm90aWZpY2F0aW9uQ2hhbm5lbFJlcXVlc3QaKS5nb29nbGUu",
+            "bW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFubmVsIoIB2kEgdXBkYXRl",
+            "X21hc2ssbm90aWZpY2F0aW9uX2NoYW5uZWyC0+STAlkyQS92My97bm90aWZp",
+            "Y2F0aW9uX2NoYW5uZWwubmFtZT1wcm9qZWN0cy8qL25vdGlmaWNhdGlvbkNo",
+            "YW5uZWxzLyp9OhRub3RpZmljYXRpb25fY2hhbm5lbBKuAQoZRGVsZXRlTm90",
+            "aWZpY2F0aW9uQ2hhbm5lbBI2Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkRlbGV0",
+            "ZU5vdGlmaWNhdGlvbkNoYW5uZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5IkHaQQpuYW1lLGZvcmNlgtPkkwIuKiwvdjMve25hbWU9cHJvamVj",
+            "dHMvKi9ub3RpZmljYXRpb25DaGFubmVscy8qfRLcAQonU2VuZE5vdGlmaWNh",
+            "dGlvbkNoYW5uZWxWZXJpZmljYXRpb25Db2RlEkQuZ29vZ2xlLm1vbml0b3Jp",
+            "bmcudjMuU2VuZE5vdGlmaWNhdGlvbkNoYW5uZWxWZXJpZmljYXRpb25Db2Rl",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJT2kEEbmFtZYLT5JMC",
+            "RiJBL3YzL3tuYW1lPXByb2plY3RzLyovbm90aWZpY2F0aW9uQ2hhbm5lbHMv",
+            "Kn06c2VuZFZlcmlmaWNhdGlvbkNvZGU6ASoShwIKJkdldE5vdGlmaWNhdGlv",
+            "bkNoYW5uZWxWZXJpZmljYXRpb25Db2RlEkMuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuR2V0Tm90aWZpY2F0aW9uQ2hhbm5lbFZlcmlmaWNhdGlvbkNvZGVSZXF1",
+            "ZXN0GkQuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0Tm90aWZpY2F0aW9uQ2hh",
+            "bm5lbFZlcmlmaWNhdGlvbkNvZGVSZXNwb25zZSJS2kEEbmFtZYLT5JMCRSJA",
+            "L3YzL3tuYW1lPXByb2plY3RzLyovbm90aWZpY2F0aW9uQ2hhbm5lbHMvKn06",
+            "Z2V0VmVyaWZpY2F0aW9uQ29kZToBKhLKAQoZVmVyaWZ5Tm90aWZpY2F0aW9u",
+            "Q2hhbm5lbBI2Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlZlcmlmeU5vdGlmaWNh",
+            "dGlvbkNoYW5uZWxSZXF1ZXN0GikuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90",
+            "aWZpY2F0aW9uQ2hhbm5lbCJK2kEJbmFtZSxjb2RlgtPkkwI4IjMvdjMve25h",
+            "bWU9cHJvamVjdHMvKi9ub3RpZmljYXRpb25DaGFubmVscy8qfTp2ZXJpZnk6",
+            "ASoaqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMuY29t0kGJAWh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25pdG9yaW5nLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkQtMBChhj",
+            "b20uZ29vZ2xlLm1vbml0b3JpbmcudjNCGE5vdGlmaWNhdGlvblNlcnZpY2VQ",
+            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMv",
+            "djIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5N",
+            "b25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1H",
+            "b29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.NotificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -157,6 +157,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListNotificationChannelDescriptors` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNotificationChannelDescriptorsRequest : pb::IMessage<ListNotificationChannelDescriptorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -446,6 +447,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListNotificationChannelDescriptors` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNotificationChannelDescriptorsResponse : pb::IMessage<ListNotificationChannelDescriptorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -674,6 +676,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetNotificationChannelDescriptor` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNotificationChannelDescriptorRequest : pb::IMessage<GetNotificationChannelDescriptorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -871,6 +874,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateNotificationChannel` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateNotificationChannelRequest : pb::IMessage<CreateNotificationChannelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -920,8 +924,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -1123,6 +1128,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListNotificationChannels` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNotificationChannelsRequest : pb::IMessage<ListNotificationChannelsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1175,8 +1181,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -1200,8 +1207,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 6;
     private string filter_ = "";
     /// <summary>
-    /// If provided, this field specifies the criteria that must be met by
-    /// notification channels to be included in the response.
+    /// Optional. If provided, this field specifies the criteria that must be met
+    /// by notification channels to be included in the response.
     ///
     /// For more details, see [sorting and
     /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
@@ -1219,9 +1226,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int OrderByFieldNumber = 7;
     private string orderBy_ = "";
     /// <summary>
-    /// A comma-separated list of fields by which to sort the result. Supports
-    /// the same set of fields as in `filter`. Entries can be prefixed with
-    /// a minus sign to sort in descending rather than ascending order.
+    /// Optional. A comma-separated list of fields by which to sort the result.
+    /// Supports the same set of fields as in `filter`. Entries can be prefixed
+    /// with a minus sign to sort in descending rather than ascending order.
     ///
     /// For more details, see [sorting and
     /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
@@ -1239,7 +1246,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of results to return in a single response. If
+    /// Optional. The maximum number of results to return in a single response. If
     /// not set to a positive number, a reasonable value will be chosen by the
     /// service.
     /// </summary>
@@ -1256,7 +1263,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// If non-empty, `page_token` must contain a value returned as the
+    /// Optional. If non-empty, `page_token` must contain a value returned as the
     /// `next_page_token` in a previous response to request the next set
     /// of results.
     /// </summary>
@@ -1501,6 +1508,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListNotificationChannels` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNotificationChannelsResponse : pb::IMessage<ListNotificationChannelsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1769,6 +1777,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetNotificationChannel` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNotificationChannelRequest : pb::IMessage<GetNotificationChannelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1966,6 +1975,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `UpdateNotificationChannel` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateNotificationChannelRequest : pb::IMessage<UpdateNotificationChannelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2015,7 +2025,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The fields to update.
+    /// Optional. The fields to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2222,6 +2232,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `DeleteNotificationChannel` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteNotificationChannelRequest : pb::IMessage<DeleteNotificationChannelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2290,8 +2301,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// If true, the notification channel will be deleted regardless of its
     /// use in alert policies (the policies will be updated to remove the
-    /// channel). If false, channels that are still referenced by an existing
-    /// alerting policy will fail to be deleted in a delete operation.
+    /// channel). If false, this operation will fail if the notification channel
+    /// is referenced by existing alerting policies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2462,6 +2473,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `SendNotificationChannelVerificationCode` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SendNotificationChannelVerificationCodeRequest : pb::IMessage<SendNotificationChannelVerificationCodeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2657,6 +2669,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetNotificationChannelVerificationCode` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNotificationChannelVerificationCodeRequest : pb::IMessage<GetNotificationChannelVerificationCodeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2706,9 +2719,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The notification channel for which a verification code is to be generated
-    /// and retrieved. This must name a channel that is already verified; if
-    /// the specified channel is not verified, the request will fail.
+    /// Required. The notification channel for which a verification code is to be
+    /// generated and retrieved. This must name a channel that is already verified;
+    /// if the specified channel is not verified, the request will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2911,6 +2924,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetNotificationChannelVerificationCode` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNotificationChannelVerificationCodeResponse : pb::IMessage<GetNotificationChannelVerificationCodeResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3160,6 +3174,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `VerifyNotificationChannel` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyNotificationChannelRequest : pb::IMessage<VerifyNotificationChannelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

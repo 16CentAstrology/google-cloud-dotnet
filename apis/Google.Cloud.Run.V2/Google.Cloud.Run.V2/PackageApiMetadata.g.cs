@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Run.V2
@@ -57,6 +57,7 @@ namespace Google.Cloud.Run.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return gcl::LocationsReflection.Descriptor;
+            yield return BuildReflection.Descriptor;
             yield return ConditionReflection.Descriptor;
             yield return ExecutionReflection.Descriptor;
             yield return ExecutionTemplateReflection.Descriptor;
@@ -65,6 +66,7 @@ namespace Google.Cloud.Run.V2
             yield return RevisionReflection.Descriptor;
             yield return RevisionTemplateReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return StatusReflection.Descriptor;
             yield return TaskReflection.Descriptor;
             yield return TaskTemplateReflection.Descriptor;
             yield return TrafficTargetReflection.Descriptor;

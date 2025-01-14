@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,20 +31,39 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         private sealed class DetachedSessionPool : SessionPoolBase
         {
+            public override bool TracksSessions => false;
+
             internal DetachedSessionPool(SessionPool parent) : base(parent)
             {
             }
 
             public override void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
-                // Note: we never roll back the transaction in a detached session.
                 if (deleteSession)
                 {
-                    Parent.DeleteSessionFireAndForget(session);
+                    Parent.ConsumeBackgroundTask(DeleteSessionAsync(), "detached session delete");
+                }
+
+                async Task DeleteSessionAsync()
+                {
+                    // Before deleting the session we attempt to rollback the transaction gracefully.
+                    if (transactionToRollback is not null)
+                    {
+                        var request = new RollbackRequest { SessionAsSessionName = session.SessionName, TransactionId = transactionToRollback };
+                        try
+                        {
+                            await Client.RollbackAsync(request).ConfigureAwait(false);
+                        }
+                        catch (RpcException e)
+                        {
+                            Parent._logger.Warn("Failed to rollback transaction for detached session", e);
+                        }
+                    }
+                    await Parent.DeleteSessionAsync(session).ConfigureAwait(false);
                 }
             }
 
-            public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            public override Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
                 throw new InvalidOperationException(
                     $"{nameof(session)} is a detached session. Its transaction can't be refreshed and it can't be substituted by a new session.");
         }

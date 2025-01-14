@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -43,6 +44,20 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public CopyOperationType? OperationType { get; set; }
 
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="JobConfigurationTableCopy"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported by the properties in this options type.
+        /// </summary>
+        /// <remarks>
+        /// Prefer the properties on this type over this modifier to prepare the request.
+        /// Only use this modifier to configure aspects for which there are no properties available.
+        /// This modifier is applied to the request after all properties on this type have been applied.
+        /// The delegate is only called once per operation, even if the request is automatically retried.
+        /// </remarks>
+        public Action<JobConfigurationTableCopy> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationTableCopy copy)
         {
             if (CreateDisposition != null)
@@ -61,6 +76,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 copy.OperationType = EnumMap.ToApiValue(OperationType.Value);
             }
+            ConfigurationModifier?.Invoke(copy);
         }
     }
 }

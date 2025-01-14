@@ -1,5 +1,29 @@
 # Version history
 
+## Version 2.9.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.7.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.6.0, released 2023-07-13
+
+### New features
+
+- Add support for Salesforce connections, which are usable only by allowlisted partners ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+- Add cloud spanner connection properties - use_data_boost ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+- Add cloud spanner connection properties - max_parallelism ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+
 ## Version 2.5.0, released 2023-03-20
 
 ### New features

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Metastore.V1Beta
@@ -57,6 +57,11 @@ namespace Google.Cloud.Metastore.V1Beta
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
                     // { "post": "/v1beta/{resource=projects/*/locations/*/services/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1beta/{resource=projects/*/locations/*/services/*/backups/*}:testIamPermissions", "body": "*" }, { "post": "/v1beta/{resource=projects/*/locations/*/services/*/databases/*}:testIamPermissions", "body": "*" }, { "post": "/v1beta/{resource=projects/*/locations/*/services/*/databases/*/tables/*}:testIamPermissions", "body": "*" }, { "post": "/v1beta/{resource=projects/*/locations/*/federations/*}:testIamPermissions", "body": "*" } ] }
                     proto::ByteString.FromBase64("IkcvdjFiZXRhL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpWIlEvdjFiZXRhL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyovYmFja3Vwcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaWCJTL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL2RhdGFiYXNlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaYSJcL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL2RhdGFiYXNlcy8qL3RhYmxlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaTyJKL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRlcmF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
+                },
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1beta/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjkvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw6ASo=")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",

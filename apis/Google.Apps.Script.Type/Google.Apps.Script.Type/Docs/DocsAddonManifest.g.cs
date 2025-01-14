@@ -52,6 +52,7 @@ namespace Google.Apps.Script.Type.Docs {
   /// <summary>
   /// Docs add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocsAddOnManifest : pb::IMessage<DocsAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -307,6 +308,7 @@ namespace Google.Apps.Script.Type.Docs {
   /// <summary>
   /// Common format for declaring a Docs add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocsExtensionPoint : pb::IMessage<DocsExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

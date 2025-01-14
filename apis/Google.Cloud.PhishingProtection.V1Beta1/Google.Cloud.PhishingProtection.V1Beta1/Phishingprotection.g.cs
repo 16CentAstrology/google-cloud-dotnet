@@ -36,8 +36,8 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
             "b3J0UGhpc2hpbmcSPi5nb29nbGUuY2xvdWQucGhpc2hpbmdwcm90ZWN0aW9u",
             "LnYxYmV0YTEuUmVwb3J0UGhpc2hpbmdSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3Vk",
             "LnBoaXNoaW5ncHJvdGVjdGlvbi52MWJldGExLlJlcG9ydFBoaXNoaW5nUmVz",
-            "cG9uc2UiRILT5JMCMSIsL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9w",
-            "aGlzaGluZzpyZXBvcnQ6ASraQQpwYXJlbnQsdXJpGlXKQSFwaGlzaGluZ3By",
+            "cG9uc2UiRNpBCnBhcmVudCx1cmmC0+STAjEiLC92MWJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn0vcGhpc2hpbmc6cmVwb3J0OgEqGlXKQSFwaGlzaGluZ3By",
             "b3RlY3Rpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
             "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqcCCiVjb20uZ29vZ2xlLnBo",
             "aXNoaW5ncHJvdGVjdGlvbi52MWJldGExQhdQaGlzaGluZ1Byb3RlY3Rpb25Q",
@@ -61,6 +61,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
   /// <summary>
   /// The ReportPhishing request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportPhishingRequest : pb::IMessage<ReportPhishingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -297,6 +298,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
   /// <summary>
   /// The ReportPhishing (empty) response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportPhishingResponse : pb::IMessage<ReportPhishingResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Tasks_GetTask_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,9 +35,9 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetTaskResourceNamesAsync()
         {
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
+            gcrv::TaskName name = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
             // Make the request
             gcrv::Task response = await tasksClient.GetTaskAsync(name);
         }

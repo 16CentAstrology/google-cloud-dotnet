@@ -41,13 +41,13 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "ZXNwb25zZSJMgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
             "bnMvKi9uYW1lc3BhY2VzLyovc2VydmljZXMvKn06cmVzb2x2ZToBKhpTykEf",
             "c2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/QEKJGNvbS5n",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C+gEKJGNvbS5n",
             "b29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MUISTG9va3VwU2Vydmlj",
             "ZVByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28vc2VydmljZWRpcmVjdG9y",
             "eS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2VydmljZWRpcmVjdG9yeXBi",
-            "+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjHKAiBHb29n",
-            "bGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6",
-            "OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90bzM="));
+            "qgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjHKAiBHb29nbGVc",
+            "Q2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OlNl",
+            "cnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1.ServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// [LookupService.ResolveService][google.cloud.servicedirectory.v1.LookupService.ResolveService].
   /// Looks up a service by its name, returns the service and its endpoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveServiceRequest : pb::IMessage<ResolveServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -148,22 +149,40 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     /// <summary>
     /// Optional. The filter applied to the endpoints of the resolved service.
     ///
-    /// General filter string syntax:
-    /// &lt;field> &lt;operator> &lt;value> (&lt;logical connector>)
-    /// &lt;field> can be "name" or "metadata.&lt;key>" for map field.
-    /// &lt;operator> can be "&lt;, >, &lt;=, >=, !=, =, :". Of which ":" means HAS and is
-    /// roughly the same as "=".
-    /// &lt;value> must be the same data type as the field.
-    /// &lt;logical connector> can be "AND, OR, NOT".
+    /// General `filter` string syntax:
+    /// `&lt;field> &lt;operator> &lt;value> (&lt;logical connector>)`
+    ///
+    /// *   `&lt;field>` can be `name`, `address`, `port`, or `annotations.&lt;key>` for
+    ///     map field
+    /// *   `&lt;operator>` can be `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, `:`. Of which `:`
+    ///     means `HAS`, and is roughly the same as `=`
+    /// *   `&lt;value>` must be the same data type as field
+    /// *   `&lt;logical connector>` can be `AND`, `OR`, `NOT`
     ///
     /// Examples of valid filters:
-    /// * "metadata.owner" returns Endpoints that have a label with the
-    ///   key "owner", this is the same as "metadata:owner"
-    /// * "metadata.protocol=gRPC" returns Endpoints that have key/value
-    ///   "protocol=gRPC"
-    /// * "metadata.owner!=sd AND metadata.foo=bar" returns
-    ///   Endpoints that have "owner" field in metadata with a value that is not
-    ///   "sd" AND have the key/value foo=bar.
+    ///
+    /// *   `annotations.owner` returns endpoints that have a annotation with the
+    ///     key `owner`, this is the same as `annotations:owner`
+    /// *   `annotations.protocol=gRPC` returns endpoints that have key/value
+    ///     `protocol=gRPC`
+    /// *   `address=192.108.1.105` returns endpoints that have this address
+    /// *   `port>8080` returns endpoints that have port number larger than 8080
+    /// *
+    /// `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-service/endpoints/endpoint-c`
+    ///     returns endpoints that have name that is alphabetically later than the
+    ///     string, so "endpoint-e" is returned but "endpoint-a" is not
+    /// *
+    /// `name=projects/my-project/locations/us-central1/namespaces/my-namespace/services/my-service/endpoints/ep-1`
+    ///      returns the endpoint that has an endpoint_id equal to `ep-1`
+    /// *   `annotations.owner!=sd AND annotations.foo=bar` returns endpoints that
+    ///     have `owner` in annotation key but value is not `sd` AND have
+    ///     key/value `foo=bar`
+    /// *   `doesnotexist.foo=bar` returns an empty list. Note that endpoint
+    ///     doesn't have a field called "doesnotexist". Since the filter does not
+    ///     match any endpoint, it returns no results
+    ///
+    /// For more information about filtering, see
+    /// [API Filtering](https://aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -359,6 +378,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The response message for
   /// [LookupService.ResolveService][google.cloud.servicedirectory.v1.LookupService.ResolveService].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveServiceResponse : pb::IMessage<ResolveServiceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

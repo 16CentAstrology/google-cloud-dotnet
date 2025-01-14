@@ -1,11 +1,11 @@
 // Copyright 2015 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -43,7 +43,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <summary>
-        /// Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+        /// Creates a copy of an object asynchronously, potentially to a different bucket. This method uses the
         /// <c>rewriteObject</c> underlying API operation for more flexibility and reliability.
         /// </summary>
         /// <param name="sourceBucket">The name of the bucket containing the object to copy. Must not be null.</param>
@@ -70,6 +70,6 @@ namespace Google.Cloud.Storage.V1
             CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
-        }        
+        }
     }
 }

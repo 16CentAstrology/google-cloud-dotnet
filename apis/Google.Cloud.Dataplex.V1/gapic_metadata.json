@@ -5,6 +5,171 @@
   "protoPackage": "google.cloud.dataplex.v1",
   "libraryPackage": "Google.Cloud.Dataplex.V1",
   "services": {
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "CancelMetadataJob": {
+              "methods": [
+                "CancelMetadataJob",
+                "CancelMetadataJobAsync"
+              ]
+            },
+            "CreateAspectType": {
+              "methods": [
+                "CreateAspectType",
+                "CreateAspectTypeAsync"
+              ]
+            },
+            "CreateEntry": {
+              "methods": [
+                "CreateEntry",
+                "CreateEntryAsync"
+              ]
+            },
+            "CreateEntryGroup": {
+              "methods": [
+                "CreateEntryGroup",
+                "CreateEntryGroupAsync"
+              ]
+            },
+            "CreateEntryType": {
+              "methods": [
+                "CreateEntryType",
+                "CreateEntryTypeAsync"
+              ]
+            },
+            "CreateMetadataJob": {
+              "methods": [
+                "CreateMetadataJob",
+                "CreateMetadataJobAsync"
+              ]
+            },
+            "DeleteAspectType": {
+              "methods": [
+                "DeleteAspectType",
+                "DeleteAspectTypeAsync"
+              ]
+            },
+            "DeleteEntry": {
+              "methods": [
+                "DeleteEntry",
+                "DeleteEntryAsync"
+              ]
+            },
+            "DeleteEntryGroup": {
+              "methods": [
+                "DeleteEntryGroup",
+                "DeleteEntryGroupAsync"
+              ]
+            },
+            "DeleteEntryType": {
+              "methods": [
+                "DeleteEntryType",
+                "DeleteEntryTypeAsync"
+              ]
+            },
+            "GetAspectType": {
+              "methods": [
+                "GetAspectType",
+                "GetAspectTypeAsync"
+              ]
+            },
+            "GetEntry": {
+              "methods": [
+                "GetEntry",
+                "GetEntryAsync"
+              ]
+            },
+            "GetEntryGroup": {
+              "methods": [
+                "GetEntryGroup",
+                "GetEntryGroupAsync"
+              ]
+            },
+            "GetEntryType": {
+              "methods": [
+                "GetEntryType",
+                "GetEntryTypeAsync"
+              ]
+            },
+            "GetMetadataJob": {
+              "methods": [
+                "GetMetadataJob",
+                "GetMetadataJobAsync"
+              ]
+            },
+            "ListAspectTypes": {
+              "methods": [
+                "ListAspectTypes",
+                "ListAspectTypesAsync"
+              ]
+            },
+            "ListEntries": {
+              "methods": [
+                "ListEntries",
+                "ListEntriesAsync"
+              ]
+            },
+            "ListEntryGroups": {
+              "methods": [
+                "ListEntryGroups",
+                "ListEntryGroupsAsync"
+              ]
+            },
+            "ListEntryTypes": {
+              "methods": [
+                "ListEntryTypes",
+                "ListEntryTypesAsync"
+              ]
+            },
+            "ListMetadataJobs": {
+              "methods": [
+                "ListMetadataJobs",
+                "ListMetadataJobsAsync"
+              ]
+            },
+            "LookupEntry": {
+              "methods": [
+                "LookupEntry",
+                "LookupEntryAsync"
+              ]
+            },
+            "SearchEntries": {
+              "methods": [
+                "SearchEntries",
+                "SearchEntriesAsync"
+              ]
+            },
+            "UpdateAspectType": {
+              "methods": [
+                "UpdateAspectType",
+                "UpdateAspectTypeAsync"
+              ]
+            },
+            "UpdateEntry": {
+              "methods": [
+                "UpdateEntry",
+                "UpdateEntryAsync"
+              ]
+            },
+            "UpdateEntryGroup": {
+              "methods": [
+                "UpdateEntryGroup",
+                "UpdateEntryGroupAsync"
+              ]
+            },
+            "UpdateEntryType": {
+              "methods": [
+                "UpdateEntryType",
+                "UpdateEntryTypeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ContentService": {
       "clients": {
         "grpc": {
@@ -79,6 +244,12 @@
                 "DeleteDataScanAsync"
               ]
             },
+            "GenerateDataQualityRules": {
+              "methods": [
+                "GenerateDataQualityRules",
+                "GenerateDataQualityRulesAsync"
+              ]
+            },
             "GetDataScan": {
               "methods": [
                 "GetDataScan",
@@ -113,6 +284,105 @@
               "methods": [
                 "UpdateDataScan",
                 "UpdateDataScanAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataTaxonomyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTaxonomyServiceClient",
+          "rpcs": {
+            "CreateDataAttribute": {
+              "methods": [
+                "CreateDataAttribute",
+                "CreateDataAttributeAsync"
+              ]
+            },
+            "CreateDataAttributeBinding": {
+              "methods": [
+                "CreateDataAttributeBinding",
+                "CreateDataAttributeBindingAsync"
+              ]
+            },
+            "CreateDataTaxonomy": {
+              "methods": [
+                "CreateDataTaxonomy",
+                "CreateDataTaxonomyAsync"
+              ]
+            },
+            "DeleteDataAttribute": {
+              "methods": [
+                "DeleteDataAttribute",
+                "DeleteDataAttributeAsync"
+              ]
+            },
+            "DeleteDataAttributeBinding": {
+              "methods": [
+                "DeleteDataAttributeBinding",
+                "DeleteDataAttributeBindingAsync"
+              ]
+            },
+            "DeleteDataTaxonomy": {
+              "methods": [
+                "DeleteDataTaxonomy",
+                "DeleteDataTaxonomyAsync"
+              ]
+            },
+            "GetDataAttribute": {
+              "methods": [
+                "GetDataAttribute",
+                "GetDataAttributeAsync"
+              ]
+            },
+            "GetDataAttributeBinding": {
+              "methods": [
+                "GetDataAttributeBinding",
+                "GetDataAttributeBindingAsync"
+              ]
+            },
+            "GetDataTaxonomy": {
+              "methods": [
+                "GetDataTaxonomy",
+                "GetDataTaxonomyAsync"
+              ]
+            },
+            "ListDataAttributeBindings": {
+              "methods": [
+                "ListDataAttributeBindings",
+                "ListDataAttributeBindingsAsync"
+              ]
+            },
+            "ListDataAttributes": {
+              "methods": [
+                "ListDataAttributes",
+                "ListDataAttributesAsync"
+              ]
+            },
+            "ListDataTaxonomies": {
+              "methods": [
+                "ListDataTaxonomies",
+                "ListDataTaxonomiesAsync"
+              ]
+            },
+            "UpdateDataAttribute": {
+              "methods": [
+                "UpdateDataAttribute",
+                "UpdateDataAttributeAsync"
+              ]
+            },
+            "UpdateDataAttributeBinding": {
+              "methods": [
+                "UpdateDataAttributeBinding",
+                "UpdateDataAttributeBindingAsync"
+              ]
+            },
+            "UpdateDataTaxonomy": {
+              "methods": [
+                "UpdateDataTaxonomy",
+                "UpdateDataTaxonomyAsync"
               ]
             }
           }
@@ -284,6 +554,12 @@
               "methods": [
                 "ListZones",
                 "ListZonesAsync"
+              ]
+            },
+            "RunTask": {
+              "methods": [
+                "RunTask",
+                "RunTaskAsync"
               ]
             },
             "UpdateAsset": {

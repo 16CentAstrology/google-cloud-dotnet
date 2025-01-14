@@ -97,6 +97,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// The full representation of a Service that is managed by
   /// Google Service Management.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManagedService : pb::IMessage<ManagedService>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -334,6 +335,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// The metadata associated with a long running operation resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -671,6 +673,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Represents the status of one operation step.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Step : pb::IMessage<Step>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -911,6 +914,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Represents a diagnostic message (error or warning)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Diagnostic : pb::IMessage<Diagnostic>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1209,6 +1213,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// Represents a source file which is used to generate the service configuration
   /// defined by `google.api.Service`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSource : pb::IMessage<ConfigSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1436,6 +1441,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Generic specification of a source configuration file
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigFile : pb::IMessage<ConfigFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1756,6 +1762,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Represents a service configuration with its name and id.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigRef : pb::IMessage<ConfigRef>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1962,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// It contains a list of ConfigChanges based on the comparison between
   /// two service configurations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeReport : pb::IMessage<ChangeReport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2145,6 +2153,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// to control plane systems. Typically, you create a new version of the
   /// service config, and then create a Rollout to push the service config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rollout : pb::IMessage<Rollout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2728,6 +2737,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       ///       }
       ///     }
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrafficPercentStrategy : pb::IMessage<TrafficPercentStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2865,7 +2875,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
           if (other == null) {
             return;
           }
-          percentages_.Add(other.percentages_);
+          percentages_.MergeFrom(other.percentages_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -2915,6 +2925,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Strategy used to delete a service. This strategy is a placeholder only
       /// used by the system generated rollout to delete a service.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeleteServiceStrategy : pb::IMessage<DeleteServiceStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

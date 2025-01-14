@@ -10,10 +10,22 @@
         "grpc": {
           "libraryClient": "LivestreamServiceClient",
           "rpcs": {
+            "CreateAsset": {
+              "methods": [
+                "CreateAsset",
+                "CreateAssetAsync"
+              ]
+            },
             "CreateChannel": {
               "methods": [
                 "CreateChannel",
                 "CreateChannelAsync"
+              ]
+            },
+            "CreateClip": {
+              "methods": [
+                "CreateClip",
+                "CreateClipAsync"
               ]
             },
             "CreateEvent": {
@@ -28,10 +40,22 @@
                 "CreateInputAsync"
               ]
             },
+            "DeleteAsset": {
+              "methods": [
+                "DeleteAsset",
+                "DeleteAssetAsync"
+              ]
+            },
             "DeleteChannel": {
               "methods": [
                 "DeleteChannel",
                 "DeleteChannelAsync"
+              ]
+            },
+            "DeleteClip": {
+              "methods": [
+                "DeleteClip",
+                "DeleteClipAsync"
               ]
             },
             "DeleteEvent": {
@@ -46,10 +70,22 @@
                 "DeleteInputAsync"
               ]
             },
+            "GetAsset": {
+              "methods": [
+                "GetAsset",
+                "GetAssetAsync"
+              ]
+            },
             "GetChannel": {
               "methods": [
                 "GetChannel",
                 "GetChannelAsync"
+              ]
+            },
+            "GetClip": {
+              "methods": [
+                "GetClip",
+                "GetClipAsync"
               ]
             },
             "GetEvent": {
@@ -64,10 +100,28 @@
                 "GetInputAsync"
               ]
             },
+            "GetPool": {
+              "methods": [
+                "GetPool",
+                "GetPoolAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
             "ListChannels": {
               "methods": [
                 "ListChannels",
                 "ListChannelsAsync"
+              ]
+            },
+            "ListClips": {
+              "methods": [
+                "ListClips",
+                "ListClipsAsync"
               ]
             },
             "ListEvents": {
@@ -104,6 +158,12 @@
               "methods": [
                 "UpdateInput",
                 "UpdateInputAsync"
+              ]
+            },
+            "UpdatePool": {
+              "methods": [
+                "UpdatePool",
+                "UpdatePoolAsync"
               ]
             }
           }

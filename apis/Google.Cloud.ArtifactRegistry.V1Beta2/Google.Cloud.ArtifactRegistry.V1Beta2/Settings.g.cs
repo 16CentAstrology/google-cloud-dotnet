@@ -65,6 +65,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The Artifact Registry settings that apply to a Project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectSettings : pb::IMessage<ProjectSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -336,6 +337,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// Gets the redirection status for a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProjectSettingsRequest : pb::IMessage<GetProjectSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -531,6 +533,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// Sets the settings of the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProjectSettingsRequest : pb::IMessage<UpdateProjectSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

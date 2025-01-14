@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2Beta1
 {
@@ -201,14 +201,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SessionEntityTypesClient.Create(callInvoker, Settings, Logger);
+            return SessionEntityTypesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SessionEntityTypesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SessionEntityTypesClient.Create(callInvoker, Settings, Logger);
+            return SessionEntityTypesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -367,13 +367,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypes(new ListSessionEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -408,13 +417,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -449,13 +467,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypes(new ListSessionEntityTypesRequest
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
@@ -490,13 +517,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionEntityTypesAsync(new ListSessionEntityTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionEntityTypesRequest request = new ListSessionEntityTypesRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionEntityTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified session entity type.
@@ -1390,7 +1426,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             SessionEntityTypesSettings effectiveSettings = settings ?? SessionEntityTypesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListSessionEntityTypes = clientHelper.BuildApiCall<ListSessionEntityTypesRequest, ListSessionEntityTypesResponse>("ListSessionEntityTypes", grpcClient.ListSessionEntityTypesAsync, grpcClient.ListSessionEntityTypes, effectiveSettings.ListSessionEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSessionEntityTypes);

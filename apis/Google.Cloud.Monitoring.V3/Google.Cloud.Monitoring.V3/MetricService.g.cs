@@ -41,130 +41,131 @@ namespace Google.Cloud.Monitoring.V3 {
             "Lk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvchIXCg9uZXh0X3BhZ2VfdG9r",
             "ZW4YAiABKAkidAolR2V0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yUmVx",
             "dWVzdBJLCgRuYW1lGAMgASgJQj3gQQL6QTcKNW1vbml0b3JpbmcuZ29vZ2xl",
-            "YXBpcy5jb20vTW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yIpcBChxMaXN0",
+            "YXBpcy5jb20vTW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yIsABChxMaXN0",
             "TWV0cmljRGVzY3JpcHRvcnNSZXF1ZXN0EkAKBG5hbWUYBSABKAlCMuBBAvpB",
             "LBIqbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9NZXRyaWNEZXNjcmlwdG9y",
-            "Eg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90",
-            "b2tlbhgEIAEoCSJyCh1MaXN0TWV0cmljRGVzY3JpcHRvcnNSZXNwb25zZRI4",
-            "ChJtZXRyaWNfZGVzY3JpcHRvcnMYASADKAsyHC5nb29nbGUuYXBpLk1ldHJp",
-            "Y0Rlc2NyaXB0b3ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl4KGkdldE1l",
-            "dHJpY0Rlc2NyaXB0b3JSZXF1ZXN0EkAKBG5hbWUYAyABKAlCMuBBAvpBLAoq",
-            "bW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9NZXRyaWNEZXNjcmlwdG9yIp8B",
-            "Ch1DcmVhdGVNZXRyaWNEZXNjcmlwdG9yUmVxdWVzdBJACgRuYW1lGAMgASgJ",
-            "QjLgQQL6QSwSKm1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vTWV0cmljRGVz",
-            "Y3JpcHRvchI8ChFtZXRyaWNfZGVzY3JpcHRvchgCIAEoCzIcLmdvb2dsZS5h",
-            "cGkuTWV0cmljRGVzY3JpcHRvckID4EECImEKHURlbGV0ZU1ldHJpY0Rlc2Ny",
-            "aXB0b3JSZXF1ZXN0EkAKBG5hbWUYAyABKAlCMuBBAvpBLAoqbW9uaXRvcmlu",
-            "Zy5nb29nbGVhcGlzLmNvbS9NZXRyaWNEZXNjcmlwdG9yIs4DChVMaXN0VGlt",
-            "ZVNlcmllc1JlcXVlc3QSOgoEbmFtZRgKIAEoCUIs4EEC+kEmEiRtb25pdG9y",
-            "aW5nLmdvb2dsZWFwaXMuY29tL1RpbWVTZXJpZXMSEwoGZmlsdGVyGAIgASgJ",
-            "QgPgQQISOQoIaW50ZXJ2YWwYBCABKAsyIi5nb29nbGUubW9uaXRvcmluZy52",
-            "My5UaW1lSW50ZXJ2YWxCA+BBAhI2CgthZ2dyZWdhdGlvbhgFIAEoCzIhLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9uEkAKFXNlY29uZGFyeV9h",
-            "Z2dyZWdhdGlvbhgLIAEoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFnZ3Jl",
-            "Z2F0aW9uEhAKCG9yZGVyX2J5GAYgASgJEk0KBHZpZXcYByABKA4yOi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5MaXN0VGltZVNlcmllc1JlcXVlc3QuVGltZVNl",
-            "cmllc1ZpZXdCA+BBAhIRCglwYWdlX3NpemUYCCABKAUSEgoKcGFnZV90b2tl",
-            "bhgJIAEoCSInCg5UaW1lU2VyaWVzVmlldxIICgRGVUxMEAASCwoHSEVBREVS",
-            "UxABIqQBChZMaXN0VGltZVNlcmllc1Jlc3BvbnNlEjUKC3RpbWVfc2VyaWVz",
-            "GAEgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZVNlcmllcxIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkSLAoQZXhlY3V0aW9uX2Vycm9ycxgDIAMo",
-            "CzISLmdvb2dsZS5ycGMuU3RhdHVzEgwKBHVuaXQYBSABKAkimAEKF0NyZWF0",
-            "ZVRpbWVTZXJpZXNSZXF1ZXN0EkEKBG5hbWUYAyABKAlCM+BBAvpBLQorY2xv",
-            "dWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBI6Cgt0",
-            "aW1lX3NlcmllcxgCIAMoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVT",
-            "ZXJpZXNCA+BBAiJ6ChVDcmVhdGVUaW1lU2VyaWVzRXJyb3ISOQoLdGltZV9z",
-            "ZXJpZXMYASABKAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UaW1lU2VyaWVz",
-            "QgIYARImCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ICGAEi",
-            "2AEKF0NyZWF0ZVRpbWVTZXJpZXNTdW1tYXJ5EhkKEXRvdGFsX3BvaW50X2Nv",
-            "dW50GAEgASgFEhsKE3N1Y2Nlc3NfcG9pbnRfY291bnQYAiABKAUSQwoGZXJy",
-            "b3JzGAMgAygLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQ3JlYXRlVGltZVNl",
-            "cmllc1N1bW1hcnkuRXJyb3IaQAoFRXJyb3ISIgoGc3RhdHVzGAEgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXMSEwoLcG9pbnRfY291bnQYAiABKAUiZgoWUXVl",
-            "cnlUaW1lU2VyaWVzUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISEgoFcXVl",
-            "cnkYByABKAlCA+BBAhIRCglwYWdlX3NpemUYCSABKAUSEgoKcGFnZV90b2tl",
-            "bhgKIAEoCSLqAQoXUXVlcnlUaW1lU2VyaWVzUmVzcG9uc2USSgoWdGltZV9z",
+            "EhMKBmZpbHRlchgCIAEoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEB",
+            "EhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BBARIYCgthY3RpdmVfb25seRgGIAEo",
+            "CEID4EEBInIKHUxpc3RNZXRyaWNEZXNjcmlwdG9yc1Jlc3BvbnNlEjgKEm1l",
+            "dHJpY19kZXNjcmlwdG9ycxgBIAMoCzIcLmdvb2dsZS5hcGkuTWV0cmljRGVz",
+            "Y3JpcHRvchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXgoaR2V0TWV0cmlj",
+            "RGVzY3JpcHRvclJlcXVlc3QSQAoEbmFtZRgDIAEoCUIy4EEC+kEsCiptb25p",
+            "dG9yaW5nLmdvb2dsZWFwaXMuY29tL01ldHJpY0Rlc2NyaXB0b3IinwEKHUNy",
+            "ZWF0ZU1ldHJpY0Rlc2NyaXB0b3JSZXF1ZXN0EkAKBG5hbWUYAyABKAlCMuBB",
+            "AvpBLBIqbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9NZXRyaWNEZXNjcmlw",
+            "dG9yEjwKEW1ldHJpY19kZXNjcmlwdG9yGAIgASgLMhwuZ29vZ2xlLmFwaS5N",
+            "ZXRyaWNEZXNjcmlwdG9yQgPgQQIiYQodRGVsZXRlTWV0cmljRGVzY3JpcHRv",
+            "clJlcXVlc3QSQAoEbmFtZRgDIAEoCUIy4EEC+kEsCiptb25pdG9yaW5nLmdv",
+            "b2dsZWFwaXMuY29tL01ldHJpY0Rlc2NyaXB0b3IizgMKFUxpc3RUaW1lU2Vy",
+            "aWVzUmVxdWVzdBI6CgRuYW1lGAogASgJQizgQQL6QSYSJG1vbml0b3Jpbmcu",
+            "Z29vZ2xlYXBpcy5jb20vVGltZVNlcmllcxITCgZmaWx0ZXIYAiABKAlCA+BB",
+            "AhI5CghpbnRlcnZhbBgEIAEoCzIiLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRp",
+            "bWVJbnRlcnZhbEID4EECEjYKC2FnZ3JlZ2F0aW9uGAUgASgLMiEuZ29vZ2xl",
+            "Lm1vbml0b3JpbmcudjMuQWdncmVnYXRpb24SQAoVc2Vjb25kYXJ5X2FnZ3Jl",
+            "Z2F0aW9uGAsgASgLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWdncmVnYXRp",
+            "b24SEAoIb3JkZXJfYnkYBiABKAkSTQoEdmlldxgHIAEoDjI6Lmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkxpc3RUaW1lU2VyaWVzUmVxdWVzdC5UaW1lU2VyaWVz",
+            "Vmlld0ID4EECEhEKCXBhZ2Vfc2l6ZRgIIAEoBRISCgpwYWdlX3Rva2VuGAkg",
+            "ASgJIicKDlRpbWVTZXJpZXNWaWV3EggKBEZVTEwQABILCgdIRUFERVJTEAEi",
+            "pAEKFkxpc3RUaW1lU2VyaWVzUmVzcG9uc2USNQoLdGltZV9zZXJpZXMYASAD",
+            "KAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UaW1lU2VyaWVzEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCRIsChBleGVjdXRpb25fZXJyb3JzGAMgAygLMhIu",
+            "Z29vZ2xlLnJwYy5TdGF0dXMSDAoEdW5pdBgFIAEoCSKYAQoXQ3JlYXRlVGlt",
+            "ZVNlcmllc1JlcXVlc3QSQQoEbmFtZRgDIAEoCUIz4EEC+kEtCitjbG91ZHJl",
+            "c291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EjoKC3RpbWVf",
+            "c2VyaWVzGAIgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZVNlcmll",
+            "c0ID4EECInoKFUNyZWF0ZVRpbWVTZXJpZXNFcnJvchI5Cgt0aW1lX3Nlcmll",
+            "cxgBIAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNCAhgB",
+            "EiYKBnN0YXR1cxgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgIYASLYAQoX",
+            "Q3JlYXRlVGltZVNlcmllc1N1bW1hcnkSGQoRdG90YWxfcG9pbnRfY291bnQY",
+            "ASABKAUSGwoTc3VjY2Vzc19wb2ludF9jb3VudBgCIAEoBRJDCgZlcnJvcnMY",
+            "AyADKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVUaW1lU2VyaWVz",
+            "U3VtbWFyeS5FcnJvchpACgVFcnJvchIiCgZzdGF0dXMYASABKAsyEi5nb29n",
+            "bGUucnBjLlN0YXR1cxITCgtwb2ludF9jb3VudBgCIAEoBSJqChZRdWVyeVRp",
+            "bWVTZXJpZXNSZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BBAhISCgVxdWVyeRgH",
+            "IAEoCUID4EECEhEKCXBhZ2Vfc2l6ZRgJIAEoBRISCgpwYWdlX3Rva2VuGAog",
+            "ASgJOgIYASLuAQoXUXVlcnlUaW1lU2VyaWVzUmVzcG9uc2USSgoWdGltZV9z",
             "ZXJpZXNfZGVzY3JpcHRvchgIIAEoCzIqLmdvb2dsZS5tb25pdG9yaW5nLnYz",
             "LlRpbWVTZXJpZXNEZXNjcmlwdG9yEj4KEHRpbWVfc2VyaWVzX2RhdGEYCSAD",
             "KAsyJC5nb29nbGUubW9uaXRvcmluZy52My5UaW1lU2VyaWVzRGF0YRIXCg9u",
             "ZXh0X3BhZ2VfdG9rZW4YCiABKAkSKgoOcGFydGlhbF9lcnJvcnMYCyADKAsy",
-            "Ei5nb29nbGUucnBjLlN0YXR1cyJZCg5RdWVyeUVycm9yTGlzdBIwCgZlcnJv",
-            "cnMYASADKAsyIC5nb29nbGUubW9uaXRvcmluZy52My5RdWVyeUVycm9yEhUK",
-            "DWVycm9yX3N1bW1hcnkYAiABKAkyvA8KDU1ldHJpY1NlcnZpY2US5AEKIExp",
-            "c3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzEj0uZ29vZ2xlLm1vbml0",
-            "b3JpbmcudjMuTGlzdE1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnNSZXF1",
-            "ZXN0Gj4uZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdE1vbml0b3JlZFJlc291",
-            "cmNlRGVzY3JpcHRvcnNSZXNwb25zZSJBgtPkkwI0EjIvdjMve25hbWU9cHJv",
-            "amVjdHMvKn0vbW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yc9pBBG5hbWUS",
-            "zAEKHkdldE1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvchI7Lmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkdldE1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvclJl",
-            "cXVlc3QaJy5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRv",
-            "ciJEgtPkkwI3EjUvdjMve25hbWU9cHJvamVjdHMvKi9tb25pdG9yZWRSZXNv",
-            "dXJjZURlc2NyaXB0b3JzLyoqfdpBBG5hbWUSuAEKFUxpc3RNZXRyaWNEZXNj",
-            "cmlwdG9ycxIyLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RNZXRyaWNEZXNj",
-            "cmlwdG9yc1JlcXVlc3QaMy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0TWV0",
-            "cmljRGVzY3JpcHRvcnNSZXNwb25zZSI2gtPkkwIpEicvdjMve25hbWU9cHJv",
-            "amVjdHMvKn0vbWV0cmljRGVzY3JpcHRvcnPaQQRuYW1lEqABChNHZXRNZXRy",
-            "aWNEZXNjcmlwdG9yEjAuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0TWV0cmlj",
-            "RGVzY3JpcHRvclJlcXVlc3QaHC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0",
-            "b3IiOYLT5JMCLBIqL3YzL3tuYW1lPXByb2plY3RzLyovbWV0cmljRGVzY3Jp",
-            "cHRvcnMvKip92kEEbmFtZRLIAQoWQ3JlYXRlTWV0cmljRGVzY3JpcHRvchIz",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZU1ldHJpY0Rlc2NyaXB0b3JS",
-            "ZXF1ZXN0GhwuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yIluC0+STAjwi",
-            "Jy92My97bmFtZT1wcm9qZWN0cy8qfS9tZXRyaWNEZXNjcmlwdG9yczoRbWV0",
-            "cmljX2Rlc2NyaXB0b3LaQRZuYW1lLG1ldHJpY19kZXNjcmlwdG9yEqABChZE",
-            "ZWxldGVNZXRyaWNEZXNjcmlwdG9yEjMuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "RGVsZXRlTWV0cmljRGVzY3JpcHRvclJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiOYLT5JMCLCoqL3YzL3tuYW1lPXByb2plY3RzLyovbWV0cmlj",
-            "RGVzY3JpcHRvcnMvKip92kEEbmFtZRL+AQoOTGlzdFRpbWVTZXJpZXMSKy5n",
-            "b29nbGUubW9uaXRvcmluZy52My5MaXN0VGltZVNlcmllc1JlcXVlc3QaLC5n",
-            "b29nbGUubW9uaXRvcmluZy52My5MaXN0VGltZVNlcmllc1Jlc3BvbnNlIpAB",
-            "gtPkkwJuEiAvdjMve25hbWU9cHJvamVjdHMvKn0vdGltZVNlcmllc1onEiUv",
-            "djMve25hbWU9b3JnYW5pemF0aW9ucy8qfS90aW1lU2VyaWVzWiESHy92My97",
-            "bmFtZT1mb2xkZXJzLyp9L3RpbWVTZXJpZXPaQRluYW1lLGZpbHRlcixpbnRl",
-            "cnZhbCx2aWV3EpkBChBDcmVhdGVUaW1lU2VyaWVzEi0uZ29vZ2xlLm1vbml0",
-            "b3JpbmcudjMuQ3JlYXRlVGltZVNlcmllc1JlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiPoLT5JMCJSIgL3YzL3tuYW1lPXByb2plY3RzLyp9L3Rp",
-            "bWVTZXJpZXM6ASraQRBuYW1lLHRpbWVfc2VyaWVzEq4BChdDcmVhdGVTZXJ2",
-            "aWNlVGltZVNlcmllcxItLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZVRp",
-            "bWVTZXJpZXNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkyC0+ST",
-            "AjMiLi92My97bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVzOmNyZWF0ZVNl",
-            "cnZpY2U6ASraQRBuYW1lLHRpbWVfc2VyaWVzGtoBykEZbW9uaXRvcmluZy5n",
-            "b29nbGVhcGlzLmNvbdJBugFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvbW9uaXRvcmluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL21vbml0b3JpbmcucmVhZCxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL21vbml0b3Jpbmcud3JpdGVChggKGGNvbS5nb29nbGUubW9uaXRv",
-            "cmluZy52M0ISTWV0cmljU2VydmljZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9y",
-            "aW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xv",
-            "dWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6",
-            "OlYz6kHwAQoqbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9NZXRyaWNEZXNj",
-            "cmlwdG9yEjtwcm9qZWN0cy97cHJvamVjdH0vbWV0cmljRGVzY3JpcHRvcnMv",
-            "e21ldHJpY19kZXNjcmlwdG9yPSoqfRJFb3JnYW5pemF0aW9ucy97b3JnYW5p",
-            "emF0aW9ufS9tZXRyaWNEZXNjcmlwdG9ycy97bWV0cmljX2Rlc2NyaXB0b3I9",
-            "Kip9Ejlmb2xkZXJzL3tmb2xkZXJ9L21ldHJpY0Rlc2NyaXB0b3JzL3ttZXRy",
-            "aWNfZGVzY3JpcHRvcj0qKn0SASogAepBtwIKNW1vbml0b3JpbmcuZ29vZ2xl",
-            "YXBpcy5jb20vTW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yEk9wcm9qZWN0",
-            "cy97cHJvamVjdH0vbW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycy97bW9u",
-            "aXRvcmVkX3Jlc291cmNlX2Rlc2NyaXB0b3J9Ellvcmdhbml6YXRpb25zL3tv",
-            "cmdhbml6YXRpb259L21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMve21v",
-            "bml0b3JlZF9yZXNvdXJjZV9kZXNjcmlwdG9yfRJNZm9sZGVycy97Zm9sZGVy",
-            "fS9tb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzL3ttb25pdG9yZWRfcmVz",
-            "b3VyY2VfZGVzY3JpcHRvcn0SASogAepBUQojbW9uaXRvcmluZy5nb29nbGVh",
-            "cGlzLmNvbS9Xb3Jrc3BhY2USEnByb2plY3RzL3twcm9qZWN0fRIWd29ya3Nw",
-            "YWNlcy97d29ya3NwYWNlfepBtQEKJG1vbml0b3JpbmcuZ29vZ2xlYXBpcy5j",
-            "b20vVGltZVNlcmllcxIrcHJvamVjdHMve3Byb2plY3R9L3RpbWVTZXJpZXMv",
-            "e3RpbWVfc2VyaWVzfRI1b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS90",
-            "aW1lU2VyaWVzL3t0aW1lX3Nlcmllc30SKWZvbGRlcnMve2ZvbGRlcn0vdGlt",
-            "ZVNlcmllcy97dGltZV9zZXJpZXN9YgZwcm90bzM="));
+            "Ei5nb29nbGUucnBjLlN0YXR1czoCGAEiWQoOUXVlcnlFcnJvckxpc3QSMAoG",
+            "ZXJyb3JzGAEgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuUXVlcnlFcnJv",
+            "chIVCg1lcnJvcl9zdW1tYXJ5GAIgASgJMrwPCg1NZXRyaWNTZXJ2aWNlEuQB",
+            "CiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycxI9Lmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3Jz",
+            "UmVxdWVzdBo+Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RNb25pdG9yZWRS",
+            "ZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiQdpBBG5hbWWC0+STAjQSMi92",
+            "My97bmFtZT1wcm9qZWN0cy8qfS9tb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0",
+            "b3JzEswBCh5HZXRNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3ISOy5nb29n",
+            "bGUubW9uaXRvcmluZy52My5HZXRNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0",
+            "b3JSZXF1ZXN0GicuZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZURlc2Ny",
+            "aXB0b3IiRNpBBG5hbWWC0+STAjcSNS92My97bmFtZT1wcm9qZWN0cy8qL21v",
+            "bml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMvKip9ErgBChVMaXN0TWV0cmlj",
+            "RGVzY3JpcHRvcnMSMi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0TWV0cmlj",
+            "RGVzY3JpcHRvcnNSZXF1ZXN0GjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlz",
+            "dE1ldHJpY0Rlc2NyaXB0b3JzUmVzcG9uc2UiNtpBBG5hbWWC0+STAikSJy92",
+            "My97bmFtZT1wcm9qZWN0cy8qfS9tZXRyaWNEZXNjcmlwdG9ycxKgAQoTR2V0",
+            "TWV0cmljRGVzY3JpcHRvchIwLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldE1l",
+            "dHJpY0Rlc2NyaXB0b3JSZXF1ZXN0GhwuZ29vZ2xlLmFwaS5NZXRyaWNEZXNj",
+            "cmlwdG9yIjnaQQRuYW1lgtPkkwIsEiovdjMve25hbWU9cHJvamVjdHMvKi9t",
+            "ZXRyaWNEZXNjcmlwdG9ycy8qKn0SyAEKFkNyZWF0ZU1ldHJpY0Rlc2NyaXB0",
+            "b3ISMy5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVNZXRyaWNEZXNjcmlw",
+            "dG9yUmVxdWVzdBocLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvciJb2kEW",
+            "bmFtZSxtZXRyaWNfZGVzY3JpcHRvcoLT5JMCPCInL3YzL3tuYW1lPXByb2pl",
+            "Y3RzLyp9L21ldHJpY0Rlc2NyaXB0b3JzOhFtZXRyaWNfZGVzY3JpcHRvchKg",
+            "AQoWRGVsZXRlTWV0cmljRGVzY3JpcHRvchIzLmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLkRlbGV0ZU1ldHJpY0Rlc2NyaXB0b3JSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IjnaQQRuYW1lgtPkkwIsKiovdjMve25hbWU9cHJvamVj",
+            "dHMvKi9tZXRyaWNEZXNjcmlwdG9ycy8qKn0S/gEKDkxpc3RUaW1lU2VyaWVz",
+            "EisuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFRpbWVTZXJpZXNSZXF1ZXN0",
+            "GiwuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdFRpbWVTZXJpZXNSZXNwb25z",
+            "ZSKQAdpBGW5hbWUsZmlsdGVyLGludGVydmFsLHZpZXeC0+STAm4SIC92My97",
+            "bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVzWicSJS92My97bmFtZT1vcmdh",
+            "bml6YXRpb25zLyp9L3RpbWVTZXJpZXNaIRIfL3YzL3tuYW1lPWZvbGRlcnMv",
+            "Kn0vdGltZVNlcmllcxKZAQoQQ3JlYXRlVGltZVNlcmllcxItLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkNyZWF0ZVRpbWVTZXJpZXNSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Ij7aQRBuYW1lLHRpbWVfc2VyaWVzgtPkkwIlIiAv",
+            "djMve25hbWU9cHJvamVjdHMvKn0vdGltZVNlcmllczoBKhKuAQoXQ3JlYXRl",
+            "U2VydmljZVRpbWVTZXJpZXMSLS5nb29nbGUubW9uaXRvcmluZy52My5DcmVh",
+            "dGVUaW1lU2VyaWVzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJM",
+            "2kEQbmFtZSx0aW1lX3Nlcmllc4LT5JMCMyIuL3YzL3tuYW1lPXByb2plY3Rz",
+            "Lyp9L3RpbWVTZXJpZXM6Y3JlYXRlU2VydmljZToBKhraAcpBGW1vbml0b3Jp",
+            "bmcuZ29vZ2xlYXBpcy5jb23SQboBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL21vbml0b3JpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9tb25pdG9yaW5nLnJlYWQsaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9tb25pdG9yaW5nLndyaXRlQokIChhjb20uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjNCEk1ldHJpY1NlcnZpY2VQcm90b1ABWkFjbG91ZC5nb29n",
+            "bGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMvdjIvbW9uaXRvcmluZ3BiO21v",
+            "bml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIaR29v",
+            "Z2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6OkNsb3VkOjpNb25p",
+            "dG9yaW5nOjpWM+pB8AEKKm1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vTWV0",
+            "cmljRGVzY3JpcHRvchI7cHJvamVjdHMve3Byb2plY3R9L21ldHJpY0Rlc2Ny",
+            "aXB0b3JzL3ttZXRyaWNfZGVzY3JpcHRvcj0qKn0SRW9yZ2FuaXphdGlvbnMv",
+            "e29yZ2FuaXphdGlvbn0vbWV0cmljRGVzY3JpcHRvcnMve21ldHJpY19kZXNj",
+            "cmlwdG9yPSoqfRI5Zm9sZGVycy97Zm9sZGVyfS9tZXRyaWNEZXNjcmlwdG9y",
+            "cy97bWV0cmljX2Rlc2NyaXB0b3I9Kip9EgEqIAHqQbcCCjVtb25pdG9yaW5n",
+            "Lmdvb2dsZWFwaXMuY29tL01vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvchJP",
+            "cHJvamVjdHMve3Byb2plY3R9L21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRv",
+            "cnMve21vbml0b3JlZF9yZXNvdXJjZV9kZXNjcmlwdG9yfRJZb3JnYW5pemF0",
+            "aW9ucy97b3JnYW5pemF0aW9ufS9tb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0",
+            "b3JzL3ttb25pdG9yZWRfcmVzb3VyY2VfZGVzY3JpcHRvcn0STWZvbGRlcnMv",
+            "e2ZvbGRlcn0vbW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycy97bW9uaXRv",
+            "cmVkX3Jlc291cmNlX2Rlc2NyaXB0b3J9EgEqIAHqQVEKI21vbml0b3Jpbmcu",
+            "Z29vZ2xlYXBpcy5jb20vV29ya3NwYWNlEhJwcm9qZWN0cy97cHJvamVjdH0S",
+            "FndvcmtzcGFjZXMve3dvcmtzcGFjZX3qQbUBCiRtb25pdG9yaW5nLmdvb2ds",
+            "ZWFwaXMuY29tL1RpbWVTZXJpZXMSK3Byb2plY3RzL3twcm9qZWN0fS90aW1l",
+            "U2VyaWVzL3t0aW1lX3Nlcmllc30SNW9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
+            "dGlvbn0vdGltZVNlcmllcy97dGltZV9zZXJpZXN9Eilmb2xkZXJzL3tmb2xk",
+            "ZXJ9L3RpbWVTZXJpZXMve3RpbWVfc2VyaWVzfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken", "ActiveOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser, new[]{ "MetricDescriptors", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser, new[]{ "Name", "MetricDescriptor" }, null, null, null, null),
@@ -186,6 +187,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListMonitoredResourceDescriptors` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMonitoredResourceDescriptorsRequest : pb::IMessage<ListMonitoredResourceDescriptorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -237,8 +239,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -511,6 +514,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListMonitoredResourceDescriptors` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMonitoredResourceDescriptorsResponse : pb::IMessage<ListMonitoredResourceDescriptorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -738,6 +742,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetMonitoredResourceDescriptor` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetMonitoredResourceDescriptorRequest : pb::IMessage<GetMonitoredResourceDescriptorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -938,6 +943,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListMetricDescriptors` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMetricDescriptorsRequest : pb::IMessage<ListMetricDescriptorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -976,6 +982,7 @@ namespace Google.Cloud.Monitoring.V3 {
       filter_ = other.filter_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      activeOnly_ = other.activeOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -989,8 +996,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1007,7 +1015,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// If this field is empty, all custom and
+    /// Optional. If this field is empty, all custom and
     /// system-defined metric descriptors are returned.
     /// Otherwise, the [filter](https://cloud.google.com/monitoring/api/v3/filters)
     /// specifies which metric descriptors are to be
@@ -1029,7 +1037,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// A positive number that is the maximum number of results to return.
+    /// Optional. A positive number that is the maximum number of results to
+    /// return. The default and maximum value is 10,000. If a page_size &lt;= 0 or >
+    /// 10,000 is submitted, will instead return a maximum of 10,000 results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1044,9 +1054,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// If this field is not empty then it must contain the `nextPageToken` value
-    /// returned by a previous call to this method.  Using this field causes the
-    /// method to return additional results from the previous method call.
+    /// Optional. If this field is not empty then it must contain the
+    /// `nextPageToken` value returned by a previous call to this method.  Using
+    /// this field causes the method to return additional results from the previous
+    /// method call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1054,6 +1065,30 @@ namespace Google.Cloud.Monitoring.V3 {
       get { return pageToken_; }
       set {
         pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "active_only" field.</summary>
+    public const int ActiveOnlyFieldNumber = 6;
+    private bool activeOnly_;
+    /// <summary>
+    /// Optional. If true, only metrics and monitored resource types that have
+    /// recent data (within roughly 25 hours) will be included in the response.
+    ///  - If a metric descriptor enumerates monitored resource types, only the
+    ///    monitored resource types for which the metric type has recent data will
+    ///    be included in the returned metric descriptor, and if none of them have
+    ///    recent data, the metric descriptor will not be returned.
+    ///  - If a metric descriptor does not enumerate the compatible monitored
+    ///    resource types, it will be returned only if the metric type has recent
+    ///    data for some monitored resource type. The returned descriptor will not
+    ///    enumerate any monitored resource types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ActiveOnly {
+      get { return activeOnly_; }
+      set {
+        activeOnly_ = value;
       }
     }
 
@@ -1076,6 +1111,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Filter != other.Filter) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ActiveOnly != other.ActiveOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1087,6 +1123,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ActiveOnly != false) hash ^= ActiveOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1121,6 +1158,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(42);
         output.WriteString(Name);
       }
+      if (ActiveOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ActiveOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1147,6 +1188,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(42);
         output.WriteString(Name);
       }
+      if (ActiveOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ActiveOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1168,6 +1213,9 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ActiveOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1192,6 +1240,9 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ActiveOnly != false) {
+        ActiveOnly = other.ActiveOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1222,6 +1273,10 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 42: {
             Name = input.ReadString();
+            break;
+          }
+          case 48: {
+            ActiveOnly = input.ReadBool();
             break;
           }
         }
@@ -1255,6 +1310,10 @@ namespace Google.Cloud.Monitoring.V3 {
             Name = input.ReadString();
             break;
           }
+          case 48: {
+            ActiveOnly = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1265,6 +1324,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListMetricDescriptors` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMetricDescriptorsResponse : pb::IMessage<ListMetricDescriptorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1492,6 +1552,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetMetricDescriptor` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetMetricDescriptorRequest : pb::IMessage<GetMetricDescriptorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1540,7 +1601,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is:
+    /// Required. The metric descriptor on which to execute the request. The format
+    /// is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
     ///
@@ -1692,6 +1754,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateMetricDescriptor` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateMetricDescriptorRequest : pb::IMessage<CreateMetricDescriptorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1741,8 +1804,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     /// 4
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1759,8 +1823,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricDescriptorFieldNumber = 2;
     private global::Google.Api.MetricDescriptor metricDescriptor_;
     /// <summary>
-    /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-    /// descriptor.
+    /// Required. The new [custom
+    /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1940,6 +2004,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `DeleteMetricDescriptor` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteMetricDescriptorRequest : pb::IMessage<DeleteMetricDescriptorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1988,7 +2053,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is:
+    /// Required. The metric descriptor on which to execute the request. The format
+    /// is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
     ///
@@ -2140,6 +2206,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListTimeSeries` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTimeSeriesRequest : pb::IMessage<ListTimeSeriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2196,7 +2263,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 10;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
     /// organization or folder on which to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
@@ -2216,10 +2284,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-    /// that specifies which time series should be returned.  The filter must
-    /// specify a single metric type, and can additionally specify metric labels
-    /// and other information. For example:
+    /// Required. A [monitoring
+    /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+    /// which time series should be returned.  The filter must specify a single
+    /// metric type, and can additionally specify metric labels and other
+    /// information. For example:
     ///
     ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
     ///         metric.labels.instance_name = "my-instance-name"
@@ -2237,9 +2306,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int IntervalFieldNumber = 4;
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
-    /// Required. The time interval for which results should be returned. Only time series
-    /// that contain data points in the specified interval are included
-    /// in the response.
+    /// Required. The time interval for which results should be returned. Only time
+    /// series that contain data points in the specified interval are included in
+    /// the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2708,7 +2777,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Controls which fields are returned by `ListTimeSeries`.
+      /// Controls which fields are returned by `ListTimeSeries*`.
       /// </summary>
       public enum TimeSeriesView {
         /// <summary>
@@ -2731,6 +2800,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListTimeSeries` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTimeSeriesResponse : pb::IMessage<ListTimeSeriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3032,6 +3102,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateTimeSeries` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTimeSeriesRequest : pb::IMessage<CreateTimeSeriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3081,8 +3152,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -3265,6 +3337,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// DEPRECATED. Used to hold per-time-series error status.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTimeSeriesError : pb::IMessage<CreateTimeSeriesError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3520,6 +3593,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// Summary of the result of a failed request to write data to a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTimeSeriesSummary : pb::IMessage<CreateTimeSeriesSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3787,6 +3861,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Detailed information about an error category.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Error : pb::IMessage<Error>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4034,8 +4109,12 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// The `QueryTimeSeries` request.
+  /// The `QueryTimeSeries` request. For information about the status of
+  /// Monitoring Query Language (MQL), see the [MQL deprecation
+  /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
   /// </summary>
+  [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTimeSeriesRequest : pb::IMessage<QueryTimeSeriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4087,8 +4166,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -4356,8 +4436,12 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// The `QueryTimeSeries` response.
+  /// The `QueryTimeSeries` response. For information about the status of
+  /// Monitoring Query Language (MQL), see the [MQL deprecation
+  /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
   /// </summary>
+  [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTimeSeriesResponse : pb::IMessage<QueryTimeSeriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4664,6 +4748,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// This is an error detail intended to be used with INVALID_ARGUMENT errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryErrorList : pb::IMessage<QueryErrorList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

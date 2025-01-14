@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastream.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Datastream.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1840,6 +1841,75 @@ namespace Google.Cloud.Datastream.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunStream</summary>
+        public void RunStreamRequestObject()
+        {
+            // Snippet: RunStream(RunStreamRequest, CallSettings)
+            // Create client
+            DatastreamClient datastreamClient = DatastreamClient.Create();
+            // Initialize request argument(s)
+            RunStreamRequest request = new RunStreamRequest
+            {
+                StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
+                CdcStrategy = new CdcStrategy(),
+                Force = false,
+            };
+            // Make the request
+            Operation<Stream, OperationMetadata> response = datastreamClient.RunStream(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Stream, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Stream result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Stream, OperationMetadata> retrievedResponse = datastreamClient.PollOnceRunStream(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Stream retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunStreamAsync</summary>
+        public async Task RunStreamRequestObjectAsync()
+        {
+            // Snippet: RunStreamAsync(RunStreamRequest, CallSettings)
+            // Additional: RunStreamAsync(RunStreamRequest, CancellationToken)
+            // Create client
+            DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
+            // Initialize request argument(s)
+            RunStreamRequest request = new RunStreamRequest
+            {
+                StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
+                CdcStrategy = new CdcStrategy(),
+                Force = false,
+            };
+            // Make the request
+            Operation<Stream, OperationMetadata> response = await datastreamClient.RunStreamAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Stream, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Stream result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Stream, OperationMetadata> retrievedResponse = await datastreamClient.PollOnceRunStreamAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Stream retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetStreamObject</summary>
         public void GetStreamObjectRequestObject()
         {
@@ -2701,6 +2771,7 @@ namespace Google.Cloud.Datastream.V1.Snippets
                 PrivateConnectionId = "",
                 PrivateConnection = new PrivateConnection(),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<PrivateConnection, OperationMetadata> response = datastreamClient.CreatePrivateConnection(request);
@@ -2737,6 +2808,7 @@ namespace Google.Cloud.Datastream.V1.Snippets
                 PrivateConnectionId = "",
                 PrivateConnection = new PrivateConnection(),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<PrivateConnection, OperationMetadata> response = await datastreamClient.CreatePrivateConnectionAsync(request);

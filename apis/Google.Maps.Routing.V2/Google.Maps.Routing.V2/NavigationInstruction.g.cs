@@ -28,12 +28,12 @@ namespace Google.Maps.Routing.V2 {
             "b24ucHJvdG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIaJWdvb2dsZS9tYXBz",
             "L3JvdXRpbmcvdjIvbWFuZXV2ZXIucHJvdG8iYQoVTmF2aWdhdGlvbkluc3Ry",
             "dWN0aW9uEjIKCG1hbmV1dmVyGAEgASgOMiAuZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5NYW5ldXZlchIUCgxpbnN0cnVjdGlvbnMYAiABKAlCzwEKGmNvbS5n",
+            "Zy52Mi5NYW5ldXZlchIUCgxpbnN0cnVjdGlvbnMYAiABKAlCzAEKGmNvbS5n",
             "b29nbGUubWFwcy5yb3V0aW5nLnYyQhpOYXZpZ2F0aW9uSW5zdHJ1Y3Rpb25Q",
             "cm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2",
-            "Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFw",
-            "cy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2ds",
-            "ZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "Mi9yb3V0aW5ncGI7cm91dGluZ3BiogIFR01SVjKqAhZHb29nbGUuTWFwcy5S",
+            "b3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6",
+            "TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.ManeuverReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,8 +46,9 @@ namespace Google.Maps.Routing.V2 {
   #region Messages
   /// <summary>
   /// Encapsulates navigation instructions for a
-  /// [RouteLegStep][google.maps.routing.v2.RouteLegStep]
+  /// [`RouteLegStep`][google.maps.routing.v2.RouteLegStep].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NavigationInstruction : pb::IMessage<NavigationInstruction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -97,8 +98,9 @@ namespace Google.Maps.Routing.V2 {
     public const int ManeuverFieldNumber = 1;
     private global::Google.Maps.Routing.V2.Maneuver maneuver_ = global::Google.Maps.Routing.V2.Maneuver.Unspecified;
     /// <summary>
-    /// Encapsulates the navigation instructions for the current step (e.g., turn
-    /// left, merge, straight, etc.). This field determines which icon to display.
+    /// Encapsulates the navigation instructions for the current step (for example,
+    /// turn left, merge, or straight). This field determines which icon to
+    /// display.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

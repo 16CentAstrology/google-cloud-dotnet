@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcav = Google.Cloud.AutoML.V1;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -44,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcav::AutoMlClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAutoMlClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::AutoMlClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::AutoMlClientBuilder builder = new gcav::AutoMlClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcav::PredictionServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -59,6 +75,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcav::PredictionServiceClientBuilder builder = new gcav::PredictionServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::PredictionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPredictionServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::PredictionServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::PredictionServiceClientBuilder builder = new gcav::PredictionServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

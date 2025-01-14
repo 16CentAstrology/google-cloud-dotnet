@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeBackup.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.GkeBackup.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -4264,6 +4265,93 @@ namespace Google.Cloud.GkeBackup.V1.Snippets
             VolumeRestoreName name = VolumeRestoreName.FromProjectLocationRestorePlanRestoreVolumeRestore("[PROJECT]", "[LOCATION]", "[RESTORE_PLAN]", "[RESTORE]", "[VOLUME_RESTORE]");
             // Make the request
             VolumeRestore response = await backupForGKEClient.GetVolumeRestoreAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrl</summary>
+        public void GetBackupIndexDownloadUrlRequestObject()
+        {
+            // Snippet: GetBackupIndexDownloadUrl(GetBackupIndexDownloadUrlRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            GetBackupIndexDownloadUrlRequest request = new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = BackupName.FromProjectLocationBackupPlanBackup("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[BACKUP]"),
+            };
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = backupForGKEClient.GetBackupIndexDownloadUrl(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrlAsync</summary>
+        public async Task GetBackupIndexDownloadUrlRequestObjectAsync()
+        {
+            // Snippet: GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest, CallSettings)
+            // Additional: GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupIndexDownloadUrlRequest request = new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = BackupName.FromProjectLocationBackupPlanBackup("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[BACKUP]"),
+            };
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = await backupForGKEClient.GetBackupIndexDownloadUrlAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrl</summary>
+        public void GetBackupIndexDownloadUrl()
+        {
+            // Snippet: GetBackupIndexDownloadUrl(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string backup = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]/backups/[BACKUP]";
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = backupForGKEClient.GetBackupIndexDownloadUrl(backup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrlAsync</summary>
+        public async Task GetBackupIndexDownloadUrlAsync()
+        {
+            // Snippet: GetBackupIndexDownloadUrlAsync(string, CallSettings)
+            // Additional: GetBackupIndexDownloadUrlAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string backup = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]/backups/[BACKUP]";
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = await backupForGKEClient.GetBackupIndexDownloadUrlAsync(backup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrl</summary>
+        public void GetBackupIndexDownloadUrlResourceNames()
+        {
+            // Snippet: GetBackupIndexDownloadUrl(BackupName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupName backup = BackupName.FromProjectLocationBackupPlanBackup("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[BACKUP]");
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = backupForGKEClient.GetBackupIndexDownloadUrl(backup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupIndexDownloadUrlAsync</summary>
+        public async Task GetBackupIndexDownloadUrlResourceNamesAsync()
+        {
+            // Snippet: GetBackupIndexDownloadUrlAsync(BackupName, CallSettings)
+            // Additional: GetBackupIndexDownloadUrlAsync(BackupName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName backup = BackupName.FromProjectLocationBackupPlanBackup("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[BACKUP]");
+            // Make the request
+            GetBackupIndexDownloadUrlResponse response = await backupForGKEClient.GetBackupIndexDownloadUrlAsync(backup);
             // End snippet
         }
     }

@@ -94,6 +94,7 @@ namespace Grafeas.V1 {
   /// This represents a particular channel of distribution for a given package.
   /// E.g., Debian's jessie-backports dpkg mirror.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Distribution : pb::IMessage<Distribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -501,6 +502,7 @@ namespace Grafeas.V1 {
   /// An occurrence of a particular package installation found within a system's
   /// filesystem. E.g., glibc was found in `/var/lib/dpkg/status`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -787,6 +789,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// PackageNote represents a particular package version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PackageNote : pb::IMessage<PackageNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1384,6 +1387,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Details on how a particular software package was installed on a system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PackageOccurrence : pb::IMessage<PackageOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1831,6 +1835,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Version contains structured information about the version of a package.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

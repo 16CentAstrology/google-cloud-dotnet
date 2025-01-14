@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.BigQuery.DataTransfer.V1
 {
@@ -63,6 +63,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferLogsSettings = existing.ListTransferLogsSettings;
             CheckValidCredsSettings = existing.CheckValidCredsSettings;
             EnrollDataSourcesSettings = existing.EnrollDataSourcesSettings;
+            UnenrollDataSourcesSettings = existing.UnenrollDataSourcesSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -351,6 +352,19 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public gaxgrpc::CallSettings EnrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.UnenrollDataSources</c> and
+        /// <c>DataTransferServiceClient.UnenrollDataSourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UnenrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -398,14 +412,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataTransferServiceClient.Create(callInvoker, Settings, Logger);
+            return DataTransferServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataTransferServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataTransferServiceClient.Create(callInvoker, Settings, Logger);
+            return DataTransferServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -655,13 +669,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSources(new ListDataSourcesRequest
+        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists supported data sources and returns their settings.
@@ -681,13 +704,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSourcesAsync(new ListDataSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists supported data sources and returns their settings.
@@ -707,13 +739,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSources(new ListDataSourcesRequest
+        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists supported data sources and returns their settings.
@@ -733,13 +774,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSourcesAsync(new ListDataSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists supported data sources and returns their settings.
@@ -759,13 +809,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSources(new ListDataSourcesRequest
+        public virtual gax::PagedEnumerable<ListDataSourcesResponse, DataSource> ListDataSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSources(request, callSettings);
+        }
 
         /// <summary>
         /// Lists supported data sources and returns their settings.
@@ -785,13 +844,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataSource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDataSourcesAsync(new ListDataSourcesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> ListDataSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourcesRequest request = new ListDataSourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new data transfer configuration.
@@ -1371,13 +1439,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigs(new ListTransferConfigsRequest
+        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about all transfer configs owned by a project in the
@@ -1398,13 +1475,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigsAsync(new ListTransferConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about all transfer configs owned by a project in the
@@ -1425,13 +1511,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigs(new ListTransferConfigsRequest
+        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about all transfer configs owned by a project in the
@@ -1452,13 +1547,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigsAsync(new ListTransferConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about all transfer configs owned by a project in the
@@ -1479,13 +1583,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigs(new ListTransferConfigsRequest
+        public virtual gax::PagedEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about all transfer configs owned by a project in the
@@ -1506,13 +1619,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferConfigsAsync(new ListTransferConfigsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferConfigsResponse, TransferConfig> ListTransferConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferConfigsRequest request = new ListTransferConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferConfigsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates transfer runs for a time range [start_time, end_time].
@@ -2051,13 +2173,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferRun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferRuns(new ListTransferRunsRequest
+        public virtual gax::PagedEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferRunsRequest request = new ListTransferRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about running and completed transfer runs.
@@ -2078,13 +2209,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferRun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferRunsAsync(new ListTransferRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferRunsRequest request = new ListTransferRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about running and completed transfer runs.
@@ -2105,13 +2245,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferRun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRuns(TransferConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferRuns(new ListTransferRunsRequest
+        public virtual gax::PagedEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRuns(TransferConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferRunsRequest request = new ListTransferRunsRequest
             {
                 ParentAsTransferConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about running and completed transfer runs.
@@ -2132,13 +2281,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferRun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRunsAsync(TransferConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferRunsAsync(new ListTransferRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferRunsResponse, TransferRun> ListTransferRunsAsync(TransferConfigName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferRunsRequest request = new ListTransferRunsRequest
             {
                 ParentAsTransferConfigName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns log messages for the transfer run.
@@ -2176,13 +2334,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferMessage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferLogs(new ListTransferLogsRequest
+        public virtual gax::PagedEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferLogsRequest request = new ListTransferLogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns log messages for the transfer run.
@@ -2202,13 +2369,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferMessage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferLogsAsync(new ListTransferLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferLogsRequest request = new ListTransferLogsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns log messages for the transfer run.
@@ -2228,13 +2404,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TransferMessage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogs(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferLogs(new ListTransferLogsRequest
+        public virtual gax::PagedEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogs(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferLogsRequest request = new ListTransferLogsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferLogs(request, callSettings);
+        }
 
         /// <summary>
         /// Returns log messages for the transfer run.
@@ -2254,13 +2439,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TransferMessage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTransferLogsAsync(new ListTransferLogsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTransferLogsResponse, TransferMessage> ListTransferLogsAsync(RunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTransferLogsRequest request = new ListTransferLogsRequest
             {
                 ParentAsRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTransferLogsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
@@ -2435,6 +2629,45 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task EnrollDataSourcesAsync(EnrollDataSourcesRequest request, st::CancellationToken cancellationToken) =>
             EnrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void UnenrollDataSources(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, st::CancellationToken cancellationToken) =>
+            UnenrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataTransferService client wrapper implementation, for convenient use.</summary>
@@ -2473,6 +2706,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
         private readonly gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> _callEnrollDataSources;
 
+        private readonly gaxgrpc::ApiCall<UnenrollDataSourcesRequest, wkt::Empty> _callUnenrollDataSources;
+
         /// <summary>
         /// Constructs a client wrapper for the DataTransferService service, with the specified gRPC client and
         /// settings.
@@ -2484,7 +2719,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             GrpcClient = grpcClient;
             DataTransferServiceSettings effectiveSettings = settings ?? DataTransferServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetDataSource = clientHelper.BuildApiCall<GetDataSourceRequest, DataSource>("GetDataSource", grpcClient.GetDataSourceAsync, grpcClient.GetDataSource, effectiveSettings.GetDataSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSource);
@@ -2533,6 +2772,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             _callEnrollDataSources = clientHelper.BuildApiCall<EnrollDataSourcesRequest, wkt::Empty>("EnrollDataSources", grpcClient.EnrollDataSourcesAsync, grpcClient.EnrollDataSources, effectiveSettings.EnrollDataSourcesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEnrollDataSources);
             Modify_EnrollDataSourcesApiCall(ref _callEnrollDataSources);
+            _callUnenrollDataSources = clientHelper.BuildApiCall<UnenrollDataSourcesRequest, wkt::Empty>("UnenrollDataSources", grpcClient.UnenrollDataSourcesAsync, grpcClient.UnenrollDataSources, effectiveSettings.UnenrollDataSourcesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUnenrollDataSources);
+            Modify_UnenrollDataSourcesApiCall(ref _callUnenrollDataSources);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2567,6 +2809,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_CheckValidCredsApiCall(ref gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);
 
         partial void Modify_EnrollDataSourcesApiCall(ref gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> call);
+
+        partial void Modify_UnenrollDataSourcesApiCall(ref gaxgrpc::ApiCall<UnenrollDataSourcesRequest, wkt::Empty> call);
 
         partial void OnConstruction(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2605,6 +2849,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_CheckValidCredsRequest(ref CheckValidCredsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EnrollDataSourcesRequest(ref EnrollDataSourcesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UnenrollDataSourcesRequest(ref UnenrollDataSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a supported data source and returns its settings.
@@ -3002,6 +3248,38 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             Modify_EnrollDataSourcesRequest(ref request, ref callSettings);
             return _callEnrollDataSources.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void UnenrollDataSources(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnenrollDataSourcesRequest(ref request, ref callSettings);
+            _callUnenrollDataSources.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnenrollDataSourcesRequest(ref request, ref callSettings);
+            return _callUnenrollDataSources.Async(request, callSettings);
         }
     }
 

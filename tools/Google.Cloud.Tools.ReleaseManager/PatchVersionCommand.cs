@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,13 +25,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
 
             // It's slightly inefficient that we load the API catalog once here and once later on, and the code duplication
             // is annoying too, but it's insignficant really - and at least the code is simple.
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var api = catalog[id];
 
             var apisToIncrement = new[] { api };
@@ -46,6 +46,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var version = apiToIncrement.StructuredVersion.AfterPatch().ToString();
                 new SetVersionCommand().InternalExecute(apiToIncrement.Id, version, quiet: false);
             }
+            return 0;
         }
     }
 }

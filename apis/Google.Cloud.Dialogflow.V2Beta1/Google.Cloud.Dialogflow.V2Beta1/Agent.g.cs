@@ -81,49 +81,49 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "Z2xlYXBpcy5jb20vQWdlbnQSGgoNbGFuZ3VhZ2VfY29kZRgDIAEoCUID4EEB",
             "MsoSCgZBZ2VudHMSywEKCEdldEFnZW50EjAuZ29vZ2xlLmNsb3VkLmRpYWxv",
             "Z2Zsb3cudjJiZXRhMS5HZXRBZ2VudFJlcXVlc3QaJi5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52MmJldGExLkFnZW50ImWC0+STAlYSIi92MmJldGExL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKn0vYWdlbnRaMBIuL3YyYmV0YTEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2VudNpBBnBhcmVudBLkAQoIU2V0",
+            "ZGlhbG9nZmxvdy52MmJldGExLkFnZW50ImXaQQZwYXJlbnSC0+STAlYSIi92",
+            "MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYWdlbnRaMBIuL3YyYmV0YTEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2VudBLkAQoIU2V0",
             "QWdlbnQSMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNldEFn",
             "ZW50UmVxdWVzdBomLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEu",
-            "QWdlbnQifoLT5JMCcCIoL3YyYmV0YTEve2FnZW50LnBhcmVudD1wcm9qZWN0",
-            "cy8qfS9hZ2VudDoFYWdlbnRaPSI0L3YyYmV0YTEve2FnZW50LnBhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2VudDoFYWdlbnTaQQVhZ2VudBLB",
+            "QWdlbnQiftpBBWFnZW50gtPkkwJwIigvdjJiZXRhMS97YWdlbnQucGFyZW50",
+            "PXByb2plY3RzLyp9L2FnZW50OgVhZ2VudFo9IjQvdjJiZXRhMS97YWdlbnQu",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2FnZW50OgVhZ2VudBLB",
             "AQoLRGVsZXRlQWdlbnQSMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJl",
             "dGExLkRlbGV0ZUFnZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJlgtPkkwJWKiIvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2FnZW50",
-            "WjAqLi92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "YWdlbnTaQQZwYXJlbnQS8AEKDFNlYXJjaEFnZW50cxI0Lmdvb2dsZS5jbG91",
+            "eSJl2kEGcGFyZW50gtPkkwJWKiIvdjJiZXRhMS97cGFyZW50PXByb2plY3Rz",
+            "Lyp9L2FnZW50WjAqLi92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vYWdlbnQS8AEKDFNlYXJjaEFnZW50cxI0Lmdvb2dsZS5jbG91",
             "ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2VhcmNoQWdlbnRzUmVxdWVzdBo1Lmdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2VhcmNoQWdlbnRzUmVz",
-            "cG9uc2Uic4LT5JMCZBIpL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9h",
-            "Z2VudDpzZWFyY2haNxI1L3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9hZ2VudDpzZWFyY2jaQQZwYXJlbnQSiwIKClRyYWluQWdl",
+            "cG9uc2Uic9pBBnBhcmVudILT5JMCZBIpL3YyYmV0YTEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qfS9hZ2VudDpzZWFyY2haNxI1L3YyYmV0YTEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2VudDpzZWFyY2gSiwIKClRyYWluQWdl",
             "bnQSMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlRyYWluQWdl",
-            "bnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKpAYLT",
-            "5JMCaCIoL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDp0cmFp",
-            "bjoBKlo5IjQvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2FnZW50OnRyYWluOgEq2kEGcGFyZW50ykEvChVnb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkSFmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSrQIKC0V4cG9ydEFn",
+            "bnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKpAcpB",
+            "LwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3Ry",
+            "dWN02kEGcGFyZW50gtPkkwJoIigvdjJiZXRhMS97cGFyZW50PXByb2plY3Rz",
+            "Lyp9L2FnZW50OnRyYWluOgEqWjkiNC92MmJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vYWdlbnQ6dHJhaW46ASoSrQIKC0V4cG9ydEFn",
             "ZW50EjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5FeHBvcnRB",
             "Z2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIskB",
-            "gtPkkwJqIikvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OmV4",
-            "cG9ydDoBKlo6IjUvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L2FnZW50OmV4cG9ydDoBKtpBBnBhcmVudMpBTQozZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5FeHBvcnRBZ2VudFJlc3BvbnNlEhZn",
-            "b29nbGUucHJvdG9idWYuU3RydWN0EoYCCgtJbXBvcnRBZ2VudBIzLmdvb2ds",
+            "ykFNCjNnb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkV4cG9ydEFn",
+            "ZW50UmVzcG9uc2USFmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3TaQQZwYXJlbnSC",
+            "0+STAmoiKS92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYWdlbnQ6ZXhw",
+            "b3J0OgEqWjoiNS92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vYWdlbnQ6ZXhwb3J0OgEqEoYCCgtJbXBvcnRBZ2VudBIzLmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuSW1wb3J0QWdlbnRSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKiAYLT5JMCaiIpL3Yy",
-            "YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDppbXBvcnQ6ASpaOiI1",
-            "L3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2Vu",
-            "dDppbXBvcnQ6ASrKQS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIWZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cnVjdBKKAgoMUmVzdG9yZUFnZW50EjQuZ29vZ2xlLmNs",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKiAcpBLwoVZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0gtPkkwJq",
+            "IikvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OmltcG9ydDoB",
+            "Klo6IjUvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L2FnZW50OmltcG9ydDoBKhKKAgoMUmVzdG9yZUFnZW50EjQuZ29vZ2xlLmNs",
             "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5SZXN0b3JlQWdlbnRSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKkAYLT5JMCbCIqL3YyYmV0",
-            "YTEve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDpyZXN0b3JlOgEqWjsiNi92",
-            "MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYWdlbnQ6",
-            "cmVzdG9yZToBKspBLwoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhZnb29nbGUu",
-            "cHJvdG9idWYuU3RydWN0EoUCChNHZXRWYWxpZGF0aW9uUmVzdWx0EjsuZ29v",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKkAcpBLwoVZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0gtPkkwJsIiov",
+            "djJiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OnJlc3RvcmU6ASpa",
+            "OyI2L3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9h",
+            "Z2VudDpyZXN0b3JlOgEqEoUCChNHZXRWYWxpZGF0aW9uUmVzdWx0EjsuZ29v",
             "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5HZXRWYWxpZGF0aW9uUmVz",
             "dWx0UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEu",
             "VmFsaWRhdGlvblJlc3VsdCJ+gtPkkwJ4EjMvdjJiZXRhMS97cGFyZW50PXBy",
@@ -169,6 +169,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// For more information about agents, see the
   /// [Agent guide](https://cloud.google.com/dialogflow/docs/agents-overview).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Agent : pb::IMessage<Agent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -879,6 +880,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// Essentials Edition (same as TIER_ENTERPRISE), previously known as
         /// Enterprise Plus Edition.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("TIER_ENTERPRISE_PLUS")] EnterprisePlus = 3,
       }
 
@@ -891,6 +893,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.GetAgent][google.cloud.dialogflow.v2beta1.Agents.GetAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAgentRequest : pb::IMessage<GetAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1089,6 +1092,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.SetAgent][google.cloud.dialogflow.v2beta1.Agents.SetAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetAgentRequest : pb::IMessage<SetAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1343,6 +1347,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.DeleteAgent][google.cloud.dialogflow.v2beta1.Agents.DeleteAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAgentRequest : pb::IMessage<DeleteAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1540,6 +1545,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Contains basic configuration for a sub-agent.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubAgent : pb::IMessage<SubAgent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1780,6 +1786,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAgentsRequest : pb::IMessage<SearchAgentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2059,6 +2066,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The response message for
   /// [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAgentsResponse : pb::IMessage<SearchAgentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2286,6 +2294,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.TrainAgent][google.cloud.dialogflow.v2beta1.Agents.TrainAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrainAgentRequest : pb::IMessage<TrainAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2484,6 +2493,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportAgentRequest : pb::IMessage<ExportAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2732,6 +2742,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The response message for
   /// [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportAgentResponse : pb::IMessage<ExportAgentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2793,10 +2804,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentUri {
-      get { return agentCase_ == AgentOneofCase.AgentUri ? (string) agent_ : ""; }
+      get { return HasAgentUri ? (string) agent_ : ""; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentUri;
+      }
+    }
+    /// <summary>Gets whether the "agent_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentUri {
+      get { return agentCase_ == AgentOneofCase.AgentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentUri() {
+      if (HasAgentUri) {
+        ClearAgent();
       }
     }
 
@@ -2808,10 +2833,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AgentContent {
-      get { return agentCase_ == AgentOneofCase.AgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
+      get { return HasAgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentContent;
+      }
+    }
+    /// <summary>Gets whether the "agent_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentContent {
+      get { return agentCase_ == AgentOneofCase.AgentContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentContent() {
+      if (HasAgentContent) {
+        ClearAgent();
       }
     }
 
@@ -2861,8 +2900,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (agentCase_ == AgentOneofCase.AgentUri) hash ^= AgentUri.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasAgentUri) hash ^= AgentUri.GetHashCode();
+      if (HasAgentContent) hash ^= AgentContent.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2882,11 +2921,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(10);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
@@ -2900,11 +2939,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(10);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
@@ -2918,10 +2957,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
       }
       if (_unknownFields != null) {
@@ -3002,6 +3041,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.ImportAgent][google.cloud.dialogflow.v2beta1.Agents.ImportAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportAgentRequest : pb::IMessage<ImportAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3087,10 +3127,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentUri {
-      get { return agentCase_ == AgentOneofCase.AgentUri ? (string) agent_ : ""; }
+      get { return HasAgentUri ? (string) agent_ : ""; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentUri;
+      }
+    }
+    /// <summary>Gets whether the "agent_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentUri {
+      get { return agentCase_ == AgentOneofCase.AgentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentUri() {
+      if (HasAgentUri) {
+        ClearAgent();
       }
     }
 
@@ -3102,10 +3156,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AgentContent {
-      get { return agentCase_ == AgentOneofCase.AgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
+      get { return HasAgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentContent;
+      }
+    }
+    /// <summary>Gets whether the "agent_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentContent {
+      get { return agentCase_ == AgentOneofCase.AgentContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentContent() {
+      if (HasAgentContent) {
+        ClearAgent();
       }
     }
 
@@ -3157,8 +3225,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentUri) hash ^= AgentUri.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasAgentUri) hash ^= AgentUri.GetHashCode();
+      if (HasAgentContent) hash ^= AgentContent.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3182,11 +3250,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3204,11 +3272,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3225,10 +3293,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
       }
       if (_unknownFields != null) {
@@ -3320,6 +3388,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.RestoreAgent][google.cloud.dialogflow.v2beta1.Agents.RestoreAgent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestoreAgentRequest : pb::IMessage<RestoreAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3405,10 +3474,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentUri {
-      get { return agentCase_ == AgentOneofCase.AgentUri ? (string) agent_ : ""; }
+      get { return HasAgentUri ? (string) agent_ : ""; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentUri;
+      }
+    }
+    /// <summary>Gets whether the "agent_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentUri {
+      get { return agentCase_ == AgentOneofCase.AgentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentUri() {
+      if (HasAgentUri) {
+        ClearAgent();
       }
     }
 
@@ -3420,10 +3503,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AgentContent {
-      get { return agentCase_ == AgentOneofCase.AgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
+      get { return HasAgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentContent;
+      }
+    }
+    /// <summary>Gets whether the "agent_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentContent {
+      get { return agentCase_ == AgentOneofCase.AgentContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentContent() {
+      if (HasAgentContent) {
+        ClearAgent();
       }
     }
 
@@ -3475,8 +3572,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentUri) hash ^= AgentUri.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasAgentUri) hash ^= AgentUri.GetHashCode();
+      if (HasAgentContent) hash ^= AgentContent.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3500,11 +3597,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3522,11 +3619,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3543,10 +3640,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
       }
       if (_unknownFields != null) {
@@ -3638,6 +3735,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Agents.GetValidationResult][google.cloud.dialogflow.v2beta1.Agents.GetValidationResult].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetValidationResultRequest : pb::IMessage<GetValidationResultRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

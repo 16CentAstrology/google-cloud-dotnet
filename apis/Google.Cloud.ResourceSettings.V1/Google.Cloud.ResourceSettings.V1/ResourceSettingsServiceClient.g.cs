@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,20 +17,21 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.ResourceSettings.V1
 {
     /// <summary>Settings for <see cref="ResourceSettingsServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="ResourceSettingsServiceSettings"/>.</summary>
@@ -129,6 +130,7 @@ namespace Google.Cloud.ResourceSettings.V1
     /// Builder class for <see cref="ResourceSettingsServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceClientBuilder : gaxgrpc::ClientBuilderBase<ResourceSettingsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -163,14 +165,14 @@ namespace Google.Cloud.ResourceSettings.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ResourceSettingsServiceClient.Create(callInvoker, Settings, Logger);
+            return ResourceSettingsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ResourceSettingsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ResourceSettingsServiceClient.Create(callInvoker, Settings, Logger);
+            return ResourceSettingsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -191,7 +193,11 @@ namespace Google.Cloud.ResourceSettings.V1
     /// resource is not in a Cloud Organization.
     /// For all requests, returns a `google.rpc.Status` with
     /// `google.rpc.Code.INVALID_ARGUMENT` if the request is malformed.
+    /// (== deprecation_description Resource Settings is deprecated. As of November
+    /// 7, 2023, no organizations will be onboarded for any of the enabled settings,
+    /// and the service will be shut down on October 1, 2024. ==)
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class ResourceSettingsServiceClient
     {
         /// <summary>
@@ -297,8 +303,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -315,20 +321,29 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettings(new ListSettingsRequest
+        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -345,20 +360,29 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettingsAsync(new ListSettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -375,20 +399,29 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettings(new ListSettingsRequest
+        public virtual gax::PagedEnumerable<ListSettingsResponse, Setting> ListSettings(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the settings that are available on the Cloud resource `parent`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the setting. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the setting. Must be in one of
+        /// the following forms:
         /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
@@ -405,13 +438,22 @@ namespace Google.Cloud.ResourceSettings.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Setting"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSettingsAsync(new ListSettingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSettingsResponse, Setting> ListSettingsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSettingsRequest request = new ListSettingsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSettingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a setting.
@@ -456,7 +498,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -474,7 +517,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -492,7 +536,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -507,7 +552,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -525,7 +571,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -543,7 +590,8 @@ namespace Google.Cloud.ResourceSettings.V1
         /// setting does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the setting to get. See [Setting][google.cloud.resourcesettings.v1.Setting] for naming
+        /// Required. The name of the setting to get. See
+        /// [Setting][google.cloud.resourcesettings.v1.Setting] for naming
         /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -638,7 +686,11 @@ namespace Google.Cloud.ResourceSettings.V1
     /// resource is not in a Cloud Organization.
     /// For all requests, returns a `google.rpc.Status` with
     /// `google.rpc.Code.INVALID_ARGUMENT` if the request is malformed.
+    /// (== deprecation_description Resource Settings is deprecated. As of November
+    /// 7, 2023, no organizations will be onboarded for any of the enabled settings,
+    /// and the service will be shut down on October 1, 2024. ==)
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class ResourceSettingsServiceClientImpl : ResourceSettingsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListSettingsRequest, ListSettingsResponse> _callListSettings;
@@ -660,7 +712,11 @@ namespace Google.Cloud.ResourceSettings.V1
         {
             GrpcClient = grpcClient;
             ResourceSettingsServiceSettings effectiveSettings = settings ?? ResourceSettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListSettings = clientHelper.BuildApiCall<ListSettingsRequest, ListSettingsResponse>("ListSettings", grpcClient.ListSettingsAsync, grpcClient.ListSettings, effectiveSettings.ListSettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSettings);
             Modify_ListSettingsApiCall(ref _callListSettings);

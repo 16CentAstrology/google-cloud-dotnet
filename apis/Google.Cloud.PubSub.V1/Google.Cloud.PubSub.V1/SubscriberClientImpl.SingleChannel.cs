@@ -14,8 +14,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -45,7 +47,7 @@ public sealed partial class SubscriberClientImpl
         {
             internal bool IsPull { get; }
             internal Action Action { get; }
-            
+
             internal NextAction(bool isPull, Action action)
             {
                 IsPull = isPull;
@@ -57,24 +59,24 @@ public sealed partial class SubscriberClientImpl
         {
             internal Task Task { get; }
             internal NextAction NextAction { get; }
-            
+
             internal TaskNextAction(Task task, NextAction nextAction)
             {
                 Task = task;
                 NextAction = nextAction;
-            }            
+            }
         }
 
         private readonly struct TimedId // "Time" is abstract, a monotonic incrementing counter is used.
         {
             internal long Time { get; }
             internal string Id { get; }
-            
+
             internal TimedId(long time, string id)
             {
                 Time = time;
                 Id = id;
-            }           
+            }
         }
 
         /// <summary>
@@ -107,9 +109,8 @@ public sealed partial class SubscriberClientImpl
 
             internal RetryInfo WithBackoff(TimeSpan? backoff) => new RetryInfo(FirstTimeOfFailureInUtc, backoff);
         }
-        
-        
-        private static readonly RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
+
+        private static readonly RetrySettings s_defaultPullRetryTiming = RetrySettings.FromExponentialBackoff(
             maxAttempts: int.MaxValue,
             initialBackoff: TimeSpan.FromSeconds(0.5),
             maxBackoff: TimeSpan.FromSeconds(30),
@@ -132,6 +133,12 @@ public sealed partial class SubscriberClientImpl
         // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
         // which is a requirement for exactly once delivery subscription.
         private readonly ConcurrentDictionary<string, RetryInfo> _retryableIds = new ConcurrentDictionary<string, RetryInfo>();
+
+        // This dictionary will store the Ack IDs of the newly fetched messages along with their corresponding receipt ModAck status.
+        // This is used in exactly once delivery flow only.
+        // The keys in the dictionary represents the Ack ID of the message, while value contains the receipt ModAck status.
+        // A value of null indicates that the status is not yet started or in progress. A value of true indicates success, and false indicates failure (which can be temporary or permanent).
+        private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new();
         private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
@@ -143,18 +150,17 @@ public sealed partial class SubscriberClientImpl
         private readonly CancellationTokenSource _pushStopCts;
         private readonly CancellationTokenSource _softStopCts;
         private readonly SubscriptionName _subscriptionName;
-        private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
-        private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends for non-exactly once delivery subscriptions.
-        private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Delay between auto-extends for exactly once delivery subscriptions.
+        private readonly LeaseTiming _normalLeaseTiming;
+        private readonly LeaseTiming _exactlyOnceDeliveryLeaseTiming;
         private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
-        private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
         private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
         private readonly int _maxAckExtendSendCount; // Maximum number of ids to include in an ack/nack/extend push RPC.
-        private readonly int _maxConcurrentPush; // Mamimum number (slightly soft) of concurrent ack/nack/extend push RPCs.
+        private readonly int _maxConcurrentPush; // Maximum number (slightly soft) of concurrent ack/nack/extend push RPCs.
 
         private readonly Flow _flow;
         private readonly bool _useLegacyFlowControl;
         private readonly AsyncAutoResetEvent _eventPush;
+        private readonly AsyncAutoResetEvent _eventReceiptModAckForExactlyOnceDelivery;
         private readonly AsyncSingleRecvQueue<TaskNextAction> _continuationQueue;
         private readonly RequeueableQueue<TimedId> _extendQueue = new RequeueableQueue<TimedId>();
         private readonly RequeueableQueue<string> _ackQueue = new RequeueableQueue<string>();
@@ -165,38 +171,45 @@ public sealed partial class SubscriberClientImpl
         private SubscriberServiceApiClient.StreamingPullStream _pull = null;
         private int _concurrentPushCount = 0;
         private bool _pullComplete = false;
+        private bool _receiptModAckForExactlyOnceDelivery = false; // True if the lease is being extended for the messages for very first time in an exactly-once delivery flow; otherwise false.
         private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
-        private TimeSpan? _pullBackoff = null;
-        
+        private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
+        private readonly RetryState _retryState;
+        private readonly ILogger _logger;
+        private readonly int _clientIndex; // The index of this client within the overall SubscriberClient, in the range 1-ClientCount. Only used for logging.
+
         internal SingleChannel(SubscriberClientImpl subscriber,
-            SubscriberServiceApiClient client, SubscriptionHandler handler,
+            SubscriberServiceApiClient client, int clientIndex, SubscriptionHandler handler,
             Flow flow, bool useLegacyFlowControl,
-            Action<Task> registerTaskFn)
+            Action<Task> registerTaskFn,
+            IClock clock)
         {
             _registerTaskFn = registerTaskFn;
             _taskHelper = subscriber._taskHelper;
             _scheduler = subscriber._scheduler;
             _clock = subscriber._clock;
             _client = client;
+            _clientIndex = clientIndex;
             _handler = handler;
             _hardStopCts = subscriber._globalHardStopCts;
             _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
             _softStopCts = subscriber._globalSoftStopCts;
             _subscriptionName = subscriber.SubscriptionName;
-            _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
+            _normalLeaseTiming = subscriber._normalLeaseTiming;
+            _exactlyOnceDeliveryLeaseTiming = subscriber._exactlyOnceDeliveryLeaseTiming;
             _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
-            _autoExtendInterval = subscriber._autoExtendInterval;
-            _autoExtendIntervalForExactlyOnceDelivery = subscriber._autoExtendIntervalForExactlyOnceDelivery;
             _maxExtensionDuration = subscriber._maxExtensionDuration;
-            _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
             _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
             _maxConcurrentPush = 3; // Fairly arbitrary.
             _flow = flow;
             _useLegacyFlowControl = useLegacyFlowControl;
             _eventPush = new AsyncAutoResetEvent(subscriber._taskHelper);
+            _eventReceiptModAckForExactlyOnceDelivery = new AsyncAutoResetEvent(subscriber._taskHelper);
             _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
+            _logger = subscriber.Logger;
+            _retryState = new RetryState(clock, _logger, s_defaultPullRetryTiming, TimeSpan.FromSeconds(0.5));
         }
 
         internal async Task StartAsync()
@@ -236,9 +249,12 @@ public sealed partial class SubscriberClientImpl
                     next.Action();
                 }
             }
+            _logger?.LogDebug("Subscriber task completed.");
             // Stop waiting for data to push.
             _pushStopCts.Cancel();
         }
+
+        private LeaseTiming EffectiveLeaseTiming => _exactlyOnceDeliveryEnabled ? _exactlyOnceDeliveryLeaseTiming : _normalLeaseTiming;
 
         private bool IsPushComplete()
         {
@@ -262,15 +278,30 @@ public sealed partial class SubscriberClientImpl
 
         private void StopStreamingPull()
         {
-            if (_pull != null)
+            var pullToDispose = _pull;
+            if (pullToDispose is not null)
             {
                 // Ignore all errors; the stream may be in any state.
                 try
                 {
-                    _registerTaskFn(_pull.WriteCompleteAsync());
+                    Add(_pull.WriteCompleteAsync(), Next(false, () =>
+                        {
+                            try
+                            {
+                                pullToDispose.Dispose();
+                            }
+                            finally
+                            {
+                                // If this is happening *after* we start streaming again,
+                                // we don't want to overwrite the new pull stream.
+                                if (_pull == pullToDispose)
+                                {
+                                    _pull = null;
+                                }
+                            }
+                        }));
                 }
                 catch { }
-                _pull = null;
             }
         }
 
@@ -278,9 +309,10 @@ public sealed partial class SubscriberClientImpl
         // If backoff is non-zero delay before opening streaming-pull.
         private void StartStreamingPull()
         {
-            if (_pullBackoff is TimeSpan backoff)
+            if (_retryState.Backoff is TimeSpan backoff && backoff.Ticks != 0)
             {
                 // Delay, then start the streaming-pull.
+                _logger?.LogDebug("Client {index} delaying for {seconds}s before streaming pull call.", _clientIndex, (int) backoff.TotalSeconds);
                 Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
                 Add(delayTask, Next(true, HandleStartStreamingPullWithoutBackoff));
             }
@@ -294,48 +326,55 @@ public sealed partial class SubscriberClientImpl
         // Backoff delay (if present) has already been done; no need to delay here.
         private void HandleStartStreamingPullWithoutBackoff()
         {
+            _retryState.OnStartAttempt();
             _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_softStopCts.Token));
             // Cancellation not needed in this WriteAsync call. The StreamingPull() cancellation
             // (above) will cause this call to cancel if _softStopCts is cancelled.
             Task initTask = _pull.WriteAsync(new StreamingPullRequest
             {
                 SubscriptionAsSubscriptionName = _subscriptionName,
-                StreamAckDeadlineSeconds = _modifyDeadlineSeconds,
+                StreamAckDeadlineSeconds = EffectiveLeaseTiming.AckDeadlineSeconds,
                 MaxOutstandingMessages = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingElementCount,
                 MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount
             });
             Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
         }
 
-        private bool HandleRpcFailure(Exception e)
+        /// <summary>
+        /// Restarts the pull operation (with a backoff) if the given exception is retriable, otherwise throws it.
+        /// </summary>
+        private void RestartPullOrThrow(Exception e)
         {
-            if (e != null)
+            if (_retryState.RecordFailureAndCheckForRetry(e))
             {
-                if (e.As<RpcException>()?.IsRecoverable() ?? false)
-                {
-                    // Recoverable RPC error, stop and restart pull.
-                    StopStreamingPull();
-                    // Increase backoff internal and start stream again.
-                    // If stream-pull fails repeatly, increase the delay, up to a maximum of 30 seconds.
-                    _pullBackoff = s_pullBackoff.NextBackoff(_pullBackoff ?? TimeSpan.Zero);
-                    StartStreamingPull();
-                    return true;
-                }
-                else
-                {
-                    // Unrecoverable error; throw it.
-                    throw e.FlattenIfPossible();
-                }
+                RestartPullAfterRetriableFailure(e);
             }
-            return false;
+            else
+            {
+                _logger?.LogError(e, "Unrecoverable error in streaming pull; aborting subscriber.");
+                // Unrecoverable error; throw it.
+                throw e.FlattenIfPossible();
+            }
+        }
+
+        /// <summary>
+        /// Restarts the streaming pull after an exception which has been confirmed to be retriable.
+        /// (This isn't rechecked.)
+        /// </summary>
+        private void RestartPullAfterRetriableFailure(Exception e)
+        {
+            _logger?.LogDebug(e, "Recoverable error in streaming pull for client {index}; will retry.", _clientIndex);
+            StopStreamingPull();
+            StartStreamingPull();
         }
 
         // Pull-stream is ready; call MoveNext to wait for messages.
         private void HandlePullMoveNext(Task initTask)
         {
             // Check if the init write failed.
-            if (initTask != null && HandleRpcFailure(initTask.Exception))
+            if (initTask?.Exception is Exception ex)
             {
+                RestartPullOrThrow(ex);
                 return;
             }
             // Check if pulls need throttling due to push queues being too full, or too slow to push.
@@ -366,14 +405,15 @@ public sealed partial class SubscriberClientImpl
         // Message-stream has messages (or not, depending on moveNextResult)
         private void HandlePullMessageData(Task<bool> moveNextTask)
         {
-            if (HandleRpcFailure(moveNextTask.Exception))
+            if (moveNextTask.Exception is Exception ex)
             {
+                RestartPullOrThrow(ex);
                 return;
             }
             if (moveNextTask.Result)
             {
-                // Successful receive. Reset pull backoff to zero.
-                _pullBackoff = null;
+                // Successful receive. Reset retry state.
+                _retryState.OnSuccess();
                 // Copy msgs to list, and clear original proto repeatedfield; to remove refs to large messages as soon as possible.
                 // It is not possible to set RepeatedField elements to null, so messages need transfering to a List.
                 StreamingPullResponse current;
@@ -381,10 +421,11 @@ public sealed partial class SubscriberClientImpl
                 {
                     current = _pull.GrpcCall.ResponseStream.Current;
                     _exactlyOnceDeliveryEnabled = current.SubscriptionProperties?.ExactlyOnceDeliveryEnabled ?? false;
+                    _messageOrderingEnabled = current.SubscriptionProperties?.MessageOrderingEnabled ?? false;
                 }
-                catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
+                catch (Exception e) when (_retryState.RecordFailureAndCheckForRetry(e))
                 {
-                    HandleRpcFailure(e);
+                    RestartPullAfterRetriableFailure(e);
                     return;
                 }
                 var receivedMessages = current.ReceivedMessages;
@@ -392,20 +433,66 @@ public sealed partial class SubscriberClientImpl
                 receivedMessages.Clear();
                 // Get all ack-ids, used to extend leases as required.
                 var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
-                // Send an initial "lease-extension"; which starts the server timer.
-                HandleExtendLease(msgIds, null);
-                // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
-                // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
-                Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
-                // Once all received messages have been queued for processing, read the stream for more messages.
-                Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
+                _receiptModAckForExactlyOnceDelivery = _exactlyOnceDeliveryEnabled;
+                if (_exactlyOnceDeliveryEnabled)
+                {
+                    // Populate receipt ModAck dictionary before the lease extends are send.
+                    // Add and initialize all Ack IDs with a null value to indicate that their receipt ModAck request hasn't started or is in progress.
+                    UpdateReceiptModAckStatus(msgIds, status: null);
+                    // Send an initial "lease-extension"; which starts the server timer.
+                    HandleExtendLease(msgIds, null);
+                    // In the exactly-once delivery flow, we must send only those messages to the user handler which had successful receipt ModAck responses.
+                    // This is necessary to prevent message redelivery. We get the status of success and permanent failure as soon as response arrives.
+                    // However, temporary failures are retried for up to three times and may eventaully succeed, result in permanent failure, or remain as temporary failure.
+                    // Therefore, we must wait for all receipt ModAck responses to complete to obtain the final status.
+                    // Then, the messages with successful receipt ModAcks are sent to the user, while those with failed ModAcks are removed from further processing.
+                    Add(_eventReceiptModAckForExactlyOnceDelivery.WaitAsync(_softStopCts.Token)
+                        .ContinueWith(task => ProcessSuccessfulMessages(msgs, msgIds), CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler)
+                        , Next(true, () => HandlePullMoveNext(null)));
+                }
+                else
+                {
+                    // Send an initial "lease-extension"; which starts the server timer.
+                    HandleExtendLease(msgIds, null);
+                    // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
+                    // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
+                    Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
+                    // Once all received messages have been queued for processing, read the stream for more messages.
+                    Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
+                }
             }
             else
             {
                 StopStreamingPull();
                 // Always a short pause on server disconnect.
-                _pullBackoff = TimeSpan.FromSeconds(0.5);
+                _retryState.OnServerDisconnect();
                 StartStreamingPull();
+            }
+
+            // This local method is used exclusively in exactly-once delivery flow.
+            // The method processes and shares the messages that had successful receipt ModAcks.
+            // Additionaly, it removes Ack IDs of messages that failed to extend successfully from the given list of messages.
+            Task ProcessSuccessfulMessages(List<ReceivedMessage> messages, HashSet<string> messageIds)
+            {
+                // Remove all Ack IDs that failed to extend successfully.
+                // The value of false in the dictionary represents the failure.
+                var failures = new HashSet<string>(_receiptModAckStatusLookup.Where(keyValue => keyValue.Value == false).Select(keyValue => keyValue.Key));
+                if (failures.Any())
+                {
+                    // Remove failed messages.
+                    messageIds.RemoveWhere(failures.Contains);
+                    messages.RemoveAll(x => failures.Contains(x.AckId));
+                }
+
+                // The purpose of lookup is served by removing the messages with failed ModAck (if any) from further processing.
+                // The failed messages will be redelivered by the server. Clear the dictionary.
+                _receiptModAckStatusLookup.Clear();
+
+                // Receipt ModAck response handling and message filtering is now complete. Reset the flag as false.
+                _receiptModAckForExactlyOnceDelivery = false;
+
+                // Process the successful messages asynchronously.
+                return _taskHelper.Run(() => ProcessPullMessagesAsync(messages, messageIds));
             }
         }
 
@@ -418,7 +505,7 @@ public sealed partial class SubscriberClientImpl
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
-                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), msg.Message.OrderingKey ?? "", async () =>
+                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
                 {
                     // Running async. Common data needs locking
                     lock (_lock)
@@ -468,7 +555,7 @@ public sealed partial class SubscriberClientImpl
 
             public LeaseCancellation(CancellationTokenSource softStopCts) =>
                 _cts = CancellationTokenSource.CreateLinkedTokenSource(softStopCts.Token);
-           
+
             public void Dispose()
             {
                 lock (_lock)
@@ -548,10 +635,10 @@ public sealed partial class SubscriberClientImpl
                     _eventPush.Set();
                     // Some ids still exist, schedule another extension.
                     // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                    Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendIntervalForExactlyOnceDelivery : _autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.AutoExtendDelay, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                     // Increment _extendThrottles.
                     _extendThrottleHigh += 1;
-                    Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.ExtendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
                 }
                 else
                 {
@@ -604,7 +691,7 @@ public sealed partial class SubscriberClientImpl
             {
                 _pushInFlight += extends.Count;
                 _concurrentPushCount += 1;
-                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), _modifyDeadlineSeconds, _hardStopCts.Token);
+                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), EffectiveLeaseTiming.AckDeadlineSeconds, _hardStopCts.Token);
                 Add(extendTask, Next(false, () => HandleAckResponse(extendTask, null, null, extends)));
             }
             if (nacks.Count > 0)
@@ -637,7 +724,7 @@ public sealed partial class SubscriberClientImpl
         {
             _concurrentPushCount -= 1;
             _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
-            
+
             bool hasAckIds = ackIds?.Count > 0;
             bool hasNackIds = nackIds?.Count > 0;
             bool hasExtendIds = extendIds?.Count > 0;
@@ -668,6 +755,13 @@ public sealed partial class SubscriberClientImpl
 
                     if (hasExtendIds)
                     {
+                        if (IsReceiptModAckResponse(ids, hasExtendIds))
+                        {
+                            // Extends being retried for receipt ModAck.
+                            // Update all temporary and permanent failures.
+                            UpdateModAckStatus(ids, ackError);
+                        }
+
                         RetryExtends(extendIds, ackError);
                     }
                 }
@@ -681,6 +775,13 @@ public sealed partial class SubscriberClientImpl
             {
                 // Everything succeeded. Update _retryableIds dictionary.
                 UpdateRetryableIds(ids, default);
+
+                if (IsReceiptModAckResponse(ids, hasExtendIds))
+                {
+                    // Everything succeeded for receipt ModAcks, so update the status as success and set the event.
+                    UpdateModAckStatus(ids, default);
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
+                }
             }
 
             // Perform push so that other messages can be processed.
@@ -722,6 +823,13 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Retry for 10 seconds or 3 attempts only.
                     RetryTemporaryFailures(Enumerable.Empty<string>(), null, extendIdsToRetry, extendsToRetry => _extendQueue.Locked(() => _extendQueue.Requeue(extendsToRetry)), 10);
+                }
+                else if (IsReceiptModAckResponse(extendIds.Select(j => j.Id), true))
+                {
+                    // If we are here, it means we have no retryable error for the receipt ModAcks at this time.
+                    // Failures are already updated in the _receiptModAckStatusLookup dictionary.
+                    // Set the signal that receipt ModAck event is done.
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
                 }
             }
 
@@ -777,6 +885,14 @@ public sealed partial class SubscriberClientImpl
                     retriesToSchedule.Add((candidateRetryId, retryInfo));
                 }
 
+                if (IsReceiptModAckResponse(idsToRetry, hasExtends) && !retriesToSchedule.Any(j => _receiptModAckStatusLookup.ContainsKey(j.id)))
+                {
+                    // If we are here, it means that we are retrying temporary failures of receipt ModAcks for exactly once delivery,
+                    // and the temporary error is no longer retryable as the retry timeout has expired.
+                    // Signal that receipt ModAck event has completed.
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
+                }
+
                 // We can have ids with different backoff values.
                 // Group on the backoff and add them to the corresponding queue in the increasing order of backoff.
                 var retryGroups = retriesToSchedule.GroupBy(info => info.info.Backoff).OrderBy(group => group.Key);
@@ -804,7 +920,7 @@ public sealed partial class SubscriberClientImpl
                 // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
                 // TODO: Check if there is an impact due to lazy loading of IEnumerable<T>.
                 var successfulIds = allIds.Except(temporaryFailureIds).Except(permanentFailureIds);
-                // Some ids may have permanent failures and some may have succeeded. Those ids shouldn't be retried. 
+                // Some ids may have permanent failures and some may have succeeded. Those ids shouldn't be retried.
                 var nonRetryableIds = permanentFailureIds.Concat(successfulIds);
 
                 foreach (var item in temporaryFailureIds)
@@ -821,6 +937,31 @@ public sealed partial class SubscriberClientImpl
                     _ = _retryableIds.TryRemove(item, out _);
                 }
             }
+
+            // This local method is used exclusively for exactly-once delivery flow.
+            // It updates the `_receiptModAckStatusLookup` dictionary with the latest receipt ModAck response status for each Ack ID.
+            void UpdateModAckStatus(IEnumerable<string> allIds, AckError ackError)
+            {
+                var permanentFailureIds = ackError?.PermanentFailureIds ?? Enumerable.Empty<string>();
+                var temporaryFailureIds = ackError?.TemporaryFailureIds ?? Enumerable.Empty<string>();
+                var allFailureIds = permanentFailureIds.Concat(temporaryFailureIds);
+                // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
+                var successfulIds = allIds.Except(allFailureIds);
+
+                // Update failed status. The value of false represents failure.
+                UpdateReceiptModAckStatus(allFailureIds, false);
+
+                // Update success status. The value of true represents success.
+                UpdateReceiptModAckStatus(successfulIds, true);
+            }
+
+            // This local method is used to determine if the current response is for receipt ModAck. It is used exclusively for exactly-once delivery.
+            // We determine that the response is receipt ModAck, if the following three conditions are met simultaneously:
+            // 1. The response contains at least one extend ID indicated by the hasExtends flag. Only extends count towards receipt ModAck, not acks or nacks.
+            // 2. The flag _receiptModAckForExactlyOnceDelivery is true. This flag is only set when the lease extension begins.
+            // 3. The response contains at least one Ack ID that is present in the `_receiptModAckStatusLookup` dictionary. This condition helps reduce reduce noise due to extends that may occur simultaneously with receipt ModAck.
+            bool IsReceiptModAckResponse(IEnumerable<string> allIds, bool hasExtends) =>
+                hasExtends && _receiptModAckForExactlyOnceDelivery && allIds.Any(_receiptModAckStatusLookup.ContainsKey);
         }
 
         private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
@@ -848,7 +989,7 @@ public sealed partial class SubscriberClientImpl
                 // Any uncaught exception in the handler will terminate the client.
                 _handler.HandleNackResponses(ackNackResponses);
             }
-            
+
             if (_exactlyOnceDeliveryEnabled)
             {
                 HandleAckResponseForExactlyOnceDelivery(writeTask, ackIds, nackIds, extendIds);
@@ -859,7 +1000,7 @@ public sealed partial class SubscriberClientImpl
             _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
             if (writeTask.IsFaulted)
             {
-                // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later. 
+                // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later.
                 // Other non-gRPC unrecoverable errors will continue to be thrown.
                 if (writeTask.Exception.As<RpcException>() is null)
                 {
@@ -948,6 +1089,156 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Ignore any errors.
                 }
+            }
+        }
+
+        /// <summary>
+        /// Updates the receipt ModAck status for the specified Ack IDs.
+        /// </summary>
+        /// <param name="ids">The Ack IDs for which the receipt ModAck status needs to be updated.</param>
+        /// <param name="status">The receipt ModAck status to be updated. A value of <c>null</c> indicates that the status is not started or in progress; <c>true</c> indicates success, and <c>false</c> indicates failure.</param>
+        /// <remarks> This method is used exclusively for exactly-once delivery flow.</remarks>
+        private void UpdateReceiptModAckStatus(IEnumerable<string> ids, bool? status)
+        {
+            // We ensure that ids are never null, so null check isn't needed.
+            foreach (var id in ids)
+            {
+                _receiptModAckStatusLookup[id] = status;
+            }
+        }
+
+        /// <summary>
+        /// Maintains the state of retry operations.
+        /// Currently this is only used for pull operations, and has hard-coded pull-specific behavior,
+        /// but it could be used for publishing later once we have clearer requirements.
+        /// </summary>
+        private class RetryState
+        {
+            /// <summary>
+            /// If a streaming pull only reports an error after this threshold, then we assume it was actually
+            /// successful, so we don't need to back off or repeat anything.
+            /// </summary>
+            private static readonly TimeSpan s_streamingPullSuccessThreshold = TimeSpan.FromSeconds(45);
+            private const string GrpcCoreAuthExceptionPrefix = "Getting metadata from plugin failed with error: Exception occurred in metadata credentials plugin. ";
+            private const int MaxAuthExceptionsBeforeFailing = 4;
+
+            /// <summary>
+            /// We fail after this many consecutive failures, regardless of what the failure was.
+            /// With the backoffs involved, this will be after a pretty significant amount of time anyway.
+            /// </summary>
+            private const int ConcurrentFailureLimit = 100;
+
+            private readonly IClock _clock;
+            private readonly ILogger _logger;
+            private readonly RetrySettings _backoffTiming;
+            private readonly TimeSpan _disconnectBackoff;
+
+            private DateTime _currentStartTimestamp;
+            private readonly List<RpcException> _exceptions;
+            private DateTime? _firstExceptionTimestamp;
+            internal TimeSpan? Backoff { get; private set; }
+
+            internal RetryState(IClock clock, ILogger logger, RetrySettings backoffTiming, TimeSpan disconnectBackoff)
+            {
+                _clock = clock;
+                _logger = logger;
+                _backoffTiming = backoffTiming;
+                _disconnectBackoff = disconnectBackoff;
+                _exceptions = new();
+                _firstExceptionTimestamp = null;
+                Backoff = null;
+            }
+
+            /// <summary>
+            /// Checks whether the given exception should be retried, updating the state including the next backoff.
+            /// </summary>
+            internal bool RecordFailureAndCheckForRetry(Exception exception)
+            {
+                var now = _clock.GetCurrentDateTimeUtc();
+                _firstExceptionTimestamp ??= now;
+                // This won't be used if we decide not to retry anyway.
+                Backoff = _backoffTiming.NextBackoff(Backoff ?? TimeSpan.Zero);
+
+                // Don't retry any non-RpcExceptions
+                if (exception.As<RpcException>() is not RpcException rpcEx)
+                {
+                    return false;
+                }
+
+                _exceptions.Add(rpcEx);
+
+                // If we've reached our limit, fail regardless.
+                if (_exceptions.Count == ConcurrentFailureLimit)
+                {
+                    return false;
+                }
+
+                var code = rpcEx.StatusCode;
+
+                // If the server has just dropped the stream, but it's after a sufficiently long time, we can
+                // deem that to be successful and retry with no backoff.
+                if (code == StatusCode.Unavailable && (now - _currentStartTimestamp) >= s_streamingPullSuccessThreshold)
+                {
+                    _logger?.LogDebug("Pull stream terminated with no messages, but after success assumption threshold time. Retrying with no backoff.");
+                    OnSuccess();
+                    return true;
+                }
+
+                // If the exception isn't generally recoverable, don't retry.
+                if (!rpcEx.IsRecoverable())
+                {
+                    return false;
+                }
+
+                // If the exception was a failure due to auth, and we've seen some before, don't retry.
+                // The auth-related exceptions don't need to be consecutive: if we have transient auth related
+                // problems, then non-auth problems, then auth related problems again, we're definitely in a bad situation.
+                if (IsAuthException(rpcEx))
+                {
+                    var count = _exceptions.Count(IsAuthException);
+                    bool retry = count <= MaxAuthExceptionsBeforeFailing;
+                    if (!retry)
+                    {
+                        _logger?.LogWarning("Failing pull request due to auth-based failures.");
+                    }
+                    return retry;
+                }
+
+                // We can potentially add more subtle checks here.
+
+                // Looks like we can retry.
+                return true;
+
+                // Indicates if an exception was due to a problem getting credentials, rather than a problem
+                // with the call itself. We only retry these a limited number of times.
+                static bool IsAuthException(RpcException ex) =>
+                    // Grpc.Net.Client behavior
+                    ex.StatusCode == StatusCode.Internal && ex.InnerException is TokenResponseException ||
+                    // Grpc.Core behavior
+                    ex.StatusCode == StatusCode.Unavailable && (ex.Status.Detail?.StartsWith(GrpcCoreAuthExceptionPrefix, StringComparison.Ordinal) ?? false);
+            }
+
+            /// <summary>
+            /// Records the time of the start of an operation.
+            /// </summary>
+            internal void OnStartAttempt() => _currentStartTimestamp = _clock.GetCurrentDateTimeUtc();
+
+            /// <summary>
+            /// Records that an operation succeeded.
+            /// </summary>
+            internal void OnSuccess()
+            {
+                _firstExceptionTimestamp = null;
+                _exceptions.Clear();
+                Backoff = null;
+            }
+
+            internal void OnServerDisconnect()
+            {
+                // Ignore previous exceptions.
+                OnSuccess();
+                // Backoff briefly.
+                Backoff = _disconnectBackoff;
             }
         }
     }

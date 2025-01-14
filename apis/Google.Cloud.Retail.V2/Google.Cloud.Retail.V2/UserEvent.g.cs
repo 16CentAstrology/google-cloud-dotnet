@@ -76,6 +76,7 @@ namespace Google.Cloud.Retail.V2 {
   /// UserEvent captures all metadata information Retail API needs to know about
   /// how end users interact with customers' website.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -147,6 +148,7 @@ namespace Google.Cloud.Retail.V2 {
     /// Required. User event type. Allowed values are:
     ///
     /// * `add-to-cart`: Products being added to cart.
+    /// * `remove-from-cart`: Products being removed from cart.
     /// * `category-page-view`: Special pages such as sale or promotion pages
     ///   viewed.
     /// * `detail-page-view`: Products detail page viewed.
@@ -617,8 +619,8 @@ namespace Google.Cloud.Retail.V2 {
     /// The entity for customers that may run multiple different entities, domains,
     /// sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
     /// `google.com`, `youtube.com`, etc.
-    /// It is recommended to set this field to get better per-entity search,
-    /// completion and prediction results.
+    /// We recommend that you set this field to get better per-entity search,
+    /// completion, and prediction results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -968,7 +970,7 @@ namespace Google.Cloud.Retail.V2 {
         }
         CompletionDetail.MergeFrom(other.CompletionDetail);
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.CartId.Length != 0) {
         CartId = other.CartId;
       }
@@ -1241,6 +1243,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Detailed product information associated with a user event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductDetail : pb::IMessage<ProductDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1514,6 +1517,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Detailed completion information including completion attribution token and
   /// clicked completion info.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionDetail : pb::IMessage<CompletionDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1793,6 +1797,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// A transaction represents the entire purchase transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurchaseTransaction : pb::IMessage<PurchaseTransaction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

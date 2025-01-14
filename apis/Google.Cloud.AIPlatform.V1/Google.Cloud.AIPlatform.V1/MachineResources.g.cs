@@ -27,16 +27,21 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNl",
             "cy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8ijwEKC01hY2hpbmVTcGVj",
-            "EhkKDG1hY2hpbmVfdHlwZRgBIAEoCUID4EEFEkoKEGFjY2VsZXJhdG9yX3R5",
-            "cGUYAiABKA4yKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BY2NlbGVy",
-            "YXRvclR5cGVCA+BBBRIZChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBSL4AQoS",
-            "RGVkaWNhdGVkUmVzb3VyY2VzEkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hpbmVTcGVjQgbgQQLgQQUS",
-            "IQoRbWluX3JlcGxpY2FfY291bnQYAiABKAVCBuBBAuBBBRIeChFtYXhfcmVw",
-            "bGljYV9jb3VudBgDIAEoBUID4EEFElgKGGF1dG9zY2FsaW5nX21ldHJpY19z",
-            "cGVjcxgEIAMoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9z",
-            "Y2FsaW5nTWV0cmljU3BlY0ID4EEFIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIe",
+            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8aNWdvb2dsZS9jbG91ZC9h",
+            "aXBsYXRmb3JtL3YxL3Jlc2VydmF0aW9uX2FmZmluaXR5LnByb3RvIoECCgtN",
+            "YWNoaW5lU3BlYxIZCgxtYWNoaW5lX3R5cGUYASABKAlCA+BBBRJKChBhY2Nl",
+            "bGVyYXRvcl90eXBlGAIgASgOMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuQWNjZWxlcmF0b3JUeXBlQgPgQQUSGQoRYWNjZWxlcmF0b3JfY291bnQY",
+            "AyABKAUSGQoMdHB1X3RvcG9sb2d5GAQgASgJQgPgQQUSVQoUcmVzZXJ2YXRp",
+            "b25fYWZmaW5pdHkYBSABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5SZXNlcnZhdGlvbkFmZmluaXR5QgbgQQXgQQEisAIKEkRlZGljYXRlZFJl",
+            "c291cmNlcxJFCgxtYWNoaW5lX3NwZWMYASABKAsyJy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5NYWNoaW5lU3BlY0IG4EEC4EEFEiEKEW1pbl9yZXBs",
+            "aWNhX2NvdW50GAIgASgFQgbgQQLgQQUSHgoRbWF4X3JlcGxpY2FfY291bnQY",
+            "AyABKAVCA+BBBRIjChZyZXF1aXJlZF9yZXBsaWNhX2NvdW50GAkgASgFQgPg",
+            "QQESWAoYYXV0b3NjYWxpbmdfbWV0cmljX3NwZWNzGAQgAygLMjEuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuQXV0b3NjYWxpbmdNZXRyaWNTcGVjQgPg",
+            "QQUSEQoEc3BvdBgFIAEoCEID4EEBIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIe",
             "ChFtaW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9yZXBsaWNh",
             "X2NvdW50GAIgASgFQgPgQQUipQEKF0JhdGNoRGVkaWNhdGVkUmVzb3VyY2Vz",
             "EkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRm",
@@ -44,26 +49,31 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YV9jb3VudBgCIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgF",
             "QgPgQQUiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgB",
             "IAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJ",
-            "EhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIkwKCE5mc01vdW50EhMKBnNl",
-            "cnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9w",
-            "b2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgtt",
-            "ZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRhcmdldBgCIAEoBULTAQoeY29t",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNYWNoaW5lUmVzb3VyY2Vz",
-            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYx",
-            "L2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQ",
-            "bGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29v",
-            "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "EhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNr",
+            "U3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIgASgD",
+            "IkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiAB",
+            "KAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2Fs",
+            "aW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRh",
+            "cmdldBgCIAEoBSIuChBTaGllbGRlZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1",
+            "cmVfYm9vdBgBIAEoCELTAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxQhVNYWNoaW5lUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
+            "cGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
+            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ReservationAffinityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology", "ReservationAffinity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutomaticResources), global::Google.Cloud.AIPlatform.V1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DiskSpec), global::Google.Cloud.AIPlatform.V1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NfsMount), global::Google.Cloud.AIPlatform.V1.NfsMount.Parser, new[]{ "Server", "Path", "MountPoint" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,6 +83,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Specification of a single machine.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MachineSpec : pb::IMessage<MachineSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -110,6 +121,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       machineType_ = other.machineType_;
       acceleratorType_ = other.acceleratorType_;
       acceleratorCount_ = other.acceleratorCount_;
+      tpuTopology_ = other.tpuTopology_;
+      reservationAffinity_ = other.reservationAffinity_ != null ? other.reservationAffinity_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -178,6 +191,38 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "tpu_topology" field.</summary>
+    public const int TpuTopologyFieldNumber = 4;
+    private string tpuTopology_ = "";
+    /// <summary>
+    /// Immutable. The topology of the TPUs. Corresponds to the TPU topologies
+    /// available from GKE. (Example: tpu_topology: "2x2x1").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TpuTopology {
+      get { return tpuTopology_; }
+      set {
+        tpuTopology_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reservation_affinity" field.</summary>
+    public const int ReservationAffinityFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.ReservationAffinity reservationAffinity_;
+    /// <summary>
+    /// Optional. Immutable. Configuration controlling how this resource pool
+    /// consumes reservation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ReservationAffinity ReservationAffinity {
+      get { return reservationAffinity_; }
+      set {
+        reservationAffinity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -196,6 +241,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MachineType != other.MachineType) return false;
       if (AcceleratorType != other.AcceleratorType) return false;
       if (AcceleratorCount != other.AcceleratorCount) return false;
+      if (TpuTopology != other.TpuTopology) return false;
+      if (!object.Equals(ReservationAffinity, other.ReservationAffinity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -206,6 +253,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
       if (AcceleratorType != global::Google.Cloud.AIPlatform.V1.AcceleratorType.Unspecified) hash ^= AcceleratorType.GetHashCode();
       if (AcceleratorCount != 0) hash ^= AcceleratorCount.GetHashCode();
+      if (TpuTopology.Length != 0) hash ^= TpuTopology.GetHashCode();
+      if (reservationAffinity_ != null) hash ^= ReservationAffinity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -236,6 +285,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(AcceleratorCount);
       }
+      if (TpuTopology.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TpuTopology);
+      }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReservationAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -258,6 +315,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(AcceleratorCount);
       }
+      if (TpuTopology.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TpuTopology);
+      }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReservationAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -276,6 +341,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (AcceleratorCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AcceleratorCount);
+      }
+      if (TpuTopology.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TpuTopology);
+      }
+      if (reservationAffinity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReservationAffinity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -297,6 +368,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.AcceleratorCount != 0) {
         AcceleratorCount = other.AcceleratorCount;
+      }
+      if (other.TpuTopology.Length != 0) {
+        TpuTopology = other.TpuTopology;
+      }
+      if (other.reservationAffinity_ != null) {
+        if (reservationAffinity_ == null) {
+          ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+        }
+        ReservationAffinity.MergeFrom(other.ReservationAffinity);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -323,6 +403,17 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             AcceleratorCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            TpuTopology = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
             break;
           }
         }
@@ -352,6 +443,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             AcceleratorCount = input.ReadInt32();
             break;
           }
+          case 34: {
+            TpuTopology = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
+            break;
+          }
         }
       }
     }
@@ -363,6 +465,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A description of resources that are dedicated to a DeployedModel, and
   /// that need a higher degree of manual configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DedicatedResources : pb::IMessage<DedicatedResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -400,7 +503,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       minReplicaCount_ = other.minReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
+      requiredReplicaCount_ = other.requiredReplicaCount_;
       autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
+      spot_ = other.spot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -475,6 +580,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "required_replica_count" field.</summary>
+    public const int RequiredReplicaCountFieldNumber = 9;
+    private int requiredReplicaCount_;
+    /// <summary>
+    /// Optional. Number of required available replicas for the deployment to
+    /// succeed. This field is only needed when partial model deployment/mutation
+    /// is desired. If set, the model deploy/mutate operation will succeed once
+    /// available_replica_count reaches required_replica_count, and the rest of
+    /// the replicas will be retried. If not set, the default
+    /// required_replica_count will be min_replica_count.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RequiredReplicaCount {
+      get { return requiredReplicaCount_; }
+      set {
+        requiredReplicaCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "autoscaling_metric_specs" field.</summary>
     public const int AutoscalingMetricSpecsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec> _repeated_autoscalingMetricSpecs_codec
@@ -511,6 +636,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return autoscalingMetricSpecs_; }
     }
 
+    /// <summary>Field number for the "spot" field.</summary>
+    public const int SpotFieldNumber = 5;
+    private bool spot_;
+    /// <summary>
+    /// Optional. If true, schedule the deployment workload on [spot
+    /// VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Spot {
+      get { return spot_; }
+      set {
+        spot_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -529,7 +670,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (MinReplicaCount != other.MinReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
+      if (RequiredReplicaCount != other.RequiredReplicaCount) return false;
       if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
+      if (Spot != other.Spot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -540,7 +683,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (MinReplicaCount != 0) hash ^= MinReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
+      if (RequiredReplicaCount != 0) hash ^= RequiredReplicaCount.GetHashCode();
       hash ^= autoscalingMetricSpecs_.GetHashCode();
+      if (Spot != false) hash ^= Spot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -572,6 +717,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt32(MaxReplicaCount);
       }
       autoscalingMetricSpecs_.WriteTo(output, _repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
+      if (RequiredReplicaCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(RequiredReplicaCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -595,6 +748,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt32(MaxReplicaCount);
       }
       autoscalingMetricSpecs_.WriteTo(ref output, _repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
+      if (RequiredReplicaCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(RequiredReplicaCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -614,7 +775,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MaxReplicaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxReplicaCount);
       }
+      if (RequiredReplicaCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RequiredReplicaCount);
+      }
       size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -639,7 +806,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.MaxReplicaCount != 0) {
         MaxReplicaCount = other.MaxReplicaCount;
       }
+      if (other.RequiredReplicaCount != 0) {
+        RequiredReplicaCount = other.RequiredReplicaCount;
+      }
       autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
+      if (other.Spot != false) {
+        Spot = other.Spot;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -672,6 +845,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 34: {
             autoscalingMetricSpecs_.AddEntriesFrom(input, _repeated_autoscalingMetricSpecs_codec);
+            break;
+          }
+          case 40: {
+            Spot = input.ReadBool();
+            break;
+          }
+          case 72: {
+            RequiredReplicaCount = input.ReadInt32();
             break;
           }
         }
@@ -708,6 +889,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             autoscalingMetricSpecs_.AddEntriesFrom(ref input, _repeated_autoscalingMetricSpecs_codec);
             break;
           }
+          case 40: {
+            Spot = input.ReadBool();
+            break;
+          }
+          case 72: {
+            RequiredReplicaCount = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -720,6 +909,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// and require only a modest additional configuration.
   /// Each Model supporting these resources documents its specific guidelines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutomaticResources : pb::IMessage<AutomaticResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -969,6 +1159,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A description of resources that are used for performing batch operations, are
   /// dedicated to a Model, and need manual configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDedicatedResources : pb::IMessage<BatchDedicatedResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1256,6 +1447,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Statistics information about resource consumption.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourcesConsumed : pb::IMessage<ResourcesConsumed>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1453,6 +1645,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Represents the spec of disk options.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiskSpec : pb::IMessage<DiskSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1688,8 +1881,250 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Represents the spec of [persistent
+  /// disk][https://cloud.google.com/compute/docs/disks/persistent-disks] options.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PersistentDiskSpec : pb::IMessage<PersistentDiskSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PersistentDiskSpec> _parser = new pb::MessageParser<PersistentDiskSpec>(() => new PersistentDiskSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PersistentDiskSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PersistentDiskSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PersistentDiskSpec(PersistentDiskSpec other) : this() {
+      diskType_ = other.diskType_;
+      diskSizeGb_ = other.diskSizeGb_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PersistentDiskSpec Clone() {
+      return new PersistentDiskSpec(this);
+    }
+
+    /// <summary>Field number for the "disk_type" field.</summary>
+    public const int DiskTypeFieldNumber = 1;
+    private string diskType_ = "";
+    /// <summary>
+    /// Type of the disk (default is "pd-standard").
+    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive)
+    /// "pd-standard" (Persistent Disk Hard Disk Drive)
+    /// "pd-balanced" (Balanced Persistent Disk)
+    /// "pd-extreme" (Extreme Persistent Disk)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DiskType {
+      get { return diskType_; }
+      set {
+        diskType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "disk_size_gb" field.</summary>
+    public const int DiskSizeGbFieldNumber = 2;
+    private long diskSizeGb_;
+    /// <summary>
+    /// Size in GB of the disk (default is 100GB).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DiskSizeGb {
+      get { return diskSizeGb_; }
+      set {
+        diskSizeGb_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PersistentDiskSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PersistentDiskSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DiskType != other.DiskType) return false;
+      if (DiskSizeGb != other.DiskSizeGb) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DiskType.Length != 0) hash ^= DiskType.GetHashCode();
+      if (DiskSizeGb != 0L) hash ^= DiskSizeGb.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DiskType.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DiskType);
+      }
+      if (DiskSizeGb != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(DiskSizeGb);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DiskType.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DiskType);
+      }
+      if (DiskSizeGb != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(DiskSizeGb);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DiskType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DiskType);
+      }
+      if (DiskSizeGb != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DiskSizeGb);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PersistentDiskSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DiskType.Length != 0) {
+        DiskType = other.DiskType;
+      }
+      if (other.DiskSizeGb != 0L) {
+        DiskSizeGb = other.DiskSizeGb;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DiskType = input.ReadString();
+            break;
+          }
+          case 16: {
+            DiskSizeGb = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DiskType = input.ReadString();
+            break;
+          }
+          case 16: {
+            DiskSizeGb = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents a mount configuration for Network File System (NFS) to mount.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NfsMount : pb::IMessage<NfsMount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1704,7 +2139,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1970,6 +2405,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// (CPU utilization, accelerator's duty cycle, and so on) for calculating the
   /// desired replica count.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingMetricSpec : pb::IMessage<AutoscalingMetricSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1984,7 +2420,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2201,6 +2637,210 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             Target = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A set of Shielded Instance options.
+  /// See [Images using supported Shielded VM
+  /// features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ShieldedVmConfig : pb::IMessage<ShieldedVmConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ShieldedVmConfig> _parser = new pb::MessageParser<ShieldedVmConfig>(() => new ShieldedVmConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ShieldedVmConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShieldedVmConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShieldedVmConfig(ShieldedVmConfig other) : this() {
+      enableSecureBoot_ = other.enableSecureBoot_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShieldedVmConfig Clone() {
+      return new ShieldedVmConfig(this);
+    }
+
+    /// <summary>Field number for the "enable_secure_boot" field.</summary>
+    public const int EnableSecureBootFieldNumber = 1;
+    private bool enableSecureBoot_;
+    /// <summary>
+    /// Defines whether the instance has [Secure
+    /// Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#secure-boot)
+    /// enabled.
+    ///
+    /// Secure Boot helps ensure that the system only runs authentic software by
+    /// verifying the digital signature of all boot components, and halting the
+    /// boot process if signature verification fails.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableSecureBoot {
+      get { return enableSecureBoot_; }
+      set {
+        enableSecureBoot_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ShieldedVmConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ShieldedVmConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnableSecureBoot != other.EnableSecureBoot) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnableSecureBoot != false) hash ^= EnableSecureBoot.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EnableSecureBoot != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableSecureBoot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EnableSecureBoot != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableSecureBoot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnableSecureBoot != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ShieldedVmConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnableSecureBoot != false) {
+        EnableSecureBoot = other.EnableSecureBoot;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnableSecureBoot = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EnableSecureBoot = input.ReadBool();
             break;
           }
         }

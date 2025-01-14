@@ -34,7 +34,7 @@ namespace Google.Cloud.Datastore.V1 {
             "LwoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wEg4KBmN1cnNvchgDIAEoDCJRCgpSZXN1bHRUeXBlEhsKF1JFU1VMVF9U",
             "WVBFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg4KClBST0pFQ1RJT04QAhIM",
-            "CghLRVlfT05MWRADIvICCgVRdWVyeRIzCgpwcm9qZWN0aW9uGAIgAygLMh8u",
+            "CghLRVlfT05MWRADIq8DCgVRdWVyeRIzCgpwcm9qZWN0aW9uGAIgAygLMh8u",
             "Z29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9qZWN0aW9uEjEKBGtpbmQYAyADKAsy",
             "Iy5nb29nbGUuZGF0YXN0b3JlLnYxLktpbmRFeHByZXNzaW9uEisKBmZpbHRl",
             "chgEIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRmlsdGVyEjEKBW9yZGVy",
@@ -42,69 +42,89 @@ namespace Google.Cloud.Datastore.V1 {
             "C2Rpc3RpbmN0X29uGAYgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9w",
             "ZXJ0eVJlZmVyZW5jZRIUCgxzdGFydF9jdXJzb3IYByABKAwSEgoKZW5kX2N1",
             "cnNvchgIIAEoDBIOCgZvZmZzZXQYCiABKAUSKgoFbGltaXQYDCABKAsyGy5n",
-            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZSLWAgoQQWdncmVnYXRpb25RdWVy",
-            "eRIyCgxuZXN0ZWRfcXVlcnkYASABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYx",
-            "LlF1ZXJ5SAASTAoMYWdncmVnYXRpb25zGAMgAygLMjEuZ29vZ2xlLmRhdGFz",
-            "dG9yZS52MS5BZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uQgPgQQEasQEK",
-            "C0FnZ3JlZ2F0aW9uEkgKBWNvdW50GAEgASgLMjcuZ29vZ2xlLmRhdGFzdG9y",
-            "ZS52MS5BZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLkNvdW50SAASEgoF",
-            "YWxpYXMYByABKAlCA+BBARo4CgVDb3VudBIvCgV1cF90bxgBIAEoCzIbLmdv",
-            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgPgQQFCCgoIb3BlcmF0b3JCDAoK",
-            "cXVlcnlfdHlwZSIeCg5LaW5kRXhwcmVzc2lvbhIMCgRuYW1lGAEgASgJIiEK",
-            "EVByb3BlcnR5UmVmZXJlbmNlEgwKBG5hbWUYAiABKAkiRgoKUHJvamVjdGlv",
-            "bhI4Cghwcm9wZXJ0eRgBIAEoCzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJv",
-            "cGVydHlSZWZlcmVuY2Ui0QEKDVByb3BlcnR5T3JkZXISOAoIcHJvcGVydHkY",
+            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRI7CgxmaW5kX25lYXJlc3QYDSAB",
+            "KAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLkZpbmROZWFyZXN0QgPgQQEi5AQK",
+            "EEFnZ3JlZ2F0aW9uUXVlcnkSMgoMbmVzdGVkX3F1ZXJ5GAEgASgLMhouZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5RdWVyeUgAEkwKDGFnZ3JlZ2F0aW9ucxgDIAMo",
+            "CzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuQWdncmVnYXRpb25RdWVyeS5BZ2dy",
+            "ZWdhdGlvbkID4EEBGr8DCgtBZ2dyZWdhdGlvbhJICgVjb3VudBgBIAEoCzI3",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuQWdncmVnYXRpb25RdWVyeS5BZ2dyZWdh",
+            "dGlvbi5Db3VudEgAEkQKA3N1bRgCIAEoCzI1Lmdvb2dsZS5kYXRhc3RvcmUu",
+            "djEuQWdncmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbi5TdW1IABJECgNhdmcY",
+            "AyABKAsyNS5nb29nbGUuZGF0YXN0b3JlLnYxLkFnZ3JlZ2F0aW9uUXVlcnku",
+            "QWdncmVnYXRpb24uQXZnSAASEgoFYWxpYXMYByABKAlCA+BBARo4CgVDb3Vu",
+            "dBIvCgV1cF90bxgBIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVl",
+            "QgPgQQEaPwoDU3VtEjgKCHByb3BlcnR5GAEgASgLMiYuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZRo/CgNBdmcSOAoIcHJvcGVydHkY",
             "ASABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNl",
-            "Ej8KCWRpcmVjdGlvbhgCIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJv",
-            "cGVydHlPcmRlci5EaXJlY3Rpb24iRQoJRGlyZWN0aW9uEhkKFURJUkVDVElP",
-            "Tl9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQ",
-            "AiKZAQoGRmlsdGVyEkAKEGNvbXBvc2l0ZV9maWx0ZXIYASABKAsyJC5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlckgAEj4KD3Byb3BlcnR5",
-            "X2ZpbHRlchgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlG",
-            "aWx0ZXJIAEINCgtmaWx0ZXJfdHlwZSKxAQoPQ29tcG9zaXRlRmlsdGVyEjkK",
-            "Am9wGAEgASgOMi0uZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21wb3NpdGVGaWx0",
-            "ZXIuT3BlcmF0b3ISLAoHZmlsdGVycxgCIAMoCzIbLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuRmlsdGVyIjUKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lG",
-            "SUVEEAASBwoDQU5EEAESBgoCT1IQAiLqAgoOUHJvcGVydHlGaWx0ZXISOAoI",
-            "cHJvcGVydHkYASABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5",
-            "UmVmZXJlbmNlEjgKAm9wGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Q",
-            "cm9wZXJ0eUZpbHRlci5PcGVyYXRvchIpCgV2YWx1ZRgDIAEoCzIaLmdvb2ds",
-            "ZS5kYXRhc3RvcmUudjEuVmFsdWUiuAEKCE9wZXJhdG9yEhgKFE9QRVJBVE9S",
-            "X1VOU1BFQ0lGSUVEEAASDQoJTEVTU19USEFOEAESFgoSTEVTU19USEFOX09S",
-            "X0VRVUFMEAISEAoMR1JFQVRFUl9USEFOEAMSGQoVR1JFQVRFUl9USEFOX09S",
-            "X0VRVUFMEAQSCQoFRVFVQUwQBRIGCgJJThAGEg0KCU5PVF9FUVVBTBAJEhAK",
-            "DEhBU19BTkNFU1RPUhALEgoKBk5PVF9JThANIqUCCghHcWxRdWVyeRIUCgxx",
-            "dWVyeV9zdHJpbmcYASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiABKAgSSAoO",
-            "bmFtZWRfYmluZGluZ3MYBSADKAsyMC5nb29nbGUuZGF0YXN0b3JlLnYxLkdx",
-            "bFF1ZXJ5Lk5hbWVkQmluZGluZ3NFbnRyeRJDChNwb3NpdGlvbmFsX2JpbmRp",
-            "bmdzGAQgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFt",
-            "ZXRlchpcChJOYW1lZEJpbmRpbmdzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZh",
-            "bHVlGAIgASgLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFt",
-            "ZXRlcjoCOAEiZAoRR3FsUXVlcnlQYXJhbWV0ZXISKwoFdmFsdWUYAiABKAsy",
-            "Gi5nb29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlSAASEAoGY3Vyc29yGAMgASgM",
-            "SABCEAoOcGFyYW1ldGVyX3R5cGUijQQKEFF1ZXJ5UmVzdWx0QmF0Y2gSFwoP",
-            "c2tpcHBlZF9yZXN1bHRzGAYgASgFEhYKDnNraXBwZWRfY3Vyc29yGAMgASgM",
-            "EkgKEmVudGl0eV9yZXN1bHRfdHlwZRgBIAEoDjIsLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuRW50aXR5UmVzdWx0LlJlc3VsdFR5cGUSOQoOZW50aXR5X3Jlc3Vs",
-            "dHMYAiADKAsyIS5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIS",
-            "CgplbmRfY3Vyc29yGAQgASgMEksKDG1vcmVfcmVzdWx0cxgFIAEoDjI1Lmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuUXVlcnlSZXN1bHRCYXRjaC5Nb3JlUmVzdWx0",
-            "c1R5cGUSGAoQc25hcHNob3RfdmVyc2lvbhgHIAEoAxItCglyZWFkX3RpbWUY",
-            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIpgBCg9Nb3JlUmVz",
-            "dWx0c1R5cGUSIQodTU9SRV9SRVNVTFRTX1RZUEVfVU5TUEVDSUZJRUQQABIQ",
-            "CgxOT1RfRklOSVNIRUQQARIcChhNT1JFX1JFU1VMVFNfQUZURVJfTElNSVQQ",
-            "AhIdChlNT1JFX1JFU1VMVFNfQUZURVJfQ1VSU09SEAQSEwoPTk9fTU9SRV9S",
-            "RVNVTFRTEANCvAEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgpRdWVyeVBy",
-            "b3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "ZGF0YXN0b3JlL3YxO2RhdGFzdG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3Rv",
-            "cmUuVjHKAhlHb29nbGVcQ2xvdWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpD",
-            "bG91ZDo6RGF0YXN0b3JlOjpWMWIGcHJvdG8z"));
+            "QgoKCG9wZXJhdG9yQgwKCnF1ZXJ5X3R5cGUiHgoOS2luZEV4cHJlc3Npb24S",
+            "DAoEbmFtZRgBIAEoCSIhChFQcm9wZXJ0eVJlZmVyZW5jZRIMCgRuYW1lGAIg",
+            "ASgJIkYKClByb2plY3Rpb24SOAoIcHJvcGVydHkYASABKAsyJi5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNlItEBCg1Qcm9wZXJ0eU9y",
+            "ZGVyEjgKCHByb3BlcnR5GAEgASgLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Q",
+            "cm9wZXJ0eVJlZmVyZW5jZRI/CglkaXJlY3Rpb24YAiABKA4yLC5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxLlByb3BlcnR5T3JkZXIuRGlyZWN0aW9uIkUKCURpcmVj",
+            "dGlvbhIZChVESVJFQ1RJT05fVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQ",
+            "ARIOCgpERVNDRU5ESU5HEAIimQEKBkZpbHRlchJAChBjb21wb3NpdGVfZmls",
+            "dGVyGAEgASgLMiQuZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21wb3NpdGVGaWx0",
+            "ZXJIABI+Cg9wcm9wZXJ0eV9maWx0ZXIYAiABKAsyIy5nb29nbGUuZGF0YXN0",
+            "b3JlLnYxLlByb3BlcnR5RmlsdGVySABCDQoLZmlsdGVyX3R5cGUisQEKD0Nv",
+            "bXBvc2l0ZUZpbHRlchI5CgJvcBgBIAEoDjItLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djEuQ29tcG9zaXRlRmlsdGVyLk9wZXJhdG9yEiwKB2ZpbHRlcnMYAiADKAsy",
+            "Gy5nb29nbGUuZGF0YXN0b3JlLnYxLkZpbHRlciI1CghPcGVyYXRvchIYChRP",
+            "UEVSQVRPUl9VTlNQRUNJRklFRBAAEgcKA0FORBABEgYKAk9SEAIi6gIKDlBy",
+            "b3BlcnR5RmlsdGVyEjgKCHByb3BlcnR5GAEgASgLMiYuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZRI4CgJvcBgCIAEoDjIsLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuUHJvcGVydHlGaWx0ZXIuT3BlcmF0b3ISKQoFdmFs",
+            "dWUYAyABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlIrgBCghPcGVy",
+            "YXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEg0KCUxFU1NfVEhBThAB",
+            "EhYKEkxFU1NfVEhBTl9PUl9FUVVBTBACEhAKDEdSRUFURVJfVEhBThADEhkK",
+            "FUdSRUFURVJfVEhBTl9PUl9FUVVBTBAEEgkKBUVRVUFMEAUSBgoCSU4QBhIN",
+            "CglOT1RfRVFVQUwQCRIQCgxIQVNfQU5DRVNUT1IQCxIKCgZOT1RfSU4QDSLT",
+            "AwoLRmluZE5lYXJlc3QSRAoPdmVjdG9yX3Byb3BlcnR5GAEgASgLMiYuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVJlZmVyZW5jZUID4EECEjUKDHF1",
+            "ZXJ5X3ZlY3RvchgCIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuVmFsdWVC",
+            "A+BBAhJPChBkaXN0YW5jZV9tZWFzdXJlGAMgASgOMjAuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MS5GaW5kTmVhcmVzdC5EaXN0YW5jZU1lYXN1cmVCA+BBAhIvCgVs",
+            "aW1pdBgEIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlQgPgQQIS",
+            "JQoYZGlzdGFuY2VfcmVzdWx0X3Byb3BlcnR5GAUgASgJQgPgQQESPQoSZGlz",
+            "dGFuY2VfdGhyZXNob2xkGAYgASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJs",
+            "ZVZhbHVlQgPgQQEiXwoPRGlzdGFuY2VNZWFzdXJlEiAKHERJU1RBTkNFX01F",
+            "QVNVUkVfVU5TUEVDSUZJRUQQABINCglFVUNMSURFQU4QARIKCgZDT1NJTkUQ",
+            "AhIPCgtET1RfUFJPRFVDVBADIqUCCghHcWxRdWVyeRIUCgxxdWVyeV9zdHJp",
+            "bmcYASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiABKAgSSAoObmFtZWRfYmlu",
+            "ZGluZ3MYBSADKAsyMC5nb29nbGUuZGF0YXN0b3JlLnYxLkdxbFF1ZXJ5Lk5h",
+            "bWVkQmluZGluZ3NFbnRyeRJDChNwb3NpdGlvbmFsX2JpbmRpbmdzGAQgAygL",
+            "MiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFtZXRlchpcChJO",
+            "YW1lZEJpbmRpbmdzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZhbHVlGAIgASgL",
+            "MiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFtZXRlcjoCOAEi",
+            "ZAoRR3FsUXVlcnlQYXJhbWV0ZXISKwoFdmFsdWUYAiABKAsyGi5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxLlZhbHVlSAASEAoGY3Vyc29yGAMgASgMSABCEAoOcGFy",
+            "YW1ldGVyX3R5cGUijQQKEFF1ZXJ5UmVzdWx0QmF0Y2gSFwoPc2tpcHBlZF9y",
+            "ZXN1bHRzGAYgASgFEhYKDnNraXBwZWRfY3Vyc29yGAMgASgMEkgKEmVudGl0",
+            "eV9yZXN1bHRfdHlwZRgBIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50",
+            "aXR5UmVzdWx0LlJlc3VsdFR5cGUSOQoOZW50aXR5X3Jlc3VsdHMYAiADKAsy",
+            "IS5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBISCgplbmRfY3Vy",
+            "c29yGAQgASgMEksKDG1vcmVfcmVzdWx0cxgFIAEoDjI1Lmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuUXVlcnlSZXN1bHRCYXRjaC5Nb3JlUmVzdWx0c1R5cGUSGAoQ",
+            "c25hcHNob3RfdmVyc2lvbhgHIAEoAxItCglyZWFkX3RpbWUYCCABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wIpgBCg9Nb3JlUmVzdWx0c1R5cGUS",
+            "IQodTU9SRV9SRVNVTFRTX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxOT1RfRklO",
+            "SVNIRUQQARIcChhNT1JFX1JFU1VMVFNfQUZURVJfTElNSVQQAhIdChlNT1JF",
+            "X1JFU1VMVFNfQUZURVJfQ1VSU09SEAQSEwoPTk9fTU9SRV9SRVNVTFRTEANC",
+            "uwEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaO2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YXN0b3JlL2FwaXYxL2RhdGFzdG9yZXBi",
+            "O2RhdGFzdG9yZXBiqgIZR29vZ2xlLkNsb3VkLkRhdGFzdG9yZS5WMcoCGUdv",
+            "b2dsZVxDbG91ZFxEYXRhc3RvcmVcVjHqAhxHb29nbGU6OkNsb3VkOjpEYXRh",
+            "c3RvcmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "CreateTime", "UpdateTime", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery), global::Google.Cloud.Datastore.V1.AggregationQuery.Parser, new[]{ "NestedQuery", "Aggregations" }, new[]{ "QueryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Parser, new[]{ "Count", "Alias" }, new[]{ "Operator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count.Parser, new[]{ "UpTo" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit", "FindNearest" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery), global::Google.Cloud.Datastore.V1.AggregationQuery.Parser, new[]{ "NestedQuery", "Aggregations" }, new[]{ "QueryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Parser, new[]{ "Count", "Sum", "Avg", "Alias" }, new[]{ "Operator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count.Parser, new[]{ "UpTo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum.Parser, new[]{ "Property" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg.Parser, new[]{ "Property" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.KindExpression), global::Google.Cloud.Datastore.V1.KindExpression.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyReference), global::Google.Cloud.Datastore.V1.PropertyReference.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Projection), global::Google.Cloud.Datastore.V1.Projection.Parser, new[]{ "Property" }, null, null, null, null),
@@ -112,6 +132,7 @@ namespace Google.Cloud.Datastore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Filter), global::Google.Cloud.Datastore.V1.Filter.Parser, new[]{ "CompositeFilter", "PropertyFilter" }, new[]{ "FilterType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.CompositeFilter), global::Google.Cloud.Datastore.V1.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyFilter), global::Google.Cloud.Datastore.V1.PropertyFilter.Parser, new[]{ "Property", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.FindNearest), global::Google.Cloud.Datastore.V1.FindNearest.Parser, new[]{ "VectorProperty", "QueryVector", "DistanceMeasure", "Limit", "DistanceResultProperty", "DistanceThreshold" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQuery), global::Google.Cloud.Datastore.V1.GqlQuery.Parser, new[]{ "QueryString", "AllowLiterals", "NamedBindings", "PositionalBindings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.GqlQueryParameter), global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser, new[]{ "Value", "Cursor" }, new[]{ "ParameterType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch), global::Google.Cloud.Datastore.V1.QueryResultBatch.Parser, new[]{ "SkippedResults", "SkippedCursor", "EntityResultType", "EntityResults", "EndCursor", "MoreResults", "SnapshotVersion", "ReadTime" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType) }, null, null)
@@ -124,6 +145,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The result of fetching an entity from Datastore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityResult : pb::IMessage<EntityResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -554,7 +576,17 @@ namespace Google.Cloud.Datastore.V1 {
 
   /// <summary>
   /// A query for entities.
+  ///
+  /// The query stages are executed in the following order:
+  /// 1. kind
+  /// 2. filter
+  /// 3. projection
+  /// 4. order + start_cursor + end_cursor
+  /// 5. offset
+  /// 6. limit
+  /// 7. find_nearest
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Query : pb::IMessage<Query>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -598,6 +630,7 @@ namespace Google.Cloud.Datastore.V1 {
       endCursor_ = other.endCursor_;
       offset_ = other.offset_;
       Limit = other.Limit;
+      findNearest_ = other.findNearest_ != null ? other.findNearest_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -758,6 +791,25 @@ namespace Google.Cloud.Datastore.V1 {
     }
 
 
+    /// <summary>Field number for the "find_nearest" field.</summary>
+    public const int FindNearestFieldNumber = 13;
+    private global::Google.Cloud.Datastore.V1.FindNearest findNearest_;
+    /// <summary>
+    /// Optional. A potential Nearest Neighbors Search.
+    ///
+    /// Applies after all other filters and ordering.
+    ///
+    /// Finds the closest vector embeddings to the given query vector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.FindNearest FindNearest {
+      get { return findNearest_; }
+      set {
+        findNearest_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -782,6 +834,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (EndCursor != other.EndCursor) return false;
       if (Offset != other.Offset) return false;
       if (Limit != other.Limit) return false;
+      if (!object.Equals(FindNearest, other.FindNearest)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -798,6 +851,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (EndCursor.Length != 0) hash ^= EndCursor.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
       if (limit_ != null) hash ^= Limit.GetHashCode();
+      if (findNearest_ != null) hash ^= FindNearest.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -839,6 +893,10 @@ namespace Google.Cloud.Datastore.V1 {
       if (limit_ != null) {
         _single_limit_codec.WriteTagAndValue(output, Limit);
       }
+      if (findNearest_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FindNearest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -872,6 +930,10 @@ namespace Google.Cloud.Datastore.V1 {
       if (limit_ != null) {
         _single_limit_codec.WriteTagAndValue(ref output, Limit);
       }
+      if (findNearest_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FindNearest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -900,6 +962,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (limit_ != null) {
         size += _single_limit_codec.CalculateSizeWithTag(Limit);
+      }
+      if (findNearest_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FindNearest);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -936,6 +1001,12 @@ namespace Google.Cloud.Datastore.V1 {
         if (limit_ == null || other.Limit != 0) {
           Limit = other.Limit;
         }
+      }
+      if (other.findNearest_ != null) {
+        if (findNearest_ == null) {
+          FindNearest = new global::Google.Cloud.Datastore.V1.FindNearest();
+        }
+        FindNearest.MergeFrom(other.FindNearest);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -992,6 +1063,13 @@ namespace Google.Cloud.Datastore.V1 {
             if (limit_ == null || value != 0) {
               Limit = value;
             }
+            break;
+          }
+          case 106: {
+            if (findNearest_ == null) {
+              FindNearest = new global::Google.Cloud.Datastore.V1.FindNearest();
+            }
+            input.ReadMessage(FindNearest);
             break;
           }
         }
@@ -1051,6 +1129,13 @@ namespace Google.Cloud.Datastore.V1 {
             }
             break;
           }
+          case 106: {
+            if (findNearest_ == null) {
+              FindNearest = new global::Google.Cloud.Datastore.V1.FindNearest();
+            }
+            input.ReadMessage(FindNearest);
+            break;
+          }
         }
       }
     }
@@ -1062,6 +1147,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// Datastore query for running an aggregation over a
   /// [Query][google.datastore.v1.Query].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationQuery : pb::IMessage<AggregationQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1337,6 +1423,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <summary>
       /// Defines an aggregation that produces a single result.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Aggregation : pb::IMessage<Aggregation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1376,6 +1463,12 @@ namespace Google.Cloud.Datastore.V1 {
             case OperatorOneofCase.Count:
               Count = other.Count.Clone();
               break;
+            case OperatorOneofCase.Sum:
+              Sum = other.Sum.Clone();
+              break;
+            case OperatorOneofCase.Avg:
+              Avg = other.Avg.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1399,6 +1492,36 @@ namespace Google.Cloud.Datastore.V1 {
           set {
             operator_ = value;
             operatorCase_ = value == null ? OperatorOneofCase.None : OperatorOneofCase.Count;
+          }
+        }
+
+        /// <summary>Field number for the "sum" field.</summary>
+        public const int SumFieldNumber = 2;
+        /// <summary>
+        /// Sum aggregator.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum Sum {
+          get { return operatorCase_ == OperatorOneofCase.Sum ? (global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum) operator_ : null; }
+          set {
+            operator_ = value;
+            operatorCase_ = value == null ? OperatorOneofCase.None : OperatorOneofCase.Sum;
+          }
+        }
+
+        /// <summary>Field number for the "avg" field.</summary>
+        public const int AvgFieldNumber = 3;
+        /// <summary>
+        /// Average aggregator.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg Avg {
+          get { return operatorCase_ == OperatorOneofCase.Avg ? (global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg) operator_ : null; }
+          set {
+            operator_ = value;
+            operatorCase_ = value == null ? OperatorOneofCase.None : OperatorOneofCase.Avg;
           }
         }
 
@@ -1456,6 +1579,8 @@ namespace Google.Cloud.Datastore.V1 {
         public enum OperatorOneofCase {
           None = 0,
           Count = 1,
+          Sum = 2,
+          Avg = 3,
         }
         private OperatorOneofCase operatorCase_ = OperatorOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1487,6 +1612,8 @@ namespace Google.Cloud.Datastore.V1 {
             return true;
           }
           if (!object.Equals(Count, other.Count)) return false;
+          if (!object.Equals(Sum, other.Sum)) return false;
+          if (!object.Equals(Avg, other.Avg)) return false;
           if (Alias != other.Alias) return false;
           if (OperatorCase != other.OperatorCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -1497,6 +1624,8 @@ namespace Google.Cloud.Datastore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (operatorCase_ == OperatorOneofCase.Count) hash ^= Count.GetHashCode();
+          if (operatorCase_ == OperatorOneofCase.Sum) hash ^= Sum.GetHashCode();
+          if (operatorCase_ == OperatorOneofCase.Avg) hash ^= Avg.GetHashCode();
           if (Alias.Length != 0) hash ^= Alias.GetHashCode();
           hash ^= (int) operatorCase_;
           if (_unknownFields != null) {
@@ -1521,6 +1650,14 @@ namespace Google.Cloud.Datastore.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Count);
           }
+          if (operatorCase_ == OperatorOneofCase.Sum) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Sum);
+          }
+          if (operatorCase_ == OperatorOneofCase.Avg) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Avg);
+          }
           if (Alias.Length != 0) {
             output.WriteRawTag(58);
             output.WriteString(Alias);
@@ -1539,6 +1676,14 @@ namespace Google.Cloud.Datastore.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Count);
           }
+          if (operatorCase_ == OperatorOneofCase.Sum) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Sum);
+          }
+          if (operatorCase_ == OperatorOneofCase.Avg) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Avg);
+          }
           if (Alias.Length != 0) {
             output.WriteRawTag(58);
             output.WriteString(Alias);
@@ -1555,6 +1700,12 @@ namespace Google.Cloud.Datastore.V1 {
           int size = 0;
           if (operatorCase_ == OperatorOneofCase.Count) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Count);
+          }
+          if (operatorCase_ == OperatorOneofCase.Sum) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sum);
+          }
+          if (operatorCase_ == OperatorOneofCase.Avg) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Avg);
           }
           if (Alias.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Alias);
@@ -1581,6 +1732,18 @@ namespace Google.Cloud.Datastore.V1 {
               }
               Count.MergeFrom(other.Count);
               break;
+            case OperatorOneofCase.Sum:
+              if (Sum == null) {
+                Sum = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum();
+              }
+              Sum.MergeFrom(other.Sum);
+              break;
+            case OperatorOneofCase.Avg:
+              if (Avg == null) {
+                Avg = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg();
+              }
+              Avg.MergeFrom(other.Avg);
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1605,6 +1768,24 @@ namespace Google.Cloud.Datastore.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 Count = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum subBuilder = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum();
+                if (operatorCase_ == OperatorOneofCase.Sum) {
+                  subBuilder.MergeFrom(Sum);
+                }
+                input.ReadMessage(subBuilder);
+                Sum = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg subBuilder = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg();
+                if (operatorCase_ == OperatorOneofCase.Avg) {
+                  subBuilder.MergeFrom(Avg);
+                }
+                input.ReadMessage(subBuilder);
+                Avg = subBuilder;
                 break;
               }
               case 58: {
@@ -1635,6 +1816,24 @@ namespace Google.Cloud.Datastore.V1 {
                 Count = subBuilder;
                 break;
               }
+              case 18: {
+                global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum subBuilder = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Sum();
+                if (operatorCase_ == OperatorOneofCase.Sum) {
+                  subBuilder.MergeFrom(Sum);
+                }
+                input.ReadMessage(subBuilder);
+                Sum = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg subBuilder = new global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Avg();
+                if (operatorCase_ == OperatorOneofCase.Avg) {
+                  subBuilder.MergeFrom(Avg);
+                }
+                input.ReadMessage(subBuilder);
+                Avg = subBuilder;
+                break;
+              }
               case 58: {
                 Alias = input.ReadString();
                 break;
@@ -1655,6 +1854,7 @@ namespace Google.Cloud.Datastore.V1 {
           /// The `COUNT(*)` aggregation function operates on the entire entity
           /// so it does not require a field reference.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Count : pb::IMessage<Count>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1874,6 +2074,446 @@ namespace Google.Cloud.Datastore.V1 {
 
           }
 
+          /// <summary>
+          /// Sum of the values of the requested property.
+          ///
+          /// * Only numeric values will be aggregated. All non-numeric values
+          /// including `NULL` are skipped.
+          ///
+          /// * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
+          /// follows IEEE-754 standards.
+          ///
+          /// * If the aggregated value set is empty, returns 0.
+          ///
+          /// * Returns a 64-bit integer if all aggregated numbers are integers and the
+          /// sum result does not overflow. Otherwise, the result is returned as a
+          /// double. Note that even if all the aggregated values are integers, the
+          /// result is returned as a double if it cannot fit within a 64-bit signed
+          /// integer. When this occurs, the returned value will lose precision.
+          ///
+          /// * When underflow occurs, floating-point aggregation is non-deterministic.
+          /// This means that running the same query repeatedly without any changes to
+          /// the underlying values could produce slightly different results each
+          /// time. In those cases, values should be stored as integers over
+          /// floating-point numbers.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Sum : pb::IMessage<Sum>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Sum> _parser = new pb::MessageParser<Sum>(() => new Sum());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Sum> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Sum() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Sum(Sum other) : this() {
+              property_ = other.property_ != null ? other.property_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Sum Clone() {
+              return new Sum(this);
+            }
+
+            /// <summary>Field number for the "property" field.</summary>
+            public const int PropertyFieldNumber = 1;
+            private global::Google.Cloud.Datastore.V1.PropertyReference property_;
+            /// <summary>
+            /// The property to aggregate on.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Datastore.V1.PropertyReference Property {
+              get { return property_; }
+              set {
+                property_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Sum);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Sum other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Property, other.Property)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (property_ != null) hash ^= Property.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (property_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Property);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (property_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Property);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (property_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Sum other) {
+              if (other == null) {
+                return;
+              }
+              if (other.property_ != null) {
+                if (property_ == null) {
+                  Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                }
+                Property.MergeFrom(other.Property);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (property_ == null) {
+                      Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                    }
+                    input.ReadMessage(Property);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (property_ == null) {
+                      Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                    }
+                    input.ReadMessage(Property);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Average of the values of the requested property.
+          ///
+          /// * Only numeric values will be aggregated. All non-numeric values
+          /// including `NULL` are skipped.
+          ///
+          /// * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
+          /// follows IEEE-754 standards.
+          ///
+          /// * If the aggregated value set is empty, returns `NULL`.
+          ///
+          /// * Always returns the result as a double.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Avg : pb::IMessage<Avg>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Avg> _parser = new pb::MessageParser<Avg>(() => new Avg());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Avg> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Avg() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Avg(Avg other) : this() {
+              property_ = other.property_ != null ? other.property_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Avg Clone() {
+              return new Avg(this);
+            }
+
+            /// <summary>Field number for the "property" field.</summary>
+            public const int PropertyFieldNumber = 1;
+            private global::Google.Cloud.Datastore.V1.PropertyReference property_;
+            /// <summary>
+            /// The property to aggregate on.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Datastore.V1.PropertyReference Property {
+              get { return property_; }
+              set {
+                property_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Avg);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Avg other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Property, other.Property)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (property_ != null) hash ^= Property.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (property_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Property);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (property_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Property);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (property_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Avg other) {
+              if (other == null) {
+                return;
+              }
+              if (other.property_ != null) {
+                if (property_ == null) {
+                  Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                }
+                Property.MergeFrom(other.Property);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (property_ == null) {
+                      Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                    }
+                    input.ReadMessage(Property);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (property_ == null) {
+                      Property = new global::Google.Cloud.Datastore.V1.PropertyReference();
+                    }
+                    input.ReadMessage(Property);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
         }
         #endregion
 
@@ -1887,6 +2527,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A representation of a kind.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KindExpression : pb::IMessage<KindExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2082,6 +2723,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A reference to a property relative to the kind expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertyReference : pb::IMessage<PropertyReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2130,8 +2772,13 @@ namespace Google.Cloud.Datastore.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// The name of the property.
-    /// If name includes "."s, it may be interpreted as a property name path.
+    /// A reference to a property.
+    ///
+    /// Requires:
+    ///
+    /// * MUST be a dot-delimited (`.`) string of segments, where each segment
+    /// conforms to [entity property name][google.datastore.v1.Entity.properties]
+    /// limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2278,6 +2925,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A representation of a property in a projection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Projection : pb::IMessage<Projection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2482,6 +3130,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The desired order for a specific property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertyOrder : pb::IMessage<PropertyOrder>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2752,6 +3401,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A holder for any type of filter.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Filter : pb::IMessage<Filter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3046,6 +3696,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A filter that merges multiple other filters using the given operator.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompositeFilter : pb::IMessage<CompositeFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3300,6 +3951,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A filter on a specific property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertyFilter : pb::IMessage<PropertyFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3642,8 +4294,9 @@ namespace Google.Cloud.Datastore.V1 {
         ///
         /// Requires:
         ///
-        /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-        /// * No other `IN` or `NOT_IN` is in the same query.
+        /// * That `value` is a non-empty `ArrayValue`, subject to disjunction
+        ///   limits.
+        /// * No `NOT_IN` is in the same query.
         /// </summary>
         [pbr::OriginalName("IN")] In = 6,
         /// <summary>
@@ -3661,7 +4314,7 @@ namespace Google.Cloud.Datastore.V1 {
         /// Requires:
         ///
         /// * That `value` is an entity key.
-        /// * No other `HAS_ANCESTOR` is in the same query.
+        /// * All evaluated disjunctions must have the same `HAS_ANCESTOR` filter.
         /// </summary>
         [pbr::OriginalName("HAS_ANCESTOR")] HasAncestor = 11,
         /// <summary>
@@ -3670,7 +4323,7 @@ namespace Google.Cloud.Datastore.V1 {
         /// Requires:
         ///
         /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-        /// * No other `IN`, `NOT_IN`, `NOT_EQUAL` is in the same query.
+        /// * No other `OR`, `IN`, `NOT_IN`, `NOT_EQUAL` is in the same query.
         /// * That `field` comes first in the `order_by`.
         /// </summary>
         [pbr::OriginalName("NOT_IN")] NotIn = 13,
@@ -3682,9 +4335,496 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
+  /// Nearest Neighbors search config. The ordering provided by FindNearest
+  /// supersedes the order_by stage. If multiple documents have the same vector
+  /// distance, the returned document order is not guaranteed to be stable between
+  /// queries.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FindNearest : pb::IMessage<FindNearest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FindNearest> _parser = new pb::MessageParser<FindNearest>(() => new FindNearest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FindNearest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FindNearest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FindNearest(FindNearest other) : this() {
+      vectorProperty_ = other.vectorProperty_ != null ? other.vectorProperty_.Clone() : null;
+      queryVector_ = other.queryVector_ != null ? other.queryVector_.Clone() : null;
+      distanceMeasure_ = other.distanceMeasure_;
+      Limit = other.Limit;
+      distanceResultProperty_ = other.distanceResultProperty_;
+      DistanceThreshold = other.DistanceThreshold;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FindNearest Clone() {
+      return new FindNearest(this);
+    }
+
+    /// <summary>Field number for the "vector_property" field.</summary>
+    public const int VectorPropertyFieldNumber = 1;
+    private global::Google.Cloud.Datastore.V1.PropertyReference vectorProperty_;
+    /// <summary>
+    /// Required. An indexed vector property to search upon. Only documents which
+    /// contain vectors whose dimensionality match the query_vector can be
+    /// returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.PropertyReference VectorProperty {
+      get { return vectorProperty_; }
+      set {
+        vectorProperty_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "query_vector" field.</summary>
+    public const int QueryVectorFieldNumber = 2;
+    private global::Google.Cloud.Datastore.V1.Value queryVector_;
+    /// <summary>
+    /// Required. The query vector that we are searching on. Must be a vector of no
+    /// more than 2048 dimensions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.Value QueryVector {
+      get { return queryVector_; }
+      set {
+        queryVector_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "distance_measure" field.</summary>
+    public const int DistanceMeasureFieldNumber = 3;
+    private global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure distanceMeasure_ = global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified;
+    /// <summary>
+    /// Required. The Distance Measure to use, required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure DistanceMeasure {
+      get { return distanceMeasure_; }
+      set {
+        distanceMeasure_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 4;
+    private static readonly pb::FieldCodec<int?> _single_limit_codec = pb::FieldCodec.ForStructWrapper<int>(34);
+    private int? limit_;
+    /// <summary>
+    /// Required. The number of nearest neighbors to return. Must be a positive
+    /// integer of no more than 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int? Limit {
+      get { return limit_; }
+      set {
+        limit_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "distance_result_property" field.</summary>
+    public const int DistanceResultPropertyFieldNumber = 5;
+    private string distanceResultProperty_ = "";
+    /// <summary>
+    /// Optional. Optional name of the field to output the result of the vector
+    /// distance calculation. Must conform to [entity
+    /// property][google.datastore.v1.Entity.properties] limitations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DistanceResultProperty {
+      get { return distanceResultProperty_; }
+      set {
+        distanceResultProperty_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "distance_threshold" field.</summary>
+    public const int DistanceThresholdFieldNumber = 6;
+    private static readonly pb::FieldCodec<double?> _single_distanceThreshold_codec = pb::FieldCodec.ForStructWrapper<double>(50);
+    private double? distanceThreshold_;
+    /// <summary>
+    /// Optional. Option to specify a threshold for which no less similar documents
+    /// will be returned. The behavior of the specified `distance_measure` will
+    /// affect the meaning of the distance threshold. Since DOT_PRODUCT distances
+    /// increase when the vectors are more similar, the comparison is inverted.
+    ///
+    /// For EUCLIDEAN, COSINE: WHERE distance &lt;= distance_threshold
+    /// For DOT_PRODUCT:       WHERE distance >= distance_threshold
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double? DistanceThreshold {
+      get { return distanceThreshold_; }
+      set {
+        distanceThreshold_ = value;
+      }
+    }
+
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FindNearest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FindNearest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VectorProperty, other.VectorProperty)) return false;
+      if (!object.Equals(QueryVector, other.QueryVector)) return false;
+      if (DistanceMeasure != other.DistanceMeasure) return false;
+      if (Limit != other.Limit) return false;
+      if (DistanceResultProperty != other.DistanceResultProperty) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(DistanceThreshold, other.DistanceThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vectorProperty_ != null) hash ^= VectorProperty.GetHashCode();
+      if (queryVector_ != null) hash ^= QueryVector.GetHashCode();
+      if (DistanceMeasure != global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified) hash ^= DistanceMeasure.GetHashCode();
+      if (limit_ != null) hash ^= Limit.GetHashCode();
+      if (DistanceResultProperty.Length != 0) hash ^= DistanceResultProperty.GetHashCode();
+      if (distanceThreshold_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(DistanceThreshold);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vectorProperty_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VectorProperty);
+      }
+      if (queryVector_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(QueryVector);
+      }
+      if (DistanceMeasure != global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DistanceMeasure);
+      }
+      if (limit_ != null) {
+        _single_limit_codec.WriteTagAndValue(output, Limit);
+      }
+      if (DistanceResultProperty.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DistanceResultProperty);
+      }
+      if (distanceThreshold_ != null) {
+        _single_distanceThreshold_codec.WriteTagAndValue(output, DistanceThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vectorProperty_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VectorProperty);
+      }
+      if (queryVector_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(QueryVector);
+      }
+      if (DistanceMeasure != global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DistanceMeasure);
+      }
+      if (limit_ != null) {
+        _single_limit_codec.WriteTagAndValue(ref output, Limit);
+      }
+      if (DistanceResultProperty.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DistanceResultProperty);
+      }
+      if (distanceThreshold_ != null) {
+        _single_distanceThreshold_codec.WriteTagAndValue(ref output, DistanceThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vectorProperty_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VectorProperty);
+      }
+      if (queryVector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryVector);
+      }
+      if (DistanceMeasure != global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DistanceMeasure);
+      }
+      if (limit_ != null) {
+        size += _single_limit_codec.CalculateSizeWithTag(Limit);
+      }
+      if (DistanceResultProperty.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DistanceResultProperty);
+      }
+      if (distanceThreshold_ != null) {
+        size += _single_distanceThreshold_codec.CalculateSizeWithTag(DistanceThreshold);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FindNearest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vectorProperty_ != null) {
+        if (vectorProperty_ == null) {
+          VectorProperty = new global::Google.Cloud.Datastore.V1.PropertyReference();
+        }
+        VectorProperty.MergeFrom(other.VectorProperty);
+      }
+      if (other.queryVector_ != null) {
+        if (queryVector_ == null) {
+          QueryVector = new global::Google.Cloud.Datastore.V1.Value();
+        }
+        QueryVector.MergeFrom(other.QueryVector);
+      }
+      if (other.DistanceMeasure != global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure.Unspecified) {
+        DistanceMeasure = other.DistanceMeasure;
+      }
+      if (other.limit_ != null) {
+        if (limit_ == null || other.Limit != 0) {
+          Limit = other.Limit;
+        }
+      }
+      if (other.DistanceResultProperty.Length != 0) {
+        DistanceResultProperty = other.DistanceResultProperty;
+      }
+      if (other.distanceThreshold_ != null) {
+        if (distanceThreshold_ == null || other.DistanceThreshold != 0D) {
+          DistanceThreshold = other.DistanceThreshold;
+        }
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vectorProperty_ == null) {
+              VectorProperty = new global::Google.Cloud.Datastore.V1.PropertyReference();
+            }
+            input.ReadMessage(VectorProperty);
+            break;
+          }
+          case 18: {
+            if (queryVector_ == null) {
+              QueryVector = new global::Google.Cloud.Datastore.V1.Value();
+            }
+            input.ReadMessage(QueryVector);
+            break;
+          }
+          case 24: {
+            DistanceMeasure = (global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            int? value = _single_limit_codec.Read(input);
+            if (limit_ == null || value != 0) {
+              Limit = value;
+            }
+            break;
+          }
+          case 42: {
+            DistanceResultProperty = input.ReadString();
+            break;
+          }
+          case 50: {
+            double? value = _single_distanceThreshold_codec.Read(input);
+            if (distanceThreshold_ == null || value != 0D) {
+              DistanceThreshold = value;
+            }
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vectorProperty_ == null) {
+              VectorProperty = new global::Google.Cloud.Datastore.V1.PropertyReference();
+            }
+            input.ReadMessage(VectorProperty);
+            break;
+          }
+          case 18: {
+            if (queryVector_ == null) {
+              QueryVector = new global::Google.Cloud.Datastore.V1.Value();
+            }
+            input.ReadMessage(QueryVector);
+            break;
+          }
+          case 24: {
+            DistanceMeasure = (global::Google.Cloud.Datastore.V1.FindNearest.Types.DistanceMeasure) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            int? value = _single_limit_codec.Read(ref input);
+            if (limit_ == null || value != 0) {
+              Limit = value;
+            }
+            break;
+          }
+          case 42: {
+            DistanceResultProperty = input.ReadString();
+            break;
+          }
+          case 50: {
+            double? value = _single_distanceThreshold_codec.Read(ref input);
+            if (distanceThreshold_ == null || value != 0D) {
+              DistanceThreshold = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FindNearest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The distance measure to use when comparing vectors.
+      /// </summary>
+      public enum DistanceMeasure {
+        /// <summary>
+        /// Should not be set.
+        /// </summary>
+        [pbr::OriginalName("DISTANCE_MEASURE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Measures the EUCLIDEAN distance between the vectors. See
+        /// [Euclidean](https://en.wikipedia.org/wiki/Euclidean_distance) to learn
+        /// more. The resulting distance decreases the more similar two vectors are.
+        /// </summary>
+        [pbr::OriginalName("EUCLIDEAN")] Euclidean = 1,
+        /// <summary>
+        /// COSINE distance compares vectors based on the angle between them, which
+        /// allows you to measure similarity that isn't based on the vectors
+        /// magnitude. We recommend using DOT_PRODUCT with unit normalized vectors
+        /// instead of COSINE distance, which is mathematically equivalent with
+        /// better performance. See [Cosine
+        /// Similarity](https://en.wikipedia.org/wiki/Cosine_similarity) to learn
+        /// more about COSINE similarity and COSINE distance. The resulting COSINE
+        /// distance decreases the more similar two vectors are.
+        /// </summary>
+        [pbr::OriginalName("COSINE")] Cosine = 2,
+        /// <summary>
+        /// Similar to cosine but is affected by the magnitude of the vectors. See
+        /// [Dot Product](https://en.wikipedia.org/wiki/Dot_product) to learn more.
+        /// The resulting distance increases the more similar two vectors are.
+        /// </summary>
+        [pbr::OriginalName("DOT_PRODUCT")] DotProduct = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A [GQL
   /// query](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GqlQuery : pb::IMessage<GqlQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3699,7 +4839,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3916,7 +5056,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other.AllowLiterals != false) {
         AllowLiterals = other.AllowLiterals;
       }
-      namedBindings_.Add(other.namedBindings_);
+      namedBindings_.MergeFrom(other.namedBindings_);
       positionalBindings_.Add(other.positionalBindings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3990,6 +5130,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A binding parameter for a GQL query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GqlQueryParameter : pb::IMessage<GqlQueryParameter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4004,7 +5145,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4066,10 +5207,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Cursor {
-      get { return parameterTypeCase_ == ParameterTypeOneofCase.Cursor ? (pb::ByteString) parameterType_ : pb::ByteString.Empty; }
+      get { return HasCursor ? (pb::ByteString) parameterType_ : pb::ByteString.Empty; }
       set {
         parameterType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         parameterTypeCase_ = ParameterTypeOneofCase.Cursor;
+      }
+    }
+    /// <summary>Gets whether the "cursor" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCursor {
+      get { return parameterTypeCase_ == ParameterTypeOneofCase.Cursor; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cursor" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCursor() {
+      if (HasCursor) {
+        ClearParameterType();
       }
     }
 
@@ -4120,7 +5275,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (parameterTypeCase_ == ParameterTypeOneofCase.Value) hash ^= Value.GetHashCode();
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) hash ^= Cursor.GetHashCode();
+      if (HasCursor) hash ^= Cursor.GetHashCode();
       hash ^= (int) parameterTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4144,7 +5299,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         output.WriteRawTag(26);
         output.WriteBytes(Cursor);
       }
@@ -4162,7 +5317,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         output.WriteRawTag(26);
         output.WriteBytes(Cursor);
       }
@@ -4179,7 +5334,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (parameterTypeCase_ == ParameterTypeOneofCase.Value) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Cursor);
       }
       if (_unknownFields != null) {
@@ -4272,6 +5427,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A batch of results produced by a query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryResultBatch : pb::IMessage<QueryResultBatch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4286,7 +5442,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

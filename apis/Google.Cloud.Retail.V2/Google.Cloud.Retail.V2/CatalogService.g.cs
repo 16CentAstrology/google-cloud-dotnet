@@ -73,41 +73,41 @@ namespace Google.Cloud.Retail.V2 {
             "LnByb3RvYnVmLkZpZWxkTWFzazKXEwoOQ2F0YWxvZ1NlcnZpY2USqAEKDExp",
             "c3RDYXRhbG9ncxIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdENhdGFs",
             "b2dzUmVxdWVzdBosLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdENhdGFs",
-            "b2dzUmVzcG9uc2UiPYLT5JMCLhIsL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vY2F0YWxvZ3PaQQZwYXJlbnQSuwEKDVVwZGF0ZUNhdGFs",
+            "b2dzUmVzcG9uc2UiPdpBBnBhcmVudILT5JMCLhIsL3YyL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vY2F0YWxvZ3MSuwEKDVVwZGF0ZUNhdGFs",
             "b2cSLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVwZGF0ZUNhdGFsb2dSZXF1",
-            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9nIluC0+STAj8y",
-            "NC92Mi97Y2F0YWxvZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0",
-            "YWxvZ3MvKn06B2NhdGFsb2faQRNjYXRhbG9nLHVwZGF0ZV9tYXNrErIBChBT",
+            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DYXRhbG9nIlvaQRNjYXRh",
+            "bG9nLHVwZGF0ZV9tYXNrgtPkkwI/MjQvdjIve2NhdGFsb2cubmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyp9OgdjYXRhbG9nErIBChBT",
             "ZXREZWZhdWx0QnJhbmNoEi8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZXRE",
             "ZWZhdWx0QnJhbmNoUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJV",
-            "gtPkkwJFIkAvdjIve2NhdGFsb2c9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
-            "YXRhbG9ncy8qfTpzZXREZWZhdWx0QnJhbmNoOgEq2kEHY2F0YWxvZxLJAQoQ",
+            "2kEHY2F0YWxvZ4LT5JMCRSJAL3YyL3tjYXRhbG9nPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2F0YWxvZ3MvKn06c2V0RGVmYXVsdEJyYW5jaDoBKhLJAQoQ",
             "R2V0RGVmYXVsdEJyYW5jaBIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2V0",
             "RGVmYXVsdEJyYW5jaFJlcXVlc3QaMC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkdldERlZmF1bHRCcmFuY2hSZXNwb25zZSJSgtPkkwJCEkAvdjIve2NhdGFs",
-            "b2c9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qfTpnZXREZWZh",
-            "dWx0QnJhbmNo2kEHY2F0YWxvZxLBAQoTR2V0Q29tcGxldGlvbkNvbmZpZxIy",
+            "LkdldERlZmF1bHRCcmFuY2hSZXNwb25zZSJS2kEHY2F0YWxvZ4LT5JMCQhJA",
+            "L3YyL3tjYXRhbG9nPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3Mv",
+            "Kn06Z2V0RGVmYXVsdEJyYW5jaBLBAQoTR2V0Q29tcGxldGlvbkNvbmZpZxIy",
             "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2V0Q29tcGxldGlvbkNvbmZpZ1Jl",
             "cXVlc3QaKC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNvbXBsZXRpb25Db25m",
-            "aWciTILT5JMCPxI9L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "Y2F0YWxvZ3MvKi9jb21wbGV0aW9uQ29uZmlnfdpBBG5hbWUShgIKFlVwZGF0",
+            "aWciTNpBBG5hbWWC0+STAj8SPS92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NhdGFsb2dzLyovY29tcGxldGlvbkNvbmZpZ30ShgIKFlVwZGF0",
             "ZUNvbXBsZXRpb25Db25maWcSNS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVw",
             "ZGF0ZUNvbXBsZXRpb25Db25maWdSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLnJl",
-            "dGFpbC52Mi5Db21wbGV0aW9uQ29uZmlnIooBgtPkkwJkMk8vdjIve2NvbXBs",
-            "ZXRpb25fY29uZmlnLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRh",
-            "bG9ncy8qL2NvbXBsZXRpb25Db25maWd9OhFjb21wbGV0aW9uX2NvbmZpZ9pB",
-            "HWNvbXBsZXRpb25fY29uZmlnLHVwZGF0ZV9tYXNrEsEBChNHZXRBdHRyaWJ1",
+            "dGFpbC52Mi5Db21wbGV0aW9uQ29uZmlnIooB2kEdY29tcGxldGlvbl9jb25m",
+            "aWcsdXBkYXRlX21hc2uC0+STAmQyTy92Mi97Y29tcGxldGlvbl9jb25maWcu",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovY29tcGxl",
+            "dGlvbkNvbmZpZ306EWNvbXBsZXRpb25fY29uZmlnEsEBChNHZXRBdHRyaWJ1",
             "dGVzQ29uZmlnEjIuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5HZXRBdHRyaWJ1",
             "dGVzQ29uZmlnUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQXR0",
-            "cmlidXRlc0NvbmZpZyJMgtPkkwI/Ej0vdjIve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9jYXRhbG9ncy8qL2F0dHJpYnV0ZXNDb25maWd92kEEbmFt",
-            "ZRKGAgoWVXBkYXRlQXR0cmlidXRlc0NvbmZpZxI1Lmdvb2dsZS5jbG91ZC5y",
+            "cmlidXRlc0NvbmZpZyJM2kEEbmFtZYLT5JMCPxI9L3YyL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9hdHRyaWJ1dGVzQ29uZmln",
+            "fRKGAgoWVXBkYXRlQXR0cmlidXRlc0NvbmZpZxI1Lmdvb2dsZS5jbG91ZC5y",
             "ZXRhaWwudjIuVXBkYXRlQXR0cmlidXRlc0NvbmZpZ1JlcXVlc3QaKC5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLkF0dHJpYnV0ZXNDb25maWciigGC0+STAmQy",
-            "Ty92Mi97YXR0cmlidXRlc19jb25maWcubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2NhdGFsb2dzLyovYXR0cmlidXRlc0NvbmZpZ306EWF0dHJpYnV0",
-            "ZXNfY29uZmln2kEdYXR0cmlidXRlc19jb25maWcsdXBkYXRlX21hc2sS3gEK",
+            "bGUuY2xvdWQucmV0YWlsLnYyLkF0dHJpYnV0ZXNDb25maWciigHaQR1hdHRy",
+            "aWJ1dGVzX2NvbmZpZyx1cGRhdGVfbWFza4LT5JMCZDJPL3YyL3thdHRyaWJ1",
+            "dGVzX2NvbmZpZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxv",
+            "Z3MvKi9hdHRyaWJ1dGVzQ29uZmlnfToRYXR0cmlidXRlc19jb25maWcS3gEK",
             "E0FkZENhdGFsb2dBdHRyaWJ1dGUSMi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
             "LkFkZENhdGFsb2dBdHRyaWJ1dGVSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLnJl",
             "dGFpbC52Mi5BdHRyaWJ1dGVzQ29uZmlnImmC0+STAmMiXi92Mi97YXR0cmli",
@@ -157,6 +157,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCatalogsRequest : pb::IMessage<ListCatalogsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -452,6 +453,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCatalogsResponse : pb::IMessage<ListCatalogsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -681,6 +683,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.UpdateCatalog][google.cloud.retail.v2.CatalogService.UpdateCatalog]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCatalogRequest : pb::IMessage<UpdateCatalogRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -945,6 +948,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message to set a specified branch as new default_branch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetDefaultBranchRequest : pb::IMessage<SetDefaultBranchRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1275,6 +1279,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message to show which branch is currently the default branch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDefaultBranchRequest : pb::IMessage<GetDefaultBranchRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1472,6 +1477,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Response message of
   /// [CatalogService.GetDefaultBranch][google.cloud.retail.v2.CatalogService.GetDefaultBranch].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDefaultBranchResponse : pb::IMessage<GetDefaultBranchResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1760,6 +1766,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.GetCompletionConfig][google.cloud.retail.v2.CatalogService.GetCompletionConfig]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCompletionConfigRequest : pb::IMessage<GetCompletionConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1958,6 +1965,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.UpdateCompletionConfig][google.cloud.retail.v2.CatalogService.UpdateCompletionConfig]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCompletionConfigRequest : pb::IMessage<UpdateCompletionConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2230,6 +2238,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.GetAttributesConfig][google.cloud.retail.v2.CatalogService.GetAttributesConfig]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAttributesConfigRequest : pb::IMessage<GetAttributesConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2428,6 +2437,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.UpdateAttributesConfig][google.cloud.retail.v2.CatalogService.UpdateAttributesConfig]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAttributesConfigRequest : pb::IMessage<UpdateAttributesConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2690,6 +2700,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.AddCatalogAttribute][google.cloud.retail.v2.CatalogService.AddCatalogAttribute]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddCatalogAttributeRequest : pb::IMessage<AddCatalogAttributeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2938,6 +2949,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.RemoveCatalogAttribute][google.cloud.retail.v2.CatalogService.RemoveCatalogAttribute]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemoveCatalogAttributeRequest : pb::IMessage<RemoveCatalogAttributeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3177,6 +3189,7 @@ namespace Google.Cloud.Retail.V2 {
   /// [CatalogService.ReplaceCatalogAttribute][google.cloud.retail.v2.CatalogService.ReplaceCatalogAttribute]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReplaceCatalogAttributeRequest : pb::IMessage<ReplaceCatalogAttributeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

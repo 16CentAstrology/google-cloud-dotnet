@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/uptime_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -25,13 +25,13 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The UptimeCheckService API is used to manage (list, create, delete, edit)
-  /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+  /// Uptime check configurations in the Cloud Monitoring product. An Uptime
   /// check is a piece of configuration that determines which resources and
   /// services to monitor for availability. These configurations can also be
-  /// configured interactively by navigating to the [Cloud Console]
-  /// (http://console.cloud.google.com), selecting the appropriate project,
-  /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-  /// and then clicking on "Uptime".
+  /// configured interactively by navigating to the [Cloud console]
+  /// (https://console.cloud.google.com), selecting the appropriate project,
+  /// clicking on "Monitoring" on the left-hand side to navigate to Cloud
+  /// Monitoring, and then clicking on "Uptime".
   /// </summary>
   public static partial class UptimeCheckService
   {
@@ -216,7 +216,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -521,7 +521,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteUptimeCheckConfig, null, options, request);
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -534,7 +534,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListUptimeCheckIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -545,7 +545,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListUptimeCheckIps, null, options, request);
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListUptimeCheckIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

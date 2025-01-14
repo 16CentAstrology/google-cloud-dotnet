@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
+    using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
     using System.Threading.Tasks;
 
@@ -34,6 +35,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
             {
                 ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = userEventServiceClient.WriteUserEvent(request);
@@ -52,6 +54,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
             {
                 ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 UserEvent = new UserEvent(),
+                WriteAsync = false,
             };
             // Make the request
             UserEvent response = await userEventServiceClient.WriteUserEventAsync(request);
@@ -94,6 +97,75 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
             };
             // Make the request
             HttpBody response = await userEventServiceClient.CollectUserEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeUserEvents</summary>
+        public void PurgeUserEventsRequestObject()
+        {
+            // Snippet: PurgeUserEvents(PurgeUserEventsRequest, CallSettings)
+            // Create client
+            UserEventServiceClient userEventServiceClient = UserEventServiceClient.Create();
+            // Initialize request argument(s)
+            PurgeUserEventsRequest request = new PurgeUserEventsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> response = userEventServiceClient.PurgeUserEvents(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PurgeUserEventsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> retrievedResponse = userEventServiceClient.PollOncePurgeUserEvents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeUserEventsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeUserEventsAsync</summary>
+        public async Task PurgeUserEventsRequestObjectAsync()
+        {
+            // Snippet: PurgeUserEventsAsync(PurgeUserEventsRequest, CallSettings)
+            // Additional: PurgeUserEventsAsync(PurgeUserEventsRequest, CancellationToken)
+            // Create client
+            UserEventServiceClient userEventServiceClient = await UserEventServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeUserEventsRequest request = new PurgeUserEventsRequest
+            {
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> response = await userEventServiceClient.PurgeUserEventsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PurgeUserEventsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> retrievedResponse = await userEventServiceClient.PollOncePurgeUserEventsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeUserEventsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

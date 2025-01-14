@@ -123,6 +123,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// constitutes a failed execution. For a redirected request, the response
   /// returned by the redirected request is considered.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpTarget : pb::IMessage<HttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -236,8 +237,8 @@ namespace Google.Cloud.Scheduler.V1 {
     /// * `X-CloudScheduler`: This header will be set to true.
     /// * `X-CloudScheduler-JobName`: This header will contain the job name.
     /// * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in
-    /// the unix-cron format, this header will contain the job schedule time in
-    /// RFC3339 UTC "Zulu" format.
+    /// the unix-cron format, this header will contain the job schedule as an
+    /// offset of UTC parsed according to RFC3339.
     ///
     /// The total size of headers must be less than 80KB.
     /// </summary>
@@ -478,7 +479,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         HttpMethod = other.HttpMethod;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
@@ -614,6 +615,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// response code, or a failure to receive a response before the
   /// deadline, constitutes a failed attempt.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineHttpTarget : pb::IMessage<AppEngineHttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -734,8 +736,8 @@ namespace Google.Cloud.Scheduler.V1 {
     /// * `X-CloudScheduler`: This header will be set to true.
     /// * `X-CloudScheduler-JobName`: This header will contain the job name.
     /// * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in
-    /// the unix-cron format, this header will contain the job schedule time in
-    /// RFC3339 UTC "Zulu" format.
+    /// the unix-cron format, this header will contain the job schedule as an
+    /// offset of UTC parsed according to RFC3339.
     ///
     /// If the job has an
     /// [body][google.cloud.scheduler.v1.AppEngineHttpTarget.body], Cloud Scheduler
@@ -924,7 +926,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.RelativeUri.Length != 0) {
         RelativeUri = other.RelativeUri;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
@@ -1015,6 +1017,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Pub/Sub target. The job will be delivered by publishing a message to
   /// the given Pub/Sub topic.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubTarget : pb::IMessage<PubsubTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1226,7 +1229,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1301,6 +1304,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// and [App Engine Flex request
   /// routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1697,6 +1701,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// This type of authorization should generally only be used when calling Google
   /// APIs hosted on *.googleapis.com.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OAuthToken : pb::IMessage<OAuthToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1942,6 +1947,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// calling Cloud Run, or endpoints where you intend to validate the token
   /// yourself.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OidcToken : pb::IMessage<OidcToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

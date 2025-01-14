@@ -3,7 +3,7 @@
 //     source: google/cloud/security/privateca/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -668,9 +668,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       /// <summary>
       /// FetchCaCerts returns the current trust anchor for the
       /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-      /// certificate chains for all ACTIVE
-      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-      /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// certificate chains for all certificate authorities in the ENABLED,
+      /// DISABLED, or STAGED states.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1910,9 +1909,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       /// <summary>
       /// FetchCaCerts returns the current trust anchor for the
       /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-      /// certificate chains for all ACTIVE
-      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-      /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// certificate chains for all certificate authorities in the ENABLED,
+      /// DISABLED, or STAGED states.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1927,9 +1925,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       /// <summary>
       /// FetchCaCerts returns the current trust anchor for the
       /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-      /// certificate chains for all ACTIVE
-      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-      /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// certificate chains for all certificate authorities in the ENABLED,
+      /// DISABLED, or STAGED states.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1942,9 +1939,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       /// <summary>
       /// FetchCaCerts returns the current trust anchor for the
       /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-      /// certificate chains for all ACTIVE
-      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-      /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// certificate chains for all certificate authorities in the ENABLED,
+      /// DISABLED, or STAGED states.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1959,9 +1955,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       /// <summary>
       /// FetchCaCerts returns the current trust anchor for the
       /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-      /// certificate chains for all ACTIVE
-      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-      /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// certificate chains for all certificate authorities in the ENABLED,
+      /// DISABLED, or STAGED states.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,11 +18,13 @@ using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Xunit;
 using GrpcStatus = Grpc.Core.Status;
 using ProtoStatus = Google.Rpc.Status;
@@ -252,7 +254,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=0, then at t=2, then another at t=4
                 var completedOperation = await initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add);
@@ -271,7 +273,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=0, then at t=2, then another at t=4
                 var completedOperation = await initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add);
@@ -333,7 +335,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add));
@@ -369,7 +371,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 await initial.PollUntilCompletedAsync(callSettings: callSettings);
             });
         }
@@ -381,12 +383,25 @@ namespace Google.LongRunning.Tests
         {
             var message = new Operation
             {
-                Done = false,                
+                Done = false,
                 Name = "name",
                 Metadata = metadata == null ? null : Any.Pack(new StringValue { Value = metadata })
             };
             var operation = new Operation<Timestamp, StringValue>(message, new FakeOperationsClient());
             Assert.Equal(metadata, operation.Metadata?.Value);
+        }
+
+        [Fact]
+        public void EmptyOperation()
+        {
+            // Some servers return an empty operation. We don't do any additional validation before wrapping
+            // the response in a typed Operation<,> but the test validates that the wrapper itself doesn't perform
+            // any validation. A wrapper created like this will fail if polled, but we don't expect users to do that.
+            // Ideally, the server would return a valid, pollable operation instead.
+            var message = new Operation();
+            var operation = new Operation<StringValue, Timestamp>(message, new FakeOperationsClient());
+            Assert.Empty(operation.Name);
+            Assert.False(operation.IsCompleted);
         }
 
         private static Operation<StringValue, Timestamp> ForResult(string name, string value, OperationsClient client)
@@ -428,7 +443,7 @@ namespace Google.LongRunning.Tests
                 .ToList();
 
         // We may want to make this public in a testing package at some point... and possibly the helper methods above.
-        class FakeOperationsClient : OperationsClient
+        internal sealed class FakeOperationsClient : OperationsClient
         {
             private readonly CallSettings _baseCallSettings;
             private readonly Action<CallSettings> _callSettingsValidation;

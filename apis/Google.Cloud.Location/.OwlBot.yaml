@@ -1,5 +1,5 @@
 
-# Copyright 2023 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location
-    - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.Tests
-      dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Tests
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.Snippets
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Snippets
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.GeneratedSnippets

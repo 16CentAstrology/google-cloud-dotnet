@@ -49,24 +49,24 @@ namespace Google.Cloud.Talent.V4 {
             "IAEoCzIoLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuUmVzcG9uc2VNZXRhZGF0",
             "YTLDBwoOQ29tcGFueVNlcnZpY2USrQEKDUNyZWF0ZUNvbXBhbnkSLC5nb29n",
             "bGUuY2xvdWQudGFsZW50LnY0LkNyZWF0ZUNvbXBhbnlSZXF1ZXN0Gh8uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55Ik2C0+STAjYiKy92NC97cGFy",
-            "ZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9jb21wYW5pZXM6B2NvbXBhbnna",
-            "QQ5wYXJlbnQsY29tcGFueRKUAQoKR2V0Q29tcGFueRIpLmdvb2dsZS5jbG91",
+            "Z2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55Ik3aQQ5wYXJlbnQsY29tcGFu",
+            "eYLT5JMCNiIrL3Y0L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2Nv",
+            "bXBhbmllczoHY29tcGFueRKUAQoKR2V0Q29tcGFueRIpLmdvb2dsZS5jbG91",
             "ZC50YWxlbnQudjQuR2V0Q29tcGFueVJlcXVlc3QaHy5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0LkNvbXBhbnkiOoLT5JMCLRIrL3Y0L3tuYW1lPXByb2plY3Rz",
-            "LyovdGVuYW50cy8qL2NvbXBhbmllcy8qfdpBBG5hbWUSugEKDVVwZGF0ZUNv",
+            "dGFsZW50LnY0LkNvbXBhbnkiOtpBBG5hbWWC0+STAi0SKy92NC97bmFtZT1w",
+            "cm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMvKn0SugEKDVVwZGF0ZUNv",
             "bXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0LlVwZGF0ZUNvbXBhbnlS",
-            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55IlqC0+ST",
-            "Aj4yMy92NC97Y29tcGFueS5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2Nv",
-            "bXBhbmllcy8qfToHY29tcGFuedpBE2NvbXBhbnksdXBkYXRlX21hc2sSkQEK",
+            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55IlraQRNj",
+            "b21wYW55LHVwZGF0ZV9tYXNrgtPkkwI+MjMvdjQve2NvbXBhbnkubmFtZT1w",
+            "cm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMvKn06B2NvbXBhbnkSkQEK",
             "DURlbGV0ZUNvbXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0LkRlbGV0",
-            "ZUNvbXBhbnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjqC0+ST",
-            "Ai0qKy92NC97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMv",
-            "Kn3aQQRuYW1lEqoBCg1MaXN0Q29tcGFuaWVzEiwuZ29vZ2xlLmNsb3VkLnRh",
+            "ZUNvbXBhbnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjraQQRu",
+            "YW1lgtPkkwItKisvdjQve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovY29t",
+            "cGFuaWVzLyp9EqoBCg1MaXN0Q29tcGFuaWVzEiwuZ29vZ2xlLmNsb3VkLnRh",
             "bGVudC52NC5MaXN0Q29tcGFuaWVzUmVxdWVzdBotLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjQuTGlzdENvbXBhbmllc1Jlc3BvbnNlIjyC0+STAi0SKy92NC97",
-            "cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9jb21wYW5pZXPaQQZwYXJl",
-            "bnQabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29n",
+            "YWxlbnQudjQuTGlzdENvbXBhbmllc1Jlc3BvbnNlIjzaQQZwYXJlbnSC0+ST",
+            "Ai0SKy92NC97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9jb21wYW5p",
+            "ZXMabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29n",
             "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvam9ic0JtChpjb20uZ29vZ2xlLmNsb3VkLnRh",
             "bGVudC52NEITQ29tcGFueVNlcnZpY2VQcm90b1ABWjJjbG91ZC5nb29nbGUu",
@@ -90,6 +90,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The Request of the CreateCompany method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCompanyRequest : pb::IMessage<CreateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -337,6 +338,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request for getting a company by name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCompanyRequest : pb::IMessage<GetCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -536,6 +538,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request for updating a specified company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCompanyRequest : pb::IMessage<UpdateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -799,6 +802,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to delete a company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCompanyRequest : pb::IMessage<DeleteCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -998,6 +1002,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// List companies for which the client has ACL visibility.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesRequest : pb::IMessage<ListCompaniesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1323,6 +1328,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The List companies response object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesResponse : pb::IMessage<ListCompaniesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

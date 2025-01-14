@@ -201,85 +201,85 @@ namespace Google.Cloud.Domains.V1 {
             "TE9DS0VEEAIykR0KB0RvbWFpbnMSygEKDVNlYXJjaERvbWFpbnMSLS5nb29n",
             "bGUuY2xvdWQuZG9tYWlucy52MS5TZWFyY2hEb21haW5zUmVxdWVzdBouLmdv",
             "b2dsZS5jbG91ZC5kb21haW5zLnYxLlNlYXJjaERvbWFpbnNSZXNwb25zZSJa",
-            "gtPkkwJDEkEvdjEve2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L3JlZ2lzdHJhdGlvbnM6c2VhcmNoRG9tYWluc9pBDmxvY2F0aW9uLHF1ZXJ5",
+            "2kEObG9jYXRpb24scXVlcnmC0+STAkMSQS92MS97bG9jYXRpb249cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uczpzZWFyY2hEb21haW5z",
             "EoQCChpSZXRyaWV2ZVJlZ2lzdGVyUGFyYW1ldGVycxI6Lmdvb2dsZS5jbG91",
             "ZC5kb21haW5zLnYxLlJldHJpZXZlUmVnaXN0ZXJQYXJhbWV0ZXJzUmVxdWVz",
             "dBo7Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxLlJldHJpZXZlUmVnaXN0ZXJQ",
-            "YXJhbWV0ZXJzUmVzcG9uc2UibYLT5JMCUBJOL3YxL3tsb2NhdGlvbj1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9yZWdpc3RyYXRpb25zOnJldHJpZXZlUmVn",
-            "aXN0ZXJQYXJhbWV0ZXJz2kEUbG9jYXRpb24sZG9tYWluX25hbWUS7gEKDlJl",
+            "YXJhbWV0ZXJzUmVzcG9uc2UibdpBFGxvY2F0aW9uLGRvbWFpbl9uYW1lgtPk",
+            "kwJQEk4vdjEve2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jl",
+            "Z2lzdHJhdGlvbnM6cmV0cmlldmVSZWdpc3RlclBhcmFtZXRlcnMS7gEKDlJl",
             "Z2lzdGVyRG9tYWluEi4uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjEuUmVnaXN0",
             "ZXJEb21haW5SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKMAYLT5JMCPyI6L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Kn0vcmVnaXN0cmF0aW9uczpyZWdpc3RlcjoBKtpBIHBhcmVudCxyZWdpc3Ry",
-            "YXRpb24seWVhcmx5X3ByaWNlykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlv",
-            "bk1ldGFkYXRhEoQCChpSZXRyaWV2ZVRyYW5zZmVyUGFyYW1ldGVycxI6Lmdv",
+            "biKMAcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YdpBIHBh",
+            "cmVudCxyZWdpc3RyYXRpb24seWVhcmx5X3ByaWNlgtPkkwI/IjovdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZWdpc3RyYXRpb25zOnJl",
+            "Z2lzdGVyOgEqEoQCChpSZXRyaWV2ZVRyYW5zZmVyUGFyYW1ldGVycxI6Lmdv",
             "b2dsZS5jbG91ZC5kb21haW5zLnYxLlJldHJpZXZlVHJhbnNmZXJQYXJhbWV0",
             "ZXJzUmVxdWVzdBo7Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxLlJldHJpZXZl",
-            "VHJhbnNmZXJQYXJhbWV0ZXJzUmVzcG9uc2UibYLT5JMCUBJOL3YxL3tsb2Nh",
-            "dGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZWdpc3RyYXRpb25zOnJl",
-            "dHJpZXZlVHJhbnNmZXJQYXJhbWV0ZXJz2kEUbG9jYXRpb24sZG9tYWluX25h",
-            "bWUSgQIKDlRyYW5zZmVyRG9tYWluEi4uZ29vZ2xlLmNsb3VkLmRvbWFpbnMu",
+            "VHJhbnNmZXJQYXJhbWV0ZXJzUmVzcG9uc2UibdpBFGxvY2F0aW9uLGRvbWFp",
+            "bl9uYW1lgtPkkwJQEk4vdjEve2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L3JlZ2lzdHJhdGlvbnM6cmV0cmlldmVUcmFuc2ZlclBhcmFtZXRl",
+            "cnMSgQIKDlRyYW5zZmVyRG9tYWluEi4uZ29vZ2xlLmNsb3VkLmRvbWFpbnMu",
             "djEuVHJhbnNmZXJEb21haW5SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiKfAYLT5JMCPyI6L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uczp0cmFuc2ZlcjoBKtpBM3BhcmVu",
-            "dCxyZWdpc3RyYXRpb24seWVhcmx5X3ByaWNlLGF1dGhvcml6YXRpb25fY29k",
-            "ZcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRK+AQoRTGlz",
+            "Lk9wZXJhdGlvbiKfAcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25NZXRh",
+            "ZGF0YdpBM3BhcmVudCxyZWdpc3RyYXRpb24seWVhcmx5X3ByaWNlLGF1dGhv",
+            "cml6YXRpb25fY29kZYLT5JMCPyI6L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uczp0cmFuc2ZlcjoBKhK+AQoRTGlz",
             "dFJlZ2lzdHJhdGlvbnMSMS5nb29nbGUuY2xvdWQuZG9tYWlucy52MS5MaXN0",
             "UmVnaXN0cmF0aW9uc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQuZG9tYWlucy52",
-            "MS5MaXN0UmVnaXN0cmF0aW9uc1Jlc3BvbnNlIkKC0+STAjMSMS92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3JlZ2lzdHJhdGlvbnPaQQZw",
-            "YXJlbnQSqwEKD0dldFJlZ2lzdHJhdGlvbhIvLmdvb2dsZS5jbG91ZC5kb21h",
+            "MS5MaXN0UmVnaXN0cmF0aW9uc1Jlc3BvbnNlIkLaQQZwYXJlbnSC0+STAjMS",
+            "MS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3JlZ2lzdHJh",
+            "dGlvbnMSqwEKD0dldFJlZ2lzdHJhdGlvbhIvLmdvb2dsZS5jbG91ZC5kb21h",
             "aW5zLnYxLkdldFJlZ2lzdHJhdGlvblJlcXVlc3QaJS5nb29nbGUuY2xvdWQu",
-            "ZG9tYWlucy52MS5SZWdpc3RyYXRpb24iQILT5JMCMxIxL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfdpBBG5hbWUS",
+            "ZG9tYWlucy52MS5SZWdpc3RyYXRpb24iQNpBBG5hbWWC0+STAjMSMS92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn0S",
             "/QEKElVwZGF0ZVJlZ2lzdHJhdGlvbhIyLmdvb2dsZS5jbG91ZC5kb21haW5z",
             "LnYxLlVwZGF0ZVJlZ2lzdHJhdGlvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIpMBgtPkkwJOMj4vdjEve3JlZ2lzdHJhdGlvbi5u",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfToM",
-            "cmVnaXN0cmF0aW9u2kEYcmVnaXN0cmF0aW9uLHVwZGF0ZV9tYXNrykEhCgxS",
-            "ZWdpc3RyYXRpb24SEU9wZXJhdGlvbk1ldGFkYXRhEq8CChtDb25maWd1cmVN",
+            "bm5pbmcuT3BlcmF0aW9uIpMBykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlv",
+            "bk1ldGFkYXRh2kEYcmVnaXN0cmF0aW9uLHVwZGF0ZV9tYXNrgtPkkwJOMj4v",
+            "djEve3JlZ2lzdHJhdGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "cmVnaXN0cmF0aW9ucy8qfToMcmVnaXN0cmF0aW9uEq8CChtDb25maWd1cmVN",
             "YW5hZ2VtZW50U2V0dGluZ3MSOy5nb29nbGUuY2xvdWQuZG9tYWlucy52MS5D",
             "b25maWd1cmVNYW5hZ2VtZW50U2V0dGluZ3NSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiKzAYLT5JMCWiJVL3YxL3tyZWdpc3RyYXRp",
-            "b249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWdpc3RyYXRpb25zLyp9OmNv",
-            "bmZpZ3VyZU1hbmFnZW1lbnRTZXR0aW5nczoBKtpBLHJlZ2lzdHJhdGlvbixt",
-            "YW5hZ2VtZW50X3NldHRpbmdzLHVwZGF0ZV9tYXNrykEhCgxSZWdpc3RyYXRp",
-            "b24SEU9wZXJhdGlvbk1ldGFkYXRhEpMCChRDb25maWd1cmVEbnNTZXR0aW5n",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKzAcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVy",
+            "YXRpb25NZXRhZGF0YdpBLHJlZ2lzdHJhdGlvbixtYW5hZ2VtZW50X3NldHRp",
+            "bmdzLHVwZGF0ZV9tYXNrgtPkkwJaIlUvdjEve3JlZ2lzdHJhdGlvbj1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06Y29uZmlndXJl",
+            "TWFuYWdlbWVudFNldHRpbmdzOgEqEpMCChRDb25maWd1cmVEbnNTZXR0aW5n",
             "cxI0Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxLkNvbmZpZ3VyZURuc1NldHRp",
-            "bmdzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ipQGC",
-            "0+STAlMiTi92MS97cmVnaXN0cmF0aW9uPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovcmVnaXN0cmF0aW9ucy8qfTpjb25maWd1cmVEbnNTZXR0aW5nczoBKtpB",
-            "JXJlZ2lzdHJhdGlvbixkbnNfc2V0dGluZ3MsdXBkYXRlX21hc2vKQSEKDFJl",
-            "Z2lzdHJhdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGESowIKGENvbmZpZ3VyZUNv",
+            "bmdzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ipQHK",
+            "QSEKDFJlZ2lzdHJhdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGHaQSVyZWdpc3Ry",
+            "YXRpb24sZG5zX3NldHRpbmdzLHVwZGF0ZV9tYXNrgtPkkwJTIk4vdjEve3Jl",
+            "Z2lzdHJhdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlv",
+            "bnMvKn06Y29uZmlndXJlRG5zU2V0dGluZ3M6ASoSowIKGENvbmZpZ3VyZUNv",
             "bnRhY3RTZXR0aW5ncxI4Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxLkNvbmZp",
             "Z3VyZUNvbnRhY3RTZXR0aW5nc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIq0BgtPkkwJXIlIvdjEve3JlZ2lzdHJhdGlvbj1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06Y29uZmlndXJl",
-            "Q29udGFjdFNldHRpbmdzOgEq2kEpcmVnaXN0cmF0aW9uLGNvbnRhY3Rfc2V0",
-            "dGluZ3MsdXBkYXRlX21hc2vKQSEKDFJlZ2lzdHJhdGlvbhIRT3BlcmF0aW9u",
-            "TWV0YWRhdGES1wEKEkV4cG9ydFJlZ2lzdHJhdGlvbhIyLmdvb2dsZS5jbG91",
+            "bmcuT3BlcmF0aW9uIq0BykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlvbk1l",
+            "dGFkYXRh2kEpcmVnaXN0cmF0aW9uLGNvbnRhY3Rfc2V0dGluZ3MsdXBkYXRl",
+            "X21hc2uC0+STAlciUi92MS97cmVnaXN0cmF0aW9uPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpjb25maWd1cmVDb250YWN0U2V0",
+            "dGluZ3M6ASoS1wEKEkV4cG9ydFJlZ2lzdHJhdGlvbhIyLmdvb2dsZS5jbG91",
             "ZC5kb21haW5zLnYxLkV4cG9ydFJlZ2lzdHJhdGlvblJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm6C0+STAj0iOC92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06ZXhwb3J0",
-            "OgEq2kEEbmFtZcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25NZXRhZGF0",
-            "YRLWAQoSRGVsZXRlUmVnaXN0cmF0aW9uEjIuZ29vZ2xlLmNsb3VkLmRvbWFp",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm7KQSEKDFJlZ2lzdHJhdGlvbhIR",
+            "T3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwI9IjgvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9yZWdpc3RyYXRpb25zLyp9OmV4cG9ydDoB",
+            "KhLWAQoSRGVsZXRlUmVnaXN0cmF0aW9uEjIuZ29vZ2xlLmNsb3VkLmRvbWFp",
             "bnMudjEuRGVsZXRlUmVnaXN0cmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ibYLT5JMCMyoxL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfdpBBG5hbWXKQSoKFWdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES7gEKGVJl",
+            "cnVubmluZy5PcGVyYXRpb24ibcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjMqMS92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn0S7gEKGVJl",
             "dHJpZXZlQXV0aG9yaXphdGlvbkNvZGUSOS5nb29nbGUuY2xvdWQuZG9tYWlu",
             "cy52MS5SZXRyaWV2ZUF1dGhvcml6YXRpb25Db2RlUmVxdWVzdBoqLmdvb2ds",
-            "ZS5jbG91ZC5kb21haW5zLnYxLkF1dGhvcml6YXRpb25Db2RlImqC0+STAlUS",
-            "Uy92MS97cmVnaXN0cmF0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVn",
-            "aXN0cmF0aW9ucy8qfTpyZXRyaWV2ZUF1dGhvcml6YXRpb25Db2Rl2kEMcmVn",
-            "aXN0cmF0aW9uEugBChZSZXNldEF1dGhvcml6YXRpb25Db2RlEjYuZ29vZ2xl",
+            "ZS5jbG91ZC5kb21haW5zLnYxLkF1dGhvcml6YXRpb25Db2RlImraQQxyZWdp",
+            "c3RyYXRpb26C0+STAlUSUy92MS97cmVnaXN0cmF0aW9uPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpyZXRyaWV2ZUF1dGhvcml6",
+            "YXRpb25Db2RlEugBChZSZXNldEF1dGhvcml6YXRpb25Db2RlEjYuZ29vZ2xl",
             "LmNsb3VkLmRvbWFpbnMudjEuUmVzZXRBdXRob3JpemF0aW9uQ29kZVJlcXVl",
             "c3QaKi5nb29nbGUuY2xvdWQuZG9tYWlucy52MS5BdXRob3JpemF0aW9uQ29k",
-            "ZSJqgtPkkwJVIlAvdjEve3JlZ2lzdHJhdGlvbj1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06cmVzZXRBdXRob3JpemF0aW9uQ29k",
-            "ZToBKtpBDHJlZ2lzdHJhdGlvbhpKykEWZG9tYWlucy5nb29nbGVhcGlzLmNv",
+            "ZSJq2kEMcmVnaXN0cmF0aW9ugtPkkwJVIlAvdjEve3JlZ2lzdHJhdGlvbj1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06cmVzZXRB",
+            "dXRob3JpemF0aW9uQ29kZToBKhpKykEWZG9tYWlucy5nb29nbGVhcGlzLmNv",
             "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
             "dGZvcm1CZAobY29tLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxQgxEb21haW5z",
             "UHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9kb21haW5zL2FwaXYxL2Rv",
@@ -431,6 +431,7 @@ namespace Google.Cloud.Domains.V1 {
   /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
   /// unlocked and to get values needed to build a call to `TransferDomain`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Registration : pb::IMessage<Registration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -904,7 +905,7 @@ namespace Google.Cloud.Domains.V1 {
         State = other.State;
       }
       issues_.Add(other.issues_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.managementSettings_ != null) {
         if (managementSettings_ == null) {
           ManagementSettings = new global::Google.Cloud.Domains.V1.ManagementSettings();
@@ -1186,6 +1187,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Defines renewal, billing, and transfer settings for a `Registration`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManagementSettings : pb::IMessage<ManagementSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1456,6 +1458,7 @@ namespace Google.Cloud.Domains.V1 {
   /// Defines the DNS configuration of a `Registration`, including name servers,
   /// DNSSEC, and glue records.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DnsSettings : pb::IMessage<DnsSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1805,6 +1808,7 @@ namespace Google.Cloud.Domains.V1 {
       /// <summary>
       /// Configuration for an arbitrary DNS provider.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CustomDns : pb::IMessage<CustomDns>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2025,6 +2029,7 @@ namespace Google.Cloud.Domains.V1 {
       /// using the API. To configure the DNS zone, go to
       /// [Google Domains](https://domains.google/).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GoogleDomainsDns : pb::IMessage<GoogleDomainsDns>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2286,6 +2291,7 @@ namespace Google.Cloud.Domains.V1 {
       /// for a domain. It contains a digest (hash) of a DNSKEY record that must be
       /// present in the domain's DNS zone.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DsRecord : pb::IMessage<DsRecord>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2720,6 +2726,7 @@ namespace Google.Cloud.Domains.V1 {
       /// host `ns.example.com` must have a glue record to break the circular DNS
       /// reference.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GlueRecord : pb::IMessage<GlueRecord>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2986,6 +2993,7 @@ namespace Google.Cloud.Domains.V1 {
   /// contact information. The `registrant_contact` is considered the
   /// domain's legal owner, and often the other contacts are identical.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContactSettings : pb::IMessage<ContactSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3338,6 +3346,7 @@ namespace Google.Cloud.Domains.V1 {
       /// <summary>
       /// Details required for a contact associated with a `Registration`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Contact : pb::IMessage<Contact>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3669,6 +3678,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `SearchDomains` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchDomainsRequest : pb::IMessage<SearchDomainsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3904,6 +3914,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Response for the `SearchDomains` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchDomainsResponse : pb::IMessage<SearchDomainsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4088,6 +4099,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `RetrieveRegisterParameters` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetrieveRegisterParametersRequest : pb::IMessage<RetrieveRegisterParametersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4323,6 +4335,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Response for the `RetrieveRegisterParameters` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetrieveRegisterParametersResponse : pb::IMessage<RetrieveRegisterParametersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4527,6 +4540,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `RegisterDomain` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegisterDomainRequest : pb::IMessage<RegisterDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4930,6 +4944,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `RetrieveTransferParameters` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetrieveTransferParametersRequest : pb::IMessage<RetrieveTransferParametersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5165,6 +5180,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Response for the `RetrieveTransferParameters` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetrieveTransferParametersResponse : pb::IMessage<RetrieveTransferParametersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5369,6 +5385,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `TransferDomain` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransferDomainRequest : pb::IMessage<TransferDomainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5794,6 +5811,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ListRegistrations` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRegistrationsRequest : pb::IMessage<ListRegistrationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6126,6 +6144,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Response for the `ListRegistrations` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRegistrationsResponse : pb::IMessage<ListRegistrationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6351,6 +6370,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `GetRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRegistrationRequest : pb::IMessage<GetRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6547,6 +6567,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `UpdateRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateRegistrationRequest : pb::IMessage<UpdateRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6802,6 +6823,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ConfigureManagementSettings` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigureManagementSettingsRequest : pb::IMessage<ConfigureManagementSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7098,6 +7120,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ConfigureDnsSettings` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigureDnsSettingsRequest : pb::IMessage<ConfigureDnsSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7440,6 +7463,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ConfigureContactSettings` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigureContactSettingsRequest : pb::IMessage<ConfigureContactSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7808,6 +7832,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ExportRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportRegistrationRequest : pb::IMessage<ExportRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8004,6 +8029,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `DeleteRegistration` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRegistrationRequest : pb::IMessage<DeleteRegistrationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8200,6 +8226,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `RetrieveAuthorizationCode` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetrieveAuthorizationCodeRequest : pb::IMessage<RetrieveAuthorizationCodeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8396,6 +8423,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Request for the `ResetAuthorizationCode` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResetAuthorizationCodeRequest : pb::IMessage<ResetAuthorizationCodeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8592,6 +8620,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Parameters required to register a new domain.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegisterParameters : pb::IMessage<RegisterParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8977,6 +9006,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Parameters required to transfer a domain from another registrar.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransferParameters : pb::IMessage<TransferParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9363,6 +9393,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Defines an authorization code.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizationCode : pb::IMessage<AuthorizationCode>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9559,6 +9590,7 @@ namespace Google.Cloud.Domains.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation. Output only.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

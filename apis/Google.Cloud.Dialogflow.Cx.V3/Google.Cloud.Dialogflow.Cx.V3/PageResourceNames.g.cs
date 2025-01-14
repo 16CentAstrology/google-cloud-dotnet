@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -278,10 +278,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <inheritdoc/>
         public bool Equals(PageName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(PageName a, PageName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(PageName a, PageName b) => !(a == b);
     }
 
@@ -303,6 +315,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public gax::ResourceNameList<TransitionRouteGroupName> TransitionRouteGroupsAsTransitionRouteGroupNames
         {
             get => new gax::ResourceNameList<TransitionRouteGroupName>(TransitionRouteGroups, s => string.IsNullOrEmpty(s) ? null : TransitionRouteGroupName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class Form
+    {
+        public partial class Types
+        {
+            public partial class Parameter
+            {
+                /// <summary>
+                /// <see cref="EntityTypeName"/>-typed view over the <see cref="EntityType"/> resource name property.
+                /// </summary>
+                public EntityTypeName EntityTypeAsEntityTypeName
+                {
+                    get => string.IsNullOrEmpty(EntityType) ? null : EntityTypeName.Parse(EntityType, allowUnparsed: true);
+                    set => EntityType = value?.ToString() ?? "";
+                }
+            }
         }
     }
 
@@ -396,6 +426,27 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::PageName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class KnowledgeConnectorSettings
+    {
+        /// <summary>
+        /// <see cref="PageName"/>-typed view over the <see cref="TargetPage"/> resource name property.
+        /// </summary>
+        public PageName TargetPageAsPageName
+        {
+            get => string.IsNullOrEmpty(TargetPage) ? null : PageName.Parse(TargetPage, allowUnparsed: true);
+            set => TargetPage = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FlowName"/>-typed view over the <see cref="TargetFlow"/> resource name property.
+        /// </summary>
+        public FlowName TargetFlowAsFlowName
+        {
+            get => string.IsNullOrEmpty(TargetFlow) ? null : FlowName.Parse(TargetFlow, allowUnparsed: true);
+            set => TargetFlow = value?.ToString() ?? "";
         }
     }
 }

@@ -63,6 +63,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Entity representing a customer of a reseller or distributor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Customer : pb::IMessage<Customer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -155,9 +156,9 @@ namespace Google.Cloud.Channel.V1 {
     private global::Google.Type.PostalAddress orgPostalAddress_;
     /// <summary>
     /// Required. The organization address for the customer. To enforce US laws and
-    /// embargoes, we require a region and zip code. You must provide valid
-    /// addresses for every customer. To set the customer's language, use the
-    /// Customer-level language code.
+    /// embargoes, we require a region, postal code, and address lines. You must
+    /// provide valid addresses for every customer. To set the customer's
+    /// language, use the Customer-level language code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -798,6 +799,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Contact information for a customer account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContactInfo : pb::IMessage<ContactInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

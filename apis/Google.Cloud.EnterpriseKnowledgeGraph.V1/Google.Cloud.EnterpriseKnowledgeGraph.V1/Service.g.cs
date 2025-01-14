@@ -138,52 +138,52 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
             "b2ISTi5nb29nbGUuY2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYx",
             "LkNyZWF0ZUVudGl0eVJlY29uY2lsaWF0aW9uSm9iUmVxdWVzdBpBLmdvb2ds",
             "ZS5jbG91ZC5lbnRlcnByaXNla25vd2xlZGdlZ3JhcGgudjEuRW50aXR5UmVj",
-            "b25jaWxpYXRpb25Kb2IiggGC0+STAlkiPC92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2VudGl0eVJlY29uY2lsaWF0aW9uSm9iczoZZW50",
-            "aXR5X3JlY29uY2lsaWF0aW9uX2pvYtpBIHBhcmVudCxlbnRpdHlfcmVjb25j",
+            "b25jaWxpYXRpb25Kb2IiggHaQSBwYXJlbnQsZW50aXR5X3JlY29uY2lsaWF0",
+            "aW9uX2pvYoLT5JMCWSI8L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vZW50aXR5UmVjb25jaWxpYXRpb25Kb2JzOhllbnRpdHlfcmVjb25j",
             "aWxpYXRpb25fam9iEvkBChpHZXRFbnRpdHlSZWNvbmNpbGlhdGlvbkpvYhJL",
             "Lmdvb2dsZS5jbG91ZC5lbnRlcnByaXNla25vd2xlZGdlZ3JhcGgudjEuR2V0",
             "RW50aXR5UmVjb25jaWxpYXRpb25Kb2JSZXF1ZXN0GkEuZ29vZ2xlLmNsb3Vk",
             "LmVudGVycHJpc2Vrbm93bGVkZ2VncmFwaC52MS5FbnRpdHlSZWNvbmNpbGlh",
-            "dGlvbkpvYiJLgtPkkwI+EjwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9lbnRpdHlSZWNvbmNpbGlhdGlvbkpvYnMvKn3aQQRuYW1lEowCChxM",
+            "dGlvbkpvYiJL2kEEbmFtZYLT5JMCPhI8L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovZW50aXR5UmVjb25jaWxpYXRpb25Kb2JzLyp9EowCChxM",
             "aXN0RW50aXR5UmVjb25jaWxpYXRpb25Kb2JzEk0uZ29vZ2xlLmNsb3VkLmVu",
             "dGVycHJpc2Vrbm93bGVkZ2VncmFwaC52MS5MaXN0RW50aXR5UmVjb25jaWxp",
             "YXRpb25Kb2JzUmVxdWVzdBpOLmdvb2dsZS5jbG91ZC5lbnRlcnByaXNla25v",
             "d2xlZGdlZ3JhcGgudjEuTGlzdEVudGl0eVJlY29uY2lsaWF0aW9uSm9ic1Jl",
-            "c3BvbnNlIk2C0+STAj4SPC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L2VudGl0eVJlY29uY2lsaWF0aW9uSm9ic9pBBnBhcmVudBLeAQod",
+            "c3BvbnNlIk3aQQZwYXJlbnSC0+STAj4SPC92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2VudGl0eVJlY29uY2lsaWF0aW9uSm9icxLeAQod",
             "Q2FuY2VsRW50aXR5UmVjb25jaWxpYXRpb25Kb2ISTi5nb29nbGUuY2xvdWQu",
             "ZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYxLkNhbmNlbEVudGl0eVJlY29u",
             "Y2lsaWF0aW9uSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJV",
-            "gtPkkwJIIkMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRp",
-            "dHlSZWNvbmNpbGlhdGlvbkpvYnMvKn06Y2FuY2VsOgEq2kEEbmFtZRLUAQod",
+            "2kEEbmFtZYLT5JMCSCJDL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovZW50aXR5UmVjb25jaWxpYXRpb25Kb2JzLyp9OmNhbmNlbDoBKhLUAQod",
             "RGVsZXRlRW50aXR5UmVjb25jaWxpYXRpb25Kb2ISTi5nb29nbGUuY2xvdWQu",
             "ZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYxLkRlbGV0ZUVudGl0eVJlY29u",
             "Y2lsaWF0aW9uSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJL",
-            "gtPkkwI+KjwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRp",
-            "dHlSZWNvbmNpbGlhdGlvbkpvYnMvKn3aQQRuYW1lEtgBCgZMb29rdXASNy5n",
+            "2kEEbmFtZYLT5JMCPio8L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovZW50aXR5UmVjb25jaWxpYXRpb25Kb2JzLyp9EtgBCgZMb29rdXASNy5n",
             "b29nbGUuY2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYxLkxvb2t1",
             "cFJlcXVlc3QaOC5nb29nbGUuY2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdy",
-            "YXBoLnYxLkxvb2t1cFJlc3BvbnNlIluC0+STAkgSRi92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2Nsb3VkS25vd2xlZGdlR3JhcGhFbnRp",
-            "dGllczpMb29rdXDaQQpwYXJlbnQsaWRzEtoBCgZTZWFyY2gSNy5nb29nbGUu",
+            "YXBoLnYxLkxvb2t1cFJlc3BvbnNlIlvaQQpwYXJlbnQsaWRzgtPkkwJIEkYv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jbG91ZEtub3ds",
+            "ZWRnZUdyYXBoRW50aXRpZXM6TG9va3VwEtoBCgZTZWFyY2gSNy5nb29nbGUu",
             "Y2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYxLlNlYXJjaFJlcXVl",
             "c3QaOC5nb29nbGUuY2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYx",
-            "LlNlYXJjaFJlc3BvbnNlIl2C0+STAkgSRi92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2Nsb3VkS25vd2xlZGdlR3JhcGhFbnRpdGllczpT",
-            "ZWFyY2jaQQxwYXJlbnQscXVlcnkS8QEKDkxvb2t1cFB1YmxpY0tnEj8uZ29v",
+            "LlNlYXJjaFJlc3BvbnNlIl3aQQxwYXJlbnQscXVlcnmC0+STAkgSRi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nsb3VkS25vd2xlZGdl",
+            "R3JhcGhFbnRpdGllczpTZWFyY2gS8QEKDkxvb2t1cFB1YmxpY0tnEj8uZ29v",
             "Z2xlLmNsb3VkLmVudGVycHJpc2Vrbm93bGVkZ2VncmFwaC52MS5Mb29rdXBQ",
             "dWJsaWNLZ1JlcXVlc3QaQC5nb29nbGUuY2xvdWQuZW50ZXJwcmlzZWtub3ds",
-            "ZWRnZWdyYXBoLnYxLkxvb2t1cFB1YmxpY0tnUmVzcG9uc2UiXILT5JMCSRJH",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcHVibGljS25v",
-            "d2xlZGdlR3JhcGhFbnRpdGllczpMb29rdXDaQQpwYXJlbnQsaWRzEvMBCg5T",
+            "ZWRnZWdyYXBoLnYxLkxvb2t1cFB1YmxpY0tnUmVzcG9uc2UiXNpBCnBhcmVu",
+            "dCxpZHOC0+STAkkSRy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3B1YmxpY0tub3dsZWRnZUdyYXBoRW50aXRpZXM6TG9va3VwEvMBCg5T",
             "ZWFyY2hQdWJsaWNLZxI/Lmdvb2dsZS5jbG91ZC5lbnRlcnByaXNla25vd2xl",
             "ZGdlZ3JhcGgudjEuU2VhcmNoUHVibGljS2dSZXF1ZXN0GkAuZ29vZ2xlLmNs",
             "b3VkLmVudGVycHJpc2Vrbm93bGVkZ2VncmFwaC52MS5TZWFyY2hQdWJsaWNL",
-            "Z1Jlc3BvbnNlIl6C0+STAkkSRy92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L3B1YmxpY0tub3dsZWRnZUdyYXBoRW50aXRpZXM6U2VhcmNo",
-            "2kEMcGFyZW50LHF1ZXJ5GlvKQSdlbnRlcnByaXNla25vd2xlZGdlZ3JhcGgu",
+            "Z1Jlc3BvbnNlIl7aQQxwYXJlbnQscXVlcnmC0+STAkkSRy92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3B1YmxpY0tub3dsZWRnZUdyYXBo",
+            "RW50aXRpZXM6U2VhcmNoGlvKQSdlbnRlcnByaXNla25vd2xlZGdlZ3JhcGgu",
             "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2Nsb3VkLXBsYXRmb3JtQqgGCixjb20uZ29vZ2xlLmNsb3VkLmVudGVy",
             "cHJpc2Vrbm93bGVkZ2VncmFwaC52MUIMU2VydmljZVByb3RvUAFaaGNsb3Vk",
@@ -239,6 +239,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// The desired input location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -518,14 +519,17 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
         /// <summary>
         /// People entity.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PEOPLE")] People = 1,
         /// <summary>
         /// Establishment entity.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("ESTABLISHMENT")] Establishment = 2,
         /// <summary>
         /// Property entity. e.g. real estate property.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PROPERTY")] Property = 3,
         /// <summary>
         /// Product entity.
@@ -553,6 +557,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// The input config for BigQuery tables.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryInputConfig : pb::IMessage<BigQueryInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -788,6 +793,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// The desired output location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -983,6 +989,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Recon configs
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReconConfig : pb::IMessage<ReconConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1378,6 +1385,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
       /// <summary>
       /// Options for experimental changes on entity clustering behavior.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Options : pb::IMessage<Options>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1579,6 +1587,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
       /// <summary>
       /// Model Configs
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelConfig : pb::IMessage<ModelConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1821,6 +1830,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Options for connected components.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConnectedComponentsConfig : pb::IMessage<ConnectedComponentsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2016,6 +2026,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Options for affinity clustering.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AffinityClusteringConfig : pb::IMessage<AffinityClusteringConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2211,6 +2222,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Details of operations that perform deletes of any entities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2415,6 +2427,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Request message for CreateEntityReconciliationJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntityReconciliationJobRequest : pb::IMessage<CreateEntityReconciliationJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2661,6 +2674,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Request message for GetEntityReconciliationJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEntityReconciliationJobRequest : pb::IMessage<GetEntityReconciliationJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2859,6 +2873,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Request message for
   /// [EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityReconciliationJobsRequest : pb::IMessage<ListEntityReconciliationJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3177,6 +3192,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Response message for
   /// [EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.ListEntityReconciliationJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityReconciliationJobsResponse : pb::IMessage<ListEntityReconciliationJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3402,6 +3418,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Request message for CancelEntityReconciliationJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelEntityReconciliationJobRequest : pb::IMessage<CancelEntityReconciliationJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3599,6 +3616,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Request message for DeleteEntityReconciliationJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntityReconciliationJobRequest : pb::IMessage<DeleteEntityReconciliationJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3796,6 +3814,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// <summary>
   /// Entity reconciliation job message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityReconciliationJob : pb::IMessage<EntityReconciliationJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4379,6 +4398,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Request message for
   /// [EnterpriseKnowledgeGraphService.Lookup][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupRequest : pb::IMessage<LookupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4636,6 +4656,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Response message for
   /// [EnterpriseKnowledgeGraphService.Lookup][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Lookup].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupResponse : pb::IMessage<LookupResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4940,6 +4961,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Request message for
   /// [EnterpriseKnowledgeGraphService.Search][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchRequest : pb::IMessage<SearchRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5287,6 +5309,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Response message for
   /// [EnterpriseKnowledgeGraphService.Search][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchResponse : pb::IMessage<SearchResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5591,6 +5614,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Request message for
   /// [EnterpriseKnowledgeGraphService.LookupPublicKg][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupPublicKgRequest : pb::IMessage<LookupPublicKgRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5848,6 +5872,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Response message for
   /// [EnterpriseKnowledgeGraphService.LookupPublicKg][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.LookupPublicKg].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupPublicKgResponse : pb::IMessage<LookupPublicKgResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6152,6 +6177,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Request message for
   /// [EnterpriseKnowledgeGraphService.Search][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchPublicKgRequest : pb::IMessage<SearchPublicKgRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6499,6 +6525,7 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
   /// Response message for
   /// [EnterpriseKnowledgeGraphService.Search][google.cloud.enterpriseknowledgegraph.v1.EnterpriseKnowledgeGraphService.Search].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchPublicKgResponse : pb::IMessage<SearchPublicKgResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

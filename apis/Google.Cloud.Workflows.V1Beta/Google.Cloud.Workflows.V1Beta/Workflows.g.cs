@@ -68,28 +68,28 @@ namespace Google.Cloud.Workflows.V1Beta {
             "IAEoCRITCgthcGlfdmVyc2lvbhgFIAEoCTL5CAoJV29ya2Zsb3dzEr4BCg1M",
             "aXN0V29ya2Zsb3dzEjMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MWJldGEu",
             "TGlzdFdvcmtmbG93c1JlcXVlc3QaNC5nb29nbGUuY2xvdWQud29ya2Zsb3dz",
-            "LnYxYmV0YS5MaXN0V29ya2Zsb3dzUmVzcG9uc2UiQoLT5JMCMxIxL3YxYmV0",
-            "YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3dvcmtmbG93c9pB",
-            "BnBhcmVudBKrAQoLR2V0V29ya2Zsb3cSMS5nb29nbGUuY2xvdWQud29ya2Zs",
+            "LnYxYmV0YS5MaXN0V29ya2Zsb3dzUmVzcG9uc2UiQtpBBnBhcmVudILT5JMC",
+            "MxIxL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3dv",
+            "cmtmbG93cxKrAQoLR2V0V29ya2Zsb3cSMS5nb29nbGUuY2xvdWQud29ya2Zs",
             "b3dzLnYxYmV0YS5HZXRXb3JrZmxvd1JlcXVlc3QaJy5nb29nbGUuY2xvdWQu",
-            "d29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvdyJAgtPkkwIzEjEvdjFiZXRhL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyp92kEEbmFt",
-            "ZRLpAQoOQ3JlYXRlV29ya2Zsb3cSNC5nb29nbGUuY2xvdWQud29ya2Zsb3dz",
+            "d29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvdyJA2kEEbmFtZYLT5JMCMxIxL3Yx",
+            "YmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8q",
+            "fRLpAQoOQ3JlYXRlV29ya2Zsb3cSNC5nb29nbGUuY2xvdWQud29ya2Zsb3dz",
             "LnYxYmV0YS5DcmVhdGVXb3JrZmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIoEBgtPkkwI9IjEvdjFiZXRhL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKn0vd29ya2Zsb3dzOgh3b3JrZmxvd9pBG3Bh",
-            "cmVudCx3b3JrZmxvdyx3b3JrZmxvd19pZMpBHQoIV29ya2Zsb3cSEU9wZXJh",
-            "dGlvbk1ldGFkYXRhEtQBCg5EZWxldGVXb3JrZmxvdxI0Lmdvb2dsZS5jbG91",
+            "bm5pbmcuT3BlcmF0aW9uIoEBykEdCghXb3JrZmxvdxIRT3BlcmF0aW9uTWV0",
+            "YWRhdGHaQRtwYXJlbnQsd29ya2Zsb3csd29ya2Zsb3dfaWSC0+STAj0iMS92",
+            "MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS93b3JrZmxv",
+            "d3M6CHdvcmtmbG93EtQBCg5EZWxldGVXb3JrZmxvdxI0Lmdvb2dsZS5jbG91",
             "ZC53b3JrZmxvd3MudjFiZXRhLkRlbGV0ZVdvcmtmbG93UmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ibYLT5JMCMyoxL3YxYmV0YS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfdpBBG5h",
-            "bWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRh",
-            "dGES6wEKDlVwZGF0ZVdvcmtmbG93EjQuZ29vZ2xlLmNsb3VkLndvcmtmbG93",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ibcpBKgoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjMqMS92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3Mv",
+            "Kn0S6wEKDlVwZGF0ZVdvcmtmbG93EjQuZ29vZ2xlLmNsb3VkLndvcmtmbG93",
             "cy52MWJldGEuVXBkYXRlV29ya2Zsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKDAYLT5JMCRjI6L3YxYmV0YS97d29ya2Zsb3cu",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfToId29y",
-            "a2Zsb3faQRR3b3JrZmxvdyx1cGRhdGVfbWFza8pBHQoIV29ya2Zsb3cSEU9w",
-            "ZXJhdGlvbk1ldGFkYXRhGkzKQRh3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb23S",
+            "dW5uaW5nLk9wZXJhdGlvbiKDAcpBHQoIV29ya2Zsb3cSEU9wZXJhdGlvbk1l",
+            "dGFkYXRh2kEUd29ya2Zsb3csdXBkYXRlX21hc2uC0+STAkYyOi92MWJldGEv",
+            "e3dvcmtmbG93Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxv",
+            "d3MvKn06CHdvcmtmbG93GkzKQRh3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb23S",
             "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
             "b3JtQnYKIWNvbS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0YUIOV29y",
             "a2Zsb3dzUHJvdG9QAVo/Y2xvdWQuZ29vZ2xlLmNvbS9nby93b3JrZmxvd3Mv",
@@ -114,6 +114,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// <summary>
   /// Workflow program to be executed by Workflows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Workflow : pb::IMessage<Workflow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -339,10 +340,24 @@ namespace Google.Cloud.Workflows.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceContents {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceContents ? (string) sourceCode_ : ""; }
+      get { return HasSourceContents ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceContents;
+      }
+    }
+    /// <summary>Gets whether the "source_contents" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceContents {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceContents; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_contents" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceContents() {
+      if (HasSourceContents) {
+        ClearSourceCode();
       }
     }
 
@@ -408,7 +423,7 @@ namespace Google.Cloud.Workflows.V1Beta {
       if (revisionCreateTime_ != null) hash ^= RevisionCreateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) hash ^= SourceContents.GetHashCode();
+      if (HasSourceContents) hash ^= SourceContents.GetHashCode();
       hash ^= (int) sourceCodeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -461,7 +476,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         output.WriteRawTag(74);
         output.WriteString(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         output.WriteRawTag(82);
         output.WriteString(SourceContents);
       }
@@ -508,7 +523,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         output.WriteRawTag(74);
         output.WriteString(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         output.WriteRawTag(82);
         output.WriteString(SourceContents);
       }
@@ -547,7 +562,7 @@ namespace Google.Cloud.Workflows.V1Beta {
       if (ServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceContents);
       }
       if (_unknownFields != null) {
@@ -592,7 +607,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         }
         RevisionCreateTime.MergeFrom(other.RevisionCreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
       }
@@ -765,6 +780,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// [ListWorkflows][google.cloud.workflows.v1beta.Workflows.ListWorkflows]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkflowsRequest : pb::IMessage<ListWorkflowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1133,6 +1149,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// [ListWorkflows][google.cloud.workflows.v1beta.Workflows.ListWorkflows]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkflowsResponse : pb::IMessage<ListWorkflowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1388,6 +1405,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// Request for the
   /// [GetWorkflow][google.cloud.workflows.v1beta.Workflows.GetWorkflow] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetWorkflowRequest : pb::IMessage<GetWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1586,6 +1604,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// [CreateWorkflow][google.cloud.workflows.v1beta.Workflows.CreateWorkflow]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateWorkflowRequest : pb::IMessage<CreateWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1880,6 +1899,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// [DeleteWorkflow][google.cloud.workflows.v1beta.Workflows.DeleteWorkflow]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteWorkflowRequest : pb::IMessage<DeleteWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2078,6 +2098,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// [UpdateWorkflow][google.cloud.workflows.v1beta.Workflows.UpdateWorkflow]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateWorkflowRequest : pb::IMessage<UpdateWorkflowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2332,6 +2353,7 @@ namespace Google.Cloud.Workflows.V1Beta {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -25,28 +25,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnByb3Rv",
-            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi9QIKBkFjY2VzcxIX",
+            "Eh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEiiQMKBkFjY2VzcxIX",
             "Cg9wcmluY2lwYWxfZW1haWwYASABKAkSEQoJY2FsbGVyX2lwGAIgASgJEkIK",
             "DWNhbGxlcl9pcF9nZW8YAyABKAsyKy5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
             "ZW50ZXIudjEuR2VvbG9jYXRpb24SGQoRdXNlcl9hZ2VudF9mYW1pbHkYBCAB",
-            "KAkSFAoMc2VydmljZV9uYW1lGAUgASgJEhMKC21ldGhvZF9uYW1lGAYgASgJ",
-            "EhkKEXByaW5jaXBhbF9zdWJqZWN0GAcgASgJEiAKGHNlcnZpY2VfYWNjb3Vu",
-            "dF9rZXlfbmFtZRgIIAEoCRJlCh9zZXJ2aWNlX2FjY291bnRfZGVsZWdhdGlv",
-            "bl9pbmZvGAkgAygLMjwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LlNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8SEQoJdXNlcl9uYW1lGAsg",
-            "ASgJIlIKHFNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8SFwoPcHJpbmNp",
-            "cGFsX2VtYWlsGAEgASgJEhkKEXByaW5jaXBhbF9zdWJqZWN0GAIgASgJIiIK",
-            "C0dlb2xvY2F0aW9uEhMKC3JlZ2lvbl9jb2RlGAEgASgJQuUBCiJjb20uZ29v",
-            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQgtBY2Nlc3NQcm90b1ABWkpj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3Vy",
-            "aXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5T",
-            "ZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRl",
-            "clxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJv",
-            "dG8z"));
+            "KAkSEgoKdXNlcl9hZ2VudBgMIAEoCRIUCgxzZXJ2aWNlX25hbWUYBSABKAkS",
+            "EwoLbWV0aG9kX25hbWUYBiABKAkSGQoRcHJpbmNpcGFsX3N1YmplY3QYByAB",
+            "KAkSIAoYc2VydmljZV9hY2NvdW50X2tleV9uYW1lGAggASgJEmUKH3NlcnZp",
+            "Y2VfYWNjb3VudF9kZWxlZ2F0aW9uX2luZm8YCSADKAsyPC5nb29nbGUuY2xv",
+            "dWQuc2VjdXJpdHljZW50ZXIudjEuU2VydmljZUFjY291bnREZWxlZ2F0aW9u",
+            "SW5mbxIRCgl1c2VyX25hbWUYCyABKAkiUgocU2VydmljZUFjY291bnREZWxl",
+            "Z2F0aW9uSW5mbxIXCg9wcmluY2lwYWxfZW1haWwYASABKAkSGQoRcHJpbmNp",
+            "cGFsX3N1YmplY3QYAiABKAkiIgoLR2VvbG9jYXRpb24SEwoLcmVnaW9uX2Nv",
+            "ZGUYASABKAlC5QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djFCC0FjY2Vzc1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJp",
+            "dHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRl",
+            "cnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xl",
+            "XENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2Vj",
+            "dXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "ServiceName", "MethodName", "PrincipalSubject", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "UserName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Access), global::Google.Cloud.SecurityCenter.V1.Access.Parser, new[]{ "PrincipalEmail", "CallerIp", "CallerIpGeo", "UserAgentFamily", "UserAgent", "ServiceName", "MethodName", "PrincipalSubject", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "UserName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo), global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo.Parser, new[]{ "PrincipalEmail", "PrincipalSubject" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Geolocation), global::Google.Cloud.SecurityCenter.V1.Geolocation.Parser, new[]{ "RegionCode" }, null, null, null, null)
           }));
@@ -58,6 +58,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Represents an access event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Access : pb::IMessage<Access>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -96,6 +97,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       callerIp_ = other.callerIp_;
       callerIpGeo_ = other.callerIpGeo_ != null ? other.callerIpGeo_.Clone() : null;
       userAgentFamily_ = other.userAgentFamily_;
+      userAgent_ = other.userAgent_;
       serviceName_ = other.serviceName_;
       methodName_ = other.methodName_;
       principalSubject_ = other.principalSubject_;
@@ -117,11 +119,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// Associated email, such as "foo@google.com".
     ///
-    /// The email address of the authenticated user (or service account on behalf
-    /// of third party principal) making the request. For third party identity
-    /// callers, the `principal_subject` field is populated instead of this field.
-    /// For privacy reasons, the principal email address is sometimes redacted.
-    /// For more information, see [Caller identities in audit
+    /// The email address of the authenticated user or a service account acting on
+    /// behalf of a third party principal making the request. For third party
+    /// identity callers, the `principal_subject` field is populated instead of
+    /// this field. For privacy reasons, the principal email address is sometimes
+    /// redacted. For more information, see [Caller identities in audit
     /// logs](https://cloud.google.com/logging/docs/audit#user-id).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,8 +169,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UserAgentFamilyFieldNumber = 4;
     private string userAgentFamily_ = "";
     /// <summary>
-    /// What kind of user agent is associated, for example operating system shells,
-    /// embedded or stand-alone applications, etc.
+    /// Type of user agent associated with the finding. For example, an operating
+    /// system shell or an embedded or standalone application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,6 +178,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return userAgentFamily_; }
       set {
         userAgentFamily_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_agent" field.</summary>
+    public const int UserAgentFieldNumber = 12;
+    private string userAgent_ = "";
+    /// <summary>
+    /// The caller's user agent string associated with the finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserAgent {
+      get { return userAgent_; }
+      set {
+        userAgent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -214,13 +231,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int PrincipalSubjectFieldNumber = 7;
     private string principalSubject_ = "";
     /// <summary>
-    /// A string representing the principal_subject associated with the identity.
-    /// As compared to `principal_email`, supports principals that aren't
-    /// associated with email addresses, such as third party principals. For most
-    /// identities, the format will be `principal://iam.googleapis.com/{identity
-    /// pool name}/subjects/{subject}` except for some GKE identities
-    /// (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy
-    /// format `serviceAccount:{identity pool name}[{subject}]`
+    /// A string that represents the principal_subject that is associated with the
+    /// identity. Unlike `principal_email`, `principal_subject` supports principals
+    /// that aren't associated with email addresses, such as third party
+    /// principals. For most identities, the format is
+    /// `principal://iam.googleapis.com/{identity pool name}/subject/{subject}`.
+    /// Some GKE identities, such as GKE_WORKLOAD, FREEFORM, and GKE_HUB_WORKLOAD,
+    /// still use the legacy format `serviceAccount:{identity pool
+    /// name}[{subject}]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -235,11 +253,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ServiceAccountKeyNameFieldNumber = 8;
     private string serviceAccountKeyName_ = "";
     /// <summary>
-    /// The name of the service account key used to create or exchange
-    /// credentials for authenticating the service account making the request.
+    /// The name of the service account key that was used to create or exchange
+    /// credentials when authenticating the service account that made the request.
     /// This is a scheme-less URI full resource name. For example:
     ///
-    /// "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+    /// "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -256,11 +274,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.ServiceAccountDelegationInfo>();
     /// <summary>
-    /// Identity delegation history of an authenticated service account that makes
-    /// the request. It contains information on the real authorities that try to
-    /// access GCP resources by delegating on a service account. When multiple
-    /// authorities are present, they are guaranteed to be sorted based on the
-    /// original ordering of the identity delegation events.
+    /// The identity delegation history of an authenticated service account that
+    /// made the request. The `serviceAccountDelegationInfo[]` object contains
+    /// information about the real authorities that try to access Google Cloud
+    /// resources by delegating on a service account. When multiple authorities are
+    /// present, they are guaranteed to be sorted based on the original ordering of
+    /// the identity delegation events.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -272,13 +291,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UserNameFieldNumber = 11;
     private string userName_ = "";
     /// <summary>
-    /// A string that represents the username of a user, user account, or other
-    /// entity involved in the access event. What the entity is and what its role
-    /// in the access event is depends on the finding that this field appears in.
-    /// The entity is likely not an IAM principal, but could be a user that is
-    /// logged into an operating system, if the finding is VM-related, or a user
-    /// that is logged into some type of application that is involved in the
-    /// access event.
+    /// A string that represents a username. The username provided depends on the
+    /// type of the finding and is likely not an IAM principal. For example, this
+    /// can be a system username if the finding is related to a virtual machine, or
+    /// it can be an application login username.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -308,6 +324,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (CallerIp != other.CallerIp) return false;
       if (!object.Equals(CallerIpGeo, other.CallerIpGeo)) return false;
       if (UserAgentFamily != other.UserAgentFamily) return false;
+      if (UserAgent != other.UserAgent) return false;
       if (ServiceName != other.ServiceName) return false;
       if (MethodName != other.MethodName) return false;
       if (PrincipalSubject != other.PrincipalSubject) return false;
@@ -325,6 +342,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (CallerIp.Length != 0) hash ^= CallerIp.GetHashCode();
       if (callerIpGeo_ != null) hash ^= CallerIpGeo.GetHashCode();
       if (UserAgentFamily.Length != 0) hash ^= UserAgentFamily.GetHashCode();
+      if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
       if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
       if (MethodName.Length != 0) hash ^= MethodName.GetHashCode();
       if (PrincipalSubject.Length != 0) hash ^= PrincipalSubject.GetHashCode();
@@ -386,6 +404,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(90);
         output.WriteString(UserName);
       }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(UserAgent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -433,6 +455,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(90);
         output.WriteString(UserName);
       }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(UserAgent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -454,6 +480,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (UserAgentFamily.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserAgentFamily);
+      }
+      if (UserAgent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserAgent);
       }
       if (ServiceName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceName);
@@ -497,6 +526,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.UserAgentFamily.Length != 0) {
         UserAgentFamily = other.UserAgentFamily;
+      }
+      if (other.UserAgent.Length != 0) {
+        UserAgent = other.UserAgent;
       }
       if (other.ServiceName.Length != 0) {
         ServiceName = other.ServiceName;
@@ -572,6 +604,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             UserName = input.ReadString();
             break;
           }
+          case 98: {
+            UserAgent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -630,6 +666,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             UserName = input.ReadString();
             break;
           }
+          case 98: {
+            UserAgent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -640,6 +680,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Identity delegation history of an authenticated service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccountDelegationInfo : pb::IMessage<ServiceAccountDelegationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -881,6 +922,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Represents a geographical location for a given access.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Geolocation : pb::IMessage<Geolocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

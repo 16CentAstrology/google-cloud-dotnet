@@ -26,30 +26,60 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           string.Concat(
             "Ci1nb29nbGUvc3Bhbm5lci9hZG1pbi9pbnN0YW5jZS92MS9jb21tb24ucHJv",
             "dG8SIGdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIosBChFPcGVyYXRpb25Qcm9ncmVz",
-            "cxIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFEi4KCnN0YXJ0X3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEL9AQokY29tLmdvb2ds",
-            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxQgtDb21tb25Qcm90b1ABWkZj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYWRtaW4vaW5zdGFuY2UvYXBp",
-            "djEvaW5zdGFuY2VwYjtpbnN0YW5jZXBiqgImR29vZ2xlLkNsb3VkLlNwYW5u",
-            "ZXIuQWRtaW4uSW5zdGFuY2UuVjHKAiZHb29nbGVcQ2xvdWRcU3Bhbm5lclxB",
-            "ZG1pblxJbnN0YW5jZVxWMeoCK0dvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OkFk",
-            "bWluOjpJbnN0YW5jZTo6VjFiBnByb3RvMw=="));
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIosBChFP",
+            "cGVyYXRpb25Qcm9ncmVzcxIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFEi4K",
+            "CnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EiwKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cCIpChBSZXBsaWNhU2VsZWN0aW9uEhUKCGxvY2F0aW9uGAEgASgJQgPgQQIq",
+            "dwoRRnVsZmlsbG1lbnRQZXJpb2QSIgoeRlVMRklMTE1FTlRfUEVSSU9EX1VO",
+            "U1BFQ0lGSUVEEAASHQoZRlVMRklMTE1FTlRfUEVSSU9EX05PUk1BTBABEh8K",
+            "G0ZVTEZJTExNRU5UX1BFUklPRF9FWFRFTkRFRBACQv0BCiRjb20uZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjFCC0NvbW1vblByb3RvUAFaRmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hZG1pbi9pbnN0YW5jZS9hcGl2",
+            "MS9pbnN0YW5jZXBiO2luc3RhbmNlcGKqAiZHb29nbGUuQ2xvdWQuU3Bhbm5l",
+            "ci5BZG1pbi5JbnN0YW5jZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFk",
+            "bWluXEluc3RhbmNlXFYx6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRt",
+            "aW46Okluc3RhbmNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaSelection.Parser, new[]{ "Location" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Indicates the expected fulfillment period of an operation.
+  /// </summary>
+  public enum FulfillmentPeriod {
+    /// <summary>
+    /// Not specified.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Normal fulfillment period. The operation is expected to complete within
+    /// minutes.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_NORMAL")] Normal = 1,
+    /// <summary>
+    /// Extended fulfillment period. It can take up to an hour for the operation
+    /// to complete.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_EXTENDED")] Extended = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Encapsulates progress related information for a Cloud Spanner long
   /// running instance operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationProgress : pb::IMessage<OperationProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +363,202 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ReplicaSelection identifies replicas with common properties.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReplicaSelection : pb::IMessage<ReplicaSelection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReplicaSelection> _parser = new pb::MessageParser<ReplicaSelection>(() => new ReplicaSelection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReplicaSelection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.CommonReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaSelection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaSelection(ReplicaSelection other) : this() {
+      location_ = other.location_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicaSelection Clone() {
+      return new ReplicaSelection(this);
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 1;
+    private string location_ = "";
+    /// <summary>
+    /// Required. Name of the location of the replicas (e.g., "us-central1").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReplicaSelection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReplicaSelection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Location != other.Location) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Location.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Location.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReplicaSelection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Location = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Location = input.ReadString();
             break;
           }
         }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,18 +17,18 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AssuredWorkloads.V1Beta1
 {
@@ -237,14 +237,14 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings, Logger);
+            return AssuredWorkloadsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AssuredWorkloadsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AssuredWorkloadsServiceClient.Create(callInvoker, Settings, Logger);
+            return AssuredWorkloadsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1082,13 +1082,22 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -1107,13 +1116,22 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -1132,13 +1150,22 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloads(new ListWorkloadsRequest
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, Workload> ListWorkloads(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloads(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Assured Workloads under a CRM Node.
@@ -1157,13 +1184,22 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Workload"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkloadsAsync(new ListWorkloadsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, Workload> ListWorkloadsAsync(LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkloadsRequest request = new ListWorkloadsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkloadsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AssuredWorkloadsService client wrapper implementation, for convenient use.</summary>
@@ -1199,7 +1235,11 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
         {
             GrpcClient = grpcClient;
             AssuredWorkloadsServiceSettings effectiveSettings = settings ?? AssuredWorkloadsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateWorkloadOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkloadOperationsSettings, logger);
             _callCreateWorkload = clientHelper.BuildApiCall<CreateWorkloadRequest, lro::Operation>("CreateWorkload", grpcClient.CreateWorkloadAsync, grpcClient.CreateWorkload, effectiveSettings.CreateWorkloadSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkload);

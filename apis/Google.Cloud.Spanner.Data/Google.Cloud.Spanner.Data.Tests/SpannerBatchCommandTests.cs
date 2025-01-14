@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,12 +18,14 @@ using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf;
-using Moq;
+using Google.Protobuf.WellKnownTypes;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Transactions;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -42,6 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Same(connection, command.Connection);
             Assert.Null(command.Transaction);
             Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
+            Assert.Null(command.EphemeralTransactionCreationOptions);
         }
 
         [Fact]
@@ -51,13 +54,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool = new FakeSessionPool();
             var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
 
-            var transaction = new SpannerTransaction(connection, TransactionMode.ReadWrite, session: session, timestampBound: null);
+            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
             Assert.Same(connection, command.Connection);
             Assert.Same(transaction, command.Transaction);
             Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
+            Assert.Null(command.EphemeralTransactionCreationOptions);
         }
 
         public static IEnumerable<object[]> ValidCommands
@@ -156,11 +160,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommandPriorityDefaultsToUnspecified()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync();
+                .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
             var command = transaction.CreateBatchDmlCommand();
@@ -168,14 +170,12 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CommandIncludesPriority()
+        public async Task CommandIncludesPriority()
         {
             var priority = Priority.High;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -187,20 +187,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.ExecuteNonQuery();
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
+        public async Task EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
         {
             var priority = Priority.Medium;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -210,24 +208,217 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = priority;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
+        }
+
+        public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues => SpannerTransactionTests.ValidMaxCommitDelayValues;
+
+        public static TheoryData<TimeSpan?> InvalidMaxCommitDelayValues => SpannerTransactionTests.InvalidMaxCommitDelayValues;
+
+        [Fact]
+        public void MaxCommitDelay_DefaultsToNull()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.SetupBatchCreateSessionsAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateBatchDmlCommand();
+
+            Assert.Null(command.MaxCommitDelay);
+        }
+
+        [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
+        public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.SetupBatchCreateSessionsAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateBatchDmlCommand();
+
+            command.MaxCommitDelay = maxCommitDelay;
+
+            Assert.Equal(maxCommitDelay, command.MaxCommitDelay);
+        }
+
+        [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
+        public void MaxCommitDelay_Invalid(TimeSpan? maxCommitDelay)
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.SetupBatchCreateSessionsAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateBatchDmlCommand();
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => command.MaxCommitDelay = maxCommitDelay);
         }
 
         [Fact]
-        public void CommandIncludesRequestAndTransactionTag()
+        public async Task MaxCommitDelay_DefaultsToNull_ImplicitTransaction()
         {
-            var requestTag = "request-tag-1";
-            var transactionTag = "transaction-tag-1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.ExecuteNonQuery();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_Propagates_ImplicitTransaction()
+        {
+            var maxCommitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.MaxCommitDelay = maxCommitDelay;
+            command.ExecuteNonQuery();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_SetOnExplicitTransaction_CommandIgnored()
+        {
+            var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.MaxCommitDelay = transactionMaxCommitDelay;
+
+            var command = transaction.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.ExecuteNonQuery();
+
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnExplicitTransaction_CommandIgnored()
+        {
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = transaction.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.ExecuteNonQuery();
+
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_SetOnAmbientTransaction_CommandIgnored()
+        {
+            var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
+                var command = connection.CreateBatchDmlCommand();
+                command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnAmbientTransaction_CommandIgnored()
+        {
+            var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open();
+                var command = connection.CreateBatchDmlCommand();
+                command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task CommandIncludesRequestAndTransactionTag()
+        {
+            var requestTag = "request-tag-1";
+            var transactionTag = "transaction-tag-1";
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -240,12 +431,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.ExecuteNonQuery();
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.RequestTag == requestTag && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
+            await spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.RequestTag == requestTag && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool
@@ -253,9 +444,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             public SpannerClient Client => throw new NotImplementedException();
             public IClock Clock => SystemClock.Instance;
             public SessionPoolOptions Options { get; } = new SessionPoolOptions();
-            public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
+            public bool TracksSessions => throw new NotImplementedException();
 
-            public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
+            public void Detach(PooledSession session) => throw new NotImplementedException();
+
+            public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, V1.TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();
         }
     }

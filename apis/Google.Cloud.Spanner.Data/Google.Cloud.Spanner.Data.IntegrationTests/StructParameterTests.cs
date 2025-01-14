@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -224,7 +224,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-        }        
+        }
 
         [Fact]
         public async Task NullnessCheck()
@@ -322,7 +322,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }
@@ -348,7 +348,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }
@@ -369,7 +369,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }

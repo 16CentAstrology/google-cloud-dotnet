@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,15 +19,15 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -150,14 +150,14 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings, Logger);
+            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<FeaturestoreOnlineServingServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, Settings, Logger);
+            return FeaturestoreOnlineServingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -189,7 +189,7 @@ namespace Google.Cloud.AIPlatform.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FeaturestoreOnlineServingService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(FeaturestoreOnlineServingService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -703,7 +703,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             FeaturestoreOnlineServingServiceSettings effectiveSettings = settings ?? FeaturestoreOnlineServingServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callReadFeatureValues = clientHelper.BuildApiCall<ReadFeatureValuesRequest, ReadFeatureValuesResponse>("ReadFeatureValues", grpcClient.ReadFeatureValuesAsync, grpcClient.ReadFeatureValues, effectiveSettings.ReadFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);

@@ -84,16 +84,16 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
             "ZXRhMRLiAQoVQ29tcHV0ZVRocmVhdExpc3REaWZmEjouZ29vZ2xlLmNsb3Vk",
             "LndlYnJpc2sudjFiZXRhMS5Db21wdXRlVGhyZWF0TGlzdERpZmZSZXF1ZXN0",
             "GjsuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjFiZXRhMS5Db21wdXRlVGhyZWF0",
-            "TGlzdERpZmZSZXNwb25zZSJQgtPkkwIiEiAvdjFiZXRhMS90aHJlYXRMaXN0",
-            "czpjb21wdXRlRGlmZtpBJXRocmVhdF90eXBlLHZlcnNpb25fdG9rZW4sY29u",
-            "c3RyYWludHMSoAEKClNlYXJjaFVyaXMSLy5nb29nbGUuY2xvdWQud2Vicmlz",
+            "TGlzdERpZmZSZXNwb25zZSJQ2kEldGhyZWF0X3R5cGUsdmVyc2lvbl90b2tl",
+            "bixjb25zdHJhaW50c4LT5JMCIhIgL3YxYmV0YTEvdGhyZWF0TGlzdHM6Y29t",
+            "cHV0ZURpZmYSoAEKClNlYXJjaFVyaXMSLy5nb29nbGUuY2xvdWQud2Vicmlz",
             "ay52MWJldGExLlNlYXJjaFVyaXNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLndl",
-            "YnJpc2sudjFiZXRhMS5TZWFyY2hVcmlzUmVzcG9uc2UiL4LT5JMCFhIUL3Yx",
-            "YmV0YTEvdXJpczpzZWFyY2jaQRB1cmksdGhyZWF0X3R5cGVzErABCgxTZWFy",
+            "YnJpc2sudjFiZXRhMS5TZWFyY2hVcmlzUmVzcG9uc2UiL9pBEHVyaSx0aHJl",
+            "YXRfdHlwZXOC0+STAhYSFC92MWJldGExL3VyaXM6c2VhcmNoErABCgxTZWFy",
             "Y2hIYXNoZXMSMS5nb29nbGUuY2xvdWQud2Vicmlzay52MWJldGExLlNlYXJj",
             "aEhhc2hlc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQud2Vicmlzay52MWJldGEx",
-            "LlNlYXJjaEhhc2hlc1Jlc3BvbnNlIjmC0+STAhgSFi92MWJldGExL2hhc2hl",
-            "czpzZWFyY2jaQRhoYXNoX3ByZWZpeCx0aHJlYXRfdHlwZXMaSspBFndlYnJp",
+            "LlNlYXJjaEhhc2hlc1Jlc3BvbnNlIjnaQRhoYXNoX3ByZWZpeCx0aHJlYXRf",
+            "dHlwZXOC0+STAhgSFi92MWJldGExL2hhc2hlczpzZWFyY2gaSspBFndlYnJp",
             "c2suZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQs8BChpjb20uZ29vZ2xlLndlYnJpc2su",
             "djFiZXRhMUIMV2ViUmlza1Byb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28v",
@@ -168,6 +168,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Describes an API diff request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComputeThreatListDiffRequest : pb::IMessage<ComputeThreatListDiffRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -456,6 +457,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// The constraints for this diff.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Constraints : pb::IMessage<Constraints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -728,6 +730,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComputeThreatListDiffResponse : pb::IMessage<ComputeThreatListDiffResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1190,6 +1193,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// The expected state of a client's local database.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Checksum : pb::IMessage<Checksum>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1391,6 +1395,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Request to check URI entries against threatLists.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchUrisRequest : pb::IMessage<SearchUrisRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1614,6 +1619,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchUrisResponse : pb::IMessage<SearchUrisResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1821,6 +1827,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// Contains threat information on a matching uri.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThreatUri : pb::IMessage<ThreatUri>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2062,6 +2069,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Request to return full hashes matched by the provided hash prefixes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchHashesRequest : pb::IMessage<SearchHashesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2286,6 +2294,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchHashesResponse : pb::IMessage<SearchHashesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2524,6 +2533,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// Contains threat information on a matching hash.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThreatHash : pb::IMessage<ThreatHash>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2808,6 +2818,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// Contains the set of entries to add to a local database.
   /// May contain a combination of compressed and raw data in a single response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThreatEntryAdditions : pb::IMessage<ThreatEntryAdditions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3044,6 +3055,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Contains the set of entries to remove from a local database.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThreatEntryRemovals : pb::IMessage<ThreatEntryRemovals>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3300,6 +3312,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// A set of raw indices to remove from a local list.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RawIndices : pb::IMessage<RawIndices>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3493,6 +3506,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// compression, or when sending non-4-byte hashes to clients that do support
   /// compression.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RawHashes : pb::IMessage<RawHashes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3732,6 +3746,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// The Rice-Golomb encoded data. Used for sending compressed 4-byte hashes or
   /// compressed removal indices.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RiceDeltaEncoding : pb::IMessage<RiceDeltaEncoding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

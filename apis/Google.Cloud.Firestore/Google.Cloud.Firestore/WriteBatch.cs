@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -121,7 +121,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
-            GaxPreconditions.CheckArgument(precondition?.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
+            GaxPreconditions.CheckArgument(precondition?.Exists != false, nameof(precondition), "Cannot specify an explicit exists=false precondition.");
 
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(documentReference.Database.SerializationContext, pair.Value));
             var expanded = ExpandObject(serializedUpdates);
@@ -339,7 +339,7 @@ namespace Google.Cloud.Firestore
                 }
                 return currentFields.Count == 0;
             }
-        }        
+        }
 
         // Visible for testing
         /// <summary>
@@ -366,7 +366,7 @@ namespace Google.Cloud.Firestore
                     // so we need to clone it - we don't want to modify the original data. (In fact it *may* be okay to do so,
                     // but it's harder to reason about.)
                     if (i == segments.Length - 1)
-                    {                        
+                    {
                         currentMap[segments[i]] = value;
                     }
                     else
@@ -384,7 +384,7 @@ namespace Google.Cloud.Firestore
                 }
             }
 
-            return result;            
+            return result;
         }
 
         // Visible for testing
@@ -413,7 +413,7 @@ namespace Google.Cloud.Firestore
                     else if (pair.Value.MapValue != null)
                     {
                         // Even if the whole field isn't in the mask, a nested field might be. Recurse, populating the same result dictionary.
-                        ApplyFieldMaskImpl(pair.Value.MapValue.Fields, childPath);                        
+                        ApplyFieldMaskImpl(pair.Value.MapValue.Fields, childPath);
                     }
                 }
             }

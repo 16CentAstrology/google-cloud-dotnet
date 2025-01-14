@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.LifeSciences.V2Beta
 {
@@ -134,14 +134,14 @@ namespace Google.Cloud.LifeSciences.V2Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<WorkflowsServiceV2BetaClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -363,7 +363,11 @@ namespace Google.Cloud.LifeSciences.V2Beta
         {
             GrpcClient = grpcClient;
             WorkflowsServiceV2BetaSettings effectiveSettings = settings ?? WorkflowsServiceV2BetaSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunPipelineOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callRunPipeline = clientHelper.BuildApiCall<RunPipelineRequest, lro::Operation>("RunPipeline", grpcClient.RunPipelineAsync, grpcClient.RunPipeline, effectiveSettings.RunPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);

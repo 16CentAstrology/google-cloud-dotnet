@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync]
     using Google.Analytics.Admin.V1Alpha;
@@ -56,6 +56,8 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);

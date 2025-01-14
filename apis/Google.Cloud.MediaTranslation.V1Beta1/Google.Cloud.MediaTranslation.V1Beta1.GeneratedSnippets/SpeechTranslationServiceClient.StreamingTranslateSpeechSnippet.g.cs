@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.MediaTranslation.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START mediatranslation_v1beta1_generated_SpeechTranslationService_StreamingTranslateSpeech_sync]
     using Google.Api.Gax.Grpc;
@@ -36,7 +36,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1.Snippets
             // Create client
             SpeechTranslationServiceClient speechTranslationServiceClient = SpeechTranslationServiceClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechTranslationServiceClient.StreamingTranslateSpeechStream response = speechTranslationServiceClient.StreamingTranslateSpeech();
+            using SpeechTranslationServiceClient.StreamingTranslateSpeechStream response = speechTranslationServiceClient.StreamingTranslateSpeech();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

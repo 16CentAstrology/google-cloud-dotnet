@@ -53,6 +53,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Kernel mode rootkit signatures.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KernelRootkit : pb::IMessage<KernelRootkit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -109,7 +110,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Rootkit name when available.
+    /// Rootkit name, when available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

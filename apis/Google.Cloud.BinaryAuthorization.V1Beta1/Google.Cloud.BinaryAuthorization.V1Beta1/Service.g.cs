@@ -56,41 +56,41 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "IEJpbmF1dGh6TWFuYWdlbWVudFNlcnZpY2VWMUJldGExEqsBCglHZXRQb2xp",
             "Y3kSOi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
             "LkdldFBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
-            "aXphdGlvbi52MWJldGExLlBvbGljeSIwgtPkkwIjEiEvdjFiZXRhMS97bmFt",
-            "ZT1wcm9qZWN0cy8qL3BvbGljeX3aQQRuYW1lEsIBCgxVcGRhdGVQb2xpY3kS",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSIw2kEEbmFtZYLT5JMCIxIhL3YxYmV0",
+            "YTEve25hbWU9cHJvamVjdHMvKi9wb2xpY3l9EsIBCgxVcGRhdGVQb2xpY3kS",
             "PS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLlVw",
             "ZGF0ZVBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
-            "aXphdGlvbi52MWJldGExLlBvbGljeSJBgtPkkwIyGigvdjFiZXRhMS97cG9s",
-            "aWN5Lm5hbWU9cHJvamVjdHMvKi9wb2xpY3l9OgZwb2xpY3naQQZwb2xpY3kS",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSJB2kEGcG9saWN5gtPkkwIyGigvdjFi",
+            "ZXRhMS97cG9saWN5Lm5hbWU9cHJvamVjdHMvKi9wb2xpY3l9OgZwb2xpY3kS",
             "3QEKDkNyZWF0ZUF0dGVzdG9yEj8uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhv",
             "cml6YXRpb24udjFiZXRhMS5DcmVhdGVBdHRlc3RvclJlcXVlc3QaMi5nb29n",
             "bGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkF0dGVzdG9y",
-            "IlaC0+STAjIiJi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXR0ZXN0",
-            "b3JzOghhdHRlc3RvctpBG3BhcmVudCxhdHRlc3Rvcl9pZCxhdHRlc3RvchK2",
+            "IlbaQRtwYXJlbnQsYXR0ZXN0b3JfaWQsYXR0ZXN0b3KC0+STAjIiJi92MWJl",
+            "dGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXR0ZXN0b3JzOghhdHRlc3RvchK2",
             "AQoLR2V0QXR0ZXN0b3ISPC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXph",
             "dGlvbi52MWJldGExLkdldEF0dGVzdG9yUmVxdWVzdBoyLmdvb2dsZS5jbG91",
-            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQXR0ZXN0b3IiNYLT5JMC",
-            "KBImL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hdHRlc3RvcnMvKn3aQQRu",
-            "YW1lEtMBCg5VcGRhdGVBdHRlc3RvchI/Lmdvb2dsZS5jbG91ZC5iaW5hcnlh",
+            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQXR0ZXN0b3IiNdpBBG5h",
+            "bWWC0+STAigSJi92MWJldGExL3tuYW1lPXByb2plY3RzLyovYXR0ZXN0b3Jz",
+            "Lyp9EtMBCg5VcGRhdGVBdHRlc3RvchI/Lmdvb2dsZS5jbG91ZC5iaW5hcnlh",
             "dXRob3JpemF0aW9uLnYxYmV0YTEuVXBkYXRlQXR0ZXN0b3JSZXF1ZXN0GjIu",
             "Z29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BdHRl",
-            "c3RvciJMgtPkkwI7Gi8vdjFiZXRhMS97YXR0ZXN0b3IubmFtZT1wcm9qZWN0",
-            "cy8qL2F0dGVzdG9ycy8qfToIYXR0ZXN0b3LaQQhhdHRlc3RvchLJAQoNTGlz",
+            "c3RvciJM2kEIYXR0ZXN0b3KC0+STAjsaLy92MWJldGExL3thdHRlc3Rvci5u",
+            "YW1lPXByb2plY3RzLyovYXR0ZXN0b3JzLyp9OghhdHRlc3RvchLJAQoNTGlz",
             "dEF0dGVzdG9ycxI+Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9u",
             "LnYxYmV0YTEuTGlzdEF0dGVzdG9yc1JlcXVlc3QaPy5nb29nbGUuY2xvdWQu",
             "YmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkxpc3RBdHRlc3RvcnNSZXNw",
-            "b25zZSI3gtPkkwIoEiYvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2F0",
-            "dGVzdG9yc9pBBnBhcmVudBKgAQoORGVsZXRlQXR0ZXN0b3ISPy5nb29nbGUu",
+            "b25zZSI32kEGcGFyZW50gtPkkwIoEiYvdjFiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9L2F0dGVzdG9ycxKgAQoORGVsZXRlQXR0ZXN0b3ISPy5nb29nbGUu",
             "Y2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkRlbGV0ZUF0dGVz",
-            "dG9yUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI1gtPkkwIoKiYv",
-            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2F0dGVzdG9ycy8qfdpBBG5hbWUa",
+            "dG9yUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI12kEEbmFtZYLT",
+            "5JMCKComL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hdHRlc3RvcnMvKn0a",
             "VspBImJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtMqgC",
             "ChNTeXN0ZW1Qb2xpY3lWMUJldGExErgBCg9HZXRTeXN0ZW1Qb2xpY3kSQC5n",
             "b29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkdldFN5",
             "c3RlbVBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
-            "aXphdGlvbi52MWJldGExLlBvbGljeSIxgtPkkwIkEiIvdjFiZXRhMS97bmFt",
-            "ZT1sb2NhdGlvbnMvKi9wb2xpY3l92kEEbmFtZRpWykEiYmluYXJ5YXV0aG9y",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSIx2kEEbmFtZYLT5JMCJBIiL3YxYmV0",
+            "YTEve25hbWU9bG9jYXRpb25zLyovcG9saWN5fRpWykEiYmluYXJ5YXV0aG9y",
             "aXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
             "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CuAIKLGNvbS5nb29nbGUuY2xv",
             "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExQh9CaW5hcnlBdXRob3Jp",
@@ -121,6 +121,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.GetPolicy][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyRequest : pb::IMessage<GetPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -317,6 +318,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.UpdatePolicy][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePolicyRequest : pb::IMessage<UpdatePolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,6 +525,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.CreateAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAttestorRequest : pb::IMessage<CreateAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -809,6 +812,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.GetAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAttestorRequest : pb::IMessage<GetAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1005,6 +1009,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.UpdateAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAttestorRequest : pb::IMessage<UpdateAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1211,6 +1216,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.ListAttestors][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsRequest : pb::IMessage<ListAttestorsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1490,6 +1496,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Response message for [BinauthzManagementService.ListAttestors][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsResponse : pb::IMessage<ListAttestorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1716,6 +1723,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request message for [BinauthzManagementService.DeleteAttestor][].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAttestorRequest : pb::IMessage<DeleteAttestorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1912,6 +1920,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Request to read the current system policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSystemPolicyRequest : pb::IMessage<GetSystemPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

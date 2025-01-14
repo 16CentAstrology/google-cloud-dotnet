@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,22 +35,34 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public HashSet<string> Commits { get; set; }
 
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            RootLayout rootLayout,
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
+                progressCallback?.Invoke(++progress, catalog.Apis.Count);
                 var pendingChanges = pendingChangesByApi[api];
                 var pendingCommits = pendingChanges.Commits.Select(commit => commit.HashPrefix);
                 if (!Commits.SetEquals(pendingCommits))
                 {
                     continue;
                 }
+                if (api.BlockRelease is string blockRelease)
+                {
+                    Console.WriteLine($"Release of {api.Id} is blocked: {blockRelease}");
+                    continue;
+                }
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
-                var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                var proposal = ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
 
                 // Potentially replace the natural history with an override
                 if (!string.IsNullOrEmpty(HistoryOverride) && proposal.NewHistorySection is HistoryFile.Section newSection)

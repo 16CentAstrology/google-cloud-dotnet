@@ -60,10 +60,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "ZToCOAEy4gIKEVByZWRpY3Rpb25TZXJ2aWNlEvMBCgdQcmVkaWN0EjkuZ29v",
             "Z2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuUHJlZGlj",
             "dFJlcXVlc3QaOi5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
-            "djFiZXRhMS5QcmVkaWN0UmVzcG9uc2UicYLT5JMCWSJUL3YxYmV0YTEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2V2ZW50U3Rv",
-            "cmVzLyovcGxhY2VtZW50cy8qfTpwcmVkaWN0OgEq2kEPbmFtZSx1c2VyX2V2",
-            "ZW50GlfKQSNyZWNvbW1lbmRhdGlvbmVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
+            "djFiZXRhMS5QcmVkaWN0UmVzcG9uc2UicdpBD25hbWUsdXNlcl9ldmVudILT",
+            "5JMCWSJUL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
+            "YXRhbG9ncy8qL2V2ZW50U3RvcmVzLyovcGxhY2VtZW50cy8qfTpwcmVkaWN0",
+            "OgEqGlfKQSNyZWNvbW1lbmRhdGlvbmVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
             "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
             "cm1CowIKLWNvbS5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
             "djFiZXRhMVABWmFjbG91ZC5nb29nbGUuY29tL2dvL3JlY29tbWVuZGF0aW9u",
@@ -87,6 +87,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for Predict method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -510,8 +511,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.DryRun != false) {
         DryRun = other.DryRun;
       }
-      params_.Add(other.params_);
-      labels_.Add(other.labels_);
+      params_.MergeFrom(other.params_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -622,6 +623,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Response message for predict method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -896,7 +898,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.DryRun != false) {
         DryRun = other.DryRun;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
@@ -991,6 +993,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// PredictionResult represents the recommendation prediction results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PredictionResult : pb::IMessage<PredictionResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1165,7 +1168,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
           if (other.Id.Length != 0) {
             Id = other.Id;
           }
-          itemMetadata_.Add(other.itemMetadata_);
+          itemMetadata_.MergeFrom(other.itemMetadata_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

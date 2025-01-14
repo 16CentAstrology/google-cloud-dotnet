@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START alloydb_v1alpha_generated_AlloyDBAdmin_GetCluster_sync]
     using Google.Cloud.AlloyDb.V1Alpha;
@@ -37,6 +37,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha.Snippets
             GetClusterRequest request = new GetClusterRequest
             {
                 ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                View = ClusterView.Unspecified,
             };
             // Make the request
             Cluster response = alloyDBAdminClient.GetCluster(request);

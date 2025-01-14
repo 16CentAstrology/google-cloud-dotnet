@@ -12,10 +12,8 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using Newtonsoft.Json.Linq;
 using System;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
@@ -27,26 +25,26 @@ public sealed class UpdateMixinsCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
         string committish = args[1];
 
-        var catalog = ApiCatalog.Load();
+        var nonSourceGenerator = new NonSourceGenerator(RootLayout);
+        var catalog = nonSourceGenerator.ApiCatalog;
         var api = catalog[id];
 
-        var root = DirectoryLayout.DetermineRootDirectory();
         var apiIndex = ApiIndex.V1.Index.LoadFromGitHub(committish);
 
         var targetApiFromIndex = apiIndex.Apis.FirstOrDefault(api => api.DeriveCSharpNamespace() == id);
         if (targetApiFromIndex is null)
         {
             Console.WriteLine($"Package {id} is not in the API index. Assuming it has no mixins.");
-            return;
+            return 0;
         }
 
         bool updated = false;
-        foreach (var mixin in targetApiFromIndex.GetMixinPackages())
+        foreach (var mixin in targetApiFromIndex.GetMixinPackages().Except(new[] { id }))
         {
             if (!api.Dependencies.ContainsKey(mixin))
             {
@@ -59,15 +57,13 @@ public sealed class UpdateMixinsCommand : CommandBase
         if (!updated)
         {
             Console.WriteLine("No new mixins detected");
-            return;
+            return 0;
         }
 
         api.Json["dependencies"] = new JObject(api.Dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
-        var layout = DirectoryLayout.ForApi(api.Id);
-        var apiNames = catalog.CreateIdHashSet();
-        GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
-        string formatted = catalog.FormatJson();
-        File.WriteAllText(ApiCatalog.CatalogPath, formatted);
+        nonSourceGenerator.GenerateApiFiles(api);
+        catalog.Save(nonSourceGenerator.RootLayout);
         Console.WriteLine("Updated apis.json and project files");
+        return 0;
     }
 }

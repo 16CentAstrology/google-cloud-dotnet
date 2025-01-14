@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -104,11 +105,6 @@ namespace Google.Cloud.Spanner.Data
                 return Convert.ToByte(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
-            if (targetClrType == typeof(float))
-            {
-                return Convert.ToSingle(ConvertToClrTypeImpl<double>(protobufValue, options));
-            }
-
             if (targetClrType == typeof(Guid))
             {
                 return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue, options));
@@ -169,6 +165,8 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Int64:
                         return new Value { StringValue = Convert.ToInt64(value, InvariantCulture)
                             .ToString(InvariantCulture) };
+                case TypeCode.Float32:
+                    return new Value { NumberValue = Convert.ToSingle(value, InvariantCulture) };
                 case TypeCode.Float64:
                     return new Value {NumberValue = Convert.ToDouble(value, InvariantCulture)};
                 case TypeCode.Timestamp:
@@ -213,7 +211,26 @@ namespace Google.Cloud.Spanner.Data
                         };
                     }
                     throw new ArgumentException("Struct parameters must be of type SpannerStruct");
-
+                case TypeCode.Proto:
+                    // We have two cases here:
+                    // 1. The value is of type Value but the ProtobufTypeName is not.
+                    //    In that case we assume calling code has serialized the protobuf value
+                    //    correctly in value and we return that.
+                    // 2. The value is of a protobuf message type, including Value being itself used as a type.
+                    //    We serialize the value ourselves.
+                    //    Note we don't validate that ProtobufTypeName matches the actual protobuf type.
+                    //    Spanner will if it cannot convert this value to the expected type.
+                    if (value is Value maybeWireValue
+                        && ProtobufTypeName != Value.Descriptor.FullName
+                        && maybeWireValue.KindCase == Value.KindOneofCase.StringValue)
+                    {
+                        return maybeWireValue;
+                    }
+                    if (value is IMessage message)
+                    {
+                        return Value.ForString(Convert.ToBase64String(message.ToByteArray()));
+                    }
+                    throw new ArgumentException($"Proto parameters must implement {typeof(IMessage).FullName}");
                 case TypeCode.Numeric:
                     if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
                     {
@@ -254,11 +271,6 @@ namespace Google.Cloud.Spanner.Data
                         }
                         if (value is float || value is double || value is decimal)
                         {
-                            // TODO: Check with Jon if LossOfPrecisionHandling needs to be changed.
-                            // We throw if there's a loss of precision. We could use
-                            // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
-                            // use half-away-from-zero rounding but the SpannerNumeric implementation
-                            // truncates instead.
                             return Value.ForString(SpannerNumeric.FromDecimal(
                                 Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Truncate).ToString());
                         }
@@ -283,9 +295,11 @@ namespace Google.Cloud.Spanner.Data
 
         private object ConvertToClrTypeImpl(Value wireValue, System.Type targetClrType, SpannerConversionOptions options)
         {
-            //If the wireValue itself is assignable to the target type, just return it
-            //This covers both typeof(Value) and typeof(object).
-            if (wireValue == null || targetClrType == null || targetClrType == typeof(Value))
+            // If the wireValue itself is assignable to the target type, just return it
+            // This covers both typeof(Value) and typeof(object).
+            if (wireValue == null || targetClrType == null
+                // Let's make certain Value is not being used itself as a protubuf type.
+                || (targetClrType == typeof(Value) && ProtobufTypeName != Value.Descriptor.FullName))
             {
                 return wireValue;
             }
@@ -388,6 +402,39 @@ namespace Google.Cloud.Spanner.Data
                         return default(decimal);
                     case Value.KindOneofCase.StringValue:
                         return Convert.ToDecimal(wireValue.StringValue, InvariantCulture);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
+            if (targetClrType == typeof(float))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.BoolValue:
+                        return Convert.ToSingle(wireValue.BoolValue);
+                    case Value.KindOneofCase.NullValue:
+                        return default(float);
+                    case Value.KindOneofCase.NumberValue:
+                        return Convert.ToSingle(wireValue.NumberValue);
+                    case Value.KindOneofCase.StringValue:
+                        if (string.Compare(wireValue.StringValue, "NaN", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.NaN;
+                        }
+
+                        if (string.Compare(wireValue.StringValue, "Infinity", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.PositiveInfinity;
+                        }
+
+                        if (string.Compare(wireValue.StringValue, "-Infinity", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.NegativeInfinity;
+                        }
+
+                        return Convert.ToSingle(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -528,7 +575,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 return ret;
             }
-            
+
             // It's questionable as to whether we want to support this, but it does no harm to do so.
             if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {
@@ -650,6 +697,16 @@ namespace Google.Cloud.Spanner.Data
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
+
+            // Protobuf:
+            if (TypeCode == TypeCode.Proto
+                && wireValue.KindCase == Value.KindOneofCase.StringValue
+                && ProtobufCache.GetProtobufMessageParser(targetClrType) is MessageParser parser)
+            {
+                var messageBytes = Convert.FromBase64String(wireValue.StringValue);
+                return parser.ParseFrom(messageBytes);
+            }
+
             throw new ArgumentException(
                 $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
         }

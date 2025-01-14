@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.BigQuery.Reservation.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -637,6 +638,39 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             Reservation response = await reservationServiceClient.UpdateReservationAsync(reservation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FailoverReservation</summary>
+        public void FailoverReservationRequestObject()
+        {
+            // Snippet: FailoverReservation(FailoverReservationRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            FailoverReservationRequest request = new FailoverReservationRequest
+            {
+                ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+            };
+            // Make the request
+            Reservation response = reservationServiceClient.FailoverReservation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FailoverReservationAsync</summary>
+        public async Task FailoverReservationRequestObjectAsync()
+        {
+            // Snippet: FailoverReservationAsync(FailoverReservationRequest, CallSettings)
+            // Additional: FailoverReservationAsync(FailoverReservationRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FailoverReservationRequest request = new FailoverReservationRequest
+            {
+                ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+            };
+            // Make the request
+            Reservation response = await reservationServiceClient.FailoverReservationAsync(request);
             // End snippet
         }
 

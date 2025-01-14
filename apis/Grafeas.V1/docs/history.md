@@ -1,5 +1,56 @@
 # Version history
 
+## Version 3.7.0, released 2024-11-18
+
+### New features
+
+- A new field `version` is added to message `.grafeas.v1.ComplianceOccurrence` ([commit 5f100b4](https://github.com/googleapis/google-cloud-dotnet/commit/5f100b4861e5416ad1ef3a4b3d1644659a2fe6fc))
+- A new message `VulnerabilityAttestation` is added ([commit 5f100b4](https://github.com/googleapis/google-cloud-dotnet/commit/5f100b4861e5416ad1ef3a4b3d1644659a2fe6fc))
+- A new field `vulnerability_attestation` is added to message `.grafeas.v1.DiscoveryOccurrence` ([commit 5f100b4](https://github.com/googleapis/google-cloud-dotnet/commit/5f100b4861e5416ad1ef3a4b3d1644659a2fe6fc))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.6.0, released 2024-03-28
+
+### Bug fixes
+
+- Set the transport of grafeas back to grpc only ([commit 0b69ee2](https://github.com/googleapis/google-cloud-dotnet/commit/0b69ee2a9f0345cc4c145c9ac1b9fc6833412ff8))
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- A new field `in_toto_slsa_provenance_v1` is added to message `BuildOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new value `SBOM_REFERENCE` is added to enum `NoteKind` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `impact` is added to message `ComplianceNote` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMStatus` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_status` is added to message `DiscoveryOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_reference` is added to message `Occurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_reference` is added to message `Note` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `InTotoSlsaProvenanceV1` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMReferenceNote` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMReferenceOccurrence` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SbomReferenceIntotoPayload` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SbomReferenceIntotoPredicate` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `vulnerability_id` is added to message `VulnerabilityAssessmentNote` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `vulnerability_id` is added to message `VulnerabilityOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `extra_details` is added to message `VulnerabilityOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+
+### Documentation improvements
+
+- A comment for field `cve` in message `VulnerabilityAssessmentNote` is changed ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A comment for field `cve` in message `VulnerabilityOccurrence` is changed ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+
+## Version 3.5.0, released 2024-03-05
+
+### New features
+
+- Add session and session_template controllers ([commit 14d4f40](https://github.com/googleapis/google-cloud-dotnet/commit/14d4f40e57218134116f6d580ca726832d07d244))
+
+## Version 3.4.0, released 2023-05-03
+
+### New features
+
+- Add enum for grafeas v1 cvss to support both cvss v2 and v3 ([commit f493b96](https://github.com/googleapis/google-cloud-dotnet/commit/f493b96c8830c997d454e17e8e65ce305dd515e1))
+
 ## Version 3.3.0, released 2023-03-20
 
 ### New features

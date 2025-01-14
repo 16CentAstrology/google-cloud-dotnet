@@ -54,6 +54,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Identifies a concept with which DataItems may be annotated with.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationSpec : pb::IMessage<AnnotationSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

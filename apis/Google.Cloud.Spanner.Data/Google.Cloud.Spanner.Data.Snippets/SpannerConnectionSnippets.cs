@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 .ConnectionString;
 
             // Sample: CreateDatabaseAsync
-            // Additional: CreateDdlCommand
+            // Additional: CreateDdlCommand(*,*)
             using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
                 SpannerCommand createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {databaseName}");
@@ -122,7 +122,8 @@ namespace Google.Cloud.Spanner.Data.Snippets
             string connectionString = _fixture.ConnectionString;
 
             // Sample: InsertDataAsync
-            // Additional: RunWithRetriableTransactionAsync
+            // Additional: RunWithRetriableTransactionAsync(*,*,*)
+            // Additional: RunWithRetriableTransactionAsync(*,*)
             using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
                 await connection.OpenAsync();
@@ -287,6 +288,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Insert a second row
                     cmd.Parameters["Id"].Value = 11L;
                     cmd.Parameters["Name"].Value = "Demo 2";
+                    cmd.Transaction = transaction;
                     rowsAffected += await cmd.ExecuteNonQueryAsync();
                 });
 
@@ -325,12 +327,12 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 // retry the whole unit of work with a fresh transaction each time.
                 // Please be aware that the whole unit of work needs to be prepared
                 // to be called more than once.
-                await connection.RunWithRetriableTransactionAsync(async (transaction) =>
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
                 {
-
                     // Read the first two keys in the database.
                     List<string> keys = new List<string>();
                     SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
+                    selectCmd.Transaction = transaction;
                     using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
                     {
                         while (keys.Count < 3 && await reader.ReadAsync())
@@ -344,11 +346,13 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     SpannerCommand updateCmd = connection.CreateUpdateCommand("TestTable");
                     updateCmd.Parameters.Add("Key", SpannerDbType.String, keys[0]);
                     updateCmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0L);
+                    updateCmd.Transaction = transaction;
                     await updateCmd.ExecuteNonQueryAsync();
 
                     // Delete row for keys[1]
                     SpannerCommand deleteCmd = connection.CreateDeleteCommand("TestTable");
                     deleteCmd.Parameters.Add("Key", SpannerDbType.String, keys[1]);
+                    deleteCmd.Transaction = transaction;
                     await deleteCmd.ExecuteNonQueryAsync();
                 });
                 // End sample
@@ -444,8 +448,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Access individual properties...
                     Console.WriteLine($"Database name: {stats.DatabaseName}");
                     Console.WriteLine($"Active sessions: {stats.ActiveSessionCount}");
-                    Console.WriteLine($"Pooled read-only sessions: {stats.ReadPoolCount}");
-                    Console.WriteLine($"Pooled read-write sessions: {stats.ReadWritePoolCount}");
+                    Console.WriteLine($"Pooled sessions: {stats.PoolCount}");
                     // ... or just use the overridden ToString method to log all the statistics in one go:
                     Console.WriteLine(stats);
                 }

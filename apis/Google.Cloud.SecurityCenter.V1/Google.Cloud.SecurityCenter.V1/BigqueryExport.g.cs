@@ -28,22 +28,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "b3J0LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "vQMKDkJpZ1F1ZXJ5RXhwb3J0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
+            "3gMKDkJpZ1F1ZXJ5RXhwb3J0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
             "b24YAiABKAkSDgoGZmlsdGVyGAMgASgJEg8KB2RhdGFzZXQYBCABKAkSNAoL",
             "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
             "VGltZXN0YW1wQgPgQQMSHwoSbW9zdF9yZWNlbnRfZWRpdG9yGAcgASgJQgPg",
-            "QQMSFgoJcHJpbmNpcGFsGAggASgJQgPgQQM6wQHqQb0BCixzZWN1cml0eWNl",
+            "QQMSFgoJcHJpbmNpcGFsGAggASgJQgPgQQM64gHqQd4BCixzZWN1cml0eWNl",
             "bnRlci5nb29nbGVhcGlzLmNvbS9CaWdRdWVyeUV4cG9ydBI1b3JnYW5pemF0",
             "aW9ucy97b3JnYW5pemF0aW9ufS9iaWdRdWVyeUV4cG9ydHMve2V4cG9ydH0S",
             "KWZvbGRlcnMve2ZvbGRlcn0vYmlnUXVlcnlFeHBvcnRzL3tleHBvcnR9Eitw",
-            "cm9qZWN0cy97cHJvamVjdH0vYmlnUXVlcnlFeHBvcnRzL3tleHBvcnR9Qu0B",
-            "CiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQhNCaWdRdWVy",
-            "eUV4cG9ydFByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHlj",
-            "ZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBi",
-            "qgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENs",
-            "b3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJp",
-            "dHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "cm9qZWN0cy97cHJvamVjdH0vYmlnUXVlcnlFeHBvcnRzL3tleHBvcnR9Kg9i",
+            "aWdRdWVyeUV4cG9ydHMyDmJpZ1F1ZXJ5RXhwb3J0Qu0BCiJjb20uZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQhNCaWdRdWVyeUV4cG9ydFByb3Rv",
+            "UAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEv",
+            "c2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNs",
+            "b3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
+            "Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,6 +58,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Configures how to deliver Findings to BigQuery Instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryExport : pb::IMessage<BigQueryExport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -201,7 +203,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the big query export was created.
+    /// Output only. The time at which the BigQuery export was created.
     /// This field is set by the server and will be ignored if provided on export
     /// on creation.
     /// </summary>
@@ -218,7 +220,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UpdateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The most recent time at which the big export was updated.
+    /// Output only. The most recent time at which the BigQuery export was updated.
     /// This field is set by the server and will be ignored if provided on export
     /// creation or update.
     /// </summary>
@@ -235,7 +237,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int MostRecentEditorFieldNumber = 7;
     private string mostRecentEditor_ = "";
     /// <summary>
-    /// Output only. Email address of the user who last edited the big query export.
+    /// Output only. Email address of the user who last edited the BigQuery export.
     /// This field is set by the server and will be ignored if provided on export
     /// creation or update.
     /// </summary>
@@ -252,8 +254,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int PrincipalFieldNumber = 8;
     private string principal_ = "";
     /// <summary>
-    /// Output only. The service account that needs permission to create table, upload data to
-    /// the big query dataset.
+    /// Output only. The service account that needs permission to create table and
+    /// upload data to the BigQuery dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

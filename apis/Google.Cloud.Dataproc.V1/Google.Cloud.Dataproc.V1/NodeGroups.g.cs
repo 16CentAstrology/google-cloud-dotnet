@@ -43,27 +43,27 @@ namespace Google.Cloud.Dataproc.V1 {
             "cGlzLmNvbS9Ob2RlR3JvdXAypwYKE05vZGVHcm91cENvbnRyb2xsZXISlQIK",
             "D0NyZWF0ZU5vZGVHcm91cBIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5D",
             "cmVhdGVOb2RlR3JvdXBSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiKwAYLT5JMCRSI3L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9yZWdp",
-            "b25zLyovY2x1c3RlcnMvKn0vbm9kZUdyb3VwczoKbm9kZV9ncm91cNpBH3Bh",
-            "cmVudCxub2RlX2dyb3VwLG5vZGVfZ3JvdXBfaWTKQUAKCU5vZGVHcm91cBIz",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk5vZGVHcm91cE9wZXJhdGlvbk1l",
-            "dGFkYXRhEv0BCg9SZXNpemVOb2RlR3JvdXASMC5nb29nbGUuY2xvdWQuZGF0",
+            "ZXJhdGlvbiKwAcpBQAoJTm9kZUdyb3VwEjNnb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuTm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRhdGHaQR9wYXJlbnQsbm9k",
+            "ZV9ncm91cCxub2RlX2dyb3VwX2lkgtPkkwJFIjcvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL3JlZ2lvbnMvKi9jbHVzdGVycy8qfS9ub2RlR3JvdXBzOgpub2Rl",
+            "X2dyb3VwEv0BCg9SZXNpemVOb2RlR3JvdXASMC5nb29nbGUuY2xvdWQuZGF0",
             "YXByb2MudjEuUmVzaXplTm9kZUdyb3VwUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24imAGC0+STAkMiPi92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL3JlZ2lvbnMvKi9jbHVzdGVycy8qL25vZGVHcm91cHMvKn06cmVzaXpl",
-            "OgEq2kEJbmFtZSxzaXplykFACglOb2RlR3JvdXASM2dvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MS5Ob2RlR3JvdXBPcGVyYXRpb25NZXRhZGF0YRKqAQoMR2V0",
+            "cnVubmluZy5PcGVyYXRpb24imAHKQUAKCU5vZGVHcm91cBIzZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLk5vZGVHcm91cE9wZXJhdGlvbk1ldGFkYXRh2kEJ",
+            "bmFtZSxzaXplgtPkkwJDIj4vdjEve25hbWU9cHJvamVjdHMvKi9yZWdpb25z",
+            "LyovY2x1c3RlcnMvKi9ub2RlR3JvdXBzLyp9OnJlc2l6ZToBKhKqAQoMR2V0",
             "Tm9kZUdyb3VwEi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldE5vZGVH",
             "cm91cFJlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTm9kZUdy",
-            "b3VwIkaC0+STAjkSNy92MS97bmFtZT1wcm9qZWN0cy8qL3JlZ2lvbnMvKi9j",
-            "bHVzdGVycy8qL25vZGVHcm91cHMvKn3aQQRuYW1lGkvKQRdkYXRhcHJvYy5n",
+            "b3VwIkbaQQRuYW1lgtPkkwI5EjcvdjEve25hbWU9cHJvamVjdHMvKi9yZWdp",
+            "b25zLyovY2x1c3RlcnMvKi9ub2RlR3JvdXBzLyp9GkvKQRdkYXRhcHJvYy5n",
             "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1CzQEKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjFCD05vZGVHcm91cHNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2RhdGFwcm9jL2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXByb2NwYupBXwolZGF0",
-            "YXByb2MuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlclJlZ2lvbhI2cHJvamVjdHMv",
-            "e3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9",
-            "YgZwcm90bzM="));
+            "dGgvY2xvdWQtcGxhdGZvcm1C0AEKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjFCD05vZGVHcm91cHNQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXByb2NwYupBXwol",
+            "ZGF0YXByb2MuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlclJlZ2lvbhI2cHJvamVj",
+            "dHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0",
+            "ZXJ9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,6 +79,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to create a node group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateNodeGroupRequest : pb::IMessage<CreateNodeGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -419,6 +420,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to resize a node group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResizeNodeGroupRequest : pb::IMessage<ResizeNodeGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -530,7 +532,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int GracefulDecommissionTimeoutFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration gracefulDecommissionTimeout_;
     /// <summary>
-    /// Optional. Timeout for graceful YARN decomissioning. [Graceful
+    /// Optional. Timeout for graceful YARN decommissioning. [Graceful
     /// decommissioning]
     /// (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-clusters#graceful_decommissioning)
     /// allows the removal of nodes from the Compute Engine node group
@@ -769,6 +771,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to get a node group .
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNodeGroupRequest : pb::IMessage<GetNodeGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

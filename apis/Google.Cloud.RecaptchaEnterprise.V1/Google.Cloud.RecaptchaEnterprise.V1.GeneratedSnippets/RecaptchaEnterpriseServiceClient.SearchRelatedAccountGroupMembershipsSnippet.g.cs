@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_SearchRelatedAccountGroupMemberships_sync_flattened]
     using Google.Api.Gax;
@@ -37,10 +37,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)

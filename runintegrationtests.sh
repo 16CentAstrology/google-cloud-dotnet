@@ -1,17 +1,18 @@
 #!/bin/bash
 
-# Assumption: everything has been built already, and if you're asking for
-# coverage, you've already installed the relevant package.
+# Assumption: everything has been built already.
 
 set -e
 source toolversions.sh
+
+# Enable testing for Storage.V2
+export STORAGE_V2_IS_NOT_FOR_PRODUCTION_USE_IN_DOTNET=true
 
 SCRIPT=$(readlink -f "$0")
 ROOT_DIR=$(dirname "$SCRIPT")
 
 APIS=()
 RETRY_ARG=
-COVERAGE_ARG=
 SMOKE_ARG=
 EXCLUDED_APIS=()
 DRY_RUN_ARG=
@@ -20,11 +21,6 @@ while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
   then 
     RETRY_ARG=yes
-  elif [[ "$1" == "--coverage" ]]
-  then
-    install_dotcover
-    mkdir -p coverage
-    COVERAGE_ARG=yes
   elif [[ "$1" == "--smoke" ]]
   then
     SMOKE_ARG=yes
@@ -134,9 +130,6 @@ do
     dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- \
       smoke-test $(dirname $testdir) \
       || echo "$testdir" >> $FAILURE_TEMP_FILE
-  elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
-  then
-    (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
     if compgen -G "$testdir/*.cs" | grep -v '\.g\.cs' > /dev/null
     then

@@ -141,6 +141,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// gRPC request payload for tether.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EgressRequest : pb::IMessage<EgressRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -555,6 +556,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// Payload for EgressRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Payload : pb::IMessage<Payload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -648,10 +650,24 @@ namespace Google.Cloud.ApigeeConnect.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ApigeeConnect.V1.Action Action {
-      get { return kindCase_ == KindOneofCase.Action ? (global::Google.Cloud.ApigeeConnect.V1.Action) kind_ : global::Google.Cloud.ApigeeConnect.V1.Action.Unspecified; }
+      get { return HasAction ? (global::Google.Cloud.ApigeeConnect.V1.Action) kind_ : global::Google.Cloud.ApigeeConnect.V1.Action.Unspecified; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.Action;
+      }
+    }
+    /// <summary>Gets whether the "action" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAction {
+      get { return kindCase_ == KindOneofCase.Action; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "action" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAction() {
+      if (HasAction) {
+        ClearKind();
       }
     }
 
@@ -705,7 +721,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       int hash = 1;
       if (kindCase_ == KindOneofCase.HttpRequest) hash ^= HttpRequest.GetHashCode();
       if (kindCase_ == KindOneofCase.StreamInfo) hash ^= StreamInfo.GetHashCode();
-      if (kindCase_ == KindOneofCase.Action) hash ^= Action.GetHashCode();
+      if (HasAction) hash ^= Action.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -733,7 +749,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Action);
       }
@@ -755,7 +771,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Action);
       }
@@ -775,7 +791,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       if (kindCase_ == KindOneofCase.StreamInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (_unknownFields != null) {
@@ -894,6 +910,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The Information of bi-directional stream.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamInfo : pb::IMessage<StreamInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1089,6 +1106,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// gRPC response payload for tether.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EgressResponse : pb::IMessage<EgressResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1545,6 +1563,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The proto definition of http request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpRequest : pb::IMessage<HttpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1902,6 +1921,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   ///
   ///  `[scheme://][google.cloud.apigeeconnect.v1.Url.host][path]`
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Url : pb::IMessage<Url>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2177,6 +2197,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The http headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Header : pb::IMessage<Header>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2395,6 +2416,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The proto definition of http response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpResponse : pb::IMessage<HttpResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

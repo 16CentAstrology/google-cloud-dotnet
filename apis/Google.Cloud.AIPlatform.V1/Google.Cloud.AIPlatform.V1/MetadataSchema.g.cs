@@ -58,6 +58,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Instance of a general MetadataSchema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetadataSchema : pb::IMessage<MetadataSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

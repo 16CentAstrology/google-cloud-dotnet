@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Run.V2
 {
@@ -158,14 +158,14 @@ namespace Google.Cloud.Run.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RevisionsClient.Create(callInvoker, Settings, Logger);
+            return RevisionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RevisionsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RevisionsClient.Create(callInvoker, Settings, Logger);
+            return RevisionsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -376,7 +376,8 @@ namespace Google.Cloud.Run.V2
             GetRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -385,7 +386,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -394,7 +396,8 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -412,16 +415,26 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisions(new ListRevisionsRequest
+        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisions(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -439,16 +452,26 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisionsAsync(new ListRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -466,16 +489,26 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisions(new ListRevisionsRequest
+        public virtual gax::PagedEnumerable<ListRevisionsResponse, Revision> ListRevisions(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisions(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The Service from which the Revisions should be listed.
@@ -493,13 +526,22 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Revision"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRevisionsAsync(new ListRevisionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRevisionsResponse, Revision> ListRevisionsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRevisionsRequest request = new ListRevisionsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a Revision.
@@ -667,7 +709,11 @@ namespace Google.Cloud.Run.V2
         {
             GrpcClient = grpcClient;
             RevisionsSettings effectiveSettings = settings ?? RevisionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRevisionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetRevision = clientHelper.BuildApiCall<GetRevisionRequest, Revision>("GetRevision", grpcClient.GetRevisionAsync, grpcClient.GetRevision, effectiveSettings.GetRevisionSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetRevisionRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
@@ -729,7 +775,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -741,7 +788,8 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Revisions from a given Service, or from a given location.
+        /// Lists Revisions from a given Service, or from a given location.  Results
+        /// are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

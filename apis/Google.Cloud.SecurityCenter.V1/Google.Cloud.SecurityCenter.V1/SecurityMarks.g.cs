@@ -61,6 +61,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Center organization -- they can be modified and viewed by all users who have
   /// proper permissions on the organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecurityMarks : pb::IMessage<SecurityMarks>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -275,7 +276,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      marks_.Add(other.marks_);
+      marks_.MergeFrom(other.marks_);
       if (other.CanonicalName.Length != 0) {
         CanonicalName = other.CanonicalName;
       }

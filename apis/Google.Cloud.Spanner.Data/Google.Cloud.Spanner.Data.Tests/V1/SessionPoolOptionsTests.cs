@@ -1,11 +1,11 @@
-﻿// Copyright 2018 Google LLC
-// 
+// Copyright 2018 Google LLC
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,7 +33,6 @@ namespace Google.Cloud.Spanner.V1.Tests
             { nameof(SessionPoolOptions.SessionEvictionJitter), RetrySettings.NoJitter },
             { nameof(SessionPoolOptions.SessionRefreshJitter), RetrySettings.NoJitter },
             { nameof(SessionPoolOptions.WaitOnResourcesExhausted), ResourcesExhaustedBehavior.Fail },
-            { nameof(SessionPoolOptions.WriteSessionsFraction), 0.5 }
         };
 
         public static TheoryData<string, object> InvalidPropertyValues = new TheoryData<string, object>
@@ -48,8 +47,6 @@ namespace Google.Cloud.Spanner.V1.Tests
             { nameof(SessionPoolOptions.SessionEvictionJitter), null },
             { nameof(SessionPoolOptions.SessionRefreshJitter), null },
             { nameof(SessionPoolOptions.WaitOnResourcesExhausted), (ResourcesExhaustedBehavior) 10 },
-            { nameof(SessionPoolOptions.WriteSessionsFraction), -0.1 },
-            { nameof(SessionPoolOptions.WriteSessionsFraction), 1.1 },
         };
 
         [Theory]

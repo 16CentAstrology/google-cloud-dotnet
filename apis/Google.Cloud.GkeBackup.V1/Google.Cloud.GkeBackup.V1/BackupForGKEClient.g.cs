@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.GkeBackup.V1
 {
@@ -84,6 +86,9 @@ namespace Google.Cloud.GkeBackup.V1
             DeleteRestoreOperationsSettings = existing.DeleteRestoreOperationsSettings.Clone();
             ListVolumeRestoresSettings = existing.ListVolumeRestoresSettings;
             GetVolumeRestoreSettings = existing.GetVolumeRestoreSettings;
+            GetBackupIndexDownloadUrlSettings = existing.GetBackupIndexDownloadUrlSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -665,6 +670,35 @@ namespace Google.Cloud.GkeBackup.V1
         /// </remarks>
         public gaxgrpc::CallSettings GetVolumeRestoreSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetBackupIndexDownloadUrl</c> and <c>BackupForGKEClient.GetBackupIndexDownloadUrlAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupIndexDownloadUrlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BackupForGKESettings"/> object.</returns>
         public BackupForGKESettings Clone() => new BackupForGKESettings(this);
@@ -707,14 +741,14 @@ namespace Google.Cloud.GkeBackup.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BackupForGKEClient.Create(callInvoker, Settings, Logger);
+            return BackupForGKEClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BackupForGKEClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BackupForGKEClient.Create(callInvoker, Settings, Logger);
+            return BackupForGKEClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -806,6 +840,12 @@ namespace Google.Cloud.GkeBackup.V1
         /// <summary>The underlying gRPC BackupForGKE client</summary>
         public virtual BackupForGKE.BackupForGKEClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Creates a new BackupPlan in a given location.
         /// </summary>
@@ -864,7 +904,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -894,7 +934,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -924,7 +964,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -949,7 +989,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -979,7 +1019,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -1009,7 +1049,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -1052,7 +1092,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1064,20 +1104,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupPlan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPlans(new ListBackupPlansRequest
+        public virtual gax::PagedEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlansRequest request = new ListBackupPlansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BackupPlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1089,20 +1138,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupPlan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPlansAsync(new ListBackupPlansRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlansRequest request = new ListBackupPlansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BackupPlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1114,20 +1172,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BackupPlan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPlans(new ListBackupPlansRequest
+        public virtual gax::PagedEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlansRequest request = new ListBackupPlansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists BackupPlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1139,13 +1206,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BackupPlan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupPlansAsync(new ListBackupPlansRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> ListBackupPlansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlansRequest request = new ListBackupPlansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the details of a single BackupPlan.
@@ -1179,7 +1255,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1194,7 +1270,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1209,7 +1285,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1221,7 +1297,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1236,7 +1312,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1251,7 +1327,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1315,11 +1391,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1342,11 +1418,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1369,11 +1445,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1446,7 +1522,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1461,7 +1537,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1476,7 +1552,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1488,7 +1564,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1503,7 +1579,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1518,7 +1594,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1583,13 +1659,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1613,13 +1689,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1643,13 +1719,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1668,13 +1744,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1698,13 +1774,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1728,13 +1804,13 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1771,7 +1847,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1783,20 +1859,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Backups for a given BackupPlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1808,20 +1893,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Backups for a given BackupPlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1833,20 +1927,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsBackupPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Backups for a given BackupPlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1858,13 +1961,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsBackupPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the details of a single Backup.
@@ -1898,7 +2010,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1913,7 +2025,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1928,7 +2040,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1940,7 +2052,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1955,7 +2067,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1970,7 +2082,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2034,11 +2146,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -2060,11 +2172,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -2086,11 +2198,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -2162,7 +2274,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2177,7 +2289,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2192,7 +2304,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2204,7 +2316,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2219,7 +2331,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2234,7 +2346,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2264,7 +2376,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2276,20 +2388,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeBackup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeBackups(new ListVolumeBackupsRequest
+        public virtual gax::PagedEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeBackupsRequest request = new ListVolumeBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeBackups for a given Backup.
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2301,20 +2422,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeBackupsAsync(new ListVolumeBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeBackupsRequest request = new ListVolumeBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeBackups for a given Backup.
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2326,20 +2456,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeBackup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackups(BackupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeBackups(new ListVolumeBackupsRequest
+        public virtual gax::PagedEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackups(BackupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeBackupsRequest request = new ListVolumeBackupsRequest
             {
                 ParentAsBackupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeBackups for a given Backup.
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2351,13 +2490,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackupsAsync(BackupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeBackupsAsync(new ListVolumeBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeBackupsResponse, VolumeBackup> ListVolumeBackupsAsync(BackupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeBackupsRequest request = new ListVolumeBackupsRequest
             {
                 ParentAsBackupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the details of a single VolumeBackup.
@@ -2391,7 +2539,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2406,7 +2554,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2421,7 +2569,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2433,7 +2581,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2448,7 +2596,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2463,7 +2611,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2529,7 +2677,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2559,7 +2707,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2589,7 +2737,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2614,7 +2762,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2644,7 +2792,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2674,7 +2822,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2717,7 +2865,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2729,20 +2877,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RestorePlan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestorePlans(new ListRestorePlansRequest
+        public virtual gax::PagedEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlansRequest request = new ListRestorePlansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists RestorePlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2754,20 +2911,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RestorePlan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestorePlansAsync(new ListRestorePlansRequest
+        public virtual gax::PagedAsyncEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlansRequest request = new ListRestorePlansRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists RestorePlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2779,20 +2945,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RestorePlan"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestorePlans(new ListRestorePlansRequest
+        public virtual gax::PagedEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlansRequest request = new ListRestorePlansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlans(request, callSettings);
+        }
 
         /// <summary>
         /// Lists RestorePlans in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2804,13 +2979,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RestorePlan"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestorePlansAsync(new ListRestorePlansRequest
+        public virtual gax::PagedAsyncEnumerable<ListRestorePlansResponse, RestorePlan> ListRestorePlansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlansRequest request = new ListRestorePlansRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlansAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the details of a single RestorePlan.
@@ -2844,7 +3028,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2859,7 +3043,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2874,7 +3058,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2886,7 +3070,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2901,7 +3085,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2916,7 +3100,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2981,11 +3165,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3007,11 +3191,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3033,11 +3217,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3110,7 +3294,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3125,7 +3309,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3140,7 +3324,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3152,7 +3336,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3167,7 +3351,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3182,7 +3366,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3247,7 +3431,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3277,7 +3461,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3307,7 +3491,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3332,7 +3516,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3362,7 +3546,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3392,7 +3576,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3435,7 +3619,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3447,20 +3631,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Restore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRestoresResponse, Restore> ListRestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestores(new ListRestoresRequest
+        public virtual gax::PagedEnumerable<ListRestoresResponse, Restore> ListRestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoresRequest request = new ListRestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Restores for a given RestorePlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3472,20 +3665,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Restore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRestoresResponse, Restore> ListRestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestoresAsync(new ListRestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListRestoresResponse, Restore> ListRestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoresRequest request = new ListRestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Restores for a given RestorePlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3497,20 +3699,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Restore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRestoresResponse, Restore> ListRestores(RestorePlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestores(new ListRestoresRequest
+        public virtual gax::PagedEnumerable<ListRestoresResponse, Restore> ListRestores(RestorePlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoresRequest request = new ListRestoresRequest
             {
                 ParentAsRestorePlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the Restores for a given RestorePlan.
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3522,13 +3733,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Restore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRestoresResponse, Restore> ListRestoresAsync(RestorePlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRestoresAsync(new ListRestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListRestoresResponse, Restore> ListRestoresAsync(RestorePlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoresRequest request = new ListRestoresRequest
             {
                 ParentAsRestorePlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the details of a single Restore.
@@ -3562,7 +3782,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3577,7 +3797,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3592,7 +3812,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3604,7 +3824,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3619,7 +3839,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3634,7 +3854,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3698,11 +3918,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3724,11 +3944,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3750,11 +3970,11 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3826,7 +4046,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3841,7 +4061,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3856,7 +4076,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3868,7 +4088,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3883,7 +4103,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3898,7 +4118,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3928,7 +4148,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3940,20 +4160,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeRestore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeRestores(new ListVolumeRestoresRequest
+        public virtual gax::PagedEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestores(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeRestoresRequest request = new ListVolumeRestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeRestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeRestores for a given Restore.
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3965,20 +4194,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeRestore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeRestoresAsync(new ListVolumeRestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestoresAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeRestoresRequest request = new ListVolumeRestoresRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeRestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeRestores for a given Restore.
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3990,20 +4228,29 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VolumeRestore"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestores(RestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeRestores(new ListVolumeRestoresRequest
+        public virtual gax::PagedEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestores(RestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeRestoresRequest request = new ListVolumeRestoresRequest
             {
                 ParentAsRestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeRestores(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the VolumeRestores for a given Restore.
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4015,13 +4262,22 @@ namespace Google.Cloud.GkeBackup.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VolumeRestore"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestoresAsync(RestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVolumeRestoresAsync(new ListVolumeRestoresRequest
+        public virtual gax::PagedAsyncEnumerable<ListVolumeRestoresResponse, VolumeRestore> ListVolumeRestoresAsync(RestoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVolumeRestoresRequest request = new ListVolumeRestoresRequest
             {
                 ParentAsRestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVolumeRestoresAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieve the details of a single VolumeRestore.
@@ -4055,7 +4311,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4070,7 +4326,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4085,7 +4341,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4097,7 +4353,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4112,7 +4368,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4127,12 +4383,129 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<VolumeRestore> GetVolumeRestoreAsync(VolumeRestoreName name, st::CancellationToken cancellationToken) =>
             GetVolumeRestoreAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(string backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrl(new GetBackupIndexDownloadUrlRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(string backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrlAsync(new GetBackupIndexDownloadUrlRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(string backup, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrl(new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrlAsync(new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(BackupName backup, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>BackupForGKE client wrapper implementation, for convenient use.</summary>
@@ -4190,6 +4563,8 @@ namespace Google.Cloud.GkeBackup.V1
 
         private readonly gaxgrpc::ApiCall<GetVolumeRestoreRequest, VolumeRestore> _callGetVolumeRestore;
 
+        private readonly gaxgrpc::ApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse> _callGetBackupIndexDownloadUrl;
+
         /// <summary>
         /// Constructs a client wrapper for the BackupForGKE service, with the specified gRPC client and settings.
         /// </summary>
@@ -4200,7 +4575,11 @@ namespace Google.Cloud.GkeBackup.V1
         {
             GrpcClient = grpcClient;
             BackupForGKESettings effectiveSettings = settings ?? BackupForGKESettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings, logger);
             UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings, logger);
             DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings, logger);
@@ -4213,6 +4592,8 @@ namespace Google.Cloud.GkeBackup.V1
             CreateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreOperationsSettings, logger);
             UpdateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreOperationsSettings, logger);
             DeleteRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateBackupPlan = clientHelper.BuildApiCall<CreateBackupPlanRequest, lro::Operation>("CreateBackupPlan", grpcClient.CreateBackupPlanAsync, grpcClient.CreateBackupPlan, effectiveSettings.CreateBackupPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupPlan);
             Modify_CreateBackupPlanApiCall(ref _callCreateBackupPlan);
@@ -4285,6 +4666,9 @@ namespace Google.Cloud.GkeBackup.V1
             _callGetVolumeRestore = clientHelper.BuildApiCall<GetVolumeRestoreRequest, VolumeRestore>("GetVolumeRestore", grpcClient.GetVolumeRestoreAsync, grpcClient.GetVolumeRestore, effectiveSettings.GetVolumeRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVolumeRestore);
             Modify_GetVolumeRestoreApiCall(ref _callGetVolumeRestore);
+            _callGetBackupIndexDownloadUrl = clientHelper.BuildApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse>("GetBackupIndexDownloadUrl", grpcClient.GetBackupIndexDownloadUrlAsync, grpcClient.GetBackupIndexDownloadUrl, effectiveSettings.GetBackupIndexDownloadUrlSettings).WithGoogleRequestParam("backup", request => request.Backup);
+            Modify_ApiCall(ref _callGetBackupIndexDownloadUrl);
+            Modify_GetBackupIndexDownloadUrlApiCall(ref _callGetBackupIndexDownloadUrl);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4338,10 +4722,18 @@ namespace Google.Cloud.GkeBackup.V1
 
         partial void Modify_GetVolumeRestoreApiCall(ref gaxgrpc::ApiCall<GetVolumeRestoreRequest, VolumeRestore> call);
 
+        partial void Modify_GetBackupIndexDownloadUrlApiCall(ref gaxgrpc::ApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse> call);
+
         partial void OnConstruction(BackupForGKE.BackupForGKEClient grpcClient, BackupForGKESettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BackupForGKE client</summary>
         public override BackupForGKE.BackupForGKEClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateBackupPlanRequest(ref CreateBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4390,6 +4782,8 @@ namespace Google.Cloud.GkeBackup.V1
         partial void Modify_ListVolumeRestoresRequest(ref ListVolumeRestoresRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetVolumeRestoreRequest(ref GetVolumeRestoreRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupIndexDownloadUrlRequest(ref GetBackupIndexDownloadUrlRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateBackupPlan</c>.</summary>
         public override lro::OperationsClient CreateBackupPlanOperationsClient { get; }
@@ -5002,6 +5396,30 @@ namespace Google.Cloud.GkeBackup.V1
             Modify_GetVolumeRestoreRequest(ref request, ref callSettings);
             return _callGetVolumeRestore.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupIndexDownloadUrlRequest(ref request, ref callSettings);
+            return _callGetBackupIndexDownloadUrl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupIndexDownloadUrlRequest(ref request, ref callSettings);
+            return _callGetBackupIndexDownloadUrl.Async(request, callSettings);
+        }
     }
 
     public partial class ListBackupPlansRequest : gaxgrpc::IPageRequest
@@ -5087,6 +5505,32 @@ namespace Google.Cloud.GkeBackup.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class BackupForGKE
+    {
+        public partial class BackupForGKEClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

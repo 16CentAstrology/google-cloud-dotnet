@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_DeletePartition_async]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task DeletePartitionRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeletePartitionRequest request = new DeletePartitionRequest
+            gcdv::DeletePartitionRequest request = new gcdv::DeletePartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
             await metadataServiceClient.DeletePartitionAsync(request);

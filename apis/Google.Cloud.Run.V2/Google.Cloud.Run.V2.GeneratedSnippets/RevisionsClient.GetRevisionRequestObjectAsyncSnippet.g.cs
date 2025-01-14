@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Revisions_GetRevision_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetRevisionRequestObjectAsync()
         {
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            GetRevisionRequest request = new GetRevisionRequest
+            gcrv::GetRevisionRequest request = new gcrv::GetRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
             };
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(request);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(request);
         }
     }
     // [END run_v2_generated_Revisions_GetRevision_async]

@@ -43,12 +43,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5Vc2FnZVN0YXRzOgI4ARpwCh9D",
             "b21tb25Vc2FnZVdpdGhpblRpbWVSYW5nZUVudHJ5EgsKA2tleRgBIAEoCRI8",
             "CgV2YWx1ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5D",
-            "b21tb25Vc2FnZVN0YXRzOgI4AUIRCg9fZmF2b3JpdGVfY291bnRCxgEKH2Nv",
+            "b21tb25Vc2FnZVN0YXRzOgI4AUIRCg9fZmF2b3JpdGVfY291bnRCwwEKH2Nv",
             "bS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFQAVpBY2xvdWQuZ29vZ2xl",
             "LmNvbS9nby9kYXRhY2F0YWxvZy9hcGl2MS9kYXRhY2F0YWxvZ3BiO2RhdGFj",
-            "YXRhbG9ncGL4AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtH",
-            "b29nbGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpE",
-            "YXRhQ2F0YWxvZzo6VjFiBnByb3RvMw=="));
+            "YXRhbG9ncGKqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29n",
+            "bGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRh",
+            "Q2F0YWxvZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -73,6 +73,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   ///   [Querying multiple tables using a wildcard table]
   ///   (https://cloud.google.com/bigquery/docs/querying-wildcard-tables)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UsageStats : pb::IMessage<UsageStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -390,6 +391,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   ///
   /// They can be set on any system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonUsageStats : pb::IMessage<CommonUsageStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -438,6 +440,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "view_count" field.</summary>
     public const int ViewCountFieldNumber = 1;
+    private readonly static long ViewCountDefaultValue = 0L;
+
     private long viewCount_;
     /// <summary>
     /// View count in source system.
@@ -445,7 +449,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ViewCount {
-      get { if ((_hasBits0 & 1) != 0) { return viewCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return viewCount_; } else { return ViewCountDefaultValue; } }
       set {
         _hasBits0 |= 1;
         viewCount_ = value;
@@ -603,6 +607,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Note: Usually, these signals are updated daily. In rare cases, an update may
   /// fail but will be performed again on the next day.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UsageSignal : pb::IMessage<UsageSignal>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -702,6 +707,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "favorite_count" field.</summary>
     public const int FavoriteCountFieldNumber = 4;
+    private readonly static long FavoriteCountDefaultValue = 0L;
+
     private long favoriteCount_;
     /// <summary>
     /// Favorite count in the source system.
@@ -709,7 +716,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long FavoriteCount {
-      get { if ((_hasBits0 & 1) != 0) { return favoriteCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return favoriteCount_; } else { return FavoriteCountDefaultValue; } }
       set {
         _hasBits0 |= 1;
         favoriteCount_ = value;
@@ -842,8 +849,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      usageWithinTimeRange_.Add(other.usageWithinTimeRange_);
-      commonUsageWithinTimeRange_.Add(other.commonUsageWithinTimeRange_);
+      usageWithinTimeRange_.MergeFrom(other.usageWithinTimeRange_);
+      commonUsageWithinTimeRange_.MergeFrom(other.commonUsageWithinTimeRange_);
       if (other.HasFavoriteCount) {
         FavoriteCount = other.FavoriteCount;
       }

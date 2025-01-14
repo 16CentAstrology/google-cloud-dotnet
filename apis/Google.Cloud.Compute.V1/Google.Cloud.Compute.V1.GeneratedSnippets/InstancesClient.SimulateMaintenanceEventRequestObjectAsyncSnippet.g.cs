@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START compute_v1_generated_Instances_SimulateMaintenanceEvent_async]
     using Google.Cloud.Compute.V1;
@@ -42,7 +42,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
+                WithExtendedNotifications = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SimulateMaintenanceEventAsync(request);

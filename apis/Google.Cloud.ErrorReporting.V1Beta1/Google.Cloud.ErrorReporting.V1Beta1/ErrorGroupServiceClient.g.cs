@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1
 {
@@ -136,14 +136,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ErrorGroupServiceClient.Create(callInvoker, Settings, Logger);
+            return ErrorGroupServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ErrorGroupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ErrorGroupServiceClient.Create(callInvoker, Settings, Logger);
+            return ErrorGroupServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -265,12 +265,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -284,12 +297,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -303,12 +329,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -319,12 +358,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -338,12 +390,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -357,12 +422,25 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// `projects/{projectID}/groups/{group_name}`. Call
-        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// Required. The group resource name. Written as either
+        /// `projects/{projectID}/groups/{group_id}` or
+        /// `projects/{projectID}/locations/{location}/groups/{group_id}`. Call
+        /// [groupStats.list]
+        /// [google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats]
         /// to return a list of groups belonging to this project.
         /// 
-        /// Example: `projects/my-project-123/groups/my-group`
+        /// Examples: `projects/my-project-123/groups/my-group`,
+        /// `projects/my-project-123/locations/global/groups/my-group`
+        /// 
+        /// In the group resource name, the `group_id` is a unique identifier for a
+        /// particular error group. The identifier is derived from key parts of the
+        /// error-log content and is treated as Service Data. For information about
+        /// how Service Data is handled, see [Google Cloud Privacy
+        /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /// 
+        /// For a list of supported locations, see [Supported
+        /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+        /// the default when unspecified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -462,7 +540,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GrpcClient = grpcClient;
             ErrorGroupServiceSettings effectiveSettings = settings ?? ErrorGroupServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>("GetGroup", grpcClient.GetGroupAsync, grpcClient.GetGroup, effectiveSettings.GetGroupSettings).WithGoogleRequestParam("group_name", request => request.GroupName);
             Modify_ApiCall(ref _callGetGroup);
             Modify_GetGroupApiCall(ref _callGetGroup);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Channel.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudchannel_v1_generated_CloudChannelReportsService_FetchReportResults_async]
     using Google.Api.Gax;
@@ -33,31 +33,39 @@ namespace Google.Cloud.Channel.V1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task FetchReportResultsRequestObjectAsync()
         {
             // Create client
             CloudChannelReportsServiceClient cloudChannelReportsServiceClient = await CloudChannelReportsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            FetchReportResultsRequest request = new FetchReportResultsRequest
-            {
-                ReportJobAsReportJobName = ReportJobName.FromAccountReportJob("[ACCOUNT]", "[REPORT_JOB]"),
-            };
+#pragma warning disable CS0612
+            FetchReportResultsRequest request = new FetchReportResultsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<FetchReportResultsResponse, Row> response = cloudChannelReportsServiceClient.FetchReportResultsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((Row item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((FetchReportResultsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (Row item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -66,10 +74,14 @@ namespace Google.Cloud.Channel.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<Row> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (Row item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);

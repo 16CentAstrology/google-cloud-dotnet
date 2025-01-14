@@ -38,10 +38,16 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public bool SkipDocumentationOnly { get; set; }
 
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            RootLayout rootLayout,
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
+
+            progressCallback?.Invoke(0, catalog.Apis.Count);
             Console.WriteLine($"Analyzing changes by API (this may take a few minutes)");
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
             Console.WriteLine($"Finish analyzing changes.");
@@ -49,8 +55,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             // Map from package group ID to all the changed APIs within it.
             var skippedPackageGroups = new Dictionary<string, List<string>>();
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
+                progressCallback?.Invoke(++progress, catalog.Apis.Count);
                 var commits = pendingChangesByApi[api].Commits;
 
                 // Don't propose packages that haven't changed.
@@ -62,9 +70,15 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                     continue;
                 }
 
+                if (api.BlockRelease is string blockRelease)
+                {
+                    Console.WriteLine($"Release of {api.Id} is blocked: {blockRelease}");
+                    continue;
+                }
+
                 if (SkipIfNoReleaseNotes)
                 {
-                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes)))
+                    if (!commits.Any(c => c.GetReleaseNoteElements(rootLayout).Any(note => note.PublishInReleaseNotes)))
                     {
                         Console.WriteLine($"Skipping {api.Id} which has {commits.Count} commit(s), but none generate release notes:");
                         foreach (var commit in commits)
@@ -79,7 +93,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
                 if (SkipDocumentationOnly)
                 {
-                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes && note.Type != History.ReleaseNoteElementType.Docs)))
+                    if (!commits.Any(c => c.GetReleaseNoteElements(rootLayout).Any(note => note.PublishInReleaseNotes && note.Type != History.ReleaseNoteElementType.Docs)))
                     {
                         Console.WriteLine($"Skipping {api.Id} which only contains documentation/trivial changes");
                         Console.WriteLine();
@@ -101,7 +115,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
-                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
             }
 
             if (skippedPackageGroups.Any())

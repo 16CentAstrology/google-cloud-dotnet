@@ -25,25 +25,29 @@ namespace Google.Cloud.GkeBackup.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxIZZ29v",
-            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90byIgCgpOYW1lc3BhY2VzEhIKCm5hbWVzcGFjZXMYASADKAkiMQoOTmFt",
-            "ZXNwYWNlZE5hbWUSEQoJbmFtZXNwYWNlGAEgASgJEgwKBG5hbWUYAiABKAki",
-            "VgoPTmFtZXNwYWNlZE5hbWVzEkMKEG5hbWVzcGFjZWRfbmFtZXMYASADKAsy",
-            "KS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lIlcK",
-            "DUVuY3J5cHRpb25LZXkSRgoWZ2NwX2ttc19lbmNyeXB0aW9uX2tleRgBIAEo",
-            "CUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlCwgEK",
-            "HWNvbS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxQgtDb21tb25Qcm90b1AB",
-            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNr",
-            "dXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHK",
-            "AhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6",
-            "R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byIlCgpOYW1l",
+            "c3BhY2VzEhcKCm5hbWVzcGFjZXMYASADKAlCA+BBASI7Cg5OYW1lc3BhY2Vk",
+            "TmFtZRIWCgluYW1lc3BhY2UYASABKAlCA+BBARIRCgRuYW1lGAIgASgJQgPg",
+            "QQEiWwoPTmFtZXNwYWNlZE5hbWVzEkgKEG5hbWVzcGFjZWRfbmFtZXMYASAD",
+            "KAsyKS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1l",
+            "QgPgQQEiWgoNRW5jcnlwdGlvbktleRJJChZnY3Bfa21zX2VuY3J5cHRpb25f",
+            "a2V5GAEgASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
+            "eXB0b0tleSJUCg5Wb2x1bWVUeXBlRW51bSJCCgpWb2x1bWVUeXBlEhsKF1ZP",
+            "TFVNRV9UWVBFX1VOU1BFQ0lGSUVEEAASFwoTR0NFX1BFUlNJU1RFTlRfRElT",
+            "SxABQsIBCh1jb20uZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MUILQ29tbW9u",
+            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEv",
+            "Z2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFj",
+            "a3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6",
+            "Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Namespaces), global::Google.Cloud.GkeBackup.V1.Namespaces.Parser, new[]{ "Namespaces_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.NamespacedName), global::Google.Cloud.GkeBackup.V1.NamespacedName.Parser, new[]{ "Namespace", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.NamespacedNames), global::Google.Cloud.GkeBackup.V1.NamespacedNames.Parser, new[]{ "NamespacedNames_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.EncryptionKey), global::Google.Cloud.GkeBackup.V1.EncryptionKey.Parser, new[]{ "GcpKmsEncryptionKey" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.EncryptionKey), global::Google.Cloud.GkeBackup.V1.EncryptionKey.Parser, new[]{ "GcpKmsEncryptionKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum), global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.VolumeTypeEnum.Types.VolumeType) }, null, null)
           }));
     }
     #endregion
@@ -53,6 +57,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A list of Kubernetes Namespaces
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Namespaces : pb::IMessage<Namespaces>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -103,7 +108,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> namespaces_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of Kubernetes Namespaces
+    /// Optional. A list of Kubernetes Namespaces
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -237,6 +242,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A reference to a namespaced resource in Kubernetes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NamespacedName : pb::IMessage<NamespacedName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -286,7 +292,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int NamespaceFieldNumber = 1;
     private string namespace_ = "";
     /// <summary>
-    /// The Namespace of the Kubernetes resource.
+    /// Optional. The Namespace of the Kubernetes resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -301,7 +307,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// The name of the Kubernetes resource.
+    /// Optional. The name of the Kubernetes resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -472,6 +478,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A list of namespaced Kubernetes resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NamespacedNames : pb::IMessage<NamespacedNames>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -522,7 +529,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeBackup.V1.NamespacedName.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.NamespacedName> namespacedNames_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.NamespacedName>();
     /// <summary>
-    /// A list of namespaced Kubernetes resources.
+    /// Optional. A list of namespaced Kubernetes resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -657,6 +664,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// Defined a customer managed encryption key that will be used to encrypt Backup
   /// artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionKey : pb::IMessage<EncryptionKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -705,8 +713,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int GcpKmsEncryptionKeyFieldNumber = 1;
     private string gcpKmsEncryptionKey_ = "";
     /// <summary>
-    /// Google Cloud KMS encryption key. Format:
-    /// projects/*/locations/*/keyRings/*/cryptoKeys/*
+    /// Optional. Google Cloud KMS encryption key. Format:
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -847,6 +855,184 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Message to encapsulate VolumeType enum.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VolumeTypeEnum : pb::IMessage<VolumeTypeEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VolumeTypeEnum> _parser = new pb::MessageParser<VolumeTypeEnum>(() => new VolumeTypeEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VolumeTypeEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum(VolumeTypeEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VolumeTypeEnum Clone() {
+      return new VolumeTypeEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VolumeTypeEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VolumeTypeEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VolumeTypeEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VolumeTypeEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Supported volume types.
+      /// </summary>
+      public enum VolumeType {
+        /// <summary>
+        /// Default
+        /// </summary>
+        [pbr::OriginalName("VOLUME_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Compute Engine Persistent Disk volume
+        /// </summary>
+        [pbr::OriginalName("GCE_PERSISTENT_DISK")] GcePersistentDisk = 1,
+      }
+
+    }
+    #endregion
 
   }
 

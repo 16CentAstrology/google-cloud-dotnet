@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_PartitionQuery_async]
     using Google.Protobuf.WellKnownTypes;
@@ -36,12 +36,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task PartitionQueryRequestObjectAsync()
         {
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionQueryRequest request = new PartitionQueryRequest
+            gcsv::PartitionQueryRequest request = new gcsv::PartitionQueryRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -51,10 +51,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
                         new gcsv::Type()
                     },
                 },
-                PartitionOptions = new PartitionOptions(),
+                PartitionOptions = new gcsv::PartitionOptions(),
             };
             // Make the request
-            PartitionResponse response = await spannerClient.PartitionQueryAsync(request);
+            gcsv::PartitionResponse response = await spannerClient.PartitionQueryAsync(request);
         }
     }
     // [END spanner_v1_generated_Spanner_PartitionQuery_async]

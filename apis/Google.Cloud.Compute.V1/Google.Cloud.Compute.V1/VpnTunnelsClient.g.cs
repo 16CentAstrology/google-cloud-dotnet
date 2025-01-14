@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -255,14 +255,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VpnTunnelsClient.Create(callInvoker, Settings, Logger);
+            return VpnTunnelsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<VpnTunnelsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VpnTunnelsClient.Create(callInvoker, Settings, Logger);
+            return VpnTunnelsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -356,7 +356,7 @@ namespace Google.Cloud.Compute.V1
         public virtual VpnTunnels.VpnTunnelsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -365,7 +365,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -376,7 +376,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -391,16 +391,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<VpnTunnelAggregatedList, scg::KeyValuePair<string, VpnTunnelsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListVpnTunnelsRequest
+        public virtual gax::PagedEnumerable<VpnTunnelAggregatedList, scg::KeyValuePair<string, VpnTunnelsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListVpnTunnelsRequest request = new AggregatedListVpnTunnelsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -417,13 +426,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<VpnTunnelAggregatedList, scg::KeyValuePair<string, VpnTunnelsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListVpnTunnelsRequest
+        public virtual gax::PagedAsyncEnumerable<VpnTunnelAggregatedList, scg::KeyValuePair<string, VpnTunnelsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListVpnTunnelsRequest request = new AggregatedListVpnTunnelsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified VpnTunnel resource.
@@ -778,14 +796,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VpnTunnel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<VpnTunnelList, VpnTunnel> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListVpnTunnelsRequest
+        public virtual gax::PagedEnumerable<VpnTunnelList, VpnTunnel> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVpnTunnelsRequest request = new ListVpnTunnelsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of VpnTunnel resources contained in the specified project and region.
@@ -806,14 +833,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VpnTunnel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<VpnTunnelList, VpnTunnel> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListVpnTunnelsRequest
+        public virtual gax::PagedAsyncEnumerable<VpnTunnelList, VpnTunnel> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVpnTunnelsRequest request = new ListVpnTunnelsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the labels on a VpnTunnel. To learn more about labels, read the Labeling Resources documentation.
@@ -969,7 +1005,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             VpnTunnelsSettings effectiveSettings = settings ?? VpnTunnelsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetLabelsOperationsSettings, logger);
@@ -1026,7 +1066,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetLabelsVpnTunnelRequest(ref SetLabelsVpnTunnelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1038,7 +1078,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of VPN tunnels.
+        /// Retrieves an aggregated list of VPN tunnels. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

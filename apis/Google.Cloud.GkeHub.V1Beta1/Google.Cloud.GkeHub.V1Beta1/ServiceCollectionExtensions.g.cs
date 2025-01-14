@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,11 +19,11 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcgv = Google.Cloud.GkeHub.V1Beta1;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcgv::GkeHubMembershipServiceClientBuilder builder = new gcgv::GkeHubMembershipServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcgv::GkeHubMembershipServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGkeHubMembershipServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::GkeHubMembershipServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcgv::GkeHubMembershipServiceClientBuilder builder = new gcgv::GkeHubMembershipServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

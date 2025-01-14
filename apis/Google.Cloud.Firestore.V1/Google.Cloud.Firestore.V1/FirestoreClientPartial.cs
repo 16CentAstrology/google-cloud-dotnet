@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google Inc. All rights reserved.
+// Copyright 2019, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,6 +51,8 @@ namespace Google.Cloud.Firestore.V1
         /// <see cref="CallSettings.FromHeader(string, string)"/> factory method or the
         /// <see cref="CallSettingsExtensions.WithHeader(CallSettings, string, string)"/> extension method.
         /// </remarks>
+        [Obsolete("This header is obsolete; x-goog-request-params should now be used instead. " +
+            "This constant will be removed in a future version")]
         public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings) =>
@@ -83,6 +85,9 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
         partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Document?.Name);
 
@@ -94,9 +99,11 @@ namespace Google.Cloud.Firestore.V1
                 return;
             }
             string database = GetDatabaseResourceName(resource);
+#pragma warning disable CS0618 // Type or member is obsolete
             settings = settings.WithHeader(ResourcePrefixHeader, database);
+#pragma warning restore CS0618 // Type or member is obsolete
         }
-        
+
         // Visible for testing
 
         /// <summary>
@@ -145,7 +152,7 @@ namespace Google.Cloud.Firestore.V1
 
     // Support for FirestoreDbBuilder.
     public sealed partial class FirestoreClientBuilder : ClientBuilderBase<FirestoreClient>
-    {       
+    {
         /// <summary>
         /// Creates a <see cref="FirestoreClientBuilder"/> by copying common settings from another builder.
         /// This method is intended for use in Google.Cloud.Firestore with FirestoreDbBuilder. It will

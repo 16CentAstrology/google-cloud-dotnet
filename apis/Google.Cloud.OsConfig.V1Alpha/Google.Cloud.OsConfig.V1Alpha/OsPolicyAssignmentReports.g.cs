@@ -107,6 +107,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// Get a report of the OS policy assignment for a VM instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOSPolicyAssignmentReportRequest : pb::IMessage<GetOSPolicyAssignmentReportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -310,6 +311,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// List the OS policy assignment reports for VM instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOSPolicyAssignmentReportsRequest : pb::IMessage<ListOSPolicyAssignmentReportsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -649,6 +651,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// A response message for listing OS Policy assignment reports including the
   /// page of results and page token.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOSPolicyAssignmentReportsResponse : pb::IMessage<ListOSPolicyAssignmentReportsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -874,6 +877,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// A report of the OS policy assignment status for a given instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicyAssignmentReport : pb::IMessage<OSPolicyAssignmentReport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1283,6 +1287,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Compliance data for an OS policy
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OSPolicyCompliance : pb::IMessage<OSPolicyCompliance>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1637,6 +1642,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// Compliance data for an OS policy resource.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class OSPolicyResourceCompliance : pb::IMessage<OSPolicyResourceCompliance>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2063,6 +2069,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// Step performed by the OS Config agent for configuring an
               /// `OSPolicy` resource to its desired state.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class OSPolicyResourceConfigStep : pb::IMessage<OSPolicyResourceConfigStep>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -2340,6 +2347,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// ExecResource specific output.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class ExecResourceOutput : pb::IMessage<ExecResourceOutput>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage

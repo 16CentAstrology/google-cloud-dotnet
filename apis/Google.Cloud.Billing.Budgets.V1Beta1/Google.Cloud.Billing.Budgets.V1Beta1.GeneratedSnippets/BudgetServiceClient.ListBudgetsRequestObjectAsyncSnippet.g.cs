@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.Budgets.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START billingbudgets_v1beta1_generated_BudgetService_ListBudgets_async]
     using Google.Api.Gax;
@@ -42,6 +42,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Snippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgetsAsync(request);

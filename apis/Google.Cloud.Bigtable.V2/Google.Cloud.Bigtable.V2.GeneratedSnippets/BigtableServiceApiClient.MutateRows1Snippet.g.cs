@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1]
+    // [START bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.V2;
     using System.Collections.Generic;
@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 new MutateRowsRequest.Types.Entry(),
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -56,5 +56,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // The response stream has completed
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1]
+    // [END bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1]
 }

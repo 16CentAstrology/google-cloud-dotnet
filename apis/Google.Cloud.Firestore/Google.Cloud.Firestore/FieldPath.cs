@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -191,7 +191,7 @@ namespace Google.Cloud.Firestore
             // determine which situation we're in, with a shorter path being deemed "less than" a longer one.
             return Segments.Length - other.Segments.Length;
         }
-        
+
         /// <summary>
         /// Conversion from FieldPath to FieldReference.
         /// </summary>

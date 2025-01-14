@@ -1,5 +1,49 @@
 # Version history
 
+## Version 2.0.0-beta11, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.0.0-beta10, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-beta09, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-beta08, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.0.0-beta07, released 2023-10-02
+
+### New features
+
+- Added EndpointLocation (v1, v1beta, v1alpha) ([commit fe44771](https://github.com/googleapis/google-cloud-dotnet/commit/fe44771fd325b3e63ba63cbf518d4dfc362ceecc))
+
+## Version 2.0.0-beta06, released 2023-07-13
+
+### New features
+
+- Added Admin Interface (v1) ([commit 699426c](https://github.com/googleapis/google-cloud-dotnet/commit/699426cc14735db516958999cf02588aa7e2e40c))
+- Added gRPC endpoint protocol (v1) ([commit 699426c](https://github.com/googleapis/google-cloud-dotnet/commit/699426cc14735db516958999cf02588aa7e2e40c))
+- Added BigQuery as a backend metastore (v1) ([commit 699426c](https://github.com/googleapis/google-cloud-dotnet/commit/699426cc14735db516958999cf02588aa7e2e40c))
+
+## Version 2.0.0-beta05, released 2023-04-19
+
+### New features
+
+- Added ScalingConfig (v1) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+- Added Auxiliary Versions Config (v1) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+- Added Dataplex and BQ metastore types for federation (v1alpa, v1beta) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+
 ## Version 2.0.0-beta04, released 2023-01-19
 
 ### New features

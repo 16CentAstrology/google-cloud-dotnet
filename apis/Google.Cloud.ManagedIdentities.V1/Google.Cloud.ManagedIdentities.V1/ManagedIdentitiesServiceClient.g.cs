@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ManagedIdentities.V1
 {
@@ -370,14 +370,14 @@ namespace Google.Cloud.ManagedIdentities.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings, Logger);
+            return ManagedIdentitiesServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ManagedIdentitiesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ManagedIdentitiesServiceClient.Create(callInvoker, Settings, Logger);
+            return ManagedIdentitiesServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -896,13 +896,22 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Domain"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDomainsResponse, Domain> ListDomains(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDomains(new ListDomainsRequest
+        public virtual gax::PagedEnumerable<ListDomainsResponse, Domain> ListDomains(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDomainsRequest request = new ListDomainsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDomains(request, callSettings);
+        }
 
         /// <summary>
         /// Lists domains in a project.
@@ -921,13 +930,22 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Domain"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDomainsResponse, Domain> ListDomainsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDomainsAsync(new ListDomainsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDomainsResponse, Domain> ListDomainsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDomainsRequest request = new ListDomainsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDomainsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists domains in a project.
@@ -946,13 +964,22 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Domain"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDomainsResponse, Domain> ListDomains(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDomains(new ListDomainsRequest
+        public virtual gax::PagedEnumerable<ListDomainsResponse, Domain> ListDomains(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDomainsRequest request = new ListDomainsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDomains(request, callSettings);
+        }
 
         /// <summary>
         /// Lists domains in a project.
@@ -971,13 +998,22 @@ namespace Google.Cloud.ManagedIdentities.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Domain"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDomainsResponse, Domain> ListDomainsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDomainsAsync(new ListDomainsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDomainsResponse, Domain> ListDomainsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDomainsRequest request = new ListDomainsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDomainsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets information about a domain.
@@ -2110,7 +2146,11 @@ namespace Google.Cloud.ManagedIdentities.V1
         {
             GrpcClient = grpcClient;
             ManagedIdentitiesServiceSettings effectiveSettings = settings ?? ManagedIdentitiesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateMicrosoftAdDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMicrosoftAdDomainOperationsSettings, logger);
             UpdateDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainOperationsSettings, logger);
             DeleteDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainOperationsSettings, logger);

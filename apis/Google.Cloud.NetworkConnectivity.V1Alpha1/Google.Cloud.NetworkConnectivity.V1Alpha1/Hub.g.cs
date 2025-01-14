@@ -105,51 +105,51 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
             "SVZFEAISDAoIREVMRVRJTkcQAzKtEQoKSHViU2VydmljZRLJAQoITGlzdEh1",
             "YnMSOi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWFscGhh",
             "MS5MaXN0SHVic1JlcXVlc3QaOy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5l",
-            "Y3Rpdml0eS52MWFscGhhMS5MaXN0SHVic1Jlc3BvbnNlIkSC0+STAjUSMy92",
-            "MWFscGhhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbH0v",
-            "aHVic9pBBnBhcmVudBK2AQoGR2V0SHViEjguZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "Y3Rpdml0eS52MWFscGhhMS5MaXN0SHVic1Jlc3BvbnNlIkTaQQZwYXJlbnSC",
+            "0+STAjUSMy92MWFscGhhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "L2dsb2JhbH0vaHVicxK2AQoGR2V0SHViEjguZ29vZ2xlLmNsb3VkLm5ldHdv",
             "cmtjb25uZWN0aXZpdHkudjFhbHBoYTEuR2V0SHViUmVxdWVzdBouLmdvb2ds",
-            "ZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYWxwaGExLkh1YiJCgtPk",
-            "kwI1EjMvdjFhbHBoYTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xv",
-            "YmFsL2h1YnMvKn3aQQRuYW1lEtgBCglDcmVhdGVIdWISOy5nb29nbGUuY2xv",
+            "ZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYWxwaGExLkh1YiJC2kEE",
+            "bmFtZYLT5JMCNRIzL3YxYWxwaGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zL2dsb2JhbC9odWJzLyp9EtgBCglDcmVhdGVIdWISOy5nb29nbGUuY2xv",
             "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWFscGhhMS5DcmVhdGVIdWJSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJvgtPkkwI6IjMv",
-            "djFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWx9",
-            "L2h1YnM6A2h1YtpBEXBhcmVudCxodWIsaHViX2lkykEYCgNIdWISEU9wZXJh",
-            "dGlvbk1ldGFkYXRhEtoBCglVcGRhdGVIdWISOy5nb29nbGUuY2xvdWQubmV0",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJvykEYCgNIdWIS",
+            "EU9wZXJhdGlvbk1ldGFkYXRh2kERcGFyZW50LGh1YixodWJfaWSC0+STAjoi",
+            "My92MWFscGhhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zL2dsb2Jh",
+            "bH0vaHViczoDaHViEtoBCglVcGRhdGVIdWISOy5nb29nbGUuY2xvdWQubmV0",
             "d29ya2Nvbm5lY3Rpdml0eS52MWFscGhhMS5VcGRhdGVIdWJSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJxgtPkkwI+MjcvdjFhbHBo",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJxykEYCgNIdWISEU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEPaHViLHVwZGF0ZV9tYXNrgtPkkwI+MjcvdjFhbHBo",
             "YTEve2h1Yi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9odWJz",
-            "Lyp9OgNodWLaQQ9odWIsdXBkYXRlX21hc2vKQRgKA0h1YhIRT3BlcmF0aW9u",
-            "TWV0YWRhdGES2AEKCURlbGV0ZUh1YhI7Lmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "Lyp9OgNodWIS2AEKCURlbGV0ZUh1YhI7Lmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
             "Y29ubmVjdGl2aXR5LnYxYWxwaGExLkRlbGV0ZUh1YlJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm+C0+STAjUqMy92MWFscGhhMS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvaHVicy8qfdpBBG5h",
-            "bWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRh",
-            "dGESzAEKCkxpc3RTcG9rZXMSPC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5l",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm/KQSoKFWdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwI1KjMvdjFh",
+            "bHBoYTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2h1YnMv",
+            "Kn0SzAEKCkxpc3RTcG9rZXMSPC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5l",
             "Y3Rpdml0eS52MWFscGhhMS5MaXN0U3Bva2VzUmVxdWVzdBo9Lmdvb2dsZS5j",
             "bG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYWxwaGExLkxpc3RTcG9rZXNS",
-            "ZXNwb25zZSJBgtPkkwIyEjAvdjFhbHBoYTEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9zcG9rZXPaQQZwYXJlbnQSuQEKCEdldFNwb2tlEjou",
+            "ZXNwb25zZSJB2kEGcGFyZW50gtPkkwIyEjAvdjFhbHBoYTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zcG9rZXMSuQEKCEdldFNwb2tlEjou",
             "Z29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFhbHBoYTEuR2V0",
             "U3Bva2VSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZp",
-            "dHkudjFhbHBoYTEuU3Bva2UiP4LT5JMCMhIwL3YxYWxwaGExL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZRLhAQoLQ3Jl",
+            "dHkudjFhbHBoYTEuU3Bva2UiP9pBBG5hbWWC0+STAjISMC92MWFscGhhMS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nwb2tlcy8qfRLhAQoLQ3Jl",
             "YXRlU3Bva2USPS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
             "MWFscGhhMS5DcmVhdGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uInSC0+STAjkiMC92MWFscGhhMS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L3Nwb2tlczoFc3Bva2XaQRVwYXJlbnQsc3Bv",
-            "a2Usc3Bva2VfaWTKQRoKBVNwb2tlEhFPcGVyYXRpb25NZXRhZGF0YRLjAQoL",
+            "bmcuT3BlcmF0aW9uInTKQRoKBVNwb2tlEhFPcGVyYXRpb25NZXRhZGF0YdpB",
+            "FXBhcmVudCxzcG9rZSxzcG9rZV9pZILT5JMCOSIwL3YxYWxwaGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc3Bva2VzOgVzcG9rZRLjAQoL",
             "VXBkYXRlU3Bva2USPS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0",
             "eS52MWFscGhhMS5VcGRhdGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uInaC0+STAj8yNi92MWFscGhhMS97c3Bva2UubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nwb2tlcy8qfToFc3Bva2XaQRFz",
-            "cG9rZSx1cGRhdGVfbWFza8pBGgoFU3Bva2USEU9wZXJhdGlvbk1ldGFkYXRh",
+            "bm5pbmcuT3BlcmF0aW9uInbKQRoKBVNwb2tlEhFPcGVyYXRpb25NZXRhZGF0",
+            "YdpBEXNwb2tlLHVwZGF0ZV9tYXNrgtPkkwI/MjYvdjFhbHBoYTEve3Nwb2tl",
+            "Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zcG9rZXMvKn06BXNwb2tl",
             "EtkBCgtEZWxldGVTcG9rZRI9Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
             "dGl2aXR5LnYxYWxwaGExLkRlbGV0ZVNwb2tlUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ibILT5JMCMiowL3YxYWxwaGExL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZcpBKgoV",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRpWykEi",
+            "b25ncnVubmluZy5PcGVyYXRpb24ibMpBKgoVZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjIqMC92MWFscGhh",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nwb2tlcy8qfRpWykEi",
             "bmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
             "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C3QQKLWNv",
             "bS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWFscGhhMUII",
@@ -222,6 +222,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// operational complexity through a simple, centralized connectivity management
   /// model. Following is the resource message of a hub.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Hub : pb::IMessage<Hub>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -568,7 +569,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -697,6 +698,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// to a Hub. A Spoke can be underlying a VPN tunnel, a
   /// VLAN (interconnect) attachment, a Router appliance, etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Spoke : pb::IMessage<Spoke>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1112,7 +1114,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -1268,6 +1270,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Request for [HubService.ListHubs][google.cloud.networkconnectivity.v1alpha1.HubService.ListHubs] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListHubsRequest : pb::IMessage<ListHubsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1623,6 +1626,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Response for [HubService.ListHubs][google.cloud.networkconnectivity.v1alpha1.HubService.ListHubs] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListHubsResponse : pb::IMessage<ListHubsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1877,6 +1881,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Request for [HubService.GetHub][google.cloud.networkconnectivity.v1alpha1.HubService.GetHub] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetHubRequest : pb::IMessage<GetHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2072,6 +2077,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Request for [HubService.CreateHub][google.cloud.networkconnectivity.v1alpha1.HubService.CreateHub] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateHubRequest : pb::IMessage<CreateHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2408,6 +2414,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Request for [HubService.UpdateHub][google.cloud.networkconnectivity.v1alpha1.HubService.UpdateHub] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateHubRequest : pb::IMessage<UpdateHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2717,6 +2724,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The request for [HubService.DeleteHub][google.cloud.networkconnectivity.v1alpha1.HubService.DeleteHub].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteHubRequest : pb::IMessage<DeleteHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2964,6 +2972,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The request for [HubService.ListSpokes][google.cloud.networkconnectivity.v1alpha1.HubService.ListSpokes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSpokesRequest : pb::IMessage<ListSpokesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3319,6 +3328,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The response for [HubService.ListSpokes][google.cloud.networkconnectivity.v1alpha1.HubService.ListSpokes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSpokesResponse : pb::IMessage<ListSpokesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3573,6 +3583,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The request for [HubService.GetSpoke][google.cloud.networkconnectivity.v1alpha1.HubService.GetSpoke].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSpokeRequest : pb::IMessage<GetSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3768,6 +3779,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The request for [HubService.CreateSpoke][google.cloud.networkconnectivity.v1alpha1.HubService.CreateSpoke].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSpokeRequest : pb::IMessage<CreateSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4104,6 +4116,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Request for [HubService.UpdateSpoke][google.cloud.networkconnectivity.v1alpha1.HubService.UpdateSpoke] method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSpokeRequest : pb::IMessage<UpdateSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4413,6 +4426,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// The request for [HubService.DeleteSpoke][google.cloud.networkconnectivity.v1alpha1.HubService.DeleteSpoke].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSpokeRequest : pb::IMessage<DeleteSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4661,6 +4675,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// RouterAppliance represents a Router appliance which is specified by a VM URI
   /// and a NIC address.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouterApplianceInstance : pb::IMessage<RouterApplianceInstance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Area120.Tables.V1Alpha1
 {
@@ -250,14 +250,14 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TablesServiceClient.Create(callInvoker, Settings, Logger);
+            return TablesServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TablesServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TablesServiceClient.Create(callInvoker, Settings, Logger);
+            return TablesServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -773,13 +773,22 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRowsResponse, Row> ListRows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRows(new ListRowsRequest
+        public virtual gax::PagedEnumerable<ListRowsResponse, Row> ListRows(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRowsRequest request = new ListRowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRows(request, callSettings);
+        }
 
         /// <summary>
         /// Lists rows in a table. Returns NOT_FOUND if the table does not exist.
@@ -798,13 +807,22 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Row"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRowsResponse, Row> ListRowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRowsAsync(new ListRowsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRowsResponse, Row> ListRowsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRowsRequest request = new ListRowsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRowsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a row.
@@ -1207,7 +1225,11 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             GrpcClient = grpcClient;
             TablesServiceSettings effectiveSettings = settings ?? TablesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>("GetTable", grpcClient.GetTableAsync, grpcClient.GetTable, effectiveSettings.GetTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTable);
             Modify_GetTableApiCall(ref _callGetTable);

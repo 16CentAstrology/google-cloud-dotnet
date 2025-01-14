@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -32,6 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.IfGenerationNotMatch);
             Assert.Null(request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
+            Assert.Null(request.SoftDeleted);
             Assert.Null(request.Projection);
             Assert.Null(request.UserProject);
         }
@@ -45,6 +46,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 IfGenerationMatch = 1L,
                 IfMetagenerationMatch = 2L,
                 Generation = 3L,
+                SoftDeletedOnly = true,
                 Projection = Projection.Full,
                 UserProject = "proj"
             };
@@ -54,6 +56,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(2L, request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
             Assert.Equal(3L, request.Generation);
+            Assert.True(request.SoftDeleted);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.Equal("proj", request.UserProject);
         }

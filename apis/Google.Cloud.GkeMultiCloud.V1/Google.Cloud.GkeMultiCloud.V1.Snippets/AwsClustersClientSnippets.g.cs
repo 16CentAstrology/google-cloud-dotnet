@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeMultiCloud.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -730,6 +731,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsCluster(request);
@@ -766,6 +768,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsClusterAsync(request);
@@ -903,6 +906,57 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAwsClusterAgentToken</summary>
+        public void GenerateAwsClusterAgentTokenRequestObject()
+        {
+            // Snippet: GenerateAwsClusterAgentToken(GenerateAwsClusterAgentTokenRequest, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                NodePoolId = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAwsClusterAgentTokenResponse response = awsClustersClient.GenerateAwsClusterAgentToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAwsClusterAgentTokenAsync</summary>
+        public async Task GenerateAwsClusterAgentTokenRequestObjectAsync()
+        {
+            // Snippet: GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest, CallSettings)
+            // Additional: GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                NodePoolId = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAwsClusterAgentTokenResponse response = await awsClustersClient.GenerateAwsClusterAgentTokenAsync(request);
             // End snippet
         }
 
@@ -1257,6 +1311,191 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsNodePoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdate</summary>
+        public void RollbackAwsNodePoolUpdateRequestObject()
+        {
+            // Snippet: RollbackAwsNodePoolUpdate(RollbackAwsNodePoolUpdateRequest, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest
+            {
+                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
+                RespectPdb = false,
+            };
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdateAsync</summary>
+        public async Task RollbackAwsNodePoolUpdateRequestObjectAsync()
+        {
+            // Snippet: RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest, CallSettings)
+            // Additional: RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest
+            {
+                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
+                RespectPdb = false,
+            };
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdate</summary>
+        public void RollbackAwsNodePoolUpdate()
+        {
+            // Snippet: RollbackAwsNodePoolUpdate(string, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdateAsync</summary>
+        public async Task RollbackAwsNodePoolUpdateAsync()
+        {
+            // Snippet: RollbackAwsNodePoolUpdateAsync(string, CallSettings)
+            // Additional: RollbackAwsNodePoolUpdateAsync(string, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdate</summary>
+        public void RollbackAwsNodePoolUpdateResourceNames()
+        {
+            // Snippet: RollbackAwsNodePoolUpdate(AwsNodePoolName, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AwsNodePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackAwsNodePoolUpdateAsync</summary>
+        public async Task RollbackAwsNodePoolUpdateResourceNamesAsync()
+        {
+            // Snippet: RollbackAwsNodePoolUpdateAsync(AwsNodePoolName, CallSettings)
+            // Additional: RollbackAwsNodePoolUpdateAsync(AwsNodePoolName, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
+            // Make the request
+            Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AwsNodePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1642,6 +1881,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsNodePool(request);
@@ -1678,6 +1918,7 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsNodePoolAsync(request);
@@ -1815,6 +2056,72 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAwsOpenIdConfig</summary>
+        public void GetAwsOpenIdConfigRequestObject()
+        {
+            // Snippet: GetAwsOpenIdConfig(GetAwsOpenIdConfigRequest, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+            };
+            // Make the request
+            AwsOpenIdConfig response = awsClustersClient.GetAwsOpenIdConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAwsOpenIdConfigAsync</summary>
+        public async Task GetAwsOpenIdConfigRequestObjectAsync()
+        {
+            // Snippet: GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest, CallSettings)
+            // Additional: GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+            };
+            // Make the request
+            AwsOpenIdConfig response = await awsClustersClient.GetAwsOpenIdConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAwsJsonWebKeys</summary>
+        public void GetAwsJsonWebKeysRequestObject()
+        {
+            // Snippet: GetAwsJsonWebKeys(GetAwsJsonWebKeysRequest, CallSettings)
+            // Create client
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
+            // Initialize request argument(s)
+            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+            };
+            // Make the request
+            AwsJsonWebKeys response = awsClustersClient.GetAwsJsonWebKeys(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAwsJsonWebKeysAsync</summary>
+        public async Task GetAwsJsonWebKeysRequestObjectAsync()
+        {
+            // Snippet: GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest, CallSettings)
+            // Additional: GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest, CancellationToken)
+            // Create client
+            AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest
+            {
+                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
+            };
+            // Make the request
+            AwsJsonWebKeys response = await awsClustersClient.GetAwsJsonWebKeysAsync(request);
             // End snippet
         }
 

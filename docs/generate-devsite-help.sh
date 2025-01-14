@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+REPOROOT=$(git rev-parse --show-toplevel)
 
 if [[ -z "$1" ]]
 then
@@ -8,9 +9,7 @@ then
   exit 1
 fi
 
-source ../toolversions.sh
-
-install_docfx
+dotnet tool restore > /dev/null
 
 if [[ "$2" != "" ]]
 then
@@ -23,7 +22,7 @@ declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
 declare -r VERSION=$1
 
 # Build the snippets for the help docset
-dotnet run --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
+dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
 
 rm -rf output/devsite-help
 mkdir -p output/devsite-help/api
@@ -36,24 +35,24 @@ cd output/devsite-help
 
 # Create the docs metadata. We assume we may need to refer to any of the utility libraries.
 # We also refer to Datastore, PubSub and Storage.
-python -m docuploader create-metadata \
+dotnet docuploader create-metadata \
   --name help \
   --version $VERSION \
   --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
-  --xrefs devsite://dotnet/Google.Protobuf \
-  --xrefs devsite://dotnet/Grpc.Core \
-  --xrefs devsite://dotnet/Google.Api.CommonProtos \
-  --xrefs devsite://dotnet/Google.Api.Gax \
-  --xrefs devsite://dotnet/Google.Apis \
-  --xrefs devsite://dotnet/Google.Cloud.PubSub.V1 \
-  --xrefs devsite://dotnet/Google.Cloud.Datastore.V1 \
-  --xrefs devsite://dotnet/Google.Cloud.Storage.V1 \
-  --language dotnet  
+  --xrefs devsite://dotnet/Google.Protobuf,\
+devsite://dotnet/Grpc.Core,\
+devsite://dotnet/Google.Api.CommonProtos,\
+devsite://dotnet/Google.Api.Gax,\
+devsite://dotnet/Google.Apis,\
+devsite://dotnet/Google.Cloud.PubSub.V1,\
+devsite://dotnet/Google.Cloud.Datastore.V1,\
+devsite://dotnet/Google.Cloud.Storage.V1 \
+  --language dotnet 
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-  python -m docuploader upload \
-    . \
+  dotnet docuploader upload \
+    --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \
     --destination-prefix docfx

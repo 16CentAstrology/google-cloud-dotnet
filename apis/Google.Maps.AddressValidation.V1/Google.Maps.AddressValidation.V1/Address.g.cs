@@ -68,6 +68,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// correcting misspelled parts of the address, replacing incorrect parts, and
   /// inferring missing parts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Address : pb::IMessage<Address>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -137,7 +138,7 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int PostalAddressFieldNumber = 3;
     private global::Google.Type.PostalAddress postalAddress_;
     /// <summary>
-    /// The validated address represented as a postal address.
+    /// The post-processed address represented as a postal address.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -454,6 +455,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// <summary>
   /// Represents an address component, such as a street, city, or state.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddressComponent : pb::IMessage<AddressComponent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -574,9 +576,11 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int SpellCorrectedFieldNumber = 5;
     private bool spellCorrected_;
     /// <summary>
-    /// Indicates the spelling of the component name was corrected in a minor way,
-    /// for example by switching two characters that appeared in the wrong order.
-    /// This indicates a cosmetic change.
+    /// Indicates a correction to a misspelling in the component name.  The API
+    /// does not always flag changes from one spelling variant to another, such as
+    /// when changing "centre" to "center". It also does not always flag common
+    /// misspellings, such as when changing "Amphitheater Pkwy" to "Amphitheatre
+    /// Pkwy".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -945,6 +949,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// <summary>
   /// A wrapper for the name of the component.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComponentName : pb::IMessage<ComponentName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

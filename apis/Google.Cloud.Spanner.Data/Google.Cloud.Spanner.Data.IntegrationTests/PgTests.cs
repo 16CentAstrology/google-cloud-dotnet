@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
@@ -24,7 +24,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests;
 
 [Collection(nameof(AllTypesTableFixturePostgreSql))]
 [CommonTestDiagnostics]
-[Trait(Constants.SupportedOnEmulator, Constants.No)]
 public class PgTests
 {
     private readonly AllTypesTableFixturePostgreSql _fixture;
@@ -57,6 +56,20 @@ public class PgTests
     public async Task BindPgJsonbArray() =>
         await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.PgJsonb), new string[] { "{\"key\": \"value\"}", null, "{\"other-key\": \"other-value\"}" });
 
+    [Fact]
+    public async Task BindPgOid() =>
+        await TestBindNonNull(SpannerDbType.PgOid, 1234, r => r.GetInt64(0));
+
+    [Fact]
+    public Task BindPgOidArray() => TestBindNonNull(
+        SpannerDbType.ArrayOf(SpannerDbType.PgOid),
+        new long?[] { 1, null, 0 });
+
+    [Fact]
+    public Task BindPgOidEmptyArray() => TestBindNonNull(
+        SpannerDbType.ArrayOf(SpannerDbType.PgOid),
+        new long[] { });
+
     private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
     {
         using var connection = GetConnection();
@@ -70,8 +83,10 @@ public class PgTests
     {
         SpannerDbType.PgNumeric,
         SpannerDbType.PgJsonb,
+        SpannerDbType.PgOid,
         SpannerDbType.ArrayOf(SpannerDbType.PgNumeric),
-        SpannerDbType.ArrayOf(SpannerDbType.PgJsonb)
+        SpannerDbType.ArrayOf(SpannerDbType.PgJsonb),
+        SpannerDbType.ArrayOf(SpannerDbType.PgOid)
     };
 
     [Theory]
@@ -81,6 +96,24 @@ public class PgTests
         using var connection = GetConnection();
         using var cmd = connection.CreateSelectCommand("SELECT $1");
         cmd.Parameters.Add("p1", parameterType, null);
+        using var reader = await cmd.ExecuteReaderAsync();
+        await BindingTests.AssertNull(reader);
+    }
+
+    [Fact]
+    public async Task ReadCastAsOid()
+    {
+        using var connection = GetConnection();
+        using var cmd = connection.CreateSelectCommand("SELECT 123::oid");
+        using var reader = await cmd.ExecuteReaderAsync();
+        await BindingTests.AssertNotNull<long>(reader, 123, r => r.GetInt64(0));
+    }
+
+    [Fact]
+    public async Task ReadCastAsNullOid()
+    {
+        using var connection = GetConnection();
+        using var cmd = connection.CreateSelectCommand("SELECT null::oid");
         using var reader = await cmd.ExecuteReaderAsync();
         await BindingTests.AssertNull(reader);
     }

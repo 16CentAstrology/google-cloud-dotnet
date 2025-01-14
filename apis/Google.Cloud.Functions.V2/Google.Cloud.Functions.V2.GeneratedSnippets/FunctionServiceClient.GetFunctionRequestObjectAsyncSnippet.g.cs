@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Functions.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudfunctions_v2_generated_FunctionService_GetFunction_async]
     using Google.Cloud.Functions.V2;
@@ -38,6 +38,7 @@ namespace Google.Cloud.Functions.V2.Snippets
             GetFunctionRequest request = new GetFunctionRequest
             {
                 FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                Revision = "",
             };
             // Make the request
             Function response = await functionServiceClient.GetFunctionAsync(request);

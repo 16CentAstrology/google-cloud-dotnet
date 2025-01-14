@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Dialogflow.V2
 {
@@ -53,6 +53,9 @@ namespace Google.Cloud.Dialogflow.V2
             CompleteConversationSettings = existing.CompleteConversationSettings;
             ListMessagesSettings = existing.ListMessagesSettings;
             SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
+            GenerateStatelessSummarySettings = existing.GenerateStatelessSummarySettings;
+            GenerateStatelessSuggestionSettings = existing.GenerateStatelessSuggestionSettings;
+            SearchKnowledgeSettings = existing.SearchKnowledgeSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -169,6 +172,62 @@ namespace Google.Cloud.Dialogflow.V2
         public gaxgrpc::CallSettings SuggestConversationSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.GenerateStatelessSummary</c> and <c>ConversationsClient.GenerateStatelessSummaryAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateStatelessSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.GenerateStatelessSuggestion</c> and
+        /// <c>ConversationsClient.GenerateStatelessSuggestionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateStatelessSuggestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.SearchKnowledge</c> and <c>ConversationsClient.SearchKnowledgeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchKnowledgeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -216,14 +275,14 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationsClient.Create(callInvoker, Settings, Logger);
+            return ConversationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ConversationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationsClient.Create(callInvoker, Settings, Logger);
+            return ConversationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -781,13 +840,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversations in the specified project.
@@ -806,13 +874,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversations in the specified project.
@@ -831,13 +908,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversations in the specified project.
@@ -856,13 +942,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversations in the specified project.
@@ -881,13 +976,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversations in the specified project.
@@ -906,13 +1010,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specific conversation.
@@ -1205,13 +1318,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessages(new ListMessagesRequest
+        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages that belong to a given conversation.
@@ -1235,13 +1357,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessagesAsync(new ListMessagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages that belong to a given conversation.
@@ -1265,13 +1396,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessages(new ListMessagesRequest
+        public virtual gax::PagedEnumerable<ListMessagesResponse, Message> ListMessages(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessages(request, callSettings);
+        }
 
         /// <summary>
         /// Lists messages that belong to a given conversation.
@@ -1295,13 +1435,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Message"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMessagesAsync(new ListMessagesRequest
+        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, Message> ListMessagesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessagesRequest request = new ListMessagesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Suggests summary for a conversation based on specific historical messages.
@@ -1437,6 +1586,93 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(ConversationName conversation, st::CancellationToken cancellationToken) =>
             SuggestConversationSummaryAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateStatelessSummaryResponse GenerateStatelessSummary(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, st::CancellationToken cancellationToken) =>
+            GenerateStatelessSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateStatelessSuggestionResponse GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, st::CancellationToken cancellationToken) =>
+            GenerateStatelessSuggestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, st::CancellationToken cancellationToken) =>
+            SearchKnowledgeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Conversations client wrapper implementation, for convenient use.</summary>
@@ -1458,6 +1694,12 @@ namespace Google.Cloud.Dialogflow.V2
 
         private readonly gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> _callSuggestConversationSummary;
 
+        private readonly gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> _callGenerateStatelessSummary;
+
+        private readonly gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> _callGenerateStatelessSuggestion;
+
+        private readonly gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> _callSearchKnowledge;
+
         /// <summary>
         /// Constructs a client wrapper for the Conversations service, with the specified gRPC client and settings.
         /// </summary>
@@ -1468,7 +1710,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             ConversationsSettings effectiveSettings = settings ?? ConversationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>("CreateConversation", grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
@@ -1488,6 +1734,15 @@ namespace Google.Cloud.Dialogflow.V2
             _callSuggestConversationSummary = clientHelper.BuildApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>("SuggestConversationSummary", grpcClient.SuggestConversationSummaryAsync, grpcClient.SuggestConversationSummary, effectiveSettings.SuggestConversationSummarySettings).WithGoogleRequestParam("conversation", request => request.Conversation);
             Modify_ApiCall(ref _callSuggestConversationSummary);
             Modify_SuggestConversationSummaryApiCall(ref _callSuggestConversationSummary);
+            _callGenerateStatelessSummary = clientHelper.BuildApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>("GenerateStatelessSummary", grpcClient.GenerateStatelessSummaryAsync, grpcClient.GenerateStatelessSummary, effectiveSettings.GenerateStatelessSummarySettings).WithGoogleRequestParam("stateless_conversation.parent", request => request.StatelessConversation?.Parent);
+            Modify_ApiCall(ref _callGenerateStatelessSummary);
+            Modify_GenerateStatelessSummaryApiCall(ref _callGenerateStatelessSummary);
+            _callGenerateStatelessSuggestion = clientHelper.BuildApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse>("GenerateStatelessSuggestion", grpcClient.GenerateStatelessSuggestionAsync, grpcClient.GenerateStatelessSuggestion, effectiveSettings.GenerateStatelessSuggestionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGenerateStatelessSuggestion);
+            Modify_GenerateStatelessSuggestionApiCall(ref _callGenerateStatelessSuggestion);
+            _callSearchKnowledge = clientHelper.BuildApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse>("SearchKnowledge", grpcClient.SearchKnowledgeAsync, grpcClient.SearchKnowledge, effectiveSettings.SearchKnowledgeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchKnowledge);
+            Modify_SearchKnowledgeApiCall(ref _callSearchKnowledge);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1504,6 +1759,12 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_ListMessagesApiCall(ref gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> call);
 
         partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
+
+        partial void Modify_GenerateStatelessSummaryApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> call);
+
+        partial void Modify_GenerateStatelessSuggestionApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> call);
+
+        partial void Modify_SearchKnowledgeApiCall(ref gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> call);
 
         partial void OnConstruction(Conversations.ConversationsClient grpcClient, ConversationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1524,6 +1785,12 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_ListMessagesRequest(ref ListMessagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateStatelessSummaryRequest(ref GenerateStatelessSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateStatelessSuggestionRequest(ref GenerateStatelessSuggestionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchKnowledgeRequest(ref SearchKnowledgeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new conversation. Conversations are auto-completed after 24
@@ -1721,6 +1988,82 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_SuggestConversationSummaryRequest(ref request, ref callSettings);
             return _callSuggestConversationSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateStatelessSummaryResponse GenerateStatelessSummary(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSummary.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateStatelessSuggestionResponse GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSuggestionRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSuggestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSuggestionRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSuggestion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchKnowledgeRequest(ref request, ref callSettings);
+            return _callSearchKnowledge.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchKnowledgeRequest(ref request, ref callSettings);
+            return _callSearchKnowledge.Async(request, callSettings);
         }
     }
 

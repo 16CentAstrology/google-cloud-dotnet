@@ -10,10 +10,40 @@
         "grpc": {
           "libraryClient": "DataMigrationServiceClient",
           "rpcs": {
+            "ApplyConversionWorkspace": {
+              "methods": [
+                "ApplyConversionWorkspace",
+                "ApplyConversionWorkspaceAsync"
+              ]
+            },
+            "CommitConversionWorkspace": {
+              "methods": [
+                "CommitConversionWorkspace",
+                "CommitConversionWorkspaceAsync"
+              ]
+            },
+            "ConvertConversionWorkspace": {
+              "methods": [
+                "ConvertConversionWorkspace",
+                "ConvertConversionWorkspaceAsync"
+              ]
+            },
             "CreateConnectionProfile": {
               "methods": [
                 "CreateConnectionProfile",
                 "CreateConnectionProfileAsync"
+              ]
+            },
+            "CreateConversionWorkspace": {
+              "methods": [
+                "CreateConversionWorkspace",
+                "CreateConversionWorkspaceAsync"
+              ]
+            },
+            "CreateMappingRule": {
+              "methods": [
+                "CreateMappingRule",
+                "CreateMappingRuleAsync"
               ]
             },
             "CreateMigrationJob": {
@@ -22,10 +52,28 @@
                 "CreateMigrationJobAsync"
               ]
             },
+            "CreatePrivateConnection": {
+              "methods": [
+                "CreatePrivateConnection",
+                "CreatePrivateConnectionAsync"
+              ]
+            },
             "DeleteConnectionProfile": {
               "methods": [
                 "DeleteConnectionProfile",
                 "DeleteConnectionProfileAsync"
+              ]
+            },
+            "DeleteConversionWorkspace": {
+              "methods": [
+                "DeleteConversionWorkspace",
+                "DeleteConversionWorkspaceAsync"
+              ]
+            },
+            "DeleteMappingRule": {
+              "methods": [
+                "DeleteMappingRule",
+                "DeleteMappingRuleAsync"
               ]
             },
             "DeleteMigrationJob": {
@@ -34,10 +82,40 @@
                 "DeleteMigrationJobAsync"
               ]
             },
+            "DeletePrivateConnection": {
+              "methods": [
+                "DeletePrivateConnection",
+                "DeletePrivateConnectionAsync"
+              ]
+            },
+            "DescribeConversionWorkspaceRevisions": {
+              "methods": [
+                "DescribeConversionWorkspaceRevisions",
+                "DescribeConversionWorkspaceRevisionsAsync"
+              ]
+            },
+            "DescribeDatabaseEntities": {
+              "methods": [
+                "DescribeDatabaseEntities",
+                "DescribeDatabaseEntitiesAsync"
+              ]
+            },
+            "FetchStaticIps": {
+              "methods": [
+                "FetchStaticIps",
+                "FetchStaticIpsAsync"
+              ]
+            },
             "GenerateSshScript": {
               "methods": [
                 "GenerateSshScript",
                 "GenerateSshScriptAsync"
+              ]
+            },
+            "GenerateTcpProxyScript": {
+              "methods": [
+                "GenerateTcpProxyScript",
+                "GenerateTcpProxyScriptAsync"
               ]
             },
             "GetConnectionProfile": {
@@ -46,10 +124,34 @@
                 "GetConnectionProfileAsync"
               ]
             },
+            "GetConversionWorkspace": {
+              "methods": [
+                "GetConversionWorkspace",
+                "GetConversionWorkspaceAsync"
+              ]
+            },
+            "GetMappingRule": {
+              "methods": [
+                "GetMappingRule",
+                "GetMappingRuleAsync"
+              ]
+            },
             "GetMigrationJob": {
               "methods": [
                 "GetMigrationJob",
                 "GetMigrationJobAsync"
+              ]
+            },
+            "GetPrivateConnection": {
+              "methods": [
+                "GetPrivateConnection",
+                "GetPrivateConnectionAsync"
+              ]
+            },
+            "ImportMappingRules": {
+              "methods": [
+                "ImportMappingRules",
+                "ImportMappingRulesAsync"
               ]
             },
             "ListConnectionProfiles": {
@@ -58,10 +160,28 @@
                 "ListConnectionProfilesAsync"
               ]
             },
+            "ListConversionWorkspaces": {
+              "methods": [
+                "ListConversionWorkspaces",
+                "ListConversionWorkspacesAsync"
+              ]
+            },
+            "ListMappingRules": {
+              "methods": [
+                "ListMappingRules",
+                "ListMappingRulesAsync"
+              ]
+            },
             "ListMigrationJobs": {
               "methods": [
                 "ListMigrationJobs",
                 "ListMigrationJobsAsync"
+              ]
+            },
+            "ListPrivateConnections": {
+              "methods": [
+                "ListPrivateConnections",
+                "ListPrivateConnectionsAsync"
               ]
             },
             "PromoteMigrationJob": {
@@ -82,6 +202,24 @@
                 "ResumeMigrationJobAsync"
               ]
             },
+            "RollbackConversionWorkspace": {
+              "methods": [
+                "RollbackConversionWorkspace",
+                "RollbackConversionWorkspaceAsync"
+              ]
+            },
+            "SearchBackgroundJobs": {
+              "methods": [
+                "SearchBackgroundJobs",
+                "SearchBackgroundJobsAsync"
+              ]
+            },
+            "SeedConversionWorkspace": {
+              "methods": [
+                "SeedConversionWorkspace",
+                "SeedConversionWorkspaceAsync"
+              ]
+            },
             "StartMigrationJob": {
               "methods": [
                 "StartMigrationJob",
@@ -98,6 +236,12 @@
               "methods": [
                 "UpdateConnectionProfile",
                 "UpdateConnectionProfileAsync"
+              ]
+            },
+            "UpdateConversionWorkspace": {
+              "methods": [
+                "UpdateConversionWorkspace",
+                "UpdateConversionWorkspaceAsync"
               ]
             },
             "UpdateMigrationJob": {

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.PubSub.V1
 {
@@ -106,7 +106,7 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry delay multiplier: 4</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
@@ -120,7 +120,7 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PublishSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings PublishSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 4, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -293,14 +293,14 @@ namespace Google.Cloud.PubSub.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
+            return PublisherServiceApiClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PublisherServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
+            return PublisherServiceApiClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -402,7 +402,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -412,7 +412,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -422,7 +422,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -432,7 +432,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -452,7 +452,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -472,7 +472,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -489,7 +489,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -509,7 +509,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -529,7 +529,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -545,8 +545,8 @@ namespace Google.Cloud.PubSub.V1
             CreateTopicAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -555,8 +555,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -565,8 +565,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -575,8 +575,8 @@ namespace Google.Cloud.PubSub.V1
             UpdateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -598,8 +598,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -621,8 +621,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -939,13 +939,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Topic"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopics(new ListTopicsRequest
+        public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching topics.
@@ -964,13 +973,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Topic"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicsAsync(new ListTopicsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching topics.
@@ -989,13 +1007,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Topic"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopics(new ListTopicsRequest
+        public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopics(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching topics.
@@ -1014,13 +1041,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Topic"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicsAsync(new ListTopicsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
             {
                 ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the attached subscriptions on this topic.
@@ -1057,13 +1093,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSubscriptions(new ListTopicSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the attached subscriptions on this topic.
@@ -1082,13 +1127,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSubscriptionsAsync(new ListTopicSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSubscriptionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the attached subscriptions on this topic.
@@ -1107,13 +1161,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSubscriptions(new ListTopicSubscriptionsRequest
+        public virtual gax::PagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSubscriptions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the attached subscriptions on this topic.
@@ -1132,13 +1195,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSubscriptionsAsync(new ListTopicSubscriptionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSubscriptionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the snapshots on this topic. Snapshots are used in
@@ -1187,13 +1259,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSnapshots(new ListTopicSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest
             {
                 Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the snapshots on this topic. Snapshots are used in
@@ -1216,13 +1297,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSnapshotsAsync(new ListTopicSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(string topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest
             {
                 Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the snapshots on this topic. Snapshots are used in
@@ -1245,13 +1335,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSnapshots(new ListTopicSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshots(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest
             {
                 TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the names of the snapshots on this topic. Snapshots are used in
@@ -1274,13 +1373,22 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTopicSnapshotsAsync(new ListTopicSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTopicSnapshotsResponse, string> ListTopicSnapshotsAsync(TopicName topic, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest
             {
                 TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTopicSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
@@ -1502,7 +1610,11 @@ namespace Google.Cloud.PubSub.V1
         {
             GrpcClient = grpcClient;
             PublisherServiceApiSettings effectiveSettings = settings ?? PublisherServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>("CreateTopic", grpcClient.CreateTopicAsync, grpcClient.CreateTopic, effectiveSettings.CreateTopicSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateTopic);
@@ -1582,7 +1694,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1595,7 +1707,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the [resource name rules]
-        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1607,8 +1719,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1620,8 +1732,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

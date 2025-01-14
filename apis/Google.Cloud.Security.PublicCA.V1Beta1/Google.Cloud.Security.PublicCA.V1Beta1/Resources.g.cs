@@ -53,6 +53,7 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
   /// A representation of an ExternalAccountKey used for [external account
   /// binding](https://tools.ietf.org/html/rfc8555#section-7.3.4) within ACME.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExternalAccountKey : pb::IMessage<ExternalAccountKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

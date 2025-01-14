@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2Beta1
 {
@@ -349,14 +349,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AgentsClient.Create(callInvoker, Settings, Logger);
+            return AgentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AgentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AgentsClient.Create(callInvoker, Settings, Logger);
+            return AgentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -917,13 +917,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgents(new SearchAgentsRequest
+        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of agents.
@@ -948,13 +957,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgentsAsync(new SearchAgentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of agents.
@@ -979,13 +997,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgents(new SearchAgentsRequest
+        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of agents.
@@ -1010,13 +1037,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgentsAsync(new SearchAgentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of agents.
@@ -1041,13 +1077,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgents(new SearchAgentsRequest
+        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgents(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of agents.
@@ -1072,13 +1117,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Agent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAgentsAsync(new SearchAgentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAgentsRequest request = new SearchAgentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAgentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Trains the specified agent.
@@ -2041,7 +2095,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             AgentsSettings effectiveSettings = settings ?? AgentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             TrainAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainAgentOperationsSettings, logger);
             ExportAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAgentOperationsSettings, logger);
             ImportAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAgentOperationsSettings, logger);

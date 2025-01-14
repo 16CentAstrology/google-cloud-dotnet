@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gckv = Google.Cloud.Kms.V1;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Kms.Inventory.V1
 {
@@ -108,14 +108,14 @@ namespace Google.Cloud.Kms.Inventory.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return KeyDashboardServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyDashboardServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<KeyDashboardServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return KeyDashboardServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyDashboardServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -250,13 +250,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -277,13 +286,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -304,13 +322,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Returns cryptographic keys managed by Cloud KMS in a given Cloud project.
@@ -331,13 +358,22 @@ namespace Google.Cloud.Kms.Inventory.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="gckv::CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, gckv::CryptoKey> ListCryptoKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
     }
 
     /// <summary>KeyDashboardService client wrapper implementation, for convenient use.</summary>
@@ -359,7 +395,11 @@ namespace Google.Cloud.Kms.Inventory.V1
         {
             GrpcClient = grpcClient;
             KeyDashboardServiceSettings effectiveSettings = settings ?? KeyDashboardServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListCryptoKeys = clientHelper.BuildApiCall<ListCryptoKeysRequest, ListCryptoKeysResponse>("ListCryptoKeys", grpcClient.ListCryptoKeysAsync, grpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCryptoKeys);
             Modify_ListCryptoKeysApiCall(ref _callListCryptoKeys);

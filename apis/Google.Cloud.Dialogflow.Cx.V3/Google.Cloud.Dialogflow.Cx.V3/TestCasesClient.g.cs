@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
@@ -405,14 +405,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TestCasesClient.Create(callInvoker, Settings, Logger);
+            return TestCasesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TestCasesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TestCasesClient.Create(callInvoker, Settings, Logger);
+            return TestCasesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -532,7 +532,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all pages for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -544,20 +544,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCases(new ListTestCasesRequest
+        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCases(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all pages for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -569,20 +578,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCasesAsync(new ListTestCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all pages for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -594,20 +612,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCases(new ListTestCasesRequest
+        public virtual gax::PagedEnumerable<ListTestCasesResponse, TestCase> ListTestCases(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCases(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all pages for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -619,13 +646,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCase"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCasesAsync(new ListTestCasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCasesResponse, TestCase> ListTestCasesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCasesRequest request = new ListTestCasesRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch deletes test cases.
@@ -659,7 +695,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -674,7 +710,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -689,7 +725,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -701,7 +737,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -716,7 +752,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -731,7 +767,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to delete test cases from.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -770,8 +806,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -786,8 +822,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -802,8 +838,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -815,8 +851,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -831,8 +867,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -847,8 +883,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -887,7 +923,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -906,7 +942,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -925,7 +961,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -940,7 +976,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -959,7 +995,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -978,7 +1014,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create the test case for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Format: `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="testCase">
         /// Required. The test case to create.
@@ -1432,7 +1468,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<ExportTestCasesResponse, ExportTestCasesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportTestCasesOperationsClient, callSettings);
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1441,7 +1478,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1450,12 +1488,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// testCases/&lt;TestCase ID&gt;`. Specify a `-` as a wildcard for TestCase ID to
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
+        /// Specify a `-` as a wildcard for TestCase ID to
         /// list results across multiple test cases.
         /// </param>
         /// <param name="pageToken">
@@ -1468,21 +1508,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResults(new ListTestCaseResultsRequest
+        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResults(request, callSettings);
+        }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// testCases/&lt;TestCase ID&gt;`. Specify a `-` as a wildcard for TestCase ID to
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
+        /// Specify a `-` as a wildcard for TestCase ID to
         /// list results across multiple test cases.
         /// </param>
         /// <param name="pageToken">
@@ -1495,21 +1546,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResultsAsync(new ListTestCaseResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResultsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// testCases/&lt;TestCase ID&gt;`. Specify a `-` as a wildcard for TestCase ID to
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
+        /// Specify a `-` as a wildcard for TestCase ID to
         /// list results across multiple test cases.
         /// </param>
         /// <param name="pageToken">
@@ -1522,21 +1584,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResults(new ListTestCaseResultsRequest
+        public virtual gax::PagedEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResults(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 ParentAsTestCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResults(request, callSettings);
+        }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// testCases/&lt;TestCase ID&gt;`. Specify a `-` as a wildcard for TestCase ID to
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;`.
+        /// Specify a `-` as a wildcard for TestCase ID to
         /// list results across multiple test cases.
         /// </param>
         /// <param name="pageToken">
@@ -1549,13 +1622,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TestCaseResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTestCaseResultsAsync(new ListTestCaseResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTestCaseResultsResponse, TestCaseResult> ListTestCaseResultsAsync(TestCaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTestCaseResultsRequest request = new ListTestCaseResultsRequest
             {
                 ParentAsTestCaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTestCaseResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a test case result.
@@ -1589,8 +1671,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1605,8 +1687,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1621,8 +1703,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1634,8 +1716,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1650,8 +1732,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1666,8 +1748,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the testcase.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/testCases/&lt;TestCase ID&gt;/results/&lt;TestCaseResult ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/testCases/&lt;TestCaseID&gt;/results/&lt;TestCaseResultID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1716,7 +1798,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             TestCasesSettings effectiveSettings = settings ?? TestCasesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunTestCaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTestCaseOperationsSettings, logger);
             BatchRunTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchRunTestCasesOperationsSettings, logger);
             ImportTestCasesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportTestCasesOperationsSettings, logger);
@@ -2150,7 +2236,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2162,7 +2249,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

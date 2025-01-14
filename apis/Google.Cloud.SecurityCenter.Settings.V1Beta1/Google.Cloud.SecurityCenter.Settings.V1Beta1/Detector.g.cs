@@ -60,6 +60,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   ///
   /// Defines a detector, its billing tier and any applicable labels.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Detector : pb::IMessage<Detector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

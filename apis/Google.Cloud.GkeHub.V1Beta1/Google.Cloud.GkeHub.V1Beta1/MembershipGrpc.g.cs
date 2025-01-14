@@ -3,7 +3,7 @@
 //     source: google/cloud/gkehub/v1beta1/membership.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -25,9 +25,11 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.GkeHub.V1Beta1 {
   /// <summary>
   /// The GKE Hub MembershipService handles the registration of many Kubernetes
-  /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+  /// clusters to Google Cloud, represented with the
+  /// [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
   ///
-  /// GKE Hub is currently only available in the global region.
+  /// GKE Hub is currently available in the global region and all regions in
+  /// https://cloud.google.com/compute/docs/regions-zones.
   ///
   /// **Membership management may be non-trivial:** it is recommended to use one
   /// of the Google-provided client libraries or tools where possible when working

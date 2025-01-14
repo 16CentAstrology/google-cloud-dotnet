@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.Admin.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Bigtable.Admin.V2;
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Iam.V1;
     using Google.LongRunning;
@@ -1054,6 +1055,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 DefaultStorageType = StorageType.Unspecified,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
                 ClusterConfig = new Cluster.Types.ClusterConfig(),
+                NodeScalingFactor = Cluster.Types.NodeScalingFactor.Unspecified,
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response = bigtableInstanceAdminClient.UpdateCluster(request);
@@ -1093,6 +1095,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 DefaultStorageType = StorageType.Unspecified,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
                 ClusterConfig = new Cluster.Types.ClusterConfig(),
+                NodeScalingFactor = Cluster.Types.NodeScalingFactor.Unspecified,
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response = await bigtableInstanceAdminClient.UpdateClusterAsync(request);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -156,14 +156,14 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return MigrationServiceClient.Create(callInvoker, Settings, Logger);
+            return MigrationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<MigrationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return MigrationServiceClient.Create(callInvoker, Settings, Logger);
+            return MigrationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -196,7 +196,7 @@ namespace Google.Cloud.AIPlatform.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MigrationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(MigrationService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -304,13 +304,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResources(new SearchMigratableResourcesRequest
+        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -333,13 +342,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResourcesAsync(new SearchMigratableResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -362,13 +380,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResources(new SearchMigratableResourcesRequest
+        public virtual gax::PagedEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResources(request, callSettings);
+        }
 
         /// <summary>
         /// Searches all of the resources in automl.googleapis.com,
@@ -391,13 +418,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MigratableResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchMigratableResourcesAsync(new SearchMigratableResourcesRequest
+        public virtual gax::PagedAsyncEnumerable<SearchMigratableResourcesResponse, MigratableResource> SearchMigratableResourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMigratableResourcesRequest request = new SearchMigratableResourcesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMigratableResourcesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Batch migrates resources from ml.googleapis.com, automl.googleapis.com,
@@ -614,7 +650,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             MigrationServiceSettings effectiveSettings = settings ?? MigrationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BatchMigrateResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchMigrateResourcesOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.Dialogflow.Cx.V3;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -61,6 +63,35 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ServerStreamingDetectIntent</summary>
+        public async Task ServerStreamingDetectIntentRequestObject()
+        {
+            // Snippet: ServerStreamingDetectIntent(DetectIntentRequest, CallSettings)
+            // Create client
+            SessionsClient sessionsClient = SessionsClient.Create();
+            // Initialize request argument(s)
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                QueryParams = new QueryParameters(),
+                QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            // Make the request, returning a streaming response
+            using SessionsClient.ServerStreamingDetectIntentStream response = sessionsClient.ServerStreamingDetectIntent(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<DetectIntentResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                DetectIntentResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for StreamingDetectIntent</summary>
         public async Task StreamingDetectIntent()
         {
@@ -68,7 +99,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
+            using SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -98,6 +129,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                     QueryInput = new QueryInput(),
                     OutputAudioConfig = new OutputAudioConfig(),
                     EnablePartialResponse = false,
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
@@ -185,6 +217,45 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             };
             // Make the request
             FulfillIntentResponse response = await sessionsClient.FulfillIntentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitAnswerFeedback</summary>
+        public void SubmitAnswerFeedbackRequestObject()
+        {
+            // Snippet: SubmitAnswerFeedback(SubmitAnswerFeedbackRequest, CallSettings)
+            // Create client
+            SessionsClient sessionsClient = SessionsClient.Create();
+            // Initialize request argument(s)
+            SubmitAnswerFeedbackRequest request = new SubmitAnswerFeedbackRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                ResponseId = "",
+                AnswerFeedback = new AnswerFeedback(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnswerFeedback response = sessionsClient.SubmitAnswerFeedback(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitAnswerFeedbackAsync</summary>
+        public async Task SubmitAnswerFeedbackRequestObjectAsync()
+        {
+            // Snippet: SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest, CallSettings)
+            // Additional: SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest, CancellationToken)
+            // Create client
+            SessionsClient sessionsClient = await SessionsClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitAnswerFeedbackRequest request = new SubmitAnswerFeedbackRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                ResponseId = "",
+                AnswerFeedback = new AnswerFeedback(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnswerFeedback response = await sessionsClient.SubmitAnswerFeedbackAsync(request);
             // End snippet
         }
     }

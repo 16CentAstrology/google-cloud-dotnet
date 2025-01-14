@@ -102,11 +102,11 @@ namespace Google.Cloud.Trace.V2 {
             "dW5jYXRhYmxlU3RyaW5nEkIKCGJ1aWxkX2lkGAIgASgLMjAuZ29vZ2xlLmRl",
             "dnRvb2xzLmNsb3VkdHJhY2UudjIuVHJ1bmNhdGFibGVTdHJpbmciQAoRVHJ1",
             "bmNhdGFibGVTdHJpbmcSDQoFdmFsdWUYASABKAkSHAoUdHJ1bmNhdGVkX2J5",
-            "dGVfY291bnQYAiABKAVCxQEKIWNvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0",
-            "cmFjZS52MkIKVHJhY2VQcm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2RldnRvb2xzL2Nsb3VkdHJhY2UvdjI7Y2xvdWR0",
-            "cmFjZaoCFUdvb2dsZS5DbG91ZC5UcmFjZS5WMsoCFUdvb2dsZVxDbG91ZFxU",
-            "cmFjZVxWMuoCGEdvb2dsZTo6Q2xvdWQ6OlRyYWNlOjpWMmIGcHJvdG8z"));
+            "dGVfY291bnQYAiABKAVCrQEKIWNvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0",
+            "cmFjZS52MkIKVHJhY2VQcm90b1ABWi9jbG91ZC5nb29nbGUuY29tL2dvL3Ry",
+            "YWNlL2FwaXYyL3RyYWNlcGI7dHJhY2VwYqoCFUdvb2dsZS5DbG91ZC5UcmFj",
+            "ZS5WMsoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMuoCGEdvb2dsZTo6Q2xvdWQ6",
+            "OlRyYWNlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -137,6 +137,7 @@ namespace Google.Cloud.Trace.V2 {
   /// Spans do not need to be contiguous. There might be
   /// gaps or overlaps between spans in a trace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Span : pb::IMessage<Span>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1013,6 +1014,7 @@ namespace Google.Cloud.Trace.V2 {
       /// <summary>
       /// A set of attributes as key-value pairs.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Attributes : pb::IMessage<Attributes>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1185,7 +1187,7 @@ namespace Google.Cloud.Trace.V2 {
           if (other == null) {
             return;
           }
-          attributeMap_.Add(other.attributeMap_);
+          attributeMap_.MergeFrom(other.attributeMap_);
           if (other.DroppedAttributesCount != 0) {
             DroppedAttributesCount = other.DroppedAttributesCount;
           }
@@ -1245,6 +1247,7 @@ namespace Google.Cloud.Trace.V2 {
       /// <summary>
       /// A time-stamped annotation or message event in the Span.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimeEvent : pb::IMessage<TimeEvent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1591,6 +1594,7 @@ namespace Google.Cloud.Trace.V2 {
           /// <summary>
           /// Text annotation with a set of attributes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Annotation : pb::IMessage<Annotation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1846,6 +1850,7 @@ namespace Google.Cloud.Trace.V2 {
           /// <summary>
           /// An event describing a message sent/received between Spans.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class MessageEvent : pb::IMessage<MessageEvent>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2198,6 +2203,7 @@ namespace Google.Cloud.Trace.V2 {
       /// on the span, consisting of either user-supplied key:value pairs, or
       /// details of a message sent/received between Spans.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimeEvents : pb::IMessage<TimeEvents>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2467,6 +2473,7 @@ namespace Google.Cloud.Trace.V2 {
       /// where a single batch handler processes multiple requests from different
       /// traces or when the handler receives a request from a different project.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Link : pb::IMessage<Link>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2820,6 +2827,7 @@ namespace Google.Cloud.Trace.V2 {
       /// A collection of links, which are references from this span to a span
       /// in the same or different trace.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Links : pb::IMessage<Links>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3050,6 +3058,7 @@ namespace Google.Cloud.Trace.V2 {
   /// <summary>
   /// The allowed types for `[VALUE]` in a `[KEY]:[VALUE]` attribute.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttributeValue : pb::IMessage<AttributeValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3128,10 +3137,24 @@ namespace Google.Cloud.Trace.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntValue {
-      get { return valueCase_ == ValueOneofCase.IntValue ? (long) value_ : 0L; }
+      get { return HasIntValue ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.IntValue;
+      }
+    }
+    /// <summary>Gets whether the "int_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntValue {
+      get { return valueCase_ == ValueOneofCase.IntValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntValue() {
+      if (HasIntValue) {
+        ClearValue();
       }
     }
 
@@ -3143,10 +3166,24 @@ namespace Google.Cloud.Trace.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -3199,8 +3236,8 @@ namespace Google.Cloud.Trace.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.IntValue) hash ^= IntValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasIntValue) hash ^= IntValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3224,11 +3261,11 @@ namespace Google.Cloud.Trace.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(24);
         output.WriteBool(BoolValue);
       }
@@ -3246,11 +3283,11 @@ namespace Google.Cloud.Trace.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(24);
         output.WriteBool(BoolValue);
       }
@@ -3267,10 +3304,10 @@ namespace Google.Cloud.Trace.V2 {
       if (valueCase_ == ValueOneofCase.StringValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -3374,6 +3411,7 @@ namespace Google.Cloud.Trace.V2 {
   /// <summary>
   /// A call stack appearing in a trace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StackTrace : pb::IMessage<StackTrace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3629,6 +3667,7 @@ namespace Google.Cloud.Trace.V2 {
       /// <summary>
       /// Represents a single stack frame in a stack trace.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StackFrame : pb::IMessage<StackFrame>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4115,6 +4154,7 @@ namespace Google.Cloud.Trace.V2 {
       /// <summary>
       /// A collection of stack frames, which can be truncated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StackFrames : pb::IMessage<StackFrames>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4346,6 +4386,7 @@ namespace Google.Cloud.Trace.V2 {
   /// <summary>
   /// Binary module.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Module : pb::IMessage<Module>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4601,6 +4642,7 @@ namespace Google.Cloud.Trace.V2 {
   /// <summary>
   /// Represents a string that might be shortened to a specified length.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TruncatableString : pb::IMessage<TruncatableString>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

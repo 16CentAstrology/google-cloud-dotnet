@@ -16,6 +16,8 @@
     href: emulators.md
   - name: Library types
     href: library-types.md
+  - name: REST libraries
+    href: rest-libraries.md
   - name: Protocol buffers
     href: protobuf.md
   - name: Supported platforms
@@ -32,6 +34,8 @@
     href: api-layers.md
   - name: Call settings
     href: call-settings.md
+  - name: Streaming RPCs
+    href: grpc-streaming.md
   - name: Resource clean-up
     href: cleanup.md
   - name: Versioning

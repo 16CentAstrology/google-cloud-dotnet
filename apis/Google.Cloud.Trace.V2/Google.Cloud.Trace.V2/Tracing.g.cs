@@ -35,19 +35,19 @@ namespace Google.Cloud.Trace.V2 {
             "BXNwYW5zGAIgAygLMiMuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjIu",
             "U3BhbkID4EECMroDCgxUcmFjZVNlcnZpY2USoQEKD0JhdGNoV3JpdGVTcGFu",
             "cxI1Lmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYyLkJhdGNoV3JpdGVT",
-            "cGFuc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiP4LT5JMCLCIn",
-            "L3YyL3tuYW1lPXByb2plY3RzLyp9L3RyYWNlczpiYXRjaFdyaXRlOgEq2kEK",
-            "bmFtZSxzcGFucxKJAQoKQ3JlYXRlU3BhbhIjLmdvb2dsZS5kZXZ0b29scy5j",
+            "cGFuc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiP9pBCm5hbWUs",
+            "c3BhbnOC0+STAiwiJy92Mi97bmFtZT1wcm9qZWN0cy8qfS90cmFjZXM6YmF0",
+            "Y2hXcml0ZToBKhKJAQoKQ3JlYXRlU3BhbhIjLmdvb2dsZS5kZXZ0b29scy5j",
             "bG91ZHRyYWNlLnYyLlNwYW4aIy5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFj",
             "ZS52Mi5TcGFuIjGC0+STAisiJi92Mi97bmFtZT1wcm9qZWN0cy8qL3RyYWNl",
             "cy8qL3NwYW5zLyp9OgEqGnrKQRljbG91ZHRyYWNlLmdvb2dsZWFwaXMuY29t",
             "0kFbaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
             "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3RyYWNlLmFw",
-            "cGVuZELHAQohY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYyQgxU",
-            "cmFjaW5nUHJvdG9QAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9kZXZ0b29scy9jbG91ZHRyYWNlL3YyO2Nsb3VkdHJhY2WqAhVH",
-            "b29nbGUuQ2xvdWQuVHJhY2UuVjLKAhVHb29nbGVcQ2xvdWRcVHJhY2VcVjLq",
-            "AhhHb29nbGU6OkNsb3VkOjpUcmFjZTo6VjJiBnByb3RvMw=="));
+            "cGVuZEKvAQohY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYyQgxU",
+            "cmFjaW5nUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby90cmFjZS9hcGl2",
+            "Mi90cmFjZXBiO3RyYWNlcGKqAhVHb29nbGUuQ2xvdWQuVHJhY2UuVjLKAhVH",
+            "b29nbGVcQ2xvdWRcVHJhY2VcVjLqAhhHb29nbGU6OkNsb3VkOjpUcmFjZTo6",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Trace.V2.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.Trace.V2 {
   /// <summary>
   /// The request message for the `BatchWriteSpans` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchWriteSpansRequest : pb::IMessage<BatchWriteSpansRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

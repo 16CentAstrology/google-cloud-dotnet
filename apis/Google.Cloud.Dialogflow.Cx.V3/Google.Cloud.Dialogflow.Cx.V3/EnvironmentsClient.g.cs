@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.Cx.V3
 {
@@ -350,14 +350,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
+            return EnvironmentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<EnvironmentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
+            return EnvironmentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -480,8 +480,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
-        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -493,13 +493,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -507,8 +516,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
-        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -520,13 +529,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -534,8 +552,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
-        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -547,13 +565,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all environments in the specified
@@ -561,8 +588,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
-        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// environments for. Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -574,13 +601,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified
@@ -619,8 +655,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -637,8 +672,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -655,8 +689,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -670,8 +703,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -688,8 +720,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -706,8 +737,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -810,7 +840,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -839,7 +869,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -868,7 +898,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -893,7 +923,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -922,7 +952,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -951,7 +981,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="parent">
         /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -1156,8 +1186,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1174,8 +1203,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1192,8 +1220,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1207,8 +1234,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1225,8 +1251,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1243,8 +1268,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <param name="name">
         /// Required. The name of the
         /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
-        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1277,8 +1301,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1290,13 +1314,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistory(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistory(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1304,8 +1337,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1317,13 +1350,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistoryAsync(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistoryAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1331,8 +1373,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1344,13 +1386,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistory(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistory(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistory(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up the history of the specified
@@ -1358,8 +1409,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1371,13 +1422,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            LookupEnvironmentHistoryAsync(new LookupEnvironmentHistoryRequest
+        public virtual gax::PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, Environment> LookupEnvironmentHistoryAsync(EnvironmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
             {
                 EnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return LookupEnvironmentHistoryAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Kicks off a continuous test under the specified
@@ -1486,8 +1546,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="parent">
         /// Required. The environment to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1499,21 +1559,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResults(new ListContinuousTestResultsRequest
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1525,21 +1594,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1551,21 +1629,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResults(new ListContinuousTestResultsRequest
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResults(request, callSettings);
+        }
 
         /// <summary>
         /// Fetches a list of continuous test results for a given environment.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment to list results for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/
-        /// environments/&lt;Environment ID&gt;`.
+        /// Format:
+        /// `projects/&lt;ProjectID&gt;/locations/&lt;LocationID&gt;/agents/&lt;AgentID&gt;/environments/&lt;EnvironmentID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1577,13 +1664,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
             {
                 ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContinuousTestResultsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deploys a flow to the specified
@@ -1704,7 +1800,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             EnvironmentsSettings effectiveSettings = settings ?? EnvironmentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings, logger);
             RunContinuousTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunContinuousTestOperationsSettings, logger);

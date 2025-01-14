@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Kms.V1
 {
@@ -70,6 +70,8 @@ namespace Google.Cloud.Kms.V1
             RestoreCryptoKeyVersionSettings = existing.RestoreCryptoKeyVersionSettings;
             EncryptSettings = existing.EncryptSettings;
             DecryptSettings = existing.DecryptSettings;
+            RawEncryptSettings = existing.RawEncryptSettings;
+            RawDecryptSettings = existing.RawDecryptSettings;
             AsymmetricSignSettings = existing.AsymmetricSignSettings;
             AsymmetricDecryptSettings = existing.AsymmetricDecryptSettings;
             MacSignSettings = existing.MacSignSettings;
@@ -518,6 +520,30 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.RawEncrypt</c> and <c>KeyManagementServiceClient.RawEncryptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RawEncryptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.RawDecrypt</c> and <c>KeyManagementServiceClient.RawDecryptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RawDecryptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>KeyManagementServiceClient.AsymmetricSign</c> and <c>KeyManagementServiceClient.AsymmetricSignAsync</c>.
         /// </summary>
         /// <remarks>
@@ -676,14 +702,14 @@ namespace Google.Cloud.Kms.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return KeyManagementServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyManagementServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<KeyManagementServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return KeyManagementServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyManagementServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -832,13 +858,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KeyRing"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyRings(new ListKeyRingsRequest
+        public virtual gax::PagedEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyRingsRequest request = new ListKeyRingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyRings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyRings][google.cloud.kms.v1.KeyRing].
@@ -858,13 +893,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KeyRing"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyRingsAsync(new ListKeyRingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyRingsRequest request = new ListKeyRingsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyRingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyRings][google.cloud.kms.v1.KeyRing].
@@ -884,13 +928,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="KeyRing"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyRings(new ListKeyRingsRequest
+        public virtual gax::PagedEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyRingsRequest request = new ListKeyRingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyRings(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyRings][google.cloud.kms.v1.KeyRing].
@@ -910,13 +963,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="KeyRing"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyRingsAsync(new ListKeyRingsRequest
+        public virtual gax::PagedAsyncEnumerable<ListKeyRingsResponse, KeyRing> ListKeyRingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyRingsRequest request = new ListKeyRingsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyRingsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeys][google.cloud.kms.v1.CryptoKey].
@@ -953,13 +1015,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeys][google.cloud.kms.v1.CryptoKey].
@@ -978,13 +1049,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeys][google.cloud.kms.v1.CryptoKey].
@@ -1003,13 +1083,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CryptoKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeys(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeys(new ListCryptoKeysRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeys(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeys][google.cloud.kms.v1.CryptoKey].
@@ -1028,13 +1117,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CryptoKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeysAsync(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeysAsync(new ListCryptoKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeysResponse, CryptoKey> ListCryptoKeysAsync(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeysRequest request = new ListCryptoKeysRequest
             {
                 ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
@@ -1072,13 +1170,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeyVersions(new ListCryptoKeyVersionsRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeyVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
@@ -1098,13 +1205,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeyVersionsAsync(new ListCryptoKeyVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeyVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
@@ -1124,13 +1240,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeyVersions(new ListCryptoKeyVersionsRequest
+        public virtual gax::PagedEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersions(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
                 ParentAsCryptoKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeyVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
@@ -1150,13 +1275,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CryptoKeyVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCryptoKeyVersionsAsync(new ListCryptoKeyVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCryptoKeyVersionsResponse, CryptoKeyVersion> ListCryptoKeyVersionsAsync(CryptoKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCryptoKeyVersionsRequest request = new ListCryptoKeyVersionsRequest
             {
                 ParentAsCryptoKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCryptoKeyVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [ImportJobs][google.cloud.kms.v1.ImportJob].
@@ -1193,13 +1327,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobs(new ListImportJobsRequest
+        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [ImportJobs][google.cloud.kms.v1.ImportJob].
@@ -1218,13 +1361,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobsAsync(new ListImportJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [ImportJobs][google.cloud.kms.v1.ImportJob].
@@ -1243,13 +1395,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobs(new ListImportJobsRequest
+        public virtual gax::PagedEnumerable<ListImportJobsResponse, ImportJob> ListImportJobs(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobs(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [ImportJobs][google.cloud.kms.v1.ImportJob].
@@ -1268,13 +1429,22 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ImportJob"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListImportJobsAsync(new ListImportJobsRequest
+        public virtual gax::PagedAsyncEnumerable<ListImportJobsResponse, ImportJob> ListImportJobsAsync(KeyRingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImportJobsRequest request = new ListImportJobsRequest
             {
                 ParentAsKeyRingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImportJobsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns metadata for a given [KeyRing][google.cloud.kms.v1.KeyRing].
@@ -4048,6 +4218,84 @@ namespace Google.Cloud.Kms.V1
             DecryptAsync(name, ciphertext, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RawEncryptResponse RawEncrypt(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, st::CancellationToken cancellationToken) =>
+            RawEncryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RawDecryptResponse RawDecrypt(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, st::CancellationToken cancellationToken) =>
+            RawDecryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
         /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
         /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
@@ -4977,6 +5225,10 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> _callDecrypt;
 
+        private readonly gaxgrpc::ApiCall<RawEncryptRequest, RawEncryptResponse> _callRawEncrypt;
+
+        private readonly gaxgrpc::ApiCall<RawDecryptRequest, RawDecryptResponse> _callRawDecrypt;
+
         private readonly gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> _callAsymmetricSign;
 
         private readonly gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> _callAsymmetricDecrypt;
@@ -4998,7 +5250,11 @@ namespace Google.Cloud.Kms.V1
         {
             GrpcClient = grpcClient;
             KeyManagementServiceSettings effectiveSettings = settings ?? KeyManagementServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListKeyRings = clientHelper.BuildApiCall<ListKeyRingsRequest, ListKeyRingsResponse>("ListKeyRings", grpcClient.ListKeyRingsAsync, grpcClient.ListKeyRings, effectiveSettings.ListKeyRingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -5064,6 +5320,12 @@ namespace Google.Cloud.Kms.V1
             _callDecrypt = clientHelper.BuildApiCall<DecryptRequest, DecryptResponse>("Decrypt", grpcClient.DecryptAsync, grpcClient.Decrypt, effectiveSettings.DecryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDecrypt);
             Modify_DecryptApiCall(ref _callDecrypt);
+            _callRawEncrypt = clientHelper.BuildApiCall<RawEncryptRequest, RawEncryptResponse>("RawEncrypt", grpcClient.RawEncryptAsync, grpcClient.RawEncrypt, effectiveSettings.RawEncryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRawEncrypt);
+            Modify_RawEncryptApiCall(ref _callRawEncrypt);
+            _callRawDecrypt = clientHelper.BuildApiCall<RawDecryptRequest, RawDecryptResponse>("RawDecrypt", grpcClient.RawDecryptAsync, grpcClient.RawDecrypt, effectiveSettings.RawDecryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRawDecrypt);
+            Modify_RawDecryptApiCall(ref _callRawDecrypt);
             _callAsymmetricSign = clientHelper.BuildApiCall<AsymmetricSignRequest, AsymmetricSignResponse>("AsymmetricSign", grpcClient.AsymmetricSignAsync, grpcClient.AsymmetricSign, effectiveSettings.AsymmetricSignSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsymmetricSign);
             Modify_AsymmetricSignApiCall(ref _callAsymmetricSign);
@@ -5125,6 +5387,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_EncryptApiCall(ref gaxgrpc::ApiCall<EncryptRequest, EncryptResponse> call);
 
         partial void Modify_DecryptApiCall(ref gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> call);
+
+        partial void Modify_RawEncryptApiCall(ref gaxgrpc::ApiCall<RawEncryptRequest, RawEncryptResponse> call);
+
+        partial void Modify_RawDecryptApiCall(ref gaxgrpc::ApiCall<RawDecryptRequest, RawDecryptResponse> call);
 
         partial void Modify_AsymmetricSignApiCall(ref gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> call);
 
@@ -5188,6 +5454,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_EncryptRequest(ref EncryptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DecryptRequest(ref DecryptRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RawEncryptRequest(ref RawEncryptRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RawDecryptRequest(ref RawDecryptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AsymmetricSignRequest(ref AsymmetricSignRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5861,6 +6131,70 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_DecryptRequest(ref request, ref callSettings);
             return _callDecrypt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RawEncryptResponse RawEncrypt(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawEncryptRequest(ref request, ref callSettings);
+            return _callRawEncrypt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawEncryptRequest(ref request, ref callSettings);
+            return _callRawEncrypt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RawDecryptResponse RawDecrypt(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawDecryptRequest(ref request, ref callSettings);
+            return _callRawDecrypt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawDecryptRequest(ref request, ref callSettings);
+            return _callRawDecrypt.Async(request, callSettings);
         }
 
         /// <summary>

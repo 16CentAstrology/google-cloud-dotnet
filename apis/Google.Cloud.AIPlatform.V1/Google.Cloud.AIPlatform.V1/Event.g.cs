@@ -56,6 +56,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// An edge describing the relationship between an Artifact and an Execution in
   /// a lineage graph.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Event : pb::IMessage<Event>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -332,7 +333,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Type != global::Google.Cloud.AIPlatform.V1.Event.Types.Type.Unspecified) {
         Type = other.Type;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

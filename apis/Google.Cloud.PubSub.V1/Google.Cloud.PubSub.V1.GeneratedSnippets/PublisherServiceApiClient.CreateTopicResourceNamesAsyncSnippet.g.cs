@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_CreateTopic_async_flattened_resourceNames]
+    // [START pubsub_v1_generated_Publisher_CreateTopic_async_flattened_resourceNames]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -40,5 +40,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
             Topic response = await publisherServiceApiClient.CreateTopicAsync(name);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_CreateTopic_async_flattened_resourceNames]
+    // [END pubsub_v1_generated_Publisher_CreateTopic_async_flattened_resourceNames]
 }

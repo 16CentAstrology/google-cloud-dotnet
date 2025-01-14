@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,8 +18,9 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbav = Google.Cloud.BigQuery.AnalyticsHub.V1;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
+using lro = Google.LongRunning;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -41,6 +42,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcbav::AnalyticsHubServiceClientBuilder builder = new gcbav::AnalyticsHubServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcbav::AnalyticsHubServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAnalyticsHubServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbav::AnalyticsHubServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbav::AnalyticsHubServiceClientBuilder builder = new gcbav::AnalyticsHubServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

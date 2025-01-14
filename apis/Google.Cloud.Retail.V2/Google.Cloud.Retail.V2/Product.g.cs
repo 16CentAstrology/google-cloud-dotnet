@@ -92,6 +92,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Product captures all metadata information of items to be recommended or
   /// searched.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Product : pb::IMessage<Product>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -179,23 +180,22 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>Field number for the "expire_time" field.</summary>
     public const int ExpireTimeFieldNumber = 16;
     /// <summary>
-    /// The timestamp when this product becomes unavailable for
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search]. Note
-    /// that this is only applicable to
-    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
-    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION], and
-    /// ignored for [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT].
-    /// In general, we suggest the users to delete the stale products explicitly,
-    /// instead of using this field to determine staleness.
+    /// Note that this field is applied in the following ways:
     ///
-    /// If it is set, the [Product][google.cloud.retail.v2.Product] is not
-    /// available for
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] after
-    /// [expire_time][google.cloud.retail.v2.Product.expire_time]. However, the
-    /// product can still be retrieved by
-    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
-    /// and
-    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+    /// * If the [Product][google.cloud.retail.v2.Product] is already expired
+    /// when it is uploaded, this product
+    ///   is not indexed for search.
+    ///
+    /// * If the [Product][google.cloud.retail.v2.Product] is not expired when it
+    /// is uploaded, only the
+    ///   [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]'s and
+    ///   [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]'s
+    ///   expireTime is respected, and
+    ///   [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]'s
+    ///   expireTime is not used.
+    ///
+    /// In general, we suggest the users to delete the stale
+    /// products explicitly, instead of using this field to determine staleness.
     ///
     /// [expire_time][google.cloud.retail.v2.Product.expire_time] must be later
     /// than [available_time][google.cloud.retail.v2.Product.available_time] and
@@ -427,9 +427,10 @@ namespace Google.Cloud.Retail.V2 {
     /// error is returned.
     ///
     /// At most 250 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. Empty values are not allowed.
-    /// Each value must be a UTF-8 encoded string with a length limit of 5,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// [Product][google.cloud.retail.v2.Product] unless overridden through the
+    /// Google Cloud console. Empty values are not allowed. Each value must be a
+    /// UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
     ///
     /// Corresponding properties: Google Merchant Center property
     /// [google_product_category][mc_google_product_category]. Schema.org property
@@ -474,9 +475,10 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The brands of the product.
     ///
-    /// A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
-    /// string with a length limit of 1,000 characters. Otherwise, an
-    /// INVALID_ARGUMENT error is returned.
+    /// A maximum of 30 brands are allowed unless overridden through the Google
+    /// Cloud console. Each
+    /// brand must be a UTF-8 encoded string with a length limit of 1,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Corresponding properties: Google Merchant Center property
     /// [brand](https://support.google.com/merchants/answer/6324351). Schema.org
@@ -663,6 +665,15 @@ namespace Google.Cloud.Retail.V2 {
     /// The online availability of the [Product][google.cloud.retail.v2.Product].
     /// Default to
     /// [Availability.IN_STOCK][google.cloud.retail.v2.Product.Availability.IN_STOCK].
+    ///
+    /// For primary products with variants set the availability of the primary as
+    /// [Availability.OUT_OF_STOCK][google.cloud.retail.v2.Product.Availability.OUT_OF_STOCK]
+    /// and set the true availability at the variant level. This way the primary
+    /// product will be considered "in stock" as long as it has at least one
+    /// variant in stock.
+    ///
+    /// For primary products with no variants set the true availability at the
+    /// primary level.
     ///
     /// Corresponding properties: Google Merchant Center property
     /// [availability](https://support.google.com/merchants/answer/6324448).
@@ -987,9 +998,6 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// * [name][google.cloud.retail.v2.Product.name]
     /// * [color_info][google.cloud.retail.v2.Product.color_info]
-    ///
-    /// The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
-    /// returned.
     ///
     /// Note: Returning more fields in
     /// [SearchResponse][google.cloud.retail.v2.SearchResponse] can increase
@@ -1500,7 +1508,7 @@ namespace Google.Cloud.Retail.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       tags_.Add(other.tags_);
       if (other.priceInfo_ != null) {
         if (priceInfo_ == null) {

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataproc.V1
 {
@@ -362,14 +362,14 @@ namespace Google.Cloud.Dataproc.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ClusterControllerClient.Create(callInvoker, Settings, Logger);
+            return ClusterControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ClusterControllerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ClusterControllerClient.Create(callInvoker, Settings, Logger);
+            return ClusterControllerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1276,14 +1276,23 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all regions/{region}/clusters in a project alphabetically.
@@ -1305,14 +1314,23 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string projectId, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all regions/{region}/clusters in a project alphabetically.
@@ -1333,12 +1351,12 @@ namespace Google.Cloud.Dataproc.V1
         /// where **field** is one of `status.state`, `clusterName`, or `labels.[KEY]`,
         /// and `[KEY]` is a label key. **value** can be `*` to match all values.
         /// `status.state` can be one of the following: `ACTIVE`, `INACTIVE`,
-        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, or `UPDATING`. `ACTIVE`
-        /// contains the `CREATING`, `UPDATING`, and `RUNNING` states. `INACTIVE`
-        /// contains the `DELETING` and `ERROR` states.
-        /// `clusterName` is the name of the cluster provided at creation time.
-        /// Only the logical `AND` operator is supported; space-separated items are
-        /// treated as having an implicit `AND` operator.
+        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, `UPDATING`, `STOPPING`, or
+        /// `STOPPED`. `ACTIVE` contains the `CREATING`, `UPDATING`, and `RUNNING`
+        /// states. `INACTIVE` contains the `DELETING`, `ERROR`, `STOPPING`, and
+        /// `STOPPED` states. `clusterName` is the name of the cluster provided at
+        /// creation time. Only the logical `AND` operator is supported;
+        /// space-separated items are treated as having an implicit `AND` operator.
         /// 
         /// Example filter:
         /// 
@@ -1355,15 +1373,24 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all regions/{region}/clusters in a project alphabetically.
@@ -1384,12 +1411,12 @@ namespace Google.Cloud.Dataproc.V1
         /// where **field** is one of `status.state`, `clusterName`, or `labels.[KEY]`,
         /// and `[KEY]` is a label key. **value** can be `*` to match all values.
         /// `status.state` can be one of the following: `ACTIVE`, `INACTIVE`,
-        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, or `UPDATING`. `ACTIVE`
-        /// contains the `CREATING`, `UPDATING`, and `RUNNING` states. `INACTIVE`
-        /// contains the `DELETING` and `ERROR` states.
-        /// `clusterName` is the name of the cluster provided at creation time.
-        /// Only the logical `AND` operator is supported; space-separated items are
-        /// treated as having an implicit `AND` operator.
+        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, `UPDATING`, `STOPPING`, or
+        /// `STOPPED`. `ACTIVE` contains the `CREATING`, `UPDATING`, and `RUNNING`
+        /// states. `INACTIVE` contains the `DELETING`, `ERROR`, `STOPPING`, and
+        /// `STOPPED` states. `clusterName` is the name of the cluster provided at
+        /// creation time. Only the logical `AND` operator is supported;
+        /// space-separated items are treated as having an implicit `AND` operator.
         /// 
         /// Example filter:
         /// 
@@ -1406,15 +1433,24 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string projectId, string region, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets cluster diagnostic information. The returned
@@ -1603,7 +1639,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             ClusterControllerSettings effectiveSettings = settings ?? ClusterControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             StopClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopClusterOperationsSettings, logger);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Notebooks.V1
 {
@@ -497,14 +497,14 @@ namespace Google.Cloud.Notebooks.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ManagedNotebookServiceClient.Create(callInvoker, Settings, Logger);
+            return ManagedNotebookServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ManagedNotebookServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ManagedNotebookServiceClient.Create(callInvoker, Settings, Logger);
+            return ManagedNotebookServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -639,13 +639,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimes(new ListRuntimesRequest
+        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -664,13 +673,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimesAsync(new ListRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -689,13 +707,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimes(new ListRuntimesRequest
+        public virtual gax::PagedEnumerable<ListRuntimesResponse, Runtime> ListRuntimes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Runtimes in a given project and location.
@@ -714,13 +741,22 @@ namespace Google.Cloud.Notebooks.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Runtime"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRuntimesAsync(new ListRuntimesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRuntimesResponse, Runtime> ListRuntimesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRuntimesRequest request = new ListRuntimesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRuntimesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single Runtime. The location must be a regional endpoint
@@ -2343,7 +2379,11 @@ namespace Google.Cloud.Notebooks.V1
         {
             GrpcClient = grpcClient;
             ManagedNotebookServiceSettings effectiveSettings = settings ?? ManagedNotebookServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRuntimeOperationsSettings, logger);
             UpdateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRuntimeOperationsSettings, logger);
             DeleteRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRuntimeOperationsSettings, logger);

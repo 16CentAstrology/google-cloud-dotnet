@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -389,10 +389,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <inheritdoc/>
         public bool Equals(AlertPolicyConditionName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AlertPolicyConditionName a, AlertPolicyConditionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AlertPolicyConditionName a, AlertPolicyConditionName b) => !(a == b);
     }
 
@@ -700,10 +712,22 @@ namespace Google.Cloud.Monitoring.V3
         /// <inheritdoc/>
         public bool Equals(AlertPolicyName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(AlertPolicyName a, AlertPolicyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(AlertPolicyName a, AlertPolicyName b) => !(a == b);
     }
 
@@ -736,6 +760,42 @@ namespace Google.Cloud.Monitoring.V3
                 return gax::UnparsedResourceName.Parse(Name);
             }
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class Condition
+            {
+                /// <summary>
+                /// <see cref="gcmv::AlertPolicyConditionName"/>-typed view over the <see cref="Name"/> resource name
+                /// property.
+                /// </summary>
+                public gcmv::AlertPolicyConditionName AlertPolicyConditionName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gcmv::AlertPolicyConditionName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gax::IResourceName ResourceName
+                {
+                    get
+                    {
+                        if (string.IsNullOrEmpty(Name))
+                        {
+                            return null;
+                        }
+                        if (gcmv::AlertPolicyConditionName.TryParse(Name, out gcmv::AlertPolicyConditionName alertPolicyCondition))
+                        {
+                            return alertPolicyCondition;
+                        }
+                        return gax::UnparsedResourceName.Parse(Name);
+                    }
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

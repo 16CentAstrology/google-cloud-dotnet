@@ -1,5 +1,73 @@
 # Version history
 
+## Version 2.14.0, released 2024-10-07
+
+### New features
+
+- Add support for primary_admin_email as customer_identity for ImportCustomer ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+- Add support for importing team customer from a different reseller ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+- Add support to look up team customer Cloud Identity information ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+
+### Documentation improvements
+
+- Clarify the expected value of the domain field for team type customers ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+
+## Version 2.13.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.12.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.11.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.10.0, released 2024-02-28
+
+### Documentation improvements
+
+- A comment for service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `RunReportJob` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `FetchReportResults` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `ListReports` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+
+## Version 2.9.0, released 2023-09-11
+
+### New features
+
+- Mark ChannelPartnerGranularity as deprecated and offer alternatives ([commit 40d1d8f](https://github.com/googleapis/google-cloud-dotnet/commit/40d1d8f082c4240c541be12911e06bb1e9f0eb39))
+- Launch QueryEligibleBillingAccounts API ([commit 5496ac6](https://github.com/googleapis/google-cloud-dotnet/commit/5496ac69a5806e5453e7dee405d219cf85b8b91b))
+
+## Version 2.8.0, released 2023-06-20
+
+### New features
+
+- Add support for ListSkuGroups and ListSkuGroupBillableSkus APIs in Cloud Channel APIs ([commit 4c49e69](https://github.com/googleapis/google-cloud-dotnet/commit/4c49e69eb380cb8346a6db5291bc71c1913b551d))
+
+## Version 2.7.0, released 2023-05-26
+
+### New features
+
+- Added partition_keys field to filter results from FetchReportResults ([commit fde5897](https://github.com/googleapis/google-cloud-dotnet/commit/fde58971e156bacda1b547f770c210c0c14eca9c))
+
+### Documentation improvements
+
+- Change references from GCP to Google Cloud ([commit fde5897](https://github.com/googleapis/google-cloud-dotnet/commit/fde58971e156bacda1b547f770c210c0c14eca9c))
+
+## Version 2.6.0, released 2023-05-11
+
+### New features
+
+- Add billing account to entitlement definitions for Cloud Channel API ([commit 820fde9](https://github.com/googleapis/google-cloud-dotnet/commit/820fde95134e188a06c76d80ae928d989c9a2856))
+
 ## Version 2.5.0, released 2023-03-20
 
 ### New features

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -272,14 +272,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ServiceMonitoringServiceClient.Create(callInvoker, Settings, Logger);
+            return ServiceMonitoringServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ServiceMonitoringServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ServiceMonitoringServiceClient.Create(callInvoker, Settings, Logger);
+            return ServiceMonitoringServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -289,9 +289,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>ServiceMonitoringService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
-    /// managing and querying aspects of a workspace's services. These include the
-    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
-    /// of categorized Health Metrics.
+    /// managing and querying aspects of a Metrics Scope's services. These include
+    /// the `Service`'s monitored resources, its Service-Level Objectives, and a
+    /// taxonomy of categorized Health Metrics.
     /// </remarks>
     public abstract partial class ServiceMonitoringServiceClient
     {
@@ -411,8 +411,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -432,8 +433,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -453,8 +455,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -470,8 +473,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -491,8 +495,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -512,8 +517,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -529,8 +535,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -550,8 +557,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -571,8 +579,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -588,8 +597,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -609,8 +619,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -630,8 +641,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -647,8 +659,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -668,8 +681,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -689,8 +703,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -865,7 +880,7 @@ namespace Google.Cloud.Monitoring.V3
             GetServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -874,7 +889,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -883,12 +898,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -903,21 +918,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -932,21 +956,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -961,21 +994,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -990,21 +1032,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1019,21 +1070,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1048,21 +1108,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1077,21 +1146,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1106,21 +1184,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1135,21 +1222,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1164,13 +1260,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update this `Service`.
@@ -1647,7 +1752,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1663,7 +1769,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1679,7 +1786,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1692,7 +1800,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1708,7 +1817,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1724,7 +1834,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1737,7 +1848,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1753,7 +1865,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1769,7 +1882,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1801,7 +1915,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1816,20 +1930,29 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectives(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectives(request, callSettings);
+        }
 
         /// <summary>
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1844,20 +1967,29 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectivesAsync(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectivesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1872,20 +2004,29 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectives(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectives(request, callSettings);
+        }
 
         /// <summary>
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1900,20 +2041,29 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectivesAsync(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectivesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1928,20 +2078,29 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectives(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectives(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectives(request, callSettings);
+        }
 
         /// <summary>
         /// List the `ServiceLevelObjective`s for the given `Service`.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1956,13 +2115,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ServiceLevelObjective"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServiceLevelObjectivesAsync(new ListServiceLevelObjectivesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServiceLevelObjectivesResponse, ServiceLevelObjective> ListServiceLevelObjectivesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServiceLevelObjectivesRequest request = new ListServiceLevelObjectivesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServiceLevelObjectivesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update the given `ServiceLevelObjective`.
@@ -2064,7 +2232,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2080,7 +2249,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2096,7 +2266,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2109,7 +2280,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2125,7 +2297,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2141,7 +2314,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2154,7 +2328,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2170,7 +2345,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2186,7 +2362,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2199,9 +2376,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>ServiceMonitoringService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
-    /// managing and querying aspects of a workspace's services. These include the
-    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
-    /// of categorized Health Metrics.
+    /// managing and querying aspects of a Metrics Scope's services. These include
+    /// the `Service`'s monitored resources, its Service-Level Objectives, and a
+    /// taxonomy of categorized Health Metrics.
     /// </remarks>
     public sealed partial class ServiceMonitoringServiceClientImpl : ServiceMonitoringServiceClient
     {
@@ -2238,7 +2415,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             ServiceMonitoringServiceSettings effectiveSettings = settings ?? ServiceMonitoringServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateService = clientHelper.BuildApiCall<CreateServiceRequest, Service>("CreateService", grpcClient.CreateServiceAsync, grpcClient.CreateService, effectiveSettings.CreateServiceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateService);
             Modify_CreateServiceApiCall(ref _callCreateService);
@@ -2368,7 +2549,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2380,7 +2561,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -54,6 +54,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// profiles. Customer may create multiple tenants to provide data isolation for
   /// different groups.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tenant : pb::IMessage<Tenant>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

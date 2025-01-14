@@ -71,28 +71,28 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
             "ZURhdGFQb2xpY3kSQy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXBvbGlj",
             "aWVzLnYxYmV0YTEuQ3JlYXRlRGF0YVBvbGljeVJlcXVlc3QaNi5nb29nbGUu",
             "Y2xvdWQuYmlncXVlcnkuZGF0YXBvbGljaWVzLnYxYmV0YTEuRGF0YVBvbGlj",
-            "eSJfgtPkkwJEIjUvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L2RhdGFQb2xpY2llczoLZGF0YV9wb2xpY3naQRJwYXJlbnQsZGF0",
+            "eSJf2kEScGFyZW50LGRhdGFfcG9saWN5gtPkkwJEIjUvdjFiZXRhMS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFQb2xpY2llczoLZGF0",
             "YV9wb2xpY3kSgQIKEFVwZGF0ZURhdGFQb2xpY3kSQy5nb29nbGUuY2xvdWQu",
             "YmlncXVlcnkuZGF0YXBvbGljaWVzLnYxYmV0YTEuVXBkYXRlRGF0YVBvbGlj",
             "eVJlcXVlc3QaNi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXBvbGljaWVz",
-            "LnYxYmV0YTEuRGF0YVBvbGljeSJwgtPkkwJQMkEvdjFiZXRhMS97ZGF0YV9w",
-            "b2xpY3kubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFQb2xpY2ll",
-            "cy8qfToLZGF0YV9wb2xpY3naQRdkYXRhX3BvbGljeSx1cGRhdGVfbWFzaxK1",
+            "LnYxYmV0YTEuRGF0YVBvbGljeSJw2kEXZGF0YV9wb2xpY3ksdXBkYXRlX21h",
+            "c2uC0+STAlAyQS92MWJldGExL3tkYXRhX3BvbGljeS5uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZGF0YVBvbGljaWVzLyp9OgtkYXRhX3BvbGljeRK1",
             "AQoQRGVsZXRlRGF0YVBvbGljeRJDLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5k",
             "YXRhcG9saWNpZXMudjFiZXRhMS5EZWxldGVEYXRhUG9saWN5UmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwI3KjUvdjFiZXRhMS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfdpBBG5h",
-            "bWUSzwEKDUdldERhdGFQb2xpY3kSQC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJE2kEEbmFtZYLT5JMCNyo1L3YxYmV0",
+            "YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhUG9saWNpZXMv",
+            "Kn0SzwEKDUdldERhdGFQb2xpY3kSQC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
             "ZGF0YXBvbGljaWVzLnYxYmV0YTEuR2V0RGF0YVBvbGljeVJlcXVlc3QaNi5n",
             "b29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXBvbGljaWVzLnYxYmV0YTEuRGF0",
-            "YVBvbGljeSJEgtPkkwI3EjUvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfdpBBG5hbWUS5QEKEExpc3REYXRh",
+            "YVBvbGljeSJE2kEEbmFtZYLT5JMCNxI1L3YxYmV0YTEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9kYXRhUG9saWNpZXMvKn0S5QEKEExpc3REYXRh",
             "UG9saWNpZXMSQy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXBvbGljaWVz",
             "LnYxYmV0YTEuTGlzdERhdGFQb2xpY2llc1JlcXVlc3QaRC5nb29nbGUuY2xv",
             "dWQuYmlncXVlcnkuZGF0YXBvbGljaWVzLnYxYmV0YTEuTGlzdERhdGFQb2xp",
-            "Y2llc1Jlc3BvbnNlIkaC0+STAjcSNS92MWJldGExL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vZGF0YVBvbGljaWVz2kEGcGFyZW50EpwBCgxH",
+            "Y2llc1Jlc3BvbnNlIkbaQQZwYXJlbnSC0+STAjcSNS92MWJldGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YVBvbGljaWVzEpwBCgxH",
             "ZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVl",
             "c3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJRgtPkkwJLIkYvdjFiZXRhMS97",
             "cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhUG9saWNpZXMv",
@@ -134,6 +134,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Request message for the CreateDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDataPolicyRequest : pb::IMessage<CreateDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -380,6 +381,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Response message for the UpdateDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDataPolicyRequest : pb::IMessage<UpdateDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -641,6 +643,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Request message for the DeleteDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDataPolicyRequest : pb::IMessage<DeleteDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -837,6 +840,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Request message for the GetDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDataPolicyRequest : pb::IMessage<GetDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1033,6 +1037,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Request message for the ListDataPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataPoliciesRequest : pb::IMessage<ListDataPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1312,6 +1317,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Response message for the ListDataPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataPoliciesResponse : pb::IMessage<ListDataPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1537,6 +1543,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// Represents the label-policy binding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataPolicy : pb::IMessage<DataPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1604,10 +1611,24 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PolicyTag {
-      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag ? (string) matchingLabel_ : ""; }
+      get { return HasPolicyTag ? (string) matchingLabel_ : ""; }
       set {
         matchingLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchingLabelCase_ = MatchingLabelOneofCase.PolicyTag;
+      }
+    }
+    /// <summary>Gets whether the "policy_tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPolicyTag {
+      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "policy_tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPolicyTag() {
+      if (HasPolicyTag) {
+        ClearMatchingLabel();
       }
     }
 
@@ -1743,7 +1764,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) hash ^= PolicyTag.GetHashCode();
+      if (HasPolicyTag) hash ^= PolicyTag.GetHashCode();
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) hash ^= DataMaskingPolicy.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DataPolicyType != global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy.Types.DataPolicyType.Unspecified) hash ^= DataPolicyType.GetHashCode();
@@ -1780,7 +1801,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -1810,7 +1831,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -1828,7 +1849,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyTag);
       }
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) {
@@ -1996,6 +2017,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
   /// <summary>
   /// The data masking policy that is used to specify data masking rule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataMaskingPolicy : pb::IMessage<DataMaskingPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2053,10 +2075,24 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression PredefinedExpression {
-      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
+      get { return HasPredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
       set {
         maskingExpression_ = value;
         maskingExpressionCase_ = MaskingExpressionOneofCase.PredefinedExpression;
+      }
+    }
+    /// <summary>Gets whether the "predefined_expression" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPredefinedExpression {
+      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "predefined_expression" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPredefinedExpression() {
+      if (HasPredefinedExpression) {
+        ClearMaskingExpression();
       }
     }
 
@@ -2104,7 +2140,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
+      if (HasPredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
       hash ^= (int) maskingExpressionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2124,7 +2160,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
       }
@@ -2138,7 +2174,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
       }
@@ -2152,7 +2188,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PredefinedExpression);
       }
       if (_unknownFields != null) {

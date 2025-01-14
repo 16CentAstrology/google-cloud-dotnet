@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Dialogflow.Cx.V3;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -639,6 +641,146 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             IntentName name = IntentName.FromProjectLocationAgentIntent("[PROJECT]", "[LOCATION]", "[AGENT]", "[INTENT]");
             // Make the request
             await intentsClient.DeleteIntentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIntents</summary>
+        public void ImportIntentsRequestObject()
+        {
+            // Snippet: ImportIntents(ImportIntentsRequest, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            ImportIntentsRequest request = new ImportIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                IntentsUri = "",
+                MergeOption = ImportIntentsRequest.Types.MergeOption.Unspecified,
+            };
+            // Make the request
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> response = intentsClient.ImportIntents(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> retrievedResponse = intentsClient.PollOnceImportIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIntentsAsync</summary>
+        public async Task ImportIntentsRequestObjectAsync()
+        {
+            // Snippet: ImportIntentsAsync(ImportIntentsRequest, CallSettings)
+            // Additional: ImportIntentsAsync(ImportIntentsRequest, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportIntentsRequest request = new ImportIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                IntentsUri = "",
+                MergeOption = ImportIntentsRequest.Types.MergeOption.Unspecified,
+            };
+            // Make the request
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> response = await intentsClient.ImportIntentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIntentsResponse, ImportIntentsMetadata> retrievedResponse = await intentsClient.PollOnceImportIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIntents</summary>
+        public void ExportIntentsRequestObject()
+        {
+            // Snippet: ExportIntents(ExportIntentsRequest, CallSettings)
+            // Create client
+            IntentsClient intentsClient = IntentsClient.Create();
+            // Initialize request argument(s)
+            ExportIntentsRequest request = new ExportIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                Intents = { "", },
+                IntentsUri = "",
+                DataFormat = ExportIntentsRequest.Types.DataFormat.Unspecified,
+            };
+            // Make the request
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> response = intentsClient.ExportIntents(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> retrievedResponse = intentsClient.PollOnceExportIntents(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIntentsAsync</summary>
+        public async Task ExportIntentsRequestObjectAsync()
+        {
+            // Snippet: ExportIntentsAsync(ExportIntentsRequest, CallSettings)
+            // Additional: ExportIntentsAsync(ExportIntentsRequest, CancellationToken)
+            // Create client
+            IntentsClient intentsClient = await IntentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportIntentsRequest request = new ExportIntentsRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                Intents = { "", },
+                IntentsUri = "",
+                DataFormat = ExportIntentsRequest.Types.DataFormat.Unspecified,
+            };
+            // Make the request
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> response = await intentsClient.ExportIntentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportIntentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIntentsResponse, ExportIntentsMetadata> retrievedResponse = await intentsClient.PollOnceExportIntentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIntentsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

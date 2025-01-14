@@ -46,10 +46,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5VHlwZSJoChtPcmlnaW5hbERldGVj",
             "dEludGVudFJlcXVlc3QSDgoGc291cmNlGAEgASgJEg8KB3ZlcnNpb24YAiAB",
             "KAkSKAoHcGF5bG9hZBgDIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
-            "lQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMV2ViaG9va1By",
+            "kgEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMV2ViaG9va1By",
             "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9k",
-            "aWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAhpHb29nbGUuQ2xv",
-            "dWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "aWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaqAhpHb29nbGUuQ2xvdWQu",
+            "RGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +65,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// The request message for a webhook call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebhookRequest : pb::IMessage<WebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -419,6 +420,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// [Protocol Buffers Language
   /// Guide](https://developers.google.com/protocol-buffers/docs/proto3#json).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebhookResponse : pb::IMessage<WebhookResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -872,6 +874,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Represents the contents of the original request that was passed to
   /// the `[Streaming]DetectIntent` call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OriginalDetectIntentRequest : pb::IMessage<OriginalDetectIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

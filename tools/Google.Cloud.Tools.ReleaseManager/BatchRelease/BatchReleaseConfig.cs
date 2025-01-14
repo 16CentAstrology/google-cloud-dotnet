@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,10 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
@@ -77,6 +74,24 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public string DefaultHistoryMessageFile { get; set; }
 
+        /// <summary>
+        /// When this is true, all proposals are collected before any are executed. This allows
+        /// a workflow of "start the run going, leave it ages, then expect to proceed very quickly".
+        /// </summary>
+        public bool CollectProposalsEagerly { get; set; }
+
+        /// <summary>
+        /// When specified, all APIs whose last release was before the specified date (yyyy-MM-dd format)
+        /// are released. APIs which haven't been released at all not released.
+        /// </summary>
+        public string LastReleaseBefore { get; set; }
+
+        /// <summary>
+        /// When true, release branches are created but not pushed (so no PRs are created).
+        /// The "push-releases" command can be used to perform the push later.
+        /// </summary>
+        public bool DeferPush { get; set; }
+
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
             if (KnownCommits is object)
@@ -90,6 +105,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             if (ReleaseAll is object)
             {
                 yield return ReleaseAll;
+            }
+            if (LastReleaseBefore != null)
+            {
+                yield return new LastReleaseBeforeCriterion(LastReleaseBefore);
             }
         }
     }

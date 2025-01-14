@@ -134,6 +134,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// A [policy][google.cloud.binaryauthorization.v1beta1.Policy] for Binary Authorization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,10 +524,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         GlobalPolicyEvaluationMode = other.GlobalPolicyEvaluationMode;
       }
       admissionWhitelistPatterns_.Add(other.admissionWhitelistPatterns_);
-      clusterAdmissionRules_.Add(other.clusterAdmissionRules_);
-      kubernetesNamespaceAdmissionRules_.Add(other.kubernetesNamespaceAdmissionRules_);
-      kubernetesServiceAccountAdmissionRules_.Add(other.kubernetesServiceAccountAdmissionRules_);
-      istioServiceIdentityAdmissionRules_.Add(other.istioServiceIdentityAdmissionRules_);
+      clusterAdmissionRules_.MergeFrom(other.clusterAdmissionRules_);
+      kubernetesNamespaceAdmissionRules_.MergeFrom(other.kubernetesNamespaceAdmissionRules_);
+      kubernetesServiceAccountAdmissionRules_.MergeFrom(other.kubernetesServiceAccountAdmissionRules_);
+      istioServiceIdentityAdmissionRules_.MergeFrom(other.istioServiceIdentityAdmissionRules_);
       if (other.defaultAdmissionRule_ != null) {
         if (defaultAdmissionRule_ == null) {
           DefaultAdmissionRule = new global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule();
@@ -695,6 +696,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// An [admission allowlist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern] exempts images
   /// from checks by [admission rules][google.cloud.binaryauthorization.v1beta1.AdmissionRule].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdmissionWhitelistPattern : pb::IMessage<AdmissionWhitelistPattern>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -902,6 +904,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// Images matching an [admission allowlist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
   /// are exempted from admission rules and will never block a pod creation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdmissionRule : pb::IMessage<AdmissionRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1224,6 +1227,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// artifacts. An existing attestor cannot be modified except where
   /// indicated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attestor : pb::IMessage<Attestor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1594,6 +1598,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// An [user owned drydock note][google.cloud.binaryauthorization.v1beta1.UserOwnedDrydockNote] references a Drydock
   /// ATTESTATION_AUTHORITY Note created by the user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserOwnedDrydockNote : pb::IMessage<UserOwnedDrydockNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1883,6 +1888,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// Public keys of this type are typically textually encoded using the PEM
   /// format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PkixPublicKey : pb::IMessage<PkixPublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2203,6 +2209,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// An [attestor public key][google.cloud.binaryauthorization.v1beta1.AttestorPublicKey] that will be used to verify
   /// attestations signed by this attestor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttestorPublicKey : pb::IMessage<AttestorPublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2308,10 +2315,24 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AsciiArmoredPgpPublicKey {
-      get { return publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey ? (string) publicKey_ : ""; }
+      get { return HasAsciiArmoredPgpPublicKey ? (string) publicKey_ : ""; }
       set {
         publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         publicKeyCase_ = PublicKeyOneofCase.AsciiArmoredPgpPublicKey;
+      }
+    }
+    /// <summary>Gets whether the "ascii_armored_pgp_public_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAsciiArmoredPgpPublicKey {
+      get { return publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ascii_armored_pgp_public_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAsciiArmoredPgpPublicKey() {
+      if (HasAsciiArmoredPgpPublicKey) {
+        ClearPublicKey();
       }
     }
 
@@ -2385,7 +2406,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       int hash = 1;
       if (Comment.Length != 0) hash ^= Comment.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) hash ^= AsciiArmoredPgpPublicKey.GetHashCode();
+      if (HasAsciiArmoredPgpPublicKey) hash ^= AsciiArmoredPgpPublicKey.GetHashCode();
       if (publicKeyCase_ == PublicKeyOneofCase.PkixPublicKey) hash ^= PkixPublicKey.GetHashCode();
       hash ^= (int) publicKeyCase_;
       if (_unknownFields != null) {
@@ -2414,7 +2435,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         output.WriteRawTag(26);
         output.WriteString(AsciiArmoredPgpPublicKey);
       }
@@ -2440,7 +2461,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         output.WriteRawTag(26);
         output.WriteString(AsciiArmoredPgpPublicKey);
       }
@@ -2464,7 +2485,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AsciiArmoredPgpPublicKey);
       }
       if (publicKeyCase_ == PublicKeyOneofCase.PkixPublicKey) {

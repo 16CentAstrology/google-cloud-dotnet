@@ -58,6 +58,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// activation process to establish a connection between the provider and the
   /// subscriber channel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChannelConnection : pb::IMessage<ChannelConnection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

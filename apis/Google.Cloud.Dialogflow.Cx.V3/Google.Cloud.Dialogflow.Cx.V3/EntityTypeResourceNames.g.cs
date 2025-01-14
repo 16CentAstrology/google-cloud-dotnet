@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -272,10 +272,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <inheritdoc/>
         public bool Equals(EntityTypeName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(EntityTypeName a, EntityTypeName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(EntityTypeName a, EntityTypeName b) => !(a == b);
     }
 
@@ -288,6 +300,46 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::EntityTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExportEntityTypesRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportEntityTypesRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EntityTypeName"/>-typed view over the <see cref="TargetEntityType"/> resource name property.
+        /// </summary>
+        public EntityTypeName TargetEntityTypeAsEntityTypeName
+        {
+            get => string.IsNullOrEmpty(TargetEntityType) ? null : EntityTypeName.Parse(TargetEntityType, allowUnparsed: true);
+            set => TargetEntityType = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportEntityTypesResponse
+    {
+        /// <summary>
+        /// <see cref="EntityTypeName"/>-typed view over the <see cref="EntityTypes"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EntityTypeName> EntityTypesAsEntityTypeNames
+        {
+            get => new gax::ResourceNameList<EntityTypeName>(EntityTypes, s => string.IsNullOrEmpty(s) ? null : EntityTypeName.Parse(s, allowUnparsed: true));
         }
     }
 

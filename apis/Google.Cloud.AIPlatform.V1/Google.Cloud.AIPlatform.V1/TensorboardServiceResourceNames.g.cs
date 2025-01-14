@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcav = Google.Cloud.AIPlatform.V1;
 
 namespace Google.Cloud.AIPlatform.V1
@@ -45,18 +45,6 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
-    public partial class ReadTensorboardUsageRequest
-    {
-        /// <summary>
-        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
-        /// </summary>
-        public TensorboardName TensorboardAsTensorboardName
-        {
-            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
-            set => Tensorboard = value?.ToString() ?? "";
-        }
-    }
-
     public partial class ListTensorboardsRequest
     {
         /// <summary>
@@ -78,6 +66,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::TensorboardName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReadTensorboardUsageRequest
+    {
+        /// <summary>
+        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
+        /// </summary>
+        public TensorboardName TensorboardAsTensorboardName
+        {
+            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
+            set => Tensorboard = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReadTensorboardSizeRequest
+    {
+        /// <summary>
+        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
+        /// </summary>
+        public TensorboardName TensorboardAsTensorboardName
+        {
+            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
+            set => Tensorboard = value?.ToString() ?? "";
         }
     }
 
